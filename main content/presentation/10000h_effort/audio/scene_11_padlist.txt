@@ -1,0 +1,2 @@
+file 'C:/Users/81804/Desktop/新しいフォルダー/claude/presentation/10000h_effort/audio/scene_11_concat.wav'
+file 'C:/Users/81804/Desktop/新しいフォルダー/claude/presentation/10000h_effort/audio/scene_11_pad.wav'

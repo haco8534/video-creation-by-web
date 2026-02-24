@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1万時間の法則をへし折る残酷なデータ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================================== -->
+    <!-- Block A: Opening (Scenes 0-4)               -->
+    <!-- =========================================== -->
+
+    <!-- Scene 0: Title -->
+    <div class="scene active" id="scene-0">
+        <canvas class="scene-canvas" id="canvas-0"></canvas>
+        <div class="scene-content center-column">
+            <span class="label label--rose anim-enter anim-enter-d1">MYTH BUSTED</span>
+            <h1 class="title-huge anim-enter anim-enter-d2">1万時間の法則を<br>へし折るデータ</h1>
+            <p class="title-sub anim-enter anim-enter-d3">The 10,000 Hour Rule</p>
+        </div>
+    </div>
+
+    <!-- Scene 1: What is the rule? -->
+    <div class="scene" id="scene-1">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--blue anim-enter anim-enter-d1">THE RULE</span>
+            <h2 class="section-title anim-enter anim-enter-d2">1万時間の法則とは</h2>
+            <div class="counter-demo" id="counter-demo-1">
+                <div class="counter-clock">
+                    <div class="clock-inner">
+                        <div class="clock-hand" id="clock-hand-1"></div>
+                    </div>
+                </div>
+                <div class="counter-number" id="counter-number-1">0</div>
+                <div class="counter-unit">hours</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 2: Dream formula -->
+    <div class="scene" id="scene-2">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--blue anim-enter anim-enter-d1">FORMULA</span>
+            <h2 class="section-title anim-enter anim-enter-d2">夢の方程式</h2>
+            <div class="formula-demo" id="formula-demo-2">
+                <div class="formula-card" data-idx="0">
+                    <div class="formula-num">3</div>
+                    <div class="formula-label">時間/日</div>
+                </div>
+                <div class="formula-op" data-idx="1">x</div>
+                <div class="formula-card" data-idx="2">
+                    <div class="formula-num">365</div>
+                    <div class="formula-label">日/年</div>
+                </div>
+                <div class="formula-op" data-idx="3">x</div>
+                <div class="formula-card" data-idx="4">
+                    <div class="formula-num">10</div>
+                    <div class="formula-label">年</div>
+                </div>
+                <div class="formula-op" data-idx="5">=</div>
+                <div class="formula-card formula-card--result" data-idx="6">
+                    <div class="formula-num">10,950</div>
+                    <div class="formula-label">PRO!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 3: Researcher denies -->
+    <div class="scene" id="scene-3">
+        <div class="scene-bg gradient-shift-rose"></div>
+        <div class="scene-content center-column">
+            <span class="label label--rose anim-enter anim-enter-d1">SHOCKING</span>
+            <p class="text-lead anim-enter anim-enter-d2">この法則を生み出した研究者本人が</p>
+            <h1 class="title-impact anim-enter anim-enter-d3">「そんなこと<br>言ってない」</h1>
+            <div class="strike-line" id="strike-line-3"></div>
+        </div>
+    </div>
+
+    <!-- Scene 4: 12% teaser -->
+    <div class="scene" id="scene-4">
+        <div class="scene-bg gradient-shift-rose"></div>
+        <div class="scene-content center-column">
+            <span class="label label--amber anim-enter anim-enter-d1">DATA</span>
+            <p class="text-lead anim-enter anim-enter-d2">練習量がパフォーマンスの差を<br>説明できる割合</p>
+            <h1 class="giant-number anim-enter anim-enter-d3" id="giant-12">12%</h1>
+            <p class="title-sub anim-enter anim-enter-d4">残りの88%は何なのか？</p>
+        </div>
+    </div>
+
+    <!-- =========================================== -->
+    <!-- Block B: Original Research (Scenes 5-9)     -->
+    <!-- =========================================== -->
+
+    <!-- Scene 5: Gladwell's Book -->
+    <div class="scene" id="scene-5">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--purple anim-enter anim-enter-d1">ORIGIN</span>
+            <h2 class="section-title anim-enter anim-enter-d2">法則の出どころ</h2>
+            <div class="timeline-demo" id="timeline-demo-5">
+                <div class="tl-item" data-idx="0">
+                    <div class="tl-year">1993</div>
+                    <div class="tl-card tl-card--purple">
+                        <div class="tl-name">Ericsson</div>
+                        <div class="tl-desc">元の研究を発表</div>
+                    </div>
+                </div>
+                <div class="tl-connector"></div>
+                <div class="tl-item" data-idx="1">
+                    <div class="tl-year">2008</div>
+                    <div class="tl-card tl-card--rose">
+                        <div class="tl-name">Gladwell</div>
+                        <div class="tl-desc">Outliers で世界に広める</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 6: Ericsson's Study -->
+    <div class="scene" id="scene-6">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--purple anim-enter anim-enter-d1">STUDY</span>
+            <h2 class="section-title anim-enter anim-enter-d2">エリクソンの研究</h2>
+            <div class="violin-chart" id="violin-chart-6">
+                <div class="violin-bar" data-idx="0">
+                    <div class="violin-fill" data-pct="100"></div>
+                    <span class="violin-label">世界レベル</span>
+                    <span class="violin-val">10,000h</span>
+                </div>
+                <div class="violin-bar" data-idx="1">
+                    <div class="violin-fill" data-pct="75"></div>
+                    <span class="violin-label">優秀</span>
+                    <span class="violin-val">7,500h</span>
+                </div>
+                <div class="violin-bar" data-idx="2">
+                    <div class="violin-fill" data-pct="50"></div>
+                    <span class="violin-label">音楽教師</span>
+                    <span class="violin-val">5,000h</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 7: The "Average" trap -->
+    <div class="scene" id="scene-7">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--amber anim-enter anim-enter-d1">TRAP</span>
+            <h2 class="section-title anim-enter anim-enter-d2">「平均」の罠</h2>
+            <div class="avg-demo" id="avg-demo-7">
+                <div class="avg-number">10,000</div>
+                <div class="avg-badge" id="avg-badge-7">AVG</div>
+                <p class="avg-note">全員が1万時間に達していたわけではない</p>
+                <p class="avg-note2">20歳時点ではまだ学生</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 8: Deliberate Practice -->
+    <div class="scene" id="scene-8">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--emerald anim-enter anim-enter-d1">KEY CONCEPT</span>
+            <h2 class="section-title anim-enter anim-enter-d2">意図的練習</h2>
+            <div class="dp-cards" id="dp-cards-8">
+                <div class="dp-card" data-idx="0">
+                    <div class="dp-icon dp-icon--target">1</div>
+                    <div class="dp-name">明確な目標</div>
+                </div>
+                <div class="dp-card" data-idx="1">
+                    <div class="dp-icon dp-icon--zone">2</div>
+                    <div class="dp-name">快適ゾーンの外</div>
+                </div>
+                <div class="dp-card" data-idx="2">
+                    <div class="dp-icon dp-icon--feedback">3</div>
+                    <div class="dp-name">即時フィードバック</div>
+                </div>
+                <div class="dp-card" data-idx="3">
+                    <div class="dp-icon dp-icon--fix">4</div>
+                    <div class="dp-name">弱点を体系的に潰す</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 9: Ericsson's Rebuttal -->
+    <div class="scene" id="scene-9">
+        <div class="scene-bg" style="background: linear-gradient(180deg, #F5F3FF 0%, #F8F9FC 100%);"></div>
+        <div class="scene-content center-column">
+            <span class="label label--rose anim-enter anim-enter-d1">REBUTTAL</span>
+            <div class="quote-block anim-enter anim-enter-d2">
+                <div class="quote-mark">"</div>
+                <p class="quote-text">グラッドウェルは私の研究を<br>複数の点で間違って解釈している</p>
+                <p class="quote-author">Anders Ericsson</p>
+            </div>
+            <div class="book-ref anim-enter anim-enter-d3">
+                <div class="book-icon">Peak</div>
+                <span>超一流になるのは才能か努力か？</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================== -->
+    <!-- Block C: Cruel Data 1 (Scenes 10-15)        -->
+    <!-- =========================================== -->
+
+    <!-- Scene 10: Meta-analysis intro -->
+    <div class="scene" id="scene-10">
+        <div class="scene-bg" style="background: linear-gradient(135deg, #FFFBEB 0%, #F8F9FC 100%);"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--amber anim-enter anim-enter-d1">META-ANALYSIS</span>
+            <h2 class="section-title anim-enter anim-enter-d2">メタ分析 (2014)</h2>
+            <div class="meta-stats" id="meta-stats-10">
+                <div class="meta-stat" data-idx="0">
+                    <div class="meta-num">88</div>
+                    <div class="meta-label">研究論文</div>
+                </div>
+                <div class="meta-stat" data-idx="1">
+                    <div class="meta-num">157</div>
+                    <div class="meta-label">効果量</div>
+                </div>
+                <div class="meta-stat" data-idx="2">
+                    <div class="meta-num">11,135</div>
+                    <div class="meta-label">参加者</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 11: Domain breakdown bars -->
+    <div class="scene" id="scene-11">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--amber anim-enter anim-enter-d1">RESULTS</span>
+            <h2 class="section-title anim-enter anim-enter-d2">分野別の寄与率</h2>
+            <div class="domain-chart" id="domain-chart-11">
+                <div class="domain-bar" data-idx="0">
+                    <div class="domain-fill" data-pct="26" style="--bar-color: var(--amber)"></div>
+                    <span class="domain-label">Games</span>
+                    <span class="domain-pct">26%</span>
+                </div>
+                <div class="domain-bar" data-idx="1">
+                    <div class="domain-fill" data-pct="21" style="--bar-color: #F59E0B"></div>
+                    <span class="domain-label">Music</span>
+                    <span class="domain-pct">21%</span>
+                </div>
+                <div class="domain-bar" data-idx="2">
+                    <div class="domain-fill" data-pct="18" style="--bar-color: #D97706"></div>
+                    <span class="domain-label">Sports</span>
+                    <span class="domain-pct">18%</span>
+                </div>
+                <div class="domain-bar" data-idx="3">
+                    <div class="domain-fill" data-pct="4" style="--bar-color: var(--rose)"></div>
+                    <span class="domain-label">Education</span>
+                    <span class="domain-pct">4%</span>
+                </div>
+                <div class="domain-bar" data-idx="4">
+                    <div class="domain-fill" data-pct="1" style="--bar-color: var(--rose-dark)"></div>
+                    <span class="domain-label">Profession</span>
+                    <span class="domain-pct">&lt;1%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 12: Overall 12% pie -->
+    <div class="scene" id="scene-12">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content center-column">
+            <span class="label label--rose anim-enter anim-enter-d1">OVERALL</span>
+            <h2 class="section-title anim-enter anim-enter-d2">全分野平均</h2>
+            <div class="pie-demo" id="pie-demo-12">
+                <canvas id="canvas-12" width="320" height="320"></canvas>
+                <div class="pie-center-label">
+                    <div class="pie-big">12%</div>
+                    <div class="pie-small">練習量</div>
+                </div>
+            </div>
+            <p class="pie-footer anim-enter anim-enter-d4">88%は練習量以外の要因</p>
+        </div>
+    </div>
+
+    <!-- Scene 13: Chess individual differences -->
+    <div class="scene" id="scene-13">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--amber anim-enter anim-enter-d1">CHESS DATA</span>
+            <h2 class="section-title anim-enter anim-enter-d2">チェスマスターへの道</h2>
+            <div class="chess-compare" id="chess-compare-13">
+                <div class="chess-bar chess-bar--fast" data-idx="0">
+                    <div class="chess-fill" data-pct="5"></div>
+                    <span class="chess-label">最速</span>
+                    <span class="chess-val">728h</span>
+                </div>
+                <div class="chess-bar chess-bar--slow" data-idx="1">
+                    <div class="chess-fill" data-pct="100"></div>
+                    <span class="chess-label">最遅</span>
+                    <span class="chess-val">16,120h</span>
+                </div>
+                <div class="chess-ratio" data-idx="2">22x</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 14: 25000h still not enough -->
+    <div class="scene" id="scene-14">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--rose anim-enter anim-enter-d1">LIMIT</span>
+            <h2 class="section-title anim-enter anim-enter-d2">到達できない壁</h2>
+            <div class="limit-demo" id="limit-demo-14">
+                <div class="limit-line">
+                    <span class="limit-tag">Master Level</span>
+                </div>
+                <div class="limit-bar-track">
+                    <div class="limit-bar-fill" id="limit-fill-14"></div>
+                    <span class="limit-hours">25,000+ hours</span>
+                </div>
+                <p class="limit-caption">25,000時間練習しても到達できなかった人がいる</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 15: Practice = 30% donut -->
+    <div class="scene" id="scene-15">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content center-column">
+            <span class="label label--amber anim-enter anim-enter-d1">CONCLUSION</span>
+            <h2 class="section-title anim-enter anim-enter-d2">練習の寄与度は約3割</h2>
+            <div class="donut-demo" id="donut-demo-15">
+                <canvas id="canvas-15" width="300" height="300"></canvas>
+                <div class="donut-center-label">
+                    <div class="donut-big">30%</div>
+                    <div class="donut-small">練習</div>
+                </div>
+            </div>
+            <p class="donut-footer anim-enter anim-enter-d4">残りの70%は？</p>
+        </div>
+    </div>
+
+    <!-- =========================================== -->
+    <!-- Block D: Genetics (Scenes 16-21)            -->
+    <!-- =========================================== -->
+
+    <!-- Scene 16: Genetics title -->
+    <div class="scene" id="scene-16">
+        <div class="scene-bg"
+            style="background: linear-gradient(135deg, #FFF1F2 0%, #F8F9FC 50%, #FFF1F2 100%); background-size:300% 300%; animation: gradientShift 10s ease infinite;">
+        </div>
+        <div class="scene-content center-column">
+            <span class="label label--rose anim-enter anim-enter-d1">GENETICS</span>
+            <h1 class="title-huge anim-enter anim-enter-d2" style="color:var(--rose-dark);">遺伝という<br>見えない天井</h1>
+        </div>
+    </div>
+
+    <!-- Scene 17: Twin study range -->
+    <div class="scene" id="scene-17">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--rose anim-enter anim-enter-d1">TWIN STUDY</span>
+            <h2 class="section-title anim-enter anim-enter-d2">双子研究の結果</h2>
+            <div class="range-demo" id="range-demo-17">
+                <div class="range-track">
+                    <div class="range-fill" id="range-fill-17"></div>
+                    <div class="range-min">30%</div>
+                    <div class="range-max">80%</div>
+                </div>
+                <p class="range-caption">運動能力の個人差のうち、遺伝的要因で説明される割合</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 18: VO2max & ACTN3 -->
+    <div class="scene" id="scene-18">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--rose anim-enter anim-enter-d1">BODY</span>
+            <h2 class="section-title anim-enter anim-enter-d2">身体の遺伝子</h2>
+            <div class="gene-cards" id="gene-cards-18">
+                <div class="gene-card" data-idx="0">
+                    <div class="gene-title">VO2max</div>
+                    <div class="gene-subtitle">最大酸素摂取量</div>
+                    <div class="gene-rate">遺伝率 59-72%</div>
+                    <div class="gene-bar-track">
+                        <div class="gene-bar-fill" style="width:65%"></div>
+                    </div>
+                </div>
+                <div class="gene-card" data-idx="1">
+                    <div class="gene-title">ACTN3</div>
+                    <div class="gene-subtitle">スピード遺伝子</div>
+                    <div class="gene-types">
+                        <div class="gene-type gene-type--rr">RR型<small>速筋優位</small></div>
+                        <div class="gene-type-vs">vs</div>
+                        <div class="gene-type gene-type--xx">XX型<small>遅筋優位</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 19: Engine analogy -->
+    <div class="scene" id="scene-19">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content center-column">
+            <span class="label label--rose anim-enter anim-enter-d1">ANALOGY</span>
+            <h2 class="section-title anim-enter anim-enter-d2">エンジンの差</h2>
+            <div class="engine-demo" id="engine-demo-19">
+                <div class="engine-card engine-card--sports" data-idx="0">
+                    <div class="engine-icon">S</div>
+                    <div class="engine-name">スポーツカー</div>
+                    <div class="engine-desc">RR型</div>
+                </div>
+                <div class="engine-vs">vs</div>
+                <div class="engine-card engine-card--kei" data-idx="1">
+                    <div class="engine-icon">K</div>
+                    <div class="engine-name">軽自動車</div>
+                    <div class="engine-desc">XX型</div>
+                </div>
+            </div>
+            <p class="engine-footer anim-enter anim-enter-d4">エンジンの基本性能には差がある</p>
+        </div>
+    </div>
+
+    <!-- Scene 20: Training responsiveness -->
+    <div class="scene" id="scene-20">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--rose anim-enter anim-enter-d1">RESPONSE</span>
+            <h2 class="section-title anim-enter anim-enter-d2">トレーニング反応性</h2>
+            <div class="response-demo" id="response-demo-20">
+                <div class="response-person" data-idx="0">
+                    <div class="response-arrow response-arrow--high"></div>
+                    <div class="response-label">Aさん</div>
+                    <div class="response-tag">大きく向上</div>
+                </div>
+                <div class="response-person" data-idx="1">
+                    <div class="response-arrow response-arrow--mid"></div>
+                    <div class="response-label">Bさん</div>
+                    <div class="response-tag">まあまあ</div>
+                </div>
+                <div class="response-person" data-idx="2">
+                    <div class="response-arrow response-arrow--low"></div>
+                    <div class="response-label">Cさん</div>
+                    <div class="response-tag">ほぼ変わらず</div>
+                </div>
+                <p class="response-note">同じトレーニングでも伸び幅の47%が遺伝で決まる</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 21: Cognitive genetics -->
+    <div class="scene" id="scene-21">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--rose anim-enter anim-enter-d1">COGNITION</span>
+            <h2 class="section-title anim-enter anim-enter-d2">認知能力の遺伝</h2>
+            <div class="cog-cards" id="cog-cards-21">
+                <div class="cog-card" data-idx="0">
+                    <div class="cog-title">IQ</div>
+                    <div class="cog-rate">遺伝率 50-70%</div>
+                    <div class="cog-bar-track">
+                        <div class="cog-bar-fill" style="width:60%"></div>
+                    </div>
+                </div>
+                <div class="cog-card" data-idx="1">
+                    <div class="cog-title">Working Memory</div>
+                    <div class="cog-rate">高い人ほど熟達が早い</div>
+                    <div class="cog-bar-track">
+                        <div class="cog-bar-fill" style="width:55%"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="cog-footer anim-enter anim-enter-d4">才能がある人は練習の効率も良く、差が開いていく</p>
+        </div>
+    </div>
+
+    <!-- =========================================== -->
+    <!-- Block E: Right Effort (Scenes 22-26)        -->
+    <!-- =========================================== -->
+
+    <!-- Scene 22: Deliberate Practice Return -->
+    <div class="scene" id="scene-22">
+        <div class="scene-bg" style="background: linear-gradient(180deg, #ECFDF5 0%, #F8F9FC 100%);"></div>
+        <div class="scene-content center-column">
+            <span class="label label--emerald anim-enter anim-enter-d1">SOLUTION</span>
+            <p class="text-lead anim-enter anim-enter-d2">量ではなく</p>
+            <h1 class="title-huge anim-enter anim-enter-d3" style="color:var(--emerald-dark);">質を<br>極限まで高める</h1>
+        </div>
+    </div>
+
+    <!-- Scene 23: Kind vs Wicked -->
+    <div class="scene" id="scene-23">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--emerald anim-enter anim-enter-d1">FRAMEWORK</span>
+            <h2 class="section-title anim-enter anim-enter-d2">Kind vs Wicked</h2>
+            <div class="kw-demo" id="kw-demo-23">
+                <div class="kw-card kw-card--kind" data-idx="0">
+                    <div class="kw-title">Kind</div>
+                    <div class="kw-subtitle">親切な環境</div>
+                    <div class="kw-items">
+                        <span>ルールが明確</span>
+                        <span>パターン反復</span>
+                        <span>即時FB</span>
+                    </div>
+                    <div class="kw-examples">チェス・ゴルフ</div>
+                </div>
+                <div class="kw-vs">vs</div>
+                <div class="kw-card kw-card--wicked" data-idx="1">
+                    <div class="kw-title">Wicked</div>
+                    <div class="kw-subtitle">意地悪な環境</div>
+                    <div class="kw-items">
+                        <span>ルール曖昧</span>
+                        <span>状況変化</span>
+                        <span>遅延FB</span>
+                    </div>
+                    <div class="kw-examples">ビジネス・科学研究</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 24: Woods vs Federer -->
+    <div class="scene" id="scene-24">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--emerald anim-enter anim-enter-d1">CASE STUDY</span>
+            <h2 class="section-title anim-enter anim-enter-d2">2つのアプローチ</h2>
+            <div class="compare-demo" id="compare-demo-24">
+                <div class="compare-card" data-idx="0">
+                    <div class="compare-name">Tiger Woods</div>
+                    <div class="compare-detail">2歳からゴルフ一筋</div>
+                    <div class="compare-type compare-type--early">早期専門化</div>
+                </div>
+                <div class="compare-vs">vs</div>
+                <div class="compare-card" data-idx="1">
+                    <div class="compare-name">Roger Federer</div>
+                    <div class="compare-detail">多種スポーツを経験</div>
+                    <div class="compare-type compare-type--late">晩期専門化</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 25: 20 Hours -->
+    <div class="scene" id="scene-25">
+        <div class="scene-bg" style="background: linear-gradient(180deg, #ECFDF5 0%, #F0FDF4 100%);"></div>
+        <div class="scene-content center-column">
+            <span class="label label--emerald anim-enter anim-enter-d1">NEW RULE</span>
+            <div class="hour-switch" id="hour-switch-25">
+                <div class="hour-old">10,000h</div>
+                <div class="hour-arrow-down">
+                    <svg viewBox="0 0 24 48" width="40" height="60">
+                        <line x1="12" y1="4" x2="12" y2="38" stroke="var(--emerald)" stroke-width="3" fill="none" />
+                        <polyline points="6,32 12,42 18,32" stroke="var(--emerald)" stroke-width="3" fill="none" />
+                    </svg>
+                </div>
+                <div class="hour-new">20h</div>
+            </div>
+            <p class="title-sub anim-enter anim-enter-d4">まず20時間で適性を見極める</p>
+        </div>
+    </div>
+
+    <!-- Scene 26: Right direction -->
+    <div class="scene" id="scene-26">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--emerald anim-enter anim-enter-d1">DIRECTION</span>
+            <h2 class="section-title anim-enter anim-enter-d2">正しい努力の方程式</h2>
+            <div class="direction-flow" id="direction-flow-26">
+                <div class="dir-card" data-idx="0">
+                    <div class="dir-icon dir-icon--strength">1</div>
+                    <span>強みを知る</span>
+                </div>
+                <div class="dir-arrow">
+                    <svg viewBox="0 0 36 20" width="36" height="20">
+                        <line x1="2" y1="10" x2="28" y2="10" stroke="var(--emerald)" stroke-width="2" fill="none" />
+                        <polyline points="24,5 30,10 24,15" stroke="var(--emerald)" stroke-width="2" fill="none" />
+                    </svg>
+                </div>
+                <div class="dir-card" data-idx="1">
+                    <div class="dir-icon dir-icon--quality">2</div>
+                    <span>質の高い努力</span>
+                </div>
+                <div class="dir-arrow">
+                    <svg viewBox="0 0 36 20" width="36" height="20">
+                        <line x1="2" y1="10" x2="28" y2="10" stroke="var(--emerald)" stroke-width="2" fill="none" />
+                        <polyline points="24,5 30,10 24,15" stroke="var(--emerald)" stroke-width="2" fill="none" />
+                    </svg>
+                </div>
+                <div class="dir-card" data-idx="2">
+                    <div class="dir-icon dir-icon--result">3</div>
+                    <span>最大の成果</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================== -->
+    <!-- Block F: Summary (Scenes 27-30)             -->
+    <!-- =========================================== -->
+
+    <!-- Scene 27: Final verdict -->
+    <div class="scene" id="scene-27">
+        <div class="scene-bg gradient-shift-rose"></div>
+        <div class="scene-content center-column">
+            <span class="label label--rose anim-enter anim-enter-d1">VERDICT</span>
+            <h2 class="section-title anim-enter anim-enter-d2">最終判決</h2>
+            <div class="verdict-demo" id="verdict-demo-27">
+                <div class="verdict-text">1万時間の法則</div>
+                <div class="verdict-stamp" id="verdict-stamp-27">MYTH</div>
+            </div>
+            <p class="verdict-sub anim-enter anim-enter-d4">科学的に誇張された俗説</p>
+        </div>
+    </div>
+
+    <!-- Scene 28: True message -->
+    <div class="scene" id="scene-28">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--emerald anim-enter anim-enter-d1">TRUE ANSWER</span>
+            <h2 class="section-title anim-enter anim-enter-d2">データが教える答え</h2>
+            <div class="message-cards" id="message-cards-28">
+                <div class="msg-card" data-idx="0">
+                    <div class="msg-icon msg-icon--dir">1</div>
+                    <div class="msg-text">方向性</div>
+                    <div class="msg-sub">自分の強みを見極める</div>
+                </div>
+                <div class="msg-card" data-idx="1">
+                    <div class="msg-icon msg-icon--qual">2</div>
+                    <div class="msg-text">質</div>
+                    <div class="msg-sub">意図的練習を積む</div>
+                </div>
+                <div class="msg-card" data-idx="2">
+                    <div class="msg-icon msg-icon--env">3</div>
+                    <div class="msg-text">適性</div>
+                    <div class="msg-sub">適切な環境を選ぶ</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 29: Ceiling metaphor -->
+    <div class="scene" id="scene-29">
+        <div class="scene-bg" style="background: linear-gradient(180deg, #ECFDF5 0%, #F8F9FC 100%);"></div>
+        <div class="scene-content center-column">
+            <span class="label label--emerald anim-enter anim-enter-d1">MESSAGE</span>
+            <div class="ceiling-demo" id="ceiling-demo-29">
+                <div class="ceiling-line">
+                    <span>天井</span>
+                </div>
+                <div class="ceiling-arrow" id="ceiling-arrow-29"></div>
+                <div class="ceiling-person">You</div>
+            </div>
+            <p class="ceiling-text anim-enter anim-enter-d3">天井に近づく努力は<br>誰にでもできる</p>
+        </div>
+    </div>
+
+    <!-- Scene 30: Ending -->
+    <div class="scene" id="scene-30">
+        <canvas class="scene-canvas" id="canvas-30"></canvas>
+        <div class="scene-content center-column">
+            <span class="label anim-enter anim-enter-d1">THANK YOU</span>
+            <h1 class="title-huge anim-enter anim-enter-d2">正しい努力の<br>意味を知る</h1>
+            <p class="title-sub anim-enter anim-enter-d3">ご視聴ありがとうございました</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

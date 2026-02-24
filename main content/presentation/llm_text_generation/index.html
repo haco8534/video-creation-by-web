@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLMが文章を生成する仕組み</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================================== -->
+    <!-- Block A: Opening (Scenes 1-5)               -->
+    <!-- =========================================== -->
+
+    <!-- Scene 1: Title -->
+    <div class="scene active" id="scene-1">
+        <canvas class="scene-canvas" id="canvas-1"></canvas>
+        <div class="scene-content center-column">
+            <span class="label">MECHANISM OF TEXT GENERATION</span>
+            <h1 class="title-huge">LLMが文章を<br>生成する仕組み</h1>
+            <p class="title-sub">入力から出力までの完全解剖</p>
+        </div>
+    </div>
+
+    <!-- Scene 2: Shocking Fact -->
+    <div class="scene" id="scene-2">
+        <div class="scene-bg gradient-shift"></div>
+        <div class="scene-content center-column">
+            <span class="label label--rose anim-enter anim-enter-d1">SHOCKING FACT</span>
+            <p class="text-lead anim-enter anim-enter-d2">ChatGPTは文章の意味を</p>
+            <h1 class="title-impact anim-enter anim-enter-d3">1ミリも<br>理解していない</h1>
+        </div>
+    </div>
+
+    <!-- Scene 3: Stochastic Parrot -->
+    <div class="scene" id="scene-3">
+        <div class="floating-words" id="floating-words-3"></div>
+        <div class="scene-content center-column">
+            <span class="label label--purple anim-enter anim-enter-d1">CRITICISM</span>
+            <h1 class="title-huge anim-enter anim-enter-d2">確率的オウム</h1>
+            <p class="title-sub-en anim-enter anim-enter-d3">Stochastic Parrot</p>
+        </div>
+    </div>
+
+    <!-- Scene 4: Today's Journey -->
+    <div class="scene" id="scene-4">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--blue anim-enter anim-enter-d1">TODAY'S JOURNEY</span>
+            <h2 class="section-title anim-enter anim-enter-d2">データの旅路</h2>
+            <div class="flow-chart" id="flow-chart-4">
+                <!-- Step 0: Input -->
+                <div class="flow-step" data-step="0">
+                    <div class="flow-card flow-card--neutral">
+                        <span class="flow-icon">IN</span>
+                        <span class="flow-label">入力</span>
+                    </div>
+                </div>
+                <div class="flow-arrow"><svg viewBox="0 0 36 20">
+                        <line x1="2" y1="10" x2="28" y2="10" />
+                        <polyline points="24,5 30,10 24,15" />
+                    </svg></div>
+                <!-- Step 1: Tokenization -->
+                <div class="flow-step" data-step="1">
+                    <div class="flow-card flow-card--blue">
+                        <span class="flow-icon">Tk</span>
+                        <span class="flow-label">トークン化</span>
+                    </div>
+                </div>
+                <div class="flow-arrow"><svg viewBox="0 0 36 20">
+                        <line x1="2" y1="10" x2="28" y2="10" />
+                        <polyline points="24,5 30,10 24,15" />
+                    </svg></div>
+                <!-- Step 2: Embedding -->
+                <div class="flow-step" data-step="2">
+                    <div class="flow-card flow-card--blue">
+                        <span class="flow-icon">Em</span>
+                        <span class="flow-label">埋め込み</span>
+                    </div>
+                </div>
+                <div class="flow-arrow"><svg viewBox="0 0 36 20">
+                        <line x1="2" y1="10" x2="28" y2="10" />
+                        <polyline points="24,5 30,10 24,15" />
+                    </svg></div>
+                <!-- Step 3: Attention -->
+                <div class="flow-step" data-step="3">
+                    <div class="flow-card flow-card--purple">
+                        <span class="flow-icon">At</span>
+                        <span class="flow-label">Attention</span>
+                    </div>
+                </div>
+                <div class="flow-arrow"><svg viewBox="0 0 36 20">
+                        <line x1="2" y1="10" x2="28" y2="10" />
+                        <polyline points="24,5 30,10 24,15" />
+                    </svg></div>
+                <!-- Step 4: Probability -->
+                <div class="flow-step" data-step="4">
+                    <div class="flow-card flow-card--amber">
+                        <span class="flow-icon">Pr</span>
+                        <span class="flow-label">確率予測</span>
+                    </div>
+                </div>
+                <div class="flow-arrow"><svg viewBox="0 0 36 20">
+                        <line x1="2" y1="10" x2="28" y2="10" />
+                        <polyline points="24,5 30,10 24,15" />
+                    </svg></div>
+                <!-- Step 5: Output -->
+                <div class="flow-step" data-step="5">
+                    <div class="flow-card flow-card--neutral">
+                        <span class="flow-icon">OUT</span>
+                        <span class="flow-label">出力</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 5: Departure -->
+    <div class="scene" id="scene-5">
+        <canvas class="scene-canvas" id="canvas-5"></canvas>
+        <div class="scene-content center-column">
+            <h1 class="title-huge anim-enter anim-enter-d2" style="animation: glowPulse 3s ease infinite;">
+                AIの脳内に<br>飛び込む</h1>
+        </div>
+    </div>
+
+    <!-- =========================================== -->
+    <!-- Block B: Tokenization & Embedding (6-11)    -->
+    <!-- =========================================== -->
+
+    <!-- Scene 6: Input -->
+    <div class="scene" id="scene-6">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--blue anim-enter anim-enter-d1">STEP 1</span>
+            <h2 class="section-title anim-enter anim-enter-d2">入力</h2>
+            <div class="input-demo" id="input-demo-6">
+                <div class="input-device">
+                    <div class="input-box">
+                        <span class="input-text" id="typed-text-6"></span>
+                        <span class="input-cursor-blink">|</span>
+                    </div>
+                </div>
+                <div class="input-send-arrow" id="send-arrow-6">
+                    <svg viewBox="0 0 120 24" width="120" height="24">
+                        <line x1="0" y1="12" x2="100" y2="12" stroke-dasharray="6,4" />
+                        <polyline points="95,6 105,12 95,18" />
+                    </svg>
+                </div>
+                <div class="input-server" id="server-6">
+                    <div class="server-icon">AI</div>
+                    <span class="server-label">Server</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 7: Tokenization -->
+    <div class="scene" id="scene-7">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--blue anim-enter anim-enter-d1">STEP 1</span>
+            <h2 class="section-title anim-enter anim-enter-d2">Tokenization</h2>
+            <div class="token-demo" id="token-demo-7">
+                <div class="token-original" id="token-original-7">
+                    <span class="token-source-text">東京の天気は？</span>
+                </div>
+                <div class="token-arrow-down" id="token-arrow-down-7">
+                    <svg viewBox="0 0 24 48" width="24" height="48">
+                        <line x1="12" y1="4" x2="12" y2="38" />
+                        <polyline points="6,32 12,40 18,32" />
+                    </svg>
+                </div>
+                <div class="token-blocks" id="token-blocks-7">
+                    <div class="token-block token-block--0" data-token="0"><span>東京</span></div>
+                    <div class="token-block token-block--1" data-token="1"><span>の</span></div>
+                    <div class="token-block token-block--2" data-token="2"><span>天気</span></div>
+                    <div class="token-block token-block--3" data-token="3"><span>は</span></div>
+                    <div class="token-block token-block--4" data-token="4"><span>？</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 8: Token ID Assignment -->
+    <div class="scene" id="scene-8">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--blue anim-enter anim-enter-d1">STEP 1</span>
+            <h2 class="section-title anim-enter anim-enter-d2">Token ID</h2>
+            <div class="token-id-demo" id="token-id-demo-8">
+                <div class="token-id-card" data-idx="0">
+                    <div class="token-block token-block--0"><span>東京</span></div>
+                    <div class="token-id-arrow">
+                        <svg viewBox="0 0 24 28" width="24" height="28">
+                            <line x1="12" y1="2" x2="12" y2="20" />
+                            <polyline points="7,16 12,22 17,16" />
+                        </svg>
+                    </div>
+                    <div class="token-id-num">105</div>
+                </div>
+                <div class="token-id-card" data-idx="1">
+                    <div class="token-block token-block--1"><span>の</span></div>
+                    <div class="token-id-arrow">
+                        <svg viewBox="0 0 24 28" width="24" height="28">
+                            <line x1="12" y1="2" x2="12" y2="20" />
+                            <polyline points="7,16 12,22 17,16" />
+                        </svg>
+                    </div>
+                    <div class="token-id-num">12</div>
+                </div>
+                <div class="token-id-card" data-idx="2">
+                    <div class="token-block token-block--2"><span>天気</span></div>
+                    <div class="token-id-arrow">
+                        <svg viewBox="0 0 24 28" width="24" height="28">
+                            <line x1="12" y1="2" x2="12" y2="20" />
+                            <polyline points="7,16 12,22 17,16" />
+                        </svg>
+                    </div>
+                    <div class="token-id-num">8847</div>
+                </div>
+                <div class="token-id-card" data-idx="3">
+                    <div class="token-block token-block--3"><span>は</span></div>
+                    <div class="token-id-arrow">
+                        <svg viewBox="0 0 24 28" width="24" height="28">
+                            <line x1="12" y1="2" x2="12" y2="20" />
+                            <polyline points="7,16 12,22 17,16" />
+                        </svg>
+                    </div>
+                    <div class="token-id-num">5</div>
+                </div>
+                <div class="token-id-card" data-idx="4">
+                    <div class="token-block token-block--4"><span>？</span></div>
+                    <div class="token-id-arrow">
+                        <svg viewBox="0 0 24 28" width="24" height="28">
+                            <line x1="12" y1="2" x2="12" y2="20" />
+                            <polyline points="7,16 12,22 17,16" />
+                        </svg>
+                    </div>
+                    <div class="token-id-num">171</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 9: Word Embedding -->
+    <div class="scene" id="scene-9">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--blue anim-enter anim-enter-d1">STEP 2</span>
+            <h2 class="section-title anim-enter anim-enter-d2">Word Embedding</h2>
+            <p class="title-sub anim-enter anim-enter-d3">ID番号を意味の座標に変換する</p>
+            <div class="embed-demo" id="embed-demo-9">
+                <div class="embed-row" data-idx="0">
+                    <div class="embed-id">105</div>
+                    <div class="embed-arrow-right">
+                        <svg viewBox="0 0 40 20" width="40" height="20">
+                            <line x1="4" y1="10" x2="30" y2="10" />
+                            <polyline points="26,5 32,10 26,15" />
+                        </svg>
+                    </div>
+                    <div class="embed-vector"><span class="embed-bracket">[</span><span class="embed-nums">0.23, -0.87,
+                            0.45, 1.02, -0.33, ...</span><span class="embed-bracket">]</span></div>
+                    <div class="embed-label">東京</div>
+                </div>
+                <div class="embed-row" data-idx="1">
+                    <div class="embed-id">12</div>
+                    <div class="embed-arrow-right">
+                        <svg viewBox="0 0 40 20" width="40" height="20">
+                            <line x1="4" y1="10" x2="30" y2="10" />
+                            <polyline points="26,5 32,10 26,15" />
+                        </svg>
+                    </div>
+                    <div class="embed-vector"><span class="embed-bracket">[</span><span class="embed-nums">-0.56, 0.12,
+                            0.78, -0.91, 0.44, ...</span><span class="embed-bracket">]</span></div>
+                    <div class="embed-label">の</div>
+                </div>
+                <div class="embed-row" data-idx="2">
+                    <div class="embed-id">8847</div>
+                    <div class="embed-arrow-right">
+                        <svg viewBox="0 0 40 20" width="40" height="20">
+                            <line x1="4" y1="10" x2="30" y2="10" />
+                            <polyline points="26,5 32,10 26,15" />
+                        </svg>
+                    </div>
+                    <div class="embed-vector"><span class="embed-bracket">[</span><span class="embed-nums">0.91, 0.34,
+                            -0.67, 0.55, -0.12, ...</span><span class="embed-bracket">]</span></div>
+                    <div class="embed-label">天気</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 10: Semantic Space -->
+    <div class="scene" id="scene-10">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--blue anim-enter anim-enter-d1">STEP 2</span>
+            <h2 class="section-title anim-enter anim-enter-d2">意味空間</h2>
+            <div class="semantic-space-wrapper">
+                <canvas class="scene-canvas" id="canvas-10"
+                    style="position:relative;border-radius:var(--radius-lg);border:1px solid var(--border-light);"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 11: Bridge to Transformer -->
+    <div class="scene" id="scene-11">
+        <div class="scene-bg" style="background: linear-gradient(180deg, #EEF2FF 0%, #F5F3FF 100%);"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--purple anim-enter anim-enter-d1">NEXT STEP</span>
+            <h2 class="section-title anim-enter anim-enter-d2">心臓部へ</h2>
+            <div class="bridge-demo" id="bridge-demo-11">
+                <div class="bridge-vectors" id="bridge-vectors-11">
+                    <div class="bridge-vec" data-idx="0"><span>[0.23, -0.87, ...]</span></div>
+                    <div class="bridge-vec" data-idx="1"><span>[-0.56, 0.12, ...]</span></div>
+                    <div class="bridge-vec" data-idx="2"><span>[0.91, 0.34, ...]</span></div>
+                    <div class="bridge-vec" data-idx="3"><span>[-0.15, 0.88, ...]</span></div>
+                    <div class="bridge-vec" data-idx="4"><span>[0.67, -0.43, ...]</span></div>
+                </div>
+                <div class="bridge-arrow-flow" id="bridge-arrow-11">
+                    <svg viewBox="0 0 160 40" width="160" height="40">
+                        <line x1="10" y1="20" x2="130" y2="20" stroke-dasharray="8,6" />
+                        <polyline points="125,12 138,20 125,28" />
+                    </svg>
+                </div>
+                <div class="bridge-target" id="bridge-target-11">
+                    <div class="bridge-target-box">
+                        <span class="bridge-target-label">Transformer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================== -->
+    <!-- Block C: Attention (Scenes 12-18)           -->
+    <!-- =========================================== -->
+
+    <!-- Scene 12: Transformer Title -->
+    <div class="scene" id="scene-12">
+        <div class="scene-bg"
+            style="background: linear-gradient(135deg, #F5F3FF 0%, #EEF2FF 50%, #F5F3FF 100%); background-size:300% 300%; animation: gradientShift 10s ease infinite;">
+        </div>
+        <div class="scene-content center-column">
+            <span class="label label--purple anim-enter anim-enter-d1">STEP 3</span>
+            <h1 class="title-huge anim-enter anim-enter-d2"
+                style="background:linear-gradient(135deg,var(--purple-dark),var(--blue-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">
+                Transformer</h1>
+            <p class="title-sub-en anim-enter anim-enter-d3">Attention Is All You Need (2017)</p>
+        </div>
+    </div>
+
+    <!-- Scene 13: RNN Limitation -->
+    <div class="scene" id="scene-13">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--purple anim-enter anim-enter-d1">STEP 3</span>
+            <h2 class="section-title anim-enter anim-enter-d2">RNNの限界</h2>
+            <div class="rnn-demo" id="rnn-demo-13">
+                <div class="rnn-sequence">
+                    <div class="rnn-word" data-i="0">昔々</div>
+                    <div class="rnn-arrow-r"><svg viewBox="0 0 30 16" width="30" height="16">
+                            <line x1="2" y1="8" x2="22" y2="8" />
+                            <polyline points="18,4 24,8 18,12" />
+                        </svg></div>
+                    <div class="rnn-word" data-i="1">ある</div>
+                    <div class="rnn-arrow-r"><svg viewBox="0 0 30 16" width="30" height="16">
+                            <line x1="2" y1="8" x2="22" y2="8" />
+                            <polyline points="18,4 24,8 18,12" />
+                        </svg></div>
+                    <div class="rnn-word" data-i="2">ところに</div>
+                    <div class="rnn-arrow-r"><svg viewBox="0 0 30 16" width="30" height="16">
+                            <line x1="2" y1="8" x2="22" y2="8" />
+                            <polyline points="18,4 24,8 18,12" />
+                        </svg></div>
+                    <div class="rnn-word" data-i="3">おじいさんと</div>
+                    <div class="rnn-arrow-r"><svg viewBox="0 0 30 16" width="30" height="16">
+                            <line x1="2" y1="8" x2="22" y2="8" />
+                            <polyline points="18,4 24,8 18,12" />
+                        </svg></div>
+                    <div class="rnn-word" data-i="4">...</div>
+                </div>
+                <p class="rnn-caption">1つずつ順番に処理 → 長文で最初を忘れる</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 14: Self-Attention -->
+    <div class="scene" id="scene-14">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--purple anim-enter anim-enter-d1">STEP 3</span>
+            <h2 class="section-title anim-enter anim-enter-d2">Self-Attention</h2>
+            <p class="title-sub anim-enter anim-enter-d3">全単語を同時に見渡す</p>
+            <canvas class="scene-canvas" id="canvas-14"
+                style="position:relative;width:800px;height:350px;border-radius:var(--radius-lg);border:1px solid var(--border-light);"></canvas>
+        </div>
+    </div>
+
+    <!-- Scene 15: Context Reading -->
+    <div class="scene" id="scene-15">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--purple anim-enter anim-enter-d1">STEP 3</span>
+            <h2 class="section-title anim-enter anim-enter-d2">文脈を読む</h2>
+            <div class="context-demo" id="context-demo-15">
+                <div class="context-sentence">
+                    <span class="ctx-word" data-i="0">銀行</span>
+                    <span class="ctx-word" data-i="1">で</span>
+                    <span class="ctx-word ctx-highlight" data-i="2">お金</span>
+                    <span class="ctx-word" data-i="3">を</span>
+                    <span class="ctx-word ctx-highlight" data-i="4">下ろす</span>
+                </div>
+                <div class="context-result" id="ctx-result-15">
+                    <div class="ctx-answer">
+                        <div class="ctx-answer-label">Bank = 金融機関</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 16: Q/K/V -->
+    <div class="scene" id="scene-16">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--purple anim-enter anim-enter-d1">STEP 3</span>
+            <h2 class="section-title anim-enter anim-enter-d2">Query / Key / Value</h2>
+            <div class="qkv-demo" id="qkv-demo-16">
+                <div class="qkv-card" data-idx="0">
+                    <div class="qkv-icon qkv-q">Q</div>
+                    <div class="qkv-name">Query</div>
+                    <div class="qkv-desc">自分の希望</div>
+                </div>
+                <div class="qkv-card" data-idx="1">
+                    <div class="qkv-icon qkv-k">K</div>
+                    <div class="qkv-name">Key</div>
+                    <div class="qkv-desc">名札</div>
+                </div>
+                <div class="qkv-card" data-idx="2">
+                    <div class="qkv-icon qkv-v">V</div>
+                    <div class="qkv-name">Value</div>
+                    <div class="qkv-desc">中身の情報</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 17: Multi-Head Attention -->
+    <div class="scene" id="scene-17">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--purple anim-enter anim-enter-d1">STEP 3</span>
+            <h2 class="section-title anim-enter anim-enter-d2">Multi-Head Attention</h2>
+            <div class="multihead-demo" id="multihead-demo-17">
+                <div class="mh-head" data-idx="0">
+                    <div class="mh-head-inner mh-h0"><span class="mh-hlabel">Head 1</span><span
+                            class="mh-htag">文法</span></div>
+                </div>
+                <div class="mh-head" data-idx="1">
+                    <div class="mh-head-inner mh-h1"><span class="mh-hlabel">Head 2</span><span
+                            class="mh-htag">感情</span></div>
+                </div>
+                <div class="mh-head" data-idx="2">
+                    <div class="mh-head-inner mh-h2"><span class="mh-hlabel">Head 3</span><span
+                            class="mh-htag">主語</span></div>
+                </div>
+                <div class="mh-head" data-idx="3">
+                    <div class="mh-head-inner mh-h3"><span class="mh-hlabel">Head 4</span><span
+                            class="mh-htag">時制</span></div>
+                </div>
+                <div class="mh-head" data-idx="4">
+                    <div class="mh-head-inner mh-h4"><span class="mh-hlabel">Head 5</span><span
+                            class="mh-htag">意味</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 18: Layer Stack -->
+    <div class="scene" id="scene-18">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--purple anim-enter anim-enter-d1">STEP 3</span>
+            <h2 class="section-title anim-enter anim-enter-d2">層の積み重ね</h2>
+            <div class="layer-stack" id="layer-stack-18">
+                <div class="layer-item layer-ffn" data-idx="5"><span>Feed Forward</span></div>
+                <div class="layer-item layer-norm" data-idx="4"><span>Layer Norm</span></div>
+                <div class="layer-item layer-attn" data-idx="3"><span>Multi-Head Attention</span></div>
+                <div class="layer-item layer-norm" data-idx="2"><span>Layer Norm</span></div>
+                <div class="layer-item layer-res" data-idx="1"><span>Residual Connection</span></div>
+                <div class="layer-item layer-input" data-idx="0"><span>Input Embeddings</span></div>
+            </div>
+            <p class="layer-repeat">x 96 Layers</p>
+        </div>
+    </div>
+
+    <!-- =========================================== -->
+    <!-- Block D: Probability & Sampling (19-24)     -->
+    <!-- =========================================== -->
+
+    <!-- Scene 19: Next Token Prediction -->
+    <div class="scene" id="scene-19">
+        <div class="scene-bg"
+            style="background: linear-gradient(135deg, #FFFBEB 0%, #F8F9FC 50%, #FEF3C7 100%); background-size:300% 300%; animation: gradientShift 10s ease infinite;">
+        </div>
+        <div class="scene-content center-column">
+            <span class="label label--amber anim-enter anim-enter-d1">STEP 4</span>
+            <p class="text-lead anim-enter anim-enter-d2">LLMがやっていることは、たったひとつ</p>
+            <h1 class="title-huge anim-enter anim-enter-d3" style="color:var(--amber-dark);">次の1トークンを<br>予測する</h1>
+        </div>
+    </div>
+
+    <!-- Scene 20: Probability Distribution -->
+    <div class="scene" id="scene-20">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--amber anim-enter anim-enter-d1">STEP 4</span>
+            <h2 class="section-title anim-enter anim-enter-d2">確率分布</h2>
+            <div class="prob-chart" id="prob-chart-20">
+                <div class="prob-bar" data-idx="0">
+                    <div class="prob-fill" data-pct="40" style="--bar-color:var(--amber)"></div><span
+                        class="prob-label">晴</span><span class="prob-pct">40%</span>
+                </div>
+                <div class="prob-bar" data-idx="1">
+                    <div class="prob-fill" data-pct="30" style="--bar-color:#F59E0B"></div><span
+                        class="prob-label">曇</span><span class="prob-pct">30%</span>
+                </div>
+                <div class="prob-bar" data-idx="2">
+                    <div class="prob-fill" data-pct="20" style="--bar-color:#D97706"></div><span
+                        class="prob-label">雨</span><span class="prob-pct">20%</span>
+                </div>
+                <div class="prob-bar" data-idx="3">
+                    <div class="prob-fill" data-pct="8" style="--bar-color:#92400E"></div><span
+                        class="prob-label">雪</span><span class="prob-pct">8%</span>
+                </div>
+                <div class="prob-bar" data-idx="4">
+                    <div class="prob-fill" data-pct="2" style="--bar-color:var(--text-muted)"></div><span
+                        class="prob-label">本</span><span class="prob-pct">0.01%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 21: Autoregressive Loop -->
+    <div class="scene" id="scene-21">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--amber anim-enter anim-enter-d1">STEP 4</span>
+            <h2 class="section-title anim-enter anim-enter-d2">Autoregressive</h2>
+            <div class="auto-loop" id="auto-loop-21">
+                <div class="auto-step" data-i="0"><span>東京の天気は？</span></div>
+                <div class="auto-step" data-i="1"><span>東京の天気は？ <strong>晴</strong></span></div>
+                <div class="auto-step" data-i="2"><span>東京の天気は？ 晴<strong>れ</strong></span></div>
+                <div class="auto-step" data-i="3"><span>東京の天気は？ 晴れ<strong>で</strong></span></div>
+                <div class="auto-step" data-i="4"><span>東京の天気は？ 晴れで<strong>す</strong></span></div>
+            </div>
+            <div class="auto-loop-arrow" id="auto-loop-arrow-21">
+                <svg viewBox="0 0 60 40" width="60" height="40">
+                    <path d="M10,5 Q50,5 50,20 Q50,35 10,35" fill="none" stroke-dasharray="4,3" />
+                    <polyline points="14,30 8,36 14,42" transform="translate(0,-5)" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 22: Temperature -->
+    <div class="scene" id="scene-22">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--amber anim-enter anim-enter-d1">STEP 4</span>
+            <h2 class="section-title anim-enter anim-enter-d2">Temperature</h2>
+            <div class="temp-demo" id="temp-demo-22">
+                <div class="temp-col" data-mode="low">
+                    <h3 class="temp-title">Low (0.1)</h3>
+                    <div class="temp-bars">
+                        <div class="temp-bar">
+                            <div class="temp-fill" style="height:90%;background:var(--blue)"></div><span>晴</span>
+                        </div>
+                        <div class="temp-bar">
+                            <div class="temp-fill" style="height:8%;background:var(--blue-light)"></div><span>曇</span>
+                        </div>
+                        <div class="temp-bar">
+                            <div class="temp-fill" style="height:2%;background:var(--blue-light)"></div><span>雨</span>
+                        </div>
+                    </div>
+                    <p class="temp-desc">確実・堅実</p>
+                </div>
+                <div class="temp-col" data-mode="high">
+                    <h3 class="temp-title">High (1.5)</h3>
+                    <div class="temp-bars">
+                        <div class="temp-bar">
+                            <div class="temp-fill" style="height:38%;background:var(--amber)"></div><span>晴</span>
+                        </div>
+                        <div class="temp-bar">
+                            <div class="temp-fill" style="height:30%;background:var(--amber)"></div><span>曇</span>
+                        </div>
+                        <div class="temp-bar">
+                            <div class="temp-fill" style="height:24%;background:var(--amber)"></div><span>雨</span>
+                        </div>
+                    </div>
+                    <p class="temp-desc">多様・創造的</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 23: Hallucination -->
+    <div class="scene" id="scene-23">
+        <div class="scene-bg" style="background: linear-gradient(135deg, #FFF1F2 0%, #F8F9FC 100%);"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--rose anim-enter anim-enter-d1">WARNING</span>
+            <h2 class="section-title anim-enter anim-enter-d2" style="color:var(--rose-dark);">Hallucination</h2>
+            <div class="hallu-demo" id="hallu-demo-23">
+                <div class="hallu-card hallu-wrong" data-idx="0">
+                    <div class="hallu-x">X</div>
+                    <span>事実を検索して答える</span>
+                </div>
+                <div class="hallu-vs">vs</div>
+                <div class="hallu-card hallu-right" data-idx="1">
+                    <div class="hallu-o">O</div>
+                    <span>確率で自然な言葉を繋ぐ</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 24: Bridge to Learning -->
+    <div class="scene" id="scene-24">
+        <div class="scene-bg" style="background: linear-gradient(180deg, #FFFBEB 0%, #ECFDF5 100%);"></div>
+        <div class="scene-content center-column">
+            <span class="label label--emerald anim-enter anim-enter-d1">NEXT</span>
+            <p class="text-lead anim-enter anim-enter-d2">確率で次の文字を当てているだけなのに</p>
+            <h1 class="title-huge anim-enter anim-enter-d3" style="color:var(--emerald-dark);">なぜ賢く見えるのか？</h1>
+            <p class="title-sub anim-enter anim-enter-d4">学習の秘密</p>
+        </div>
+    </div>
+
+    <!-- =========================================== -->
+    <!-- Block E: Learning (Scenes 25-29)            -->
+    <!-- =========================================== -->
+
+    <!-- Scene 25: Pre-training -->
+    <div class="scene" id="scene-25">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--emerald anim-enter anim-enter-d1">LEARNING 1/3</span>
+            <h2 class="section-title anim-enter anim-enter-d2">Pre-training</h2>
+            <p class="title-sub anim-enter anim-enter-d3">基礎教育</p>
+            <div class="pretrain-demo" id="pretrain-demo-25">
+                <div class="pt-step" data-idx="0">
+                    <div class="pt-box pt-data">Internet Text</div>
+                </div>
+                <div class="pt-arrow"><svg viewBox="0 0 36 20" width="36" height="20">
+                        <line x1="2" y1="10" x2="28" y2="10" />
+                        <polyline points="24,5 30,10 24,15" />
+                    </svg></div>
+                <div class="pt-step" data-idx="1">
+                    <div class="pt-box pt-quiz">次の文字は？</div>
+                </div>
+                <div class="pt-arrow"><svg viewBox="0 0 36 20" width="36" height="20">
+                        <line x1="2" y1="10" x2="28" y2="10" />
+                        <polyline points="24,5 30,10 24,15" />
+                    </svg></div>
+                <div class="pt-step" data-idx="2">
+                    <div class="pt-box pt-update">重み修正</div>
+                </div>
+                <div class="pt-arrow loop-arrow"><svg viewBox="0 0 36 20" width="36" height="20">
+                        <line x1="2" y1="10" x2="28" y2="10" />
+                        <polyline points="24,5 30,10 24,15" />
+                    </svg></div>
+                <div class="pt-step" data-idx="3">
+                    <div class="pt-box pt-repeat">x 兆回</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 26: Scale Explosion -->
+    <div class="scene" id="scene-26">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--emerald anim-enter anim-enter-d1">LEARNING 1/3</span>
+            <h2 class="section-title anim-enter anim-enter-d2">Scale</h2>
+            <div class="scale-chart" id="scale-chart-26">
+                <div class="scale-bar" data-idx="0">
+                    <div class="scale-fill" data-pct="2"></div><span class="scale-name">GPT-1 (2018)</span><span
+                        class="scale-val">1.1億</span>
+                </div>
+                <div class="scale-bar" data-idx="1">
+                    <div class="scale-fill" data-pct="15"></div><span class="scale-name">GPT-2 (2019)</span><span
+                        class="scale-val">15億</span>
+                </div>
+                <div class="scale-bar" data-idx="2">
+                    <div class="scale-fill" data-pct="60"></div><span class="scale-name">GPT-3 (2020)</span><span
+                        class="scale-val">1,750億</span>
+                </div>
+                <div class="scale-bar" data-idx="3">
+                    <div class="scale-fill" data-pct="100"></div><span class="scale-name">GPT-4 (2023)</span><span
+                        class="scale-val">1兆超？</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 27: Fine-tuning -->
+    <div class="scene" id="scene-27">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--emerald anim-enter anim-enter-d1">LEARNING 2/3</span>
+            <h2 class="section-title anim-enter anim-enter-d2">Fine-tuning</h2>
+            <p class="title-sub anim-enter anim-enter-d3">専門教育</p>
+            <div class="ft-demo" id="ft-demo-27">
+                <div class="ft-card" data-idx="0">
+                    <div class="ft-icon ft-before">Raw</div>
+                    <span>オタク知識</span>
+                </div>
+                <div class="ft-arrow"><svg viewBox="0 0 50 20" width="50" height="20">
+                        <line x1="4" y1="10" x2="38" y2="10" />
+                        <polyline points="34,5 40,10 34,15" />
+                    </svg></div>
+                <div class="ft-card" data-idx="1">
+                    <div class="ft-icon ft-manual">Q&A</div>
+                    <span>対話のお手本</span>
+                </div>
+                <div class="ft-arrow"><svg viewBox="0 0 50 20" width="50" height="20">
+                        <line x1="4" y1="10" x2="38" y2="10" />
+                        <polyline points="34,5 40,10 34,15" />
+                    </svg></div>
+                <div class="ft-card" data-idx="2">
+                    <div class="ft-icon ft-after">Pro</div>
+                    <span>接客マニュアル</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 28: RLHF -->
+    <div class="scene" id="scene-28">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--emerald anim-enter anim-enter-d1">LEARNING 3/3</span>
+            <h2 class="section-title anim-enter anim-enter-d2">RLHF</h2>
+            <p class="title-sub anim-enter anim-enter-d3">人間のフィードバックによる強化学習</p>
+            <div class="rlhf-demo" id="rlhf-demo-28">
+                <div class="rlhf-step" data-idx="0">
+                    <div class="rlhf-icon rlhf-human">Human</div>
+                    <span>人間が採点</span>
+                </div>
+                <div class="rlhf-arrow"><svg viewBox="0 0 40 20" width="40" height="20">
+                        <line x1="4" y1="10" x2="30" y2="10" />
+                        <polyline points="26,5 32,10 26,15" />
+                    </svg></div>
+                <div class="rlhf-step" data-idx="1">
+                    <div class="rlhf-icon rlhf-reward">RM</div>
+                    <span>報酬モデル</span>
+                </div>
+                <div class="rlhf-arrow"><svg viewBox="0 0 40 20" width="40" height="20">
+                        <line x1="4" y1="10" x2="30" y2="10" />
+                        <polyline points="26,5 32,10 26,15" />
+                    </svg></div>
+                <div class="rlhf-step" data-idx="2">
+                    <div class="rlhf-icon rlhf-ai">AI</div>
+                    <span>価値観の特訓</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 29: Learning Summary Pyramid -->
+    <div class="scene" id="scene-29">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label label--emerald anim-enter anim-enter-d1">LEARNING</span>
+            <h2 class="section-title anim-enter anim-enter-d2">3段階の学習</h2>
+            <div class="pyramid" id="pyramid-29">
+                <div class="pyramid-level pyr-3" data-idx="2"><span>RLHF</span><small>先輩の指導</small></div>
+                <div class="pyramid-level pyr-2" data-idx="1"><span>Fine-tuning</span><small>専門教育</small></div>
+                <div class="pyramid-level pyr-1" data-idx="0"><span>Pre-training</span><small>基礎教育</small></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================== -->
+    <!-- Block F: Summary (Scenes 30-33)             -->
+    <!-- =========================================== -->
+
+    <!-- Scene 30: Full Review Flow -->
+    <div class="scene" id="scene-30">
+        <div class="scene-bg ambient-dots"></div>
+        <div class="scene-content column-layout">
+            <span class="label anim-enter anim-enter-d1">SUMMARY</span>
+            <h2 class="section-title anim-enter anim-enter-d2">全体フロー</h2>
+            <div class="review-flow" id="review-flow-30">
+                <div class="rv-step" data-idx="0">
+                    <div class="rv-box rv-neutral">入力</div>
+                </div>
+                <div class="rv-arrow"><svg viewBox="0 0 28 16" width="28" height="16">
+                        <line x1="2" y1="8" x2="20" y2="8" />
+                        <polyline points="17,4 22,8 17,12" />
+                    </svg></div>
+                <div class="rv-step" data-idx="1">
+                    <div class="rv-box rv-blue">トークン化</div>
+                </div>
+                <div class="rv-arrow"><svg viewBox="0 0 28 16" width="28" height="16">
+                        <line x1="2" y1="8" x2="20" y2="8" />
+                        <polyline points="17,4 22,8 17,12" />
+                    </svg></div>
+                <div class="rv-step" data-idx="2">
+                    <div class="rv-box rv-blue">埋め込み</div>
+                </div>
+                <div class="rv-arrow"><svg viewBox="0 0 28 16" width="28" height="16">
+                        <line x1="2" y1="8" x2="20" y2="8" />
+                        <polyline points="17,4 22,8 17,12" />
+                    </svg></div>
+                <div class="rv-step" data-idx="3">
+                    <div class="rv-box rv-purple">Attention</div>
+                </div>
+                <div class="rv-arrow"><svg viewBox="0 0 28 16" width="28" height="16">
+                        <line x1="2" y1="8" x2="20" y2="8" />
+                        <polyline points="17,4 22,8 17,12" />
+                    </svg></div>
+                <div class="rv-step" data-idx="4">
+                    <div class="rv-box rv-amber">確率予測</div>
+                </div>
+                <div class="rv-arrow"><svg viewBox="0 0 28 16" width="28" height="16">
+                        <line x1="2" y1="8" x2="20" y2="8" />
+                        <polyline points="17,4 22,8 17,12" />
+                    </svg></div>
+                <div class="rv-step" data-idx="5">
+                    <div class="rv-box rv-neutral">出力</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 31: Illusion -->
+    <div class="scene" id="scene-31">
+        <div class="scene-bg"
+            style="background: linear-gradient(135deg, #F5F3FF 0%, #F8F9FC 50%, #EEF2FF 100%); background-size:300% 300%; animation: gradientShift 10s ease infinite;">
+        </div>
+        <div class="scene-content center-column">
+            <span class="label label--purple anim-enter anim-enter-d1">INSIGHT</span>
+            <div class="illusion-eq anim-enter anim-enter-d2" id="illusion-31">
+                <span class="ill-part ill-a">確率的オウム</span>
+                <span class="ill-op">x</span>
+                <span class="ill-part ill-b">超巨大スケール</span>
+                <span class="ill-op">=</span>
+                <span class="ill-part ill-c">知性のイリュージョン</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 32: Correct Distance -->
+    <div class="scene" id="scene-32">
+        <div class="scene-bg" style="background: linear-gradient(180deg, #EFF6FF 0%, #F8F9FC 100%);"></div>
+        <div class="scene-content center-column">
+            <span class="label label--blue anim-enter anim-enter-d1">TAKEAWAY</span>
+            <h1 class="title-huge anim-enter anim-enter-d2" style="font-size:52px;color:var(--blue-dark);">
+                AIは確率で<br>次の言葉を<br>予測しているだけ</h1>
+            <p class="title-sub anim-enter anim-enter-d3">正しい距離感でAIを使いこなす</p>
+        </div>
+    </div>
+
+    <!-- Scene 33: Ending -->
+    <div class="scene" id="scene-33">
+        <canvas class="scene-canvas" id="canvas-33"></canvas>
+        <div class="scene-content center-column">
+            <h1 class="title-huge anim-enter anim-enter-d2" style="color:var(--text-white);font-size:56px;">
+                ご視聴ありがとう<br>ございました</h1>
+            <p class="title-sub-en anim-enter anim-enter-d3" style="color:rgba(255,255,255,0.6);">Thank you for watching
+            </p>
+        </div>
+    </div>
+
+    <!-- Global Progress Bar -->
+    <div class="global-progress" id="global-progress">
+        <div class="gp-step" data-gp="input"><span class="gp-dot"></span><span class="gp-text">入力</span></div>
+        <div class="gp-conn"></div>
+        <div class="gp-step" data-gp="token"><span class="gp-dot"></span><span class="gp-text">トークン化</span></div>
+        <div class="gp-conn"></div>
+        <div class="gp-step" data-gp="embed"><span class="gp-dot"></span><span class="gp-text">埋め込み</span></div>
+        <div class="gp-conn"></div>
+        <div class="gp-step" data-gp="attn"><span class="gp-dot"></span><span class="gp-text">Attention</span></div>
+        <div class="gp-conn"></div>
+        <div class="gp-step" data-gp="prob"><span class="gp-dot"></span><span class="gp-text">確率予測</span></div>
+        <div class="gp-conn"></div>
+        <div class="gp-step" data-gp="output"><span class="gp-dot"></span><span class="gp-text">出力</span></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,813 @@
+[
+  {
+    "id": 0,
+    "title": "タイトル",
+    "duration": 4,
+    "audioFiles": []
+  },
+  {
+    "id": 1,
+    "title": "1万時間の法則とは",
+    "duration": 20.2,
+    "audioFiles": [
+      {
+        "file": "scene_01_00.wav",
+        "duration": 7.648,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_01_01.wav",
+        "duration": 11.786666666666667,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "夢の方程式",
+    "duration": 18,
+    "audioFiles": [
+      {
+        "file": "scene_02_00.wav",
+        "duration": 6.101333333333334,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_02_01.wav",
+        "duration": 6.794666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_02_02.wav",
+        "duration": 3.968,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "研究者本人が否定",
+    "duration": 20.1,
+    "audioFiles": [
+      {
+        "file": "scene_03_00.wav",
+        "duration": 4.810666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_03_01.wav",
+        "duration": 2.3893333333333335,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_03_02.wav",
+        "duration": 8.992,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_03_03.wav",
+        "duration": 2.538666666666667,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "12%の衝撃",
+    "duration": 40.2,
+    "audioFiles": [
+      {
+        "file": "scene_04_00.wav",
+        "duration": 9.76,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_04_01.wav",
+        "duration": 3.8506666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_04_02.wav",
+        "duration": 8.48,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_04_03.wav",
+        "duration": 4.629333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_04_04.wav",
+        "duration": 11.765333333333333,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "法則の出どころ",
+    "duration": 30.3,
+    "audioFiles": [
+      {
+        "file": "scene_05_00.wav",
+        "duration": 13.013333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_05_01.wav",
+        "duration": 6.08,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_05_02.wav",
+        "duration": 10.101333333333333,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "エリクソンの研究",
+    "duration": 25.3,
+    "audioFiles": [
+      {
+        "file": "scene_06_00.wav",
+        "duration": 2.208,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_06_01.wav",
+        "duration": 13.685333333333332,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_06_02.wav",
+        "duration": 0.544,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_06_03.wav",
+        "duration": 7.424,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "平均の罠",
+    "duration": 22.4,
+    "audioFiles": [
+      {
+        "file": "scene_07_00.wav",
+        "duration": 1.888,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_07_01.wav",
+        "duration": 13.792,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_07_02.wav",
+        "duration": 3.957333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_07_03.wav",
+        "duration": 1.3973333333333333,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "意図的練習",
+    "duration": 32.9,
+    "audioFiles": [
+      {
+        "file": "scene_08_00.wav",
+        "duration": 8.458666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_08_01.wav",
+        "duration": 1.0666666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_08_02.wav",
+        "duration": 14.986666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_08_03.wav",
+        "duration": 6.944,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "研究者の反論",
+    "duration": 53.3,
+    "audioFiles": [
+      {
+        "file": "scene_09_00.wav",
+        "duration": 12.586666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_09_01.wav",
+        "duration": 4.234666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_09_02.wav",
+        "duration": 18.634666666666668,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_09_03.wav",
+        "duration": 4.074666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_09_04.wav",
+        "duration": 12.117333333333333,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "メタ分析の紹介",
+    "duration": 30.6,
+    "audioFiles": [
+      {
+        "file": "scene_10_00.wav",
+        "duration": 7.925333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_10_01.wav",
+        "duration": 0.992,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_10_02.wav",
+        "duration": 13.621333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_10_03.wav",
+        "duration": 6.634666666666667,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "分野別の寄与率",
+    "duration": 38.3,
+    "audioFiles": [
+      {
+        "file": "scene_11_00.wav",
+        "duration": 11.712,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_11_01.wav",
+        "duration": 3.648,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_11_02.wav",
+        "duration": 4.2026666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_11_03.wav",
+        "duration": 1.9626666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_11_04.wav",
+        "duration": 4.128,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_11_05.wav",
+        "duration": 2.3786666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_11_06.wav",
+        "duration": 5.44,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_11_07.wav",
+        "duration": 2.2613333333333334,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "全体平均12%",
+    "duration": 39.2,
+    "audioFiles": [
+      {
+        "file": "scene_12_00.wav",
+        "duration": 10.528,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_12_01.wav",
+        "duration": 6.762666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_12_02.wav",
+        "duration": 9.141333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_12_03.wav",
+        "duration": 4.053333333333334,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_12_04.wav",
+        "duration": 6.976,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "チェスマスターへの道",
+    "duration": 21.7,
+    "audioFiles": [
+      {
+        "file": "scene_13_00.wav",
+        "duration": 0.608,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_13_01.wav",
+        "duration": 16.629333333333335,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_13_02.wav",
+        "duration": 3.3493333333333335,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "到達できない壁",
+    "duration": 23.2,
+    "audioFiles": [
+      {
+        "file": "scene_14_00.wav",
+        "duration": 14.314666666666668,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_14_01.wav",
+        "duration": 6.005333333333334,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_14_02.wav",
+        "duration": 1.8026666666666666,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "練習の寄与度は約3割",
+    "duration": 22.2,
+    "audioFiles": [
+      {
+        "file": "scene_15_00.wav",
+        "duration": 8.309333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_15_01.wav",
+        "duration": 3.6693333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_15_02.wav",
+        "duration": 9.141333333333334,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "遺伝という見えない天井",
+    "duration": 11,
+    "audioFiles": [
+      {
+        "file": "scene_16_00.wav",
+        "duration": 5.066666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_16_01.wav",
+        "duration": 5.152,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "双子研究の結果",
+    "duration": 17.9,
+    "audioFiles": [
+      {
+        "file": "scene_17_00.wav",
+        "duration": 13.941333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_17_01.wav",
+        "duration": 3.168,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "身体の遺伝子",
+    "duration": 57.6,
+    "audioFiles": [
+      {
+        "file": "scene_18_00.wav",
+        "duration": 16.746666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_18_01.wav",
+        "duration": 4.608,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_18_02.wav",
+        "duration": 10.421333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_18_03.wav",
+        "duration": 2.464,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_18_04.wav",
+        "duration": 14.176,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_18_05.wav",
+        "duration": 7.210666666666667,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "エンジンの差",
+    "duration": 18.4,
+    "audioFiles": [
+      {
+        "file": "scene_19_00.wav",
+        "duration": 14.997333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_19_01.wav",
+        "duration": 2.570666666666667,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "トレーニング反応性",
+    "duration": 35,
+    "audioFiles": [
+      {
+        "file": "scene_20_00.wav",
+        "duration": 16.746666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_20_01.wav",
+        "duration": 3.84,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_20_02.wav",
+        "duration": 10.933333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_20_03.wav",
+        "duration": 2.048,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "title": "認知能力の遺伝",
+    "duration": 69.4,
+    "audioFiles": [
+      {
+        "file": "scene_21_00.wav",
+        "duration": 11.893333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_21_01.wav",
+        "duration": 2.432,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_21_02.wav",
+        "duration": 12.544,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_21_03.wav",
+        "duration": 4.864,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_21_04.wav",
+        "duration": 5.514666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_21_05.wav",
+        "duration": 0.4053333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_21_06.wav",
+        "duration": 15.552,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_21_07.wav",
+        "duration": 2.816,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_21_08.wav",
+        "duration": 10.432,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "質を極限まで高める",
+    "duration": 32.5,
+    "audioFiles": [
+      {
+        "file": "scene_22_00.wav",
+        "duration": 8.682666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_22_01.wav",
+        "duration": 5.984,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_22_02.wav",
+        "duration": 5.664,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_22_03.wav",
+        "duration": 10.816,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Kind vs Wicked",
+    "duration": 64.6,
+    "audioFiles": [
+      {
+        "file": "scene_23_00.wav",
+        "duration": 4.128,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_23_01.wav",
+        "duration": 11.829333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_23_02.wav",
+        "duration": 0.768,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_23_03.wav",
+        "duration": 4.64,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_23_04.wav",
+        "duration": 18.261333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_23_05.wav",
+        "duration": 19.168,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_23_06.wav",
+        "duration": 3.488,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "ウッズ vs フェデラー",
+    "duration": 36.7,
+    "audioFiles": [
+      {
+        "file": "scene_24_00.wav",
+        "duration": 19.082666666666668,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_24_01.wav",
+        "duration": 1.6746666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_24_02.wav",
+        "duration": 10.496,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_24_03.wav",
+        "duration": 4.042666666666666,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "title": "20時間の法則",
+    "duration": 28.5,
+    "audioFiles": [
+      {
+        "file": "scene_25_00.wav",
+        "duration": 22.058666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_25_01.wav",
+        "duration": 5.6,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "title": "正しい努力の方程式",
+    "duration": 12.7,
+    "audioFiles": [
+      {
+        "file": "scene_26_00.wav",
+        "duration": 12.234666666666667,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "title": "最終判決",
+    "duration": 26.1,
+    "audioFiles": [
+      {
+        "file": "scene_27_00.wav",
+        "duration": 2.8586666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_27_01.wav",
+        "duration": 1.0346666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_27_02.wav",
+        "duration": 4.437333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_27_03.wav",
+        "duration": 16.341333333333335,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "title": "データが教える答え",
+    "duration": 46.8,
+    "audioFiles": [
+      {
+        "file": "scene_28_00.wav",
+        "duration": 7.648,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_28_01.wav",
+        "duration": 15.786666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_28_02.wav",
+        "duration": 2.1333333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_28_03.wav",
+        "duration": 2.6133333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_28_04.wav",
+        "duration": 16.906666666666666,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "title": "天井と努力",
+    "duration": 43.6,
+    "audioFiles": [
+      {
+        "file": "scene_29_00.wav",
+        "duration": 8.405333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_29_01.wav",
+        "duration": 16.544,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_29_02.wav",
+        "duration": 2.6453333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_29_03.wav",
+        "duration": 14.570666666666666,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "title": "エンディング",
+    "duration": 15,
+    "audioFiles": [
+      {
+        "file": "scene_30_00.wav",
+        "duration": 2.7626666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_30_01.wav",
+        "duration": 9.792,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_30_02.wav",
+        "duration": 1.3546666666666667,
+        "speaker": "めたん"
+      }
+    ]
+  }
+]

@@ -1,0 +1,2246 @@
+/* ==============================================
+   LLM Text Generation Presentation
+   Design System + Block A Styles
+   ============================================== */
+
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', 'Inter', sans-serif;
+    background: var(--bg-base);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Design Tokens ===== */
+:root {
+    --bg-base: #F8F9FC;
+    --bg-card: #FFFFFF;
+    --bg-elevated: #FFFFFF;
+
+    --text-primary: #1E293B;
+    --text-secondary: #475569;
+    --text-muted: #94A3B8;
+    --text-white: #FFFFFF;
+
+    --blue: #3B82F6;
+    --blue-light: #DBEAFE;
+    --blue-dark: #1D4ED8;
+    --blue-50: #EFF6FF;
+    --purple: #8B5CF6;
+    --purple-light: #EDE9FE;
+    --purple-dark: #6D28D9;
+    --purple-50: #F5F3FF;
+    --amber: #F59E0B;
+    --amber-light: #FEF3C7;
+    --amber-dark: #D97706;
+    --amber-50: #FFFBEB;
+    --emerald: #10B981;
+    --emerald-light: #D1FAE5;
+    --emerald-dark: #059669;
+    --emerald-50: #ECFDF5;
+    --rose: #F43F5E;
+    --rose-light: #FFE4E6;
+    --rose-dark: #E11D48;
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
+    --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.10);
+
+    --border-light: #E2E8F0;
+    --border-medium: #CBD5E1;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+}
+
+/* ===== Scene System ===== */
+.scene {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-base);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;
+}
+
+.scene.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+.scene-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.scene-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.scene-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 60px 80px;
+}
+
+.scene-content.center-column {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.scene-content.column-layout {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+/* ===== Typography ===== */
+.label {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 100px;
+    background: var(--bg-card);
+    color: var(--text-muted);
+    border: 1px solid var(--border-light);
+}
+
+.label--blue {
+    background: var(--blue-50);
+    color: var(--blue-dark);
+    border-color: var(--blue-light);
+}
+
+.label--purple {
+    background: var(--purple-50);
+    color: var(--purple-dark);
+    border-color: var(--purple-light);
+}
+
+.label--amber {
+    background: var(--amber-50);
+    color: var(--amber-dark);
+    border-color: var(--amber-light);
+}
+
+.label--emerald {
+    background: var(--emerald-50);
+    color: var(--emerald-dark);
+    border-color: var(--emerald-light);
+}
+
+.label--rose {
+    background: var(--rose-light);
+    color: var(--rose-dark);
+    border-color: var(--rose);
+}
+
+.title-huge {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1.15;
+    color: var(--text-primary);
+    letter-spacing: -2px;
+}
+
+.title-impact {
+    font-size: 84px;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -3px;
+}
+
+.title-sub {
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-top: 8px;
+}
+
+.title-sub-en {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-muted);
+    letter-spacing: 4px;
+}
+
+.text-lead {
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+
+.section-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -1px;
+}
+
+/* ===== Components: Cards ===== */
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    box-shadow: var(--shadow-md);
+}
+
+/* ===== Components: Flow Chart ===== */
+.flow-chart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-top: 20px;
+}
+
+.flow-step {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.flow-step.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.flow-step.highlighted .flow-card {
+    transform: scale(1.08);
+    box-shadow: var(--shadow-xl);
+}
+
+.flow-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 24px;
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--border-light);
+    background: var(--bg-card);
+    box-shadow: var(--shadow-md);
+    min-width: 120px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.flow-card .flow-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    background: var(--text-muted);
+}
+
+.flow-card .flow-label {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+
+.flow-card--blue .flow-icon {
+    background: var(--blue);
+}
+
+.flow-card--blue.flow-card--active {
+    border-color: var(--blue);
+}
+
+.flow-card--purple .flow-icon {
+    background: var(--purple);
+}
+
+.flow-card--purple.flow-card--active {
+    border-color: var(--purple);
+}
+
+.flow-card--amber .flow-icon {
+    background: var(--amber);
+}
+
+.flow-card--amber.flow-card--active {
+    border-color: var(--amber);
+}
+
+.flow-card--neutral .flow-icon {
+    background: #64748B;
+}
+
+.flow-card--neutral.flow-card--active {
+    border-color: #64748B;
+}
+
+.flow-arrow {
+    display: flex;
+    align-items: center;
+    padding: 0 6px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.flow-arrow.visible {
+    opacity: 1;
+}
+
+.flow-arrow svg {
+    width: 36px;
+    height: 20px;
+}
+
+.flow-arrow svg line,
+.flow-arrow svg polyline {
+    stroke: var(--border-medium);
+    stroke-width: 2;
+    fill: none;
+}
+
+/* ===== Block A: Scene 1 - Title ===== */
+#scene-1 {
+    background: linear-gradient(135deg, #F8F9FC 0%, #EEF2FF 50%, #F8F9FC 100%);
+}
+
+#scene-1 .title-huge {
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--blue-dark) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#scene-1 .label {
+    animation: fadeSlideDown 0.8s ease 0.2s both;
+}
+
+#scene-1 .title-huge {
+    animation: fadeSlideDown 0.8s ease 0.4s both;
+}
+
+#scene-1 .title-sub {
+    animation: fadeSlideDown 0.8s ease 0.6s both;
+}
+
+/* ===== Block A: Scene 2 - Shocking Fact ===== */
+#scene-2 .gradient-shift {
+    background: linear-gradient(135deg, #FFF1F2 0%, #F8F9FC 40%, #FEF2F2 100%);
+    background-size: 300% 300%;
+    animation: gradientShift 8s ease infinite;
+}
+
+#scene-2 .title-impact {
+    color: var(--rose-dark);
+    position: relative;
+}
+
+#scene-2 .title-impact::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: var(--rose);
+    border-radius: 2px;
+}
+
+/* ===== Block A: Scene 3 - Stochastic Parrot ===== */
+#scene-3 {
+    background: linear-gradient(180deg, #F5F3FF 0%, #F8F9FC 100%);
+}
+
+.floating-words {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.floating-word {
+    position: absolute;
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    color: var(--text-muted);
+    opacity: 0.15;
+    animation: floatWord linear infinite;
+    white-space: nowrap;
+    user-select: none;
+}
+
+/* ===== Block A: Scene 4 - Journey ===== */
+#scene-4 .ambient-dots {
+    background-image:
+        radial-gradient(circle at 1px 1px, var(--border-light) 1px, transparent 0);
+    background-size: 40px 40px;
+    opacity: 0.5;
+}
+
+/* ===== Block A: Scene 5 - Departure ===== */
+#scene-5 {
+    background: linear-gradient(180deg, #1E293B 0%, #0F172A 100%);
+}
+
+#scene-5 .title-huge {
+    color: var(--text-white);
+    text-shadow: 0 0 60px rgba(59, 130, 246, 0.3);
+}
+
+/* ===== Keyframe Animations ===== */
+@keyframes fadeSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes gradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes floatWord {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.15;
+    }
+
+    90% {
+        opacity: 0.15;
+    }
+
+    100% {
+        transform: translateY(-100px) rotate(5deg);
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        text-shadow: 0 0 40px rgba(59, 130, 246, 0.2);
+    }
+
+    50% {
+        text-shadow: 0 0 80px rgba(59, 130, 246, 0.5);
+    }
+}
+
+/* ===== Utility: Scene Enter Animation ===== */
+.scene.active .anim-enter {
+    animation: fadeSlideUp 0.6s ease both;
+}
+
+.scene.active .anim-enter-d1 {
+    animation-delay: 0.1s;
+}
+
+.scene.active .anim-enter-d2 {
+    animation-delay: 0.2s;
+}
+
+.scene.active .anim-enter-d3 {
+    animation-delay: 0.3s;
+}
+
+.scene.active .anim-enter-d4 {
+    animation-delay: 0.4s;
+}
+
+.scene.active .anim-enter-d5 {
+    animation-delay: 0.5s;
+}
+
+/* ==============================================
+   Block B: Tokenization & Embedding (Scenes 6-11)
+   ============================================== */
+
+/* ===== Scene 6: Input Demo ===== */
+.input-demo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.input-device {
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.input-box {
+    background: var(--bg-card);
+    border: 2px solid var(--blue);
+    border-radius: var(--radius-lg);
+    padding: 20px 32px;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-primary);
+    box-shadow: var(--shadow-lg);
+    min-width: 320px;
+    display: flex;
+    align-items: center;
+}
+
+.input-cursor-blink {
+    color: var(--blue);
+    font-weight: 300;
+    animation: cursorBlink 1s step-end infinite;
+}
+
+.input-send-arrow {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.input-send-arrow svg line,
+.input-send-arrow svg polyline {
+    stroke: var(--blue);
+    stroke-width: 2;
+    fill: none;
+}
+
+.input-server {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+.server-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    box-shadow: var(--shadow-lg);
+}
+
+.server-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+@keyframes cursorBlink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* ===== Scene 7: Token Blocks ===== */
+.token-demo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.token-original {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.token-source-text {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--text-primary);
+    background: var(--bg-card);
+    padding: 16px 40px;
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--border-light);
+    box-shadow: var(--shadow-md);
+    display: inline-block;
+}
+
+.token-arrow-down {
+    opacity: 0;
+}
+
+.token-arrow-down svg line,
+.token-arrow-down svg polyline {
+    stroke: var(--blue);
+    stroke-width: 2;
+    fill: none;
+}
+
+.token-blocks {
+    display: flex;
+    gap: 12px;
+}
+
+.token-block {
+    padding: 14px 24px;
+    border-radius: var(--radius-md);
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.token-block.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.token-block--0 {
+    background: linear-gradient(135deg, #3B82F6, #2563EB);
+}
+
+.token-block--1 {
+    background: linear-gradient(135deg, #6366F1, #4F46E5);
+}
+
+.token-block--2 {
+    background: linear-gradient(135deg, #8B5CF6, #7C3AED);
+}
+
+.token-block--3 {
+    background: linear-gradient(135deg, #A855F7, #9333EA);
+}
+
+.token-block--4 {
+    background: linear-gradient(135deg, #D946EF, #C026D3);
+}
+
+/* ===== Scene 8: Token ID ===== */
+.token-id-demo {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.token-id-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Override: token-blocks inside token-id-cards should always be visible */
+.token-id-card .token-block {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.token-id-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.token-id-arrow {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.token-id-arrow svg line,
+.token-id-arrow svg polyline {
+    stroke: var(--text-muted);
+    stroke-width: 2;
+    fill: none;
+}
+
+.token-id-card.visible .token-id-arrow {
+    opacity: 1;
+}
+
+.token-id-num {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--blue-dark);
+    background: var(--blue-light);
+    padding: 8px 20px;
+    border-radius: var(--radius-md);
+    border: 2px solid var(--blue);
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.4s ease 0.2s, transform 0.4s ease 0.2s;
+}
+
+.token-id-card.visible .token-id-num {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ===== Scene 9: Embedding ===== */
+.embed-demo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 24px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.embed-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.embed-row.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.embed-id {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--text-primary);
+    background: var(--bg-card);
+    border: 2px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 10px 20px;
+    min-width: 80px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.embed-arrow-right svg line,
+.embed-arrow-right svg polyline {
+    stroke: var(--blue);
+    stroke-width: 2;
+    fill: none;
+}
+
+.embed-vector {
+    font-family: 'Inter', monospace;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: var(--blue-50);
+    border: 1px solid var(--blue-light);
+    border-radius: var(--radius-md);
+    padding: 12px 20px;
+    flex: 1;
+}
+
+.embed-bracket {
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.embed-nums {
+    color: var(--text-secondary);
+}
+
+.embed-label {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-muted);
+    min-width: 48px;
+}
+
+/* ===== Scene 10: Semantic Space ===== */
+.semantic-space-wrapper {
+    width: 700px;
+    height: 400px;
+    margin-top: 16px;
+    position: relative;
+}
+
+.semantic-space-wrapper canvas {
+    width: 100% !important;
+    height: 100% !important;
+    background: var(--bg-card);
+}
+
+/* ===== Scene 11: Bridge ===== */
+.bridge-demo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.bridge-vectors {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bridge-vec {
+    font-family: 'Inter', monospace;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--blue-dark);
+    background: var(--blue-50);
+    border: 1px solid var(--blue-light);
+    border-radius: var(--radius-sm);
+    padding: 8px 16px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.bridge-vec.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.bridge-arrow-flow {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.bridge-arrow-flow.visible {
+    opacity: 1;
+}
+
+.bridge-arrow-flow svg line,
+.bridge-arrow-flow svg polyline {
+    stroke: var(--purple);
+    stroke-width: 2.5;
+    fill: none;
+}
+
+.bridge-target {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.bridge-target.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.bridge-target-box {
+    background: linear-gradient(135deg, var(--purple) 0%, var(--blue) 100%);
+    color: white;
+    padding: 28px 40px;
+    border-radius: var(--radius-xl);
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.3);
+}
+
+.bridge-target-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Bridge pulse animation */
+.bridge-target.visible .bridge-target-box {
+    animation: bridgePulse 2s ease infinite;
+}
+
+@keyframes bridgePulse {
+
+    0%,
+    100% {
+        box-shadow: 0 8px 32px rgba(139, 92, 246, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 8px 48px rgba(139, 92, 246, 0.5);
+    }
+}
+
+/* ==============================================
+   Block C: Attention (Scenes 12-18)
+   ============================================== */
+
+/* Scene 13: RNN */
+.rnn-demo {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.rnn-sequence {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.rnn-word {
+    padding: 14px 20px;
+    border-radius: var(--radius-md);
+    font-size: 22px;
+    font-weight: 700;
+    background: var(--bg-card);
+    border: 2px solid var(--purple-light);
+    color: var(--text-primary);
+    box-shadow: var(--shadow-sm);
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.4s ease, transform 0.4s ease, border-color 0.4s ease;
+}
+
+.rnn-word.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.rnn-word.faded {
+    opacity: 0.2;
+    border-color: var(--border-light);
+}
+
+.rnn-arrow-r {
+    padding: 0 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.rnn-arrow-r.visible {
+    opacity: 1;
+}
+
+.rnn-arrow-r svg line,
+.rnn-arrow-r svg polyline {
+    stroke: var(--purple);
+    stroke-width: 2;
+    fill: none;
+}
+
+.rnn-caption {
+    font-size: 18px;
+    color: var(--text-muted);
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.rnn-caption.visible {
+    opacity: 1;
+}
+
+/* Scene 15: Context */
+.context-demo {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.context-sentence {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.ctx-word {
+    font-size: 36px;
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+    border: 2px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.5s ease;
+}
+
+.ctx-word.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ctx-word.ctx-highlight.visible {
+    border-color: var(--purple);
+    background: var(--purple-50);
+}
+
+.ctx-word.active {
+    border-color: var(--amber);
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+}
+
+.context-result {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.context-result.visible {
+    opacity: 1;
+}
+
+.ctx-answer {
+    background: linear-gradient(135deg, var(--emerald), var(--emerald-dark));
+    color: white;
+    padding: 16px 32px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.ctx-answer-label {
+    font-size: 28px;
+    font-weight: 800;
+}
+
+/* Scene 16: QKV */
+.qkv-demo {
+    display: flex;
+    gap: 40px;
+    margin-top: 32px;
+}
+
+.qkv-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 32px 40px;
+    border-radius: var(--radius-xl);
+    background: var(--bg-card);
+    border: 2px solid var(--border-light);
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.qkv-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.qkv-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: white;
+}
+
+.qkv-q {
+    background: linear-gradient(135deg, #EC4899, #DB2777);
+}
+
+.qkv-k {
+    background: linear-gradient(135deg, #F59E0B, #D97706);
+}
+
+.qkv-v {
+    background: linear-gradient(135deg, #10B981, #059669);
+}
+
+.qkv-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.qkv-desc {
+    font-size: 16px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Scene 17: Multi-Head */
+.multihead-demo {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.mh-head {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.mh-head.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.mh-head-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 24px 28px;
+    border-radius: var(--radius-lg);
+    color: white;
+    box-shadow: var(--shadow-md);
+    min-width: 120px;
+}
+
+.mh-h0 {
+    background: linear-gradient(135deg, #3B82F6, #2563EB);
+}
+
+.mh-h1 {
+    background: linear-gradient(135deg, #8B5CF6, #7C3AED);
+}
+
+.mh-h2 {
+    background: linear-gradient(135deg, #EC4899, #DB2777);
+}
+
+.mh-h3 {
+    background: linear-gradient(135deg, #F59E0B, #D97706);
+}
+
+.mh-h4 {
+    background: linear-gradient(135deg, #10B981, #059669);
+}
+
+.mh-hlabel {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.mh-htag {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+/* Scene 18: Layer Stack */
+.layer-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 24px;
+    width: 400px;
+}
+
+.layer-item {
+    padding: 16px 24px;
+    border-radius: var(--radius-md);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    box-shadow: var(--shadow-sm);
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.layer-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.layer-attn {
+    background: linear-gradient(90deg, var(--purple), var(--purple-dark));
+}
+
+.layer-norm {
+    background: #64748B;
+}
+
+.layer-ffn {
+    background: linear-gradient(90deg, var(--blue), var(--blue-dark));
+}
+
+.layer-res {
+    background: #94A3B8;
+}
+
+.layer-input {
+    background: linear-gradient(90deg, var(--emerald), var(--emerald-dark));
+}
+
+.layer-repeat {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--purple);
+    text-align: center;
+    margin-top: 12px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.layer-repeat.visible {
+    opacity: 1;
+}
+
+/* ==============================================
+   Block D: Probability & Sampling (Scenes 19-24)
+   ============================================== */
+
+/* Scene 20: Probability Chart */
+.prob-chart {
+    display: flex;
+    gap: 24px;
+    align-items: flex-end;
+    margin-top: 32px;
+    height: 300px;
+}
+
+.prob-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100px;
+    height: 100%;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.prob-fill {
+    width: 100%;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    background: var(--bar-color);
+    height: 0;
+    transition: height 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: var(--shadow-md);
+}
+
+.prob-bar.visible .prob-fill {
+    height: calc(var(--pct) * 1%);
+}
+
+.prob-label {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.prob-pct {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+/* Scene 21: Autoregressive */
+.auto-loop {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.auto-step {
+    padding: 14px 28px;
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+    border: 2px solid var(--border-light);
+    font-size: 22px;
+    font-weight: 500;
+    box-shadow: var(--shadow-sm);
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.4s ease;
+}
+
+.auto-step.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.auto-step.active {
+    border-color: var(--amber);
+    background: var(--amber-50);
+}
+
+.auto-step strong {
+    color: var(--amber-dark);
+    font-weight: 800;
+}
+
+.auto-loop-arrow {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.auto-loop-arrow.visible {
+    opacity: 1;
+}
+
+.auto-loop-arrow svg path,
+.auto-loop-arrow svg polyline {
+    stroke: var(--amber);
+    stroke-width: 2;
+    fill: none;
+}
+
+/* Scene 22: Temperature */
+.temp-demo {
+    display: flex;
+    gap: 60px;
+    margin-top: 32px;
+}
+
+.temp-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 32px;
+    border-radius: var(--radius-xl);
+    background: var(--bg-card);
+    border: 2px solid var(--border-light);
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.temp-col.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.temp-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.temp-bars {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    height: 180px;
+}
+
+.temp-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 50px;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.temp-fill {
+    width: 100%;
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    transition: height 1s ease;
+}
+
+.temp-bar span {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.temp-desc {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+/* Scene 23: Hallucination */
+.hallu-demo {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.hallu-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 32px 40px;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.5s ease;
+}
+
+.hallu-card.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.hallu-wrong {
+    background: var(--rose-light);
+    border: 2px solid var(--rose);
+    color: var(--rose-dark);
+}
+
+.hallu-right {
+    background: var(--emerald-light);
+    border: 2px solid var(--emerald);
+    color: var(--emerald-dark);
+}
+
+.hallu-x,
+.hallu-o {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 900;
+    color: white;
+}
+
+.hallu-x {
+    background: var(--rose);
+}
+
+.hallu-o {
+    background: var(--emerald);
+}
+
+.hallu-vs {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--text-muted);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.hallu-vs.visible {
+    opacity: 1;
+}
+
+/* ==============================================
+   Block E: Learning (Scenes 25-29)
+   ============================================== */
+
+/* Scene 25: Pre-training */
+.pretrain-demo {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-top: 32px;
+}
+
+.pt-step {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.4s ease;
+}
+
+.pt-step.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pt-box {
+    padding: 18px 24px;
+    border-radius: var(--radius-lg);
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: var(--shadow-md);
+    white-space: nowrap;
+}
+
+.pt-data {
+    background: var(--blue-50);
+    border: 2px solid var(--blue-light);
+    color: var(--blue-dark);
+}
+
+.pt-quiz {
+    background: var(--amber-50);
+    border: 2px solid var(--amber-light);
+    color: var(--amber-dark);
+}
+
+.pt-update {
+    background: var(--emerald-50);
+    border: 2px solid var(--emerald-light);
+    color: var(--emerald-dark);
+}
+
+.pt-repeat {
+    background: var(--purple-50);
+    border: 2px solid var(--purple-light);
+    color: var(--purple-dark);
+    font-family: 'Inter', sans-serif;
+}
+
+.pt-arrow {
+    padding: 0 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.pt-arrow.visible {
+    opacity: 1;
+}
+
+.pt-arrow svg line,
+.pt-arrow svg polyline {
+    stroke: var(--emerald);
+    stroke-width: 2;
+    fill: none;
+}
+
+/* Scene 26: Scale Chart */
+.scale-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.scale-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.scale-fill {
+    height: 40px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(90deg, var(--emerald), var(--emerald-dark));
+    width: 0;
+    transition: width 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: var(--shadow-md);
+}
+
+.scale-bar.visible .scale-fill {
+    width: calc(var(--pct) * 1%);
+}
+
+.scale-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-muted);
+    min-width: 120px;
+}
+
+.scale-val {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--emerald-dark);
+}
+
+/* Scene 27: Fine-tuning */
+.ft-demo {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-top: 32px;
+}
+
+.ft-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 24px 28px;
+    border-radius: var(--radius-lg);
+    background: var(--bg-card);
+    border: 2px solid var(--border-light);
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.5s ease;
+}
+
+.ft-card.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.ft-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: white;
+}
+
+.ft-before {
+    background: #94A3B8;
+}
+
+.ft-manual {
+    background: var(--amber);
+}
+
+.ft-after {
+    background: var(--emerald);
+}
+
+.ft-card span {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.ft-arrow {
+    padding: 0 12px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.ft-arrow.visible {
+    opacity: 1;
+}
+
+.ft-arrow svg line,
+.ft-arrow svg polyline {
+    stroke: var(--emerald);
+    stroke-width: 2;
+    fill: none;
+}
+
+/* Scene 28: RLHF */
+.rlhf-demo {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-top: 32px;
+}
+
+.rlhf-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 24px 28px;
+    border-radius: var(--radius-lg);
+    background: var(--bg-card);
+    border: 2px solid var(--border-light);
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.rlhf-step.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.rlhf-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    color: white;
+}
+
+.rlhf-human {
+    background: linear-gradient(135deg, #EC4899, #DB2777);
+}
+
+.rlhf-reward {
+    background: linear-gradient(135deg, #F59E0B, #D97706);
+}
+
+.rlhf-ai {
+    background: linear-gradient(135deg, #10B981, #059669);
+}
+
+.rlhf-step span {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.rlhf-arrow {
+    padding: 0 12px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.rlhf-arrow.visible {
+    opacity: 1;
+}
+
+.rlhf-arrow svg line,
+.rlhf-arrow svg polyline {
+    stroke: var(--emerald);
+    stroke-width: 2;
+    fill: none;
+}
+
+/* Scene 29: Pyramid */
+.pyramid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 32px;
+}
+
+.pyramid-level {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px;
+    border-radius: var(--radius-md);
+    color: white;
+    font-weight: 700;
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.pyramid-level.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.pyramid-level span {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.pyramid-level small {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.pyr-1 {
+    width: 400px;
+    background: linear-gradient(90deg, var(--blue), var(--blue-dark));
+}
+
+.pyr-2 {
+    width: 300px;
+    background: linear-gradient(90deg, var(--amber), var(--amber-dark));
+}
+
+.pyr-3 {
+    width: 200px;
+    background: linear-gradient(90deg, var(--emerald), var(--emerald-dark));
+}
+
+/* ==============================================
+   Block F: Summary (Scenes 30-33)
+   ============================================== */
+
+/* Scene 30: Review Flow */
+.review-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-top: 32px;
+}
+
+.rv-step {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.4s ease;
+}
+
+.rv-step.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.rv-box {
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: var(--shadow-md);
+    white-space: nowrap;
+    color: white;
+}
+
+.rv-neutral {
+    background: #64748B;
+}
+
+.rv-blue {
+    background: var(--blue);
+}
+
+.rv-purple {
+    background: var(--purple);
+}
+
+.rv-amber {
+    background: var(--amber);
+}
+
+.rv-arrow {
+    padding: 0 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.rv-arrow.visible {
+    opacity: 1;
+}
+
+.rv-arrow svg line,
+.rv-arrow svg polyline {
+    stroke: var(--border-medium);
+    stroke-width: 2;
+    fill: none;
+}
+
+.rv-step.highlighted .rv-box {
+    transform: scale(1.15);
+    box-shadow: var(--shadow-xl);
+    transition: transform 0.3s ease;
+}
+
+/* Scene 31: Illusion Equation */
+.illusion-eq {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ill-part {
+    font-size: 32px;
+    font-weight: 800;
+    padding: 16px 28px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.ill-a {
+    background: var(--purple-50);
+    color: var(--purple-dark);
+    border: 2px solid var(--purple-light);
+}
+
+.ill-b {
+    background: var(--blue-50);
+    color: var(--blue-dark);
+    border: 2px solid var(--blue-light);
+}
+
+.ill-c {
+    background: linear-gradient(135deg, var(--purple), var(--blue));
+    color: white;
+    border: none;
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.3);
+}
+
+.ill-op {
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--text-muted);
+}
+
+/* Scene 33: Ending */
+#scene-33 {
+    background: linear-gradient(180deg, #1E293B 0%, #0F172A 100%);
+}
+
+/* ==============================================
+   Global Progress Bar
+   ============================================== */
+.global-progress {
+    position: fixed;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 10px 24px;
+    border-radius: 100px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-light);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.global-progress.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.global-progress.dark-mode {
+    background: rgba(30, 41, 59, 0.85);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.global-progress.dark-mode .gp-text {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.global-progress.dark-mode .gp-dot {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.global-progress.dark-mode .gp-conn {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.global-progress.dark-mode .gp-step.gp-active .gp-text {
+    color: #93C5FD;
+}
+
+.global-progress.dark-mode .gp-step.gp-active .gp-dot {
+    background: #3B82F6;
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.5);
+}
+
+.gp-step {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 2px 8px;
+    cursor: default;
+}
+
+.gp-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border-medium);
+    transition: all 0.4s ease;
+}
+
+.gp-text {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: color 0.4s ease;
+    white-space: nowrap;
+}
+
+.gp-conn {
+    width: 20px;
+    height: 2px;
+    background: var(--border-light);
+    flex-shrink: 0;
+}
+
+.gp-step.gp-active .gp-dot {
+    background: var(--blue);
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+    width: 10px;
+    height: 10px;
+}
+
+.gp-step.gp-active .gp-text {
+    color: var(--blue-dark);
+    font-weight: 700;
+}
+
+.gp-step.gp-done .gp-dot {
+    background: var(--emerald);
+}
+
+.gp-step.gp-done .gp-text {
+    color: var(--text-secondary);
+}
+
+/* ==============================================
+   Dynamic Info Cards (injected by JS)
+   ============================================== */
+.info-pill {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+    color: var(--text-secondary);
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.info-pill.visible {
+    opacity: 1;
+}
+
+.info-pill .pill-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.info-card-float {
+    position: absolute;
+    z-index: 2;
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 14px 18px;
+    box-shadow: var(--shadow-md);
+    max-width: 220px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.info-card-float.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.info-card-float .icf-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+.info-card-float .icf-value {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.info-card-float .icf-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+.info-card-float.icf-blue {
+    border-left: 3px solid var(--blue);
+}
+
+.info-card-float.icf-purple {
+    border-left: 3px solid var(--purple);
+}
+
+.info-card-float.icf-amber {
+    border-left: 3px solid var(--amber);
+}
+
+.info-card-float.icf-emerald {
+    border-left: 3px solid var(--emerald);
+}
+
+.info-card-float.icf-rose {
+    border-left: 3px solid var(--rose);
+}
+
+/* Stats row injected at bottom of scenes */
+.stats-row {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.stat-chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-sm);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.stat-chip.visible {
+    opacity: 1;
+}
+
+.stat-chip .sc-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-chip .sc-value {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.stat-chip .sc-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}

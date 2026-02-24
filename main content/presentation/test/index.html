@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLMはどうやってテキストを生成するのか？</title>
+    <meta name="description" content="大規模言語モデル（LLM）がテキストを生成する仕組みを、スライド形式で解説します。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Slide 0: Title -->
+    <div class="slide active" id="slide-0">
+        <div class="slide-bg slide-bg-0">
+            <div class="bg-orb orb-1"></div>
+            <div class="bg-orb orb-2"></div>
+            <div class="bg-orb orb-3"></div>
+        </div>
+        <div class="slide-content center-content">
+            <div class="tag-label">Interactive Guide</div>
+            <h1 class="title-huge">LLMは<br><span class="accent-text">どうやって</span><br>テキストを生成するのか？</h1>
+            <p class="subtitle-text">大規模言語モデルの仕組みを<br>5つのステップで理解しよう</p>
+        </div>
+    </div>
+
+    <!-- Slide 1: Tokenization -->
+    <div class="slide" id="slide-1">
+        <div class="slide-bg slide-bg-1"></div>
+        <div class="slide-content">
+            <div class="step-badge">STEP 01</div>
+            <h2 class="step-heading">トークン化<span class="step-en">Tokenization</span></h2>
+            <p class="step-body">テキストを「トークン」という小さな単位に分割する</p>
+
+            <div class="token-demo-area">
+                <div class="demo-box input-box">
+                    <div class="demo-box-label">入力テキスト</div>
+                    <div class="demo-big-text">今日はいい天気ですね</div>
+                </div>
+                <div class="arrow-down-big">▼</div>
+                <div class="token-chips-wrap" id="tokenChips">
+                    <div class="token-chip-big c1">今日</div>
+                    <div class="token-chip-big c2">は</div>
+                    <div class="token-chip-big c3">いい</div>
+                    <div class="token-chip-big c4">天気</div>
+                    <div class="token-chip-big c5">です</div>
+                    <div class="token-chip-big c6">ね</div>
+                </div>
+                <div class="token-ids-wrap" id="tokenIds">
+                    <div class="id-chip">8532</div>
+                    <div class="id-chip">306</div>
+                    <div class="id-chip">2847</div>
+                    <div class="id-chip">15624</div>
+                    <div class="id-chip">1043</div>
+                    <div class="id-chip">587</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 2: Embedding -->
+    <div class="slide" id="slide-2">
+        <div class="slide-bg slide-bg-2"></div>
+        <div class="slide-content">
+            <div class="step-badge">STEP 02</div>
+            <h2 class="step-heading">埋め込み<span class="step-en">Embedding</span></h2>
+            <p class="step-body">トークンIDを「意味を持つベクトル」に変換する</p>
+
+            <div class="embedding-area">
+                <div class="vector-space-box">
+                    <div class="vs-label">ベクトル空間のイメージ</div>
+                    <canvas id="vectorCanvas" width="700" height="340"></canvas>
+                    <div class="vs-caption">似た意味の言葉は近い位置に集まる</div>
+                </div>
+                <div class="emb-explanation">
+                    <div class="emb-point">
+                        <span class="emb-dot dot-time"></span>
+                        <span class="emb-point-text">時間の言葉 → 同じ領域</span>
+                    </div>
+                    <div class="emb-point">
+                        <span class="emb-dot dot-weather"></span>
+                        <span class="emb-point-text">天気の言葉 → 同じ領域</span>
+                    </div>
+                    <div class="emb-point">
+                        <span class="emb-dot dot-adj"></span>
+                        <span class="emb-point-text">形容詞 → 同じ領域</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: Self-Attention -->
+    <div class="slide" id="slide-3">
+        <div class="slide-bg slide-bg-3"></div>
+        <div class="slide-content">
+            <div class="step-badge">STEP 03</div>
+            <h2 class="step-heading">Self-Attention<span class="step-en">自己注意機構</span></h2>
+            <p class="step-body">各トークンが他のトークンとの「関係の強さ」を計算する</p>
+
+            <div class="attention-area">
+                <div class="att-tokens-row" id="attTokensRow">
+                    <div class="att-tok t0">今日</div>
+                    <div class="att-tok t1">は</div>
+                    <div class="att-tok t2">いい</div>
+                    <div class="att-tok t3">天気</div>
+                    <div class="att-tok t4">です</div>
+                    <div class="att-tok t5">ね</div>
+                </div>
+                <canvas id="attCanvas" width="700" height="220"></canvas>
+                <div class="att-legend">
+                    <div class="att-legend-item">
+                        <div class="legend-line thick"></div>
+                        <span>強い注意</span>
+                    </div>
+                    <div class="att-legend-item">
+                        <div class="legend-line thin"></div>
+                        <span>弱い注意</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Next Token Prediction -->
+    <div class="slide" id="slide-4">
+        <div class="slide-bg slide-bg-4"></div>
+        <div class="slide-content">
+            <div class="step-badge">STEP 04</div>
+            <h2 class="step-heading">次トークン予測<span class="step-en">Next Token Prediction</span></h2>
+            <p class="step-body">全レイヤーを通過し、次に来るトークンの「確率分布」を出力する</p>
+
+            <div class="prediction-area">
+                <div class="transformer-box">
+                    <div class="tf-input-label">入力: 「今日 は いい」</div>
+                    <div class="tf-layers-visual">
+                        <div class="tf-layer-block" id="tfLayer1">Self-Attention</div>
+                        <div class="tf-arrow-small">↓</div>
+                        <div class="tf-layer-block" id="tfLayer2">Self-Attention</div>
+                        <div class="tf-arrow-small">↓</div>
+                        <div class="tf-dots">・・・ 数十〜数百レイヤー ・・・</div>
+                        <div class="tf-arrow-small">↓</div>
+                        <div class="tf-layer-block" id="tfLayerN">最終レイヤー</div>
+                    </div>
+                    <div class="tf-output-label">確率分布を出力</div>
+                </div>
+                <div class="prob-bars-area" id="probBarsArea">
+                    <div class="prob-title">次のトークンの確率</div>
+                    <div class="prob-row">
+                        <span class="prob-label">天気</span>
+                        <div class="prob-bar-track"><div class="prob-bar-fill pb1" style="--prob:42%"></div></div>
+                        <span class="prob-pct">42%</span>
+                    </div>
+                    <div class="prob-row">
+                        <span class="prob-label">日</span>
+                        <div class="prob-bar-track"><div class="prob-bar-fill pb2" style="--prob:18%"></div></div>
+                        <span class="prob-pct">18%</span>
+                    </div>
+                    <div class="prob-row">
+                        <span class="prob-label">気分</span>
+                        <div class="prob-bar-track"><div class="prob-bar-fill pb3" style="--prob:15%"></div></div>
+                        <span class="prob-pct">15%</span>
+                    </div>
+                    <div class="prob-row">
+                        <span class="prob-label">休み</span>
+                        <div class="prob-bar-track"><div class="prob-bar-fill pb4" style="--prob:9%"></div></div>
+                        <span class="prob-pct">9%</span>
+                    </div>
+                    <div class="prob-row">
+                        <span class="prob-label">他...</span>
+                        <div class="prob-bar-track"><div class="prob-bar-fill pb5" style="--prob:16%"></div></div>
+                        <span class="prob-pct">16%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Autoregressive Generation -->
+    <div class="slide" id="slide-5">
+        <div class="slide-bg slide-bg-5"></div>
+        <div class="slide-content">
+            <div class="step-badge">STEP 05</div>
+            <h2 class="step-heading">自己回帰生成<span class="step-en">Autoregressive Generation</span></h2>
+            <p class="step-body">予測したトークンを入力に追加し、繰り返し生成する</p>
+
+            <div class="generation-area">
+                <div class="gen-loop-steps">
+                    <div class="gen-loop-item" id="gls1">
+                        <div class="gls-num">1</div>
+                        <div class="gls-text">入力トークンを<br>モデルに渡す</div>
+                    </div>
+                    <div class="gls-arrow">→</div>
+                    <div class="gen-loop-item" id="gls2">
+                        <div class="gls-num">2</div>
+                        <div class="gls-text">次トークンの<br>確率を計算</div>
+                    </div>
+                    <div class="gls-arrow">→</div>
+                    <div class="gen-loop-item" id="gls3">
+                        <div class="gls-num">3</div>
+                        <div class="gls-text">トークンを<br>選択</div>
+                    </div>
+                    <div class="gls-arrow">→</div>
+                    <div class="gen-loop-item" id="gls4">
+                        <div class="gls-num">4</div>
+                        <div class="gls-text">出力に追加し<br>入力に結合</div>
+                    </div>
+                </div>
+                <div class="gen-repeat-label">↩ 繰り返し（停止トークンまで）</div>
+                <div class="gen-output-display">
+                    <div class="gen-output-label">プロンプト: 「AIについて教えて」</div>
+                    <div class="gen-output-text" id="genOutputText"></div>
+                    <div class="gen-cursor" id="genCursor">|</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6: Summary -->
+    <div class="slide" id="slide-6">
+        <div class="slide-bg slide-bg-6">
+            <div class="bg-orb orb-1"></div>
+            <div class="bg-orb orb-4"></div>
+        </div>
+        <div class="slide-content center-content">
+            <h2 class="summary-title">まとめ</h2>
+            <div class="summary-flow">
+                <div class="sf-item">
+                    <div class="sf-icon">📝</div>
+                    <div class="sf-label">テキスト入力</div>
+                </div>
+                <div class="sf-arr">→</div>
+                <div class="sf-item">
+                    <div class="sf-icon">🔤</div>
+                    <div class="sf-label">トークン化</div>
+                </div>
+                <div class="sf-arr">→</div>
+                <div class="sf-item">
+                    <div class="sf-icon">📊</div>
+                    <div class="sf-label">埋め込み</div>
+                </div>
+                <div class="sf-arr">→</div>
+                <div class="sf-item">
+                    <div class="sf-icon">🔗</div>
+                    <div class="sf-label">Attention</div>
+                </div>
+                <div class="sf-arr">→</div>
+                <div class="sf-item">
+                    <div class="sf-icon">🎯</div>
+                    <div class="sf-label">確率予測</div>
+                </div>
+                <div class="sf-arr">→</div>
+                <div class="sf-item">
+                    <div class="sf-icon">✨</div>
+                    <div class="sf-label">繰り返し生成</div>
+                </div>
+            </div>
+            <p class="summary-note">
+                LLMは「次に来る可能性が最も高いトークンを予測する」<br>
+                というシンプルな原理で動いている
+            </p>
+        </div>
+    </div>
+
+    <!-- Navigation Controls -->
+    <div class="nav-controls">
+        <button class="nav-btn" id="prevBtn" aria-label="前へ">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M18 6L10 14L18 22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+
+        <div class="slide-dots" id="slideDots"></div>
+
+        <button class="nav-btn" id="nextBtn" aria-label="次へ">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M10 6L18 14L10 22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Slide Counter -->
+    <div class="slide-counter" id="slideCounter">1 / 7</div>
+
+    <!-- Keyboard hint -->
+    <div class="keyboard-hint" id="keyboardHint">← → キーまたはクリックで移動</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

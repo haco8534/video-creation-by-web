@@ -1,0 +1,7 @@
+file 'C:/Users/81804/Desktop/新しいフォルダー/claude/presentation/10000h_effort/audio/scene_27_00.wav'
+file 'C:/Users/81804/Desktop/新しいフォルダー/claude/presentation/10000h_effort/audio/silence_300ms.wav'
+file 'C:/Users/81804/Desktop/新しいフォルダー/claude/presentation/10000h_effort/audio/scene_27_01.wav'
+file 'C:/Users/81804/Desktop/新しいフォルダー/claude/presentation/10000h_effort/audio/silence_300ms.wav'
+file 'C:/Users/81804/Desktop/新しいフォルダー/claude/presentation/10000h_effort/audio/scene_27_02.wav'
+file 'C:/Users/81804/Desktop/新しいフォルダー/claude/presentation/10000h_effort/audio/silence_300ms.wav'
+file 'C:/Users/81804/Desktop/新しいフォルダー/claude/presentation/10000h_effort/audio/scene_27_03.wav'

@@ -1,0 +1,7 @@
+file 'C:/Users/81804/Desktop/新しいフォルダー/claude/presentation/llm_text_generation/audio/scene_06_00.wav'
+file 'C:/Users/81804/Desktop/新しいフォルダー/claude/presentation/llm_text_generation/audio/silence_300ms.wav'
+file 'C:/Users/81804/Desktop/新しいフォルダー/claude/presentation/llm_text_generation/audio/scene_06_01.wav'
+file 'C:/Users/81804/Desktop/新しいフォルダー/claude/presentation/llm_text_generation/audio/silence_300ms.wav'
+file 'C:/Users/81804/Desktop/新しいフォルダー/claude/presentation/llm_text_generation/audio/scene_06_02.wav'
+file 'C:/Users/81804/Desktop/新しいフォルダー/claude/presentation/llm_text_generation/audio/silence_300ms.wav'
+file 'C:/Users/81804/Desktop/新しいフォルダー/claude/presentation/llm_text_generation/audio/scene_06_03.wav'

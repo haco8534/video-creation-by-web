@@ -1,0 +1,3 @@
+file 'C:/Users/81804/Desktop/新しいフォルダー/claude/presentation/llm_text_generation/audio/scene_12_00.wav'
+file 'C:/Users/81804/Desktop/新しいフォルダー/claude/presentation/llm_text_generation/audio/silence_300ms.wav'
+file 'C:/Users/81804/Desktop/新しいフォルダー/claude/presentation/llm_text_generation/audio/scene_12_01.wav'

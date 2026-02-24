@@ -1,0 +1,1 @@
+file 'C:/Users/81804/Desktop/新しいフォルダー/claude/presentation/llm_text_generation/audio/scene_32_00.wav'

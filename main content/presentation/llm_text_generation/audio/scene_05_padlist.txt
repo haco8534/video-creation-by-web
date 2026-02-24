@@ -1,0 +1,2 @@
+file 'C:/Users/81804/Desktop/新しいフォルダー/claude/presentation/llm_text_generation/audio/scene_05_concat.wav'
+file 'C:/Users/81804/Desktop/新しいフォルダー/claude/presentation/llm_text_generation/audio/scene_05_pad.wav'
