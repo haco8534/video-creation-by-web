@@ -1,0 +1,5 @@
+file 'D:/myfolder/動画生成/main content/presentation/10000h_rule/audio/scene_20_00.wav'
+file 'D:/myfolder/動画生成/main content/presentation/10000h_rule/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/10000h_rule/audio/scene_20_01.wav'
+file 'D:/myfolder/動画生成/main content/presentation/10000h_rule/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/10000h_rule/audio/scene_20_02.wav'

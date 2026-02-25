@@ -1,0 +1,923 @@
+/* ==============================================
+   10,000 Hour Rule - Presentation Styles
+   Theme: Clean White + Teal/Red accents
+   ============================================== */
+
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --teal: #2AA6A0;
+    --teal-light: #E0F5F4;
+    --teal-dark: #1E8C86;
+    --red: #E8665C;
+    --red-light: #FDE8E6;
+    --red-dark: #C94F45;
+    --amber: #D4952A;
+    --amber-light: #FDF0DB;
+    --amber-bg: #D4952A;
+    --navy: #1A2332;
+    --gray-50: #F8FAFB;
+    --gray-100: #F0F2F5;
+    --gray-200: #E2E6EA;
+    --gray-400: #9CA3AF;
+    --gray-600: #6B7280;
+    --gray-800: #374151;
+    --white: #FFFFFF;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.10);
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --font: 'Noto Sans JP', sans-serif;
+}
+
+body {
+    font-family: var(--font);
+    background: var(--gray-50);
+    color: var(--navy);
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* ===== Scene Container ===== */
+.scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: var(--gray-50);
+}
+
+.scene.active {
+    display: flex;
+}
+
+.bg-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.scene-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+/* ===== Stagger Animation ===== */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.stagger-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Title Card ===== */
+.title-card {
+    text-align: center;
+}
+
+.title-label {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    color: var(--teal);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.title-huge {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: var(--navy);
+}
+
+.title-large {
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.3;
+    color: var(--navy);
+}
+
+.title-sub {
+    font-size: 20px;
+    color: var(--gray-600);
+    font-weight: 400;
+}
+
+/* ===== Accent Colors ===== */
+.accent {
+    color: var(--teal);
+}
+
+.accent-red {
+    color: var(--red);
+}
+
+.accent-teal {
+    color: var(--teal);
+}
+
+/* ===== Scene Heading ===== */
+.scene-heading {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--navy);
+    text-align: center;
+    position: relative;
+    padding-bottom: 16px;
+}
+
+.scene-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--teal);
+}
+
+.scene-sub {
+    font-size: 18px;
+    color: var(--gray-600);
+    text-align: center;
+}
+
+/* ===== Year Tag / EN Label ===== */
+.year-tag {
+    display: inline-block;
+    background: var(--teal-light);
+    color: var(--teal-dark);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    vertical-align: middle;
+}
+
+.en-label {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--gray-400);
+    font-style: italic;
+}
+
+/* ===== Card Row ===== */
+.card-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-row.three-col {
+    gap: 24px;
+}
+
+.card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    padding: 28px 32px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    min-width: 140px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-icon {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.card-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+/* ===== Tag ===== */
+.tag {
+    display: inline-block;
+    background: var(--teal-light);
+    color: var(--teal-dark);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 20px;
+}
+
+/* ===== Emphasis Scene ===== */
+.emphasis-scene {
+    text-align: center;
+}
+
+.emphasis-icon {
+    font-size: 48px;
+    margin-bottom: 8px;
+}
+
+.emphasis-text {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.4;
+    color: var(--navy);
+}
+
+.emphasis-divider {
+    width: 80px;
+    height: 3px;
+    background: var(--gray-200);
+    border-radius: 2px;
+}
+
+.emphasis-sub {
+    font-size: 18px;
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+/* ===== Number Impact ===== */
+.number-impact {
+    text-align: center;
+}
+
+.impact-label {
+    font-size: 20px;
+    color: var(--gray-600);
+    font-weight: 400;
+}
+
+.impact-number {
+    font-size: 120px;
+    font-weight: 900;
+    color: var(--teal);
+    line-height: 1;
+    opacity: 0;
+    transform: scale(0.3);
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.impact-number.animate-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.impact-sub {
+    font-size: 18px;
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+.impact-desc {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.impact-callout {
+    background: var(--red-light);
+    color: var(--red-dark);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 16px 24px;
+    border-radius: var(--radius-md);
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* ===== Pie Visual ===== */
+.pie-visual {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.pie-segment {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(var(--teal) 0deg 43.2deg, var(--gray-200) 43.2deg 360deg);
+    box-shadow: var(--shadow-sm);
+}
+
+.pie-label-left {
+    position: absolute;
+    top: 50%;
+    left: -100px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--teal);
+    white-space: nowrap;
+}
+
+.pie-label-right {
+    position: absolute;
+    top: 50%;
+    right: -100px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray-400);
+    white-space: nowrap;
+}
+
+/* ===== List Vertical ===== */
+.list-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    padding: 20px 28px;
+    box-shadow: var(--shadow-sm);
+}
+
+.list-num {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--teal);
+    min-width: 60px;
+    text-align: center;
+}
+
+.list-text {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--navy);
+}
+
+/* ===== Source Tag ===== */
+.source-tag {
+    font-size: 12px;
+    color: var(--gray-400);
+    text-align: center;
+    font-style: italic;
+}
+
+/* ===== Flow Horizontal ===== */
+.flow-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flow-step {
+    background: var(--white);
+    border: 2px solid var(--teal-light);
+    border-radius: var(--radius-md);
+    padding: 24px 20px;
+    text-align: center;
+    min-width: 120px;
+    box-shadow: var(--shadow-sm);
+}
+
+.flow-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.flow-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+.flow-arrow {
+    font-size: 24px;
+    color: var(--teal);
+}
+
+/* ===== Compare Row ===== */
+.compare-row {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+    width: 100%;
+    justify-content: center;
+}
+
+.compare-card {
+    flex: 1;
+    max-width: 340px;
+    background: var(--white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.compare-header {
+    padding: 14px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    text-align: center;
+}
+
+.red-bg {
+    background: var(--red);
+}
+
+.teal-bg {
+    background: var(--teal);
+}
+
+.amber-bg {
+    background: var(--amber);
+}
+
+.compare-body {
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.compare-item {
+    font-size: 16px;
+    color: var(--gray-800);
+    padding-left: 16px;
+    border-left: 3px solid var(--gray-200);
+}
+
+.compare-vs {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--gray-400);
+    align-self: center;
+}
+
+.compare-tag {
+    font-size: 13px;
+    color: var(--gray-400);
+    font-style: italic;
+    margin-top: 4px;
+    padding-left: 16px;
+}
+
+/* ===== Quote Card ===== */
+.quote-card {
+    background: var(--white);
+    border-left: 5px solid var(--teal);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 36px 40px;
+    box-shadow: var(--shadow-md);
+    max-width: 700px;
+    position: relative;
+}
+
+.quote-mark {
+    font-size: 72px;
+    font-weight: 900;
+    color: var(--teal-light);
+    line-height: 0.5;
+    position: absolute;
+    top: 20px;
+    left: 24px;
+}
+
+.quote-text {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.6;
+    padding-left: 40px;
+}
+
+.quote-author {
+    font-size: 16px;
+    color: var(--gray-600);
+    padding-left: 40px;
+    margin-top: 12px;
+}
+
+.quote-source {
+    font-size: 13px;
+    color: var(--gray-400);
+    padding-left: 40px;
+    font-style: italic;
+}
+
+/* ===== Bar Chart ===== */
+.bar-chart {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bar-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.bar-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--navy);
+    min-width: 100px;
+    text-align: right;
+}
+
+.bar-track {
+    flex: 1;
+    height: 40px;
+    background: var(--gray-100);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bar-fill {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(135deg, var(--teal), var(--teal-dark));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 12px;
+    transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.bar-fill span {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    white-space: nowrap;
+}
+
+.bar-fill--warn {
+    background: linear-gradient(135deg, var(--amber), #B8791F);
+}
+
+.bar-fill--danger {
+    background: linear-gradient(135deg, var(--red), var(--red-dark));
+}
+
+.bar-fill.animate-bar {
+    width: var(--bar-width);
+}
+
+/* ===== Range Visual ===== */
+.range-visual {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.range-bar {
+    position: relative;
+    height: 8px;
+    background: var(--gray-200);
+    border-radius: 4px;
+    margin: 60px 40px;
+}
+
+.range-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, var(--teal), var(--red));
+    border-radius: 4px;
+}
+
+.range-marker {
+    position: absolute;
+    top: -50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.range-min {
+    left: 0;
+    transform: translateX(-50%);
+}
+
+.range-max {
+    right: 0;
+    transform: translateX(50%);
+}
+
+.range-value {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--navy);
+}
+
+.range-desc {
+    font-size: 14px;
+    color: var(--gray-400);
+}
+
+/* ===== Stat Card ===== */
+.stat-card {
+    background: var(--white);
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 40px 48px;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+}
+
+.stat-range {
+    font-size: 56px;
+    font-weight: 900;
+    color: var(--teal);
+    margin-bottom: 12px;
+}
+
+.stat-desc {
+    font-size: 18px;
+    color: var(--gray-600);
+    line-height: 1.6;
+}
+
+/* ===== Note Text ===== */
+.note-text {
+    font-size: 16px;
+    color: var(--gray-600);
+    text-align: center;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* ===== Analogy Row ===== */
+.analogy-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+}
+
+.analogy-item {
+    text-align: center;
+}
+
+.analogy-icon {
+    font-size: 64px;
+    margin-bottom: 8px;
+}
+
+.analogy-label {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.analogy-vs {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--gray-400);
+}
+
+/* ===== Alert Card ===== */
+.alert-card {
+    background: var(--white);
+    border: 2px solid var(--teal-light);
+    border-radius: var(--radius-lg);
+    padding: 36px 40px;
+    box-shadow: var(--shadow-md);
+    max-width: 700px;
+    width: 100%;
+}
+
+.alert-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.alert-heading {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 16px;
+}
+
+.alert-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.alert-item {
+    font-size: 17px;
+    color: var(--gray-800);
+    padding-left: 20px;
+    border-left: 3px solid var(--teal);
+    line-height: 1.5;
+}
+
+/* ===== Remaining Badge ===== */
+.remaining-badge {
+    background: var(--gray-100);
+    color: var(--gray-600);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+/* ===== Cycle Container ===== */
+.cycle-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cycle-step {
+    background: var(--teal-light);
+    color: var(--teal-dark);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.cycle-arrow {
+    font-size: 24px;
+    color: var(--teal);
+}
+
+.cycle-return {
+    font-size: 28px;
+}
+
+/* ===== Strategy Card ===== */
+.strategy-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    padding: 18px 24px;
+    box-shadow: var(--shadow-sm);
+    width: 100%;
+    max-width: 500px;
+}
+
+.strategy-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.strategy-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+/* ===== Summary List ===== */
+.summary-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--white);
+    border: 2px solid var(--teal-light);
+    border-radius: var(--radius-md);
+    padding: 24px 28px;
+    box-shadow: var(--shadow-sm);
+}
+
+.summary-num {
+    width: 44px;
+    height: 44px;
+    background: var(--teal);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+.summary-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+/* ===== Stat Mini ===== */
+.stat-mini {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    padding: 28px 24px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    flex: 1;
+    min-width: 140px;
+}
+
+.stat-mini-num {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--navy);
+    margin-bottom: 8px;
+}
+
+.stat-mini-desc {
+    font-size: 14px;
+    color: var(--gray-600);
+}
+
+/* ===== Diverge Visual ===== */
+.diverge-visual {
+    position: relative;
+    width: 300px;
+    height: 80px;
+}
+
+.diverge-line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+}
+
+.diverge-top {
+    top: 20px;
+    background: linear-gradient(90deg, var(--gray-400), var(--teal));
+    transform: rotate(-8deg);
+    transform-origin: left center;
+}
+
+.diverge-bottom {
+    bottom: 20px;
+    background: linear-gradient(90deg, var(--gray-400), var(--red));
+    transform: rotate(8deg);
+    transform-origin: left center;
+}
+
+/* ===== Pie Chart (12%) ===== */
+.pie-12 {
+    background: conic-gradient(var(--teal) 0deg 43.2deg, var(--gray-200) 43.2deg 360deg);
+}

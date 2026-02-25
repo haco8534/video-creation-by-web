@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1万時間の法則の真実</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ============================================================ -->
+    <!-- Block 1: 導入 — 「1万時間の法則」って何？ (4 scenes) -->
+    <!-- ============================================================ -->
+
+    <!-- Scene 0: タイトルカード「1万時間の法則の真実」 -->
+    <div class="scene" id="scene-0">
+        <canvas class="bg-canvas" id="canvas-0"></canvas>
+        <div class="scene-content title-card">
+            <div class="title-label">MYTH BUSTING</div>
+            <h1 class="title-huge">1万時間の法則の<span class="accent">真実</span></h1>
+            <div class="title-sub">練習量が説明できるのは、たった12%。</div>
+        </div>
+    </div>
+
+    <!-- Scene 1: キーワードリスト「1万時間の法則が使われる場面」 -->
+    <div class="scene" id="scene-1">
+        <canvas class="bg-canvas" id="canvas-1"></canvas>
+        <div class="scene-content">
+            <h2 class="scene-heading">1万時間の法則</h2>
+            <p class="scene-sub">「1万時間やれば誰でもプロになれる」</p>
+            <div class="card-row">
+                <div class="card stagger-item">
+                    <div class="card-icon">&#127929;</div>
+                    <div class="card-label">ピアノ</div>
+                </div>
+                <div class="card stagger-item">
+                    <div class="card-icon">&#128187;</div>
+                    <div class="card-label">プログラミング</div>
+                </div>
+                <div class="card stagger-item">
+                    <div class="card-icon">&#9917;</div>
+                    <div class="card-label">スポーツ</div>
+                </div>
+                <div class="card stagger-item">
+                    <div class="card-icon">&#127912;</div>
+                    <div class="card-label">アート</div>
+                </div>
+            </div>
+            <div class="tag stagger-item">自己啓発書で大人気</div>
+        </div>
+    </div>
+
+    <!-- Scene 2: テキスト強調「研究者本人が否定している」 -->
+    <div class="scene" id="scene-2">
+        <canvas class="bg-canvas" id="canvas-2"></canvas>
+        <div class="scene-content emphasis-scene">
+            <div class="emphasis-icon">&#9888;</div>
+            <div class="emphasis-text stagger-item">研究者本人が<br><span class="accent-red">否定</span>している</div>
+            <div class="emphasis-sub stagger-item">「そんなこと言ってない」</div>
+        </div>
+    </div>
+
+    <!-- Scene 3: 数値インパクト「たった12%」 -->
+    <div class="scene" id="scene-3">
+        <canvas class="bg-canvas" id="canvas-3"></canvas>
+        <div class="scene-content number-impact">
+            <div class="impact-label stagger-item">練習量が結果の差を説明できる割合</div>
+            <div class="impact-number" id="impact-12">12%</div>
+            <div class="impact-sub stagger-item">残りの88%は練習量以外の要因</div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- Block 2: 元の研究を見てみよう (6 scenes) -->
+    <!-- ============================================================ -->
+
+    <!-- Scene 4: タイトルカード「元の研究を見てみよう」 -->
+    <div class="scene" id="scene-4">
+        <canvas class="bg-canvas" id="canvas-4"></canvas>
+        <div class="scene-content title-card">
+            <div class="title-label">ORIGIN</div>
+            <h1 class="title-large">元の研究を<br>見てみよう</h1>
+            <div class="title-sub">グラッドウェル vs エリクソン</div>
+        </div>
+    </div>
+
+    <!-- Scene 5: 段階的リスト「エリクソンの研究の概要」 -->
+    <div class="scene" id="scene-5">
+        <canvas class="bg-canvas" id="canvas-5"></canvas>
+        <div class="scene-content">
+            <h2 class="scene-heading">エリクソンの研究 <span class="year-tag">1993</span></h2>
+            <div class="list-vertical">
+                <div class="list-item stagger-item">
+                    <div class="list-num">1</div>
+                    <div class="list-text">西ベルリン音楽アカデミーのバイオリン学生を調査</div>
+                </div>
+                <div class="list-item stagger-item">
+                    <div class="list-num">2</div>
+                    <div class="list-text">3グループに分類（世界レベル / 優秀 / 教師候補）</div>
+                </div>
+                <div class="list-item stagger-item">
+                    <div class="list-num">3</div>
+                    <div class="list-text">最上位グループの20歳時点の練習時間の<strong>平均</strong>が約1万時間</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 6: テキスト強調「1万時間は"平均値"であって"条件"ではない」 -->
+    <div class="scene" id="scene-6">
+        <canvas class="bg-canvas" id="canvas-6"></canvas>
+        <div class="scene-content emphasis-scene">
+            <div class="emphasis-text stagger-item">1万時間は<span class="accent-teal">「平均値」</span></div>
+            <div class="emphasis-divider stagger-item"></div>
+            <div class="emphasis-text stagger-item"><span class="accent-red">「条件」</span>ではない</div>
+            <div class="emphasis-sub stagger-item">全員が到達した閾値ではなく、まだ学生の段階</div>
+        </div>
+    </div>
+
+    <!-- Scene 7: フロー図「意図的練習の4ステップ」 -->
+    <div class="scene" id="scene-7">
+        <canvas class="bg-canvas" id="canvas-7"></canvas>
+        <div class="scene-content">
+            <h2 class="scene-heading">意図的練習 <span class="en-label">Deliberate Practice</span></h2>
+            <div class="flow-horizontal">
+                <div class="flow-step stagger-item">
+                    <div class="flow-icon">&#127919;</div>
+                    <div class="flow-label">明確な目標</div>
+                </div>
+                <div class="flow-arrow stagger-item">&#10132;</div>
+                <div class="flow-step stagger-item">
+                    <div class="flow-icon">&#128293;</div>
+                    <div class="flow-label">快適ゾーン外</div>
+                </div>
+                <div class="flow-arrow stagger-item">&#10132;</div>
+                <div class="flow-step stagger-item">
+                    <div class="flow-icon">&#128172;</div>
+                    <div class="flow-label">即時FB</div>
+                </div>
+                <div class="flow-arrow stagger-item">&#10132;</div>
+                <div class="flow-step stagger-item">
+                    <div class="flow-icon">&#128736;</div>
+                    <div class="flow-label">弱点を改善</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 8: 比較対照「グラッドウェルの主張 vs エリクソンの研究」 -->
+    <div class="scene" id="scene-8">
+        <canvas class="bg-canvas" id="canvas-8"></canvas>
+        <div class="scene-content">
+            <h2 class="scene-heading">主張のすれ違い</h2>
+            <div class="compare-row">
+                <div class="compare-card compare-left stagger-item">
+                    <div class="compare-header red-bg">グラッドウェル</div>
+                    <div class="compare-body">
+                        <div class="compare-item">どんな分野でも</div>
+                        <div class="compare-item">1万時間やれば一流に</div>
+                        <div class="compare-item">量がすべてを決める</div>
+                    </div>
+                </div>
+                <div class="compare-vs stagger-item">VS</div>
+                <div class="compare-card compare-right stagger-item">
+                    <div class="compare-header teal-bg">エリクソン</div>
+                    <div class="compare-body">
+                        <div class="compare-item">バイオリンだけの研究</div>
+                        <div class="compare-item">1万時間は平均値</div>
+                        <div class="compare-item">質（意図的練習）が本質</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 9: 引用カード「エリクソン教授の反論」 -->
+    <div class="scene" id="scene-9">
+        <canvas class="bg-canvas" id="canvas-9"></canvas>
+        <div class="scene-content">
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">グラッドウェルは私の研究を<br>複数の点で間違って解釈している</div>
+                <div class="quote-author">── K. アンダース・エリクソン</div>
+                <div class="quote-source">『Peak（超一流になるのは才能か努力か？）』2016</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- Block 3: トピック① — 練習量が説明できるのはたった12% (9 scenes) -->
+    <!-- ============================================================ -->
+
+    <!-- Scene 10: タイトルカード「残酷なデータ①」 -->
+    <div class="scene" id="scene-10">
+        <canvas class="bg-canvas" id="canvas-10"></canvas>
+        <div class="scene-content title-card">
+            <div class="title-label">CRUEL DATA</div>
+            <h1 class="title-large">残酷なデータ <span class="accent-red">①</span></h1>
+            <div class="title-sub">練習量 vs パフォーマンス</div>
+        </div>
+    </div>
+
+    <!-- Scene 11: 段階的リスト「メタ分析の概要」 -->
+    <div class="scene" id="scene-11">
+        <canvas class="bg-canvas" id="canvas-11"></canvas>
+        <div class="scene-content">
+            <h2 class="scene-heading">2014年 メタ分析</h2>
+            <div class="list-vertical">
+                <div class="list-item stagger-item">
+                    <div class="list-num">88</div>
+                    <div class="list-text">研究論文</div>
+                </div>
+                <div class="list-item stagger-item">
+                    <div class="list-num">157</div>
+                    <div class="list-text">効果量</div>
+                </div>
+                <div class="list-item stagger-item">
+                    <div class="list-num">11,000+</div>
+                    <div class="list-text">対象者数</div>
+                </div>
+            </div>
+            <div class="source-tag stagger-item">Macnamara, Hambrick & Oswald (2014) Psychological Science</div>
+        </div>
+    </div>
+
+    <!-- Scene 12: 横並びカード「分野別の練習量の影響」 -->
+    <div class="scene" id="scene-12">
+        <canvas class="bg-canvas" id="canvas-12"></canvas>
+        <div class="scene-content">
+            <h2 class="scene-heading">分野別：練習量の説明力</h2>
+            <div class="bar-chart">
+                <div class="bar-item stagger-item">
+                    <div class="bar-label">ゲーム</div>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="--bar-width: 26%"><span>26%</span></div>
+                    </div>
+                </div>
+                <div class="bar-item stagger-item">
+                    <div class="bar-label">音楽</div>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="--bar-width: 21%"><span>21%</span></div>
+                    </div>
+                </div>
+                <div class="bar-item stagger-item">
+                    <div class="bar-label">スポーツ</div>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="--bar-width: 18%"><span>18%</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 13: 数値インパクト「教育4% / 職業1%未満」 -->
+    <div class="scene" id="scene-13">
+        <canvas class="bg-canvas" id="canvas-13"></canvas>
+        <div class="scene-content">
+            <h2 class="scene-heading">さらに衝撃的な分野</h2>
+            <div class="bar-chart">
+                <div class="bar-item stagger-item">
+                    <div class="bar-label">教育</div>
+                    <div class="bar-track">
+                        <div class="bar-fill bar-fill--warn" style="--bar-width: 4%"><span>4%</span></div>
+                    </div>
+                </div>
+                <div class="bar-item stagger-item">
+                    <div class="bar-label">職業</div>
+                    <div class="bar-track">
+                        <div class="bar-fill bar-fill--danger" style="--bar-width: 2%"><span>&lt;1%</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="impact-callout stagger-item">仕事のパフォーマンスと経験年数は<br>ほとんど関係ない</div>
+        </div>
+    </div>
+
+    <!-- Scene 14: 数値インパクト「全分野平均：たった12%」 -->
+    <div class="scene" id="scene-14">
+        <canvas class="bg-canvas" id="canvas-14"></canvas>
+        <div class="scene-content number-impact">
+            <div class="impact-label stagger-item">全分野平均</div>
+            <div class="impact-number" id="impact-12-b">12%</div>
+            <div class="impact-desc stagger-item">
+                <div class="pie-visual">
+                    <div class="pie-segment pie-12"></div>
+                    <div class="pie-label-left">練習 12%</div>
+                    <div class="pie-label-right">その他 88%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 15: テキスト強調「ベテランだから仕事ができるとも限らない」 -->
+    <div class="scene" id="scene-15">
+        <canvas class="bg-canvas" id="canvas-15"></canvas>
+        <div class="scene-content emphasis-scene">
+            <div class="emphasis-text stagger-item">ベテランだから<br>仕事ができる<span class="accent-red">とも限らない</span></div>
+            <div class="emphasis-sub stagger-item">職業パフォーマンスにおける練習量の影響は<strong>1%未満</strong></div>
+        </div>
+    </div>
+
+    <!-- Scene 16: 比較対照「チェスマスターの練習時間」 -->
+    <div class="scene" id="scene-16">
+        <canvas class="bg-canvas" id="canvas-16"></canvas>
+        <div class="scene-content">
+            <h2 class="scene-heading">チェスマスターへの到達時間</h2>
+            <div class="range-visual stagger-item">
+                <div class="range-bar">
+                    <div class="range-marker range-min">
+                        <div class="range-value">728h</div>
+                        <div class="range-desc">最速</div>
+                    </div>
+                    <div class="range-fill"></div>
+                    <div class="range-marker range-max">
+                        <div class="range-value">16,120h</div>
+                        <div class="range-desc">最遅</div>
+                    </div>
+                </div>
+            </div>
+            <div class="source-tag stagger-item">Gobet & Campitelli (2007)</div>
+        </div>
+    </div>
+
+    <!-- Scene 17: 数値インパクト「22倍の差」 -->
+    <div class="scene" id="scene-17">
+        <canvas class="bg-canvas" id="canvas-17"></canvas>
+        <div class="scene-content number-impact">
+            <div class="impact-label stagger-item">同じレベルに達するまでの差</div>
+            <div class="impact-number accent-red" id="impact-22x">22倍</div>
+            <div class="impact-sub stagger-item">25,000時間以上でもマスターになれない人もいる</div>
+        </div>
+    </div>
+
+    <!-- Scene 18: 引用カード「ハンブリック教授の結論」 -->
+    <div class="scene" id="scene-18">
+        <canvas class="bg-canvas" id="canvas-18"></canvas>
+        <div class="scene-content">
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">音楽やチェスの名人の成功における<br>練習の寄与度は<span class="accent-red">約3割</span>に過ぎない</div>
+                <div class="quote-author">── D.Z. ハンブリック教授</div>
+            </div>
+            <div class="remaining-badge stagger-item">残りの7割：遺伝・知能・環境・開始年齢</div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- Block 4: トピック② — 遺伝という"見えない天井" (9 scenes) -->
+    <!-- ============================================================ -->
+
+    <!-- Scene 19: タイトルカード「残酷なデータ② ── 遺伝という見えない天井」 -->
+    <div class="scene" id="scene-19">
+        <canvas class="bg-canvas" id="canvas-19"></canvas>
+        <div class="scene-content title-card">
+            <div class="title-label">CRUEL DATA</div>
+            <h1 class="title-large">残酷なデータ <span class="accent-red">②</span></h1>
+            <div class="title-sub">遺伝という「見えない天井」</div>
+        </div>
+    </div>
+
+    <!-- Scene 20: 段階的リスト「遺伝の影響を示すデータ」 -->
+    <div class="scene" id="scene-20">
+        <canvas class="bg-canvas" id="canvas-20"></canvas>
+        <div class="scene-content">
+            <h2 class="scene-heading">双子研究が示す遺伝の影響</h2>
+            <div class="stat-card stagger-item">
+                <div class="stat-range">30% ～ 80%</div>
+                <div class="stat-desc">運動能力の個人差のうち<br>遺伝的要因で説明される割合</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 21: 数値インパクト「VO2maxの遺伝率」 -->
+    <div class="scene" id="scene-21">
+        <canvas class="bg-canvas" id="canvas-21"></canvas>
+        <div class="scene-content number-impact">
+            <div class="impact-label stagger-item">最大酸素摂取量（VO2max）の遺伝率</div>
+            <div class="impact-number accent-teal" id="impact-vo2">59〜72%</div>
+            <div class="impact-sub stagger-item">持久力の指標 ── マラソンの速さの大部分は生まれつき</div>
+        </div>
+    </div>
+
+    <!-- Scene 22: 比較対照「ACTN3遺伝子：RR型 vs XX型」 -->
+    <div class="scene" id="scene-22">
+        <canvas class="bg-canvas" id="canvas-22"></canvas>
+        <div class="scene-content">
+            <h2 class="scene-heading">ACTN3遺伝子 <span class="en-label">スピード遺伝子</span></h2>
+            <div class="compare-row">
+                <div class="compare-card compare-left stagger-item">
+                    <div class="compare-header red-bg">RR型</div>
+                    <div class="compare-body">
+                        <div class="compare-item">速筋繊維が発達</div>
+                        <div class="compare-item">スプリント向き</div>
+                        <div class="compare-item">瞬発系に有利</div>
+                    </div>
+                </div>
+                <div class="compare-vs stagger-item">vs</div>
+                <div class="compare-card compare-right stagger-item">
+                    <div class="compare-header teal-bg">XX型</div>
+                    <div class="compare-body">
+                        <div class="compare-item">遅筋繊維が優位</div>
+                        <div class="compare-item">持久系向き</div>
+                        <div class="compare-item">長距離に有利</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 23: テキスト強調「エンジンの基本性能に差がある」 -->
+    <div class="scene" id="scene-23">
+        <canvas class="bg-canvas" id="canvas-23"></canvas>
+        <div class="scene-content emphasis-scene">
+            <div class="analogy-row stagger-item">
+                <div class="analogy-item">
+                    <div class="analogy-icon">&#128663;</div>
+                    <div class="analogy-label">スポーツカー</div>
+                </div>
+                <div class="analogy-vs">vs</div>
+                <div class="analogy-item">
+                    <div class="analogy-icon">&#128664;</div>
+                    <div class="analogy-label">軽自動車</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">どれだけチューニングしても<br>エンジンの基本性能には差がある</div>
+        </div>
+    </div>
+
+    <!-- Scene 24: 数値インパクト「トレーニング効果の差の47%が遺伝」 -->
+    <div class="scene" id="scene-24">
+        <canvas class="bg-canvas" id="canvas-24"></canvas>
+        <div class="scene-content number-impact">
+            <div class="impact-label stagger-item">同じ練習しても伸びが違う</div>
+            <div class="impact-number accent-red" id="impact-47">47%</div>
+            <div class="impact-sub stagger-item">トレーニングへの反応性の差のうち<br>遺伝で説明される割合</div>
+        </div>
+    </div>
+
+    <!-- Scene 25: 段階的リスト「認知能力の遺伝率」 -->
+    <div class="scene" id="scene-25">
+        <canvas class="bg-canvas" id="canvas-25"></canvas>
+        <div class="scene-content">
+            <h2 class="scene-heading">認知能力の遺伝率</h2>
+            <div class="stat-card stagger-item">
+                <div class="stat-range">50% ～ 70%</div>
+                <div class="stat-desc">IQ・ワーキングメモリの個人差のうち<br>遺伝的要因で説明される割合</div>
+            </div>
+            <div class="note-text stagger-item">知能が高い人は意図的練習からも<br>より効率的に学べる</div>
+        </div>
+    </div>
+
+    <!-- Scene 26: テキスト強調「才能がある人は練習効率も高い」 -->
+    <div class="scene" id="scene-26">
+        <canvas class="bg-canvas" id="canvas-26"></canvas>
+        <div class="scene-content emphasis-scene">
+            <div class="emphasis-text stagger-item">才能がある人は<br><span class="accent-red">練習効率も高い</span></div>
+            <div class="emphasis-sub stagger-item">差がどんどん開いていく構造</div>
+            <div class="diverge-visual stagger-item">
+                <div class="diverge-line diverge-top"></div>
+                <div class="diverge-line diverge-bottom"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 27: 注意喚起「遺伝で全部決まるわけではない」 -->
+    <div class="scene" id="scene-27">
+        <canvas class="bg-canvas" id="canvas-27"></canvas>
+        <div class="scene-content">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">&#128161;</div>
+                <div class="alert-heading">遺伝で全部決まるわけではない</div>
+                <div class="alert-body">
+                    <div class="alert-item">遺伝率50%なら、残り50%は環境と練習の質で変わる</div>
+                    <div class="alert-item">遺伝は「天井の高さ」を決めるかもしれない</div>
+                    <div class="alert-item">その天井にどこまで近づけるかは自分次第</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- Block 5: トピック③ — 「正しい努力のしかた」 (8 scenes) -->
+    <!-- ============================================================ -->
+
+    <!-- Scene 28: タイトルカード「じゃあ、正しい努力って何？」 -->
+    <div class="scene" id="scene-28">
+        <canvas class="bg-canvas" id="canvas-28"></canvas>
+        <div class="scene-content title-card">
+            <div class="title-label">SOLUTION</div>
+            <h1 class="title-large">正しい努力って<br><span class="accent-teal">何？</span></h1>
+        </div>
+    </div>
+
+    <!-- Scene 29: フロー図「意図的練習のサイクル」 -->
+    <div class="scene" id="scene-29">
+        <canvas class="bg-canvas" id="canvas-29"></canvas>
+        <div class="scene-content">
+            <h2 class="scene-heading">意図的練習のサイクル</h2>
+            <div class="cycle-container stagger-item">
+                <div class="cycle-step">目標設定</div>
+                <div class="cycle-arrow">&#10132;</div>
+                <div class="cycle-step">快適ゾーン外に挑戦</div>
+                <div class="cycle-arrow">&#10132;</div>
+                <div class="cycle-step">即時フィードバック</div>
+                <div class="cycle-arrow">&#10132;</div>
+                <div class="cycle-step">弱点を改善</div>
+                <div class="cycle-arrow cycle-return">&#10227;</div>
+            </div>
+            <div class="note-text stagger-item">1時間の質を極限まで高める</div>
+        </div>
+    </div>
+
+    <!-- Scene 30: 横並びカード「kind環境 vs wicked環境」 -->
+    <div class="scene" id="scene-30">
+        <canvas class="bg-canvas" id="canvas-30"></canvas>
+        <div class="scene-content">
+            <h2 class="scene-heading">エプスタイン『Range』</h2>
+            <div class="compare-row">
+                <div class="compare-card compare-left stagger-item">
+                    <div class="compare-header teal-bg">Kind 環境</div>
+                    <div class="compare-body">
+                        <div class="compare-item">ルールが明確</div>
+                        <div class="compare-item">パターンの繰り返し</div>
+                        <div class="compare-item">即座のフィードバック</div>
+                        <div class="compare-tag">チェス・ゴルフ</div>
+                    </div>
+                </div>
+                <div class="compare-vs stagger-item">vs</div>
+                <div class="compare-card compare-right stagger-item">
+                    <div class="compare-header amber-bg">Wicked 環境</div>
+                    <div class="compare-body">
+                        <div class="compare-item">ルールが曖昧</div>
+                        <div class="compare-item">常に状況変化</div>
+                        <div class="compare-item">フィードバックが遅い</div>
+                        <div class="compare-tag">ビジネス・人生</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 31: 段階的リスト「kind環境の特徴」 -->
+    <div class="scene" id="scene-31">
+        <canvas class="bg-canvas" id="canvas-31"></canvas>
+        <div class="scene-content">
+            <h2 class="scene-heading">Kind環境での戦略</h2>
+            <div class="strategy-card stagger-item">
+                <div class="strategy-icon teal-bg">&#10004;</div>
+                <div class="strategy-text">早期専門化</div>
+            </div>
+            <div class="strategy-card stagger-item">
+                <div class="strategy-icon teal-bg">&#10004;</div>
+                <div class="strategy-text">1万時間型の集中練習が有効</div>
+            </div>
+            <div class="strategy-card stagger-item">
+                <div class="strategy-icon teal-bg">&#10004;</div>
+                <div class="strategy-text">パターン認識力を鍛える</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 32: 段階的リスト「wicked環境の特徴」 -->
+    <div class="scene" id="scene-32">
+        <canvas class="bg-canvas" id="canvas-32"></canvas>
+        <div class="scene-content">
+            <h2 class="scene-heading">Wicked環境での戦略</h2>
+            <div class="strategy-card stagger-item">
+                <div class="strategy-icon amber-bg">&#10004;</div>
+                <div class="strategy-text">幅広い経験を積む</div>
+            </div>
+            <div class="strategy-card stagger-item">
+                <div class="strategy-icon amber-bg">&#10004;</div>
+                <div class="strategy-text">適応力・創造性を育てる</div>
+            </div>
+            <div class="strategy-card stagger-item">
+                <div class="strategy-icon amber-bg">&#10004;</div>
+                <div class="strategy-text">「レンジ」を持つ方が強い</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 33: 比較対照「タイガー・ウッズ型 vs ロジャー・フェデラー型」 -->
+    <div class="scene" id="scene-33">
+        <canvas class="bg-canvas" id="canvas-33"></canvas>
+        <div class="scene-content">
+            <h2 class="scene-heading">2つの成功モデル</h2>
+            <div class="compare-row">
+                <div class="compare-card compare-left stagger-item">
+                    <div class="compare-header red-bg">タイガー・ウッズ型</div>
+                    <div class="compare-body">
+                        <div class="compare-item">2歳からゴルフ</div>
+                        <div class="compare-item">超早期専門化</div>
+                        <div class="compare-item">一つに全集中</div>
+                    </div>
+                </div>
+                <div class="compare-vs stagger-item">vs</div>
+                <div class="compare-card compare-right stagger-item">
+                    <div class="compare-header teal-bg">ロジャー・フェデラー型</div>
+                    <div class="compare-body">
+                        <div class="compare-item">複数スポーツを経験</div>
+                        <div class="compare-item">10代後半でテニスに絞る</div>
+                        <div class="compare-item">幅広い土台から専門へ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 34: テキスト強調「自分に合ったフィールドを見つけること自体が大事」 -->
+    <div class="scene" id="scene-34">
+        <canvas class="bg-canvas" id="canvas-34"></canvas>
+        <div class="scene-content emphasis-scene">
+            <div class="emphasis-text stagger-item">自分に合ったフィールドを<br><span class="accent-teal">見つけること自体が大事</span></div>
+            <div class="emphasis-sub stagger-item">20時間ずつ試して適性を見極める</div>
+            <div class="emphasis-sub stagger-item">遺伝の壁を「ガイドライン」に変える</div>
+        </div>
+    </div>
+
+    <!-- Scene 35: テキスト強調の第2部分は統合済み -->
+    <!-- (台本上は同じSCENE内の続きなので、Scene 34に統合) -->
+
+    <!-- ============================================================ -->
+    <!-- Block 6: まとめ — 努力の「正しい使い方」 (7 scenes) -->
+    <!-- ============================================================ -->
+
+    <!-- Scene 35: タイトルカード「まとめ──努力の正しい使い方」 -->
+    <div class="scene" id="scene-35">
+        <canvas class="bg-canvas" id="canvas-35"></canvas>
+        <div class="scene-content title-card">
+            <div class="title-label">CONCLUSION</div>
+            <h1 class="title-large">まとめ</h1>
+            <div class="title-sub">努力の「正しい使い方」</div>
+        </div>
+    </div>
+
+    <!-- Scene 36: まとめカード「本日のポイント」 -->
+    <div class="scene" id="scene-36">
+        <canvas class="bg-canvas" id="canvas-36"></canvas>
+        <div class="scene-content">
+            <h2 class="scene-heading">本日のポイント</h2>
+            <div class="summary-list">
+                <div class="summary-item stagger-item">
+                    <div class="summary-num">1</div>
+                    <div class="summary-text">1万時間の法則は研究者本人に否定された俗説</div>
+                </div>
+                <div class="summary-item stagger-item">
+                    <div class="summary-num">2</div>
+                    <div class="summary-text">練習量が結果を説明できるのはたった12%</div>
+                </div>
+                <div class="summary-item stagger-item">
+                    <div class="summary-num">3</div>
+                    <div class="summary-text">大事なのは量ではなく方向性と質</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 37: 比較対照「728時間 vs 16,120時間 vs 25,000時間」 -->
+    <div class="scene" id="scene-37">
+        <canvas class="bg-canvas" id="canvas-37"></canvas>
+        <div class="scene-content">
+            <h2 class="scene-heading">量で解決できるほど世界は単純じゃない</h2>
+            <div class="card-row three-col">
+                <div class="stat-mini stagger-item">
+                    <div class="stat-mini-num accent-teal">728h</div>
+                    <div class="stat-mini-desc">最速でマスターに</div>
+                </div>
+                <div class="stat-mini stagger-item">
+                    <div class="stat-mini-num">16,120h</div>
+                    <div class="stat-mini-desc">最遅でマスターに</div>
+                </div>
+                <div class="stat-mini stagger-item">
+                    <div class="stat-mini-num accent-red">25,000h+</div>
+                    <div class="stat-mini-desc">それでも届かない</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 38: テキスト強調「大事なのは量じゃなくて方向性と質」 -->
+    <div class="scene" id="scene-38">
+        <canvas class="bg-canvas" id="canvas-38"></canvas>
+        <div class="scene-content emphasis-scene">
+            <div class="emphasis-text stagger-item">大事なのは<span class="accent-teal">量</span>じゃなくて<br><span
+                    class="accent-teal">方向性</span>と<span class="accent-teal">質</span></div>
+            <div class="emphasis-sub stagger-item">自分の強みを見極めて<br>適切な環境で意図的な練習を積む</div>
+        </div>
+    </div>
+
+    <!-- Scene 39: 注意喚起「なぜこの法則が広まったのか」 -->
+    <div class="scene" id="scene-39">
+        <canvas class="bg-canvas" id="canvas-39"></canvas>
+        <div class="scene-content">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">&#129300;</div>
+                <div class="alert-heading">なぜこの法則は広まったのか</div>
+                <div class="alert-body">
+                    <div class="alert-item">「努力で全てが決まる」ならば世界は公平</div>
+                    <div class="alert-item">みんながその話を「信じたかった」</div>
+                    <div class="alert-item">メリトクラシー（実力主義）信仰</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 40: テキスト強調「本当のことを知った上で努力する方が絶対に強い」 -->
+    <div class="scene" id="scene-40">
+        <canvas class="bg-canvas" id="canvas-40"></canvas>
+        <div class="scene-content emphasis-scene">
+            <div class="emphasis-text stagger-item">本当のことを知った上で<br>努力する方が<span class="accent-teal">絶対に強い</span></div>
+            <div class="emphasis-sub stagger-item">才能を正しく見極めて<br>正しい方向に質の高い努力を向ける</div>
+            <div class="emphasis-sub stagger-item">それがデータが教えてくれる一番の近道</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
