@@ -16,10 +16,28 @@ import { SUBTITLE_DATA, TOTAL_FRAMES, SubtitleEntry } from './subtitleData';
 // ============================================================
 const SIDEBAR_WIDTH = 380;
 
-const CHARACTER_IMAGES: Record<string, string> = {
-    'ずんだもん': 'characters/zundamon/default.png',
-    'めたん': 'characters/metan/default.png',
+// 各キャラの立ち絵バリエーション（セリフごとにローテーション）
+const CHARACTER_IMAGE_VARIANTS: Record<string, string[]> = {
+    'ずんだもん': [
+        'characters/zundamon/normal2.png',
+        'characters/zundamon/normal3.png',
+        'characters/zundamon/normal4.png',
+    ],
+    'めたん': [
+        'characters/metan/normal2.png',
+        'characters/metan/normal3.png',
+        'characters/metan/normal4.png',
+    ],
 };
+
+/**
+ * セリフのインデックスからキャラ画像パスを決定（ローテーション）
+ */
+function getImageForEntry(speaker: string, entryIndex: number): string | null {
+    const variants = CHARACTER_IMAGE_VARIANTS[speaker];
+    if (!variants || variants.length === 0) return null;
+    return variants[entryIndex % variants.length];
+}
 
 // アニメーション設定
 const ANIM = {
@@ -70,19 +88,21 @@ function getPreviousSubtitle(
 // ============================================================
 const SpeakerSwapSprite: React.FC<{
     currentSpeaker: string | null;
+    currentImagePath: string | null;
     previousSpeaker: string | null;
+    previousImagePath: string | null;
     framesSinceSpeakerChange: number;
     frame: number;
-}> = ({ currentSpeaker, previousSpeaker, framesSinceSpeakerChange, frame }) => {
+}> = ({ currentSpeaker, currentImagePath, previousSpeaker, previousImagePath, framesSinceSpeakerChange, frame }) => {
     const speakerChanged = currentSpeaker !== previousSpeaker;
     const isTransitioning = speakerChanged && framesSinceSpeakerChange < ANIM.swapFrames;
 
     return (
         <>
             {/* 現在の話者: スライドイン */}
-            {currentSpeaker && CHARACTER_IMAGES[currentSpeaker] && (
+            {currentSpeaker && currentImagePath && (
                 <CharacterLayer
-                    imagePath={CHARACTER_IMAGES[currentSpeaker]}
+                    imagePath={currentImagePath}
                     phase={isTransitioning ? 'entering' : 'active'}
                     progress={isTransitioning
                         ? framesSinceSpeakerChange / ANIM.swapFrames
@@ -93,9 +113,9 @@ const SpeakerSwapSprite: React.FC<{
             )}
 
             {/* 前の話者: スライドアウト（トランジション中のみ） */}
-            {isTransitioning && previousSpeaker && CHARACTER_IMAGES[previousSpeaker] && (
+            {isTransitioning && previousSpeaker && previousImagePath && (
                 <CharacterLayer
-                    imagePath={CHARACTER_IMAGES[previousSpeaker]}
+                    imagePath={previousImagePath}
                     phase="exiting"
                     progress={framesSinceSpeakerChange / ANIM.swapFrames}
                     zIndex={19}
@@ -182,6 +202,12 @@ export const VideoWithSubtitles: React.FC = () => {
     const currentSpeaker = currentEntry?.speaker ?? null;
     const previousSpeaker = previousEntry?.speaker ?? null;
 
+    // セリフのインデックスから画像を決定
+    const currentIndex = currentEntry ? SUBTITLE_DATA.indexOf(currentEntry) : 0;
+    const previousIndex = previousEntry ? SUBTITLE_DATA.indexOf(previousEntry) : 0;
+    const currentImagePath = currentSpeaker ? getImageForEntry(currentSpeaker, currentIndex) : null;
+    const previousImagePath = previousSpeaker ? getImageForEntry(previousSpeaker, previousIndex) : null;
+
     // 現在のセリフが始まってからのフレーム数
     const framesSinceSpeakerChange = currentEntry
         ? frame - currentEntry.startFrame
@@ -192,7 +218,9 @@ export const VideoWithSubtitles: React.FC = () => {
             {/* キャラクター立ち絵（字幕より背面） */}
             <SpeakerSwapSprite
                 currentSpeaker={currentSpeaker}
+                currentImagePath={currentImagePath}
                 previousSpeaker={previousSpeaker}
+                previousImagePath={previousImagePath}
                 framesSinceSpeakerChange={framesSinceSpeakerChange}
                 frame={frame}
             />

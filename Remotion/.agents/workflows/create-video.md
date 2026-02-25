@@ -119,30 +119,34 @@ export const SUBTITLE_DATA: SubtitleEntry[] = [...];
 
 `src/projects/{project_id}/VideoWithSubtitles.tsx` を以下のテンプレート通りに作成する。
 
-**変更すべき箇所は3つだけ:**
+**変更すべき箇所は2つだけ:**
 1. `staticFile('videos/{project_id}.mp4')` — プロジェクトIDに合わせる
 2. `headerTitle` のデフォルト値 — 動画のテーマに合わせた日本語タイトル
-3. `CHARACTERS` の `image` パス — キャラクター画像のパスが合っているか確認
 
 ### 前提: キャラクター画像の配置
 
-以下にキャラクターの固定立ち絵（透過PNG、1枚ずつ）を配置する：
+以下にキャラクターの立ち絵（透過PNG、各キャラ複数枚）を配置する：
 
 ```
 public/characters/
 ├── zundamon/
-│   └── default.png    ← ずんだもん立ち絵
+│   ├── normal2.png    ← ずんだもんポーズ1
+│   ├── normal3.png    ← ずんだもんポーズ2
+│   └── normal4.png    ← ずんだもんポーズ3
 └── metan/
-    └── default.png    ← めたん立ち絵
+    ├── normal2.png    ← めたんポーズ1
+    ├── normal3.png    ← めたんポーズ2
+    └── normal4.png    ← めたんポーズ3
 ```
 
-**注意**: 立ち絵は1キャラ1枚の固定画像。表情切り替えは行わず、Remotion側のアニメーション（明度・Y座標）だけで「喋っている/いない」を表現する。
+**立ち絵は複数バリエーション対応**。セリフごとに画像が順番にローテーションし、キャラが常に同じポーズで固まることを防ぐ。
 
 ### テンプレート（そのままコピーして使う）
 
 ```tsx
 import React from 'react';
 import {
+    AbsoluteFill,
     Img,
     OffthreadVideo,
     useCurrentFrame,
@@ -156,25 +160,36 @@ import { SUBTITLE_DATA, TOTAL_FRAMES, SubtitleEntry } from './subtitleData';
 // ============================================================
 // キャラクター設定
 // ============================================================
-const CHARACTERS: Record<string, { image: string; side: 'left' | 'right' }> = {
-    'ずんだもん': {
-        image: 'characters/zundamon/default.png',
-        side: 'left',
-    },
-    'めたん': {
-        image: 'characters/metan/default.png',
-        side: 'right',
-    },
+const SIDEBAR_WIDTH = 380;
+
+// 各キャラの立ち絵バリエーション（セリフごとにローテーション）
+const CHARACTER_IMAGE_VARIANTS: Record<string, string[]> = {
+    'ずんだもん': [
+        'characters/zundamon/normal2.png',
+        'characters/zundamon/normal3.png',
+        'characters/zundamon/normal4.png',
+    ],
+    'めたん': [
+        'characters/metan/normal2.png',
+        'characters/metan/normal3.png',
+        'characters/metan/normal4.png',
+    ],
 };
+
+/**
+ * セリフのインデックスからキャラ画像パスを決定（ローテーション）
+ */
+function getImageForEntry(speaker: string, entryIndex: number): string | null {
+    const variants = CHARACTER_IMAGE_VARIANTS[speaker];
+    if (!variants || variants.length === 0) return null;
+    return variants[entryIndex % variants.length];
+}
 
 // アニメーション設定
 const ANIM = {
-    fadeInFrames: 8,        // 喋り始めのフェードインフレーム数
-    fadeOutFrames: 8,       // 喋り終わりのフェードアウトフレーム数
-    inactiveOpacity: 0.45,  // 喋っていないときの不透明度
-    activeOpacity: 1.0,     // 喋っているときの不透明度
-    inactiveOffsetY: 30,    // 喋っていないときの下方向オフセット(px)
-    activeOffsetY: 0,       // 喋っているときのオフセット
+    swapFrames: 10,         // スワップアニメーションのフレーム数 (~0.33秒)
+    inactiveOpacity: 0.5,   // 喋っていないときの不透明度
+    slideDistance: 80,      // スライドする距離(px)
 };
 
 // ============================================================
@@ -199,69 +214,107 @@ function getCurrentSubtitle(
     return result;
 }
 
+/**
+ * 現在フレームの直前のセリフエントリを取得
+ * （話者が変わったかどうかの判定用）
+ */
+function getPreviousSubtitle(
+    frame: number,
+    currentEntry: SubtitleEntry | null,
+    data: SubtitleEntry[]
+): SubtitleEntry | null {
+    if (!currentEntry) return null;
+    const currentIndex = data.indexOf(currentEntry);
+    if (currentIndex <= 0) return null;
+    return data[currentIndex - 1];
+}
+
 // ============================================================
-// キャラクター立ち絵コンポーネント
+// スピーカースワップ付きキャラクタースプライト
 // ============================================================
-// 喋っているキャラ: 明るく、通常位置に表示
-// 喋っていないキャラ: 暗く、少し下に下げて表示
-// 切り替え時: interpolateでスムーズにアニメーション
-const CharacterSprite: React.FC<{
-    characterName: string;
-    isSpeaking: boolean;
-    currentEntry: SubtitleEntry | null;
+// 話者が変わった時: 前キャラがスライドアウト、新キャラがスライドイン
+// 同じキャラが連続: アニメーションなし（画像だけローテーション）
+const SpeakerSwapSprite: React.FC<{
+    currentSpeaker: string | null;
+    currentImagePath: string | null;
+    previousSpeaker: string | null;
+    previousImagePath: string | null;
+    framesSinceSpeakerChange: number;
     frame: number;
-    side: 'left' | 'right';
+}> = ({ currentSpeaker, currentImagePath, previousSpeaker, previousImagePath, framesSinceSpeakerChange, frame }) => {
+    const speakerChanged = currentSpeaker !== previousSpeaker;
+    const isTransitioning = speakerChanged && framesSinceSpeakerChange < ANIM.swapFrames;
+
+    return (
+        <>
+            {/* 現在の話者: スライドイン */}
+            {currentSpeaker && currentImagePath && (
+                <CharacterLayer
+                    imagePath={currentImagePath}
+                    phase={isTransitioning ? 'entering' : 'active'}
+                    progress={isTransitioning
+                        ? framesSinceSpeakerChange / ANIM.swapFrames
+                        : 1
+                    }
+                    zIndex={20}
+                />
+            )}
+
+            {/* 前の話者: スライドアウト（トランジション中のみ） */}
+            {isTransitioning && previousSpeaker && previousImagePath && (
+                <CharacterLayer
+                    imagePath={previousImagePath}
+                    phase="exiting"
+                    progress={framesSinceSpeakerChange / ANIM.swapFrames}
+                    zIndex={19}
+                />
+            )}
+        </>
+    );
+};
+
+// ============================================================
+// キャラクターレイヤー（個別キャラの描画）
+// ============================================================
+const CharacterLayer: React.FC<{
     imagePath: string;
-}> = ({ characterName, isSpeaking, currentEntry, frame, side, imagePath }) => {
-    let localFrame = 0;
-    if (currentEntry && currentEntry.speaker === characterName) {
-        localFrame = frame - currentEntry.startFrame;
-    }
-
-    let isEndingPhase = false;
-    if (currentEntry && currentEntry.speaker === characterName) {
-        const endFrame = currentEntry.startFrame + currentEntry.durationFrames;
-        if (endFrame - frame < ANIM.fadeOutFrames) isEndingPhase = true;
-    }
-
-    // 不透明度とY座標をinterpolateで計算
+    phase: 'entering' | 'active' | 'exiting';
+    progress: number;
+    zIndex: number;
+}> = ({ imagePath, phase, progress, zIndex }) => {
     let opacity: number;
     let translateY: number;
-    if (isSpeaking && !isEndingPhase) {
-        opacity = interpolate(localFrame, [0, ANIM.fadeInFrames],
-            [ANIM.inactiveOpacity, ANIM.activeOpacity],
-            { extrapolateRight: 'clamp', extrapolateLeft: 'clamp' });
-        translateY = interpolate(localFrame, [0, ANIM.fadeInFrames],
-            [ANIM.inactiveOffsetY, ANIM.activeOffsetY],
-            { extrapolateRight: 'clamp', extrapolateLeft: 'clamp' });
-    } else if (isSpeaking && isEndingPhase) {
-        const fadeProgress = (currentEntry!.startFrame + currentEntry!.durationFrames) - frame;
-        opacity = interpolate(fadeProgress, [0, ANIM.fadeOutFrames],
-            [ANIM.inactiveOpacity, ANIM.activeOpacity],
-            { extrapolateRight: 'clamp', extrapolateLeft: 'clamp' });
-        translateY = interpolate(fadeProgress, [0, ANIM.fadeOutFrames],
-            [ANIM.inactiveOffsetY, ANIM.activeOffsetY],
-            { extrapolateRight: 'clamp', extrapolateLeft: 'clamp' });
-    } else {
-        opacity = ANIM.inactiveOpacity;
-        translateY = ANIM.inactiveOffsetY;
+
+    switch (phase) {
+        case 'entering':
+            opacity = interpolate(progress, [0, 1], [0, 1], { extrapolateRight: 'clamp' });
+            translateY = interpolate(progress, [0, 1], [ANIM.slideDistance, 0], { extrapolateRight: 'clamp' });
+            break;
+        case 'active':
+            opacity = 1;
+            translateY = 0;
+            break;
+        case 'exiting':
+            opacity = interpolate(progress, [0, 1], [1, 0], { extrapolateRight: 'clamp' });
+            translateY = interpolate(progress, [0, 1], [0, ANIM.slideDistance], { extrapolateRight: 'clamp' });
+            break;
     }
 
     return (
         <div style={{
             position: 'absolute',
-            bottom: 100,
-            [side]: 0,
-            width: 300,
-            zIndex: 15,
+            bottom: -60,
+            right: 10,
+            width: SIDEBAR_WIDTH - 20,
+            zIndex,
             opacity,
             transform: `translateY(${translateY}px)`,
-            filter: isSpeaking && !isEndingPhase ? 'brightness(1.0)' : 'brightness(0.7)',
-            pointerEvents: 'none',
+            filter: 'drop-shadow(0 4px 16px rgba(0,0,0,0.25))',
+            pointerEvents: 'none' as const,
         }}>
             <Img
                 src={staticFile(imagePath)}
-                style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
+                style={{ width: '100%', height: 'auto', objectFit: 'contain' as const }}
             />
         </div>
     );
@@ -272,81 +325,78 @@ const CharacterSprite: React.FC<{
 // ============================================================
 export const VideoWithSubtitles: React.FC = () => {
     const frame = useCurrentFrame();
+
     const currentEntry = getCurrentSubtitle(frame, SUBTITLE_DATA);
+    const previousEntry = getPreviousSubtitle(frame, currentEntry, SUBTITLE_DATA);
     const headerTitle = currentEntry?.sceneTitle ?? '{動画のテーマタイトル}';
+
     const currentSpeaker = currentEntry?.speaker ?? null;
+    const previousSpeaker = previousEntry?.speaker ?? null;
+
+    // セリフのインデックスから画像を決定
+    const currentIndex = currentEntry ? SUBTITLE_DATA.indexOf(currentEntry) : 0;
+    const previousIndex = previousEntry ? SUBTITLE_DATA.indexOf(previousEntry) : 0;
+    const currentImagePath = currentSpeaker ? getImageForEntry(currentSpeaker, currentIndex) : null;
+    const previousImagePath = previousSpeaker ? getImageForEntry(previousSpeaker, previousIndex) : null;
+
+    // 現在のセリフが始まってからのフレーム数
+    const framesSinceSpeakerChange = currentEntry
+        ? frame - currentEntry.startFrame
+        : ANIM.swapFrames;
 
     return (
-        <MathLayout
-            title={headerTitle}
-            videoMode
-            subtitle={
-                currentEntry ? (
-                    <Subtitle
-                        speaker={currentEntry.speaker}
-                        text={currentEntry.text}
-                        speakerColor={currentEntry.speakerColor}
-                        appearFrame={currentEntry.startFrame}
-                    />
-                ) : undefined
-            }
-        >
-            <OffthreadVideo
-                src={staticFile('videos/{project_id}.mp4')}
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        <AbsoluteFill>
+            {/* キャラクター立ち絵（字幕より背面） */}
+            <SpeakerSwapSprite
+                currentSpeaker={currentSpeaker}
+                currentImagePath={currentImagePath}
+                previousSpeaker={previousSpeaker}
+                previousImagePath={previousImagePath}
+                framesSinceSpeakerChange={framesSinceSpeakerChange}
+                frame={frame}
             />
 
-            {/* キャラクター立ち絵 */}
-            {Object.entries(CHARACTERS).map(([name, config]) => (
-                <CharacterSprite
-                    key={name}
-                    characterName={name}
-                    isSpeaking={currentSpeaker === name}
-                    currentEntry={currentEntry}
-                    frame={frame}
-                    side={config.side}
-                    imagePath={config.image}
+            {/* レイアウト + 動画 + 字幕（キャラより前面） */}
+            <MathLayout
+                title={headerTitle}
+                videoMode
+                subtitle={
+                    currentEntry ? (
+                        <Subtitle
+                            speaker={currentEntry.speaker}
+                            text={currentEntry.text}
+                            speakerColor={currentEntry.speakerColor}
+                            appearFrame={currentEntry.startFrame}
+                        />
+                    ) : undefined
+                }
+            >
+                <OffthreadVideo
+                    src={staticFile('videos/{project_id}.mp4')}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 />
-            ))}
-        </MathLayout>
+            </MathLayout>
+        </AbsoluteFill>
     );
 };
 
 export { TOTAL_FRAMES };
 ```
 
-### キャラクター立ち絵のアニメーション仕様
+### キャラクター立ち絵の仕様
 
-| 状態 | 不透明度 | Y座標 | brightness |
-|------|---------|-------|------------|
-| **喋っている** | 1.0 | 0px（通常位置） | 1.0 |
-| **喋っていない** | 0.45 | +30px（下にずれる） | 0.7 |
-| **喋り始め** | 0.45→1.0 に 8フレームで遷移 | 30→0px にスライドアップ | 0.7→1.0 |
-| **喋り終わり** | 1.0→0.45 に 8フレームで遷移 | 0→30px にスライドダウン | 1.0→0.7 |
+**画像ローテーション:**
+- 各キャラに複数ポーズ画像（`normal2.png`, `normal3.png`, `normal4.png` 等）を用意
+- セリフのインデックスを画像数で割った余りで画像を選択し、セリフごとにポーズが変わる
+- 同じキャラが3回連続で喋ると: ポーズ1 → ポーズ2 → ポーズ3 → ポーズ1 ...
 
-### コンポーネントの構造説明
+**スワップアニメーション:**
 
-```
-┌─────────────────────────────────┬──────────┐
-│  ヘッダー: シーンタイトル（動的）  │          │
-├─────────────────────────────────┤ サイド    │
-│                                 │ バー     │
-│   ┌─────────────────────────┐   │          │
-│   │                         │   │          │
-│   │   final_output.mp4      │   │          │
-│   │   (videoMode: 枠なし)    │   │          │
-│   │                         │   │          │
-│   └─────────────────────────┘   │          │
-│ 🧑‍🤝‍🧑 ずんだもん          めたん 🧑‍🤝‍🧑│
-├─────────────────────────────────┴──────────┤
-│  字幕: ずんだもん ▶ セリフテキスト...        │
-└────────────────────────────────────────────┘
-```
-
-- 立ち絵は画面左下（ずんだもん）と右下（めたん）に `position: absolute` で配置
-- `bottom: 100` でフッター（字幕バー）の真上に配置
-- 喋っているキャラは明るく上に、喋っていないキャラは暗く下に
-- **字幕**: `Subtitle` コンポーネントが `startFrame` に基づいてフェードインアニメーション付きで表示
+| 状態 | 動作 |
+|------|------|
+| **話者交代** | 前のキャラがスライドアウト（下へフェードアウト）、新キャラがスライドイン（下からフェードイン） |
+| **同じキャラ連続** | アニメーションなし（画像だけ切り替わる） |
+| **無音区間** | 最後に喋ったキャラがそのまま表示 |
 
 ### 字幕シンクロの原理
 
@@ -418,6 +468,15 @@ npx remotion render {project_id}-video-subtitles --output output/{project_id}.mp
 ```
 Remotion/
 ├── public/
+│   ├── characters/
+│   │   ├── zundamon/
+│   │   │   ├── normal2.png
+│   │   │   ├── normal3.png
+│   │   │   └── normal4.png
+│   │   └── metan/
+│   │       ├── normal2.png
+│   │       ├── normal3.png
+│   │       └── normal4.png
 │   └── videos/
 │       └── {project_id}.mp4          ← STEP 1 でコピー
 ├── scripts/
@@ -473,3 +532,4 @@ Remotion/
 | 動画の端が切れる | `objectFit: 'cover'` の仕様 | `'contain'` に変更すると全体が見えるが余白が出る |
 | TOTAL_FRAMES の import 衝突 | 複数プロジェクトから同名エクスポート | `as` でエイリアスを付ける（例: `TOTAL_FRAMES as VIDEO_SUB_TOTAL_FRAMES`） |
 | ヘッダーのタイトルがundefined | セリフの間（無音区間）で `currentEntry` が null | デフォルト値 `?? 'タイトル'` を設定しているので通常は問題ない |
+| キャラ画像が表示されない | `public/characters/` に画像がない | `zundamon/normal2.png` 等のパスが正しいか確認 |
