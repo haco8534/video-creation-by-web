@@ -119,22 +119,63 @@ export const SUBTITLE_DATA: SubtitleEntry[] = [...];
 
 `src/projects/{project_id}/VideoWithSubtitles.tsx` を以下のテンプレート通りに作成する。
 
-**変更すべき箇所は2つだけ:**
+**変更すべき箇所は3つだけ:**
 1. `staticFile('videos/{project_id}.mp4')` — プロジェクトIDに合わせる
 2. `headerTitle` のデフォルト値 — 動画のテーマに合わせた日本語タイトル
+3. `CHARACTERS` の `image` パス — キャラクター画像のパスが合っているか確認
+
+### 前提: キャラクター画像の配置
+
+以下にキャラクターの固定立ち絵（透過PNG、1枚ずつ）を配置する：
+
+```
+public/characters/
+├── zundamon/
+│   └── default.png    ← ずんだもん立ち絵
+└── metan/
+    └── default.png    ← めたん立ち絵
+```
+
+**注意**: 立ち絵は1キャラ1枚の固定画像。表情切り替えは行わず、Remotion側のアニメーション（明度・Y座標）だけで「喋っている/いない」を表現する。
 
 ### テンプレート（そのままコピーして使う）
 
 ```tsx
 import React from 'react';
 import {
+    Img,
     OffthreadVideo,
     useCurrentFrame,
     staticFile,
+    interpolate,
 } from 'remotion';
 import { MathLayout } from '../../components/layouts/MathLayout';
 import { Subtitle } from '../../components/ui/Subtitle';
 import { SUBTITLE_DATA, TOTAL_FRAMES, SubtitleEntry } from './subtitleData';
+
+// ============================================================
+// キャラクター設定
+// ============================================================
+const CHARACTERS: Record<string, { image: string; side: 'left' | 'right' }> = {
+    'ずんだもん': {
+        image: 'characters/zundamon/default.png',
+        side: 'left',
+    },
+    'めたん': {
+        image: 'characters/metan/default.png',
+        side: 'right',
+    },
+};
+
+// アニメーション設定
+const ANIM = {
+    fadeInFrames: 8,        // 喋り始めのフェードインフレーム数
+    fadeOutFrames: 8,       // 喋り終わりのフェードアウトフレーム数
+    inactiveOpacity: 0.45,  // 喋っていないときの不透明度
+    activeOpacity: 1.0,     // 喋っているときの不透明度
+    inactiveOffsetY: 30,    // 喋っていないときの下方向オフセット(px)
+    activeOffsetY: 0,       // 喋っているときのオフセット
+};
 
 // ============================================================
 // 現在のフレームに対応する字幕エントリを取得
@@ -151,29 +192,89 @@ function getCurrentSubtitle(
             break;
         }
     }
-
-    // セリフ終了後（duration + 0.3s余裕）まで表示
     if (result) {
         const endFrame = result.startFrame + result.durationFrames + 9;
-        if (frame > endFrame) {
-            return null;
-        }
+        if (frame > endFrame) return null;
     }
-
     return result;
 }
+
+// ============================================================
+// キャラクター立ち絵コンポーネント
+// ============================================================
+// 喋っているキャラ: 明るく、通常位置に表示
+// 喋っていないキャラ: 暗く、少し下に下げて表示
+// 切り替え時: interpolateでスムーズにアニメーション
+const CharacterSprite: React.FC<{
+    characterName: string;
+    isSpeaking: boolean;
+    currentEntry: SubtitleEntry | null;
+    frame: number;
+    side: 'left' | 'right';
+    imagePath: string;
+}> = ({ characterName, isSpeaking, currentEntry, frame, side, imagePath }) => {
+    let localFrame = 0;
+    if (currentEntry && currentEntry.speaker === characterName) {
+        localFrame = frame - currentEntry.startFrame;
+    }
+
+    let isEndingPhase = false;
+    if (currentEntry && currentEntry.speaker === characterName) {
+        const endFrame = currentEntry.startFrame + currentEntry.durationFrames;
+        if (endFrame - frame < ANIM.fadeOutFrames) isEndingPhase = true;
+    }
+
+    // 不透明度とY座標をinterpolateで計算
+    let opacity: number;
+    let translateY: number;
+    if (isSpeaking && !isEndingPhase) {
+        opacity = interpolate(localFrame, [0, ANIM.fadeInFrames],
+            [ANIM.inactiveOpacity, ANIM.activeOpacity],
+            { extrapolateRight: 'clamp', extrapolateLeft: 'clamp' });
+        translateY = interpolate(localFrame, [0, ANIM.fadeInFrames],
+            [ANIM.inactiveOffsetY, ANIM.activeOffsetY],
+            { extrapolateRight: 'clamp', extrapolateLeft: 'clamp' });
+    } else if (isSpeaking && isEndingPhase) {
+        const fadeProgress = (currentEntry!.startFrame + currentEntry!.durationFrames) - frame;
+        opacity = interpolate(fadeProgress, [0, ANIM.fadeOutFrames],
+            [ANIM.inactiveOpacity, ANIM.activeOpacity],
+            { extrapolateRight: 'clamp', extrapolateLeft: 'clamp' });
+        translateY = interpolate(fadeProgress, [0, ANIM.fadeOutFrames],
+            [ANIM.inactiveOffsetY, ANIM.activeOffsetY],
+            { extrapolateRight: 'clamp', extrapolateLeft: 'clamp' });
+    } else {
+        opacity = ANIM.inactiveOpacity;
+        translateY = ANIM.inactiveOffsetY;
+    }
+
+    return (
+        <div style={{
+            position: 'absolute',
+            bottom: 100,
+            [side]: 0,
+            width: 300,
+            zIndex: 15,
+            opacity,
+            transform: `translateY(${translateY}px)`,
+            filter: isSpeaking && !isEndingPhase ? 'brightness(1.0)' : 'brightness(0.7)',
+            pointerEvents: 'none',
+        }}>
+            <Img
+                src={staticFile(imagePath)}
+                style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
+            />
+        </div>
+    );
+};
 
 // ============================================================
 // メインコンポーネント
 // ============================================================
 export const VideoWithSubtitles: React.FC = () => {
     const frame = useCurrentFrame();
-
     const currentEntry = getCurrentSubtitle(frame, SUBTITLE_DATA);
-
-    // 現在のシーンタイトルをヘッダーに表示
-    // ★ デフォルト値を動画テーマに合わせて変更する ★
     const headerTitle = currentEntry?.sceneTitle ?? '{動画のテーマタイトル}';
+    const currentSpeaker = currentEntry?.speaker ?? null;
 
     return (
         <MathLayout
@@ -190,21 +291,38 @@ export const VideoWithSubtitles: React.FC = () => {
                 ) : undefined
             }
         >
-            {/* メインコンテンツ領域に動画をフル表示 */}
             <OffthreadVideo
                 src={staticFile('videos/{project_id}.mp4')}
-                style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                }}
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />
+
+            {/* キャラクター立ち絵 */}
+            {Object.entries(CHARACTERS).map(([name, config]) => (
+                <CharacterSprite
+                    key={name}
+                    characterName={name}
+                    isSpeaking={currentSpeaker === name}
+                    currentEntry={currentEntry}
+                    frame={frame}
+                    side={config.side}
+                    imagePath={config.image}
+                />
+            ))}
         </MathLayout>
     );
 };
 
 export { TOTAL_FRAMES };
 ```
+
+### キャラクター立ち絵のアニメーション仕様
+
+| 状態 | 不透明度 | Y座標 | brightness |
+|------|---------|-------|------------|
+| **喋っている** | 1.0 | 0px（通常位置） | 1.0 |
+| **喋っていない** | 0.45 | +30px（下にずれる） | 0.7 |
+| **喋り始め** | 0.45→1.0 に 8フレームで遷移 | 30→0px にスライドアップ | 0.7→1.0 |
+| **喋り終わり** | 1.0→0.45 に 8フレームで遷移 | 0→30px にスライドダウン | 1.0→0.7 |
 
 ### コンポーネントの構造説明
 
@@ -219,15 +337,15 @@ export { TOTAL_FRAMES };
 │   │   (videoMode: 枠なし)    │   │          │
 │   │                         │   │          │
 │   └─────────────────────────┘   │          │
-│                                 │          │
+│ 🧑‍🤝‍🧑 ずんだもん          めたん 🧑‍🤝‍🧑│
 ├─────────────────────────────────┴──────────┤
 │  字幕: ずんだもん ▶ セリフテキスト...        │
 └────────────────────────────────────────────┘
 ```
 
-- **MathLayout の `videoMode` prop**: カードの背景・ボーダー・シャドウ・パディングを全て消し、動画がコンテンツ領域に自然に溶け込む
-- **`objectFit: 'cover'`**: 動画がコンテンツ領域全体を覆うように表示（端が多少切れることがある）
-- **ヘッダー**: `currentEntry?.sceneTitle` で現在のシーンタイトルが動的に切り替わる
+- 立ち絵は画面左下（ずんだもん）と右下（めたん）に `position: absolute` で配置
+- `bottom: 100` でフッター（字幕バー）の真上に配置
+- 喋っているキャラは明るく上に、喋っていないキャラは暗く下に
 - **字幕**: `Subtitle` コンポーネントが `startFrame` に基づいてフェードインアニメーション付きで表示
 
 ### 字幕シンクロの原理
