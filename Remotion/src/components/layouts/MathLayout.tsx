@@ -9,8 +9,40 @@ const SidebarPattern: React.FC = () => {
             <circle cx="150" cy="200" r="120" fill="#A78BFA" opacity="0.4" filter="blur(30px)" />
             <circle cx="50" cy="500" r="150" fill="#60A5FA" opacity="0.3" filter="blur(40px)" />
             <circle cx="250" cy="800" r="140" fill="#F472B6" opacity="0.3" filter="blur(35px)" />
+            {/* 装飾ライン：縦のアクセント */}
+            <line x1="40" y1="120" x2="40" y2="960" stroke="rgba(255,255,255,0.3)" strokeWidth="1" />
+            <line x1="260" y1="80" x2="260" y2="1000" stroke="rgba(255,255,255,0.15)" strokeWidth="1" strokeDasharray="8 16" />
+            {/* 小さな菱形装飾 */}
+            <rect x="32" y="160" width="16" height="16" rx="3" fill="none" stroke="rgba(167,139,250,0.4)" strokeWidth="1.5" transform="rotate(45 40 168)" />
+            <rect x="32" y="500" width="12" height="12" rx="2" fill="none" stroke="rgba(96,165,250,0.35)" strokeWidth="1.5" transform="rotate(45 38 506)" />
+            <rect x="32" y="840" width="14" height="14" rx="2" fill="none" stroke="rgba(244,114,182,0.35)" strokeWidth="1.5" transform="rotate(45 39 847)" />
         </svg>
     );
+};
+
+// コーナーアクセント装飾
+const CornerAccent: React.FC<{ position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' }> = ({ position }) => {
+    const size = 32;
+    const color = 'rgba(167, 139, 250, 0.25)';
+    const style: React.CSSProperties = {
+        position: 'absolute',
+        width: size,
+        height: size,
+        pointerEvents: 'none',
+        zIndex: 5,
+    };
+    const borderStyle = `2px solid ${color}`;
+
+    switch (position) {
+        case 'top-left':
+            return <div style={{ ...style, top: -1, left: -1, borderTop: borderStyle, borderLeft: borderStyle, borderTopLeftRadius: 20 }} />;
+        case 'top-right':
+            return <div style={{ ...style, top: -1, right: -1, borderTop: borderStyle, borderRight: borderStyle, borderTopRightRadius: 20 }} />;
+        case 'bottom-left':
+            return <div style={{ ...style, bottom: -1, left: -1, borderBottom: borderStyle, borderLeft: borderStyle, borderBottomLeftRadius: 20 }} />;
+        case 'bottom-right':
+            return <div style={{ ...style, bottom: -1, right: -1, borderBottom: borderStyle, borderRight: borderStyle, borderBottomRightRadius: 20 }} />;
+    }
 };
 
 // Glass Design Configuration
@@ -41,6 +73,13 @@ export const MathLayout: React.FC<{
 
             {/* Base gradient for glass */}
             <div style={{ position: 'absolute', width: '100%', height: '100%', background: 'linear-gradient(to right bottom, #E0F2FE, #F3E8FF, #FCE7F3)', opacity: 0.6, zIndex: 0 }} />
+
+            {/* 極薄ドットグリッドパターン（情報量追加） */}
+            <div style={{
+                position: 'absolute', width: '100%', height: '100%', zIndex: 0,
+                backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.04) 1px, transparent 1px)',
+                backgroundSize: '24px 24px',
+            }} />
 
             {/* Sidebar Region */}
             <div
@@ -84,6 +123,16 @@ export const MathLayout: React.FC<{
                 <h1 style={{ fontWeight: 800, fontSize: 42, color: config.header.color, margin: 0 }}>
                     {title}
                 </h1>
+                {/* ヘッダー下部アクセントライン */}
+                <div style={{
+                    position: 'absolute',
+                    bottom: 0,
+                    left: 20,
+                    right: 20,
+                    height: 2,
+                    background: 'linear-gradient(90deg, transparent, rgba(167,139,250,0.4) 20%, rgba(96,165,250,0.4) 50%, rgba(244,114,182,0.4) 80%, transparent)',
+                    borderRadius: 1,
+                }} />
             </div>
 
             {/* Main Content Area Region */}
@@ -126,6 +175,15 @@ export const MathLayout: React.FC<{
                     }}
                 >
                     {children}
+                    {/* コーナーアクセント（videoMode以外） */}
+                    {!videoMode && (
+                        <>
+                            <CornerAccent position="top-left" />
+                            <CornerAccent position="top-right" />
+                            <CornerAccent position="bottom-left" />
+                            <CornerAccent position="bottom-right" />
+                        </>
+                    )}
                 </div>
             </div>
 
@@ -151,6 +209,15 @@ export const MathLayout: React.FC<{
                         gap: 24,
                     }}
                 >
+                    {/* フッター上部グラデーションセパレーター */}
+                    <div style={{
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        right: 0,
+                        height: 1,
+                        background: 'linear-gradient(90deg, transparent, rgba(167,139,250,0.3) 15%, rgba(96,165,250,0.35) 50%, rgba(244,114,182,0.3) 85%, transparent)',
+                    }} />
                     {subtitle}
                 </div>
             )}

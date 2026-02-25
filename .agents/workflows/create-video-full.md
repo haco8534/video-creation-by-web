@@ -204,17 +204,17 @@ node scripts/generate-subtitle-data.js "{MC_DIR}" {project_id}
 
 **テンプレートは `.agents/workflows/create-video.md` の STEP 3 に記載。**
 
-変更箇所:
+★変更箇所:
 1. `staticFile('videos/{project_id}.mp4')` — project_id を実際の値に
 2. `headerTitle` のデフォルト値 — テーマの日本語タイトルに
-3. スピーカースワップ方式の立ち絵コンポーネントを使用（現在の10000h_effortの実装を参考に）
+3. サイドバーの `★CATEGORY★` — テーマのカテゴリーラベル（英語大文字）
+4. サイドバーの `★テーマタイトル★` — 動画の日本語タイトル
 
-**⚠️ 重要**: 立ち絵はスピーカースワップ方式を使うこと。
-- 喋っているキャラだけサイドバーに大きく表示
-- 話者交代時にスライドで入れ替え
-- 立ち絵はMathLayoutより背面に配置（`AbsoluteFill` で先にレンダリング）
-
-現在の参考実装: `src/projects/10000h_effort/VideoWithSubtitles.tsx`
+**テンプレートに含まれる機能:**
+- スピーカースワップ方式の立ち絵（複数バリエーションローテーション）
+- サイドバーオーバーレイ（テーマブランディング、進捗バー、チャプターリスト、話者インジケーター）
+- チャプターリストのスライドアニメーション
+- BGMループ再生 + 終了時フェードアウト
 
 #### C3. Root.tsx 登録 + コンパイル確認
 
@@ -242,7 +242,8 @@ npx tsc --noEmit
 ### Phase C 完了条件
 
 - [ ] `src/projects/{project_id}/subtitleData.ts` が生成された
-- [ ] `src/projects/{project_id}/VideoWithSubtitles.tsx` が作成された
+- [ ] `src/projects/{project_id}/VideoWithSubtitles.tsx` が作成された（BGM・サイドバーUI含む）
+- [ ] `public/bgm/Mineral.mp3` が存在する
 - [ ] `src/Root.tsx` に Composition が登録された
 - [ ] `npx tsc --noEmit` が正常終了した
 
