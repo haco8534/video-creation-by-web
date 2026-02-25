@@ -3,15 +3,15 @@
 // Generated at: 2026-02-25T08:21:41.163Z
 
 export interface SubtitleEntry {
-    startTimeSec: number;
-    startFrame: number;
-    durationSec: number;
-    durationFrames: number;
-    speaker: string;
-    text: string;
-    speakerColor: string;
-    sceneId: number;
-    sceneTitle: string;
+  startTimeSec: number;
+  startFrame: number;
+  durationSec: number;
+  durationFrames: number;
+  speaker: string;
+  text: string;
+  speakerColor: string;
+  sceneId: number;
+  sceneTitle: string;
 }
 
 export const FPS = 30;
@@ -28,7 +28,7 @@ export const SUBTITLE_DATA: SubtitleEntry[] = [
     "text": "今日のテーマはマシュマロ実験ですわね。",
     "speakerColor": "#d6336c",
     "sceneId": 0,
-    "sceneTitle": "タイトルカード"
+    "sceneTitle": "マシュマロ実験の真実"
   },
   {
     "startTimeSec": 2.5506666666666664,
@@ -39,7 +39,7 @@ export const SUBTITLE_DATA: SubtitleEntry[] = [
     "text": "4歳の子にマシュマロを我慢させるっていう、あの有名な実験ですわよね？",
     "speakerColor": "#d6336c",
     "sceneId": 0,
-    "sceneTitle": "タイトルカード"
+    "sceneTitle": "マシュマロ実験の真実"
   },
   {
     "startTimeSec": 7.362666666666666,
@@ -50,7 +50,7 @@ export const SUBTITLE_DATA: SubtitleEntry[] = [
     "text": "そうなのだ。世界で最も有名な心理学実験の一つなのだ。",
     "speakerColor": "#22c55e",
     "sceneId": 0,
-    "sceneTitle": "タイトルカード"
+    "sceneTitle": "マシュマロ実験の真実"
   },
   {
     "startTimeSec": 12.185333333333332,
@@ -61,7 +61,7 @@ export const SUBTITLE_DATA: SubtitleEntry[] = [
     "text": "自己啓発本やビジネス書でも引用されまくっている、超有名な研究なのだ。",
     "speakerColor": "#22c55e",
     "sceneId": 0,
-    "sceneTitle": "タイトルカード"
+    "sceneTitle": "マシュマロ実験の真実"
   },
   {
     "startTimeSec": 18.3,
