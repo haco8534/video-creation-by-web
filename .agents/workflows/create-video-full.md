@@ -1,18 +1,19 @@
 ---
-description: テーマ入力→台本→メインコンテンツ動画→Remotion仕上げ→mp4出力の全自動動画生成ワークフロー
+description: テーマ入力→台本→メインコンテンツ動画→Remotionプロジェクト作成までの全自動動画生成ワークフロー
 ---
 
 # 🎬 動画自動生成 マスターワークフロー
 
 ## 概要
 
-ユーザーからの**テーマ入力のみ**で、YouTube解説動画（mp4）を自動生成する統合ワークフロー。
+ユーザーからの**テーマ入力のみ**で、YouTube解説動画のRemotionプロジェクトを自動生成する統合ワークフロー。
 
 ### インプット
 - **テーマ名**（日本語）: 例「1万時間の法則」「マシュマロ実験」
 
 ### アウトプット
-- **完成動画** (`Remotion/output/{project_id}.mp4`): 字幕・立ち絵・レイアウト付きの解説動画
+- **Remotionプロジェクト**: 字幕・立ち絵・レイアウト付きのコンポジションが登録された状態。Remotion Studioでプレビュー可能。
+- レンダリング（mp4出力）はユーザーが手動で行う
 
 ### パイプライン全体図
 
@@ -46,13 +47,13 @@ description: テーマ入力→台本→メインコンテンツ動画→Remotio
  ║                                   ║
  ║  C1. 動画コピー + 字幕データ生成    ║
  ║  C2. VideoWithSubtitles.tsx 作成   ║
- ║  C3. Root.tsx 登録 + レンダリング   ║
+ ║  C3. Root.tsx 登録 + コンパイル確認 ║
  ║                                   ║
- ║  → output/{project_id}.mp4 出力   ║
+ ║  → Remotionプロジェクト完成        ║
  ╚═══════════════════════════════════╝
        │
        ▼
-  ✅ 完成動画
+  ✅ Remotion Studioでプレビュー可能
 ```
 
 ---
@@ -238,17 +239,12 @@ import { VideoWithSubtitles, TOTAL_FRAMES } from "./projects/{project_id}/VideoW
 npx tsc --noEmit
 ```
 
-#### C4. Remotionレンダリング
-
-// turbo
-```powershell
-npx remotion render {project_id}-video-subtitles --output output/{project_id}.mp4
-```
-
 ### Phase C 完了条件
 
-- [ ] `output/{project_id}.mp4` が生成された
-- [ ] 動画の長さが期待通り
+- [ ] `src/projects/{project_id}/subtitleData.ts` が生成された
+- [ ] `src/projects/{project_id}/VideoWithSubtitles.tsx` が作成された
+- [ ] `src/Root.tsx` に Composition が登録された
+- [ ] `npx tsc --noEmit` が正常終了した
 
 ---
 
@@ -260,13 +256,16 @@ npx remotion render {project_id}-video-subtitles --output output/{project_id}.mp
    - `台本作成/{テーマ名}/script.md` — 台本
    - `台本作成/{テーマ名}/research.md` — リサーチ結果
    - `main content/presentation/{project_id}/final_output.mp4` — メインコンテンツ
-   - `Remotion/output/{project_id}.mp4` — ★完成動画
+   - `Remotion/src/projects/{project_id}/` — ★Remotionプロジェクト
 
-2. **動画の仕様**
-   - 解像度: 1920x1080
-   - フレームレート: 30fps
-   - 推定尺: 約20分
-   - 内容: MathLayoutフレーム + メインコンテンツ動画 + 字幕 + 立ち絵
+2. **Composition ID**: `{project_id}-video-subtitles`
+
+3. **プレビュー方法**: `npm run dev` → Remotion Studio → Composition選択
+
+4. **レンダリング方法**（ユーザーが手動で実行）:
+   ```powershell
+   npx remotion render {project_id}-video-subtitles --output output/{project_id}.mp4
+   ```
 
 ---
 
@@ -291,4 +290,4 @@ npx remotion render {project_id}-video-subtitles --output output/{project_id}.mp
 | 字幕がずれる | C | `generate-subtitle-data.js` を再実行 |
 | 立ち絵が表示されない | C | `public/characters/` に画像があるか確認 |
 | TypeScriptエラー | C | `subtitleData.ts` の型と `VideoWithSubtitles.tsx` のimportが一致するか確認 |
-| レンダリングが遅い | C | `--concurrency=4` オプションで並列レンダリング |
+| Remotion Studioでプレビューできない | C | `npm run dev` が実行中か確認。ポート3000が使われている場合は別ポートを指定 |

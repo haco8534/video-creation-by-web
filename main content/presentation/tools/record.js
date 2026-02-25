@@ -4,10 +4,11 @@
  * 複数ブラウザで並列録画し、ffmpegで結合する。
  * シーン遷移のフェードインも含めて録画する。
  * 
- * 使い方: node tools/record.js <project_dir> [workers] [viewport]
+ * 使い方: node tools/record.js <project_dir> [workers] [viewport] [zoom]
  *   project_dir: テーマ名 (例: llm_text_generation)
  *   workers:     並列数 (デフォルト: 4)
  *   viewport:    WxH (デフォルト: 1440x810, 16:9)
+ *   zoom:        CSS zoom倍率 (デフォルト: 1.3, コンテンツ拡大用)
  */
 const puppeteer = require('puppeteer');
 const fs = require('fs');
@@ -25,6 +26,7 @@ const PROJECT_DIR = path.resolve(PRES_ROOT, args[0]);
 const NUM_WORKERS = parseInt(args[1]) || 4;
 const VIEWPORT = args[2] || '1440x810';
 const [WIDTH, HEIGHT] = VIEWPORT.split('x').map(Number);
+const CSS_ZOOM = parseFloat(args[3]) || 1.5;
 
 const DURATIONS_FILE = path.join(PROJECT_DIR, 'scene_durations.json');
 const HTML_FILE = path.join(PROJECT_DIR, 'index.html');
@@ -48,6 +50,10 @@ async function recordChunk(chunkId, scenes, fileUrl, outputPath) {
     await page.setViewport({ width: WIDTH, height: HEIGHT });
     await page.goto(fileUrl, { waitUntil: 'networkidle0', timeout: 30000 });
     await page.evaluate(() => document.fonts.ready);
+    // Apply CSS zoom to enlarge content and reduce margins
+    if (CSS_ZOOM !== 1.0) {
+        await page.evaluate((z) => { document.body.style.zoom = String(z); }, CSS_ZOOM);
+    }
     // Force canvas resize/init in headless mode
     await page.evaluate(() => window.dispatchEvent(new Event('resize')));
     await sleep(2000);
@@ -146,7 +152,7 @@ async function main() {
     const fileUrl = 'file:///' + HTML_FILE.replace(/\\/g, '/');
 
     console.log(`Project: ${PROJECT_DIR}`);
-    console.log(`Viewport: ${WIDTH}x${HEIGHT}`);
+    console.log(`Viewport: ${WIDTH}x${HEIGHT} (zoom: ${CSS_ZOOM})`);
     console.log(`Total duration: ${totalDuration.toFixed(1)}s (${(totalDuration / 60).toFixed(1)}min)`);
     console.log(`Workers: ${NUM_WORKERS}\n`);
 

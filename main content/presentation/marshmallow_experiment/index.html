@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マシュマロ実験の真実</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== Block 1: 導入 ===== -->
+
+    <!-- Scene 0: タイトルカード -->
+    <div class="scene" id="scene-0">
+        <canvas id="canvas-0" class="bg-canvas"></canvas>
+        <div class="content title-scene">
+            <div class="title-label">YouTube解説動画</div>
+            <h1 class="title-huge">マシュマロ実験の<br><span class="accent-coral">真実</span></h1>
+            <div class="title-sub">「我慢できる子が成功する」は本当か？</div>
+        </div>
+    </div>
+
+    <!-- Scene 1: 数値インパクト SAT 210点 -->
+    <div class="scene" id="scene-1">
+        <canvas id="canvas-1" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="impact-number accent-coral" id="sat-number">210</div>
+            <div class="impact-label">SAT スコアの差（点）</div>
+            <div class="impact-sub">我慢できた子 vs できなかった子</div>
+        </div>
+    </div>
+
+    <!-- Scene 2: テキスト強調「実は、ほぼ間違いだった」 -->
+    <div class="scene" id="scene-2">
+        <canvas id="canvas-2" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text">実は、<span class="accent-coral">ほぼ間違い</span>だった</div>
+            <div class="emphasis-sub">世間で広まっている解釈は根本的に誤っている</div>
+        </div>
+    </div>
+
+    <!-- ===== Block 2: 前提知識 ===== -->
+
+    <!-- Scene 3: 段階的リスト「実験のルール」 -->
+    <div class="scene" id="scene-3">
+        <div class="content card-layout">
+            <h2 class="scene-title">マシュマロ実験のルール</h2>
+            <div class="info-cards">
+                <div class="info-card stagger-item">
+                    <div class="card-icon">&#128205;</div>
+                    <div class="card-label">場所</div>
+                    <div class="card-text">スタンフォード大学<br>ビング・ナーサリー</div>
+                </div>
+                <div class="info-card stagger-item">
+                    <div class="card-icon">&#128100;</div>
+                    <div class="card-label">対象</div>
+                    <div class="card-text">3歳半〜5歳半<br>数百人の子ども</div>
+                </div>
+                <div class="info-card stagger-item">
+                    <div class="card-icon">&#128337;</div>
+                    <div class="card-label">時代</div>
+                    <div class="card-text">1960年代後半<br>〜1970年代</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 4: 数値インパクト「1個 vs 2個」 -->
+    <div class="scene" id="scene-4">
+        <div class="content center-layout">
+            <h2 class="scene-title">選択肢</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-number">1</div>
+                    <div class="vs-label">個をすぐ食べる</div>
+                </div>
+                <div class="vs-divider stagger-item">VS</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-number">2</div>
+                    <div class="vs-label">個を15分後に</div>
+                </div>
+            </div>
+            <div class="vs-result stagger-item">約 1/3 の子が15分待てた</div>
+        </div>
+    </div>
+
+    <!-- Scene 5: タイトルカード「20年後の追跡調査」 -->
+    <div class="scene" id="scene-5">
+        <canvas id="canvas-5" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="timeline-badge stagger-item">20年後</div>
+            <h2 class="title-medium">追跡調査</h2>
+            <div class="emphasis-sub">ミシェルは当時の子どもたちを追いかけた</div>
+        </div>
+    </div>
+
+    <!-- Scene 6: 数値インパクト SAT 210点差 -->
+    <div class="scene" id="scene-6">
+        <div class="content center-layout">
+            <h2 class="scene-title">大学入試テスト SAT</h2>
+            <div class="comparison-bar">
+                <div class="bar-item bar-high stagger-item">
+                    <div class="bar-fill" style="width: 75%"></div>
+                    <div class="bar-label-right">我慢できた子</div>
+                </div>
+                <div class="bar-item bar-low stagger-item">
+                    <div class="bar-fill" style="width: 55%"></div>
+                    <div class="bar-label-right">できなかった子</div>
+                </div>
+            </div>
+            <div class="impact-callout stagger-item">
+                <span class="accent-coral">210点</span>の差
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 7: 段階的リスト「追跡調査その他」 -->
+    <div class="scene" id="scene-7">
+        <div class="content card-layout">
+            <h2 class="scene-title">追跡調査の結果</h2>
+            <div class="result-list">
+                <div class="result-item stagger-item">
+                    <div class="result-check accent-teal">&#10003;</div>
+                    <div class="result-text">学業成績が良好</div>
+                </div>
+                <div class="result-item stagger-item">
+                    <div class="result-check accent-teal">&#10003;</div>
+                    <div class="result-text">ストレスに強い</div>
+                </div>
+                <div class="result-item stagger-item">
+                    <div class="result-check accent-teal">&#10003;</div>
+                    <div class="result-text">人間関係が良好</div>
+                </div>
+                <div class="result-item stagger-item">
+                    <div class="result-check accent-teal">&#10003;</div>
+                    <div class="result-text">肥満率が低い</div>
+                </div>
+                <div class="result-item stagger-item">
+                    <div class="result-check accent-teal">&#10003;</div>
+                    <div class="result-text">薬物依存の率が低い</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Block 3: 子どもたちの戦略 ===== -->
+
+    <!-- Scene 8: タイトルカード -->
+    <div class="scene" id="scene-8">
+        <canvas id="canvas-8" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-teal">Topic 1</div>
+            <h2 class="title-medium">子どもたちの<br><span class="accent-teal">驚くべき戦略</span></h2>
+        </div>
+    </div>
+
+    <!-- Scene 9: 段階的リスト「我慢テクニック」 -->
+    <div class="scene" id="scene-9">
+        <div class="content card-layout">
+            <h2 class="scene-title">子どもたちの我慢テクニック</h2>
+            <div class="technique-grid">
+                <div class="tech-card stagger-item">
+                    <div class="tech-icon">&#127925;</div>
+                    <div class="tech-label">歌を歌う</div>
+                </div>
+                <div class="tech-card stagger-item">
+                    <div class="tech-icon">&#128064;</div>
+                    <div class="tech-label">目を覆う</div>
+                </div>
+                <div class="tech-card stagger-item">
+                    <div class="tech-icon">&#129528;</div>
+                    <div class="tech-label">壁を向く</div>
+                </div>
+                <div class="tech-card stagger-item">
+                    <div class="tech-icon">&#128164;</div>
+                    <div class="tech-label">寝てしまう</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 10: 比較対照「ホット vs クール」 -->
+    <div class="scene" id="scene-10">
+        <div class="content center-layout">
+            <h2 class="scene-title">2つの脳のシステム</h2>
+            <div class="dual-system">
+                <div class="system-card system-hot stagger-item">
+                    <div class="system-title">HOT</div>
+                    <div class="system-subtitle">ホットシステム</div>
+                    <div class="system-desc">感情的・衝動的</div>
+                    <div class="system-brain">扁桃体</div>
+                    <div class="system-example">食べたい！</div>
+                </div>
+                <div class="system-arrow stagger-item">&#8596;</div>
+                <div class="system-card system-cool stagger-item">
+                    <div class="system-title">COOL</div>
+                    <div class="system-subtitle">クールシステム</div>
+                    <div class="system-desc">認知的・理性的</div>
+                    <div class="system-brain">前頭前野</div>
+                    <div class="system-example">待てばもう1個</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 11: 引用カード「冷却戦略」 -->
+    <div class="scene" id="scene-11">
+        <div class="content center-layout">
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">マシュマロを<span class="accent-teal">「白い雲」</span>だと想像すると<br>我慢できる時間が伸びた</div>
+                <div class="quote-author">— ミシェルの冷却戦略</div>
+            </div>
+            <div class="cooling-label stagger-item">HOTな衝動をCOOLに冷ます</div>
+        </div>
+    </div>
+
+    <!-- Scene 12: 数値インパクト fMRI -->
+    <div class="scene" id="scene-12">
+        <div class="content center-layout">
+            <h2 class="scene-title">2011年 fMRI追跡調査</h2>
+            <div class="brain-comparison">
+                <div class="brain-card stagger-item">
+                    <div class="brain-label">我慢できた人</div>
+                    <div class="brain-region accent-teal">前頭前野が活発</div>
+                    <div class="brain-type">理性・計画</div>
+                </div>
+                <div class="brain-card stagger-item">
+                    <div class="brain-label">我慢できなかった人</div>
+                    <div class="brain-region accent-coral">扁桃体が活発</div>
+                    <div class="brain-type">感情・衝動</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 13: テキスト強調「覆される」 -->
+    <div class="scene" id="scene-13">
+        <canvas id="canvas-13" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text">しかし、この<span class="accent-amber">"完璧な実験"</span>は<br>根本的に覆されることになる</div>
+        </div>
+    </div>
+
+    <!-- ===== Block 4: 実験が覆された ===== -->
+
+    <!-- Scene 14: タイトルカード「実験が覆された日」 -->
+    <div class="scene" id="scene-14">
+        <canvas id="canvas-14" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-amber">Topic 2</div>
+            <h2 class="title-medium">マシュマロ実験が<br><span class="accent-amber">"ほぼ間違い"</span>だった理由</h2>
+        </div>
+    </div>
+
+    <!-- Scene 15: 比較対照「元 vs Watts」 -->
+    <div class="scene" id="scene-15">
+        <div class="content center-layout">
+            <h2 class="scene-title">元の研究 vs 再現研究</h2>
+            <div class="compare-table">
+                <div class="compare-row compare-header stagger-item">
+                    <div class="compare-cell"></div>
+                    <div class="compare-cell">元の研究</div>
+                    <div class="compare-cell accent-amber">Watts 2018</div>
+                </div>
+                <div class="compare-row stagger-item">
+                    <div class="compare-cell compare-label">サンプル</div>
+                    <div class="compare-cell">スタンフォード保育園</div>
+                    <div class="compare-cell">全米 多様な家庭</div>
+                </div>
+                <div class="compare-row stagger-item">
+                    <div class="compare-cell compare-label">人数</div>
+                    <div class="compare-cell">約90人（追跡）</div>
+                    <div class="compare-cell">900人以上</div>
+                </div>
+                <div class="compare-row stagger-item">
+                    <div class="compare-cell compare-label">多様性</div>
+                    <div class="compare-cell">高所得・高学歴</div>
+                    <div class="compare-cell">人種・経済 多様</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 16: 数値インパクト「効果は半分以下」 -->
+    <div class="scene" id="scene-16">
+        <div class="content center-layout">
+            <h2 class="scene-title">再現研究の結果</h2>
+            <div class="shrink-visual">
+                <div class="shrink-bar original stagger-item">
+                    <span>元の研究の効果</span>
+                </div>
+                <div class="shrink-arrow stagger-item">&#8595;</div>
+                <div class="shrink-bar reduced stagger-item">
+                    <span>半分以下に縮小</span>
+                </div>
+            </div>
+            <div class="impact-callout stagger-item">
+                900人で追試 → 効果は<span class="accent-amber">半分以下</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 17: テキスト強調「ほぼ消失」 -->
+    <div class="scene" id="scene-17">
+        <div class="content center-layout">
+            <div class="vanish-visual">
+                <div class="vanish-step stagger-item">
+                    <div class="vanish-label">家庭環境を統計的に考慮すると…</div>
+                </div>
+                <div class="vanish-result stagger-item">
+                    <div class="emphasis-text">関連性は<span class="accent-amber">ほぼ消失</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 18: 注意喚起「サンプルバイアス」 -->
+    <div class="scene" id="scene-18">
+        <div class="content center-layout">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">&#9888;</div>
+                <div class="alert-title">サンプルバイアス</div>
+                <div class="alert-text">元のサンプルは<br><span class="accent-amber">スタンフォード大学の保育園児</span><br>= 高所得・高学歴家庭のみ
+                </div>
+            </div>
+            <div class="alert-sub stagger-item">追跡できたのは参加者の<span class="accent-amber">4分の1</span>だけ</div>
+        </div>
+    </div>
+
+    <!-- Scene 19: タイトルカード「信頼実験」 -->
+    <div class="scene" id="scene-19">
+        <canvas id="canvas-19" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <h2 class="title-medium">ロチェスター大学の<br><span class="accent-teal">"信頼"</span>実験</h2>
+            <div class="emphasis-sub">Celeste Kidd, 2013</div>
+        </div>
+    </div>
+
+    <!-- Scene 20: 数値インパクト「12分 vs 3分」 -->
+    <div class="scene" id="scene-20">
+        <div class="content center-layout">
+            <h2 class="scene-title">信頼環境 vs 不信頼環境</h2>
+            <div class="trust-bars">
+                <div class="trust-bar trust-high stagger-item">
+                    <div class="trust-fill" style="width: 80%"></div>
+                    <div class="trust-value">12分</div>
+                    <div class="trust-label">信頼できる環境</div>
+                </div>
+                <div class="trust-bar trust-low stagger-item">
+                    <div class="trust-fill" style="width: 20%"></div>
+                    <div class="trust-value">3分</div>
+                    <div class="trust-label">信頼できない環境</div>
+                </div>
+            </div>
+            <div class="impact-callout stagger-item">
+                <span class="accent-teal">4倍</span>の差
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 21: 引用カード「合理的判断」 -->
+    <div class="scene" id="scene-21">
+        <div class="content center-layout">
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">不確実な環境では<br><span class="accent-amber">「今もらう」が合理的判断</span></div>
+                <div class="quote-author">— 意志の弱さではなく、環境への適応</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 22: テキスト強調「環境と信頼」 -->
+    <div class="scene" id="scene-22">
+        <canvas id="canvas-22" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text">意志力ではなく<br><span class="accent-teal">"環境と信頼"</span>が<br>決めていた</div>
+        </div>
+    </div>
+
+    <!-- ===== Block 5: 文化差 ===== -->
+
+    <!-- Scene 23: タイトルカード「文化が変える」 -->
+    <div class="scene" id="scene-23">
+        <canvas id="canvas-23" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-indigo">Topic 3</div>
+            <h2 class="title-medium">文化が変える<br><span class="accent-indigo">マシュマロ実験</span></h2>
+        </div>
+    </div>
+
+    <!-- Scene 24: 比較対照「日本vsアメリカ マシュマロ」 -->
+    <div class="scene" id="scene-24">
+        <div class="content center-layout">
+            <h2 class="scene-title">マシュマロで待てる時間</h2>
+            <div class="country-compare">
+                <div class="country-card stagger-item">
+                    <div class="country-flag">&#127471;&#127477;</div>
+                    <div class="country-name">日本</div>
+                    <div class="country-result accent-teal">長く待てた</div>
+                </div>
+                <div class="country-vs stagger-item">vs</div>
+                <div class="country-card stagger-item">
+                    <div class="country-flag">&#127482;&#127480;</div>
+                    <div class="country-name">アメリカ</div>
+                    <div class="country-result">shorter</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 25: 比較対照「日本vsアメリカ プレゼント逆転」 -->
+    <div class="scene" id="scene-25">
+        <div class="content center-layout">
+            <h2 class="scene-title">プレゼントで待てる時間</h2>
+            <div class="country-compare">
+                <div class="country-card stagger-item">
+                    <div class="country-flag">&#127471;&#127477;</div>
+                    <div class="country-name">日本</div>
+                    <div class="country-result">shorter</div>
+                </div>
+                <div class="country-vs stagger-item">vs</div>
+                <div class="country-card stagger-item">
+                    <div class="country-flag">&#127482;&#127480;</div>
+                    <div class="country-name">アメリカ</div>
+                    <div class="country-result accent-teal">長く待てた</div>
+                </div>
+            </div>
+            <div class="impact-callout stagger-item accent-amber">結果が<span class="accent-coral">逆転</span>！</div>
+        </div>
+    </div>
+
+    <!-- Scene 26: テキスト強調「文化が育む」 -->
+    <div class="scene" id="scene-26">
+        <div class="content center-layout">
+            <div class="emphasis-text">自制心は<span class="accent-indigo">"個人の能力"</span>ではなく<br><span
+                    class="accent-teal">"文化が育むもの"</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 27: 横並びカード「いただきます vs クリスマス」 -->
+    <div class="scene" id="scene-27">
+        <div class="content center-layout">
+            <h2 class="scene-title">文化的習慣の影響</h2>
+            <div class="culture-cards">
+                <div class="culture-card stagger-item">
+                    <div class="culture-flag">&#127471;&#127477;</div>
+                    <div class="culture-habit">「いただきます」文化</div>
+                    <div class="culture-desc">給食で全員揃うまで待つ</div>
+                    <div class="culture-result accent-teal">食べ物の我慢が得意</div>
+                </div>
+                <div class="culture-card stagger-item">
+                    <div class="culture-flag">&#127482;&#127480;</div>
+                    <div class="culture-habit">クリスマス文化</div>
+                    <div class="culture-desc">当日までプレゼントを待つ</div>
+                    <div class="culture-result accent-teal">プレゼントの我慢が得意</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 28: 引用カード「ミシェルの真意」 -->
+    <div class="scene" id="scene-28">
+        <div class="content center-layout">
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">私の研究の目的は<br>自制心を<span class="accent-coral">測る</span>ことではなく<br>自制心を<span
+                        class="accent-teal">鍛える方法</span>を見つけることだ</div>
+                <div class="quote-author">— ウォルター・ミシェル</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 29: 段階的リスト「3つの自制心スキル」 -->
+    <div class="scene" id="scene-29">
+        <div class="content card-layout">
+            <h2 class="scene-title">日常で使える3つの自制心スキル</h2>
+            <div class="skill-list">
+                <div class="skill-item stagger-item">
+                    <div class="skill-number">1</div>
+                    <div class="skill-content">
+                        <div class="skill-name accent-teal">冷却戦略</div>
+                        <div class="skill-desc">注意をそらすか、別のものに見立てる</div>
+                    </div>
+                </div>
+                <div class="skill-item stagger-item">
+                    <div class="skill-number">2</div>
+                    <div class="skill-content">
+                        <div class="skill-name accent-teal">距離を置く</div>
+                        <div class="skill-desc">物理的にも心理的にも誘惑から離れる</div>
+                    </div>
+                </div>
+                <div class="skill-item stagger-item">
+                    <div class="skill-number">3</div>
+                    <div class="skill-content">
+                        <div class="skill-name accent-teal">if-then プラン</div>
+                        <div class="skill-desc">事前にルールを決めて自動化する</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 30: フロー図「if-thenプラン」 -->
+    <div class="scene" id="scene-30">
+        <div class="content center-layout">
+            <h2 class="scene-title">if-then プラン</h2>
+            <div class="ifthen-flow">
+                <div class="ifthen-box ifthen-if stagger-item">
+                    <div class="ifthen-label">IF（もし）</div>
+                    <div class="ifthen-text">ケーキが目に入ったら</div>
+                </div>
+                <div class="ifthen-arrow stagger-item">&#8594;</div>
+                <div class="ifthen-box ifthen-then stagger-item">
+                    <div class="ifthen-label">THEN（そのとき）</div>
+                    <div class="ifthen-text">お茶を飲む</div>
+                </div>
+            </div>
+            <div class="ifthen-note stagger-item">意志力を使わず自動的に行動できる</div>
+        </div>
+    </div>
+
+    <!-- ===== Block 6: まとめ ===== -->
+
+    <!-- Scene 31: タイトルカード「本当に教えてくれること」 -->
+    <div class="scene" id="scene-31">
+        <canvas id="canvas-31" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <h2 class="title-medium">マシュマロ実験が<br><span class="accent-indigo">本当に教えてくれること</span></h2>
+        </div>
+    </div>
+
+    <!-- Scene 32: まとめカード「3つのポイント」 -->
+    <div class="scene" id="scene-32">
+        <div class="content card-layout">
+            <h2 class="scene-title">今日の3つのポイント</h2>
+            <div class="summary-list">
+                <div class="summary-item stagger-item">
+                    <div class="summary-num">1</div>
+                    <div class="summary-text">サンプルが偏っていた<br><small>大規模追試で効果は半分以下に</small></div>
+                </div>
+                <div class="summary-item stagger-item">
+                    <div class="summary-num">2</div>
+                    <div class="summary-text">環境の信頼が決めていた<br><small>信頼環境で待てる時間が4倍に</small></div>
+                </div>
+                <div class="summary-item stagger-item">
+                    <div class="summary-num">3</div>
+                    <div class="summary-text">文化と環境が育てるもの<br><small>生まれつきの才能ではない</small></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 33: テキスト強調「環境と信頼と文化」 -->
+    <div class="scene" id="scene-33">
+        <canvas id="canvas-33" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text">大事なのは<span class="accent-coral">"我慢力"</span>ではなく<br><span
+                    class="accent-teal">環境</span>と<span class="accent-indigo">信頼</span>と<span
+                    class="accent-amber">文化</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 34: 引用カード「自制心は鍛えられる」 -->
+    <div class="scene" id="scene-34">
+        <div class="content center-layout">
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">自制心は測定するものじゃない<br><span class="accent-teal">学び、鍛えられるスキルだ</span></div>
+                <div class="quote-author">— ウォルター・ミシェル（1930-2018）</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 35: テキスト強調「誤解されていた」 -->
+    <div class="scene" id="scene-35">
+        <canvas id="canvas-35" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text">マシュマロ実験は<br><span class="accent-coral">"間違い"</span>じゃなく<br><span
+                    class="accent-teal">"誤解されていた"</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 36: エンディング -->
+    <div class="scene" id="scene-36">
+        <canvas id="canvas-36" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="ending-message stagger-item">
+                <div class="ending-main">信頼できる環境を作ること</div>
+                <div class="ending-and">&</div>
+                <div class="ending-main">自制心の鍛え方を知ること</div>
+            </div>
+            <div class="ending-thanks stagger-item">ご視聴ありがとうございました</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

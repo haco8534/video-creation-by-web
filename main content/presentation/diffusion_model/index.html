@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <title>拡散モデルによる画像生成の仕組み</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Scene 0: Title Card -->
+  <div class="scene scene-0">
+    <canvas id="canvas-title"></canvas>
+    <div class="title-content">
+      <div class="title-label">DIFFUSION MODEL</div>
+      <h1 class="title-main">拡散モデルによる<br>画像生成の仕組み</h1>
+      <div class="title-sub">ノイズから画像を見つけ出すAIの原理</div>
+    </div>
+  </div>
+
+  <!-- Scene 1: Hook - AI doesn't draw -->
+  <div class="scene scene-1">
+    <div class="ambient-bg scene1-bg"></div>
+    <div class="center-card">
+      <div class="hook-small">AIは"描く"のではなく</div>
+      <div class="hook-big">"見つけ出す"</div>
+      <div class="hook-desc">ランダムノイズ → パターン発見 → 画像復元</div>
+    </div>
+  </div>
+
+  <!-- Scene 2: History Flow -->
+  <div class="scene scene-2">
+    <div class="ambient-bg scene2-bg"></div>
+    <h2 class="scene-heading">画像生成AIの歴史</h2>
+    <div class="history-flow">
+      <div class="history-node hist-vae">
+        <div class="hist-year">2013</div>
+        <div class="hist-name">VAE</div>
+        <div class="hist-label">変分オートエンコーダ</div>
+      </div>
+      <div class="history-arrow">→</div>
+      <div class="history-node hist-gan">
+        <div class="hist-year">2014</div>
+        <div class="hist-name">GAN</div>
+        <div class="hist-label">敵対的生成ネットワーク</div>
+      </div>
+      <div class="history-arrow">→</div>
+      <div class="history-node hist-diff">
+        <div class="hist-year">2020</div>
+        <div class="hist-name">拡散モデル</div>
+        <div class="hist-label">Denoising Diffusion</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 3: GAN vs Diffusion -->
+  <div class="scene scene-3">
+    <div class="ambient-bg scene3-bg"></div>
+    <h2 class="scene-heading">GAN vs 拡散モデル</h2>
+    <div class="compare-container">
+      <div class="compare-card compare-gan">
+        <div class="compare-icon">VS</div>
+        <h3>GAN</h3>
+        <div class="compare-analogy">偽造者 vs 鑑定士</div>
+        <ul class="compare-list">
+          <li class="con">学習が不安定</li>
+          <li class="con">モード崩壊のリスク</li>
+          <li class="pro">生成が高速</li>
+        </ul>
+      </div>
+      <div class="compare-card compare-diff">
+        <div class="compare-icon">DM</div>
+        <h3>拡散モデル</h3>
+        <div class="compare-analogy">お掃除ロボット</div>
+        <ul class="compare-list">
+          <li class="pro">学習が安定</li>
+          <li class="pro">高い多様性</li>
+          <li class="con">生成にステップが必要</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 4: Why diffusion won -->
+  <div class="scene scene-4">
+    <div class="ambient-bg scene4-bg"></div>
+    <div class="center-card">
+      <div class="emphasis-label">拡散モデルが主流になった理由</div>
+      <div class="emphasis-big">学習の安定性</div>
+      <div class="emphasis-desc">対決不要 → バランス問題なし → 安定学習</div>
+    </div>
+  </div>
+
+  <!-- Scene 5: Basic Principle Title -->
+  <div class="scene scene-5">
+    <canvas id="canvas-noise"></canvas>
+    <div class="title-content">
+      <div class="section-label">BASIC PRINCIPLE</div>
+      <h2 class="section-title">拡散モデルの基本原理</h2>
+      <div class="section-sub">物理学の「拡散」からヒントを得た仕組み</div>
+    </div>
+  </div>
+
+  <!-- Scene 6: Forward Process -->
+  <div class="scene scene-6">
+    <div class="ambient-bg scene6-bg"></div>
+    <h2 class="scene-heading">Forward Process（拡散過程）</h2>
+    <div class="process-flow">
+      <div class="process-step" id="fw-step-0">
+        <div class="step-img clean-img"></div>
+        <div class="step-label">元の画像</div>
+      </div>
+      <div class="process-arrow">→</div>
+      <div class="process-step" id="fw-step-1">
+        <div class="step-img noise-1"></div>
+        <div class="step-label">少しノイズ</div>
+      </div>
+      <div class="process-arrow">→</div>
+      <div class="process-step" id="fw-step-2">
+        <div class="step-img noise-2"></div>
+        <div class="step-label">かなりノイズ</div>
+      </div>
+      <div class="process-arrow">→</div>
+      <div class="process-step" id="fw-step-3">
+        <div class="step-img noise-3"></div>
+        <div class="step-label">完全なノイズ</div>
+      </div>
+    </div>
+    <div class="process-caption">きれいな画像にノイズを段階的に加え、最終的に砂嵐にする</div>
+  </div>
+
+  <!-- Scene 7: Reverse Process -->
+  <div class="scene scene-7">
+    <div class="ambient-bg scene7-bg"></div>
+    <h2 class="scene-heading">Reverse Process（逆拡散過程）</h2>
+    <div class="process-flow reverse-flow">
+      <div class="process-step" id="rv-step-0">
+        <div class="step-img noise-3"></div>
+        <div class="step-label">完全なノイズ</div>
+      </div>
+      <div class="process-arrow">→</div>
+      <div class="process-step" id="rv-step-1">
+        <div class="step-img noise-2r"></div>
+        <div class="step-label">輪郭が見える</div>
+      </div>
+      <div class="process-arrow">→</div>
+      <div class="process-step" id="rv-step-2">
+        <div class="step-img noise-1r"></div>
+        <div class="step-label">形がはっきり</div>
+      </div>
+      <div class="process-arrow">→</div>
+      <div class="process-step" id="rv-step-3">
+        <div class="step-img clean-img-r"></div>
+        <div class="step-label">画像が復元</div>
+      </div>
+    </div>
+    <div class="process-caption">ノイズを段階的に除去し、画像を復元する（AIが学習する部分）</div>
+  </div>
+
+  <!-- Scene 8: Epsilon Prediction -->
+  <div class="scene scene-8">
+    <div class="ambient-bg scene8-bg"></div>
+    <div class="center-card">
+      <div class="epsilon-label">DDPM (2020)</div>
+      <div class="epsilon-formula">学習目標 =</div>
+      <div class="epsilon-big">ノイズ を予測する</div>
+      <div class="epsilon-desc">画像全体を復元するのではなく、<br>各ステップで加えられたノイズだけを当てる</div>
+    </div>
+  </div>
+
+  <!-- Scene 9: SD Architecture Overview -->
+  <div class="scene scene-9">
+    <div class="ambient-bg scene9-bg"></div>
+    <h2 class="scene-heading">Stable Diffusion の全体構造</h2>
+    <div class="arch-flow">
+      <div class="arch-block arch-vae-enc">
+        <div class="arch-label">VAE Encoder</div>
+        <div class="arch-desc">画像を圧縮</div>
+      </div>
+      <div class="arch-arrow"></div>
+      <div class="arch-block arch-unet">
+        <div class="arch-label">U-Net</div>
+        <div class="arch-desc">ノイズ除去</div>
+      </div>
+      <div class="arch-arrow"></div>
+      <div class="arch-block arch-vae-dec">
+        <div class="arch-label">VAE Decoder</div>
+        <div class="arch-desc">画像を復元</div>
+      </div>
+    </div>
+    <div class="arch-text-line">
+      <div class="arch-block arch-clip">
+        <div class="arch-label">CLIP Text Encoder</div>
+        <div class="arch-desc">テキスト → ベクトル</div>
+      </div>
+      <div class="arch-text-arrow"></div>
+    </div>
+  </div>
+
+  <!-- Scene 10: VAE Compression -->
+  <div class="scene scene-10">
+    <div class="ambient-bg scene10-bg"></div>
+    <div class="center-card">
+      <div class="impact-label">VAE による圧縮</div>
+      <div class="impact-row">
+        <div class="impact-before">512 x 512</div>
+        <div class="impact-arrow-big">→</div>
+        <div class="impact-after">64 x 64</div>
+      </div>
+      <div class="impact-number">約 1/64</div>
+      <div class="impact-desc">にデータ量を削減</div>
+    </div>
+  </div>
+
+  <!-- Scene 11: CLIP + Cross-Attention -->
+  <div class="scene scene-11">
+    <div class="ambient-bg scene11-bg"></div>
+    <h2 class="scene-heading">テキストによる画像制御</h2>
+    <div class="clip-flow">
+      <div class="clip-step clip-text">
+        <div class="clip-content">"夕焼けの海辺を歩く猫"</div>
+        <div class="clip-label">プロンプト</div>
+      </div>
+      <div class="clip-arrow">→</div>
+      <div class="clip-step clip-encoder">
+        <div class="clip-content">CLIP</div>
+        <div class="clip-label">テキストエンコーダ</div>
+      </div>
+      <div class="clip-arrow">→</div>
+      <div class="clip-step clip-vector">
+        <div class="clip-content">[0.42, -0.18, ...]</div>
+        <div class="clip-label">ベクトル表現</div>
+      </div>
+      <div class="clip-arrow">→</div>
+      <div class="clip-step clip-attn">
+        <div class="clip-content">Cross-Attention</div>
+        <div class="clip-label">U-Net内ガイド</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 12: DDIM Speedup -->
+  <div class="scene scene-12">
+    <div class="ambient-bg scene12-bg"></div>
+    <div class="center-card">
+      <div class="impact-label">DDIM による高速化</div>
+      <div class="impact-row">
+        <div class="impact-before">1000 ステップ</div>
+        <div class="impact-arrow-big">→</div>
+        <div class="impact-after">50 ステップ</div>
+      </div>
+      <div class="impact-number">20倍</div>
+      <div class="impact-desc">高速化（品質ほぼ維持）</div>
+    </div>
+  </div>
+
+  <!-- Scene 13: Limitations Title -->
+  <div class="scene scene-13">
+    <div class="ambient-bg scene13-bg"></div>
+    <div class="title-content">
+      <div class="section-label warn-label">LIMITATIONS</div>
+      <h2 class="section-title">AIの限界と誤解</h2>
+      <div class="section-sub">なぜ手が上手く描けないのか？</div>
+    </div>
+  </div>
+
+  <!-- Scene 14: 3 Reasons for Hands -->
+  <div class="scene scene-14">
+    <div class="ambient-bg scene14-bg"></div>
+    <h2 class="scene-heading">手が描けない3つの理由</h2>
+    <div class="reasons-list">
+      <div class="reason-card reason-1">
+        <div class="reason-num">1</div>
+        <div class="reason-title">構造の複雑さ</div>
+        <div class="reason-detail">骨27本・関節14個<br>膨大な組み合わせ</div>
+      </div>
+      <div class="reason-card reason-2">
+        <div class="reason-num">2</div>
+        <div class="reason-title">学習データの偏り</div>
+        <div class="reason-detail">手が小さく・ぼやけて<br>写る画像が多い</div>
+      </div>
+      <div class="reason-card reason-3">
+        <div class="reason-num">3</div>
+        <div class="reason-title">構造的知識の欠如</div>
+        <div class="reason-detail">「指は5本」という<br>ルールを知らない</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 15: Collage Myth -->
+  <div class="scene scene-15">
+    <div class="ambient-bg scene15-bg"></div>
+    <h2 class="scene-heading">よくある誤解</h2>
+    <div class="myth-container">
+      <div class="myth-wrong">
+        <div class="myth-x">X</div>
+        <div class="myth-text">画像をコラージュ・コピーしている</div>
+      </div>
+      <div class="myth-arrow-down"></div>
+      <div class="myth-correct">
+        <div class="myth-check">O</div>
+        <div class="myth-text">確率分布を学習し、<br>新しい画像を生成している</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 16: Copyright -->
+  <div class="scene scene-16">
+    <div class="ambient-bg scene16-bg"></div>
+    <h2 class="scene-heading">著作権をめぐる議論</h2>
+    <div class="copyright-card">
+      <div class="copyright-case">Getty Images vs Stability AI</div>
+      <div class="copyright-desc">学習データの利用に関する法的議論が世界中で進行中</div>
+      <div class="copyright-sides">
+        <div class="copyright-side side-a">
+          <div class="side-label">主張 A</div>
+          <div class="side-text">分布の学習であり<br>コピーではない</div>
+        </div>
+        <div class="copyright-vs">vs</div>
+        <div class="copyright-side side-b">
+          <div class="side-label">主張 B</div>
+          <div class="side-text">無許可の学習自体が<br>権利侵害</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 17: Summary 3 Points -->
+  <div class="scene scene-17">
+    <div class="ambient-bg scene17-bg"></div>
+    <h2 class="scene-heading">まとめ：3つのポイント</h2>
+    <div class="summary-cards">
+      <div class="summary-card sum-1">
+        <div class="sum-num">1</div>
+        <div class="sum-title">Forward + Reverse</div>
+        <div class="sum-text">ノイズを加えて壊す<br>→ 除去して復元する</div>
+      </div>
+      <div class="summary-card sum-2">
+        <div class="sum-num">2</div>
+        <div class="sum-title">VAE + U-Net + CLIP</div>
+        <div class="sum-text">64倍圧縮とテキスト制御で<br>一般PCでも実行可能に</div>
+      </div>
+      <div class="summary-card sum-3">
+        <div class="sum-num">3</div>
+        <div class="sum-title">見つけ出す AI</div>
+        <div class="sum-text">描くのではなく、ノイズの中から<br>パターンを発見する</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 18: Applications -->
+  <div class="scene scene-18">
+    <div class="ambient-bg scene18-bg"></div>
+    <h2 class="scene-heading">拡散モデルの応用展開</h2>
+    <div class="app-cards">
+      <div class="app-card app-video">
+        <div class="app-icon">SORA</div>
+        <div class="app-title">動画生成</div>
+        <div class="app-desc">テキストから動画へ</div>
+      </div>
+      <div class="app-card app-3d">
+        <div class="app-icon">3D</div>
+        <div class="app-title">3Dモデル生成</div>
+        <div class="app-desc">DreamFusion / Point-E</div>
+      </div>
+      <div class="app-card app-audio">
+        <div class="app-icon">AUDIO</div>
+        <div class="app-title">音声合成</div>
+        <div class="app-desc">高品質な音声生成</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

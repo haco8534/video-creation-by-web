@@ -1,0 +1,5 @@
+file 'D:/myfolder/動画生成/main content/presentation/marshmallow_experiment/audio/scene_05_00.wav'
+file 'D:/myfolder/動画生成/main content/presentation/marshmallow_experiment/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/marshmallow_experiment/audio/scene_05_01.wav'
+file 'D:/myfolder/動画生成/main content/presentation/marshmallow_experiment/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/marshmallow_experiment/audio/scene_05_02.wav'
