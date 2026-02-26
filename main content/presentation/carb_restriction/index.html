@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>糖質制限って本当に体にいいの？</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ===== Block 1: 導入 ===== -->
+
+    <!-- Scene 0: タイトルカード -->
+    <div class="scene" id="scene-0">
+        <canvas id="canvas-0" class="bg-canvas"></canvas>
+        <div class="content title-scene">
+            <div class="section-badge accent-bg-green">CARB RESTRICTION</div>
+            <h1 class="title-huge">糖質制限って<br><span class="accent-green">本当に体にいいの？</span></h1>
+            <div class="title-sub">── 科学が出した意外な答え</div>
+        </div>
+    </div>
+
+    <!-- Scene 1: テキスト強調「科学的にはまだ決着がついていない」 -->
+    <div class="scene" id="scene-1">
+        <canvas id="canvas-1" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <h2 class="scene-title">多くの人が信じているけど…</h2>
+            <div class="emphasis-text stagger-item">科学的にはまだ<br><span class="accent-coral">決着がついていない</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 2: テキスト強調「世界初のダイエット本は1863年」 -->
+    <div class="scene" id="scene-2">
+        <div class="content center-layout">
+            <h2 class="scene-title">低糖質ダイエットの起源</h2>
+            <div class="timeline-card stagger-item">
+                <div class="timeline-year">1863</div>
+                <div class="timeline-person">ウィリアム・バンティング</div>
+                <div class="timeline-detail">21kgの減量に成功</div>
+            </div>
+            <div class="emphasis-sub stagger-item">世界初のダイエット本は<span class="accent-green">低糖質</span>だった</div>
+        </div>
+    </div>
+
+    <!-- Scene 3: 段階的リスト「この動画でわかる3つのこと」 -->
+    <div class="scene" id="scene-3">
+        <div class="content card-layout">
+            <h2 class="scene-title">この動画でわかること</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text">糖質制限の<span class="accent-green">実際の効果</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-coral">2</div>
+                    <div class="numbered-text">科学者たちの<span class="accent-coral">警鐘</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-amber">3</div>
+                    <div class="numbered-text"><span class="accent-amber">ブーム</span>はなぜ繰り返されるのか</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 4: 注意喚起「定義がバラバラ」 -->
+    <div class="scene" id="scene-4">
+        <div class="content center-layout">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">そもそも<span class="accent-coral">定義がバラバラ</span></div>
+                <div class="alert-body">「糖質制限」の意味は研究によって異なる</div>
+                <div class="alert-range">
+                    <span class="range-label">厳しい</span>
+                    <div class="range-bar"></div>
+                    <span class="range-label">緩やか</span>
+                </div>
+                <div class="alert-sub">総エネルギーの 10%未満 〜 45%未満</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Block 2: 前提知識 ===== -->
+
+    <!-- Scene 5: タイトルカード -->
+    <div class="scene" id="scene-5">
+        <canvas id="canvas-5" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-teal">BASICS</div>
+            <h2 class="title-medium">そもそも<br><span class="accent-teal">糖質制限</span>って何？</h2>
+        </div>
+    </div>
+
+    <!-- Scene 6: 横並びカード「三大栄養素」 -->
+    <div class="scene" id="scene-6">
+        <div class="content card-layout">
+            <h2 class="scene-title">三大栄養素</h2>
+            <div class="triple-card">
+                <div class="nutrient-card nutrient-carb stagger-item">
+                    <div class="nutrient-icon">C</div>
+                    <div class="nutrient-name">糖質</div>
+                    <div class="nutrient-desc">ご飯・パン・麺類</div>
+                    <div class="nutrient-role">すぐ使えるエネルギー</div>
+                </div>
+                <div class="nutrient-card nutrient-fat stagger-item">
+                    <div class="nutrient-icon">F</div>
+                    <div class="nutrient-name">脂質</div>
+                    <div class="nutrient-desc">油・バター・ナッツ</div>
+                    <div class="nutrient-role">貯蔵エネルギー</div>
+                </div>
+                <div class="nutrient-card nutrient-protein stagger-item">
+                    <div class="nutrient-icon">P</div>
+                    <div class="nutrient-name">タンパク質</div>
+                    <div class="nutrient-desc">肉・魚・大豆</div>
+                    <div class="nutrient-role">体をつくる材料</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 7: 比較対照「ケトジェニック vs ロカボ vs アトキンス」 -->
+    <div class="scene" id="scene-7">
+        <div class="content card-layout">
+            <h2 class="scene-title">糖質制限の種類</h2>
+            <div class="comparison-table">
+                <div class="comp-row comp-header stagger-item">
+                    <div class="comp-cell">種類</div>
+                    <div class="comp-cell">1日の糖質量</div>
+                    <div class="comp-cell">厳しさ</div>
+                </div>
+                <div class="comp-row stagger-item">
+                    <div class="comp-cell comp-name">ケトジェニック</div>
+                    <div class="comp-cell"><span class="accent-coral">20〜50g</span></div>
+                    <div class="comp-cell"><span class="level-bar level-hard"></span></div>
+                </div>
+                <div class="comp-row stagger-item">
+                    <div class="comp-cell comp-name">アトキンス</div>
+                    <div class="comp-cell"><span class="accent-amber">段階的</span></div>
+                    <div class="comp-cell"><span class="level-bar level-medium"></span></div>
+                </div>
+                <div class="comp-row stagger-item">
+                    <div class="comp-cell comp-name">ロカボ</div>
+                    <div class="comp-cell"><span class="accent-green">約130g</span></div>
+                    <div class="comp-cell"><span class="level-bar level-easy"></span></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">ご飯1膳 ≒ 糖質55g</div>
+        </div>
+    </div>
+
+    <!-- Scene 8: 数値インパクト「脳は1日120gのグルコースを消費」 -->
+    <div class="scene" id="scene-8">
+        <div class="content center-layout">
+            <h2 class="scene-title">脳とグルコース</h2>
+            <div class="brain-stat stagger-item">
+                <div class="stat-ring">
+                    <svg viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="54" class="ring-bg" />
+                        <circle cx="60" cy="60" r="54" class="ring-fill" style="--percent:60" />
+                    </svg>
+                    <div class="stat-label">60%</div>
+                </div>
+                <div class="stat-text">脳のエネルギーの約60%は<br>グルコース（糖）に依存</div>
+            </div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-teal">120</span><span class="num-unit">g / 日</span>
+            </div>
+            <div class="emphasis-sub stagger-item">体重の2%の脳が、エネルギーの20%を消費</div>
+        </div>
+    </div>
+
+    <!-- Scene 9: 注意喚起「ケトーシス ≠ ケトアシドーシス」 -->
+    <div class="scene" id="scene-9">
+        <div class="content center-layout">
+            <h2 class="scene-title">よくある誤解</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-safe stagger-item">
+                    <div class="vs-badge safe-badge">安全</div>
+                    <div class="vs-title">ケトーシス</div>
+                    <div class="vs-desc">生理的な状態</div>
+                    <div class="vs-detail">0.5〜3.0 mM</div>
+                </div>
+                <div class="vs-divider stagger-item">≠</div>
+                <div class="vs-card vs-danger stagger-item">
+                    <div class="vs-badge danger-badge">危険</div>
+                    <div class="vs-title">ケトアシドーシス</div>
+                    <div class="vs-desc">病的な状態</div>
+                    <div class="vs-detail">10 mM 以上</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Block 3: 研究が示す効果 ===== -->
+
+    <!-- Scene 10: タイトルカード -->
+    <div class="scene" id="scene-10">
+        <canvas id="canvas-10" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-green">Topic 1</div>
+            <h2 class="title-medium">研究が示す<br><span class="accent-green">糖質制限の効果</span></h2>
+        </div>
+    </div>
+
+    <!-- Scene 11: 数値インパクト「6ヶ月で平均4.7kg減」 -->
+    <div class="scene" id="scene-11">
+        <div class="content center-layout">
+            <h2 class="scene-title">体重減少効果</h2>
+            <div class="source-badge stagger-item">NEJM（超一流医学雑誌）</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-green">−4.7</span><span class="num-unit">kg</span>
+            </div>
+            <div class="emphasis-sub stagger-item">6ヶ月で低脂肪食より平均4.7kg多く減少</div>
+        </div>
+    </div>
+
+    <!-- Scene 12: 段階的リスト「2型糖尿病への効果」 -->
+    <div class="scene" id="scene-12">
+        <div class="content card-layout">
+            <h2 class="scene-title">2型糖尿病への効果</h2>
+            <div class="source-badge stagger-item">デューク大学メディカルセンター</div>
+            <div class="result-list">
+                <div class="result-item stagger-item">
+                    <div class="result-icon accent-bg-green">↓</div>
+                    <div class="result-text">HbA1c が平均 <span class="accent-green">1.5%</span> 低下</div>
+                </div>
+                <div class="result-item stagger-item">
+                    <div class="result-icon accent-bg-teal">↓</div>
+                    <div class="result-text">食後血糖値の<span class="accent-teal">急上昇を抑制</span></div>
+                </div>
+                <div class="result-item stagger-item">
+                    <div class="result-icon accent-bg-green">↑</div>
+                    <div class="result-text">インスリン<span class="accent-green">抵抗性の改善</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 13: 数値インパクト「HbA1c −1.5%」 -->
+    <div class="scene" id="scene-13">
+        <div class="content center-layout">
+            <h2 class="scene-title">HbA1cの改善幅</h2>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-green">−1.5</span><span class="num-unit">%</span>
+            </div>
+            <div class="emphasis-sub stagger-item">臨床的に大きな改善</div>
+            <div class="comparison-note stagger-item">
+                <span class="accent-teal">一部の糖尿病治療薬と同程度の効果</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 14: 横並びカード「中性脂肪↓・HDL↑・血糖値↓」 -->
+    <div class="scene" id="scene-14">
+        <div class="content card-layout">
+            <h2 class="scene-title">血液検査の改善</h2>
+            <div class="triple-card">
+                <div class="metric-card stagger-item">
+                    <div class="metric-arrow down">↓</div>
+                    <div class="metric-name">中性脂肪</div>
+                    <div class="metric-label accent-green">低下</div>
+                </div>
+                <div class="metric-card stagger-item">
+                    <div class="metric-arrow up">↑</div>
+                    <div class="metric-name">HDL（善玉）</div>
+                    <div class="metric-label accent-teal">上昇</div>
+                </div>
+                <div class="metric-card stagger-item">
+                    <div class="metric-arrow down">↓</div>
+                    <div class="metric-name">血糖値</div>
+                    <div class="metric-label accent-green">低下</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">複数のメタ分析で一貫して確認</div>
+        </div>
+    </div>
+
+    <!-- Scene 15: 引用カード「BMJ：糖尿病の寛解率向上」 -->
+    <div class="scene" id="scene-15">
+        <div class="content center-layout">
+            <h2 class="scene-title">糖尿病の寛解</h2>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">糖質制限食は2型糖尿病の<br><span class="accent-green">寛解率を有意に向上</span>させた</div>
+                <div class="quote-source">BMJ 系統的レビュー＆メタ分析</div>
+            </div>
+            <div class="emphasis-sub stagger-item">重篤な副作用なし</div>
+        </div>
+    </div>
+
+    <!-- Scene 16: テキスト強調「ここまでは有利。でも…」 -->
+    <div class="scene" id="scene-16">
+        <canvas id="canvas-16" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">ここまでは<span class="accent-green">糖質制限に有利</span></div>
+            <div class="emphasis-text-large stagger-item">でも<span class="accent-coral">……</span></div>
+            <div class="emphasis-sub stagger-item">長期的なデータを見ると<br>話が大きく変わる</div>
+        </div>
+    </div>
+
+    <!-- ===== Block 4: 不都合な真実 ===== -->
+
+    <!-- Scene 17: タイトルカード -->
+    <div class="scene" id="scene-17">
+        <canvas id="canvas-17" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral">Topic 2</div>
+            <h2 class="title-medium">科学者たちが警鐘を鳴らす<br><span class="accent-coral">"不都合な真実"</span></h2>
+        </div>
+    </div>
+
+    <!-- Scene 18: 比較対照「短期 vs 長期」 -->
+    <div class="scene" id="scene-18">
+        <div class="content center-layout">
+            <h2 class="scene-title">短期 vs 長期の結果</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-title">6ヶ月</div>
+                    <div class="vs-desc">糖質制限が有利</div>
+                    <div class="vs-detail accent-green">−4.7kg の差</div>
+                </div>
+                <div class="vs-divider stagger-item">→</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-title">12ヶ月以上</div>
+                    <div class="vs-desc accent-coral">差がなくなる</div>
+                    <div class="vs-detail">どちらでも同じ結果</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 19: 数値インパクト「15,428人を25年追跡」 -->
+    <div class="scene" id="scene-19">
+        <div class="content center-layout">
+            <h2 class="scene-title">ランセット 2018</h2>
+            <div class="source-badge stagger-item">Lancet Public Health</div>
+            <div class="dual-impact stagger-item">
+                <div class="impact-item">
+                    <span class="big-num accent-coral">15,428</span><span class="num-unit">人</span>
+                </div>
+                <div class="impact-item">
+                    <span class="big-num accent-coral">25</span><span class="num-unit">年間追跡</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 20: フロー図「U字型カーブ」 -->
+    <div class="scene" id="scene-20">
+        <div class="content center-layout">
+            <h2 class="scene-title">U字型カーブ</h2>
+            <div class="u-curve-container stagger-item">
+                <div class="u-curve">
+                    <svg viewBox="0 0 400 200" class="u-curve-svg">
+                        <path d="M 40 40 Q 60 180 200 180 Q 340 180 360 40" fill="none" stroke="var(--coral)"
+                            stroke-width="3" class="u-path" />
+                        <line x1="40" y1="190" x2="360" y2="190" stroke="#ccc" stroke-width="1" />
+                        <line x1="40" y1="30" x2="40" y2="190" stroke="#ccc" stroke-width="1" />
+                        <text x="200" y="210" text-anchor="middle" class="axis-label">炭水化物の摂取量 →</text>
+                        <text x="15" y="110" text-anchor="middle" class="axis-label"
+                            transform="rotate(-90,15,110)">死亡リスク →</text>
+                        <circle cx="200" cy="178" r="8" fill="var(--green)" />
+                        <text x="200" y="170" text-anchor="middle" class="optimal-label">50〜55%</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">取りすぎても、減らしすぎても<span class="accent-coral">死亡リスク上昇</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 21: 比較対照「動物性 vs 植物性」 -->
+    <div class="scene" id="scene-21">
+        <div class="content center-layout">
+            <h2 class="scene-title">何で置き換えるかが鍵</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-danger stagger-item">
+                    <div class="vs-badge danger-badge">リスク↑</div>
+                    <div class="vs-title">動物性</div>
+                    <div class="vs-desc">肉・チーズ</div>
+                    <div class="vs-detail accent-coral">死亡リスク上昇</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-safe stagger-item">
+                    <div class="vs-badge safe-badge">リスク↓</div>
+                    <div class="vs-title">植物性</div>
+                    <div class="vs-desc">大豆・ナッツ</div>
+                    <div class="vs-detail accent-green">リスク低下</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">同じ「糖質制限」でも結果が<span class="accent-coral">正反対</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 22: 段階的リスト「3つのリスク」 -->
+    <div class="scene" id="scene-22">
+        <div class="content card-layout">
+            <h2 class="scene-title">糖質制限の3つのリスク</h2>
+            <div class="risk-list">
+                <div class="risk-item stagger-item">
+                    <div class="risk-number accent-bg-coral">1</div>
+                    <div class="risk-content">
+                        <div class="risk-title">LDL（悪玉）コレステロール上昇</div>
+                        <div class="risk-detail">特に動物性脂質の多い食事で顕著</div>
+                    </div>
+                </div>
+                <div class="risk-item stagger-item">
+                    <div class="risk-number accent-bg-coral">2</div>
+                    <div class="risk-content">
+                        <div class="risk-title">筋肉量減少 → 基礎代謝低下</div>
+                        <div class="risk-detail">リバウンドしやすい体に</div>
+                    </div>
+                </div>
+                <div class="risk-item stagger-item">
+                    <div class="risk-number accent-bg-coral">3</div>
+                    <div class="risk-content">
+                        <div class="risk-title">食物繊維の不足</div>
+                        <div class="risk-detail">便秘・腸内環境の悪化</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 23: 引用カード「日本糖尿病学会」 -->
+    <div class="scene" id="scene-23">
+        <div class="content center-layout">
+            <h2 class="scene-title">日本糖尿病学会の見解</h2>
+            <div class="quote-card quote-warning stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">炭水化物のみを極端に制限する減量法は<br>長期的な安全性のエビデンスが不足しており<br><span
+                        class="accent-coral">推奨できない</span></div>
+                <div class="quote-source">日本糖尿病学会 提言</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 24: 注意喚起「学会が推奨せず」 -->
+    <div class="scene" id="scene-24">
+        <div class="content card-layout">
+            <h2 class="scene-title">世界の専門機関の見解</h2>
+            <div class="org-list">
+                <div class="org-item stagger-item">
+                    <div class="org-icon">AHA</div>
+                    <div class="org-name">アメリカ心臓協会</div>
+                    <div class="org-verdict accent-coral">推奨せず</div>
+                </div>
+                <div class="org-item stagger-item">
+                    <div class="org-icon">ADA</div>
+                    <div class="org-name">アメリカ糖尿病学会</div>
+                    <div class="org-verdict accent-coral">推奨せず</div>
+                </div>
+                <div class="org-item stagger-item">
+                    <div class="org-icon">WHO</div>
+                    <div class="org-name">世界保健機関</div>
+                    <div class="org-verdict accent-coral">推奨せず</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">極端な糖質制限を公式に推奨している主要機関はない</div>
+        </div>
+    </div>
+
+    <!-- ===== Block 5: ブームの歴史 ===== -->
+
+    <!-- Scene 25: タイトルカード -->
+    <div class="scene" id="scene-25">
+        <canvas id="canvas-25" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-amber">Topic 3</div>
+            <h2 class="title-medium">なぜ<span class="accent-amber">ブーム</span>は<br>繰り返されるのか？</h2>
+        </div>
+    </div>
+
+    <!-- Scene 26: フロー図「低脂肪→肥満率上昇→糖質制限」 -->
+    <div class="scene" id="scene-26">
+        <div class="content center-layout">
+            <h2 class="scene-title">ダイエットの振り子現象</h2>
+            <div class="flow-chain">
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">1977</div>
+                    <div class="flow-text">マクガバン報告<br>「脂肪を減らせ！」</div>
+                </div>
+                <div class="flow-arrow stagger-item">→</div>
+                <div class="flow-node flow-bad stagger-item">
+                    <div class="flow-icon">↑</div>
+                    <div class="flow-text">低脂肪食品に<br>砂糖を大量添加</div>
+                </div>
+                <div class="flow-arrow stagger-item">→</div>
+                <div class="flow-node flow-bad stagger-item">
+                    <div class="flow-icon">!</div>
+                    <div class="flow-text">肥満率が<br>むしろ上昇</div>
+                </div>
+                <div class="flow-arrow stagger-item">→</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">2000s</div>
+                    <div class="flow-text">糖質制限ブーム<br>へ反転</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 27: テキスト強調「10人に1人が実践」 -->
+    <div class="scene" id="scene-27">
+        <div class="content center-layout">
+            <h2 class="scene-title">アトキンスダイエットの衝撃</h2>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-amber">10人に1人</span>
+            </div>
+            <div class="emphasis-sub stagger-item">2003年、アメリカ成人の約10人に1人が実践</div>
+            <div class="emphasis-sub stagger-item">パスタ・パンの売上が激減</div>
+        </div>
+    </div>
+
+    <!-- Scene 28: 横並びカード「日本のブーム」 -->
+    <div class="scene" id="scene-28">
+        <div class="content center-layout">
+            <h2 class="scene-title">日本の糖質制限ブーム</h2>
+            <div class="timeline-horizontal">
+                <div class="timeline-node stagger-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year-small">2012〜</div>
+                    <div class="timeline-label">江部康二氏<br>ベストセラー</div>
+                </div>
+                <div class="timeline-connector stagger-item"></div>
+                <div class="timeline-node stagger-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year-small">2013〜</div>
+                    <div class="timeline-label">山田悟氏<br>「ロカボ」提唱</div>
+                </div>
+                <div class="timeline-connector stagger-item"></div>
+                <div class="timeline-node stagger-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-year-small">現在</div>
+                    <div class="timeline-label">コンビニに<br>糖質オフ商品</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 29: 注意喚起「歴史は繰り返す」 -->
+    <div class="scene" id="scene-29">
+        <div class="content center-layout">
+            <div class="pendulum-container stagger-item">
+                <div class="pendulum-label pendulum-left">脂肪が悪い</div>
+                <div class="pendulum-center">振り子</div>
+                <div class="pendulum-label pendulum-right">糖質が悪い</div>
+            </div>
+            <div class="emphasis-text stagger-item">極端なダイエット法の<br>歴史は<span class="accent-amber">繰り返す</span></div>
+            <div class="emphasis-sub stagger-item">「これさえやれば大丈夫」は幻想</div>
+        </div>
+    </div>
+
+    <!-- ===== Block 6: まとめ ===== -->
+
+    <!-- Scene 30: まとめカード -->
+    <div class="scene" id="scene-30">
+        <canvas id="canvas-30" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-green">CONCLUSION</div>
+            <h2 class="title-medium">結局、糖質制限は<br><span class="accent-green">体にいいの？</span></h2>
+        </div>
+    </div>
+
+    <!-- Scene 31: 段階的リスト「3つのポイント」 -->
+    <div class="scene" id="scene-31">
+        <div class="content card-layout">
+            <h2 class="scene-title">今日の3つのポイント</h2>
+            <div class="summary-list">
+                <div class="summary-item stagger-item">
+                    <div class="summary-number accent-bg-green">1</div>
+                    <div class="summary-text">短期的には効果が<span class="accent-green">確認されている</span></div>
+                </div>
+                <div class="summary-item stagger-item">
+                    <div class="summary-number accent-bg-coral">2</div>
+                    <div class="summary-text">長期的には差がなく、<span class="accent-coral">リスクもある</span></div>
+                </div>
+                <div class="summary-item stagger-item">
+                    <div class="summary-number accent-bg-teal">3</div>
+                    <div class="summary-text"><span class="accent-teal">食事全体のバランス</span>が大事</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 32: 数値インパクト「日本人は58%で推奨範囲内」 -->
+    <div class="scene" id="scene-32">
+        <div class="content center-layout">
+            <h2 class="scene-title">日本人の糖質摂取量</h2>
+            <div class="gauge-container stagger-item">
+                <div class="gauge-bar">
+                    <div class="gauge-range" style="left:38%;width:24%">
+                        <span class="gauge-range-label">推奨範囲 50〜65%</span>
+                    </div>
+                    <div class="gauge-marker" style="left:53%">
+                        <div class="gauge-marker-label">日本人平均<br><span class="accent-green">58%</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">そもそも日本人は<span class="accent-green">推奨範囲内</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 33: テキスト強調「どう食べるか」 -->
+    <div class="scene" id="scene-33">
+        <canvas id="canvas-33" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="final-message stagger-item">
+                <div class="message-cross">何を減らすか</div>
+                <div class="message-main">大事なのは<br><span class="accent-green">全体としてどう食べるか</span></div>
+            </div>
+            <div class="emphasis-sub stagger-item">科学は更新される<br>一つの答えに飛びつかない</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

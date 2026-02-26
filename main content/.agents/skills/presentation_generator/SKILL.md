@@ -50,6 +50,18 @@ description: 台本から高品質なWebアニメーション・スライド説�
 - 台本全体をただ数個の「大見出し」レベルでまとめた数シーンだけにしないでください。
 - **オープニング・まとめ等の「会話のみのセクション」を省略しないこと。** 技術説明ブロックだけでなく、動画冒頭の前座的な会話や締めの会話にも必ずシーンを作成してください。会話のみのシーンでは、キーワードや名言を大きく表示しつつ、背景アニメーションで画面を彩ってください。
 
+## 📏 コード量の目安
+
+20分尺（30〜35シーン）の動画では、以下のコード量を目安にしてください。これを大幅に下回ると「情報量が少ない」「アニメーションがしょぼい」という品質問題が発生します。
+
+| ファイル | 目安行数 | 補足 |
+|----------|----------|------|
+| **index.html** | **700〜800行** | 各シーン平均20〜23行のHTML。情報カード、SVGグラフ、比較テーブル等の要素を十分に含む |
+| **style.css** | **1000〜1400行** | 全ビジュアルパターンのスタイル定義。アニメーション、カラートークン、レスポンシブ対応 |
+| **script.js** | **90〜100行** | シーン管理 + Canvas背景アニメーション |
+
+> ⚠️ **HTML 700行未満は品質不足のサイン。** 10分尺でも500行以上、20分尺では700行以上を必ず確保すること。
+
 ## 🎨 デザインと演出のルール
 
 ### シーン制御
@@ -72,6 +84,438 @@ description: 台本から高品質なWebアニメーション・スライド説�
 - デフォルトは**クリーンで洗練されたホワイトテーマ（明るい背景）**。
 - モダンでリッチなデザイン（美しいグラデーション、滑らかなシャドウなど）を取り入れること。
 
+---
+
+## 🧩 ビジュアルパターンカタログ（必須参照）
+
+各シーンは、台本の内容に応じて以下のビジュアルパターンから選択・組み合わせて構築する。パターンは台本の `<!-- SCENE: ビジュアルパターン「タイトル」 -->` マーカーで指定されることが多いが、指定がない場合は内容に最適なパターンを自分で選択する。
+
+### カラートークン設計
+
+プロジェクトのテーマに合わせて `:root` にカラートークンを定義する。以下は典型例：
+
+```css
+:root {
+    --bg: #f8f9fa;
+    --text: #1a1a2e;
+    --text-light: #6c757d;
+    --primary: #4f46e5;       /* テーマに応じて変更 */
+    --primary-light: #e0e7ff;
+    --teal: #14b8a6;
+    --teal-light: #ccfbf1;
+    --coral: #ef4444;
+    --coral-light: #fee2e2;
+    --amber: #f59e0b;
+    --amber-light: #fef3c7;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.1);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+```
+
+### パターン一覧と必須構成要素
+
+#### 1. タイトルカード（セクション見出し）
+Canvas背景アニメーション付きの大見出し。ブロックの頭やテーマ転換時に使用。
+
+```html
+<div class="scene" id="scene-N">
+    <canvas id="canvas-N" class="bg-canvas"></canvas>
+    <div class="content center-layout">
+        <div class="section-badge accent-bg-primary">TOPIC 1</div>
+        <h2 class="title-medium">見出しテキスト<br><span class="accent-primary">強調部分</span></h2>
+    </div>
+</div>
+```
+
+#### 2. テキスト強調
+大きなキーワードやメッセージを画面中央に表示。
+
+```html
+<div class="scene" id="scene-N">
+    <canvas id="canvas-N" class="bg-canvas"></canvas>
+    <div class="content center-layout">
+        <div class="emphasis-text stagger-item">前半テキスト<span class="accent-primary">強調ワード</span></div>
+        <div class="emphasis-text-large stagger-item">でも<span class="accent-coral">……</span></div>
+        <div class="emphasis-sub stagger-item">補足テキスト</div>
+    </div>
+</div>
+```
+
+#### 3. 数値インパクト
+大きな数字で印象を与える。出典バッジ必須。
+
+```html
+<div class="scene" id="scene-N">
+    <div class="content center-layout">
+        <h2 class="scene-title">シーンタイトル</h2>
+        <div class="source-badge stagger-item">出典情報（著者名・年・対象者数）</div>
+        <div class="impact-number stagger-item">
+            <span class="big-num accent-primary">42</span><span class="num-unit">%</span>
+        </div>
+        <div class="emphasis-sub stagger-item">数値の意味を簡潔に</div>
+    </div>
+</div>
+```
+
+#### 4. 段階的リスト（ナンバーリスト）
+3〜4項目のリスト。カード型でナンバー付き。
+
+```html
+<div class="scene" id="scene-N">
+    <div class="content card-layout">
+        <h2 class="scene-title">リストタイトル</h2>
+        <div class="numbered-list">
+            <div class="numbered-item stagger-item">
+                <div class="number-circle">1</div>
+                <div class="numbered-text">項目テキスト<span class="accent-primary">強調</span></div>
+            </div>
+            <!-- 2, 3... -->
+        </div>
+    </div>
+</div>
+```
+
+#### 5. 比較対照（VS カード）
+2つの概念を左右に並べて比較。
+
+```html
+<div class="scene" id="scene-N">
+    <div class="content center-layout">
+        <h2 class="scene-title">比較タイトル</h2>
+        <div class="vs-container">
+            <div class="vs-card vs-left stagger-item">
+                <div class="vs-badge safe-badge">ラベル</div>
+                <div class="vs-title">左タイトル</div>
+                <div class="vs-desc">説明</div>
+            </div>
+            <div class="vs-divider stagger-item">vs</div>
+            <div class="vs-card vs-right stagger-item">
+                <div class="vs-badge danger-badge">ラベル</div>
+                <div class="vs-title">右タイトル</div>
+                <div class="vs-desc">説明</div>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+#### 6. 横並びカード（3〜4列）
+栄養素、要因、原因など複数の並列項目。
+
+```html
+<div class="scene" id="scene-N">
+    <div class="content card-layout">
+        <h2 class="scene-title">カードタイトル</h2>
+        <div class="triple-card">
+            <div class="factor-card stagger-item">
+                <div class="factor-icon accent-bg-primary">A</div>
+                <div class="factor-name">項目名</div>
+                <div class="factor-desc">短い説明</div>
+            </div>
+            <!-- 繰り返し -->
+        </div>
+    </div>
+</div>
+```
+
+#### 7. 引用カード
+研究論文や著名人の引用。左ボーダー付き。
+
+```html
+<div class="scene" id="scene-N">
+    <div class="content center-layout">
+        <h2 class="scene-title">引用シーンタイトル</h2>
+        <div class="quote-card stagger-item">
+            <div class="quote-mark">"</div>
+            <div class="quote-text">引用テキスト<br><span class="accent-primary">強調部分</span></div>
+            <div class="quote-source">出典（著者名, 年, 所属）</div>
+        </div>
+    </div>
+</div>
+```
+- 警告的な引用: `quote-card quote-warning`（赤ボーダー）
+- 温かい引用: `quote-card quote-warm`（アンバーボーダー）
+
+#### 8. フロー図（チェーン）
+歴史的変遷やプロセスの流れ。
+
+```html
+<div class="scene" id="scene-N">
+    <div class="content card-layout">
+        <h2 class="scene-title">フロータイトル</h2>
+        <div class="flow-chain">
+            <div class="flow-node stagger-item">
+                <div class="flow-year">1905</div>
+                <div class="flow-text"><span class="flow-name">人名</span><br>説明<br><span class="flow-sub">補足</span></div>
+            </div>
+            <div class="flow-arrow stagger-item">&rarr;</div>
+            <!-- 繰り返し -->
+        </div>
+    </div>
+</div>
+```
+
+#### 9. 比較テーブル
+グリッド形式のデータ比較。
+
+```html
+<div class="scene" id="scene-N">
+    <div class="content card-layout">
+        <h2 class="scene-title">テーブルタイトル</h2>
+        <div class="comparison-table">
+            <div class="comp-row comp-header stagger-item">
+                <div class="comp-cell">列1</div>
+                <div class="comp-cell">列2</div>
+                <div class="comp-cell">列3</div>
+            </div>
+            <div class="comp-row stagger-item">
+                <div class="comp-cell comp-name">行名</div>
+                <div class="comp-cell"><span class="accent-primary">値</span></div>
+                <div class="comp-cell">値</div>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+#### 10. 注意喚起カード
+左に赤いボーダー、アイコン付き。
+
+```html
+<div class="scene" id="scene-N">
+    <div class="content center-layout">
+        <div class="alert-card stagger-item">
+            <div class="alert-icon">!</div>
+            <div class="alert-title">警告タイトル<span class="accent-coral">強調</span></div>
+            <div class="alert-sub">補足説明</div>
+        </div>
+    </div>
+</div>
+```
+
+#### 11. SVGグラフ・チャート
+データの視覚化。散布図、U字型カーブ、推移グラフなどを内容に応じて作成。
+
+```html
+<!-- リング進捗 -->
+<div class="split-ring">
+    <svg viewBox="0 0 120 120">
+        <circle cx="60" cy="60" r="54" class="ring-bg" />
+        <circle cx="60" cy="60" r="54" class="ring-fill ring-iq" style="--percent:25" />
+    </svg>
+    <div class="ring-center-label"><span class="accent-primary">25%</span></div>
+</div>
+
+<!-- バー比較 -->
+<div class="bar-comparison">
+    <div class="bar-row">
+        <div class="bar-label">ラベルA</div>
+        <div class="bar-track"><div class="bar-fill bar-a-fill" style="--w:33%"></div></div>
+    </div>
+    <div class="bar-row">
+        <div class="bar-label">ラベルB</div>
+        <div class="bar-track"><div class="bar-fill bar-b-fill" style="--w:66%"></div></div>
+    </div>
+</div>
+```
+
+#### 12. タグクラウド
+複数のキーワードをカラフルなタグで表示。
+
+```html
+<div class="tag-cloud">
+    <div class="tag-item tag-amber stagger-item">キーワード1</div>
+    <div class="tag-item tag-teal stagger-item">キーワード2</div>
+    <div class="tag-item tag-coral stagger-item">キーワード3</div>
+</div>
+```
+
+#### 13. ダークシーン（暗い歴史・注意喚起など）
+背景を暗くして特別感を出す。
+
+```html
+<div class="scene dark-scene" id="scene-N">
+    <div class="content card-layout">
+        <h2 class="scene-title light-text">ダークテーマタイトル</h2>
+        <div class="dark-list">
+            <div class="dark-item stagger-item">
+                <div class="dark-icon">年号</div>
+                <div class="dark-content">
+                    <div class="dark-title">項目タイトル</div>
+                    <div class="dark-desc">説明文</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+#### 14. 数式・公式
+
+```html
+<div class="formula-container stagger-item">
+    <div class="formula-part">要素A</div>
+    <div class="formula-op">&times;</div>
+    <div class="formula-part">要素B</div>
+    <div class="formula-eq">=</div>
+    <div class="formula-result">結果</div>
+</div>
+```
+
+---
+
+## 🎬 アニメーション設計（必須）
+
+### stagger-item（段階的フェードイン）
+
+**全てのシーン内の主要要素に `stagger-item` クラスを付与すること。** これにより、シーン表示時に要素が順番に下からフェードインし、動きのあるプレゼンテーションになる。
+
+```css
+.stagger-item {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity var(--transition), transform var(--transition);
+}
+.scene.active .stagger-item { opacity: 1; transform: translateY(0); }
+.scene.active .stagger-item:nth-child(1) { transition-delay: 0.0s; }
+.scene.active .stagger-item:nth-child(2) { transition-delay: 0.12s; }
+.scene.active .stagger-item:nth-child(3) { transition-delay: 0.24s; }
+/* ... nth-child(N) で 0.12s ずつ追加 ... */
+```
+
+> ⚠️ `.stagger-item` のないシーンは「静止画スライド」になり品質が大幅に下がる。必ず付与すること。
+
+### Canvas 背景アニメーション
+
+タイトルカードやテキスト強調シーンなど、情報が少ないシーンには **Canvas パーティクル背景** を必ず追加する。
+
+```html
+<canvas id="canvas-N" class="bg-canvas"></canvas>
+```
+
+script.js で `initCanvasIfNeeded(sceneIdx)` 関数を実装し、パーティクルが浮遊して接続線で結ばれるアンビエントアニメーションを描画する。
+
+```javascript
+function initCanvasIfNeeded(sceneIdx) {
+    const sceneEl = scenes[sceneIdx];
+    const canvas = sceneEl.querySelector('.bg-canvas');
+    if (!canvas || canvasAnimations[sceneIdx]) return;
+
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const particles = [];
+    const colors = ['#4f46e5', '#6366f1', '#f59e0b', '#14b8a6'];
+    const particleCount = 30;
+
+    for (let i = 0; i < particleCount; i++) {
+        particles.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            radius: Math.random() * 3 + 1,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: (Math.random() - 0.5) * 0.4,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            alpha: Math.random() * 0.25 + 0.05,
+        });
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+            p.x += p.vx; p.y += p.vy;
+            if (p.x < 0) p.x = canvas.width;
+            if (p.x > canvas.width) p.x = 0;
+            if (p.y < 0) p.y = canvas.height;
+            if (p.y > canvas.height) p.y = 0;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+            ctx.fillStyle = p.color;
+            ctx.globalAlpha = p.alpha;
+            ctx.fill();
+        });
+        // 接続線
+        ctx.globalAlpha = 0.03;
+        ctx.strokeStyle = colors[0];
+        ctx.lineWidth = 1;
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                if (Math.sqrt(dx*dx + dy*dy) < 150) {
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.stroke();
+                }
+            }
+        }
+        ctx.globalAlpha = 1;
+        canvasAnimations[sceneIdx] = requestAnimationFrame(draw);
+    }
+    draw();
+}
+```
+
+### SVGアニメーション
+
+SVGのパス描画アニメーションを活用：
+
+```css
+/* パス描画アニメーション */
+.trend-line {
+    stroke-dasharray: 500; stroke-dashoffset: 500;
+    animation: drawLine 2s ease forwards 0.5s;
+}
+@keyframes drawLine { to { stroke-dashoffset: 0; } }
+
+/* 散布図ドット出現 */
+.scatter-dot {
+    fill: var(--primary); opacity: 0;
+    animation: dotAppear 0.3s ease forwards;
+    animation-delay: calc(var(--d) * 0.08s);
+}
+@keyframes dotAppear { to { opacity: 0.7; } }
+```
+
+### バーチャートのアニメーション
+
+```css
+.bar-fill {
+    height: 100%; border-radius: 12px;
+    width: 0; transition: width 1.5s ease;
+}
+.scene.active .bar-fill { width: var(--w); }
+```
+
+---
+
+## 🏗️ 情報密度の確保（重要）
+
+### 各シーンに含めるべき要素
+
+すべてのシーンには最低でも以下の要素を含めること：
+
+1. **シーンタイトル** (`<h2 class="scene-title">`)
+2. **メインビジュアル** （カード、グラフ、比較表、リストなど）
+3. **出典バッジ**（データを引用する場合: `<div class="source-badge">著者名 (年) / 対象者数</div>`）
+4. **補足テキスト** (`<div class="emphasis-sub">` または `<div class="footnote">`)
+
+### 「情報密度が低い」になりがちなパターンと対策
+
+| ❌ 低密度パターン | ✅ 改善方法 |
+|---|---|
+| テキスト1行だけのシーン | テキスト強調 + 出典バッジ + 背景Canvas |
+| 数値だけのシーン | 数値 + 出典バッジ + リングやバーのビジュアル + 補足 |
+| リスト3項目だけのシーン | リスト + 各項目に説明文 + footnote |
+| フロー2ノードだけのシーン | フロー3-4ノード + 詳細テキスト + 補足 |
+
+---
+
 ## 🎬 レイアウト方針
 
 ### 「パワーポイント」のように情報を整理する
@@ -81,16 +525,11 @@ description: 台本から高品質なWebアニメーション・スライド説�
 #### レイアウトの設計原則
 - **明確な見出しとセクション区切り** 
 - **カード・ボックスで情報をグルーピング**
-- **色分けでカテゴリを表現**（例：トークン化＝青系、Attention＝紫系）
+- **色分けでカテゴリを表現**（例：ポジティブ＝ティール系、ネガティブ＝コーラル系）
 - **矢印・コネクタでフローを明示**
 - **余白を十分に取る**
 
-#### アニメーションの役割
-アニメーションは装飾ではなく、**概念の理解を助けるため**に使ってください。会話のみのシーンでは、キーワードを大きく表示し、背景に控えめなアンビエントアニメーションを入れること。
-
-## ⏱️ アニメーションの設計
-
-- 図解が少ないシーンでも、背景でゆっくりと動く要素を必ず組み込み、画面が完全に静止しないようにしてください。
+---
 
 ## ⚠️ CSS設計の注意点（Headless録画対策）
 
@@ -107,6 +546,31 @@ description: 台本から高品質なWebアニメーション・スライド説�
    ```
 
 2. **全CSSクラスが定義されていること**: HTMLで参照しているCSSクラス（`.label--amber`, `.title-huge` 等）が必ず `style.css` に定義されていること。
+
+3. **CSS zoom互換のサイズ指定（必須）**: 録画時は `document.body.style.zoom` でコンテンツを拡大するため、**`.scene` のサイズには `100vw` / `100vh` を絶対に使わず、`width: 100%; height: 100%` を使うこと**。`vw`/`vh` はズーム前のビューポートサイズを参照するため、zoom適用時にコンテンツが画面外にはみ出し、右下にずれる。
+   ```css
+   /* ❌ NG: zoom適用時にコンテンツが右下にずれる */
+   .scene { width: 100vw; height: 100vh; }
+
+   /* ✅ OK: zoom適用時も正しく中央配置される */
+   html, body { width: 100%; height: 100%; }
+   .scene { width: 100%; height: 100%; }
+   ```
+
+4. **シーン切替時のフェードインアニメーション（必須）**: `.scene.active` にフェードインアニメーションを必ず適用すること。これにより、録画時のシーン切替が滑らかになる。
+   ```css
+   .scene.active {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       animation: sceneFadeIn 0.5s ease both;
+   }
+   @keyframes sceneFadeIn {
+       from { opacity: 0; }
+       to   { opacity: 1; }
+   }
+   ```
+   > ⚠️ フェードイン時間は `scene_durations` の持続時間**内**で再生される。録画スクリプトはトランジション分の追加フレームを加算しないため、アニメーション時間を長くしすぎるとコンテンツ表示時間が減る。0.5s程度が推奨。
 
 ## 💻 出力先とディレクトリ構成
 
@@ -126,36 +590,35 @@ presentation/
 
 ## 生成手順
 
-台本が長い場合、**1回のプロンプトで全体を一気に生成しようとしないでください**。
+### 一括生成モード（デフォルト）
 
-### Step 1：設計を提示する
+台本が与えられたら、**ユーザーとの対話なしで3ファイルを一括生成**する。
 
-台本全体を読んだうえで、以下を決定しユーザーに提示してください。
+#### Step 1：構造を設計する（内部処理、ユーザーに提示不要）
 
-1. **ブロック分割案**：台本をどのようなブロックに分けるか
-2. **各ブロックのシーン構成案**：各ブロックで何シーン作るか、各シーンの概要
-3. **デザインテーマ案**：全体を通じて使うカラーパレット・トーン・フォント
+台本全体を読み、以下を内部で決定する：
+
+1. **ブロック分割**: 台本をどのようなブロックに分けるか
+2. **各ブロックのシーン構成**: 各ブロックで何シーン作るか、使用するビジュアルパターン
+3. **デザイントークン**: 全体のカラーパレット・トーン
 
 > ⚠️ **オープニング・まとめ等の「会話のみのセクション」を省略しないこと。**
 
-設計をユーザーに確認してから、次のステップへ進むこと。
+#### Step 2：3ファイルを一括生成する
 
-### Step 2：1ブロックずつ生成する
+上記の設計に基づき、`index.html`、`style.css`、`script.js` の3ファイルを**一度に全て生成**する。
 
-設計が確定したら、**1ブロックずつ順番にコードを生成**してください。
-
-- 1ブロックあたり2～6シーン程度を目安。
-- 各ブロックは、**シーンのHTML断片とそれに対応するCSS・JSの追加分**として出力。
-- 1ブロック生成が終わったら、ユーザーの確認・修正を受けてから次のブロックへ。
-
-### Step 3：全ブロック完成後、統合する
-
-3ファイル（`index.html` / `style.css` / `script.js`）に統合し、以下を確認：
-
-- 全シーンを通じてデザインの一貫性があるか
-- `window.goTo(index)` がすべてのシーンに正しく対応しているか
-- アニメーションが競合したり止まったりしていないか
-- 上記「CSS設計の注意点」に違反していないか
+生成時の品質チェックリスト：
+- [ ] HTML 行数が目安（20分尺で700〜800行）を満たしているか
+- [ ] 全てのシーンの主要要素に `.stagger-item` が付与されているか
+- [ ] タイトルカードやテキスト強調シーンに Canvas 背景 (`<canvas>`) が含まれているか
+- [ ] 出典が必要なデータシーンに `.source-badge` が含まれているか
+- [ ] 数値シーンに `.impact-number` + `.big-num` が使われているか
+- [ ] 比較シーンに `.vs-container` が使われているか
+- [ ] SVGグラフやバーチャートなど、適切なデータビジュアライゼーションがあるか
+- [ ] `window.goTo(index)` がすべてのシーンに正しく対応しているか
+- [ ] CSS zoom 互換のサイズ指定（`vw`/`vh` 不使用）を守っているか
+- [ ] `.scene.active` にフェードインアニメーションが適用されているか
 
 ---
 
@@ -166,7 +629,7 @@ presentation/
 - `ffmpeg` がPATHに通っていること
 - `puppeteer` がインストール済みであること（プロジェクトルートの `node_modules`）
 
-## Step 4：`scene_map.json` を作成する
+## Step 3：`scene_map.json` を作成する
 
 台本のセリフをシーンに対応付けた `scene_map.json` を作成する。**これは Phase 2〜3 の全工程の入力データ**であり、正確に作成する必要がある。
 
@@ -282,6 +745,8 @@ scene_map.json を作成したら、以下を **必ず** 確認すること：
 3. **末尾シーンの確認**: 最後のシーンのセリフがHTMLの最後のシーンのビジュアルと意味的に対応しているか
 4. **IDの連続性**: `id` が 0 から連番で抜けがないか
 
+> ⚠️ **`.scene` クラスだけでなく `class="scene dark-scene"` など複合クラスのシーンも含めてカウントすること。**  正規表現で `class="scene"` を完全一致検索すると、`class="scene dark-scene"` が漏れる。Python の場合は `re.findall(r'id="scene-\d+"', html)` でIDをカウントするのが最も正確。
+
 ### テキスト前処理のポイント
 
 台本からセリフを抽出する際、以下の変換を行うこと：
@@ -292,7 +757,7 @@ scene_map.json を作成したら、以下を **必ず** 確認すること：
 4. **セリフの分割**: あまりに長い1セリフは自然な切れ目で2つに分割する
 5. **話者の指定**: `speakers` のキー名と `lines[].speaker` が完全一致すること
 
-## Step 5：音声を生成する
+## Step 4：音声を生成する
 
 // turbo
 
@@ -313,7 +778,7 @@ node presentation/tools/generate_audio.js {テーマ名}
 
 # Phase 3：録画 + 音声合成
 
-## Step 6：並列録画を実行する
+## Step 5：並列録画を実行する
 
 // turbo
 
@@ -351,7 +816,7 @@ ffprobe -v error -show_entries format=duration -of csv=p=0 "presentation/{テー
 
 映像が大幅に短い場合（例: 期待17分なのに9分しかない）、チャンクファイルの破損を疑う。`chunks/` 内の各 `.mkv` ファイルを個別に `ffprobe` で確認し、壊れたチャンクがあれば削除して `record.js` を再実行する。
 
-## Step 7：音声+映像を合成する
+## Step 6：音声+映像を合成する
 
 // turbo
 
@@ -366,7 +831,7 @@ node presentation/tools/merge_audio.js {テーマ名}
 4. 全シーンの音声を結合 → `audio/full_audio.wav`
 5. `recording.mp4` と `full_audio.wav` を合成 → `final_output.mp4` を出力
 
-## Step 8：最終確認
+## Step 7：最終確認
 
 `final_output.mp4` をユーザーに案内する。
 
@@ -408,3 +873,4 @@ presentation/
 | `browser.close()` でハング | Puppeteer headlessのバグ | record.js は5秒タイムアウト+強制kill済み。通常は自動回復 |
 | `moov atom not found` エラー | mp4形式でffmpegをkillした | チャンクはmkv形式で出力済み。通常は発生しない |
 | 音声の長さとシーンがずれる | `scene_map.json` のシーンIDが HTML のシーン順と不一致 | IDが0-indexedでHTML内の `.scene` の出現順と一致しているか確認 |
+| シーンカウントが合わない | `class="scene dark-scene"` が正規表現でマッチしない | IDベースでカウントする: `re.findall(r'id="scene-\d+"', html)` |

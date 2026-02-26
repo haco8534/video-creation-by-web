@@ -1,0 +1,1400 @@
+[
+  {
+    "id": 0,
+    "title": "IQって本当に\"頭の良さ\"を測れてるの？",
+    "duration": 25.1,
+    "audioFiles": [
+      {
+        "file": "scene_00_00.wav",
+        "duration": 2.6453333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_00_01.wav",
+        "duration": 2.005333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_00_02.wav",
+        "duration": 2.538666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_00_03.wav",
+        "duration": 3.477333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_00_04.wav",
+        "duration": 5.696,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_00_05.wav",
+        "duration": 3.5733333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_00_06.wav",
+        "duration": 2.912,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "title": "ビネーは\"知能を測る道具ではない\"と言っていた",
+    "duration": 20.3,
+    "audioFiles": [
+      {
+        "file": "scene_01_00.wav",
+        "duration": 3.072,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_01_01.wav",
+        "duration": 3.3493333333333335,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_01_02.wav",
+        "duration": 2.88,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_01_03.wav",
+        "duration": 3.52,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_01_04.wav",
+        "duration": 3.466666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_01_05.wav",
+        "duration": 2.048,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "この動画でわかる3つのこと",
+    "duration": 20.3,
+    "audioFiles": [
+      {
+        "file": "scene_02_00.wav",
+        "duration": 2.4426666666666668,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_02_01.wav",
+        "duration": 3.552,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_02_02.wav",
+        "duration": 3.2106666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_02_03.wav",
+        "duration": 4.149333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_02_04.wav",
+        "duration": 2.0906666666666665,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_02_05.wav",
+        "duration": 2.8906666666666667,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "IQテストの歴史",
+    "duration": 34.7,
+    "audioFiles": [
+      {
+        "file": "scene_03_00.wav",
+        "duration": 3.328,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_03_01.wav",
+        "duration": 5.664,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_03_02.wav",
+        "duration": 2.3573333333333335,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_03_03.wav",
+        "duration": 4.224,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_03_04.wav",
+        "duration": 5.056,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_03_05.wav",
+        "duration": 4.1386666666666665,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_03_06.wav",
+        "duration": 3.9146666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_03_07.wav",
+        "duration": 3.445333333333333,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "精神年齢÷実年齢×100＝IQ",
+    "duration": 38.7,
+    "audioFiles": [
+      {
+        "file": "scene_04_00.wav",
+        "duration": 2.517333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_04_01.wav",
+        "duration": 4.917333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_04_02.wav",
+        "duration": 5.28,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_04_03.wav",
+        "duration": 4.597333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_04_04.wav",
+        "duration": 6.346666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_04_05.wav",
+        "duration": 3.2853333333333334,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_04_06.wav",
+        "duration": 5.8773333333333335,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_04_07.wav",
+        "duration": 3.296,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "ウェクスラー：知能は複数の能力の複合体",
+    "duration": 27.8,
+    "audioFiles": [
+      {
+        "file": "scene_05_00.wav",
+        "duration": 4.906666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_05_01.wav",
+        "duration": 5.738666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_05_02.wav",
+        "duration": 4.405333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_05_03.wav",
+        "duration": 6.538666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_05_04.wav",
+        "duration": 4.533333333333333,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "g因子＝パフォーマンス差の40〜50%を説明",
+    "duration": 30.5,
+    "audioFiles": [
+      {
+        "file": "scene_06_00.wav",
+        "duration": 4.405333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_06_01.wav",
+        "duration": 2.058666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_06_02.wav",
+        "duration": 4.405333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_06_03.wav",
+        "duration": 4.810666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_06_04.wav",
+        "duration": 4.554666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_06_05.wav",
+        "duration": 3.3066666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_06_06.wav",
+        "duration": 4.64,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "でも50%は説明できない",
+    "duration": 38.5,
+    "audioFiles": [
+      {
+        "file": "scene_07_00.wav",
+        "duration": 5.770666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_07_01.wav",
+        "duration": 5.12,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_07_02.wav",
+        "duration": 2.570666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_07_03.wav",
+        "duration": 5.568,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_07_04.wav",
+        "duration": 5.952,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_07_05.wav",
+        "duration": 3.008,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_07_06.wav",
+        "duration": 3.082666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_07_07.wav",
+        "duration": 4.842666666666666,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "IQが測れているもの",
+    "duration": 13.4,
+    "audioFiles": [
+      {
+        "file": "scene_08_00.wav",
+        "duration": 5.045333333333334,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_08_01.wav",
+        "duration": 3.3066666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_08_02.wav",
+        "duration": 3.978666666666667,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "学業成績との相関＝0.5",
+    "duration": 36.1,
+    "audioFiles": [
+      {
+        "file": "scene_09_00.wav",
+        "duration": 3.1466666666666665,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_09_01.wav",
+        "duration": 4.512,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_09_02.wav",
+        "duration": 3.7226666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_09_03.wav",
+        "duration": 3.36,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_09_04.wav",
+        "duration": 3.936,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_09_05.wav",
+        "duration": 5.962666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_09_06.wav",
+        "duration": 1.7706666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_09_07.wav",
+        "duration": 7.072,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "IQが説明できる部分(25%) vs できない部分(75%)",
+    "duration": 32.3,
+    "audioFiles": [
+      {
+        "file": "scene_10_00.wav",
+        "duration": 2.624,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_10_01.wav",
+        "duration": 4.085333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_10_02.wav",
+        "duration": 4.704,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_10_03.wav",
+        "duration": 7.882666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_10_04.wav",
+        "duration": 2.986666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_10_05.wav",
+        "duration": 4.746666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_10_06.wav",
+        "duration": 2.965333333333333,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "IQ以外の学業成績要因：誠実性・自制力・環境",
+    "duration": 42.7,
+    "audioFiles": [
+      {
+        "file": "scene_11_00.wav",
+        "duration": 4.714666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_11_01.wav",
+        "duration": 4.074666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_11_02.wav",
+        "duration": 7.1786666666666665,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_11_03.wav",
+        "duration": 2.570666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_11_04.wav",
+        "duration": 5.28,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_11_05.wav",
+        "duration": 3.7866666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_11_06.wav",
+        "duration": 4.426666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_11_07.wav",
+        "duration": 4.394666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_11_08.wav",
+        "duration": 3.328,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "遺伝0.5〜0.85 × 環境要因",
+    "duration": 32.9,
+    "audioFiles": [
+      {
+        "file": "scene_12_00.wav",
+        "duration": 2.592,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_12_01.wav",
+        "duration": 6.613333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_12_02.wav",
+        "duration": 2.485333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_12_03.wav",
+        "duration": 4.064,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_12_04.wav",
+        "duration": 5.184,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_12_05.wav",
+        "duration": 4.362666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_12_06.wav",
+        "duration": 5.290666666666667,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "IQだけで人生は決まらない",
+    "duration": 9.2,
+    "audioFiles": [
+      {
+        "file": "scene_13_00.wav",
+        "duration": 3.509333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_13_01.wav",
+        "duration": 4.8853333333333335,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "IQより2倍大事なものがある？",
+    "duration": 14.9,
+    "audioFiles": [
+      {
+        "file": "scene_14_00.wav",
+        "duration": 2.2826666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_14_01.wav",
+        "duration": 5.034666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_14_02.wav",
+        "duration": 1.9093333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_14_03.wav",
+        "duration": 2.5493333333333332,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_14_04.wav",
+        "duration": 1.4613333333333334,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "IQが測れていないもの",
+    "duration": 8.6,
+    "audioFiles": [
+      {
+        "file": "scene_15_00.wav",
+        "duration": 4.256,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_15_01.wav",
+        "duration": 3.552,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "自制力 ＝ IQの2倍の予測力",
+    "duration": 32.8,
+    "audioFiles": [
+      {
+        "file": "scene_16_00.wav",
+        "duration": 5.024,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_16_01.wav",
+        "duration": 6.794666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_16_02.wav",
+        "duration": 6.1546666666666665,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_16_03.wav",
+        "duration": 4.309333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_16_04.wav",
+        "duration": 5.301333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_16_05.wav",
+        "duration": 3.2533333333333334,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "ただし追試では結果が異なる",
+    "duration": 44.2,
+    "audioFiles": [
+      {
+        "file": "scene_17_00.wav",
+        "duration": 3.018666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_17_01.wav",
+        "duration": 4.917333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_17_02.wav",
+        "duration": 4.928,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_17_03.wav",
+        "duration": 2.8586666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_17_04.wav",
+        "duration": 4.149333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_17_05.wav",
+        "duration": 5.962666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_17_06.wav",
+        "duration": 4.96,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_17_07.wav",
+        "duration": 3.477333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_17_08.wav",
+        "duration": 7.061333333333334,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "分析的知能 vs 創造的知能 vs 実践的知能",
+    "duration": 39,
+    "audioFiles": [
+      {
+        "file": "scene_18_00.wav",
+        "duration": 2.506666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_18_01.wav",
+        "duration": 4.768,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_18_02.wav",
+        "duration": 4.373333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_18_03.wav",
+        "duration": 1.3013333333333332,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_18_04.wav",
+        "duration": 6.378666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_18_05.wav",
+        "duration": 4.256,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_18_06.wav",
+        "duration": 5.013333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_18_07.wav",
+        "duration": 2.912,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_18_08.wav",
+        "duration": 4.586666666666667,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "IQが測れないもの：創造性・EQ・対人スキル・動機づけ",
+    "duration": 33.5,
+    "audioFiles": [
+      {
+        "file": "scene_19_00.wav",
+        "duration": 2.7626666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_19_01.wav",
+        "duration": 3.6906666666666665,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_19_02.wav",
+        "duration": 5.354666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_19_03.wav",
+        "duration": 3.7546666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_19_04.wav",
+        "duration": 4.490666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_19_05.wav",
+        "duration": 5.493333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_19_06.wav",
+        "duration": 5.642666666666667,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "文化バイアス＝10〜15点の差",
+    "duration": 30.5,
+    "audioFiles": [
+      {
+        "file": "scene_20_00.wav",
+        "duration": 5.674666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_20_01.wav",
+        "duration": 6.24,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_20_02.wav",
+        "duration": 3.008,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_20_03.wav",
+        "duration": 5.376,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_20_04.wav",
+        "duration": 5.088,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_20_05.wav",
+        "duration": 3.104,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "title": "EQ vs IQ：どちらが成功を予測する？",
+    "duration": 33.7,
+    "audioFiles": [
+      {
+        "file": "scene_21_00.wav",
+        "duration": 3.5946666666666665,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_21_01.wav",
+        "duration": 5.418666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_21_02.wav",
+        "duration": 5.269333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_21_03.wav",
+        "duration": 5.781333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_21_04.wav",
+        "duration": 3.498666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_21_05.wav",
+        "duration": 4.234666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_21_06.wav",
+        "duration": 3.562666666666667,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "IQが高くても非合理的な判断をする人は多い",
+    "duration": 42.8,
+    "audioFiles": [
+      {
+        "file": "scene_22_00.wav",
+        "duration": 3.5733333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_22_01.wav",
+        "duration": 4.117333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_22_02.wav",
+        "duration": 4.384,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_22_03.wav",
+        "duration": 6.944,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_22_04.wav",
+        "duration": 4,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_22_05.wav",
+        "duration": 3.4133333333333336,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_22_06.wav",
+        "duration": 4.1706666666666665,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_22_07.wav",
+        "duration": 3.029333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_22_08.wav",
+        "duration": 3.7973333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_22_09.wav",
+        "duration": 2.208,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "フリン効果の衝撃",
+    "duration": 15.7,
+    "audioFiles": [
+      {
+        "file": "scene_23_00.wav",
+        "duration": 2.752,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_23_01.wav",
+        "duration": 2.1653333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_23_02.wav",
+        "duration": 5.1946666666666665,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_23_03.wav",
+        "duration": 4.181333333333333,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "1950年のIQ100 → 現代のIQ82",
+    "duration": 37.4,
+    "audioFiles": [
+      {
+        "file": "scene_24_00.wav",
+        "duration": 5.557333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_24_01.wav",
+        "duration": 4.010666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_24_02.wav",
+        "duration": 3.989333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_24_03.wav",
+        "duration": 2.453333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_24_04.wav",
+        "duration": 6.624,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_24_05.wav",
+        "duration": 4.704,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_24_06.wav",
+        "duration": 5.941333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_24_07.wav",
+        "duration": 1.568,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "title": "教育・栄養・環境刺激の改善 → IQスコア上昇",
+    "duration": 35.8,
+    "audioFiles": [
+      {
+        "file": "scene_25_00.wav",
+        "duration": 2.3146666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_25_01.wav",
+        "duration": 5.632,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_25_02.wav",
+        "duration": 6.528,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_25_03.wav",
+        "duration": 6.218666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_25_04.wav",
+        "duration": 4.149333333333334,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_25_05.wav",
+        "duration": 3.9146666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_25_06.wav",
+        "duration": 4.736,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "title": "流動性知能(大幅上昇) vs 語彙・算術(ほぼ変化なし)",
+    "duration": 28.9,
+    "audioFiles": [
+      {
+        "file": "scene_26_00.wav",
+        "duration": 3.8826666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_26_01.wav",
+        "duration": 1.9306666666666668,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_26_02.wav",
+        "duration": 4.416,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_26_03.wav",
+        "duration": 4.896,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_26_04.wav",
+        "duration": 3.7973333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_26_05.wav",
+        "duration": 2.7306666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_26_06.wav",
+        "duration": 4.981333333333334,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "title": "逆フリン効果：先進国でスコア低下",
+    "duration": 42.4,
+    "audioFiles": [
+      {
+        "file": "scene_27_00.wav",
+        "duration": 2.6133333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_27_01.wav",
+        "duration": 6.261333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_27_02.wav",
+        "duration": 3.2533333333333334,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_27_03.wav",
+        "duration": 5.376,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_27_04.wav",
+        "duration": 5.386666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_27_05.wav",
+        "duration": 3.2106666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_27_06.wav",
+        "duration": 3.9466666666666668,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_27_07.wav",
+        "duration": 6.005333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_27_08.wav",
+        "duration": 3.488,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "title": "IQが社会的に使われた歴史：移民制限・強制不妊手術",
+    "duration": 39.9,
+    "audioFiles": [
+      {
+        "file": "scene_28_00.wav",
+        "duration": 4.149333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_28_01.wav",
+        "duration": 5.1306666666666665,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_28_02.wav",
+        "duration": 6.538666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_28_03.wav",
+        "duration": 4.490666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_28_04.wav",
+        "duration": 4.714666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_28_05.wav",
+        "duration": 1.632,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_28_06.wav",
+        "duration": 6.613333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_28_07.wav",
+        "duration": 3.989333333333333,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "title": "Griggs v. Duke Power：IQテストは差別的慣行になりうる",
+    "duration": 35.4,
+    "audioFiles": [
+      {
+        "file": "scene_29_00.wav",
+        "duration": 5.866666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_29_01.wav",
+        "duration": 4.373333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_29_02.wav",
+        "duration": 4.949333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_29_03.wav",
+        "duration": 2.5813333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_29_04.wav",
+        "duration": 5.802666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_29_05.wav",
+        "duration": 5.013333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_29_06.wav",
+        "duration": 4.554666666666667,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "title": "IQは\"頭の良さの一側面\"を測る有用な道具",
+    "duration": 30.1,
+    "audioFiles": [
+      {
+        "file": "scene_30_00.wav",
+        "duration": 3.68,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_30_01.wav",
+        "duration": 4.010666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_30_02.wav",
+        "duration": 2.7626666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_30_03.wav",
+        "duration": 4.1386666666666665,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_30_04.wav",
+        "duration": 5.397333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_30_05.wav",
+        "duration": 4.426666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_30_06.wav",
+        "duration": 3.36,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "title": "今日の3つのポイント",
+    "duration": 45.9,
+    "audioFiles": [
+      {
+        "file": "scene_31_00.wav",
+        "duration": 2.4,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_31_01.wav",
+        "duration": 6.421333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_31_02.wav",
+        "duration": 5.866666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_31_03.wav",
+        "duration": 4.938666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_31_04.wav",
+        "duration": 8.234666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_31_05.wav",
+        "duration": 4.725333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_31_06.wav",
+        "duration": 5.568,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_31_07.wav",
+        "duration": 5.1306666666666665,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "title": "ビネーの願い：テストの数字よりも、一人ひとりの個性を",
+    "duration": 21.7,
+    "audioFiles": [
+      {
+        "file": "scene_32_00.wav",
+        "duration": 3.989333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_32_01.wav",
+        "duration": 3.808,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_32_02.wav",
+        "duration": 3.6266666666666665,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_32_03.wav",
+        "duration": 3.3173333333333335,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_32_04.wav",
+        "duration": 5.237333333333333,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "title": "あなたの\"頭の良さ\"は、数字では測れない",
+    "duration": 39.1,
+    "audioFiles": [
+      {
+        "file": "scene_33_00.wav",
+        "duration": 2.976,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_33_01.wav",
+        "duration": 1.2693333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_33_02.wav",
+        "duration": 3.648,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_33_03.wav",
+        "duration": 6.325333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_33_04.wav",
+        "duration": 2.272,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_33_05.wav",
+        "duration": 3.562666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_33_06.wav",
+        "duration": 4.757333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_33_07.wav",
+        "duration": 3.936,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_33_08.wav",
+        "duration": 4.1706666666666665,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_33_09.wav",
+        "duration": 3.029333333333333,
+        "speaker": "ずんだもん"
+      }
+    ]
+  }
+]

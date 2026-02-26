@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>「マルチタスク」って本当にできてるの？</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ===== Block 1: 導入 ===== -->
+
+    <!-- Scene 0: タイトルカード -->
+    <div class="scene" id="scene-0">
+        <canvas id="canvas-0" class="bg-canvas"></canvas>
+        <div class="content title-scene">
+            <div class="section-badge accent-bg-primary">MULTITASKING MYTH</div>
+            <h1 class="title-huge">「マルチタスク」って<br>本当に<span class="accent-primary">できてる</span>の？</h1>
+            <div class="title-sub">── 脳科学が暴くマルチタスクの真実</div>
+        </div>
+    </div>
+
+    <!-- Scene 1: テキスト強調「得意な人ほど、実は下手だった」 -->
+    <div class="scene" id="scene-1">
+        <canvas id="canvas-1" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">?</div>
+                <div class="alert-title"><span class="accent-primary">スタンフォード大学</span>の研究結果</div>
+                <div class="alert-body-large accent-coral">「得意な人ほど<br>実は下手だった」</div>
+                <div class="alert-sub">── Ophir, Nass & Wagner (2009)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 2: 段階的リスト「この動画でわかること」 -->
+    <div class="scene" id="scene-2">
+        <div class="content card-layout">
+            <h2 class="scene-title">この動画でわかること</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text">「マルチタスク」の<span class="accent-primary">そもそもの正体</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-coral">2</div>
+                    <div class="numbered-text">どれだけの<span class="accent-coral">生産性を奪っている</span>か</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-amber">3</div>
+                    <div class="numbered-text">なぜ<span class="accent-amber">得意な人ほど下手</span>なのか</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Block 2: 「マルチタスク」ってそもそも何？ ===== -->
+
+    <!-- Scene 3: タイトルカード「マルチタスクの正体」 -->
+    <div class="scene" id="scene-3">
+        <canvas id="canvas-3" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-teal">DEFINITION</div>
+            <h2 class="title-medium">「マルチタスク」の<br><span class="accent-teal">正体</span></h2>
+        </div>
+    </div>
+
+    <!-- Scene 4: 引用カード「IBM System/360（1965年）」 -->
+    <div class="scene" id="scene-4">
+        <div class="content center-layout">
+            <h2 class="scene-title">マルチタスクの語源</h2>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">「マルチタスク」は<br><span class="accent-primary">コンピューター用語</span>だった</div>
+                <div class="quote-source">IBM System/360 論文 (1965)</div>
+            </div>
+            <div class="flow-chain stagger-item">
+                <div class="flow-node">
+                    <div class="flow-year">1965</div>
+                    <div class="flow-text"><span class="flow-name">IBM</span><br>コンピューター用語<br><span
+                            class="flow-sub">複数プログラムの同時実行</span></div>
+                </div>
+                <div class="flow-arrow">&rarr;</div>
+                <div class="flow-node">
+                    <div class="flow-year">1990s</div>
+                    <div class="flow-text"><span class="flow-name">人間へ転用</span><br>日本ではWin95時代<br><span
+                            class="flow-sub">「デキる人」のイメージに</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 5: フロー図「タスクスイッチングの2段階」 -->
+    <div class="scene" id="scene-5">
+        <div class="content card-layout">
+            <h2 class="scene-title">脳がやっているのは「タスクスイッチング」</h2>
+            <div class="source-badge stagger-item">APA / Rogers & Monsell (1995)</div>
+            <div class="switch-visual stagger-item">
+                <div class="switch-brain">
+                    <div class="switch-label-top">タスクA</div>
+                    <svg viewBox="0 0 200 60" class="switch-svg">
+                        <rect x="10" y="10" width="60" height="40" rx="8" class="task-box task-a" />
+                        <text x="40" y="35" text-anchor="middle" class="task-text">資料作成</text>
+                        <path d="M80 30 L120 30" class="switch-arrow-path" />
+                        <polygon points="118,25 128,30 118,35" class="switch-arrow-head" />
+                        <rect x="130" y="10" width="60" height="40" rx="8" class="task-box task-b" />
+                        <text x="160" y="35" text-anchor="middle" class="task-text">チャット返信</text>
+                    </svg>
+                    <div class="switch-label-bottom">高速で切り替え</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">同時にやっているように見えるだけ<br>実際は<span class="accent-coral">1つずつ順番に処理</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 6: 段階的リスト「ゴールシフティングとルールアクティベーション」 -->
+    <div class="scene" id="scene-6">
+        <div class="content card-layout">
+            <h2 class="scene-title">切り替えの2段階メカニズム</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text"><span class="accent-primary">ゴールシフティング</span><br><span
+                            class="numbered-desc">「やるべき目標」を切り替える</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-coral">2</div>
+                    <div class="numbered-text"><span class="accent-coral">ルールアクティベーション</span><br><span
+                            class="numbered-desc">前のルールを消し、新しいルールを読み込む</span></div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">この2ステップが<span class="accent-coral">毎回</span>脳内で無意識に起きている</div>
+        </div>
+    </div>
+
+    <!-- Scene 7: 比較対照「自動処理 vs 認知処理」 -->
+    <div class="scene" id="scene-7">
+        <div class="content center-layout">
+            <h2 class="scene-title">自動処理 vs 認知処理</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge safe-badge">同時OK</div>
+                    <div class="vs-title accent-teal">自動化された動作</div>
+                    <div class="vs-desc">歩きながらガムを噛む<br>料理しながら鼻歌</div>
+                    <div class="vs-detail">認知リソース<span class="accent-teal">不要</span></div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge danger-badge">同時NG</div>
+                    <div class="vs-title accent-coral">認知的に重い作業</div>
+                    <div class="vs-desc">メール読みながら会議<br>運転しながらスマホ</div>
+                    <div class="vs-detail">認知リソース<span class="accent-coral">必須</span></div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">脳は<span class="accent-coral">シングルコアのCPU</span>のようなもの</div>
+        </div>
+    </div>
+
+    <!-- ===== Block 3: マルチタスクの隠れたコスト ===== -->
+
+    <!-- Scene 8: タイトルカード「マルチタスクの隠れたコスト」 -->
+    <div class="scene" id="scene-8">
+        <canvas id="canvas-8" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral">HIDDEN COST</div>
+            <h2 class="title-medium">マルチタスクの<br><span class="accent-coral">隠れたコスト</span></h2>
+        </div>
+    </div>
+
+    <!-- Scene 9: フロー図「スイッチングコストの発生メカニズム」 -->
+    <div class="scene" id="scene-9">
+        <div class="content card-layout">
+            <h2 class="scene-title">スイッチングコストの発生</h2>
+            <div class="flow-chain">
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">1</div>
+                    <div class="flow-text"><span class="flow-name">企画書</span><br>集中して作業中<br><span
+                            class="flow-sub">フロー状態</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">2</div>
+                    <div class="flow-text"><span class="flow-name accent-coral">通知!</span><br>Slackを確認<br><span
+                            class="flow-sub">目標切替+ルール切替</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">3</div>
+                    <div class="flow-text"><span class="flow-name">企画書に戻る</span><br>「どこまで書いた？」<br><span
+                            class="flow-sub accent-coral">復帰コスト発生</span></div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">たった1往復で脳は<span class="accent-coral">3回</span>も切り替えをしている</div>
+        </div>
+    </div>
+
+    <!-- Scene 10: テキスト強調「注意残余」 -->
+    <div class="scene" id="scene-10">
+        <canvas id="canvas-10" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <h2 class="scene-title">注意残余 (Attention Residue)</h2>
+            <div class="source-badge stagger-item">Sophie Leroy (2009) / Organizational Behavior</div>
+            <div class="emphasis-text stagger-item">切り替えても</div>
+            <div class="emphasis-text-large stagger-item">頭は<span class="accent-coral">前のタスクのまま</span></div>
+            <div class="emphasis-sub stagger-item">特に<span class="accent-amber">未完了のタスク</span>ほど注意が残りやすい</div>
+        </div>
+    </div>
+
+    <!-- Scene 11: 数値インパクト「生産性 マイナス40%」 -->
+    <div class="scene" id="scene-11">
+        <div class="content center-layout">
+            <h2 class="scene-title">生産性への影響</h2>
+            <div class="source-badge stagger-item">APA / 複数の認知心理学研究</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-coral">-40</span><span class="num-unit">%</span>
+            </div>
+            <div class="emphasis-sub stagger-item">1日8時間のうち<span class="accent-coral">約3時間</span>がスイッチングコストで消える</div>
+            <div class="footnote stagger-item">一生懸命やっているのに、切り替えのたびに少しずつ奪われている</div>
+        </div>
+    </div>
+
+    <!-- Scene 12: 比較対照「IQ10ポイント低下 ≒ 徹夜明け」 -->
+    <div class="scene" id="scene-12">
+        <div class="content center-layout">
+            <h2 class="scene-title">通知だけでIQが低下</h2>
+            <div class="source-badge stagger-item">Glenn Wilson / London University / HP委託研究</div>
+            <div class="bar-comparison stagger-item">
+                <div class="bar-row">
+                    <div class="bar-label">大麻</div>
+                    <div class="bar-track">
+                        <div class="bar-fill bar-a-fill" style="--w:40%"></div>
+                    </div>
+                    <div class="bar-value">-4~6pt</div>
+                </div>
+                <div class="bar-row">
+                    <div class="bar-label">メール通知</div>
+                    <div class="bar-track">
+                        <div class="bar-fill bar-b-fill" style="--w:70%"></div>
+                    </div>
+                    <div class="bar-value accent-coral">-10pt</div>
+                </div>
+            </div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-coral">IQ -10</span><span class="num-unit">pt</span>
+            </div>
+            <div class="emphasis-sub stagger-item"><span class="accent-coral">徹夜明け</span>と同程度の認知機能低下</div>
+        </div>
+    </div>
+
+    <!-- Scene 13: 注意喚起「脳構造への長期的ダメージ」 -->
+    <div class="scene dark-scene" id="scene-13">
+        <div class="content center-layout">
+            <h2 class="scene-title light-text">脳構造への長期的ダメージ</h2>
+            <div class="dark-list">
+                <div class="dark-item stagger-item">
+                    <div class="dark-icon accent-coral">!</div>
+                    <div class="dark-content">
+                        <div class="dark-title">コルチゾール増加</div>
+                        <div class="dark-desc">ストレスホルモンの慢性的な上昇</div>
+                    </div>
+                </div>
+                <div class="dark-item stagger-item">
+                    <div class="dark-icon accent-coral">!</div>
+                    <div class="dark-content">
+                        <div class="dark-title">前帯状皮質（ACC）灰白質密度低下</div>
+                        <div class="dark-desc">感情・認知の制御に関わる部位が萎縮</div>
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-sub light-text stagger-item">パフォーマンスが落ちるだけでなく<br><span
+                    class="accent-coral">脳自体が変わる</span>可能性がある</div>
+        </div>
+    </div>
+
+    <!-- ===== Block 4: 得意な人ほど下手という皮肉 ===== -->
+
+    <!-- Scene 14: タイトルカード「得意な人ほど下手という皮肉」 -->
+    <div class="scene" id="scene-14">
+        <canvas id="canvas-14" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-amber">PARADOX</div>
+            <h2 class="title-medium">得意な人ほど<br><span class="accent-amber">下手という皮肉</span></h2>
+        </div>
+    </div>
+
+    <!-- Scene 15: 引用カード「スタンフォード大学 Ophir, Nass, Wagner (2009)」 -->
+    <div class="scene" id="scene-15">
+        <div class="content center-layout">
+            <h2 class="scene-title">スタンフォード大学の研究</h2>
+            <div class="source-badge stagger-item">Ophir, Nass & Wagner (2009) / PNAS</div>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge safe-badge">ライト</div>
+                    <div class="vs-title">ライトマルチタスカー</div>
+                    <div class="vs-desc">あまりメディアを<br>同時使用しない</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge danger-badge">ヘビー</div>
+                    <div class="vs-title">ヘビーマルチタスカー</div>
+                    <div class="vs-desc">TV+スマホ+PC<br>常に同時使用</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 16: 比較対照「"得意"の自己認知 vs 実際のパフォーマンス」 -->
+    <div class="scene" id="scene-16">
+        <div class="content card-layout">
+            <h2 class="scene-title">ヘビーマルチタスカーの成績</h2>
+            <div class="source-badge stagger-item">3つの認知テストすべてで劣っていた</div>
+            <div class="triple-card">
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-coral">X</div>
+                    <div class="factor-name">注意の制御</div>
+                    <div class="factor-desc">不要な情報を無視できない</div>
+                </div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-coral">X</div>
+                    <div class="factor-name">記憶の管理</div>
+                    <div class="factor-desc">ワーキングメモリが混乱</div>
+                </div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-coral">X</div>
+                    <div class="factor-name">切り替え能力</div>
+                    <div class="factor-desc">得意なはずなのに下手</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">「認知的メリットを必死に探したが一つも見つからなかった」── 研究者</div>
+        </div>
+    </div>
+
+    <!-- Scene 17: 注意喚起「"女性はマルチタスクが得意"は科学的根拠なし」 -->
+    <div class="scene" id="scene-17">
+        <div class="content center-layout">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon alert-red">!</div>
+                <div class="alert-title">「女性はマルチタスクが得意」は<br><span class="accent-coral">科学的根拠なし</span></div>
+                <div class="alert-sub">PLOS ONE / メルボルン大学 / NIH 複数のメタ分析</div>
+            </div>
+            <div class="emphasis-sub stagger-item">男女のマルチタスク能力に<span
+                    class="accent-coral">決定的な差は未発見</span><br>「たくさんの仕事を抱えている」ことと「同時にできる」ことは違う</div>
+        </div>
+    </div>
+
+    <!-- Scene 18: 数値インパクト「スマホが視界にあるだけで認知能力が低下」 -->
+    <div class="scene" id="scene-18">
+        <div class="content center-layout">
+            <h2 class="scene-title">Brain Drain 効果</h2>
+            <div class="source-badge stagger-item">Ward et al. / テキサス大学 (2017) / JACR</div>
+            <div class="brain-drain-visual stagger-item">
+                <div class="drain-card drain-on">
+                    <div class="drain-icon">机上</div>
+                    <div class="drain-label">スマホが<span class="accent-coral">机の上</span></div>
+                    <div class="drain-result accent-coral">認知能力 低下</div>
+                </div>
+                <div class="drain-arrow">&rarr;</div>
+                <div class="drain-card drain-off">
+                    <div class="drain-icon">別室</div>
+                    <div class="drain-label">スマホが<span class="accent-teal">別の部屋</span></div>
+                    <div class="drain-result accent-teal">認知能力 正常</div>
+                </div>
+            </div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-coral">使っていなくても</span>ダメ</div>
+        </div>
+    </div>
+
+    <!-- Scene 19: 横並びカード「ながらスマホ」 -->
+    <div class="scene" id="scene-19">
+        <div class="content card-layout">
+            <h2 class="scene-title">命に関わるマルチタスク</h2>
+            <div class="source-badge stagger-item">警察庁統計 (2025)</div>
+            <div class="triple-card">
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-coral">!</div>
+                    <div class="factor-name">死亡事故率</div>
+                    <div class="factor-desc"><span class="accent-coral big-inline">3.7倍</span></div>
+                </div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-coral">!</div>
+                    <div class="factor-name">死亡・重傷事故</div>
+                    <div class="factor-desc"><span class="accent-coral big-inline">148件</span><br>過去最多</div>
+                </div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-amber">!</div>
+                    <div class="factor-name">2秒のよそ見</div>
+                    <div class="factor-desc">時速60kmで<br><span class="accent-amber big-inline">33m</span>進む</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Block 5: スーパータスカー ===== -->
+
+    <!-- Scene 20: タイトルカード「例外：スーパータスカーの存在」 -->
+    <div class="scene" id="scene-20">
+        <canvas id="canvas-20" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary">EXCEPTION</div>
+            <h2 class="title-medium">例外は<span class="accent-primary">存在する</span><br>── スーパータスカー</h2>
+        </div>
+    </div>
+
+    <!-- Scene 21: 数値インパクト「人口のたった2%」 -->
+    <div class="scene" id="scene-21">
+        <div class="content center-layout">
+            <h2 class="scene-title">スーパータスカーの割合</h2>
+            <div class="source-badge stagger-item">Watson & Strayer (2010) / Psychonomic Bulletin & Review</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-primary">2</span><span class="num-unit">%</span>
+            </div>
+            <div class="emphasis-sub stagger-item">マルチタスクをしても<span class="accent-primary">パフォーマンスが落ちない</span>人</div>
+            <div class="supertasker-bar stagger-item">
+                <div class="bar-98">98% 通常</div>
+                <div class="bar-2">2%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 22: 引用カード「Watson & Strayer研究」 -->
+    <div class="scene" id="scene-22">
+        <div class="content center-layout">
+            <h2 class="scene-title">運転+記憶課題の実験</h2>
+            <div class="source-badge stagger-item">Watson & Strayer (2010)</div>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge danger-badge">98%</div>
+                    <div class="vs-title">通常の人</div>
+                    <div class="vs-desc">運転 or 記憶<br>どちらかが<span class="accent-coral">大幅低下</span></div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right-env stagger-item">
+                    <div class="vs-badge safe-badge">2%</div>
+                    <div class="vs-title">スーパータスカー</div>
+                    <div class="vs-desc">両方の成績が<br><span class="accent-teal">維持 or 向上</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 23: テキスト強調「でも、あなたは多分98%側」 -->
+    <div class="scene" id="scene-23">
+        <canvas id="canvas-23" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">でも、</div>
+            <div class="emphasis-text-large stagger-item">あなたは多分<span class="accent-coral">98%側</span></div>
+            <div class="emphasis-sub stagger-item">「得意だと思ってる人ほど下手」── スタンフォード研究<br>スーパータスカーかどうかの<span
+                    class="accent-coral">自己判断は不可能</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 24: 段階的リスト「ディープワークの価値」 -->
+    <div class="scene" id="scene-24">
+        <div class="content card-layout">
+            <h2 class="scene-title">ディープワークの価値</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-coral">!</div>
+                    <div class="numbered-text">デジタルマルチタスクは<span class="accent-coral">浅い処理の神経経路</span>を強化</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-amber">!</div>
+                    <div class="numbered-text">SNS即反応の癖 &rarr; <span class="accent-amber">深く考える力が弱まる</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-primary">!</div>
+                    <div class="numbered-text">「じっくり考える」= <span class="accent-primary">最も価値ある能力</span>が失われる</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Block 6: まとめ ===== -->
+
+    <!-- Scene 25: まとめカード「マルチタスクの真実 ― 3つのポイント」 -->
+    <div class="scene" id="scene-25">
+        <canvas id="canvas-25" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary">CONCLUSION</div>
+            <h2 class="title-medium">マルチタスクの<span class="accent-primary">真実</span></h2>
+            <div class="emphasis-sub stagger-item">── 3つのポイント</div>
+        </div>
+    </div>
+
+    <!-- Scene 26: 段階的リスト「今日からできる3つの対策」 -->
+    <div class="scene" id="scene-26">
+        <div class="content card-layout">
+            <h2 class="scene-title">マルチタスクの真実</h2>
+            <div class="summary-list">
+                <div class="summary-item stagger-item">
+                    <div class="summary-number accent-bg-primary">1</div>
+                    <div class="summary-text">脳は<span class="accent-primary">タスクスイッチング</span>をしているだけ</div>
+                </div>
+                <div class="summary-item stagger-item">
+                    <div class="summary-number accent-bg-coral">2</div>
+                    <div class="summary-text">切り替えコストで生産性<span class="accent-coral">-40%</span>・IQ<span
+                            class="accent-coral">-10pt</span></div>
+                </div>
+                <div class="summary-item stagger-item">
+                    <div class="summary-number accent-bg-amber">3</div>
+                    <div class="summary-text">得意だと思う人ほど<span class="accent-amber">実はパフォーマンスが低い</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 27: テキスト強調「Ready-to-Resume Plan」 -->
+    <div class="scene" id="scene-27">
+        <div class="content center-layout">
+            <h2 class="scene-title">対策 1：Ready-to-Resume Plan</h2>
+            <div class="source-badge stagger-item">Sophie Leroy 研究で効果確認</div>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">中断前に<br><span class="accent-primary">「次にやること」をメモ</span>する</div>
+                <div class="quote-source">注意残余を大幅に軽減</div>
+            </div>
+            <div class="emphasis-sub stagger-item">たった一言のメモで<span class="accent-primary">復帰コストが激減</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 28: 横並びカード「ポモドーロ + スマホ隔離」 -->
+    <div class="scene" id="scene-28">
+        <div class="content card-layout">
+            <h2 class="scene-title">対策 2 & 3</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge safe-badge">対策 2</div>
+                    <div class="vs-title accent-primary">ポモドーロ</div>
+                    <div class="vs-desc">25分集中 + 5分休憩<br>4回で長い休憩</div>
+                    <div class="vs-detail">切り替えコストを<span class="accent-primary">最小化</span></div>
+                </div>
+                <div class="vs-divider stagger-item">+</div>
+                <div class="vs-card vs-right-env stagger-item">
+                    <div class="vs-badge safe-badge">対策 3</div>
+                    <div class="vs-title accent-teal">スマホ隔離</div>
+                    <div class="vs-desc">物理的に別の部屋へ<br>裏返しでもダメ</div>
+                    <div class="vs-detail">Brain Drainを<span class="accent-teal">完全遮断</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 29: テキスト強調「コアメッセージ」 -->
+    <div class="scene" id="scene-29">
+        <canvas id="canvas-29" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">マルチタスクは<span class="accent-coral">幻想</span></div>
+            <div class="emphasis-text-large stagger-item">一つに集中することが<br><span class="accent-primary">最強の戦略</span></div>
+            <div class="emphasis-sub stagger-item">── シングルタスク宣言</div>
+        </div>
+    </div>
+
+    <!-- Scene 30: エンディング -->
+    <div class="scene" id="scene-30">
+        <canvas id="canvas-30" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="final-message stagger-item">
+                <div class="message-cross">25分だけでいい</div>
+                <div class="message-main">スマホを<span class="accent-primary">別の部屋</span>に置いて<br>目の前のことだけに<br><span
+                        class="accent-primary">集中</span>してみよう</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -103,16 +103,14 @@ async function recordChunk(chunkId, scenes, fileUrl, outputPath) {
 
     for (let si = 0; si < scenes.length; si++) {
         const scene = scenes[si];
-        // Total frames = scene duration + transition frames (0.6s)
-        const transitionFrames = (si === 0 && firstSceneId === 0) ? 0 : Math.ceil(0.6 * FPS);
+        // Total frames = scene duration only (transition is within the duration)
         const sceneFrames = Math.ceil(scene.duration * FPS);
-        const totalFrames = sceneFrames + transitionFrames;
 
         // Navigate to scene - DON'T wait, capture the transition!
         await page.evaluate((idx) => window.goTo(idx), scene.id);
 
-        // Capture all frames including transition
-        for (let f = 0; f < totalFrames; f++) {
+        // Capture all frames (transition animation plays within scene duration)
+        for (let f = 0; f < sceneFrames; f++) {
             if (latestFrameBuffer && !ffmpeg.stdin.destroyed) {
                 ffmpeg.stdin.write(latestFrameBuffer);
                 frameCount++;

@@ -1,0 +1,5 @@
+file 'D:/myfolder/動画生成/main content/presentation/iq_intelligence/audio/scene_08_00.wav'
+file 'D:/myfolder/動画生成/main content/presentation/iq_intelligence/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/iq_intelligence/audio/scene_08_01.wav'
+file 'D:/myfolder/動画生成/main content/presentation/iq_intelligence/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/iq_intelligence/audio/scene_08_02.wav'

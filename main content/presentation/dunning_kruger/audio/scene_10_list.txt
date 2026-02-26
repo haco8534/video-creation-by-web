@@ -1,0 +1,3 @@
+file 'D:/myfolder/動画生成/main content/presentation/dunning_kruger/audio/scene_10_00.wav'
+file 'D:/myfolder/動画生成/main content/presentation/dunning_kruger/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/dunning_kruger/audio/scene_10_01.wav'

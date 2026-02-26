@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQって本当に「頭の良さ」を測れてるの？</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ===== Block 1: 導入 ===== -->
+
+    <!-- Scene 0: タイトルカード -->
+    <div class="scene" id="scene-0">
+        <canvas id="canvas-0" class="bg-canvas"></canvas>
+        <div class="content title-scene">
+            <div class="section-badge accent-bg-indigo">INTELLIGENCE QUOTIENT</div>
+            <h1 class="title-huge">IQって本当に<br><span class="accent-indigo">"頭の良さ"</span>を<br>測れてるの？</h1>
+            <div class="title-sub">── 科学が明かすIQの真実と限界</div>
+        </div>
+    </div>
+
+    <!-- Scene 1: テキスト強調「ビネーは"知能を測る道具ではない"と言っていた」 -->
+    <div class="scene" id="scene-1">
+        <canvas id="canvas-1" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">?</div>
+                <div class="alert-title">IQテストの<span class="accent-amber">生みの親</span>は言った</div>
+                <div class="alert-body-large accent-coral">「これは知能を測るための<br>道具じゃない」</div>
+                <div class="alert-sub">── アルフレッド・ビネー (1905)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 2: 段階的リスト「この動画でわかる3つのこと」 -->
+    <div class="scene" id="scene-2">
+        <div class="content card-layout">
+            <h2 class="scene-title">この動画でわかること</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text">IQが<span class="accent-indigo">測れているもの</span>は何か</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-amber">2</div>
+                    <div class="numbered-text">IQが<span class="accent-amber">測れていないもの</span>は何か</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-coral">3</div>
+                    <div class="numbered-text">IQの数字が<span class="accent-coral">時代で変わる</span>衝撃の事実</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Block 2: IQテストの基本 ===== -->
+
+    <!-- Scene 3: フロー図「歴史」 -->
+    <div class="scene" id="scene-3">
+        <div class="content card-layout">
+            <h2 class="scene-title">IQテストの歴史</h2>
+            <div class="flow-chain">
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">1905</div>
+                    <div class="flow-text"><span class="flow-name">ビネー</span><br>世界初の知能検査<br><span
+                            class="flow-sub">目的：子どもの教育支援</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">1912</div>
+                    <div class="flow-text"><span class="flow-name">シュテルン</span><br>IQ概念を考案<br><span
+                            class="flow-sub">精神年齢/実年齢&times;100</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">1916</div>
+                    <div class="flow-text"><span class="flow-name">ターマン</span><br>全世界に普及<br><span
+                            class="flow-sub">人の分類ツールに変質</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">1939</div>
+                    <div class="flow-text"><span class="flow-name">ウェクスラー</span><br>複合的知能尺度<br><span
+                            class="flow-sub">言語+動作+処理速度</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 4: テキスト強調「IQの計算式」 -->
+    <div class="scene" id="scene-4">
+        <div class="content center-layout">
+            <h2 class="scene-title">IQの計算式</h2>
+            <div class="formula-container stagger-item">
+                <div class="formula-part">精神年齢</div>
+                <div class="formula-op">&divide;</div>
+                <div class="formula-part">実年齢</div>
+                <div class="formula-op">&times;</div>
+                <div class="formula-part accent-bg-indigo">100</div>
+                <div class="formula-eq">=</div>
+                <div class="formula-result">IQ</div>
+            </div>
+            <div class="emphasis-sub stagger-item">IQ100 ＝ 同年齢の平均</div>
+            <div class="comparison-note stagger-item">現在は<span class="accent-indigo">偏差IQ</span>（同年齢集団での相対位置）が主流</div>
+        </div>
+    </div>
+
+    <!-- Scene 5: 引用カード「ウェクスラー」 -->
+    <div class="scene" id="scene-5">
+        <div class="content center-layout">
+            <h2 class="scene-title">知能は1つじゃない</h2>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">知能は一つの能力ではなく<br><span class="accent-indigo">複数の能力の複合体</span>である</div>
+                <div class="quote-source">デビッド・ウェクスラー (1939)</div>
+            </div>
+            <div class="triple-card stagger-item">
+                <div class="metric-card">
+                    <div class="metric-name">言語理解</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-name">知覚推理</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-name">処理速度</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-name">作動記憶</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 6: 数値インパクト「g因子」 -->
+    <div class="scene" id="scene-6">
+        <div class="content center-layout">
+            <h2 class="scene-title">g因子（一般知能因子）</h2>
+            <div class="source-badge stagger-item">スピアマン (20世紀初頭) 因子分析で発見</div>
+            <div class="g-factor-visual stagger-item">
+                <svg viewBox="0 0 300 200" class="g-svg">
+                    <circle cx="150" cy="100" r="55" class="g-core" />
+                    <text x="150" y="105" text-anchor="middle" class="g-label">g</text>
+                    <circle cx="70" cy="55" r="30" class="g-orbit" /><text x="70" y="60" text-anchor="middle"
+                        class="g-sub-label">数学</text>
+                    <circle cx="230" cy="55" r="30" class="g-orbit" /><text x="230" y="60" text-anchor="middle"
+                        class="g-sub-label">言語</text>
+                    <circle cx="70" cy="150" r="30" class="g-orbit" /><text x="70" y="155" text-anchor="middle"
+                        class="g-sub-label">空間</text>
+                    <circle cx="230" cy="150" r="30" class="g-orbit" /><text x="230" y="155" text-anchor="middle"
+                        class="g-sub-label">記憶</text>
+                    <line x1="115" y1="70" x2="95" y2="60" class="g-line" />
+                    <line x1="185" y1="70" x2="205" y2="60" class="g-line" />
+                    <line x1="115" y1="130" x2="95" y2="145" class="g-line" />
+                    <line x1="185" y1="130" x2="205" y2="145" class="g-line" />
+                </svg>
+            </div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-indigo">40-50</span><span class="num-unit">%</span>
+            </div>
+            <div class="emphasis-sub stagger-item">認知テスト間のパフォーマンス差を説明</div>
+        </div>
+    </div>
+
+    <!-- Scene 7: 注意喚起「残り50%」 -->
+    <div class="scene" id="scene-7">
+        <div class="content center-layout">
+            <h2 class="scene-title">しかし残りの半分は？</h2>
+            <div class="bar-chart-container stagger-item">
+                <div class="stacked-bar">
+                    <div class="bar-segment bar-known"><span>g因子 ~50%</span></div>
+                    <div class="bar-segment bar-unknown"><span>未知の要因 ~50%</span></div>
+                </div>
+            </div>
+            <div class="emphasis-text stagger-item">IQが測っているのは<br>知能の<span class="accent-coral">一部だけ</span></div>
+            <div class="emphasis-sub stagger-item">g因子が「実在する生物学的実体」か「統計的人工物」かすら議論中</div>
+        </div>
+    </div>
+
+    <!-- ===== Block 3: IQが測れているもの ===== -->
+
+    <!-- Scene 8: セクションタイトル -->
+    <div class="scene" id="scene-8">
+        <canvas id="canvas-8" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-indigo">TOPIC 1</div>
+            <h2 class="title-medium">IQが<span class="accent-indigo">"ある程度"</span><br>測れているもの</h2>
+        </div>
+    </div>
+
+    <!-- Scene 9: 数値インパクト「相関0.5」 -->
+    <div class="scene" id="scene-9">
+        <div class="content center-layout">
+            <h2 class="scene-title">IQ と 学業成績の相関</h2>
+            <div class="source-badge stagger-item">Roth et al. (2015) メタ分析 / 10万人以上</div>
+            <div class="correlation-visual stagger-item">
+                <svg viewBox="0 0 280 200" class="scatter-svg">
+                    <line x1="40" y1="180" x2="260" y2="180" stroke="#ccc" stroke-width="1" />
+                    <line x1="40" y1="180" x2="40" y2="20" stroke="#ccc" stroke-width="1" />
+                    <text x="150" y="198" text-anchor="middle" class="axis-label">IQ &rarr;</text>
+                    <text x="12" y="100" text-anchor="middle" class="axis-label" transform="rotate(-90,12,100)">成績
+                        &rarr;</text>
+                    <line x1="60" y1="160" x2="240" y2="40" stroke="var(--indigo)" stroke-width="2.5"
+                        stroke-dasharray="6,3" class="trend-line" />
+                    <circle cx="80" cy="140" r="4" class="scatter-dot" style="--d:0" />
+                    <circle cx="100" cy="120" r="4" class="scatter-dot" style="--d:1" />
+                    <circle cx="90" cy="150" r="4" class="scatter-dot" style="--d:2" />
+                    <circle cx="120" cy="100" r="4" class="scatter-dot" style="--d:3" />
+                    <circle cx="110" cy="130" r="4" class="scatter-dot" style="--d:4" />
+                    <circle cx="140" cy="90" r="4" class="scatter-dot" style="--d:5" />
+                    <circle cx="130" cy="110" r="4" class="scatter-dot" style="--d:6" />
+                    <circle cx="160" cy="80" r="4" class="scatter-dot" style="--d:7" />
+                    <circle cx="150" cy="100" r="4" class="scatter-dot" style="--d:8" />
+                    <circle cx="170" cy="70" r="4" class="scatter-dot" style="--d:9" />
+                    <circle cx="180" cy="60" r="4" class="scatter-dot" style="--d:10" />
+                    <circle cx="200" cy="50" r="4" class="scatter-dot" style="--d:11" />
+                    <circle cx="190" cy="80" r="4" class="scatter-dot" style="--d:12" />
+                    <circle cx="220" cy="45" r="4" class="scatter-dot" style="--d:13" />
+                    <circle cx="140" cy="150" r="4" class="scatter-dot" style="--d:14" />
+                    <circle cx="170" cy="120" r="4" class="scatter-dot" style="--d:15" />
+                    <circle cx="100" cy="80" r="4" class="scatter-dot" style="--d:16" />
+                    <circle cx="210" cy="90" r="4" class="scatter-dot" style="--d:17" />
+                </svg>
+            </div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-indigo">r = 0.5</span>
+            </div>
+            <div class="emphasis-sub stagger-item">言語性IQ r=0.53 / 非言語性IQ r=0.44</div>
+        </div>
+    </div>
+
+    <!-- Scene 10: 比較対照「25% vs 75%」 -->
+    <div class="scene" id="scene-10">
+        <div class="content center-layout">
+            <h2 class="scene-title">学業成績を決めるもの</h2>
+            <div class="split-visual stagger-item">
+                <div class="split-ring">
+                    <svg viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="54" class="ring-bg" />
+                        <circle cx="60" cy="60" r="54" class="ring-fill ring-iq" style="--percent:25" />
+                    </svg>
+                    <div class="ring-center-label"><span class="accent-indigo">25%</span></div>
+                </div>
+                <div class="split-details">
+                    <div class="split-row"><span class="split-dot dot-iq"></span>IQで説明：<span
+                            class="accent-indigo">25%</span></div>
+                    <div class="split-row"><span class="split-dot dot-other"></span>IQ以外：<span
+                            class="accent-amber">75%</span></div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">相関 r=0.5 の二乗 = 決定係数 R<sup>2</sup>=0.25</div>
+        </div>
+    </div>
+
+    <!-- Scene 11: 段階的リスト「IQ以外の要因」 -->
+    <div class="scene" id="scene-11">
+        <div class="content card-layout">
+            <h2 class="scene-title">IQ以外の学業成績要因</h2>
+            <div class="source-badge stagger-item">Poropat (2009) メタ分析</div>
+            <div class="triple-card">
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-indigo">C</div>
+                    <div class="factor-name">誠実性</div>
+                    <div class="factor-desc">コツコツ努力する力</div>
+                </div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-amber">S</div>
+                    <div class="factor-name">自制力</div>
+                    <div class="factor-desc">誘惑に負けない力</div>
+                </div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-teal">E</div>
+                    <div class="factor-name">環境</div>
+                    <div class="factor-desc">教育・家庭・栄養</div>
+                </div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-coral">M</div>
+                    <div class="factor-name">動機づけ</div>
+                    <div class="factor-desc">やる気・学習習慣</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">IQが高くても成績不振の「アンダーアチーバー」、平均IQでも成績優秀な「オーバーアチーバー」が存在</div>
+        </div>
+    </div>
+
+    <!-- Scene 12: 横並びカード「遺伝 × 環境」 -->
+    <div class="scene" id="scene-12">
+        <div class="content center-layout">
+            <h2 class="scene-title">遺伝 と 環境</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge safe-badge">双子研究</div>
+                    <div class="vs-title">遺伝率</div>
+                    <div class="impact-number"><span class="big-num accent-indigo"
+                            style="font-size:3rem">0.5-0.85</span></div>
+                </div>
+                <div class="vs-divider stagger-item">&times;</div>
+                <div class="vs-card vs-right-env stagger-item">
+                    <div class="vs-badge env-badge">可変</div>
+                    <div class="vs-title">環境要因</div>
+                    <div class="vs-desc">教育・栄養・家庭</div>
+                    <div class="vs-detail">遺伝率が高い=環境が無関係<br><span class="accent-coral">ではない</span></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">身長も遺伝率は高いが、栄養状態で大きく変わる</div>
+        </div>
+    </div>
+
+    <!-- Scene 13: テキスト強調「IQだけで人生は決まらない」 -->
+    <div class="scene" id="scene-13">
+        <canvas id="canvas-13" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">IQは<span class="accent-indigo">意味がある</span></div>
+            <div class="emphasis-text-large stagger-item">でも<span class="accent-coral">万能じゃない</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 14: 注意喚起「IQより2倍大事？」 -->
+    <div class="scene" id="scene-14">
+        <div class="content center-layout">
+            <div class="teaser-card stagger-item">
+                <div class="teaser-icon pulse">?</div>
+                <div class="teaser-title">IQより<span class="accent-amber">2倍</span>大事な能力がある？</div>
+                <div class="teaser-sub">次のパートで明かします</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Block 4: IQが測れていないもの ===== -->
+
+    <!-- Scene 15: セクションタイトル -->
+    <div class="scene" id="scene-15">
+        <canvas id="canvas-15" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-amber">TOPIC 2</div>
+            <h2 class="title-medium">IQが<span class="accent-amber">"測れていない"</span><br>もの</h2>
+        </div>
+    </div>
+
+    <!-- Scene 16: 数値インパクト「自制力 2倍」 -->
+    <div class="scene" id="scene-16">
+        <div class="content center-layout">
+            <h2 class="scene-title">自制力の予測力</h2>
+            <div class="source-badge stagger-item">Duckworth & Seligman (2005) / 中学生140人</div>
+            <div class="bar-comparison stagger-item">
+                <div class="bar-row">
+                    <div class="bar-label">IQ</div>
+                    <div class="bar-track">
+                        <div class="bar-fill bar-iq-fill" style="--w:33%"></div>
+                    </div>
+                </div>
+                <div class="bar-row">
+                    <div class="bar-label">自制力</div>
+                    <div class="bar-track">
+                        <div class="bar-fill bar-sc-fill" style="--w:66%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-amber">2</span><span class="num-unit">倍</span>
+            </div>
+            <div class="emphasis-sub stagger-item">学業成績の予測力で自制力がIQを上回った</div>
+        </div>
+    </div>
+
+    <!-- Scene 17: 注意喚起「追試」 -->
+    <div class="scene" id="scene-17">
+        <div class="content center-layout">
+            <h2 class="scene-title">しかし追試で異なる結果も</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge safe-badge">通知表</div>
+                    <div class="vs-title">自制力が強い</div>
+                    <div class="vs-desc">先生がつける評定</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge danger-badge">標準テスト</div>
+                    <div class="vs-title">IQが強い</div>
+                    <div class="vs-desc">統一された試験</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">単純にどちらが上とは言えない<br>しかしIQ以外の力が大きく影響するのは事実</div>
+        </div>
+    </div>
+
+    <!-- Scene 18: 横並びカード「三頭理論」 -->
+    <div class="scene" id="scene-18">
+        <div class="content card-layout">
+            <h2 class="scene-title">スターンバーグの三頭理論</h2>
+            <div class="source-badge stagger-item">イェール大学 Sternberg (1985)</div>
+            <div class="triple-card">
+                <div class="tri-card active-card stagger-item">
+                    <div class="tri-badge accent-bg-indigo">IQが測定</div>
+                    <div class="tri-title">分析的知能</div>
+                    <div class="tri-desc">論理的に問題を解く力</div>
+                </div>
+                <div class="tri-card dim-card stagger-item">
+                    <div class="tri-badge accent-bg-amber">測定されない</div>
+                    <div class="tri-title">創造的知能</div>
+                    <div class="tri-desc">新しい発想を生む力</div>
+                </div>
+                <div class="tri-card dim-card stagger-item">
+                    <div class="tri-badge accent-bg-teal">測定されない</div>
+                    <div class="tri-title">実践的知能</div>
+                    <div class="tri-desc">臨機応変に対処する力</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">IQテストが測っているのは3つのうち<span class="accent-coral">1つだけ</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 19: 段階的リスト「測れないもの」 -->
+    <div class="scene" id="scene-19">
+        <div class="content card-layout">
+            <h2 class="scene-title">IQが測れないもの</h2>
+            <div class="tag-cloud">
+                <div class="tag-item tag-amber stagger-item">創造性</div>
+                <div class="tag-item tag-teal stagger-item">EQ（感情的知能）</div>
+                <div class="tag-item tag-coral stagger-item">対人スキル</div>
+                <div class="tag-item tag-indigo stagger-item">動機づけ</div>
+                <div class="tag-item tag-amber stagger-item">共感力</div>
+                <div class="tag-item tag-coral stagger-item">道徳性</div>
+            </div>
+            <div class="emphasis-sub stagger-item">実社会で「頭が良い」と言われる人の<br>特徴はIQテストに含まれない</div>
+        </div>
+    </div>
+
+    <!-- Scene 20: 数値インパクト「文化バイアス」 -->
+    <div class="scene" id="scene-20">
+        <div class="content center-layout">
+            <h2 class="scene-title">文化的バイアス</h2>
+            <div class="bias-visual stagger-item">
+                <div class="bias-row">
+                    <div class="bias-label">調整前</div>
+                    <div class="bias-bar">
+                        <div class="bias-fill bias-before" style="--w:75%"></div>
+                    </div>
+                </div>
+                <div class="bias-row">
+                    <div class="bias-label">調整後</div>
+                    <div class="bias-bar">
+                        <div class="bias-fill bias-after" style="--w:92%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-coral">10-15</span><span class="num-unit">点の差</span>
+            </div>
+            <div class="emphasis-sub stagger-item">テストを文化に合わせて調整するとスコアが改善<br>「知能の差」ではなく<span
+                    class="accent-coral">テストの偏り</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 21: 比較対照「EQ vs IQ」 -->
+    <div class="scene" id="scene-21">
+        <div class="content card-layout">
+            <h2 class="scene-title">キャリア成功の予測因子</h2>
+            <div class="comparison-table">
+                <div class="comp-row comp-header stagger-item">
+                    <div class="comp-cell">フェーズ</div>
+                    <div class="comp-cell">強い予測因子</div>
+                    <div class="comp-cell">内容</div>
+                </div>
+                <div class="comp-row stagger-item">
+                    <div class="comp-cell comp-name">初期キャリア</div>
+                    <div class="comp-cell"><span class="winner-badge accent-bg-indigo">IQ</span></div>
+                    <div class="comp-cell">技術的スキル習得</div>
+                </div>
+                <div class="comp-row stagger-item">
+                    <div class="comp-cell comp-name">長期的成功</div>
+                    <div class="comp-cell"><span class="winner-badge accent-bg-amber">EQ</span></div>
+                    <div class="comp-cell">チームワーク・交渉力</div>
+                </div>
+                <div class="comp-row stagger-item">
+                    <div class="comp-cell comp-name">リーダーシップ</div>
+                    <div class="comp-cell"><span class="winner-badge accent-bg-amber">EQ</span></div>
+                    <div class="comp-cell">部下の動機づけ</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 22: 引用カード「Stanovich」 -->
+    <div class="scene" id="scene-22">
+        <div class="content center-layout">
+            <h2 class="scene-title">合理性すら測れない？</h2>
+            <div class="quote-card quote-warning stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">IQが高くても<br><span class="accent-coral">非合理的な判断</span>をする人は多い</div>
+                <div class="quote-source">Keith Stanovich (2009)<br>What Intelligence Tests Miss</div>
+            </div>
+            <div class="emphasis-sub stagger-item">確証バイアス・迷信・非合理的投資<br>── IQが高い人にも普通に起きる</div>
+        </div>
+    </div>
+
+    <!-- ===== Block 5: フリン効果 ===== -->
+
+    <!-- Scene 23: セクションタイトル -->
+    <div class="scene" id="scene-23">
+        <canvas id="canvas-23" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral">TOPIC 3</div>
+            <h2 class="title-medium"><span class="accent-coral">フリン効果</span>の衝撃</h2>
+            <div class="title-sub">IQの数字は"嘘"をつく？</div>
+        </div>
+    </div>
+
+    <!-- Scene 24: 数値インパクト「1950→現代」 -->
+    <div class="scene" id="scene-24">
+        <div class="content center-layout">
+            <h2 class="scene-title">1950年のIQ100は今の...</h2>
+            <div class="source-badge stagger-item">James Flynn / 10年あたり約3ポイント上昇</div>
+            <div class="flynn-visual stagger-item">
+                <div class="flynn-card flynn-old">
+                    <div class="flynn-era">1950年</div>
+                    <div class="flynn-score">IQ 100</div>
+                    <div class="flynn-meaning">当時の平均</div>
+                </div>
+                <div class="flynn-arrow">&rarr;</div>
+                <div class="flynn-card flynn-new">
+                    <div class="flynn-era">現代のテスト</div>
+                    <div class="flynn-score accent-coral">IQ 82</div>
+                    <div class="flynn-meaning">平均より大幅に下</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">70年間で約21ポイントの差</div>
+        </div>
+    </div>
+
+    <!-- Scene 25: フロー図「原因」 -->
+    <div class="scene" id="scene-25">
+        <div class="content card-layout">
+            <h2 class="scene-title">なぜIQスコアは上がったのか</h2>
+            <div class="triple-card">
+                <div class="cause-card stagger-item">
+                    <div class="cause-icon accent-bg-indigo">E</div>
+                    <div class="cause-name">教育の普及</div>
+                    <div class="cause-desc">抽象的思考の訓練機会が増加</div>
+                </div>
+                <div class="cause-card stagger-item">
+                    <div class="cause-icon accent-bg-teal">N</div>
+                    <div class="cause-name">栄養状態の改善</div>
+                    <div class="cause-desc">乳幼児期の脳発達への影響</div>
+                </div>
+                <div class="cause-card stagger-item">
+                    <div class="cause-icon accent-bg-amber">M</div>
+                    <div class="cause-name">メディアの発達</div>
+                    <div class="cause-desc">視覚的・抽象的情報への慣れ</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">「頭が良くなった」のではなく<br>「IQテストが測る問題に<span class="accent-amber">慣れた</span>」
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 26: 比較対照「流動性 vs 結晶性」 -->
+    <div class="scene" id="scene-26">
+        <div class="content center-layout">
+            <h2 class="scene-title">何が上がったのか？</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-up stagger-item">
+                    <div class="vs-badge safe-badge">大幅上昇</div>
+                    <div class="vs-title accent-teal">流動性知能</div>
+                    <div class="vs-desc">パターン認識<br>抽象的推論</div>
+                    <div class="vs-arrow-large up">&uarr;</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-flat stagger-item">
+                    <div class="vs-badge flat-badge">ほぼ変化なし</div>
+                    <div class="vs-title">語彙・算術</div>
+                    <div class="vs-desc">結晶性知能<br>知識の蓄積</div>
+                    <div class="vs-arrow-large flat">&rarr;</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">「知能全体」が上がったわけではない</div>
+        </div>
+    </div>
+
+    <!-- Scene 27: 注意喚起「逆フリン効果」 -->
+    <div class="scene" id="scene-27">
+        <div class="content center-layout">
+            <h2 class="scene-title"><span class="accent-coral">逆フリン効果</span></h2>
+            <div class="decline-visual stagger-item">
+                <svg viewBox="0 0 400 150" class="decline-svg">
+                    <line x1="40" y1="130" x2="370" y2="130" stroke="#ccc" stroke-width="1" />
+                    <line x1="40" y1="20" x2="40" y2="130" stroke="#ccc" stroke-width="1" />
+                    <path d="M50 100 Q120 40 200 45 Q280 50 360 85" fill="none" stroke="var(--coral)" stroke-width="3"
+                        class="decline-path" />
+                    <circle cx="200" cy="45" r="6" fill="var(--teal)" />
+                    <text x="200" y="38" text-anchor="middle" class="optimal-label">ピーク(~1990)</text>
+                    <circle cx="360" cy="85" r="6" fill="var(--coral)" />
+                    <text x="360" y="78" text-anchor="middle" class="decline-label">低下中</text>
+                    <text x="50" y="145" class="axis-label">1950</text>
+                    <text x="360" y="145" class="axis-label">2020</text>
+                    <text x="15" y="75" text-anchor="middle" class="axis-label" transform="rotate(-90,15,75)">IQ
+                        &rarr;</text>
+                </svg>
+            </div>
+            <div class="alert-card stagger-item">
+                <div class="alert-icon alert-red">!</div>
+                <div class="alert-title">1990年代以降、先進国でIQが<span class="accent-coral">低下</span></div>
+                <div class="alert-sub">ノルウェー・デンマーク・フィンランド・アメリカで確認</div>
+            </div>
+            <div class="emphasis-sub stagger-item">IQは環境でこんなにも大きく変動する<br>「固定された生まれつきの能力」ではない</div>
+        </div>
+    </div>
+
+    <!-- Scene 28: 段階的リスト「暗い歴史」 -->
+    <div class="scene dark-scene" id="scene-28">
+        <div class="content card-layout">
+            <h2 class="scene-title light-text">IQの社会的利用の歴史</h2>
+            <div class="dark-list">
+                <div class="dark-item stagger-item">
+                    <div class="dark-icon">1917</div>
+                    <div class="dark-content">
+                        <div class="dark-title">兵士の能力評価（WWI）</div>
+                        <div class="dark-desc">大規模IQテストが社会的選別の道具に</div>
+                    </div>
+                </div>
+                <div class="dark-item stagger-item">
+                    <div class="dark-icon">1924</div>
+                    <div class="dark-content">
+                        <div class="dark-title">移民制限法</div>
+                        <div class="dark-desc">IQを根拠に特定の国からの移民を制限</div>
+                    </div>
+                </div>
+                <div class="dark-item stagger-item">
+                    <div class="dark-icon accent-coral">!</div>
+                    <div class="dark-content">
+                        <div class="dark-title">強制不妊手術</div>
+                        <div class="dark-desc">知的障害者への優生学的施策</div>
+                    </div>
+                </div>
+                <div class="dark-item stagger-item">
+                    <div class="dark-icon accent-coral">!</div>
+                    <div class="dark-content">
+                        <div class="dark-title">人種差別の「科学的」正当化</div>
+                        <div class="dark-desc">ターマン：特定人種に「先天的な鈍感さ」がある</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 29: 引用カード「Griggs判決」 -->
+    <div class="scene" id="scene-29">
+        <div class="content center-layout">
+            <h2 class="scene-title">米国最高裁の判決</h2>
+            <div class="quote-card quote-warning stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">IQテストを雇用の条件にすることは<br><span class="accent-coral">差別的慣行になりうる</span></div>
+                <div class="quote-source">Griggs v. Duke Power Co. (1971)<br>米国最高裁 全員一致判決</div>
+            </div>
+            <div class="emphasis-sub stagger-item">IQは科学的な道具であると同時に<br>社会的な<span class="accent-coral">武器</span>にもなりうる
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Block 6: まとめ ===== -->
+
+    <!-- Scene 30: テキスト強調「まとめ導入」 -->
+    <div class="scene" id="scene-30">
+        <canvas id="canvas-30" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-indigo">CONCLUSION</div>
+            <h2 class="title-medium">IQは<span class="accent-indigo">"頭の良さの一側面"</span>を<br>測る有用な道具</h2>
+            <div class="emphasis-sub stagger-item">でも「頭の良さ」にはもっとたくさんの要素がある</div>
+        </div>
+    </div>
+
+    <!-- Scene 31: まとめカード「3つのポイント」 -->
+    <div class="scene" id="scene-31">
+        <div class="content card-layout">
+            <h2 class="scene-title">今日の3つのポイント</h2>
+            <div class="summary-list">
+                <div class="summary-item stagger-item">
+                    <div class="summary-number accent-bg-indigo">1</div>
+                    <div class="summary-text">学業成績の<span class="accent-indigo">25%</span>しか説明できない</div>
+                </div>
+                <div class="summary-item stagger-item">
+                    <div class="summary-number accent-bg-amber">2</div>
+                    <div class="summary-text">創造性・EQ・自制力は<span class="accent-amber">測れない</span></div>
+                </div>
+                <div class="summary-item stagger-item">
+                    <div class="summary-number accent-bg-coral">3</div>
+                    <div class="summary-text">IQの数字は時代で<span class="accent-coral">変動する</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 32: 引用カード「ビネーの願い」 -->
+    <div class="scene" id="scene-32">
+        <div class="content center-layout">
+            <div class="quote-card quote-warm stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">テストの数字よりも<br><span class="accent-indigo">一人ひとりの個性を</span></div>
+                <div class="quote-source">アルフレッド・ビネーの願い</div>
+            </div>
+            <div class="emphasis-sub stagger-item">子どもを助けるためのテストが<br>いつしか人を分類するツールに変わってしまった</div>
+        </div>
+    </div>
+
+    <!-- Scene 33: エンディング -->
+    <div class="scene" id="scene-33">
+        <canvas id="canvas-33" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="final-message stagger-item">
+                <div class="message-cross">テストの数字では測れない</div>
+                <div class="message-main">あなたの<span class="accent-indigo">"頭の良さ"</span>は<br>本当に多面的</div>
+            </div>
+            <div class="emphasis-sub stagger-item">論理力・共感力・創造力・人を動かす力<br>それらすべてがあなたの知能</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

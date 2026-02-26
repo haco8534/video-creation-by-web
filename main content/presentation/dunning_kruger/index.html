@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dunning-Kruger Effect Presentation</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Inter:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Scene 0: タイトルカード -->
+    <div class="scene" id="scene-0">
+        <canvas id="canvas-0" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <div class="tag stagger-item">PSYCHOLOGY × STATISTICS</div>
+            <h1 class="title-huge stagger-item">ダニング＝クルーガー効果は<br>統計の錯覚？</h1>
+            <p class="subtitle stagger-item">「バカほど自信がある」は本当か——通説を覆す最新研究</p>
+            <div class="meta-row stagger-item">
+                <span class="meta-chip">Kruger & Dunning 1999</span>
+                <span class="meta-chip">Gignac 2020</span>
+                <span class="meta-chip">Nuhfer 2016</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 1: ランダムなデータでも同じグラフが出る -->
+    <div class="scene" id="scene-1">
+        <canvas id="canvas-1" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <div class="emphasis-box stagger-item">
+                <span class="emphasis-label">SHOCKING FACT</span>
+                <p class="emphasis-text">ランダムなデータでも<br>同じグラフが出る</p>
+            </div>
+            <div class="mini-graph-row stagger-item">
+                <div class="mini-graph-card">
+                    <div class="mini-label">心理バイアス = 0</div>
+                    <svg viewBox="0 0 120 60" class="mini-svg">
+                        <polyline points="10,50 40,30 70,25 110,15" fill="none" stroke="#e85d58" stroke-width="2.5"
+                            stroke-dasharray="200" class="draw-line" />
+                        <polyline points="10,45 40,38 70,30 110,20" fill="none" stroke="#667eea" stroke-width="2.5"
+                            stroke-dasharray="200" class="draw-line d2" />
+                    </svg>
+                </div>
+                <span class="mini-eq">=</span>
+                <div class="mini-graph-card">
+                    <div class="mini-label">元研究データ</div>
+                    <svg viewBox="0 0 120 60" class="mini-svg">
+                        <polyline points="10,50 40,30 70,25 110,15" fill="none" stroke="#e85d58" stroke-width="2.5"
+                            stroke-dasharray="200" class="draw-line" />
+                        <polyline points="10,25 40,32 70,28 110,18" fill="none" stroke="#667eea" stroke-width="2.5"
+                            stroke-dasharray="200" class="draw-line d2" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 2: 1995年 ピッツバーグの銀行強盗事件 -->
+    <div class="scene" id="scene-2">
+        <canvas id="canvas-2" class="bg-canvas"></canvas>
+        <div class="scene-content padded-layout">
+            <div class="split-layout">
+                <div class="split-left">
+                    <div class="year-badge stagger-item">1995</div>
+                    <h2 class="title-large stagger-item">ピッツバーグの<br>銀行強盗事件</h2>
+                    <p class="subtitle stagger-item">DK効果誕生のきっかけ</p>
+                </div>
+                <div class="split-right">
+                    <div class="timeline">
+                        <div class="timeline-item stagger-item">
+                            <div class="tl-dot"></div>
+                            <div class="tl-content">マッカーサー・ウィーラー</div>
+                        </div>
+                        <div class="timeline-item stagger-item">
+                            <div class="tl-dot red"></div>
+                            <div class="tl-content">レモン汁で変装</div>
+                        </div>
+                        <div class="timeline-item stagger-item">
+                            <div class="tl-dot"></div>
+                            <div class="tl-content">防犯カメラに映って逮捕</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 3: ウィーラーの驚くべき推論 -->
+    <div class="scene" id="scene-3">
+        <div class="scene-content padded-layout">
+            <h2 class="section-title stagger-item">ウィーラーの驚くべき推論</h2>
+            <div class="reasoning-flow">
+                <div class="reason-card stagger-item">
+                    <div class="reason-icon">A</div>
+                    <div class="reason-title">前提</div>
+                    <div class="reason-desc">レモン汁 = 透明インク<br>紙に書くと乾いて消える</div>
+                </div>
+                <div class="flow-arrow stagger-item"></div>
+                <div class="reason-card stagger-item">
+                    <div class="reason-icon">B</div>
+                    <div class="reason-title">推論</div>
+                    <div class="reason-desc">顔に塗れば<br>カメラに映らない</div>
+                </div>
+                <div class="flow-arrow stagger-item"></div>
+                <div class="reason-card stagger-item">
+                    <div class="reason-icon wrong-icon">C</div>
+                    <div class="reason-title">確認</div>
+                    <div class="reason-desc">ポラロイド写真が<br>たまたま写り悪い→確信</div>
+                </div>
+                <div class="flow-arrow stagger-item"></div>
+                <div class="reason-card fail stagger-item">
+                    <div class="reason-icon fail-icon">D</div>
+                    <div class="reason-title">結果</div>
+                    <div class="reason-desc">白昼堂々2行襲撃<br>→ あっさり逮捕</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 4: この動画でわかる3つのこと -->
+    <div class="scene" id="scene-4">
+        <div class="scene-content padded-layout">
+            <h2 class="section-title stagger-item">この動画でわかること</h2>
+            <p class="section-sub stagger-item">Dunning & Kruger が投げかけた問い：なぜ能力のない人は自分に能力がないことに気づけないのか？</p>
+            <div class="card-grid three-col">
+                <div class="info-card accent-blue stagger-item">
+                    <div class="card-num">01</div>
+                    <div class="card-title">元研究の真実</div>
+                    <div class="card-desc">SNSの有名グラフは<br>オリジナルではなかった</div>
+                </div>
+                <div class="info-card accent-red stagger-item">
+                    <div class="card-num">02</div>
+                    <div class="card-title">統計の錯覚</div>
+                    <div class="card-desc">ランダムデータでも<br>同じカーブが出現</div>
+                </div>
+                <div class="info-card accent-teal stagger-item">
+                    <div class="card-num">03</div>
+                    <div class="card-title">メタ認知は実在</div>
+                    <div class="card-desc">グラフが錯覚でも<br>大切な教訓は残る</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 5: ダニング＝クルーガー効果とは？ -->
+    <div class="scene" id="scene-5">
+        <canvas id="canvas-5" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <div class="tag stagger-item">BLOCK 2</div>
+            <h1 class="title-huge stagger-item">ダニング＝クルーガー<br>効果とは？</h1>
+            <p class="subtitle stagger-item">1999年の元研究を正確に理解する</p>
+            <div class="paper-ref stagger-item">Kruger, J. & Dunning, D. (1999). "Unskilled and Unaware of
+                It"<br>Journal of Personality and Social Psychology, 77(6)</div>
+        </div>
+    </div>
+
+    <!-- Scene 6: 1999年の実験 -->
+    <div class="scene" id="scene-6">
+        <div class="scene-content padded-layout">
+            <h2 class="section-title stagger-item">1999年の実験デザイン</h2>
+            <p class="section-sub stagger-item">Cornell University ・被験者: 大学生 ・4つの実験</p>
+            <div class="card-grid three-col">
+                <div class="info-card accent-blue stagger-item">
+                    <div class="card-num">1</div>
+                    <div class="card-title">論理的推論</div>
+                    <div class="card-desc">Logical Reasoning<br>LSAT形式の問題</div>
+                </div>
+                <div class="info-card accent-teal stagger-item">
+                    <div class="card-num">2</div>
+                    <div class="card-title">英文法</div>
+                    <div class="card-desc">English Grammar<br>文法テスト20問</div>
+                </div>
+                <div class="info-card accent-amber stagger-item">
+                    <div class="card-num">3</div>
+                    <div class="card-title">ユーモア</div>
+                    <div class="card-desc">Humor Assessment<br>ジョーク評価の正確性</div>
+                </div>
+            </div>
+            <div class="method-note stagger-item">テスト後に「あなたは全体の何%の位置ですか？」と自己評価を聴取</div>
+        </div>
+    </div>
+
+    <!-- Scene 7: ★DKEグラフ（核心シーン）★ -->
+    <div class="scene" id="scene-7">
+        <div class="scene-content padded-layout">
+            <h2 class="section-title stagger-item">元研究の結果</h2>
+            <p class="section-sub stagger-item">実際のスコア vs 自己評価（パーセンタイル）</p>
+            <div class="graph-container stagger-item">
+                <svg viewBox="0 0 500 300" class="dke-graph" id="dke-graph-original">
+                    <!-- Grid -->
+                    <line x1="70" y1="20" x2="70" y2="250" stroke="#e0e0e0" stroke-width="1" />
+                    <line x1="70" y1="250" x2="470" y2="250" stroke="#e0e0e0" stroke-width="1" />
+                    <line x1="70" y1="200" x2="470" y2="200" stroke="#f0f0f0" stroke-width="0.5" stroke-dasharray="4" />
+                    <line x1="70" y1="150" x2="470" y2="150" stroke="#f0f0f0" stroke-width="0.5" stroke-dasharray="4" />
+                    <line x1="70" y1="100" x2="470" y2="100" stroke="#f0f0f0" stroke-width="0.5" stroke-dasharray="4" />
+                    <line x1="70" y1="50" x2="470" y2="50" stroke="#f0f0f0" stroke-width="0.5" stroke-dasharray="4" />
+                    <!-- Y labels -->
+                    <text x="60" y="254" text-anchor="end" class="graph-label">0%</text>
+                    <text x="60" y="204" text-anchor="end" class="graph-label">25%</text>
+                    <text x="60" y="154" text-anchor="end" class="graph-label">50%</text>
+                    <text x="60" y="104" text-anchor="end" class="graph-label">75%</text>
+                    <text x="60" y="54" text-anchor="end" class="graph-label">100%</text>
+                    <!-- X labels -->
+                    <text x="130" y="275" text-anchor="middle" class="graph-label">下位25%</text>
+                    <text x="230" y="275" text-anchor="middle" class="graph-label">第2群</text>
+                    <text x="330" y="275" text-anchor="middle" class="graph-label">第3群</text>
+                    <text x="430" y="275" text-anchor="middle" class="graph-label">上位25%</text>
+                    <!-- Actual score (blue bars) -->
+                    <rect x="110" y="226" width="40" height="24" rx="3" class="bar-actual anim-bar"
+                        style="--target-h:24" />
+                    <rect x="210" y="186" width="40" height="64" rx="3" class="bar-actual anim-bar"
+                        style="--target-h:64" />
+                    <rect x="310" y="140" width="40" height="110" rx="3" class="bar-actual anim-bar"
+                        style="--target-h:110" />
+                    <rect x="410" y="78" width="40" height="172" rx="3" class="bar-actual anim-bar"
+                        style="--target-h:172" />
+                    <!-- Self-assessment (red line) -->
+                    <polyline points="130,97 230,150 330,126 430,106" fill="none" stroke="#e85d58" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round" class="draw-line self-line" />
+                    <circle cx="130" cy="97" r="5" fill="#e85d58" class="graph-dot" />
+                    <circle cx="230" cy="150" r="5" fill="#e85d58" class="graph-dot" />
+                    <circle cx="330" cy="126" r="5" fill="#e85d58" class="graph-dot" />
+                    <circle cx="430" cy="106" r="5" fill="#e85d58" class="graph-dot" />
+                    <!-- Data labels -->
+                    <text x="130" y="88" text-anchor="middle" class="data-label red">62%</text>
+                    <text x="230" y="141" text-anchor="middle" class="data-label red">50%</text>
+                    <text x="330" y="117" text-anchor="middle" class="data-label red">62%</text>
+                    <text x="430" y="97" text-anchor="middle" class="data-label red">72%</text>
+                    <text x="130" y="222" text-anchor="middle" class="data-label blue">12%</text>
+                    <text x="230" y="182" text-anchor="middle" class="data-label blue">32%</text>
+                    <text x="330" y="136" text-anchor="middle" class="data-label blue">55%</text>
+                    <text x="430" y="74" text-anchor="middle" class="data-label blue">86%</text>
+                    <!-- Annotation: gap arrow for bottom quartile -->
+                    <line x1="155" y1="226" x2="155" y2="97" stroke="#e85d58" stroke-width="1.5" stroke-dasharray="4"
+                        class="gap-line" />
+                    <text x="175" y="165" class="gap-label">50pt差!</text>
+                </svg>
+                <div class="legend-row">
+                    <span class="legend-item"><span class="legend-dot blue"></span>実際のスコア</span>
+                    <span class="legend-item"><span class="legend-dot red"></span>自己評価</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 8: 二重の負担 -->
+    <div class="scene" id="scene-8">
+        <div class="scene-content padded-layout">
+            <h2 class="section-title stagger-item">二重の負担 <span class="eng">Dual Burden</span></h2>
+            <div class="dual-burden-visual">
+                <div class="burden-card stagger-item">
+                    <div class="burden-num">1</div>
+                    <div class="burden-title">能力の欠如</div>
+                    <div class="burden-desc">正しい答えを出せない</div>
+                </div>
+                <div class="burden-op stagger-item">+</div>
+                <div class="burden-card stagger-item">
+                    <div class="burden-num">2</div>
+                    <div class="burden-title">メタ認知の欠如</div>
+                    <div class="burden-desc">間違いに気づけない</div>
+                </div>
+                <div class="burden-op stagger-item">=</div>
+                <div class="burden-result stagger-item">
+                    <div class="burden-title">自己評価の過大推定</div>
+                    <div class="burden-desc">下位12% → 自分は62%と推定</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">2000年 イグノーベル賞受賞 ―「笑わせて考えさせる研究」</div>
+        </div>
+    </div>
+
+    <!-- Scene 9: ★オリジナル vs Mount Stupid（グラフ比較）★ -->
+    <div class="scene" id="scene-9">
+        <div class="scene-content padded-layout">
+            <h2 class="section-title stagger-item">あの有名なグラフの正体</h2>
+            <div class="compare-grid">
+                <div class="compare-card wrong stagger-item">
+                    <div class="compare-badge">SNSで拡散 × 作者不明</div>
+                    <div class="compare-title">Mount Stupid グラフ</div>
+                    <svg viewBox="0 0 200 100" class="compare-svg">
+                        <path d="M10,80 Q50,10 80,75 Q120,90 150,40 L190,20" fill="none" stroke="#e85d58"
+                            stroke-width="2.5" class="draw-line" />
+                        <text x="50" y="20" class="svg-tiny">馬鹿の山</text>
+                        <text x="95" y="95" class="svg-tiny">絶望の谷</text>
+                        <text x="160" y="15" class="svg-tiny">啓蒙の坂</text>
+                    </svg>
+                    <div class="compare-verdict wrong-text">オリジナル論文のものではない</div>
+                </div>
+                <div class="compare-vs stagger-item">VS</div>
+                <div class="compare-card correct stagger-item">
+                    <div class="compare-badge">Kruger & Dunning 1999</div>
+                    <div class="compare-title">元研究のグラフ</div>
+                    <svg viewBox="0 0 200 100" class="compare-svg">
+                        <polyline points="20,75 70,55 120,48 170,25" fill="none" stroke="#667eea" stroke-width="2"
+                            class="draw-line" />
+                        <polyline points="20,32 70,45 120,40 170,30" fill="none" stroke="#e85d58" stroke-width="2"
+                            class="draw-line d2" />
+                        <circle cx="20" cy="75" r="3" fill="#667eea" />
+                        <circle cx="20" cy="32" r="3" fill="#e85d58" />
+                        <circle cx="170" cy="25" r="3" fill="#667eea" />
+                        <circle cx="170" cy="30" r="3" fill="#e85d58" />
+                        <text x="100" y="95" class="svg-tiny" text-anchor="middle">能力 →</text>
+                    </svg>
+                    <div class="compare-verdict correct-text">低能力者の自信は高いが上位者ほどではない</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 10: DK効果を支える証拠 -->
+    <div class="scene" id="scene-10">
+        <canvas id="canvas-10" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <div class="tag tag-teal stagger-item">BLOCK 3</div>
+            <h1 class="title-huge stagger-item">DK効果を支える証拠</h1>
+            <p class="subtitle stagger-item">本当に信頼できる研究なのか？</p>
+        </div>
+    </div>
+
+    <!-- Scene 11: 追試された分野 -->
+    <div class="scene" id="scene-11">
+        <div class="scene-content padded-layout">
+            <h2 class="section-title stagger-item">追試された分野</h2>
+            <p class="section-sub stagger-item">どの分野でも「能力が低い人ほど自己評価が高い」傾向が確認</p>
+            <div class="domain-grid">
+                <div class="domain-card stagger-item">
+                    <div class="domain-icon">Med</div>
+                    <div class="domain-name">医学</div>
+                </div>
+                <div class="domain-card stagger-item">
+                    <div class="domain-icon">Pol</div>
+                    <div class="domain-name">政治</div>
+                </div>
+                <div class="domain-card stagger-item">
+                    <div class="domain-icon">Biz</div>
+                    <div class="domain-name">ビジネス</div>
+                </div>
+                <div class="domain-card stagger-item">
+                    <div class="domain-icon">Car</div>
+                    <div class="domain-name">運転技術</div>
+                </div>
+                <div class="domain-card stagger-item">
+                    <div class="domain-icon">Avi</div>
+                    <div class="domain-name">航空</div>
+                </div>
+                <div class="domain-card stagger-item">
+                    <div class="domain-icon">Fin</div>
+                    <div class="domain-name">金融リテラシー</div>
+                </div>
+                <div class="domain-card stagger-item">
+                    <div class="domain-icon">EQ</div>
+                    <div class="domain-name">感情知能</div>
+                </div>
+                <div class="domain-card stagger-item">
+                    <div class="domain-icon">IT</div>
+                    <div class="domain-name">コンピュータ</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 12: 実験デザイン -->
+    <div class="scene" id="scene-12">
+        <div class="scene-content padded-layout">
+            <h2 class="section-title stagger-item">元研究の実験デザイン</h2>
+            <div class="experiment-flow">
+                <div class="exp-step stagger-item">
+                    <div class="exp-icon">1</div>
+                    <div class="exp-label">テスト実施</div>
+                    <div class="exp-desc">論理・文法・ユーモア</div>
+                </div>
+                <div class="exp-arrow stagger-item"></div>
+                <div class="exp-step stagger-item">
+                    <div class="exp-icon">2</div>
+                    <div class="exp-label">自己評価</div>
+                    <div class="exp-desc">何パーセンタイル？</div>
+                </div>
+                <div class="exp-arrow stagger-item"></div>
+                <div class="exp-step stagger-item">
+                    <div class="exp-icon">3</div>
+                    <div class="exp-label">比較・分析</div>
+                    <div class="exp-desc">実際 vs 予想</div>
+                </div>
+            </div>
+            <div class="method-note stagger-item">このシンプルさが広く追試された理由</div>
+        </div>
+    </div>
+
+    <!-- Scene 13: 4,000人規模の追試 -->
+    <div class="scene" id="scene-13">
+        <canvas id="canvas-13" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <p class="impact-label stagger-item">Jansen, Rafferty & Griffiths (2021)</p>
+            <div class="impact-row stagger-item">
+                <div class="impact-number" id="num-4000">4,000</div>
+                <div class="impact-unit">人</div>
+            </div>
+            <p class="impact-sub stagger-item">大規模追試でDK効果のパターン確認</p>
+            <div class="detail-chips stagger-item">
+                <span class="detail-chip">計算モデリング</span>
+                <span class="detail-chip">英文法</span>
+                <span class="detail-chip">論理的推論</span>
+                <span class="detail-chip">Frontiers in Psychology</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 14: スキル向上でメタ認知も改善 -->
+    <div class="scene" id="scene-14">
+        <div class="scene-content padded-layout">
+            <h2 class="section-title stagger-item">訓練による改善</h2>
+            <div class="before-after">
+                <div class="ba-card before stagger-item">
+                    <div class="ba-label">BEFORE</div>
+                    <div class="ba-title">低スキル状態</div>
+                    <div class="ba-bar">
+                        <div class="ba-fill" style="width:20%"></div>
+                    </div>
+                    <div class="ba-desc">自己評価が不正確<br>メタ認知が機能しない</div>
+                </div>
+                <div class="ba-arrow stagger-item">訓練実施</div>
+                <div class="ba-card after stagger-item">
+                    <div class="ba-label">AFTER</div>
+                    <div class="ba-title">スキル向上後</div>
+                    <div class="ba-bar">
+                        <div class="ba-fill good" style="width:75%"></div>
+                    </div>
+                    <div class="ba-desc">自己評価が正確に<br>「学べば自分が見える」</div>
+                </div>
+            </div>
+            <div class="method-note stagger-item">能力は固定ではなく、学べば改善できる</div>
+        </div>
+    </div>
+
+    <!-- Scene 15: もしDK効果が数学のトリックだったら？ -->
+    <div class="scene" id="scene-15">
+        <canvas id="canvas-15" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <div class="emphasis-box dark stagger-item">
+                <span class="emphasis-label">TURNING POINT</span>
+                <p class="emphasis-text">もしDK効果が<br>"数学のトリック"<br>だったら？</p>
+            </div>
+            <p class="subtitle stagger-item" style="margin-top:24px">証拠は揃った。しかしここからが本題——</p>
+        </div>
+    </div>
+
+    <!-- Scene 16: 統計の錯覚という衝撃 -->
+    <div class="scene" id="scene-16">
+        <canvas id="canvas-16" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <div class="tag tag-red stagger-item">BLOCK 4</div>
+            <h1 class="title-huge stagger-item">統計の錯覚という衝撃</h1>
+            <p class="subtitle stagger-item">通説を覆す批判的研究</p>
+        </div>
+    </div>
+
+    <!-- Scene 17: ★平均への回帰（散布図）★ -->
+    <div class="scene" id="scene-17">
+        <div class="scene-content padded-layout">
+            <h2 class="section-title stagger-item">平均への回帰 <span class="eng">Regression to the Mean</span></h2>
+            <p class="section-sub stagger-item">Francis Galton, 19世紀発見</p>
+            <div class="graph-container stagger-item">
+                <svg viewBox="0 0 400 250" class="scatter-svg" id="scatter-reg">
+                    <line x1="50" y1="220" x2="380" y2="220" stroke="#e0e0e0" stroke-width="1" />
+                    <line x1="50" y1="220" x2="50" y2="20" stroke="#e0e0e0" stroke-width="1" />
+                    <text x="215" y="248" text-anchor="middle" class="graph-label">1回目のスコア</text>
+                    <text x="25" y="120" text-anchor="middle" class="graph-label"
+                        transform="rotate(-90,25,120)">2回目のスコア</text>
+                    <!-- Diagonal -->
+                    <line x1="50" y1="220" x2="380" y2="20" stroke="#d0d5dd" stroke-width="1" stroke-dasharray="6" />
+                    <!-- Regression line -->
+                    <line x1="50" y1="180" x2="380" y2="60" stroke="#667eea" stroke-width="2.5" class="draw-line" />
+                    <!-- Scatter dots -->
+                    <circle cx="80" cy="160" r="4" fill="rgba(102,126,234,0.4)" class="scatter-dot" />
+                    <circle cx="100" cy="140" r="4" fill="rgba(102,126,234,0.4)" class="scatter-dot" />
+                    <circle cx="120" cy="170" r="4" fill="rgba(102,126,234,0.4)" class="scatter-dot" />
+                    <circle cx="140" cy="130" r="4" fill="rgba(102,126,234,0.4)" class="scatter-dot" />
+                    <circle cx="160" cy="145" r="4" fill="rgba(102,126,234,0.4)" class="scatter-dot" />
+                    <circle cx="180" cy="120" r="4" fill="rgba(102,126,234,0.4)" class="scatter-dot" />
+                    <circle cx="200" cy="115" r="4" fill="rgba(102,126,234,0.4)" class="scatter-dot" />
+                    <circle cx="220" cy="130" r="4" fill="rgba(102,126,234,0.4)" class="scatter-dot" />
+                    <circle cx="240" cy="100" r="4" fill="rgba(102,126,234,0.4)" class="scatter-dot" />
+                    <circle cx="260" cy="110" r="4" fill="rgba(102,126,234,0.4)" class="scatter-dot" />
+                    <circle cx="280" cy="80" r="4" fill="rgba(102,126,234,0.4)" class="scatter-dot" />
+                    <circle cx="300" cy="95" r="4" fill="rgba(102,126,234,0.4)" class="scatter-dot" />
+                    <circle cx="320" cy="70" r="4" fill="rgba(102,126,234,0.4)" class="scatter-dot" />
+                    <circle cx="340" cy="85" r="4" fill="rgba(102,126,234,0.4)" class="scatter-dot" />
+                    <circle cx="360" cy="55" r="4" fill="rgba(102,126,234,0.4)" class="scatter-dot" />
+                    <!-- Annotations -->
+                    <text x="90" y="205" class="anno-label red">極端に低い → 次は上がる</text>
+                    <text x="290" y="45" class="anno-label teal">極端に高い → 次は下がる</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 18: テスト結果 = 実力 + 運 -->
+    <div class="scene" id="scene-18">
+        <div class="scene-content padded-layout">
+            <h2 class="section-title stagger-item">テスト結果の構成</h2>
+            <div class="formula-display">
+                <div class="formula-item stagger-item">
+                    <div class="formula-box">結果</div>
+                </div>
+                <div class="formula-op stagger-item">=</div>
+                <div class="formula-item stagger-item">
+                    <div class="formula-box accent-blue">実力</div>
+                </div>
+                <div class="formula-op stagger-item">+</div>
+                <div class="formula-item stagger-item">
+                    <div class="formula-box accent-amber">運 (noise)</div>
+                </div>
+            </div>
+            <div class="noise-visual stagger-item">
+                <div class="noise-case bad">
+                    <div class="noise-label">極端に低い点</div>
+                    <div class="noise-eq">低い実力 + 悪い運</div>
+                </div>
+                <div class="noise-case good">
+                    <div class="noise-label">極端に高い点</div>
+                    <div class="noise-eq">高い実力 + 良い運</div>
+                </div>
+            </div>
+            <div class="method-note stagger-item">次のテストでは「運」が平均に戻る → 点数も自然と平均に近づく</div>
+        </div>
+    </div>
+
+    <!-- Scene 19: ★ランダムデータでもDKカーブが出現（グラフ）★ -->
+    <div class="scene" id="scene-19">
+        <div class="scene-content padded-layout">
+            <h2 class="section-title stagger-item">ランダムデータでもDKカーブが出現</h2>
+            <p class="section-sub stagger-item">Nuhfer et al. (2016, 2017) ・Numeracy</p>
+            <div class="graph-container stagger-item">
+                <svg viewBox="0 0 500 280" class="dke-graph" id="dke-graph-random">
+                    <line x1="70" y1="20" x2="70" y2="240" stroke="#e0e0e0" stroke-width="1" />
+                    <line x1="70" y1="240" x2="470" y2="240" stroke="#e0e0e0" stroke-width="1" />
+                    <line x1="70" y1="185" x2="470" y2="185" stroke="#f0f0f0" stroke-width="0.5" stroke-dasharray="4" />
+                    <line x1="70" y1="130" x2="470" y2="130" stroke="#f0f0f0" stroke-width="0.5" stroke-dasharray="4" />
+                    <line x1="70" y1="75" x2="470" y2="75" stroke="#f0f0f0" stroke-width="0.5" stroke-dasharray="4" />
+                    <text x="60" y="244" text-anchor="end" class="graph-label">0%</text>
+                    <text x="60" y="134" text-anchor="end" class="graph-label">50%</text>
+                    <text x="60" y="24" text-anchor="end" class="graph-label">100%</text>
+                    <text x="130" y="262" text-anchor="middle" class="graph-label">下位25%</text>
+                    <text x="230" y="262" text-anchor="middle" class="graph-label">第2群</text>
+                    <text x="330" y="262" text-anchor="middle" class="graph-label">第3群</text>
+                    <text x="430" y="262" text-anchor="middle" class="graph-label">上位25%</text>
+                    <!-- Random "actual" bars -->
+                    <rect x="110" y="216" width="40" height="24" rx="3" class="bar-random anim-bar"
+                        style="--target-h:24" />
+                    <rect x="210" y="175" width="40" height="65" rx="3" class="bar-random anim-bar"
+                        style="--target-h:65" />
+                    <rect x="310" y="130" width="40" height="110" rx="3" class="bar-random anim-bar"
+                        style="--target-h:110" />
+                    <rect x="410" y="68" width="40" height="172" rx="3" class="bar-random anim-bar"
+                        style="--target-h:172" />
+                    <!-- Random "self-assessment" line -->
+                    <polyline points="130,90 230,125 330,115 430,95" fill="none" stroke="#e85d58" stroke-width="3"
+                        stroke-linecap="round" class="draw-line self-line" />
+                    <circle cx="130" cy="90" r="5" fill="#e85d58" class="graph-dot" />
+                    <circle cx="430" cy="95" r="5" fill="#e85d58" class="graph-dot" />
+                    <!-- Label -->
+                    <rect x="160" y="28" width="180" height="30" rx="6" fill="#e85d5822" stroke="#e85d58"
+                        stroke-width="1" />
+                    <text x="250" y="48" text-anchor="middle" class="alert-label">心理バイアス = 0 なのに!</text>
+                </svg>
+                <div class="legend-row">
+                    <span class="legend-item"><span class="legend-dot gray"></span>ランダム「実力」</span>
+                    <span class="legend-item"><span class="legend-dot red"></span>ランダム「自己評価」</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 20: 心理バイアスゼロ vs 元研究 -->
+    <div class="scene" id="scene-20">
+        <div class="scene-content padded-layout">
+            <h2 class="section-title stagger-item">衝撃の比較</h2>
+            <div class="compare-grid tight">
+                <div class="compare-card stagger-item">
+                    <div class="compare-badge">ランダムデータ (Nuhfer)</div>
+                    <svg viewBox="0 0 180 90" class="compare-svg">
+                        <polyline points="15,70 55,50 105,42 165,20" fill="none" stroke="#999" stroke-width="2"
+                            class="draw-line" />
+                        <polyline points="15,30 55,40 105,36 165,28" fill="none" stroke="#e85d58" stroke-width="2"
+                            class="draw-line d2" />
+                    </svg>
+                    <div class="compare-verdict">心理バイアス = 0</div>
+                </div>
+                <div class="compare-vs stagger-item">=</div>
+                <div class="compare-card stagger-item">
+                    <div class="compare-badge">元研究 (K&D 1999)</div>
+                    <svg viewBox="0 0 180 90" class="compare-svg">
+                        <polyline points="15,70 55,48 105,40 165,18" fill="none" stroke="#667eea" stroke-width="2"
+                            class="draw-line" />
+                        <polyline points="15,28 55,40 105,35 165,22" fill="none" stroke="#e85d58" stroke-width="2"
+                            class="draw-line d2" />
+                    </svg>
+                    <div class="compare-verdict">人間の自己評価データ</div>
+                </div>
+            </div>
+            <div class="method-note stagger-item">パターンは「データの統計的性質」から自動的に生まれる</div>
+        </div>
+    </div>
+
+    <!-- Scene 21: ★Gignac 線形関係グラフ★ -->
+    <div class="scene" id="scene-21">
+        <div class="scene-content padded-layout">
+            <h2 class="section-title stagger-item">Gignac & Zajenkowski (2020)</h2>
+            <p class="section-sub stagger-item">Intelligence, Vol.80 ・929人の一般参加者</p>
+            <div class="graph-container stagger-item">
+                <svg viewBox="0 0 400 230" class="dke-graph" id="gignac-graph">
+                    <line x1="50" y1="20" x2="50" y2="200" stroke="#e0e0e0" stroke-width="1" />
+                    <line x1="50" y1="200" x2="380" y2="200" stroke="#e0e0e0" stroke-width="1" />
+                    <text x="215" y="225" text-anchor="middle" class="graph-label">客観的知能</text>
+                    <text x="20" y="110" text-anchor="middle" class="graph-label"
+                        transform="rotate(-90,20,110)">自己評価</text>
+                    <!-- Expected DKE curve (dashed, what we'd expect if DKE was real) -->
+                    <path d="M60,50 Q130,50 200,80 Q280,140 370,180" fill="none" stroke="#e85d58" stroke-width="2"
+                        stroke-dasharray="6" class="draw-line" />
+                    <!-- Actual linear relationship (solid) -->
+                    <line x1="60" y1="175" x2="370" y2="40" stroke="#2aa6a0" stroke-width="3" class="draw-line d2" />
+                    <text x="280" y="60" class="anno-label teal">実際 = 線形</text>
+                    <text x="200" y="55" class="anno-label red" style="font-size:9px">DK予測（非線形）</text>
+                </svg>
+                <div class="legend-row">
+                    <span class="legend-item"><span class="legend-dot red-dash"></span>DKE予測（非線形）</span>
+                    <span class="legend-item"><span class="legend-dot teal"></span>実際の関係（線形）</span>
+                </div>
+            </div>
+            <div class="conclusion-box stagger-item">結論:「DK効果は概ね統計的アーティファクトである」</div>
+        </div>
+    </div>
+
+    <!-- Scene 22: ダブル・ディッピング -->
+    <div class="scene" id="scene-22">
+        <div class="scene-content padded-layout">
+            <h2 class="section-title stagger-item">ダブル・ディッピング問題</h2>
+            <p class="section-sub stagger-item">McIntosh & Della Sala (2022) ・Royal Society Open Science</p>
+            <div class="double-dip-diagram">
+                <div class="dip-source stagger-item">テストの点数</div>
+                <div class="dip-branches">
+                    <div class="dip-branch stagger-item">
+                        <div class="dip-arrow-line"></div>
+                        <div class="dip-use accent-blue">用途1: グループ分け<br><small>「低能力」「高能力」</small></div>
+                    </div>
+                    <div class="dip-branch stagger-item">
+                        <div class="dip-arrow-line"></div>
+                        <div class="dip-use accent-red">用途2: 誤差の計算<br><small>「自己評価 − 実際」</small></div>
+                    </div>
+                </div>
+                <div class="dip-result stagger-item">同じ数字を原因と結果の両方に使用 → 平均への回帰が構造的に発生</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 23: 数学の必然だった？ -->
+    <div class="scene" id="scene-23">
+        <canvas id="canvas-23" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <div class="emphasis-box dark stagger-item">
+                <span class="emphasis-label">CONCLUSION?</span>
+                <p class="emphasis-text">DK効果のパターンは<br>"数学の必然"<br>だった？</p>
+            </div>
+            <div class="stat-chips stagger-item">
+                <span class="stat-chip">平均への回帰</span>
+                <span class="stat-chip">ダブル・ディッピング</span>
+                <span class="stat-chip">天井・床効果</span>
+            </div>
+            <div class="method-note stagger-item" style="color:#aab4c0">Dunkel et al. (2023): 適切な手法で分析すると「あるにはあるが極めてわずか」
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 24: それでもメタ認知は実在する -->
+    <div class="scene" id="scene-24">
+        <canvas id="canvas-24" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <div class="tag tag-teal stagger-item">BLOCK 5</div>
+            <h1 class="title-huge stagger-item">それでもメタ認知は<br>実在する</h1>
+            <p class="subtitle stagger-item">反対側の声に耳を傾ける</p>
+        </div>
+    </div>
+
+    <!-- Scene 25: Dunning引用 -->
+    <div class="scene" id="scene-25">
+        <div class="scene-content padded-layout">
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <p class="quote-text">統計的な要因を差し引いても、<br>自己判断の誤りのパターンは残る</p>
+                <div class="quote-author">— David Dunning</div>
+            </div>
+            <div class="nuance-row stagger-item">
+                <div class="nuance-item"><span class="nuance-check">&#x2713;</span> 効果の大きさは想定より小さい可能性</div>
+                <div class="nuance-item"><span class="nuance-check">&#x2713;</span> メタ認知の問題がゼロとは言えない</div>
+                <div class="nuance-item"><span class="nuance-check">&#x2713;</span> 完全否定でも完全肯定でもない</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 26: ベイズ推論モデル -->
+    <div class="scene" id="scene-26">
+        <div class="scene-content padded-layout">
+            <h2 class="section-title stagger-item">ベイズ推論モデル <span class="eng">第3の説明</span></h2>
+            <p class="section-sub stagger-item">Jansen et al. (2021)</p>
+            <div class="bayes-flow">
+                <div class="bayes-step stagger-item">
+                    <div class="bayes-icon">Prior</div>
+                    <div class="bayes-label">楽観的な事前信念</div>
+                    <div class="bayes-desc">「自分はたぶんできる」</div>
+                </div>
+                <div class="bayes-arrow stagger-item">×</div>
+                <div class="bayes-step stagger-item">
+                    <div class="bayes-icon">Data</div>
+                    <div class="bayes-label">経験データ</div>
+                    <div class="bayes-desc">成功・失敗の蓄積</div>
+                </div>
+                <div class="bayes-arrow stagger-item">=</div>
+                <div class="bayes-step stagger-item">
+                    <div class="bayes-icon">Post</div>
+                    <div class="bayes-label">修正された自己評価</div>
+                    <div class="bayes-desc">経験が多いほど正確に</div>
+                </div>
+            </div>
+            <div class="method-note stagger-item">低能力者は情報量が少なく、楽観的な事前信念が修正されにくい</div>
+        </div>
+    </div>
+
+    <!-- Scene 27: 3つの立場 -->
+    <div class="scene" id="scene-27">
+        <div class="scene-content padded-layout">
+            <h2 class="section-title stagger-item">3つの立場</h2>
+            <div class="card-grid three-col">
+                <div class="info-card accent-blue stagger-item">
+                    <div class="card-num">A</div>
+                    <div class="card-title">メタ認知の欠如</div>
+                    <div class="card-desc">元研究の説明<br>「できないことがわからない」</div>
+                </div>
+                <div class="info-card accent-red stagger-item">
+                    <div class="card-num">B</div>
+                    <div class="card-title">統計的アーティファクト</div>
+                    <div class="card-desc">数学で全部説明可能<br>「回帰 + 天井床効果」</div>
+                </div>
+                <div class="info-card accent-teal stagger-item">
+                    <div class="card-num">C</div>
+                    <div class="card-title">ベイズ推論の限界</div>
+                    <div class="card-desc">情報不足の結果<br>「合理的修正の限界」</div>
+                </div>
+            </div>
+            <div class="method-note stagger-item">現時点では決着がついていない</div>
+        </div>
+    </div>
+
+    <!-- Scene 28: 私たちの話 -->
+    <div class="scene" id="scene-28">
+        <canvas id="canvas-28" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <div class="emphasis-box teal stagger-item">
+                <span class="emphasis-label">DUNNING'S MESSAGE</span>
+                <p class="emphasis-text">これは"彼ら"ではなく<br>"私たち"の話</p>
+            </div>
+            <p class="subtitle stagger-item" style="margin-top:20px">誰でも自分がよく知らない分野では<br>同じバイアスに陥りうる</p>
+        </div>
+    </div>
+
+    <!-- Scene 29: 3つの方法 -->
+    <div class="scene" id="scene-29">
+        <div class="scene-content padded-layout">
+            <h2 class="section-title stagger-item">正確な自己評価のために</h2>
+            <div class="card-grid three-col">
+                <div class="info-card stagger-item">
+                    <div class="card-num">1</div>
+                    <div class="card-title">フィードバック</div>
+                    <div class="card-desc">他者からの視点を求める<br>自分の「盲点」を発見</div>
+                </div>
+                <div class="info-card stagger-item">
+                    <div class="card-num">2</div>
+                    <div class="card-title">自己テスト</div>
+                    <div class="card-desc">実際にアウトプットする<br>「わかったつもり」を防ぐ</div>
+                </div>
+                <div class="info-card stagger-item">
+                    <div class="card-num">3</div>
+                    <div class="card-title">無知の自覚</div>
+                    <div class="card-desc">何を知らないかを意識<br>メタ認知の本質</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 30: 無知の知 -->
+    <div class="scene" id="scene-30">
+        <canvas id="canvas-30" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <div class="emphasis-box stagger-item">
+                <span class="emphasis-label">SOCRATES — 紀元前399年</span>
+                <p class="emphasis-text">"知らないことを知る"<br>という姿勢</p>
+            </div>
+            <p class="subtitle stagger-item">2400年前から最強のアドバイス</p>
+        </div>
+    </div>
+
+    <!-- Scene 31: まとめ -->
+    <div class="scene" id="scene-31">
+        <div class="scene-content padded-layout">
+            <h2 class="section-title stagger-item">まとめ</h2>
+            <div class="summary-list">
+                <div class="summary-item stagger-item">
+                    <div class="summary-num">1</div>
+                    <div class="summary-text">SNSの有名グラフはオリジナルではない<span class="summary-sub">作者不明 / Dunning本人も否定</span>
+                    </div>
+                </div>
+                <div class="summary-item stagger-item">
+                    <div class="summary-num">2</div>
+                    <div class="summary-text">DK効果には統計のトリックが大きく関与<span class="summary-sub">平均への回帰 / ダブルディッピング /
+                            天井床効果</span></div>
+                </div>
+                <div class="summary-item stagger-item">
+                    <div class="summary-num">3</div>
+                    <div class="summary-text">メタ認知の問題自体は実在する<span class="summary-sub">「自分が何を知らないか」に気づけないのは事実</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 32: グラフは錯覚 / メタ認知は実在 -->
+    <div class="scene" id="scene-32">
+        <canvas id="canvas-32" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <div class="dual-message stagger-item">
+                <div class="msg-line cross">グラフは統計の錯覚</div>
+                <div class="msg-divider"></div>
+                <div class="msg-line check">メタ認知は実在する</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 33: 学びの第一歩 -->
+    <div class="scene" id="scene-33">
+        <canvas id="canvas-33" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <div class="emphasis-box final stagger-item">
+                <p class="emphasis-text">"自分の知らないこと"を<br>知ることが<br>学びの第一歩</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

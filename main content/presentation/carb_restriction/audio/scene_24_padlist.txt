@@ -1,0 +1,2 @@
+file 'D:/myfolder/動画生成/main content/presentation/carb_restriction/audio/scene_24_concat.wav'
+file 'D:/myfolder/動画生成/main content/presentation/carb_restriction/audio/scene_24_pad.wav'

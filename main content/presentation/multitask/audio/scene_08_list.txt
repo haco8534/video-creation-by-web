@@ -1,0 +1,3 @@
+file 'D:/myfolder/動画生成/main content/presentation/multitask/audio/scene_08_00.wav'
+file 'D:/myfolder/動画生成/main content/presentation/multitask/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/multitask/audio/scene_08_01.wav'

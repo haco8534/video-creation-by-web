@@ -1,0 +1,2 @@
+file 'D:/myfolder/動画生成/main content/presentation/multitask/audio/scene_14_concat.wav'
+file 'D:/myfolder/動画生成/main content/presentation/multitask/audio/scene_14_pad.wav'
