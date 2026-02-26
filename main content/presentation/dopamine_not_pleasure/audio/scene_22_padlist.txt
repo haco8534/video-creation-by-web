@@ -1,0 +1,2 @@
+file 'D:/myfolder/動画生成/main content/presentation/dopamine_not_pleasure/audio/scene_22_concat.wav'
+file 'D:/myfolder/動画生成/main content/presentation/dopamine_not_pleasure/audio/scene_22_pad.wav'

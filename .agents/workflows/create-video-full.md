@@ -50,10 +50,21 @@ description: テーマ入力→台本→メインコンテンツ動画→Remotio
  ║  C3. Root.tsx 登録 + コンパイル確認 ║
  ║                                   ║
  ║  → Remotionプロジェクト完成        ║
+ ╚═══════════════╤═══════════════════╝
+                 │ Remotion Studioでプレビュー → 手動レンダリング
+                 ▼
+ ╔═══════════════════════════════════╗
+ ║  Phase D: 完成品整理               ║
+ ║  (d:\myfolder\動画生成\完成品)      ║
+ ║                                   ║
+ ║  D1. フォルダ作成                  ║
+ ║  D2. 最終成果物をコピー            ║
+ ║                                   ║
+ ║  → 完成品/{テーマ名}/ に集約       ║
  ╚═══════════════════════════════════╝
        │
        ▼
-  ✅ Remotion Studioでプレビュー可能
+  ✅ YouTube投稿可能な状態
 ```
 
 ---
@@ -67,6 +78,7 @@ description: テーマ入力→台本→メインコンテンツ動画→Remotio
 | `{台本DIR}` | `d:\myfolder\動画生成\台本作成\{テーマ名}` | |
 | `{MC_DIR}` | `d:\myfolder\動画生成\main content\presentation\{project_id}` | |
 | `{REMOTION_DIR}` | `d:\myfolder\動画生成\Remotion` | |
+| `{完成品DIR}` | `d:\myfolder\動画生成\完成品\{テーマ名}` | |
 
 ---
 
@@ -249,24 +261,91 @@ npx tsc --noEmit
 
 ---
 
+# Phase D: 完成品整理
+
+**作業ディレクトリ**: `d:\myfolder\動画生成\完成品`
+
+### 前提条件
+- Phase C が完了し、Remotion Studioでプレビュー確認済みであること
+- レンダリングが完了していること（`{REMOTION_DIR}/output/{project_id}.mp4` が存在する）
+
+### 完成品フォルダの構造
+
+```
+完成品/
+└── {テーマ名}/
+    ├── {テーマ名}.mp4       ← Remotionレンダリング済み動画
+    ├── 概要欄.md            ← YouTube概要欄テキスト
+    ├── サムネイル.jpg        ← サムネイル画像（あれば）
+    └── 台本.md              ← 完成台本
+```
+
+### 実行手順
+
+#### D1. 完成品フォルダ作成
+
+// turbo
+1. フォルダを作成:
+```powershell
+New-Item -ItemType Directory -Force -Path "{完成品DIR}"
+```
+
+#### D2. 最終成果物をコピー
+
+// turbo
+1. レンダリング済み動画をコピー:
+```powershell
+Copy-Item "{REMOTION_DIR}/output/{project_id}.mp4" "{完成品DIR}/{テーマ名}.mp4"
+```
+
+// turbo
+2. 台本をコピー:
+```powershell
+Copy-Item "{台本DIR}/script.md" "{完成品DIR}/台本.md"
+```
+
+// turbo
+3. YouTube概要欄テキストをコピー:
+```powershell
+Copy-Item "{台本DIR}/description.md" "{完成品DIR}/概要欄.md"
+```
+
+4. サムネイル画像をコピー（存在する場合）:
+```powershell
+# サムネイル画像のパスはテーマによって異なるため、ユーザーに確認する
+# 例: Copy-Item "path/to/thumbnail.jpg" "{完成品DIR}/サムネイル.jpg"
+```
+
+### Phase D 完了条件
+
+- [ ] `{完成品DIR}/` フォルダが存在する
+- [ ] `{完成品DIR}/{テーマ名}.mp4` が存在し、ファイルサイズが妥当である
+- [ ] `{完成品DIR}/台本.md` が存在する
+- [ ] `{完成品DIR}/概要欄.md` が存在する
+- [ ] サムネイル画像がある場合、`{完成品DIR}/サムネイル.jpg` としてコピー済み
+
+---
+
 ## ✅ 最終完了報告
 
 以下をユーザーに報告する:
 
-1. **生成されたファイル一覧**
-   - `台本作成/{テーマ名}/script.md` — 台本
-   - `台本作成/{テーマ名}/research.md` — リサーチ結果
-   - `main content/presentation/{project_id}/final_output.mp4` — メインコンテンツ
-   - `Remotion/src/projects/{project_id}/` — ★Remotionプロジェクト
+1. **完成品フォルダ**: `完成品/{テーマ名}/`
+   - `{テーマ名}.mp4` — レンダリング済み動画
+   - `台本.md` — 完成台本
+   - `概要欄.md` — YouTube概要欄テキスト
+   - `サムネイル.jpg` — サムネイル画像（あれば）
 
-2. **Composition ID**: `{project_id}-video-subtitles`
+2. **作業ファイルの保存場所**（参照用）
+   - `台本作成/{テーマ名}/` — リサーチ結果・台本の作業ファイル
+   - `main content/presentation/{project_id}/` — プレゼン・音声・中間動画
+   - `Remotion/src/projects/{project_id}/` — Remotionプロジェクト
 
-3. **プレビュー方法**: `npm run dev` → Remotion Studio → Composition選択
-
-4. **レンダリング方法**（ユーザーが手動で実行）:
-   ```powershell
-   npx remotion render {project_id}-video-subtitles --output output/{project_id}.mp4
-   ```
+3. **YouTube投稿チェックリスト**
+   - [ ] 動画をアップロード（`{テーマ名}.mp4`）
+   - [ ] 概要欄をコピー＆ペースト（`概要欄.md`）
+   - [ ] タイムスタンプの時間を実際の動画に合わせて微調整
+   - [ ] サムネイルを設定
 
 ---
 
@@ -292,3 +371,4 @@ npx tsc --noEmit
 | 立ち絵が表示されない | C | `public/characters/` に画像があるか確認 |
 | TypeScriptエラー | C | `subtitleData.ts` の型と `VideoWithSubtitles.tsx` のimportが一致するか確認 |
 | Remotion Studioでプレビューできない | C | `npm run dev` が実行中か確認。ポート3000が使われている場合は別ポートを指定 |
+| 完成品のmp4がない | D | `{REMOTION_DIR}/output/` にレンダリング済みファイルがあるか確認。なければレンダリングを実行する |

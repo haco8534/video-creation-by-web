@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ドーパミンは「快楽」じゃなかった</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== Block 1: 導入 ===== -->
+
+    <!-- Scene 0: タイトルカード -->
+    <div class="scene" id="scene-0">
+        <canvas id="canvas-0" class="bg-canvas"></canvas>
+        <div class="content title-scene">
+            <div class="section-badge accent-bg-primary">NEUROSCIENCE</div>
+            <h1 class="title-huge">ドーパミンは<br><span class="accent-primary">"快楽"</span>じゃなかった</h1>
+            <div class="title-sub">── 脳科学で最も広まった誤解を覆す</div>
+        </div>
+    </div>
+
+    <!-- Scene 1: テキスト強調 -->
+    <div class="scene" id="scene-1">
+        <canvas id="canvas-1" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon alert-amber">?</div>
+                <div class="alert-title">"ドーパミン＝快楽物質"は</div>
+                <div class="alert-body-large accent-coral">脳科学で最も<br>広まった誤解</div>
+                <div class="alert-sub">研究者たち自身がずっと訂正しようとしてきた</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 2: 段階的リスト -->
+    <div class="scene" id="scene-2">
+        <div class="content card-layout">
+            <h2 class="scene-title">この動画でわかること</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text">ドーパミンの<span class="accent-primary">本当の役割</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-coral">2</div>
+                    <div class="numbered-text">"楽しくないのに<span class="accent-coral">やめられない</span>"の理由</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-amber">3</div>
+                    <div class="numbered-text">SNS・スマホが脳に<span class="accent-amber">何をしているか</span></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">この動画を見終わったら、ドーパミンへの見方が180度変わる</div>
+        </div>
+    </div>
+
+    <!-- ===== Block 2: ドーパミンの基礎知識 ===== -->
+
+    <!-- Scene 3: タイトルカード -->
+    <div class="scene" id="scene-3">
+        <canvas id="canvas-3" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-teal">BASICS</div>
+            <h2 class="title-medium">ドーパミンって<br><span class="accent-teal">何者？</span></h2>
+            <div class="title-sub">── 神経伝達物質の"メッセンジャー"</div>
+        </div>
+    </div>
+
+    <!-- Scene 4: フロー図（歴史） -->
+    <div class="scene" id="scene-4">
+        <div class="content card-layout">
+            <h2 class="scene-title">ドーパミン発見の歴史</h2>
+            <div class="flow-chain">
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">1957</div>
+                    <div class="flow-text"><span class="flow-name">Carlsson</span><br>ドーパミンを<br>神経伝達物質として発見<br><span
+                            class="flow-sub">スウェーデン・ルンド大学</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">1960s</div>
+                    <div class="flow-text"><span class="flow-name">パーキンソン病</span><br>ドーパミン不足が<br>原因と解明<br><span
+                            class="flow-sub">L-DOPA治療薬の開発へ</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">2000</div>
+                    <div class="flow-text"><span class="flow-name">ノーベル賞</span><br>Carlsson<br>生理学・医学賞<br><span
+                            class="flow-sub">Greengard, Kandelと共同</span></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">発見前は「ノルアドレナリンの材料」としか思われていなかった</div>
+        </div>
+    </div>
+
+    <!-- Scene 5: ダークシーン（快楽中枢実験） -->
+    <div class="scene dark-scene" id="scene-5">
+        <div class="content center-layout">
+            <h2 class="scene-title light-text">Olds & Milner の"快楽中枢"実験</h2>
+            <div class="source-badge dark-badge stagger-item">Olds & Milner (1954) / ラット / J. Comp. Physiol. Psychol.
+            </div>
+            <div class="experiment-visual stagger-item">
+                <div class="exp-setup">
+                    <div class="exp-box exp-rat">
+                        <div class="exp-label">ラット</div>
+                    </div>
+                    <div class="exp-connector">&rarr;</div>
+                    <div class="exp-box exp-lever">
+                        <div class="exp-label">レバー</div>
+                    </div>
+                    <div class="exp-connector">&rarr;</div>
+                    <div class="exp-box exp-brain">
+                        <div class="exp-label">脳に電気刺激</div>
+                    </div>
+                </div>
+            </div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-coral">7,000</span><span class="num-unit light-text">回/時</span>
+            </div>
+            <div class="emphasis-sub light-text stagger-item">食事も睡眠も忘れてレバーを押し続けた</div>
+            <div class="footnote light-text stagger-item">「快楽中枢の発見」として大々的に報道 → 誤解の始まり</div>
+        </div>
+    </div>
+
+    <!-- Scene 6: 横並びカード（4種ホルモン） -->
+    <div class="scene" id="scene-6">
+        <div class="content card-layout">
+            <h2 class="scene-title">"幸せホルモン"4種の誤解</h2>
+            <div class="quad-card">
+                <div class="factor-card factor-highlight stagger-item">
+                    <div class="factor-icon accent-bg-primary">D</div>
+                    <div class="factor-name">ドーパミン</div>
+                    <div class="factor-desc"><span class="strikethrough">快楽</span><br><span
+                            class="accent-coral">本当は"動機づけ"</span></div>
+                </div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-teal">S</div>
+                    <div class="factor-name">セロトニン</div>
+                    <div class="factor-desc">心の安定<br>感情の調整役</div>
+                </div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-amber">O</div>
+                    <div class="factor-name">オキシトシン</div>
+                    <div class="factor-desc">人との絆<br>愛情・信頼</div>
+                </div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-coral">E</div>
+                    <div class="factor-name">エンドルフィン</div>
+                    <div class="factor-desc">快感・鎮痛<br>ランナーズハイ</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">実は4つとも全く<span class="accent-primary">異なる役割</span>を持つ</div>
+            <div class="footnote stagger-item">あの実験のラットは「快楽」を感じていたのか？それとも「衝動」に突き動かされていただけか？</div>
+        </div>
+    </div>
+
+    <!-- ===== Block 3: Wanting vs Liking ===== -->
+
+    <!-- Scene 7: セクションタイトル -->
+    <div class="scene" id="scene-7">
+        <canvas id="canvas-7" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral">CORE DISCOVERY</div>
+            <h2 class="title-medium">"欲しい"と"好き"は<br><span class="accent-coral">別モノ</span>だった</h2>
+            <div class="title-sub">── Kent Berridge / ミシガン大学</div>
+        </div>
+    </div>
+
+    <!-- Scene 8: VS比較（Wanting vs Liking） -->
+    <div class="scene" id="scene-8">
+        <div class="content center-layout">
+            <h2 class="scene-title">Wanting vs Liking</h2>
+            <div class="source-badge stagger-item">Berridge & Robinson / ミシガン大学 / Trends in Neurosciences</div>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge wanting-badge">WANTING</div>
+                    <div class="vs-title">欲する・渇望する</div>
+                    <div class="vs-icon-area">
+                        <svg viewBox="0 0 60 60" class="vs-icon-svg">
+                            <circle cx="30" cy="30" r="25" fill="none" stroke="var(--primary)" stroke-width="3"
+                                stroke-dasharray="5,3" class="pulse-ring" />
+                            <circle cx="30" cy="30" r="12" fill="var(--primary)" opacity="0.3" />
+                            <path d="M22 30 L30 20 L38 30 L30 40 Z" fill="var(--primary)" opacity="0.7" />
+                        </svg>
+                    </div>
+                    <div class="vs-desc"><span class="accent-primary">ドーパミン</span>が駆動<br>"もっと欲しい"</div>
+                    <div class="vs-detail">動機づけ・行動の原動力</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge liking-badge">LIKING</div>
+                    <div class="vs-title">好む・心地よい</div>
+                    <div class="vs-icon-area">
+                        <svg viewBox="0 0 60 60" class="vs-icon-svg">
+                            <circle cx="30" cy="30" r="25" fill="none" stroke="var(--teal)" stroke-width="2" />
+                            <circle cx="30" cy="30" r="15" fill="var(--teal)" opacity="0.2" />
+                            <circle cx="30" cy="30" r="8" fill="var(--teal)" opacity="0.5" />
+                        </svg>
+                    </div>
+                    <div class="vs-desc"><span class="accent-teal">オピオイド系</span>が担当<br>"気持ちいい"</div>
+                    <div class="vs-detail">快楽の実体験</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">お腹いっぱいなのにポテチに手が伸びる = <span
+                    class="accent-coral">Wantingだけが暴走</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 9: 数値インパクト（ドーパミン0%） -->
+    <div class="scene" id="scene-9">
+        <div class="content center-layout">
+            <h2 class="scene-title">ドーパミン0%でも快楽反応は正常</h2>
+            <div class="source-badge stagger-item">Berridge研究 / ラット / ドーパミン完全枯渇実験</div>
+            <div class="dopamine-visual stagger-item">
+                <svg viewBox="0 0 300 160" class="da-depletion-svg">
+                    <text x="80" y="22" text-anchor="middle" class="da-axis-label">ドーパミン量</text>
+                    <text x="230" y="22" text-anchor="middle" class="da-axis-label">快楽反応</text>
+                    <!-- ドーパミン側: 空リング -->
+                    <circle cx="80" cy="90" r="45" fill="none" stroke="#e5e7eb" stroke-width="8" />
+                    <circle cx="80" cy="90" r="45" fill="none" stroke="var(--coral)" stroke-width="8"
+                        stroke-dasharray="283" stroke-dashoffset="283" class="da-ring-empty"
+                        transform="rotate(-90 80 90)" />
+                    <text x="80" y="97" text-anchor="middle" class="da-center-label accent-coral">0%</text>
+                    <!-- 快楽側: フルリング -->
+                    <circle cx="230" cy="90" r="45" fill="none" stroke="#e5e7eb" stroke-width="8" />
+                    <circle cx="230" cy="90" r="45" fill="none" stroke="var(--teal)" stroke-width="8"
+                        stroke-dasharray="283" stroke-dashoffset="0" class="da-ring-full"
+                        transform="rotate(-90 230 90)" />
+                    <text x="230" y="97" text-anchor="middle" class="da-center-label accent-teal">100%</text>
+                    <!-- 矢印 -->
+                    <line x1="135" y1="90" x2="170" y2="90" stroke="var(--text-light)" stroke-width="2"
+                        stroke-dasharray="4,3" />
+                    <polygon points="175,85 185,90 175,95" fill="var(--text-light)" />
+                </svg>
+            </div>
+            <div class="emphasis-text stagger-item">甘味への<span class="accent-teal">快楽反応</span>は<span
+                    class="accent-primary">完全に正常</span></div>
+            <div class="footnote stagger-item">ただし自分から「取りに行く」行動は完全に消失</div>
+        </div>
+    </div>
+
+    <!-- Scene 10: 段階的リスト（ヘドニック・ホットスポット） -->
+    <div class="scene" id="scene-10">
+        <div class="content card-layout">
+            <h2 class="scene-title">快楽を生む"ヘドニック・ホットスポット"</h2>
+            <div class="source-badge stagger-item">Berridge研究室 / ミシガン大学 / Nature Reviews Neuroscience</div>
+            <div class="hotspot-visual stagger-item">
+                <svg viewBox="0 0 280 120" class="brain-svg">
+                    <!-- 脳のシルエット -->
+                    <ellipse cx="140" cy="65" rx="120" ry="50" fill="#f1f5f9" stroke="#d1d5db" stroke-width="1.5" />
+                    <!-- ホットスポット（小さな光点） -->
+                    <circle cx="105" cy="72" r="6" class="hotspot-dot pulse-dot" fill="var(--teal)" />
+                    <circle cx="125" cy="68" r="4" class="hotspot-dot pulse-dot-delay" fill="var(--teal)" />
+                    <!-- ラベル -->
+                    <text x="105" y="100" text-anchor="middle" class="hotspot-label">側坐核</text>
+                    <text x="175" y="100" text-anchor="middle" class="hotspot-label">腹側淡蒼球</text>
+                    <circle cx="175" cy="70" r="5" class="hotspot-dot pulse-dot-delay2" fill="var(--teal)" />
+                    <!-- サイズ注記 -->
+                    <line x1="95" y1="45" x2="115" y2="45" stroke="var(--coral)" stroke-width="1.5" />
+                    <text x="148" y="42" text-anchor="middle" class="hotspot-size">1mm&sup3;（ラット）</text>
+                </svg>
+            </div>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-teal">1</div>
+                    <div class="numbered-text">脳内の<span class="accent-coral">ごく小さな領域</span><br><span
+                            class="text-sub">ラットで約1mm&sup3; / ヒトで推定1cm&sup3;</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-teal">2</div>
+                    <div class="numbered-text">快楽を生むのは<span class="accent-primary">オピオイド系</span><br><span
+                            class="text-sub">脳が自ら作る"天然のエンドルフィン"</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-teal">3</div>
+                    <div class="numbered-text">ドーパミンではなく<span class="accent-teal">別のシステム</span><br><span
+                            class="text-sub">「脳の中の天然のヘロイン」── Berridge</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 11: 引用カード（Salamone） -->
+    <div class="scene" id="scene-11">
+        <div class="content center-layout">
+            <h2 class="scene-title">Salamone教授の実験</h2>
+            <div class="source-badge stagger-item">Salamone et al. / コネチカット大学 / Annual Reviews of Neuroscience</div>
+            <div class="effort-visual stagger-item">
+                <div class="effort-path effort-hard">
+                    <div class="effort-icon">&#x1F9F1;</div>
+                    <div class="effort-label">壁を乗り越える<br><span class="accent-primary">好物のエサ</span></div>
+                </div>
+                <div class="effort-vs">or</div>
+                <div class="effort-path effort-easy">
+                    <div class="effort-icon">&#x1F6B6;</div>
+                    <div class="effort-label">楽な道<br><span class="accent-amber">普通のエサ</span></div>
+                </div>
+            </div>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">ドーパミンを減らしたラットは<br><span class="accent-coral">好物を諦めてでも</span>努力を避けた</div>
+                <div class="quote-source">楽しむ力はある。頑張る力だけがなくなった</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 12: テキスト強調（ドーパミンの正体） -->
+    <div class="scene" id="scene-12">
+        <canvas id="canvas-12" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">ドーパミンは</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-primary">"もっと欲しい"</span>を<br>生む物質</div>
+            <div class="emphasis-sub stagger-item">快楽ではなく、<span class="accent-primary">動機づけ</span>の物質だった</div>
+            <div class="comparison-note stagger-item">この事実を知ると、ある恐ろしい現象が説明できる</div>
+        </div>
+    </div>
+
+    <!-- ===== Block 4: 依存症 ===== -->
+
+    <!-- Scene 13: タイトルカード（ダーク） -->
+    <div class="scene dark-scene" id="scene-13">
+        <canvas id="canvas-13" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral">ADDICTION</div>
+            <h2 class="title-medium light-text">楽しくないのに<br><span class="accent-coral">やめられない</span></h2>
+            <div class="title-sub light-text-dim">── 依存症の本当の怖さ</div>
+        </div>
+    </div>
+
+    <!-- Scene 14: SVGフロー（報酬予測誤差） -->
+    <div class="scene" id="scene-14">
+        <div class="content card-layout">
+            <h2 class="scene-title">報酬予測誤差のしくみ</h2>
+            <div class="source-badge stagger-item">Schultz et al. (1997) Science / サル神経活動記録</div>
+            <div class="rpe-visual stagger-item">
+                <svg viewBox="0 0 400 200" class="rpe-svg">
+                    <!-- 軸 -->
+                    <line x1="50" y1="100" x2="370" y2="100" stroke="#d1d5db" stroke-width="1.5" />
+                    <text x="45" y="60" text-anchor="end" class="rpe-label">DA +</text>
+                    <text x="45" y="145" text-anchor="end" class="rpe-label">DA -</text>
+                    <!-- 予想より良い -->
+                    <rect x="70" y="40" width="80" height="60" rx="8" fill="var(--teal)" opacity="0.15" />
+                    <rect x="70" y="40" width="80" height="60" rx="8" fill="none" stroke="var(--teal)"
+                        stroke-width="2" />
+                    <text x="110" y="67" text-anchor="middle" class="rpe-text">予想より</text>
+                    <text x="110" y="85" text-anchor="middle" class="rpe-text-bold accent-teal">良い</text>
+                    <line x1="110" y1="40" x2="110" y2="25" stroke="var(--teal)" stroke-width="2.5"
+                        class="rpe-spike-up" />
+                    <polygon points="105,28 110,15 115,28" fill="var(--teal)" />
+                    <!-- 予想通り -->
+                    <rect x="170" y="70" width="80" height="60" rx="8" fill="var(--text-light)" opacity="0.1" />
+                    <rect x="170" y="70" width="80" height="60" rx="8" fill="none" stroke="var(--text-light)"
+                        stroke-width="1.5" />
+                    <text x="210" y="97" text-anchor="middle" class="rpe-text">予想</text>
+                    <text x="210" y="115" text-anchor="middle" class="rpe-text-bold">通り</text>
+                    <line x1="210" y1="85" x2="210" y2="118" stroke="var(--text-light)" stroke-width="1"
+                        stroke-dasharray="3,2" />
+                    <!-- 予想より悪い -->
+                    <rect x="270" y="100" width="80" height="60" rx="8" fill="var(--coral)" opacity="0.1" />
+                    <rect x="270" y="100" width="80" height="60" rx="8" fill="none" stroke="var(--coral)"
+                        stroke-width="2" />
+                    <text x="310" y="127" text-anchor="middle" class="rpe-text">予想より</text>
+                    <text x="310" y="145" text-anchor="middle" class="rpe-text-bold accent-coral">悪い</text>
+                    <line x1="310" y1="160" x2="310" y2="180" stroke="var(--coral)" stroke-width="2.5"
+                        class="rpe-spike-down" />
+                    <polygon points="305,177 310,190 315,177" fill="var(--coral)" />
+                </svg>
+            </div>
+            <div class="emphasis-sub stagger-item">ドーパミンは<span class="accent-primary">サプライズ検出器</span></div>
+            <div class="footnote stagger-item">同じ刺激を繰り返すと「予想通り」になり → 効かなくなる</div>
+        </div>
+    </div>
+
+    <!-- Scene 15: 段階的リスト（依存の3段階） -->
+    <div class="scene" id="scene-15">
+        <div class="content card-layout">
+            <h2 class="scene-title">依存の3段階</h2>
+            <div class="addiction-stages">
+                <div class="stage-card stagger-item">
+                    <div class="stage-number stage-1">1</div>
+                    <div class="stage-content">
+                        <div class="stage-title accent-teal">ハマる</div>
+                        <div class="stage-bars">
+                            <div class="stage-bar-row"><span class="stage-bar-label">Wanting</span>
+                                <div class="stage-bar-track">
+                                    <div class="stage-bar-fill bar-wanting" style="--w:70%"></div>
+                                </div>
+                            </div>
+                            <div class="stage-bar-row"><span class="stage-bar-label">Liking</span>
+                                <div class="stage-bar-track">
+                                    <div class="stage-bar-fill bar-liking" style="--w:70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stage-desc">両方高い。純粋に楽しい時期</div>
+                    </div>
+                </div>
+                <div class="stage-arrow stagger-item">&darr;</div>
+                <div class="stage-card stagger-item">
+                    <div class="stage-number stage-2">2</div>
+                    <div class="stage-content">
+                        <div class="stage-title accent-amber">慣れる</div>
+                        <div class="stage-bars">
+                            <div class="stage-bar-row"><span class="stage-bar-label">Wanting</span>
+                                <div class="stage-bar-track">
+                                    <div class="stage-bar-fill bar-wanting" style="--w:85%"></div>
+                                </div>
+                            </div>
+                            <div class="stage-bar-row"><span class="stage-bar-label">Liking</span>
+                                <div class="stage-bar-track">
+                                    <div class="stage-bar-fill bar-liking" style="--w:40%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stage-desc">耐性形成。受容体が減少</div>
+                    </div>
+                </div>
+                <div class="stage-arrow stagger-item">&darr;</div>
+                <div class="stage-card stagger-item">
+                    <div class="stage-number stage-3">3</div>
+                    <div class="stage-content">
+                        <div class="stage-title accent-coral">囚われる</div>
+                        <div class="stage-bars">
+                            <div class="stage-bar-row"><span class="stage-bar-label">Wanting</span>
+                                <div class="stage-bar-track">
+                                    <div class="stage-bar-fill bar-wanting" style="--w:95%"></div>
+                                </div>
+                            </div>
+                            <div class="stage-bar-row"><span class="stage-bar-label">Liking</span>
+                                <div class="stage-bar-track">
+                                    <div class="stage-bar-fill bar-liking" style="--w:10%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stage-desc">楽しくないのにやめられない</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 16: VS比較（初期 vs 依存後） -->
+    <div class="scene" id="scene-16">
+        <div class="content center-layout">
+            <h2 class="scene-title">初期の快楽 vs 依存後の渇望</h2>
+            <div class="source-badge stagger-item">Robinson & Berridge / インセンティブ顕在化理論</div>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge safe-badge">初期</div>
+                    <div class="vs-title">Wanting + Liking</div>
+                    <div class="vs-desc">快楽を伴う<br>健全な欲求</div>
+                    <div class="vs-detail">報酬系が正常に機能</div>
+                </div>
+                <div class="vs-divider stagger-item">&rarr;</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge danger-badge">依存後</div>
+                    <div class="vs-title">Wanting のみ</div>
+                    <div class="vs-desc"><span class="accent-coral">快楽なき渇望</span><br>前頭前野も機能低下</div>
+                    <div class="vs-detail">ブレーキが壊れた状態</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">Wantingは<span
+                    class="accent-coral">感作</span>（sensitization）で強化され続ける</div>
+        </div>
+    </div>
+
+    <!-- Scene 17: 注意喚起 -->
+    <div class="scene" id="scene-17">
+        <div class="content center-layout">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">依存症は<span class="accent-coral">"意志の弱さ"</span>ではない</div>
+                <div class="alert-sub">脳の報酬系が"ハイジャック"された状態<br>前頭前野のブレーキが効かなくなる</div>
+            </div>
+            <div class="hijack-visual stagger-item">
+                <svg viewBox="0 0 300 80" class="hijack-svg">
+                    <rect x="10" y="20" width="100" height="45" rx="8" fill="var(--primary)" opacity="0.15"
+                        stroke="var(--primary)" stroke-width="1.5" />
+                    <text x="60" y="47" text-anchor="middle" class="hijack-label">報酬系</text>
+                    <line x1="120" y1="42" x2="160" y2="42" stroke="var(--coral)" stroke-width="3" />
+                    <polygon points="160,37 175,42 160,47" fill="var(--coral)" />
+                    <text x="148" y="18" text-anchor="middle" class="hijack-small accent-coral">ハイジャック</text>
+                    <rect x="180" y="20" width="100" height="45" rx="8" fill="var(--coral)" opacity="0.15"
+                        stroke="var(--coral)" stroke-width="1.5" />
+                    <text x="230" y="47" text-anchor="middle" class="hijack-label">前頭前野</text>
+                    <text x="230" y="78" text-anchor="middle" class="hijack-small">ブレーキ機能低下</text>
+                </svg>
+            </div>
+            <div class="footnote stagger-item">アルコール・薬物だけでなく、行動依存にも当てはまる</div>
+        </div>
+    </div>
+
+    <!-- ===== Block 5: SNS・スマホ ===== -->
+
+    <!-- Scene 18: タイトルカード -->
+    <div class="scene" id="scene-18">
+        <canvas id="canvas-18" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-amber">DAILY LIFE</div>
+            <h2 class="title-medium">SNS・スマホ・<br>ギャンブルの<span class="accent-amber">正体</span></h2>
+            <div class="title-sub">── スロットマシンと同じ原理</div>
+        </div>
+    </div>
+
+    <!-- Scene 19: VS比較（スロット vs SNS） -->
+    <div class="scene" id="scene-19">
+        <div class="content center-layout">
+            <h2 class="scene-title">スロットマシン vs SNS</h2>
+            <div class="source-badge stagger-item">変動比率強化スケジュール / 行動心理学</div>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge wanting-badge">SLOT</div>
+                    <div class="vs-title">スロットマシン</div>
+                    <div class="slot-visual">
+                        <div class="slot-reel">?</div>
+                        <div class="slot-reel">?</div>
+                        <div class="slot-reel">?</div>
+                    </div>
+                    <div class="vs-desc">いつ当たるか<br>わからない</div>
+                    <div class="vs-detail">変動比率強化スケジュール</div>
+                </div>
+                <div class="vs-divider stagger-item">=</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge wanting-badge">SNS</div>
+                    <div class="vs-title">SNSの通知</div>
+                    <div class="sns-visual">
+                        <div class="sns-notif"><span class="notif-dot"></span>通知</div>
+                        <div class="sns-likes">? いいね</div>
+                    </div>
+                    <div class="vs-desc">いいねが何件つくか<br>わからない</div>
+                    <div class="vs-detail">同じ原理でWantingを最大化</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">「予測できない報酬」がドーパミンを最も活性化する</div>
+        </div>
+    </div>
+
+    <!-- Scene 20: 段階的リスト（3つのトラップ） -->
+    <div class="scene" id="scene-20">
+        <div class="content card-layout">
+            <h2 class="scene-title">3つのWantingトラップ</h2>
+            <div class="numbered-list">
+                <div class="numbered-item trap-item stagger-item">
+                    <div class="number-circle accent-bg-coral">1</div>
+                    <div class="numbered-text"><span class="accent-coral">プッシュ通知</span><br><span
+                            class="text-sub">"何か来たかも"の期待だけでドーパミン放出</span></div>
+                </div>
+                <div class="numbered-item trap-item stagger-item">
+                    <div class="number-circle accent-bg-coral">2</div>
+                    <div class="numbered-text"><span class="accent-coral">無限スクロール</span><br><span
+                            class="text-sub">次に面白い投稿が出てくる"かもしれない"</span></div>
+                </div>
+                <div class="numbered-item trap-item stagger-item">
+                    <div class="number-circle accent-bg-coral">3</div>
+                    <div class="numbered-text"><span class="accent-coral">"いいね"の数表示</span><br><span
+                            class="text-sub">数字が上がる"かもしれない"で何度もアプリを開く</span></div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">全て「<span class="accent-coral">かもしれない</span>」= 予測不能な報酬</div>
+            <div class="footnote stagger-item">テック企業はこの仕組みを理解した上で設計している</div>
+        </div>
+    </div>
+
+    <!-- Scene 21: ダークシーン（ニアミス効果） -->
+    <div class="scene dark-scene" id="scene-21">
+        <div class="content center-layout">
+            <h2 class="scene-title light-text">ニアミス効果</h2>
+            <div class="source-badge dark-badge stagger-item">ギャンブル依存症研究 / 脳イメージング</div>
+            <div class="nearmiss-visual stagger-item">
+                <div class="nearmiss-reels">
+                    <div class="nearmiss-reel match">7</div>
+                    <div class="nearmiss-reel match">7</div>
+                    <div class="nearmiss-reel miss">6</div>
+                </div>
+                <div class="nearmiss-label accent-coral">惜しい!</div>
+            </div>
+            <div class="quote-card dark-quote stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text light-text">実際には<span class="accent-coral">負けている</span>のに<br>脳は<span
+                        class="accent-amber">勝ちに近い</span>ドーパミン反応</div>
+                <div class="quote-source light-text-dim">"次こそは"というWantingの衝動</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 22: 注意喚起（ドーパミンデトックス） -->
+    <div class="scene" id="scene-22">
+        <div class="content center-layout">
+            <h2 class="scene-title">ドーパミンデトックスの真実</h2>
+            <div class="detox-compare stagger-item">
+                <div class="detox-card detox-myth">
+                    <div class="detox-badge danger-badge">誤解</div>
+                    <div class="detox-text">ドーパミンを<br>"リセット"できる</div>
+                </div>
+                <div class="detox-arrow">&rarr;</div>
+                <div class="detox-card detox-fact">
+                    <div class="detox-badge safe-badge">事実</div>
+                    <div class="detox-text">刺激から距離を置くことは<br><span class="accent-teal">有効</span></div>
+                </div>
+            </div>
+            <div class="alert-card stagger-item">
+                <div class="alert-icon alert-info">i</div>
+                <div class="alert-title">ドーパミンの産生は<span class="accent-primary">"リセット"できない</span></div>
+                <div class="alert-sub">ドーパミンは生きていくのに必要な物質<br>常に作られている</div>
+            </div>
+            <div class="emphasis-sub stagger-item">大事なのは<span class="accent-primary">仕組みを知る</span>こと</div>
+        </div>
+    </div>
+
+    <!-- ===== Block 6: まとめ ===== -->
+
+    <!-- Scene 23: セクションタイトル -->
+    <div class="scene" id="scene-23">
+        <canvas id="canvas-23" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary">SUMMARY</div>
+            <h2 class="title-medium">ドーパミンの<span class="accent-primary">正体</span></h2>
+            <div class="emphasis-sub stagger-item">"快楽物質" ではなく</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-primary">"もっと欲しい"</span>を生む<br>動機づけの物質
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 24: 段階的リスト（3つの視点） -->
+    <div class="scene" id="scene-24">
+        <div class="content card-layout">
+            <h2 class="scene-title">ドーパミンとうまく付き合う3つの視点</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text"><span class="accent-primary">Wantingに気づく</span><br><span
+                            class="text-sub">"本当に楽しい？それとも欲しいだけ？"</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-teal">2</div>
+                    <div class="numbered-text"><span class="accent-teal">仕掛けに気づく</span><br><span
+                            class="text-sub">通知オフ・チェック時間を決める</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-amber">3</div>
+                    <div class="numbered-text"><span class="accent-amber">Likingを大切にする</span><br><span
+                            class="text-sub">実際に楽しいと感じられることに時間を使う</span></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">散歩でも料理でも読書でも、Likingを味わえる行動を増やす</div>
+        </div>
+    </div>
+
+    <!-- Scene 25: エンディング -->
+    <div class="scene" id="scene-25">
+        <canvas id="canvas-25" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="final-message stagger-item">
+                <div class="message-cross">"もっと欲しい"に振り回されるのではなく</div>
+                <div class="message-main">あなたが<span class="accent-primary">自分で選ぶ</span><br>生き方</div>
+            </div>
+            <div class="emphasis-sub stagger-item">ドーパミンの正体を知った今日が、その第一歩</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
