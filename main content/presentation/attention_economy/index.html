@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>あなたの注意力は「商品」として売られている</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Scene 0: タイトルカード -->
+    <div class="scene" id="scene-0">
+        <canvas id="canvas-0" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral">ATTENTION ECONOMY</div>
+            <h2 class="title-large">あなたの注意力は<br><span class="accent-coral">"商品"</span>として<br>売られている</h2>
+            <div class="title-sub stagger-item">SNS・アプリ・ニュースの裏側にある構造</div>
+        </div>
+    </div>
+
+    <!-- Scene 1: 数値インパクト ARPU $68.44 -->
+    <div class="scene" id="scene-1">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">Facebookユーザー1人あたりの<br>四半期売上(ARPU)</h2>
+            <div class="source-badge stagger-item">Meta IR / Q4 2023 / 米国・カナダ</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-coral">$68</span><span class="num-unit">.44</span>
+            </div>
+            <div class="emphasis-sub stagger-item">3ヶ月で約<span class="accent-coral">1万円</span>——お金を払っていないのに</div>
+            <div class="impact-sub stagger-item">世界SNS平均ARPU: <span class="accent-primary">$40.60</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 2: テキスト強調「商品」 -->
+    <div class="scene" id="scene-2">
+        <canvas id="canvas-2" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">あなたは<span class="accent-primary">"ユーザー"</span>ではない</div>
+            <div class="emphasis-text-large stagger-item">売られている<span class="accent-coral">"商品"</span></div>
+            <div class="quote-card stagger-item">
+                <div class="quote-text">"If you're not paying for the product, you are the product."</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 3: 段階的リスト「この動画でわかること」 -->
+    <div class="scene" id="scene-3">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">この動画でわかること</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text">注意力が<span class="accent-primary">売買される仕組み</span>の全体像</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">2</div>
+                    <div class="numbered-text">スマホがあなたを操作する<span class="accent-coral">具体的な手口</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">3</div>
+                    <div class="numbered-text">注意力を<span class="accent-teal">取り戻す方法</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 4: タイトルカード「200年史」 -->
+    <div class="scene" id="scene-4">
+        <canvas id="canvas-4" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary">HISTORY</div>
+            <h2 class="title-medium">注意を売る商売は<br><span class="accent-primary">200年前</span>から</h2>
+        </div>
+    </div>
+
+    <!-- Scene 5: フロー図「注意の商品化の歴史」カスタムSVG -->
+    <div class="scene" id="scene-5">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">注意の商品化タイムライン</h2>
+            <div class="timeline-flow stagger-item">
+                <div class="timeline-node">
+                    <div class="timeline-year">1833</div>
+                    <div class="timeline-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48">
+                            <rect x="8" y="6" width="32" height="36" rx="2" fill="none" stroke="var(--primary)"
+                                stroke-width="2.5" />
+                            <line x1="14" y1="16" x2="34" y2="16" stroke="var(--primary)" stroke-width="2" />
+                            <line x1="14" y1="22" x2="30" y2="22" stroke="var(--text-light)" stroke-width="1.5" />
+                            <line x1="14" y1="28" x2="28" y2="28" stroke="var(--text-light)" stroke-width="1.5" />
+                            <line x1="14" y1="34" x2="26" y2="34" stroke="var(--text-light)" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <div class="timeline-label">ペニープレス</div>
+                    <div class="timeline-desc">広告モデル誕生</div>
+                </div>
+                <div class="timeline-arrow">
+                    <svg width="40" height="20">
+                        <path d="M0 10 L30 10 M25 4 L32 10 L25 16" fill="none" stroke="var(--text-light)"
+                            stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="timeline-node">
+                    <div class="timeline-year">1971</div>
+                    <div class="timeline-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48">
+                            <circle cx="24" cy="24" r="18" fill="none" stroke="var(--teal)" stroke-width="2.5" />
+                            <path d="M18 24 Q24 14 30 24 Q24 34 18 24" fill="none" stroke="var(--teal)"
+                                stroke-width="2" />
+                            <circle cx="24" cy="24" r="4" fill="var(--teal)" />
+                        </svg>
+                    </div>
+                    <div class="timeline-label">ハーバート・サイモン</div>
+                    <div class="timeline-desc">注意の貧困</div>
+                </div>
+                <div class="timeline-arrow">
+                    <svg width="40" height="20">
+                        <path d="M0 10 L30 10 M25 4 L32 10 L25 16" fill="none" stroke="var(--text-light)"
+                            stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="timeline-node">
+                    <div class="timeline-year">1997</div>
+                    <div class="timeline-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48">
+                            <polygon points="24,6 42,42 6,42" fill="none" stroke="var(--amber)" stroke-width="2.5" />
+                            <text x="24" y="34" text-anchor="middle" font-size="14" fill="var(--amber)"
+                                font-weight="900">$</text>
+                        </svg>
+                    </div>
+                    <div class="timeline-label">ゴールドハーバー</div>
+                    <div class="timeline-desc">アテンション経済予言</div>
+                </div>
+                <div class="timeline-arrow">
+                    <svg width="40" height="20">
+                        <path d="M0 10 L30 10 M25 4 L32 10 L25 16" fill="none" stroke="var(--text-light)"
+                            stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="timeline-node active">
+                    <div class="timeline-year">2000s~</div>
+                    <div class="timeline-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48">
+                            <rect x="14" y="4" width="20" height="40" rx="4" fill="none" stroke="var(--coral)"
+                                stroke-width="2.5" />
+                            <circle cx="24" cy="38" r="2.5" fill="var(--coral)" />
+                            <line x1="20" y1="8" x2="28" y2="8" stroke="var(--coral)" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <div class="timeline-label">GAFAM時代</div>
+                    <div class="timeline-desc">注意力の工業化</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 6: 引用カード「サイモン」 -->
+    <div class="scene" id="scene-6">
+        <div class="content center-layout">
+            <div class="quote-card-large stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text-large">情報の豊かさは<br><span class="accent-primary">注意の貧困</span>を生む</div>
+                <div class="quote-author">Herbert A. Simon, 1971</div>
+                <div class="quote-role">ノーベル賞経済学者</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 7: 数値インパクト Alphabet 2646億ドル -->
+    <div class="scene" id="scene-7">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">GAFAM広告収入（2024年）</h2>
+            <div class="source-badge stagger-item">Alphabet / Meta IR</div>
+            <div class="revenue-bars stagger-item">
+                <div class="revenue-bar">
+                    <div class="revenue-label">Alphabet (Google)</div>
+                    <div class="revenue-fill revenue-google" style="--fill-width: 100%;">
+                        <span class="revenue-value">2,646億ドル</span>
+                    </div>
+                </div>
+                <div class="revenue-bar">
+                    <div class="revenue-label">Meta (Facebook)</div>
+                    <div class="revenue-fill revenue-meta" style="--fill-width: 60%;">
+                        <span class="revenue-value">1,606億ドル</span>
+                    </div>
+                </div>
+            </div>
+            <div class="impact-total stagger-item">合計 <span class="accent-coral">4,000億ドル超</span>（約60兆円）</div>
+            <div class="emphasis-sub stagger-item">すべて「あなたの注意力」から</div>
+            <div class="impact-sub stagger-item">1日の広告曝露: <span class="accent-coral">6,000〜10,000回</span> | 注意<span
+                    class="accent-primary">+5%</span> = 認知<span class="accent-coral">+40%</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 8: 数値インパクト 広告曝露 -->
+    <div class="scene" id="scene-8">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">1日の広告曝露回数</h2>
+            <div class="source-badge stagger-item">Forbes / 広告業界調査</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-coral">6,000</span><span class="num-unit">~10,000回</span>
+            </div>
+            <div class="emphasis-sub stagger-item">注意 <span class="accent-primary">+5%</span> = 広告認知 <span
+                    class="accent-coral">+40%</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 9: タイトルカード「スロットマシン」 -->
+    <div class="scene" id="scene-9">
+        <canvas id="canvas-9" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral">MECHANISM</div>
+            <h2 class="title-medium">あなたのスマホは<br><span class="accent-coral">"スロットマシン"</span><br>だった</h2>
+        </div>
+    </div>
+
+    <!-- Scene 9: フロー図「フックモデル」カスタムSVG -->
+    <div class="scene" id="scene-10">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">フックモデルの4段階</h2>
+            <div class="source-badge stagger-item">Nir Eyal "Hooked" (2014)</div>
+            <div class="hook-model stagger-item">
+                <div class="hook-stage">
+                    <div class="hook-icon hook-trigger">
+                        <svg width="56" height="56" viewBox="0 0 56 56">
+                            <circle cx="28" cy="28" r="22" fill="none" stroke="var(--coral)" stroke-width="2.5" />
+                            <circle cx="28" cy="16" r="6" fill="var(--coral)" />
+                            <rect x="24" y="24" width="8" height="12" rx="2" fill="var(--coral)" />
+                        </svg>
+                    </div>
+                    <div class="hook-label">TRIGGER</div>
+                    <div class="hook-desc">通知・赤いバッジ</div>
+                </div>
+                <div class="hook-arrow">
+                    <svg width="32" height="24">
+                        <path d="M2 12 L22 12 M18 6 L24 12 L18 18" fill="none" stroke="var(--text-light)"
+                            stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="hook-stage">
+                    <div class="hook-icon hook-action">
+                        <svg width="56" height="56" viewBox="0 0 56 56">
+                            <rect x="8" y="8" width="40" height="40" rx="10" fill="none" stroke="var(--primary)"
+                                stroke-width="2.5" />
+                            <circle cx="28" cy="28" r="8" fill="var(--primary)" opacity="0.3" />
+                            <circle cx="28" cy="28" r="3" fill="var(--primary)" />
+                        </svg>
+                    </div>
+                    <div class="hook-label">ACTION</div>
+                    <div class="hook-desc">タップして開く</div>
+                </div>
+                <div class="hook-arrow">
+                    <svg width="32" height="24">
+                        <path d="M2 12 L22 12 M18 6 L24 12 L18 18" fill="none" stroke="var(--text-light)"
+                            stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="hook-stage">
+                    <div class="hook-icon hook-reward">
+                        <svg width="56" height="56" viewBox="0 0 56 56">
+                            <path d="M28 8 L33 20 L46 22 L36 32 L38 46 L28 40 L18 46 L20 32 L10 22 L23 20 Z" fill="none"
+                                stroke="var(--amber)" stroke-width="2.5" />
+                        </svg>
+                    </div>
+                    <div class="hook-label">REWARD</div>
+                    <div class="hook-desc">いいね？来てない？</div>
+                </div>
+                <div class="hook-arrow">
+                    <svg width="32" height="24">
+                        <path d="M2 12 L22 12 M18 6 L24 12 L18 18" fill="none" stroke="var(--text-light)"
+                            stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="hook-stage">
+                    <div class="hook-icon hook-invest">
+                        <svg width="56" height="56" viewBox="0 0 56 56">
+                            <path d="M12 44 L28 12 L44 44" fill="none" stroke="var(--teal)" stroke-width="2.5" />
+                            <line x1="18" y1="34" x2="38" y2="34" stroke="var(--teal)" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="hook-label">INVESTMENT</div>
+                    <div class="hook-desc">投稿・フォロー</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 10: 比較対照「通知 vs スロットマシン」 -->
+    <div class="scene" id="scene-11">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">間欠強化——依存のメカニズム</h2>
+            <div class="vs-container stagger-item">
+                <div class="vs-card vs-left">
+                    <div class="vs-icon">
+                        <svg width="64" height="64" viewBox="0 0 64 64">
+                            <rect x="16" y="4" width="32" height="56" rx="6" fill="none" stroke="var(--coral)"
+                                stroke-width="2.5" />
+                            <circle cx="32" cy="52" r="3" fill="var(--coral)" />
+                            <rect x="26" y="10" width="12" height="3" rx="1.5" fill="var(--coral)" opacity="0.4" />
+                            <circle cx="32" cy="28" r="8" fill="var(--coral)" opacity="0.2" /><text x="32" y="32"
+                                text-anchor="middle" font-size="12" fill="var(--coral)" font-weight="900">3</text>
+                        </svg>
+                    </div>
+                    <div class="vs-title">スマホ通知</div>
+                    <div class="vs-desc">報酬は予測不可能</div>
+                </div>
+                <div class="vs-divider">
+                    <span class="vs-equal">=</span>
+                </div>
+                <div class="vs-card vs-right">
+                    <div class="vs-icon">
+                        <svg width="64" height="64" viewBox="0 0 64 64">
+                            <rect x="8" y="12" width="48" height="40" rx="4" fill="none" stroke="var(--amber)"
+                                stroke-width="2.5" />
+                            <line x1="8" y1="20" x2="56" y2="20" stroke="var(--amber)" stroke-width="1.5" />
+                            <rect x="16" y="26" width="10" height="20" rx="2" fill="var(--amber)" opacity="0.15" />
+                            <rect x="27" y="26" width="10" height="20" rx="2" fill="var(--amber)" opacity="0.15" />
+                            <rect x="38" y="26" width="10" height="20" rx="2" fill="var(--amber)" opacity="0.15" /><text
+                                x="21" y="40" text-anchor="middle" font-size="14" fill="var(--amber)"
+                                font-weight="900">7</text><text x="32" y="40" text-anchor="middle" font-size="14"
+                                fill="var(--amber)" font-weight="900">7</text><text x="43" y="40" text-anchor="middle"
+                                font-size="14" fill="var(--coral)" font-weight="900">?</text>
+                        </svg>
+                    </div>
+                    <div class="vs-title">スロットマシン</div>
+                    <div class="vs-desc">同じ間欠強化の原理</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 11: 引用カード Tristan Harris -->
+    <div class="scene" id="scene-12">
+        <div class="content center-layout">
+            <div class="quote-card-large stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text-large">スマホを引いて更新する動作は<br><span
+                        class="accent-coral">スロットマシンのレバー</span><br>を引くのと同じだ</div>
+                <div class="quote-author">Tristan Harris</div>
+                <div class="quote-role">元Google倫理デザイナー / Center for Humane Technology創設者</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 12: テキスト強調「無限スクロール」 -->
+    <div class="scene" id="scene-13">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">ダークパターン</h2>
+            <div class="infinite-scroll-visual stagger-item">
+                <div class="scroll-phone">
+                    <div class="scroll-content">
+                        <div class="scroll-item"></div>
+                        <div class="scroll-item"></div>
+                        <div class="scroll-item"></div>
+                        <div class="scroll-item"></div>
+                        <div class="scroll-item"></div>
+                        <div class="scroll-item"></div>
+                    </div>
+                </div>
+                <div class="scroll-label">
+                    <div class="scroll-title accent-coral">無限スクロール</div>
+                    <div class="scroll-desc">"止め時"の信号を<br>脳に与えない設計</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 13: 段階的リスト「設計 vs 意志」 -->
+    <div class="scene" id="scene-14">
+        <div class="content center-layout">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48">
+                        <polygon points="24,4 44,42 4,42" fill="none" stroke="var(--coral)" stroke-width="2.5" /><text
+                            x="24" y="36" text-anchor="middle" font-size="20" fill="var(--coral)"
+                            font-weight="900">!</text>
+                    </svg>
+                </div>
+                <div class="alert-text">
+                    <div class="alert-title">あなたの意志が弱いのではない</div>
+                    <div class="alert-desc">世界最高峰の心理学者が<span
+                            class="accent-coral">数千億円</span>をかけて設計した依存の仕組みに、個人の意志だけで勝つのは不可能</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 14: タイトルカード「8秒神話」 -->
+    <div class="scene" id="scene-15">
+        <canvas id="canvas-15" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-amber">MYTH vs FACT</div>
+            <h2 class="title-medium">注意力は本当に<br><span class="accent-amber">"金魚以下"</span>なのか？</h2>
+        </div>
+    </div>
+
+    <!-- Scene 15: 注意喚起「8秒の嘘」 -->
+    <div class="scene" id="scene-16">
+        <div class="content center-layout">
+            <div class="myth-buster stagger-item">
+                <div class="myth-side">
+                    <div class="myth-label">MYTH</div>
+                    <div class="myth-number"><span class="strikethrough">8</span>秒</div>
+                    <div class="myth-desc">出典不明<br>BBC が否定</div>
+                </div>
+                <div class="myth-divider">
+                    <svg width="40" height="80" viewBox="0 0 40 80">
+                        <line x1="20" y1="0" x2="20" y2="80" stroke="var(--text-light)" stroke-width="2"
+                            stroke-dasharray="4 4" />
+                    </svg>
+                </div>
+                <div class="myth-side fact">
+                    <div class="myth-label accent-teal">FACT</div>
+                    <div class="myth-number accent-teal">47秒</div>
+                    <div class="myth-desc">Gloria Mark<br>UC Irvine</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 16: 数値インパクト「2.5分→47秒」 -->
+    <div class="scene" id="scene-17">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">画面上の注意持続時間</h2>
+            <div class="source-badge stagger-item">Gloria Mark / UC Irvine</div>
+            <div class="decline-visual stagger-item">
+                <div class="decline-bar">
+                    <div class="decline-item old">
+                        <div class="decline-fill" style="--height: 80%"></div>
+                        <div class="decline-value">2.5分</div>
+                        <div class="decline-year">2004</div>
+                    </div>
+                    <div class="decline-arrow">
+                        <svg width="60" height="40">
+                            <path d="M5 10 L45 30" fill="none" stroke="var(--coral)" stroke-width="3" />
+                            <path d="M38 32 L48 32 L44 22" fill="var(--coral)" />
+                        </svg>
+                    </div>
+                    <div class="decline-item new">
+                        <div class="decline-fill short" style="--height: 30%"></div>
+                        <div class="decline-value accent-coral">47秒</div>
+                        <div class="decline-year">2020</div>
+                    </div>
+                </div>
+                <div class="decline-note">16年間で <span class="accent-coral">約3分の1</span> に縮小</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 17: 比較対照「スクリーンタイム」 -->
+    <div class="scene" id="scene-18">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">スクリーンタイムの長さ ≠ 害</h2>
+            <div class="source-badge stagger-item">ScienceDaily / 2024年研究</div>
+            <div class="vs-container stagger-item">
+                <div class="vs-card vs-left bad">
+                    <div class="vs-badge accent-coral">受動的</div>
+                    <div class="vs-title">フィードの流し見</div>
+                    <div class="vs-desc">無目的にスクロール<br>認知負荷が蓄積</div>
+                </div>
+                <div class="vs-divider">
+                    <span class="vs-not-equal">≠</span>
+                </div>
+                <div class="vs-card vs-right good">
+                    <div class="vs-badge accent-teal">能動的</div>
+                    <div class="vs-title">目的ある情報検索</div>
+                    <div class="vs-desc">自分から取りに行く<br>認知への影響は軽微</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 18: 数値インパクト「30分」 -->
+    <div class="scene" id="scene-19">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">1回の通知で失われる集中時間</h2>
+            <div class="source-badge stagger-item">Gloria Mark / UC Irvine</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-coral">30</span><span class="num-unit">分</span>
+            </div>
+            <div class="emphasis-sub stagger-item">元の集中状態に戻るまでの所要時間</div>
+        </div>
+    </div>
+
+    <!-- Scene 19: 数値インパクト「5時間16分」 -->
+    <div class="scene" id="scene-20">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">スマホ平均利用時間（2024年）</h2>
+            <div class="source-badge stagger-item">Harmony Hit / 2024年12月調査</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-primary">5</span><span class="num-unit">時間</span><span
+                    class="big-num accent-primary">16</span><span class="num-unit">分/日</span>
+            </div>
+            <div class="pie-visual stagger-item">
+                <div class="pie-stat">
+                    <div class="pie-percent accent-coral">89%</div>
+                    <div class="pie-label">非生産的利用</div>
+                </div>
+                <div class="pie-stat">
+                    <div class="pie-percent accent-teal">11%</div>
+                    <div class="pie-label">生産的活動</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">覚醒時間の <span class="accent-coral">86%</span> がメディア消費</div>
+        </div>
+    </div>
+
+    <!-- Scene 20: タイトルカード「監視資本主義」 -->
+    <div class="scene" id="scene-21">
+        <canvas id="canvas-21" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-dark">SURVEILLANCE CAPITALISM</div>
+            <h2 class="title-medium">"予測"が商品になる<br><span class="accent-coral">世界</span></h2>
+        </div>
+    </div>
+
+    <!-- Scene 21: 引用カード ズボフ -->
+    <div class="scene" id="scene-22">
+        <div class="content center-layout">
+            <div class="quote-card-large stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text-large">売られているのは<br>あなたのデータではない<br>あなたの行動の<span
+                        class="accent-coral">"予測"</span>が商品</div>
+                <div class="quote-author">Shoshana Zuboff</div>
+                <div class="quote-role">ハーバード大学名誉教授 / 『監視資本主義の時代』著者</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 22: フロー図「余剰行動データ→予測→広告主」 -->
+    <div class="scene" id="scene-23">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">監視資本主義のデータフロー</h2>
+            <div class="data-flow stagger-item">
+                <div class="flow-step">
+                    <div class="flow-icon">
+                        <svg width="56" height="56" viewBox="0 0 56 56">
+                            <circle cx="28" cy="20" r="10" fill="none" stroke="var(--primary)" stroke-width="2" />
+                            <path d="M14 44 Q14 32 28 32 Q42 32 42 44" fill="none" stroke="var(--primary)"
+                                stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="flow-label">ユーザーの行動</div>
+                    <div class="flow-examples">検索・クリック・滞在時間</div>
+                </div>
+                <div class="flow-arrow-down">
+                    <svg width="24" height="40">
+                        <path d="M12 2 L12 30 M6 24 L12 32 L18 24" fill="none" stroke="var(--coral)" stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-icon">
+                        <svg width="56" height="56" viewBox="0 0 56 56">
+                            <rect x="10" y="10" width="36" height="36" rx="6" fill="none" stroke="var(--coral)"
+                                stroke-width="2" />
+                            <circle cx="22" cy="28" r="4" fill="var(--coral)" opacity="0.3" />
+                            <circle cx="34" cy="22" r="3" fill="var(--coral)" opacity="0.3" />
+                            <circle cx="30" cy="34" r="5" fill="var(--coral)" opacity="0.3" />
+                            <line x1="22" y1="28" x2="34" y2="22" stroke="var(--coral)" stroke-width="1" />
+                            <line x1="34" y1="22" x2="30" y2="34" stroke="var(--coral)" stroke-width="1" />
+                        </svg>
+                    </div>
+                    <div class="flow-label">余剰行動データ</div>
+                    <div class="flow-examples">副産物の"金の鉱脈"</div>
+                </div>
+                <div class="flow-arrow-down">
+                    <svg width="24" height="40">
+                        <path d="M12 2 L12 30 M6 24 L12 32 L18 24" fill="none" stroke="var(--coral)" stroke-width="2" />
+                    </svg>
+                </div>
+                <div class="flow-step">
+                    <div class="flow-icon">
+                        <svg width="56" height="56" viewBox="0 0 56 56">
+                            <circle cx="28" cy="28" r="20" fill="none" stroke="var(--amber)" stroke-width="2" />
+                            <path d="M20 28 L26 34 L38 20" fill="none" stroke="var(--amber)" stroke-width="3" />
+                        </svg>
+                    </div>
+                    <div class="flow-label">予測商品</div>
+                    <div class="flow-examples">行動先物市場で広告主に販売</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 23: 注意喚起「エコーチェンバー」 -->
+    <div class="scene" id="scene-24">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">エコーチェンバー現象</h2>
+            <div class="echo-chamber stagger-item">
+                <svg width="300" height="200" viewBox="0 0 300 200" class="echo-svg">
+                    <circle cx="150" cy="100" r="70" fill="none" stroke="var(--coral)" stroke-width="2"
+                        stroke-dasharray="6 3" class="echo-outer" />
+                    <circle cx="150" cy="100" r="45" fill="none" stroke="var(--primary)" stroke-width="2"
+                        class="echo-inner" />
+                    <circle cx="150" cy="100" r="20" fill="var(--primary)" opacity="0.15" />
+                    <circle cx="150" cy="100" r="8" fill="var(--primary)" />
+                    <text x="150" y="104" text-anchor="middle" font-size="8" fill="white" font-weight="700">YOU</text>
+                    <!-- Same-opinion nodes -->
+                    <circle cx="120" cy="68" r="5" fill="var(--primary)" opacity="0.6" class="echo-node" />
+                    <circle cx="180" cy="72" r="5" fill="var(--primary)" opacity="0.6" class="echo-node" />
+                    <circle cx="130" cy="130" r="5" fill="var(--primary)" opacity="0.6" class="echo-node" />
+                    <circle cx="170" cy="125" r="5" fill="var(--primary)" opacity="0.6" class="echo-node" />
+                    <!-- Blocked opinions -->
+                    <circle cx="80" cy="50" r="4" fill="var(--text-light)" opacity="0.3" />
+                    <circle cx="230" cy="60" r="4" fill="var(--text-light)" opacity="0.3" />
+                    <circle cx="60" cy="140" r="4" fill="var(--text-light)" opacity="0.3" />
+                    <circle cx="240" cy="150" r="4" fill="var(--text-light)" opacity="0.3" />
+                </svg>
+                <div class="echo-label">同じ意見だけが届く<span class="accent-coral">閉じた箱</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 24: タイトルカード「取り戻す」 -->
+    <div class="scene" id="scene-25">
+        <canvas id="canvas-25" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-teal">SOLUTIONS</div>
+            <h2 class="title-medium">注意力を<br><span class="accent-teal">取り戻す</span><br>3つの視点</h2>
+        </div>
+    </div>
+
+    <!-- Scene 25: 段階的リスト「批判的無視」 -->
+    <div class="scene" id="scene-26">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">3つの視点</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle teal">1</div>
+                    <div class="numbered-text"><span class="accent-teal">批判的無視</span> Critical Ignoring<br><span
+                            class="text-small">何を見ないかを戦略的に決める力</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle teal">2</div>
+                    <div class="numbered-text"><span class="accent-teal">デジタルデトックスの限界</span>を知る<br><span
+                            class="text-small">構造を変えずに離れても元に戻る</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle teal">3</div>
+                    <div class="numbered-text"><span class="accent-teal">社会の仕組み</span>を変える視点<br><span
+                            class="text-small">EUのウェルビーイング規制・設計思想の転換</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 27: 比較対照「デジタルデトックス vs 構造的アプローチ」 -->
+    <div class="scene" id="scene-27">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">デジタルデトックスだけで解決するか？</h2>
+            <div class="vs-container stagger-item">
+                <div class="vs-card vs-left">
+                    <div class="vs-badge accent-coral">限界</div>
+                    <div class="vs-title">デジタルデトックス</div>
+                    <div class="vs-desc">一時的に離れても<br>構造が変わらなければ<br>元に戻る</div>
+                </div>
+                <div class="vs-divider"><span class="vs-arrow-right">&rarr;</span></div>
+                <div class="vs-card vs-right good">
+                    <div class="vs-badge accent-teal">本質</div>
+                    <div class="vs-title">構造的アプローチ</div>
+                    <div class="vs-desc">通知設定の見直し<br>アルゴリズムの理解<br>制度的規制の推進</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 28: テキスト強調「消費者→選択者」 -->
+    <div class="scene" id="scene-28">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">発想の転換</h2>
+            <div class="vs-container stagger-item">
+                <div class="vs-card vs-left bad">
+                    <div class="vs-badge accent-coral">Before</div>
+                    <div class="vs-title">あなたの意志が弱い</div>
+                </div>
+                <div class="vs-divider"><span class="vs-arrow-right">&rarr;</span></div>
+                <div class="vs-card vs-right good">
+                    <div class="vs-badge accent-teal">After</div>
+                    <div class="vs-title">設計が間違っている</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">個人の努力ではなく、<span class="accent-teal">構造の変革</span>が必要</div>
+        </div>
+    </div>
+
+    <!-- Scene 27: まとめカード -->
+    <div class="scene" id="scene-29">
+        <canvas id="canvas-29" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">あなたの注意<span class="accent-primary">1分間</span>の市場価値</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-coral">$1</span><span class="num-unit">.03</span>
+            </div>
+            <div class="emphasis-sub stagger-item">= 約<span class="accent-coral">150円</span> / 1時間 = 約<span
+                    class="accent-coral">9,000円</span></div>
+            <div class="final-message stagger-item">
+                <div class="final-text">受け身の"消費者"から<br>能動的な<span class="accent-teal">"選択者"</span>へ</div>
+                <div class="final-sub">あなたの注意力は、あなたのもの</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

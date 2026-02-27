@@ -35,10 +35,21 @@ const FPS = 30;
 const interLineSilence = sceneMap.inter_line_silence || 0.3;
 const sceneEndPadding = sceneMap.scene_end_padding || 0.5;
 
-// キャラクターカラー
+// ローマ字speaker名 → 日本語表示名の変換マップ
+const SPEAKER_DISPLAY_NAMES = {
+    'zundamon': 'ずんだもん',
+    'metan': 'めたん',
+    // 日本語の場合はそのまま
+    'ずんだもん': 'ずんだもん',
+    'めたん': 'めたん',
+};
+
+// キャラクターカラー（日本語名とローマ字名の両方をカバー）
 const SPEAKER_COLORS = {
     'ずんだもん': '#22c55e',
     'めたん': '#d6336c',
+    'zundamon': '#22c55e',
+    'metan': '#d6336c',
 };
 
 /**
@@ -69,13 +80,14 @@ for (const sceneDur of sceneDurations) {
         const line = sceneMapEntry.lines[i];
         const audioInfo = audioFiles[i];
         const lineDuration = audioInfo ? audioInfo.duration : 2; // fallback
+        const displaySpeaker = SPEAKER_DISPLAY_NAMES[line.speaker] || line.speaker;
 
         subtitleEntries.push({
             startTimeSec: lineTime,
             startFrame: Math.round(lineTime * FPS),
             durationSec: lineDuration,
             durationFrames: Math.round(lineDuration * FPS),
-            speaker: line.speaker,
+            speaker: displaySpeaker,
             text: line.text,
             speakerColor: SPEAKER_COLORS[line.speaker] || '#888888',
             sceneId: sceneDur.id,

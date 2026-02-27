@@ -1,0 +1,7 @@
+file 'D:/myfolder/動画生成/main content/presentation/mozart_effect/audio/scene_12_00.wav'
+file 'D:/myfolder/動画生成/main content/presentation/mozart_effect/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/mozart_effect/audio/scene_12_01.wav'
+file 'D:/myfolder/動画生成/main content/presentation/mozart_effect/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/mozart_effect/audio/scene_12_02.wav'
+file 'D:/myfolder/動画生成/main content/presentation/mozart_effect/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/mozart_effect/audio/scene_12_03.wav'

@@ -1,0 +1,1897 @@
+/* ============================================
+   COLOR TOKENS
+   ============================================ */
+:root {
+    --clr-bg: #f8f9fc;
+    --clr-bg-alt: #eef1f8;
+    --clr-text: #1a1d2e;
+    --clr-text-muted: #6b7394;
+    --clr-primary: #5b4cdb;
+    --clr-primary-light: #ede9ff;
+    --clr-primary-dark: #3d2fb0;
+    --clr-secondary: #0ea5a0;
+    --clr-secondary-light: #e0f7f6;
+    --clr-accent: #e95076;
+    --clr-accent-light: #fde8ee;
+    --clr-highlight: #f59e0b;
+    --clr-highlight-light: #fef3c7;
+    --clr-success: #10b981;
+    --clr-success-light: #d1fae5;
+    --clr-danger: #ef4444;
+    --clr-danger-light: #fee2e2;
+    --clr-shadow: rgba(91, 76, 219, 0.08);
+    --clr-glass: rgba(255, 255, 255, 0.7);
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+}
+
+/* ============================================
+   BASE / RESET
+   ============================================ */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--clr-bg);
+    color: var(--clr-text);
+}
+
+/* ============================================
+   SCENE BASE
+   ============================================ */
+.scene {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: relative;
+    overflow: hidden;
+    background: var(--clr-bg);
+}
+
+.scene.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: sceneFadeIn 0.5s ease both;
+}
+
+@keyframes sceneFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.scene-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1400px;
+    padding: 60px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+}
+
+.canvas-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+.scene-label {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--clr-primary);
+    opacity: 0.7;
+}
+
+.scene-title {
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 1.25;
+    color: var(--clr-text);
+    letter-spacing: -1px;
+}
+
+.title-main {
+    font-size: 72px;
+    font-weight: 900;
+    color: var(--clr-text);
+    letter-spacing: -2px;
+}
+
+.title-accent {
+    font-size: 84px;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--clr-primary), var(--clr-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.title-sub {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    color: var(--clr-text-muted);
+    margin-top: 16px;
+}
+
+.title-line {
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));
+    border-radius: 2px;
+    margin-top: 12px;
+}
+
+.chapter-num {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    color: var(--clr-primary);
+    opacity: 0.6;
+}
+
+.chapter-line {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--clr-primary), var(--clr-secondary));
+    border-radius: 2px;
+}
+
+/* ============================================
+   IMPACT NUMBER
+   ============================================ */
+.impact-number {
+    font-size: 120px;
+    font-weight: 900;
+    color: var(--clr-primary);
+    line-height: 1;
+    letter-spacing: -4px;
+}
+
+.impact-number .percent {
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--clr-primary-dark);
+}
+
+.impact-desc {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--clr-text-muted);
+    line-height: 1.6;
+}
+
+.patient-count {
+    margin-top: 20px;
+}
+
+.patient-count .big-num {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--clr-accent);
+}
+
+.patient-count .big-unit {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--clr-text-muted);
+    margin-left: 8px;
+}
+
+.footnote {
+    font-size: 18px;
+    color: var(--clr-text-muted);
+    opacity: 0.7;
+    font-style: italic;
+}
+
+.zero-note {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--clr-danger);
+    margin-top: 12px;
+}
+
+/* ============================================
+   STUDY REF
+   ============================================ */
+.study-ref {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--clr-text-muted);
+    opacity: 0.6;
+    letter-spacing: 1px;
+}
+
+.person-tag {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--clr-text-muted);
+    background: var(--clr-primary-light);
+    padding: 8px 24px;
+    border-radius: 24px;
+}
+
+/* ============================================
+   KEY MESSAGE
+   ============================================ */
+.key-message {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--clr-primary-dark);
+    background: var(--clr-primary-light);
+    padding: 16px 40px;
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--clr-primary);
+}
+
+/* ============================================
+   THREE POINTS
+   ============================================ */
+.three-points {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.point-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 40px 32px;
+    width: 280px;
+    box-shadow: 0 8px 40px var(--clr-shadow);
+    border: 1px solid rgba(91, 76, 219, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.point-num {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--clr-primary);
+    opacity: 0.3;
+    margin-bottom: 16px;
+}
+
+.point-text {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--clr-text);
+}
+
+/* ============================================
+   QUOTE CARD
+   ============================================ */
+.quote-card {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 24px 40px;
+    box-shadow: 0 4px 24px var(--clr-shadow);
+    border-left: 4px solid var(--clr-primary);
+}
+
+.quote-source {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--clr-text-muted);
+    margin-bottom: 4px;
+}
+
+.quote-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--clr-text);
+}
+
+/* ============================================
+   SURGERY SVG
+   ============================================ */
+.study-visual {
+    margin-top: 20px;
+}
+
+.surgery-svg {
+    width: 700px;
+    height: 200px;
+}
+
+.svg-label {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    fill: var(--clr-text);
+}
+
+.svg-num {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    fill: var(--clr-text-muted);
+}
+
+.svg-label-sm {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    fill: var(--clr-text-muted);
+}
+
+.svg-axis {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    fill: var(--clr-text-muted);
+}
+
+/* ============================================
+   ETYMOLOGY CARD
+   ============================================ */
+.etymology-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 48px 64px;
+    box-shadow: 0 12px 48px var(--clr-shadow);
+    text-align: center;
+}
+
+.etymology-latin {
+    font-size: 64px;
+    font-weight: 900;
+    color: var(--clr-primary);
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.etymology-meaning {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--clr-text);
+    margin-bottom: 16px;
+}
+
+.etymology-origin {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--clr-text-muted);
+}
+
+/* ============================================
+   TIMELINE FLOW
+   ============================================ */
+.timeline-flow {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.timeline-item {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 28px 32px;
+    box-shadow: 0 4px 20px var(--clr-shadow);
+    min-width: 200px;
+    text-align: center;
+}
+
+.timeline-year {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--clr-primary);
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+.timeline-event {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--clr-text);
+}
+
+.timeline-arrow {
+    font-size: 32px;
+    color: var(--clr-primary);
+    font-weight: 900;
+}
+
+/* ============================================
+   BRAIN FLOW
+   ============================================ */
+.brain-flow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+}
+
+.brain-node {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 24px 20px;
+    box-shadow: 0 4px 20px var(--clr-shadow);
+    text-align: center;
+    min-width: 160px;
+}
+
+.brain-node.result-node {
+    background: var(--clr-primary-light);
+    border: 2px solid var(--clr-primary);
+}
+
+.brain-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.brain-icon-text {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--clr-primary);
+    margin-bottom: 4px;
+}
+
+.brain-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--clr-text-muted);
+}
+
+.brain-connector {
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--clr-primary), var(--clr-secondary));
+    flex-shrink: 0;
+}
+
+/* ============================================
+   PET VISUAL
+   ============================================ */
+.pet-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.pet-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 32px 48px;
+    box-shadow: 0 8px 40px var(--clr-shadow);
+    text-align: center;
+}
+
+.pet-label {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--clr-text-muted);
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+}
+
+.pet-brain {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+}
+
+.brain-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.pet-result {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--clr-accent);
+    margin-top: 12px;
+}
+
+@keyframes dopamine-glow {
+
+    0%,
+    100% {
+        opacity: 0.4;
+        r: 18;
+    }
+
+    50% {
+        opacity: 0.9;
+        r: 24;
+    }
+}
+
+.dopamine-pulse {
+    animation: dopamine-glow 2s ease-in-out infinite;
+}
+
+/* ============================================
+   CORRELATION SVG
+   ============================================ */
+.correlation-visual {
+    margin-top: 8px;
+}
+
+.corr-svg {
+    width: 600px;
+    height: 280px;
+}
+
+/* ============================================
+   CONDITIONING FLOW
+   ============================================ */
+.conditioning-flow {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.cond-step {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 28px 24px;
+    box-shadow: 0 4px 20px var(--clr-shadow);
+    text-align: center;
+    min-width: 160px;
+}
+
+.cond-step.highlight-step {
+    background: var(--clr-primary-light);
+    border: 2px solid var(--clr-primary);
+}
+
+.cond-icon {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.cond-text {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--clr-text);
+}
+
+.cond-arrow {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--clr-primary);
+}
+
+/* ============================================
+   VS COMPARISON
+   ============================================ */
+.vs-comparison {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.vs-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 36px 40px;
+    box-shadow: 0 8px 32px var(--clr-shadow);
+    min-width: 280px;
+    text-align: center;
+}
+
+.vs-high {
+    border-top: 4px solid var(--clr-success);
+}
+
+.vs-low {
+    border-top: 4px solid var(--clr-danger);
+}
+
+.vs-price {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--clr-text);
+}
+
+.vs-yen {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--clr-text-muted);
+    margin-bottom: 16px;
+}
+
+.vs-bar {
+    height: 12px;
+    background: linear-gradient(90deg, var(--clr-primary), var(--clr-secondary));
+    border-radius: 6px;
+    width: var(--bar-width);
+    margin: 12px auto;
+    max-width: 240px;
+}
+
+.vs-result {
+    font-size: 44px;
+    font-weight: 900;
+    color: var(--clr-primary);
+}
+
+.vs-desc {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--clr-text-muted);
+}
+
+.vs-center {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--clr-accent);
+}
+
+/* ============================================
+   PILL COMPARISON
+   ============================================ */
+.pill-comparison {
+    display: flex;
+    gap: 64px;
+}
+
+.pill-card {
+    text-align: center;
+}
+
+.pill-shape {
+    width: 120px;
+    height: 56px;
+    border-radius: 28px;
+    margin: 0 auto 16px;
+}
+
+.red-pill {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    box-shadow: 0 8px 24px rgba(239, 68, 68, 0.3);
+}
+
+.blue-pill {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+}
+
+.pill-effect {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--clr-text);
+}
+
+.culture-note {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--clr-text-muted);
+    background: var(--clr-highlight-light);
+    padding: 12px 32px;
+    border-radius: var(--radius-md);
+    margin-top: 8px;
+}
+
+.culture-note .flag {
+    font-size: 22px;
+    margin-right: 8px;
+}
+
+/* ============================================
+   HIERARCHY LIST
+   ============================================ */
+.hierarchy-list {
+    width: 500px;
+}
+
+.hierarchy-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.h-rank {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--clr-primary);
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.h-top .h-rank {
+    background: var(--clr-accent);
+    box-shadow: 0 4px 12px rgba(233, 80, 118, 0.3);
+}
+
+.h-name {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--clr-text);
+    width: 100px;
+    text-align: left;
+}
+
+.h-bar {
+    height: 16px;
+    background: linear-gradient(90deg, var(--clr-primary), var(--clr-secondary));
+    border-radius: 8px;
+    width: var(--h-width);
+    flex: 1;
+    max-width: 300px;
+}
+
+/* ============================================
+   DOCTOR COMPARE
+   ============================================ */
+.doctor-compare {
+    display: flex;
+    gap: 48px;
+}
+
+.doctor-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 36px 40px;
+    box-shadow: 0 8px 32px var(--clr-shadow);
+    text-align: center;
+    min-width: 240px;
+}
+
+.doctor-card.warm {
+    border-top: 4px solid var(--clr-success);
+}
+
+.doctor-card.cold {
+    border-top: 4px solid var(--clr-text-muted);
+}
+
+.doctor-emoji {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.doctor-type {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--clr-text);
+    margin-bottom: 8px;
+}
+
+.doctor-result {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--clr-primary);
+}
+
+.warm .doctor-result {
+    color: var(--clr-success);
+}
+
+/* ============================================
+   OPEN LABEL VISUAL
+   ============================================ */
+.open-label-visual {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.ol-step {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 32px 40px;
+    box-shadow: 0 8px 32px var(--clr-shadow);
+    text-align: center;
+    min-width: 260px;
+}
+
+.ol-step.ol-result {
+    background: var(--clr-primary-light);
+    border: 2px solid var(--clr-primary);
+}
+
+.ol-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.ol-text {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--clr-text);
+}
+
+.ol-text strong {
+    color: var(--clr-accent);
+    font-size: 28px;
+}
+
+.ol-arrow {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--clr-primary);
+}
+
+/* ============================================
+   RITUAL VISUAL
+   ============================================ */
+.ritual-visual {
+    margin-top: 12px;
+}
+
+.ritual-icons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.ritual-item svg {
+    width: 100px;
+    height: 100px;
+}
+
+.ritual-plus {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--clr-primary);
+}
+
+/* ============================================
+   NOCEBO VISUAL
+   ============================================ */
+.nocebo-sub {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--clr-danger);
+}
+
+.nocebo-visual {
+    width: 600px;
+}
+
+.nocebo-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding: 16px 24px;
+    background: white;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 16px var(--clr-shadow);
+}
+
+.nocebo-group {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--clr-text);
+    width: 180px;
+    text-align: left;
+}
+
+.nocebo-bar {
+    height: 20px;
+    background: linear-gradient(90deg, var(--clr-danger), var(--clr-accent));
+    border-radius: 10px;
+    width: var(--bar-width);
+    flex: 1;
+    max-width: 250px;
+}
+
+.nocebo-mult {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--clr-danger);
+    width: 80px;
+    text-align: right;
+}
+
+/* ============================================
+   WORDS COMPARE
+   ============================================ */
+.words-compare {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.words-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 32px 36px;
+    box-shadow: 0 8px 32px var(--clr-shadow);
+    text-align: center;
+    min-width: 280px;
+}
+
+.words-card.words-bad {
+    border-top: 4px solid var(--clr-danger);
+}
+
+.words-card.words-good {
+    border-top: 4px solid var(--clr-success);
+}
+
+.words-quote {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--clr-text);
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.words-result {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.words-bad .words-result {
+    color: var(--clr-danger);
+}
+
+.words-good .words-result {
+    color: var(--clr-success);
+}
+
+.words-vs {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--clr-accent);
+}
+
+/* ============================================
+   DRUG NOCEBO
+   ============================================ */
+.drug-nocebo {
+    display: flex;
+    gap: 48px;
+}
+
+.drug-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 32px 40px;
+    box-shadow: 0 8px 32px var(--clr-shadow);
+    text-align: center;
+    min-width: 260px;
+    border-left: 4px solid var(--clr-danger);
+}
+
+.drug-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--clr-text);
+    margin-bottom: 12px;
+}
+
+.drug-sides {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--clr-danger);
+}
+
+/* ============================================
+   SCOPE COMPARE
+   ============================================ */
+.scope-compare {
+    display: flex;
+    gap: 48px;
+}
+
+.scope-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 32px 40px;
+    box-shadow: 0 8px 32px var(--clr-shadow);
+    min-width: 300px;
+    text-align: center;
+}
+
+.scope-card.scope-yes {
+    border-top: 4px solid var(--clr-success);
+}
+
+.scope-card.scope-no {
+    border-top: 4px solid var(--clr-danger);
+}
+
+.scope-header {
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 16px;
+}
+
+.scope-yes .scope-header {
+    color: var(--clr-success);
+}
+
+.scope-no .scope-header {
+    color: var(--clr-danger);
+}
+
+.scope-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.scope-item {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--clr-text);
+    padding: 8px 20px;
+    background: var(--clr-bg-alt);
+    border-radius: var(--radius-sm);
+}
+
+.scope-note {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--clr-text-muted);
+}
+
+/* ============================================
+   REASSESS VISUAL
+   ============================================ */
+.reassess-visual {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.reassess-original {
+    text-align: center;
+}
+
+.reassess-num {
+    font-size: 72px;
+    font-weight: 900;
+    color: var(--clr-text-muted);
+    text-decoration: line-through;
+    text-decoration-color: var(--clr-danger);
+    text-decoration-thickness: 4px;
+}
+
+.reassess-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--clr-text-muted);
+}
+
+.reassess-arrow {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--clr-accent);
+}
+
+.reassess-factors {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.factor-item {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--clr-danger);
+    background: var(--clr-danger-light);
+    padding: 10px 28px;
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--clr-danger);
+}
+
+/* ============================================
+   GENE VISUAL
+   ============================================ */
+.gene-visual {
+    display: flex;
+    gap: 48px;
+}
+
+.gene-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 32px 40px;
+    box-shadow: 0 8px 32px var(--clr-shadow);
+    text-align: center;
+    min-width: 280px;
+    border-top: 4px solid var(--clr-secondary);
+}
+
+.gene-name {
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--clr-secondary);
+    margin-bottom: 8px;
+}
+
+.gene-desc {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--clr-text-muted);
+}
+
+/* ============================================
+   SUMMARY CARDS
+   ============================================ */
+.summary-cards {
+    display: flex;
+    gap: 32px;
+    margin-top: 12px;
+}
+
+.summary-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    box-shadow: 0 8px 40px var(--clr-shadow);
+    min-width: 280px;
+    text-align: center;
+    border-left: 4px solid var(--clr-primary);
+}
+
+.summary-num {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--clr-primary);
+    opacity: 0.3;
+    margin-bottom: 8px;
+}
+
+.summary-text {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--clr-text);
+}
+
+.summary-text small {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--clr-text-muted);
+}
+
+/* ============================================
+   CONNECTION TEXT
+   ============================================ */
+.connection-text {
+    text-align: center;
+}
+
+.connection-text p {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--clr-text);
+}
+
+.connector-arrow {
+    font-size: 48px;
+    color: var(--clr-primary);
+    margin: 12px 0;
+}
+
+/* ============================================
+   ENDING
+   ============================================ */
+.end-thanks {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--clr-text);
+}
+
+.end-cta {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--clr-primary);
+    line-height: 1.6;
+}
+
+.end-line {
+    width: 160px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));
+    border-radius: 2px;
+}
+
+/* ============================================
+   STAGGER ANIMATION
+   ============================================ */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scene.active .stagger-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scene.active .stagger-item:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.scene.active .stagger-item:nth-child(2) {
+    transition-delay: 0.25s;
+}
+
+.scene.active .stagger-item:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.scene.active .stagger-item:nth-child(4) {
+    transition-delay: 0.55s;
+}
+
+.scene.active .stagger-item:nth-child(5) {
+    transition-delay: 0.7s;
+}
+
+.scene.active .stagger-item:nth-child(6) {
+    transition-delay: 0.85s;
+}
+
+/* ============================================
+   MICRO ANIMATIONS — Core 
+   ============================================ */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(91, 76, 219, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 20px 8px rgba(91, 76, 219, 0.15);
+    }
+}
+
+@keyframes bar-fill {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--bar-width);
+    }
+}
+
+@keyframes h-bar-fill {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--h-width);
+    }
+}
+
+/* 数値カウントアップ風パルス */
+@keyframes numberPop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* カードの出現アニメーション */
+@keyframes cardSlideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* テキストグラデーション背景シフト */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 脈動リング */
+@keyframes pulseRing {
+    0% {
+        box-shadow: 0 0 0 0 rgba(91, 76, 219, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 16px rgba(91, 76, 219, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(91, 76, 219, 0);
+    }
+}
+
+/* 警告シェイク */
+@keyframes warningShake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-3px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(3px);
+    }
+}
+
+/* 回転グロー */
+@keyframes rotateGlow {
+    0% {
+        filter: drop-shadow(0 0 4px rgba(91, 76, 219, 0.2));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 16px rgba(91, 76, 219, 0.5));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 4px rgba(91, 76, 219, 0.2));
+    }
+}
+
+/* スケールバウンス */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+    70% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ドットパルス（話者ドット等） */
+@keyframes dotPulse {
+
+    0%,
+    100% {
+        opacity: 0.4;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+/* SVGライン描画 */
+@keyframes drawLine {
+    from {
+        stroke-dashoffset: 500;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* タイトル文字の出現 */
+@keyframes titleReveal {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* ============================================
+   MICRO ANIMATIONS — Applied
+   ============================================ */
+
+/* バー系アニメーション */
+.scene.active .vs-bar,
+.scene.active .nocebo-bar {
+    animation: bar-fill 1.2s ease-out forwards;
+    animation-delay: 0.6s;
+    width: 0;
+}
+
+.scene.active .h-bar {
+    animation: h-bar-fill 1.2s ease-out forwards;
+    animation-delay: 0.6s;
+    width: 0;
+}
+
+/* 数値インパクト ポップイン */
+.scene.active .impact-number {
+    animation: numberPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+/* タイトル文字のリビール */
+.scene.active .title-accent {
+    animation: titleReveal 0.8s ease-out forwards, gradientShift 4s ease infinite;
+    animation-delay: 0.2s;
+    background-size: 200% 200%;
+}
+
+/* カード出現 */
+.scene.active .point-card {
+    animation: cardSlideUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .point-card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .point-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .point-card:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.scene.active .summary-card {
+    animation: cardSlideUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .summary-card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .summary-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .summary-card:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+/* フローティング */
+.scene.active .etymology-card {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* パルスグロー */
+.scene.active .brain-node.result-node {
+    animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+.scene.active .ol-step.ol-result {
+    animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+.scene.active .cond-step.highlight-step {
+    animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+/* 脈動リング (rank 1) */
+.scene.active .h-top .h-rank {
+    animation: pulseRing 2s ease-in-out infinite;
+}
+
+/* 薬の形状パルス */
+.scene.active .red-pill {
+    animation: pulse-glow 2s ease-in-out infinite;
+    --pulse-color: rgba(239, 68, 68, 0.3);
+}
+
+.scene.active .blue-pill {
+    animation: pulse-glow 2s ease-in-out infinite 0.5s;
+    --pulse-color: rgba(59, 130, 246, 0.3);
+}
+
+/* brain connector ドット */
+.scene.active .brain-connector {
+    animation: drawLine 1s ease forwards;
+    background: none;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(90deg, var(--clr-primary), var(--clr-secondary)) 1;
+    animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* ノセボダークシーン — タイトル赤グロー */
+#scene-24 .scene-title {
+    text-shadow: 0 0 40px rgba(239, 68, 68, 0.3), 0 0 80px rgba(239, 68, 68, 0.1);
+}
+
+#scene-24 .nocebo-sub {
+    animation: warningShake 0.8s ease-in-out 1;
+    animation-delay: 0.8s;
+}
+
+/* ノセボバー強調 */
+.scene.active .nocebo-card:first-child .nocebo-mult {
+    animation: numberPop 0.6s ease forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+
+/* タイムラインフロー アイテム出現 */
+.scene.active .timeline-item {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .timeline-item:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .timeline-item:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .timeline-item:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+/* タイムライン矢印アニメーション */
+.scene.active .timeline-arrow {
+    animation: bounceIn 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .timeline-arrow:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.scene.active .timeline-arrow:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+/* SVGグラフ内のライン描画 */
+.scene.active .corr-svg line[stroke-linecap="round"] {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: drawLine 1.5s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* SVGグラフ内のドット出現 */
+.scene.active .corr-svg circle {
+    animation: bounceIn 0.4s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .corr-svg circle:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.scene.active .corr-svg circle:nth-child(6) {
+    animation-delay: 1.0s;
+}
+
+.scene.active .corr-svg circle:nth-child(7) {
+    animation-delay: 1.2s;
+}
+
+.scene.active .corr-svg circle:nth-child(8) {
+    animation-delay: 1.4s;
+}
+
+.scene.active .corr-svg circle:nth-child(9) {
+    animation-delay: 1.6s;
+}
+
+/* doctor emoji フロート */
+.scene.active .doctor-emoji {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* 条件付けフローアイテム */
+.scene.active .cond-step {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .cond-step:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .cond-step:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .cond-step:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+/* 言葉比較カード出現 */
+.scene.active .words-card {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .words-card:first-child {
+    animation-delay: 0.3s;
+}
+
+.scene.active .words-card:last-child {
+    animation-delay: 0.6s;
+}
+
+/* VS テキスト バウンス */
+.scene.active .vs-center,
+.scene.active .words-vs {
+    animation: bounceIn 0.6s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+/* scope カード出現 */
+.scene.active .scope-card {
+    animation: cardSlideUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .scope-card:first-child {
+    animation-delay: 0.3s;
+}
+
+.scene.active .scope-card:last-child {
+    animation-delay: 0.6s;
+}
+
+/* gene カード出現 */
+.scene.active .gene-card {
+    animation: cardSlideUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .gene-card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .gene-card:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+/* drug nocebo カード */
+.scene.active .drug-card {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .drug-card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .drug-card:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+/* VS カード出現 */
+.scene.active .vs-card {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .vs-card:first-child {
+    animation-delay: 0.3s;
+}
+
+.scene.active .vs-card:last-child {
+    animation-delay: 0.6s;
+}
+
+/* doctor カード出現 */
+.scene.active .doctor-card {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .doctor-card:first-child {
+    animation-delay: 0.3s;
+}
+
+.scene.active .doctor-card:last-child {
+    animation-delay: 0.6s;
+}
+
+/* reassess アニメーション */
+.scene.active .reassess-num {
+    animation: numberPop 0.8s ease forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+.scene.active .factor-item {
+    animation: cardSlideUp 0.4s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .factor-item:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+.scene.active .factor-item:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+.scene.active .factor-item:nth-child(3) {
+    animation-delay: 1.0s;
+}
+
+/* エンディング */
+.scene.active .end-thanks {
+    animation: titleReveal 1s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.scene.active .end-line {
+    animation: drawLine 1.2s ease-out forwards;
+    animation-delay: 0.6s;
+}
+
+/* コネクションテキスト */
+.scene.active .connector-arrow {
+    animation: float 2s ease-in-out infinite;
+}
+
+/* チャプタータイトル画面 */
+.scene.active .chapter-num {
+    animation: titleReveal 0.6s ease-out forwards;
+    animation-delay: 0.1s;
+}
+
+.scene.active .chapter-line {
+    animation: drawLine 0.8s ease-out forwards;
+    animation-delay: 0.5s;
+    width: 0;
+}
+
+/* ============================================
+   ADDITIONAL HOVER & POLISH
+   ============================================ */
+.timeline-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scope-card {
+    transition: transform 0.3s ease;
+}
+
+.gene-card {
+    transition: transform 0.3s ease;
+}
+
+/* ============================================
+   SCENE BACKGROUND VARIANTS
+   ============================================ */
+#scene-0 {
+    background: linear-gradient(135deg, #f8f9fc 0%, #ede9ff 100%);
+}
+
+#scene-3 {
+    background: linear-gradient(135deg, #f0f4ff 0%, #e0f7f6 100%);
+}
+
+#scene-7 {
+    background: linear-gradient(135deg, #ede9ff 0%, #f8f9fc 100%);
+}
+
+#scene-12 {
+    background: linear-gradient(135deg, #e0f7f6 0%, #fef3c7 100%);
+}
+
+#scene-19 {
+    background: linear-gradient(135deg, #fee2e2 0%, #f8f9fc 100%);
+}
+
+#scene-24 {
+    background: linear-gradient(135deg, #1a1d2e 0%, #2d1b3d 100%);
+}
+
+#scene-24 .scene-label {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#scene-24 .scene-title {
+    color: white;
+}
+
+#scene-24 .nocebo-sub {
+    color: #f87171;
+}
+
+#scene-24 .chapter-line {
+    background: linear-gradient(90deg, #ef4444, #f97316);
+}
+
+#scene-28 {
+    background: linear-gradient(135deg, #ede9ff 0%, #e0f7f6 100%);
+}
+
+#scene-29 {
+    background: linear-gradient(135deg, #f8f9fc 0%, #ede9ff 100%);
+}
+
+#scene-30 {
+    background: linear-gradient(135deg, #ede9ff 0%, #f0f4ff 100%);
+}

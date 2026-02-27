@@ -1,0 +1,1183 @@
+[
+  {
+    "id": 0,
+    "title": "タイトルカード「なぜフェイクニュースは本物より6倍速く広まるのか」",
+    "duration": 50.1,
+    "audioFiles": [
+      {
+        "file": "scene_00_00.wav",
+        "duration": 2.453333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_00_01.wav",
+        "duration": 3.328,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_00_02.wav",
+        "duration": 2.464,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_00_03.wav",
+        "duration": 6.304,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_00_04.wav",
+        "duration": 3.2533333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_00_05.wav",
+        "duration": 3.978666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_00_06.wav",
+        "duration": 4.597333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_00_07.wav",
+        "duration": 5.045333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_00_08.wav",
+        "duration": 4.554666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_00_09.wav",
+        "duration": 2.005333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_00_10.wav",
+        "duration": 2.9013333333333335,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_00_11.wav",
+        "duration": 5.418666666666667,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "title": "数値インパクト「6倍速い」",
+    "duration": 18,
+    "audioFiles": [
+      {
+        "file": "scene_01_00.wav",
+        "duration": 2.3466666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_01_01.wav",
+        "duration": 4.192,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_01_02.wav",
+        "duration": 3.0613333333333332,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_01_03.wav",
+        "duration": 4.021333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_01_04.wav",
+        "duration": 2.6346666666666665,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "この動画でわかる3つのこと",
+    "duration": 27.9,
+    "audioFiles": [
+      {
+        "file": "scene_02_00.wav",
+        "duration": 3.957333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_02_01.wav",
+        "duration": 5.002666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_02_02.wav",
+        "duration": 4.16,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_02_03.wav",
+        "duration": 4.277333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_02_04.wav",
+        "duration": 3.04,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_02_05.wav",
+        "duration": 5.493333333333333,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "タイトルカード「第1章 史上最大のフェイクニュース研究」",
+    "duration": 29.7,
+    "audioFiles": [
+      {
+        "file": "scene_03_00.wav",
+        "duration": 2.965333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_03_01.wav",
+        "duration": 5.589333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_03_02.wav",
+        "duration": 6.4,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_03_03.wav",
+        "duration": 2.112,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_03_04.wav",
+        "duration": 4.746666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_03_05.wav",
+        "duration": 5.8773333333333335,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "フロー図「研究デザイン」",
+    "duration": 43.4,
+    "audioFiles": [
+      {
+        "file": "scene_04_00.wav",
+        "duration": 6.474666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_04_01.wav",
+        "duration": 3.712,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_04_02.wav",
+        "duration": 3.2213333333333334,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_04_03.wav",
+        "duration": 6.762666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_04_04.wav",
+        "duration": 5.493333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_04_05.wav",
+        "duration": 4.832,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_04_06.wav",
+        "duration": 3.2533333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_04_07.wav",
+        "duration": 7.050666666666666,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "数値インパクト「拡散速度」",
+    "duration": 64.3,
+    "audioFiles": [
+      {
+        "file": "scene_05_00.wav",
+        "duration": 2.0693333333333332,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_05_01.wav",
+        "duration": 6.304,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_05_02.wav",
+        "duration": 2.7733333333333334,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_05_03.wav",
+        "duration": 4.373333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_05_04.wav",
+        "duration": 5.824,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_05_05.wav",
+        "duration": 3.488,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_05_06.wav",
+        "duration": 3.8933333333333335,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_05_07.wav",
+        "duration": 5.0986666666666665,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_05_08.wav",
+        "duration": 3.498666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_05_09.wav",
+        "duration": 3.477333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_05_10.wav",
+        "duration": 5.984,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_05_11.wav",
+        "duration": 3.1786666666666665,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_05_12.wav",
+        "duration": 5.834666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_05_13.wav",
+        "duration": 4.085333333333334,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "タイトルカード「第2章 犯人はボットではない」",
+    "duration": 20.8,
+    "audioFiles": [
+      {
+        "file": "scene_06_00.wav",
+        "duration": 2.8586666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_06_01.wav",
+        "duration": 1.7813333333333334,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_06_02.wav",
+        "duration": 6.037333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_06_03.wav",
+        "duration": 4.544,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_06_04.wav",
+        "duration": 3.8933333333333335,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "比較対照「ボット vs 人間」",
+    "duration": 59.1,
+    "audioFiles": [
+      {
+        "file": "scene_07_00.wav",
+        "duration": 4.874666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_07_01.wav",
+        "duration": 2.6773333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_07_02.wav",
+        "duration": 2.6026666666666665,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_07_03.wav",
+        "duration": 4.512,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_07_04.wav",
+        "duration": 2.88,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_07_05.wav",
+        "duration": 3.36,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_07_06.wav",
+        "duration": 6.357333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_07_07.wav",
+        "duration": 4.416,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_07_08.wav",
+        "duration": 7.989333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_07_09.wav",
+        "duration": 1.4826666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_07_10.wav",
+        "duration": 6.08,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_07_11.wav",
+        "duration": 6.229333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_07_12.wav",
+        "duration": 1.5573333333333332,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "タイトルカード「第3章 脳が嘘を好む理由」",
+    "duration": 7.3,
+    "audioFiles": [
+      {
+        "file": "scene_08_00.wav",
+        "duration": 1.728,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_08_01.wav",
+        "duration": 4.789333333333333,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "テキスト強調「新規性バイアス」",
+    "duration": 42.3,
+    "audioFiles": [
+      {
+        "file": "scene_09_00.wav",
+        "duration": 4.597333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_09_01.wav",
+        "duration": 5.770666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_09_02.wav",
+        "duration": 4.906666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_09_03.wav",
+        "duration": 4.864,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_09_04.wav",
+        "duration": 4.469333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_09_05.wav",
+        "duration": 2.848,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_09_06.wav",
+        "duration": 3.7013333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_09_07.wav",
+        "duration": 4.757333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_09_08.wav",
+        "duration": 3.52,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "フロー図「新規性→共有→社会的報酬」",
+    "duration": 61.1,
+    "audioFiles": [
+      {
+        "file": "scene_10_00.wav",
+        "duration": 3.584,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_10_01.wav",
+        "duration": 6.410666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_10_02.wav",
+        "duration": 5.429333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_10_03.wav",
+        "duration": 3.445333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_10_04.wav",
+        "duration": 6.8373333333333335,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_10_05.wav",
+        "duration": 3.904,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_10_06.wav",
+        "duration": 3.082666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_10_07.wav",
+        "duration": 4.544,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_10_08.wav",
+        "duration": 4.8853333333333335,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_10_09.wav",
+        "duration": 3.488,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_10_10.wav",
+        "duration": 7.2,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_10_11.wav",
+        "duration": 4.48,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "タイトルカード「第4章 感情のハイジャック」",
+    "duration": 7.2,
+    "audioFiles": [
+      {
+        "file": "scene_11_00.wav",
+        "duration": 4.128,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_11_01.wav",
+        "duration": 2.2613333333333334,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "テキスト強調「驚き・恐怖・嫌悪」",
+    "duration": 37.6,
+    "audioFiles": [
+      {
+        "file": "scene_12_00.wav",
+        "duration": 6.016,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_12_01.wav",
+        "duration": 6.08,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_12_02.wav",
+        "duration": 2.2186666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_12_03.wav",
+        "duration": 5.216,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_12_04.wav",
+        "duration": 6.517333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_12_05.wav",
+        "duration": 2.4426666666666668,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_12_06.wav",
+        "duration": 6.784,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "脳のSVG「扁桃体」",
+    "duration": 53.2,
+    "audioFiles": [
+      {
+        "file": "scene_13_00.wav",
+        "duration": 7.2,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_13_01.wav",
+        "duration": 5.770666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_13_02.wav",
+        "duration": 3.7333333333333334,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_13_03.wav",
+        "duration": 6.944,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_13_04.wav",
+        "duration": 5.717333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_13_05.wav",
+        "duration": 2.816,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_13_06.wav",
+        "duration": 6.816,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_13_07.wav",
+        "duration": 5.205333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_13_08.wav",
+        "duration": 6.1226666666666665,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "数値インパクト「+20%」",
+    "duration": 46,
+    "audioFiles": [
+      {
+        "file": "scene_14_00.wav",
+        "duration": 4.842666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_14_01.wav",
+        "duration": 8.021333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_14_02.wav",
+        "duration": 2.2293333333333334,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_14_03.wav",
+        "duration": 6.4,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_14_04.wav",
+        "duration": 4,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_14_05.wav",
+        "duration": 5.514666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_14_06.wav",
+        "duration": 3.84,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_14_07.wav",
+        "duration": 8.544,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "タイトルカード「第5章 アルゴリズムの増幅」",
+    "duration": 7.5,
+    "audioFiles": [
+      {
+        "file": "scene_15_00.wav",
+        "duration": 4.490666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_15_01.wav",
+        "duration": 2.24,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "フロー図「エンゲージメント至上主義」",
+    "duration": 55.5,
+    "audioFiles": [
+      {
+        "file": "scene_16_00.wav",
+        "duration": 7.616,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_16_01.wav",
+        "duration": 6.1866666666666665,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_16_02.wav",
+        "duration": 6.453333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_16_03.wav",
+        "duration": 4,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_16_04.wav",
+        "duration": 7.04,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_16_05.wav",
+        "duration": 1.9626666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_16_06.wav",
+        "duration": 9.184,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_16_07.wav",
+        "duration": 6.816,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_16_08.wav",
+        "duration": 3.3066666666666666,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "テキスト強調「情報カスケード」",
+    "duration": 48.9,
+    "audioFiles": [
+      {
+        "file": "scene_17_00.wav",
+        "duration": 4.1386666666666665,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_17_01.wav",
+        "duration": 1.5466666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_17_02.wav",
+        "duration": 3.3706666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_17_03.wav",
+        "duration": 7.552,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_17_04.wav",
+        "duration": 4.405333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_17_05.wav",
+        "duration": 4.64,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_17_06.wav",
+        "duration": 3.0933333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_17_07.wav",
+        "duration": 4.234666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_17_08.wav",
+        "duration": 2.048,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_17_09.wav",
+        "duration": 4.810666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_17_10.wav",
+        "duration": 5.557333333333333,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "テキスト強調「マケドニアの十代」",
+    "duration": 48.4,
+    "audioFiles": [
+      {
+        "file": "scene_18_00.wav",
+        "duration": 5.685333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_18_01.wav",
+        "duration": 6.1546666666666665,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_18_02.wav",
+        "duration": 7.477333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_18_03.wav",
+        "duration": 1.0666666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_18_04.wav",
+        "duration": 2.912,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_18_05.wav",
+        "duration": 4.810666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_18_06.wav",
+        "duration": 3.477333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_18_07.wav",
+        "duration": 5.1626666666666665,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_18_08.wav",
+        "duration": 2.912,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_18_09.wav",
+        "duration": 5.557333333333333,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "タイトルカード「第6章 どう身を守るか」",
+    "duration": 12.2,
+    "audioFiles": [
+      {
+        "file": "scene_19_00.wav",
+        "duration": 3.3386666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_19_01.wav",
+        "duration": 4.874666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_19_02.wav",
+        "duration": 2.8693333333333335,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "段階的リスト「3つの防御策」",
+    "duration": 47.7,
+    "audioFiles": [
+      {
+        "file": "scene_20_00.wav",
+        "duration": 2.8906666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_20_01.wav",
+        "duration": 1.76,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_20_02.wav",
+        "duration": 8.448,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_20_03.wav",
+        "duration": 5.386666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_20_04.wav",
+        "duration": 4.704,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_20_05.wav",
+        "duration": 6.005333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_20_06.wav",
+        "duration": 4.544,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_20_07.wav",
+        "duration": 8.448,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_20_08.wav",
+        "duration": 2.5813333333333333,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "title": "テキスト強調「正確性ナッジ」",
+    "duration": 33.6,
+    "audioFiles": [
+      {
+        "file": "scene_21_00.wav",
+        "duration": 3.2426666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_21_01.wav",
+        "duration": 4.448,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_21_02.wav",
+        "duration": 6.613333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_21_03.wav",
+        "duration": 1.3546666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_21_04.wav",
+        "duration": 4.522666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_21_05.wav",
+        "duration": 6.933333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_21_06.wav",
+        "duration": 4.1706666666666665,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "テキスト強調「読んでからシェア」",
+    "duration": 52,
+    "audioFiles": [
+      {
+        "file": "scene_22_00.wav",
+        "duration": 2.2186666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_22_01.wav",
+        "duration": 3.5946666666666665,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_22_02.wav",
+        "duration": 6.282666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_22_03.wav",
+        "duration": 3.6373333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_22_04.wav",
+        "duration": 4.437333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_22_05.wav",
+        "duration": 5.802666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_22_06.wav",
+        "duration": 3.8186666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_22_07.wav",
+        "duration": 3.904,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_22_08.wav",
+        "duration": 5.642666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_22_09.wav",
+        "duration": 6.506666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_22_10.wav",
+        "duration": 2.6666666666666665,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "タイトルカード「まとめ」",
+    "duration": 2.7,
+    "audioFiles": [
+      {
+        "file": "scene_23_00.wav",
+        "duration": 2.1866666666666665,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "まとめ3ポイント",
+    "duration": 53.9,
+    "audioFiles": [
+      {
+        "file": "scene_24_00.wav",
+        "duration": 9.578666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_24_01.wav",
+        "duration": 7.7973333333333334,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_24_02.wav",
+        "duration": 3.904,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_24_03.wav",
+        "duration": 8.501333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_24_04.wav",
+        "duration": 4.896,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_24_05.wav",
+        "duration": 7.050666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_24_06.wav",
+        "duration": 3.2106666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_24_07.wav",
+        "duration": 6.378666666666667,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "title": "テキスト強調「コアメッセージ」",
+    "duration": 9.9,
+    "audioFiles": [
+      {
+        "file": "scene_25_00.wav",
+        "duration": 4.842666666666666,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_25_01.wav",
+        "duration": 4.256,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "title": "テキスト強調「あなたの指が」",
+    "duration": 18.2,
+    "audioFiles": [
+      {
+        "file": "scene_26_00.wav",
+        "duration": 5.461333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_26_01.wav",
+        "duration": 5.1306666666666665,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_26_02.wav",
+        "duration": 3.7866666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_26_03.wav",
+        "duration": 2.4426666666666668,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "title": "エンディング",
+    "duration": 8.3,
+    "audioFiles": [
+      {
+        "file": "scene_27_00.wav",
+        "duration": 4.832,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_27_01.wav",
+        "duration": 2.688,
+        "speaker": "めたん"
+      }
+    ]
+  }
+]

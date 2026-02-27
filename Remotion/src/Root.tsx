@@ -32,11 +32,51 @@ import {
   VideoWithSubtitles as DopamineVideo,
   TOTAL_FRAMES as DOPAMINE_TOTAL_FRAMES,
 } from "./projects/dopamine_not_pleasure/VideoWithSubtitles";
+import {
+  VideoWithSubtitles as AttentionEconomyVideo,
+  TOTAL_FRAMES as ATTENTION_TOTAL_FRAMES,
+} from "./projects/attention_economy/VideoWithSubtitles";
+import {
+  VideoWithSubtitles as SkippingBreakfastVideo,
+  TOTAL_FRAMES as BREAKFAST_TOTAL_FRAMES,
+} from "./projects/skipping_breakfast/VideoWithSubtitles";
+import {
+  VideoWithSubtitles as PlaceboEffectVideo,
+  TOTAL_FRAMES as PLACEBO_TOTAL_FRAMES,
+} from "./projects/placebo_effect/VideoWithSubtitles";
+import {
+  VideoWithSubtitles as PraiseParentingVideo,
+  TOTAL_FRAMES as PRAISE_TOTAL_FRAMES,
+} from "./projects/praise_parenting/VideoWithSubtitles";
+import {
+  VideoWithSubtitles as MozartEffectVideo,
+  TOTAL_FRAMES as MOZART_TOTAL_FRAMES,
+} from "./projects/mozart_effect/VideoWithSubtitles";
+import {
+  VideoWithSubtitles as FakeNewsSpreadVideo,
+  TOTAL_FRAMES as FAKE_NEWS_TOTAL_FRAMES,
+} from "./projects/fake_news_spread/VideoWithSubtitles";
 import "./index.css";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="attention-economy-video-subtitles"
+        component={AttentionEconomyVideo}
+        durationInFrames={ATTENTION_TOTAL_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="fake-news-spread-video-subtitles"
+        component={FakeNewsSpreadVideo}
+        durationInFrames={FAKE_NEWS_TOTAL_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
       <Composition
         id="10000h-rule-video-subtitles"
         component={TenKRuleVideo}
@@ -98,6 +138,38 @@ export const RemotionRoot: React.FC = () => {
         id="dopamine-not-pleasure-video-subtitles"
         component={DopamineVideo}
         durationInFrames={DOPAMINE_TOTAL_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="skipping-breakfast-video-subtitles"
+        component={SkippingBreakfastVideo}
+        durationInFrames={BREAKFAST_TOTAL_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="placebo-effect-video-subtitles"
+        component={PlaceboEffectVideo}
+        durationInFrames={PLACEBO_TOTAL_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="praise-parenting-video-subtitles"
+        component={PraiseParentingVideo}
+        durationInFrames={PRAISE_TOTAL_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="mozart-effect-video-subtitles"
+        component={MozartEffectVideo}
+        durationInFrames={MOZART_TOTAL_FRAMES}
         fps={30}
         width={1920}
         height={1080}

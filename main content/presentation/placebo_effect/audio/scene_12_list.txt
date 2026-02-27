@@ -1,0 +1,3 @@
+file 'D:/myfolder/動画生成/main content/presentation/placebo_effect/audio/scene_12_00.wav'
+file 'D:/myfolder/動画生成/main content/presentation/placebo_effect/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/placebo_effect/audio/scene_12_01.wav'

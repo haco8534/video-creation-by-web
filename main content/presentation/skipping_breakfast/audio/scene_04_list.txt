@@ -1,0 +1,7 @@
+file 'D:/myfolder/動画生成/main content/presentation/skipping_breakfast/audio/scene_04_00.wav'
+file 'D:/myfolder/動画生成/main content/presentation/skipping_breakfast/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/skipping_breakfast/audio/scene_04_01.wav'
+file 'D:/myfolder/動画生成/main content/presentation/skipping_breakfast/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/skipping_breakfast/audio/scene_04_02.wav'
+file 'D:/myfolder/動画生成/main content/presentation/skipping_breakfast/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/skipping_breakfast/audio/scene_04_03.wav'

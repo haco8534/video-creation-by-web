@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920,height=1080">
+    <title>「褒めて育てる」は本当に正しいのか？</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== SCENE 0: タイトルカード ===== -->
+    <div class="scene active" id="scene-0">
+        <canvas id="canvas-0" class="bg-canvas"></canvas>
+        <div class="scene-content title-scene">
+            <div class="title-badge">SCIENCE OF PRAISE</div>
+            <h1 class="title-huge stagger-item">「褒めて育てる」は<br><span class="title-accent">本当に正しいのか？</span></h1>
+            <div class="title-sub stagger-item">心理学実験と脳科学が解き明かす「正しい褒め方」</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 1: 数値インパクト 67% vs 92% ===== -->
+    <div class="scene" id="scene-1">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">褒め方を変えるだけで</div>
+            <div class="vs-container stagger-item">
+                <div class="vs-card vs-card--negative">
+                    <div class="vs-label">「頭がいいね」</div>
+                    <div class="impact-number"><span class="big-num">67</span><span class="num-unit">%</span></div>
+                    <div class="vs-desc">簡単な課題を選択</div>
+                </div>
+                <div class="vs-center">VS</div>
+                <div class="vs-card vs-card--positive">
+                    <div class="vs-label">「頑張ったね」</div>
+                    <div class="impact-number"><span class="big-num">92</span><span class="num-unit">%</span></div>
+                    <div class="vs-desc">難しい課題に挑戦</div>
+                </div>
+            </div>
+            <div class="source-badge stagger-item">Mueller & Dweck, 1998 | スタンフォード大学</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 2: 段階的リスト - この動画でわかること ===== -->
+    <div class="scene" id="scene-2">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">この動画でわかる3つのこと</div>
+            <div class="list-cards">
+                <div class="list-card stagger-item">
+                    <div class="list-num">01</div>
+                    <div class="list-text">「褒めて育てる」は<br>どこから来たのか</div>
+                </div>
+                <div class="list-card stagger-item">
+                    <div class="list-num">02</div>
+                    <div class="list-text">褒め方を間違えると<br>何が起きるのか</div>
+                </div>
+                <div class="list-card stagger-item">
+                    <div class="list-num">03</div>
+                    <div class="list-text">明日からどう<br>褒めればいいのか</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 3: タイトルカード - 第1章 ===== -->
+    <div class="scene" id="scene-3">
+        <canvas id="canvas-6" class="bg-canvas"></canvas>
+        <div class="scene-content title-scene">
+            <div class="chapter-badge">CHAPTER 01</div>
+            <h1 class="chapter-title stagger-item">「褒めて育てる」の起源</h1>
+            <div class="chapter-sub stagger-item">1969年アメリカから始まった自己肯定感運動</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 4: フロー図 - 自己肯定感運動の歴史 ===== -->
+    <div class="scene" id="scene-4">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">自己肯定感運動の歴史</div>
+            <div class="timeline-flow">
+                <div class="timeline-item stagger-item">
+                    <div class="timeline-year">1969</div>
+                    <div class="timeline-body">
+                        <div class="timeline-who">N. ブランデン</div>
+                        <div class="timeline-what">「自己評価の心理学」出版</div>
+                    </div>
+                </div>
+                <div class="timeline-arrow stagger-item">
+                    <svg width="40" height="20">
+                        <path d="M0,10 L30,10 L25,5 M30,10 L25,15" stroke="var(--clr-primary)" stroke-width="2"
+                            fill="none" />
+                    </svg>
+                </div>
+                <div class="timeline-item stagger-item">
+                    <div class="timeline-year">1986</div>
+                    <div class="timeline-body">
+                        <div class="timeline-who">カリフォルニア州</div>
+                        <div class="timeline-what">自己肯定感タスクフォース設立</div>
+                    </div>
+                </div>
+                <div class="timeline-arrow stagger-item">
+                    <svg width="40" height="20">
+                        <path d="M0,10 L30,10 L25,5 M30,10 L25,15" stroke="var(--clr-primary)" stroke-width="2"
+                            fill="none" />
+                    </svg>
+                </div>
+                <div class="timeline-item stagger-item">
+                    <div class="timeline-year">1990s</div>
+                    <div class="timeline-body">
+                        <div class="timeline-who">日本に輸入</div>
+                        <div class="timeline-what">「褒める」だけが独り歩き</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 5: テキスト強調 - 社会問題解決 ===== -->
+    <div class="scene" id="scene-5">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">当時の信念</div>
+            <div class="text-emphasis stagger-item">
+                <span class="text-big">自己肯定感を高めれば</span>
+                <span class="text-big text-accent">社会問題が解決する</span>
+            </div>
+            <div class="text-sub stagger-item">「みんな特別」「全員に金メダル」の時代</div>
+            <div class="source-badge stagger-item">California Task Force, 1986</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 6: 数値インパクト - 1990年結果 ===== -->
+    <div class="scene" id="scene-6">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">1990年 検証結果</div>
+            <div class="result-box stagger-item">
+                <div class="result-status result-status--fail">FAILED</div>
+                <div class="result-text">効果は「混在、非有意、または欠如」</div>
+            </div>
+            <div class="text-sub stagger-item">タスクフォース自身の検証で期待された効果は確認できず</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 7: 引用カード - ブランデン ===== -->
+    <div class="scene" id="scene-7">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">提唱者自身の懸念</div>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">ポップ心理学による過度な単純化と甘やかしに変質してしまった</div>
+                <div class="quote-author">— Nathaniel Branden</div>
+            </div>
+            <div class="source-badge stagger-item">自己肯定感運動の提唱者本人が後年に警鐘</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 8: タイトルカード - 衝撃の実験 ===== -->
+    <div class="scene" id="scene-8">
+        <canvas id="canvas-13" class="bg-canvas"></canvas>
+        <div class="scene-content title-scene">
+            <div class="chapter-badge">TOPIC 01</div>
+            <h1 class="chapter-title stagger-item">衝撃の実験</h1>
+            <div class="chapter-sub stagger-item">Mueller & Dweck (1998) スタンフォード大学</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 9: フロー図 - 実験3ラウンド ===== -->
+    <div class="scene" id="scene-9">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">実験デザイン：3ラウンド構造</div>
+            <div class="experiment-flow">
+                <div class="exp-step stagger-item">
+                    <div class="exp-round">R1</div>
+                    <div class="exp-detail">
+                        <div class="exp-action">簡単なテスト</div>
+                        <div class="exp-note">全員が解ける難易度</div>
+                    </div>
+                </div>
+                <div class="exp-arrow stagger-item">→</div>
+                <div class="exp-step exp-step--branch stagger-item">
+                    <div class="exp-round">褒め</div>
+                    <div class="exp-branches">
+                        <div class="exp-branch exp-branch--a">「頭がいいね」</div>
+                        <div class="exp-branch exp-branch--b">「頑張ったね」</div>
+                        <div class="exp-branch exp-branch--c">「いい点数だね」</div>
+                    </div>
+                </div>
+                <div class="exp-arrow stagger-item">→</div>
+                <div class="exp-step stagger-item">
+                    <div class="exp-round">R2</div>
+                    <div class="exp-detail">
+                        <div class="exp-action">激ムズテスト</div>
+                        <div class="exp-note">全員失敗するように設計</div>
+                    </div>
+                </div>
+                <div class="exp-arrow stagger-item">→</div>
+                <div class="exp-step stagger-item">
+                    <div class="exp-round">R3</div>
+                    <div class="exp-detail">
+                        <div class="exp-action">R1と同じテスト</div>
+                        <div class="exp-note">成績の変化を測定</div>
+                    </div>
+                </div>
+            </div>
+            <div class="source-badge stagger-item">対象: 5年生 約400名</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 10: 比較対照 - 課題選択 ===== -->
+    <div class="scene" id="scene-10">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">課題の選択結果</div>
+            <div class="bar-compare">
+                <div class="bar-group stagger-item">
+                    <div class="bar-label">「頭がいいね」グループ</div>
+                    <div class="bar-track">
+                        <div class="bar-fill bar-fill--negative" style="--bar-width: 67%">
+                            <span class="bar-value">67%が簡単な方</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bar-group stagger-item">
+                    <div class="bar-label">「頑張ったね」グループ</div>
+                    <div class="bar-track">
+                        <div class="bar-fill bar-fill--positive" style="--bar-width: 92%">
+                            <span class="bar-value">92%が難しい方</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="insight-label stagger-item">能力を褒めると「失敗を恐れ」挑戦を避ける</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 11: テキスト強調 - ラウンド2 ===== -->
+    <div class="scene" id="scene-11">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">ラウンド2：全員に失敗体験を与える</div>
+            <div class="dual-result">
+                <div class="dual-card dual-card--negative stagger-item">
+                    <div class="dual-header">「頭がいいね」組</div>
+                    <ul class="dual-list">
+                        <li>すぐに諦めた</li>
+                        <li>楽しくないと回答</li>
+                        <li>能力のせいだと感じた</li>
+                    </ul>
+                </div>
+                <div class="dual-card dual-card--positive stagger-item">
+                    <div class="dual-header">「頑張ったね」組</div>
+                    <ul class="dual-list">
+                        <li>粘り強く取り組んだ</li>
+                        <li>楽しいと回答</li>
+                        <li>もっと練習したいと感じた</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 12: 数値インパクト - 成績変化 ===== -->
+    <div class="scene" id="scene-12">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">ラウンド3：同じテストを再び</div>
+            <div class="vs-container stagger-item">
+                <div class="vs-card vs-card--negative">
+                    <div class="vs-label">「頭がいいね」</div>
+                    <div class="impact-number"><span class="big-num negative-num">-20</span><span
+                            class="num-unit">%</span></div>
+                    <div class="vs-desc">成績が低下</div>
+                </div>
+                <div class="vs-center">VS</div>
+                <div class="vs-card vs-card--positive">
+                    <div class="vs-label">「頑張ったね」</div>
+                    <div class="impact-number"><span class="big-num positive-num">+30</span><span
+                            class="num-unit">%</span></div>
+                    <div class="vs-desc">成績が向上</div>
+                </div>
+            </div>
+            <div class="insight-label stagger-item">たった一言の違いが成績を50ポイント分ける</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 13: テキスト強調 - 嘘 ===== -->
+    <div class="scene" id="scene-13">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">さらに衝撃的な発見</div>
+            <div class="text-emphasis stagger-item">
+                <span class="text-big">能力を褒められた子は</span>
+                <span class="text-big text-accent text-danger">嘘をつくようになった</span>
+            </div>
+            <div class="text-sub stagger-item">「賢い自分」のイメージを守るため、点数を偽って報告</div>
+            <div class="equation stagger-item">
+                <span class="eq-part">能力褒め</span>
+                <span class="eq-arrow">→</span>
+                <span class="eq-part">失敗 = 賢くない</span>
+                <span class="eq-arrow">→</span>
+                <span class="eq-part eq-result">挑戦回避 + 嘘</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 14: タイトルカード - 第2章 ===== -->
+    <div class="scene" id="scene-14">
+        <canvas id="canvas-20" class="bg-canvas"></canvas>
+        <div class="scene-content title-scene">
+            <div class="chapter-badge">TOPIC 02</div>
+            <h1 class="chapter-title stagger-item">褒めすぎのパラドックス</h1>
+            <div class="chapter-sub stagger-item">Brummelman et al. (2014) オランダ</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 15: 比較対照 - 普通 vs 過剰 ===== -->
+    <div class="scene" id="scene-15">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">「普通の褒め」と「過剰な褒め」</div>
+            <div class="compare-cards">
+                <div class="compare-card stagger-item">
+                    <div class="compare-header compare-header--normal">普通の褒め</div>
+                    <div class="compare-example">「上手だね」</div>
+                    <div class="compare-effect">適切な評価として受け取る</div>
+                </div>
+                <div class="compare-card stagger-item">
+                    <div class="compare-header compare-header--inflated">過剰な褒め</div>
+                    <div class="compare-example">「信じられないくらい上手！」</div>
+                    <div class="compare-effect">プレッシャーを感じる</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 16: 数値インパクト - 25% ===== -->
+    <div class="scene" id="scene-16">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">親の褒め言葉を分析すると</div>
+            <div class="center-impact stagger-item">
+                <div class="impact-number"><span class="big-num">25</span><span class="num-unit">%</span></div>
+                <div class="impact-desc">の褒め言葉が「過剰な褒め」</div>
+            </div>
+            <div class="text-sub stagger-item">4回に1回は盛りすぎている</div>
+            <div class="source-badge stagger-item">7-11歳の120組の親子を調査 | Brummelman et al., 2014</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 17: テキスト強調 - 過剰褒め→自己肯定感低下 ===== -->
+    <div class="scene" id="scene-17">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">驚きの結果</div>
+            <div class="paradox-visual stagger-item">
+                <div class="paradox-intention">
+                    <div class="paradox-label">親の意図</div>
+                    <div class="paradox-text">自己肯定感を上げたい</div>
+                    <svg class="paradox-arrow" viewBox="0 0 60 30">
+                        <path d="M5,15 L50,15 M45,8 L55,15 L45,22" stroke="var(--clr-primary)" stroke-width="3"
+                            fill="none" />
+                    </svg>
+                </div>
+                <div class="paradox-result">
+                    <div class="paradox-label paradox-label--danger">実際の結果</div>
+                    <div class="paradox-text paradox-text--danger">自己肯定感が下がった</div>
+                </div>
+            </div>
+            <div class="text-sub stagger-item">「次もこのレベルを出さなきゃ」というプレッシャーが原因</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 18: テキスト強調 - 条件付き自己価値 ===== -->
+    <div class="scene" id="scene-18">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">条件付き自己価値</div>
+            <div class="concept-card stagger-item">
+                <div class="concept-term">Contingent Self-Worth</div>
+                <div class="concept-def">「良い結果を出したときだけ自分に価値がある」と感じる状態</div>
+            </div>
+            <div class="flow-chain stagger-item">
+                <div class="flow-node">過剰な褒め</div>
+                <div class="flow-connector">→</div>
+                <div class="flow-node">結果 = 価値</div>
+                <div class="flow-connector">→</div>
+                <div class="flow-node flow-node--danger">結果が出ない = 価値がない</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 19: テキスト強調 - ナルシシズム ===== -->
+    <div class="scene" id="scene-19">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">ナルシシズムの増加</div>
+            <div class="split-result">
+                <div class="split-card stagger-item">
+                    <div class="split-header split-header--low">自己肯定感が低い子</div>
+                    <div class="split-body">
+                        <div class="split-icon">↓</div>
+                        <div class="split-text">自己肯定感がさらに低下</div>
+                    </div>
+                </div>
+                <div class="split-card stagger-item">
+                    <div class="split-header split-header--high">自己肯定感が高い子</div>
+                    <div class="split-body">
+                        <div class="split-icon">↑</div>
+                        <div class="split-text">ナルシシズムが増加</div>
+                    </div>
+                </div>
+            </div>
+            <div class="insight-label stagger-item">過剰な褒めは誰にとっても良くない</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 20: テキスト強調 - 脳科学 ===== -->
+    <div class="scene" id="scene-20">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">褒めると脳で何が起きるのか</div>
+            <div class="brain-visual stagger-item">
+                <svg class="brain-svg" viewBox="0 0 300 200">
+                    <ellipse cx="150" cy="100" rx="120" ry="80" fill="none" stroke="var(--clr-primary)" stroke-width="2"
+                        opacity="0.3" />
+                    <ellipse cx="130" cy="90" rx="60" ry="40" fill="none" stroke="var(--clr-primary)" stroke-width="1.5"
+                        opacity="0.4" />
+                    <circle cx="130" cy="90" r="15" fill="var(--clr-accent)" opacity="0.6" class="brain-hotspot" />
+                    <text x="130" y="95" text-anchor="middle" fill="white" font-size="10" font-weight="700">報酬系</text>
+                    <text x="250" y="60" fill="var(--clr-text)" font-size="12">ドーパミン</text>
+                    <line x1="145" y1="85" x2="235" y2="58" stroke="var(--clr-accent)" stroke-width="1"
+                        stroke-dasharray="4" />
+                </svg>
+            </div>
+            <div class="text-sub stagger-item">褒められると報酬系が活性化 → ドーパミン分泌 → 快感</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 21: フロー図 - ドーパミンループ ===== -->
+    <div class="scene" id="scene-21">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">ドーパミン報酬ループ</div>
+            <div class="loop-visual stagger-item">
+                <svg class="loop-svg" viewBox="0 0 400 250">
+                    <rect x="30" y="20" width="140" height="50" rx="10" fill="var(--clr-primary)" opacity="0.15"
+                        stroke="var(--clr-primary)" stroke-width="1.5" />
+                    <text x="100" y="50" text-anchor="middle" fill="var(--clr-primary)" font-size="14"
+                        font-weight="700">褒められる</text>
+                    <rect x="230" y="20" width="140" height="50" rx="10" fill="var(--clr-accent)" opacity="0.15"
+                        stroke="var(--clr-accent)" stroke-width="1.5" />
+                    <text x="300" y="50" text-anchor="middle" fill="var(--clr-accent)" font-size="14"
+                        font-weight="700">ドーパミン放出</text>
+                    <rect x="230" y="140" width="140" height="50" rx="10" fill="var(--clr-success)" opacity="0.15"
+                        stroke="var(--clr-success)" stroke-width="1.5" />
+                    <text x="300" y="170" text-anchor="middle" fill="var(--clr-success)" font-size="14"
+                        font-weight="700">気持ちいい</text>
+                    <rect x="30" y="140" width="140" height="50" rx="10" fill="var(--clr-primary)" opacity="0.15"
+                        stroke="var(--clr-primary)" stroke-width="1.5" />
+                    <text x="100" y="170" text-anchor="middle" fill="var(--clr-primary)" font-size="14"
+                        font-weight="700">行動を繰り返す</text>
+                    <path d="M170,45 L230,45" stroke="var(--clr-text)" stroke-width="2" marker-end="url(#arrowhead)"
+                        class="draw-line" />
+                    <path d="M300,70 L300,140" stroke="var(--clr-text)" stroke-width="2" marker-end="url(#arrowhead)"
+                        class="draw-line" />
+                    <path d="M230,165 L170,165" stroke="var(--clr-text)" stroke-width="2" marker-end="url(#arrowhead)"
+                        class="draw-line" />
+                    <path d="M100,140 L100,70" stroke="var(--clr-text)" stroke-width="2" marker-end="url(#arrowhead)"
+                        class="draw-line" />
+                    <defs>
+                        <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                            <polygon points="0 0, 8 3, 0 6" fill="var(--clr-text)" />
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            <div class="text-sub stagger-item">適切な褒め → 学習の原動力 / 外的褒めに依存 → 褒められ依存</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 22: テキスト強調 - 褒められ依存 ===== -->
+    <div class="scene" id="scene-22">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">「褒められ依存」</div>
+            <div class="dependency-visual stagger-item">
+                <div class="dep-stage dep-stage--healthy">
+                    <div class="dep-label">健全</div>
+                    <div class="dep-text">褒められた → 嬉しい → またやろう</div>
+                </div>
+                <div class="dep-arrow-down">⇩</div>
+                <div class="dep-stage dep-stage--danger">
+                    <div class="dep-label">依存</div>
+                    <div class="dep-text">褒められない → やる意味がない</div>
+                </div>
+            </div>
+            <div class="insight-label stagger-item">内発的モチベーションが育たなくなる</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 23: 比較対照 - 欧米 vs 日本 ===== -->
+    <div class="scene" id="scene-23">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">文化的ミスマッチ</div>
+            <div class="culture-compare stagger-item">
+                <div class="culture-card">
+                    <div class="culture-flag">欧米</div>
+                    <div class="culture-items">
+                        <div class="culture-item">褒める文化</div>
+                        <div class="culture-plus">+</div>
+                        <div class="culture-item culture-item--strict">厳しい自律教育</div>
+                    </div>
+                    <div class="culture-result culture-result--ok">バランスの取れた育成</div>
+                </div>
+                <div class="culture-card">
+                    <div class="culture-flag">日本</div>
+                    <div class="culture-items">
+                        <div class="culture-item">褒める文化（輸入）</div>
+                        <div class="culture-plus">+</div>
+                        <div class="culture-item culture-item--soft">もともと優しい社会</div>
+                    </div>
+                    <div class="culture-result culture-result--ng">甘やかしになりやすい</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 24: 引用カード - 榎本博明 ===== -->
+    <div class="scene" id="scene-24">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">榎本博明教授の指摘</div>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">欧米の「褒める」は厳しさの上に成立している。日本はその「褒める」部分だけを輸入してしまった</div>
+                <div class="quote-author">— 榎本博明（心理学博士）</div>
+            </div>
+            <div class="source-badge stagger-item">『ほめると子どもはダメになる』講談社</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 25: タイトルカード - Growth Mindset ===== -->
+    <div class="scene dark-scene" id="scene-25">
+        <canvas id="canvas-27" class="bg-canvas"></canvas>
+        <div class="scene-content title-scene">
+            <div class="chapter-badge">TOPIC 04</div>
+            <h1 class="chapter-title stagger-item">Growth Mindsetは<br>嘘だったのか？</h1>
+            <div class="chapter-sub stagger-item">提唱者自身が認めた「偽のGrowth Mindset」問題</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 26: テキスト強調 - メタ分析 ===== -->
+    <div class="scene" id="scene-26">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">2018年 メタ分析の結論</div>
+            <div class="meta-card stagger-item">
+                <div class="meta-result">効果は研究デザインの<br>バイアスに起因する可能性が高い</div>
+            </div>
+            <div class="source-badge stagger-item">MacNamara & Burgoyne, 2018</div>
+            <div class="text-sub stagger-item">「学校での表面的な介入」には効果が確認されず</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 27: 引用カード - ドゥエック ===== -->
+    <div class="scene" id="scene-27">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">ドゥエック教授の反省</div>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">ポスターを貼ったり「努力したね」と言うだけでは効果がない。それは「偽のGrowth Mindset」だ</div>
+                <div class="quote-author">— Carol Dweck, Stanford Univ.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 28: テキスト強調 - 正しく使えば ===== -->
+    <div class="scene" id="scene-28">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">正しく使えば効果はある</div>
+            <div class="proof-card stagger-item">
+                <div class="proof-timeline">
+                    <div class="proof-point">幼児期にプロセスを<br>具体的に褒められた</div>
+                    <div class="proof-arrow">→ 5年後 →</div>
+                    <div class="proof-point">Growth Mindsetが発達</div>
+                    <div class="proof-arrow">→</div>
+                    <div class="proof-point proof-point--result">小4の学業成績が向上</div>
+                </div>
+            </div>
+            <div class="source-badge stagger-item">縦断研究 | NIH</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 29: 比較対照 - 人格褒め vs プロセス褒め ===== -->
+    <div class="scene" id="scene-29">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">人格褒め vs プロセス褒め</div>
+            <div class="praise-compare stagger-item">
+                <div class="praise-card praise-card--person">
+                    <div class="praise-type">人格褒め</div>
+                    <div class="praise-example">「頭がいいね！」</div>
+                    <div class="praise-effect">固定マインドセットを促進</div>
+                    <div class="praise-icon">✗</div>
+                </div>
+                <div class="praise-card praise-card--process">
+                    <div class="praise-type">プロセス褒め</div>
+                    <div class="praise-example">「何度も解き直したのが良かったね」</div>
+                    <div class="praise-effect">成長マインドセットを育成</div>
+                    <div class="praise-icon">✓</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 30: 段階的リスト - 3原則 ===== -->
+    <div class="scene" id="scene-30">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">正しい褒め方の3つの原則</div>
+            <div class="principle-cards">
+                <div class="principle-card stagger-item">
+                    <div class="principle-num">01</div>
+                    <div class="principle-body">
+                        <div class="principle-title">プロセスを具体的に</div>
+                        <div class="principle-detail">「すごい」ではなく「この色の使い方がいい」</div>
+                    </div>
+                </div>
+                <div class="principle-card stagger-item">
+                    <div class="principle-num">02</div>
+                    <div class="principle-body">
+                        <div class="principle-title">過剰に盛らない</div>
+                        <div class="principle-detail">「天才！」ではなく「ここが前より良くなった」</div>
+                    </div>
+                </div>
+                <div class="principle-card stagger-item">
+                    <div class="principle-num">03</div>
+                    <div class="principle-body">
+                        <div class="principle-title">挑戦自体を認める</div>
+                        <div class="principle-detail">失敗しても「難しいのに挑戦した」を評価する</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 31: 引用カード - 神戸大学 ===== -->
+    <div class="scene" id="scene-31">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">日本の研究でも裏付け</div>
+            <div class="research-card stagger-item">
+                <div class="research-header">神戸大学 × 同志社大学 共同研究</div>
+                <div class="research-finding">
+                    <div class="research-item">「頑張ったね」と育てられた人</div>
+                    <div class="research-result">自己決定度・安心感が高い</div>
+                </div>
+                <div class="research-finding">
+                    <div class="research-item">「えらいね」と漠然と褒められた人</div>
+                    <div class="research-result">効果は比較的小さい</div>
+                </div>
+            </div>
+            <div class="source-badge stagger-item">RIETI（経済産業研究所）</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 32: テキスト強調 - 叱り方 ===== -->
+    <div class="scene" id="scene-32">
+        <div class="scene-content">
+            <div class="scene-title stagger-item">叱り方にも同じ原則</div>
+            <div class="compare-cards">
+                <div class="compare-card stagger-item">
+                    <div class="compare-header compare-header--inflated">NG</div>
+                    <div class="compare-example">「どうしてできないの？」</div>
+                    <div class="compare-effect">自己否定を強化</div>
+                </div>
+                <div class="compare-card stagger-item">
+                    <div class="compare-header compare-header--normal">OK</div>
+                    <div class="compare-example">「次は頑張ろうね」</div>
+                    <div class="compare-effect">次の一歩への意欲を引き出す</div>
+                </div>
+            </div>
+            <div class="insight-label stagger-item">「今のあなた」ではなく「次の一歩」に目を向ける</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 33: まとめ - 3ポイント ===== -->
+    <div class="scene" id="scene-33">
+        <canvas id="canvas-33" class="bg-canvas"></canvas>
+        <div class="scene-content">
+            <div class="scene-title stagger-item">今日の3つのポイント</div>
+            <div class="summary-cards">
+                <div class="summary-card stagger-item">
+                    <div class="summary-num">1</div>
+                    <div class="summary-text">「褒めて育てる」は1969年の自己肯定感運動がルーツ。提唱者自身が変質を嘆いた</div>
+                </div>
+                <div class="summary-card stagger-item">
+                    <div class="summary-num">2</div>
+                    <div class="summary-text">才能を褒めると挑戦を避ける。努力を褒めると挑戦を求める</div>
+                </div>
+                <div class="summary-card stagger-item">
+                    <div class="summary-num">3</div>
+                    <div class="summary-text">過剰な褒めは自己肯定感を下げる逆説がある</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 34: テキスト強調 - コアメッセージ ===== -->
+    <div class="scene" id="scene-34">
+        <div class="scene-content title-scene">
+            <div class="text-emphasis stagger-item">
+                <span class="text-big">大切なのは</span>
+                <span class="text-big text-accent">何を、どう褒めるか</span>
+            </div>
+            <div class="core-message stagger-item">才能や結果ではなく、努力と工夫のプロセスを<br>過剰に盛らず、具体的に伝えること</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 35: テキスト強調 - たった一言 ===== -->
+    <div class="scene" id="scene-35">
+        <div class="scene-content title-scene">
+            <div class="text-emphasis stagger-item">
+                <span class="text-big">たった一言の違いが</span>
+                <span class="text-big text-accent">子供の未来を変える</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 36: エンディング ===== -->
+    <div class="scene" id="scene-36">
+        <canvas id="canvas-36" class="bg-canvas"></canvas>
+        <div class="scene-content title-scene">
+            <div class="title-badge">THANK YOU</div>
+            <h1 class="chapter-title stagger-item">ご視聴ありがとうございました</h1>
+            <div class="chapter-sub stagger-item">チャンネル登録・高評価よろしくお願いします</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1437 @@
+/* ===================================
+   朝食を抜くと太るって本当？
+   Design System & Styles
+   =================================== */
+
+/* --- Color Tokens --- */
+:root {
+    --bg: #f8f9fa;
+    --text: #1a1a2e;
+    --text-light: #6c757d;
+    --primary: #4f46e5;
+    --primary-light: #e0e7ff;
+    --teal: #14b8a6;
+    --teal-light: #ccfbf1;
+    --coral: #ef4444;
+    --coral-light: #fee2e2;
+    --amber: #f59e0b;
+    --amber-light: #fef3c7;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.1);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- Reset & Base --- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow: hidden;
+}
+
+/* --- Scene Base --- */
+.scene {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    overflow: hidden;
+}
+
+.scene.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: sceneFadeIn 0.5s ease both;
+}
+
+@keyframes sceneFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* --- Canvas Background --- */
+.bg-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* --- Content Containers --- */
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 960px;
+    width: 90%;
+    padding: 40px 0;
+}
+
+.center-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.card-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+/* --- Stagger Animation --- */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity var(--transition), transform var(--transition);
+}
+
+.scene.active .stagger-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scene.active .stagger-item:nth-child(1) {
+    transition-delay: 0.0s;
+}
+
+.scene.active .stagger-item:nth-child(2) {
+    transition-delay: 0.12s;
+}
+
+.scene.active .stagger-item:nth-child(3) {
+    transition-delay: 0.24s;
+}
+
+.scene.active .stagger-item:nth-child(4) {
+    transition-delay: 0.36s;
+}
+
+.scene.active .stagger-item:nth-child(5) {
+    transition-delay: 0.48s;
+}
+
+.scene.active .stagger-item:nth-child(6) {
+    transition-delay: 0.60s;
+}
+
+.scene.active .stagger-item:nth-child(7) {
+    transition-delay: 0.72s;
+}
+
+.scene.active .stagger-item:nth-child(8) {
+    transition-delay: 0.84s;
+}
+
+/* --- Typography --- */
+.title-medium {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.3;
+    letter-spacing: -1px;
+}
+
+.title-sub {
+    font-size: 20px;
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+.scene-title {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+}
+
+.emphasis-text {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.emphasis-text-large {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+.emphasis-sub {
+    font-size: 18px;
+    color: var(--text-light);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.footnote {
+    font-size: 14px;
+    color: var(--text-light);
+    opacity: 0.7;
+    margin-top: 8px;
+}
+
+.text-sub {
+    font-size: 14px;
+    color: var(--text-light);
+    display: block;
+    margin-top: 4px;
+}
+
+/* --- Accent Colors --- */
+.accent-primary {
+    color: var(--primary);
+}
+
+.accent-teal {
+    color: var(--teal);
+}
+
+.accent-coral {
+    color: var(--coral);
+}
+
+.accent-amber {
+    color: var(--amber);
+}
+
+/* --- Badges --- */
+.section-badge {
+    display: inline-block;
+    padding: 6px 20px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.accent-bg-primary {
+    background: var(--primary);
+}
+
+.accent-bg-teal {
+    background: var(--teal);
+}
+
+.accent-bg-coral {
+    background: var(--coral);
+}
+
+.accent-bg-amber {
+    background: var(--amber);
+}
+
+.source-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--text-light);
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.safe-badge {
+    background: var(--teal-light);
+    color: var(--teal);
+    font-weight: 700;
+    font-size: 14px;
+    padding: 4px 12px;
+    border-radius: 6px;
+}
+
+.danger-badge {
+    background: var(--coral-light);
+    color: var(--coral);
+    font-weight: 700;
+    font-size: 14px;
+    padding: 4px 12px;
+    border-radius: 6px;
+}
+
+.primary-badge {
+    background: var(--primary-light);
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 14px;
+    padding: 4px 12px;
+    border-radius: 6px;
+}
+
+.amber-badge {
+    background: var(--amber-light);
+    color: var(--amber);
+    font-weight: 700;
+    font-size: 14px;
+    padding: 4px 12px;
+    border-radius: 6px;
+}
+
+.teal-badge {
+    background: var(--teal-light);
+    color: var(--teal);
+    font-weight: 700;
+    font-size: 14px;
+    padding: 4px 12px;
+    border-radius: 6px;
+}
+
+/* --- Impact Numbers --- */
+.impact-number {
+    text-align: center;
+}
+
+.big-num {
+    font-size: 96px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -4px;
+}
+
+.num-unit {
+    font-size: 32px;
+    font-weight: 700;
+    margin-left: 4px;
+}
+
+/* --- Numbered List --- */
+.numbered-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.numbered-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--card-bg);
+    padding: 20px 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: left;
+}
+
+.number-circle {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.number-coral {
+    background: var(--coral);
+}
+
+.number-primary {
+    background: var(--primary);
+}
+
+.number-teal {
+    background: var(--teal);
+}
+
+.numbered-text {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* --- VS Container --- */
+.vs-container {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.vs-card {
+    flex: 1;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.vs-left {
+    border-top: 4px solid var(--teal);
+}
+
+.vs-right {
+    border-top: 4px solid var(--primary);
+}
+
+.vs-title {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.vs-desc {
+    font-size: 16px;
+    color: var(--text-light);
+}
+
+.vs-detail {
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+.vs-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--text-light);
+    min-width: 50px;
+}
+
+/* --- Quote Card --- */
+.quote-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 32px 36px;
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--primary);
+    text-align: left;
+    max-width: 700px;
+    width: 100%;
+}
+
+.quote-card.quote-warning {
+    border-left-color: var(--coral);
+}
+
+.quote-card.quote-warm {
+    border-left-color: var(--amber);
+}
+
+.quote-mark {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--primary);
+    opacity: 0.3;
+    line-height: 1;
+}
+
+.quote-text {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-top: -12px;
+}
+
+.quote-source {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-top: 12px;
+}
+
+/* --- Alert Card --- */
+.alert-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 32px 36px;
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--coral);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+}
+
+.alert-card.alert-teal {
+    border-left-color: var(--teal);
+}
+
+.alert-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--coral);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.alert-teal .alert-icon {
+    background: var(--teal);
+}
+
+.alert-title {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.alert-sub {
+    font-size: 16px;
+    color: var(--text-light);
+}
+
+/* --- Flow Chain --- */
+.flow-chain {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 800px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flow-node {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    min-width: 160px;
+    flex: 1;
+}
+
+.flow-year {
+    font-size: 14px;
+    font-weight: 900;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.flow-text {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.flow-name {
+    font-weight: 900;
+    color: var(--text);
+    font-size: 16px;
+}
+
+.flow-sub {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+.flow-arrow {
+    font-size: 24px;
+    color: var(--text-light);
+}
+
+.flow-icon-sun {
+    color: var(--amber);
+}
+
+.flow-icon-sun::before {
+    content: "朝";
+}
+
+.flow-icon-food {
+    color: var(--teal);
+}
+
+.flow-icon-food::before {
+    content: "食事";
+}
+
+.flow-icon-sync {
+    color: var(--primary);
+}
+
+.flow-icon-sync::before {
+    content: "同調";
+}
+
+/* --- Comparison Note --- */
+.comparison-note {
+    background: var(--amber-light);
+    border-radius: var(--radius-sm);
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    max-width: 500px;
+}
+
+.note-text {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.analogy-svg {
+    width: 300px;
+    height: 50px;
+}
+
+/* --- Tag Cloud --- */
+.tag-item {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 3px;
+}
+
+.tag-teal {
+    background: var(--teal-light);
+    color: var(--teal);
+}
+
+.tag-coral {
+    background: var(--coral-light);
+    color: var(--coral);
+}
+
+.tag-amber {
+    background: var(--amber-light);
+    color: var(--amber);
+}
+
+.tag-primary {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+/* ===================================
+   CUSTOM VISUALS
+   =================================== */
+
+/* --- Cereal Timeline (Scene 2) --- */
+.cereal-timeline {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.cereal-node {
+    background: var(--card-bg);
+    border-radius: var(--radius-sm);
+    padding: 12px 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.cereal-year {
+    font-weight: 900;
+    color: var(--primary);
+    font-size: 18px;
+}
+
+.cereal-label {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+.cereal-arrow {
+    font-size: 20px;
+    color: var(--text-light);
+}
+
+/* --- Risk Cards (Scene 5) --- */
+.risk-cards {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.risk-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    min-width: 130px;
+    border-top: 3px solid var(--coral);
+}
+
+.risk-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin: 0 auto 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.risk-icon-obesity {
+    background: var(--coral-light);
+}
+
+.risk-icon-obesity::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--coral);
+    opacity: 0.5;
+}
+
+.risk-icon-lipid {
+    background: var(--amber-light);
+}
+
+.risk-icon-lipid::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background: var(--amber);
+    opacity: 0.5;
+}
+
+.risk-icon-bp {
+    background: var(--primary-light);
+}
+
+.risk-icon-bp::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50% 50% 0 0;
+    background: var(--primary);
+    opacity: 0.5;
+}
+
+.risk-icon-diabetes {
+    background: var(--teal-light);
+}
+
+.risk-icon-diabetes::after {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 3px solid var(--teal);
+    opacity: 0.5;
+}
+
+.risk-name {
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.risk-detail {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--coral);
+    margin-top: 4px;
+}
+
+/* --- Mouse Experiment (Scene 6) --- */
+.mouse-experiment {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    justify-content: center;
+}
+
+.mouse-group {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    flex: 1;
+}
+
+.mouse-label {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.mouse-svg {
+    width: 180px;
+    height: 60px;
+}
+
+.mouse-vs {
+    font-size: 14px;
+    font-weight: 900;
+    color: var(--text-light);
+    text-align: center;
+    padding: 8px;
+    border: 2px dashed rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-sm);
+}
+
+.mouse-result {
+    font-weight: 900;
+    font-size: 16px;
+    margin-top: 12px;
+    padding: 8px;
+    border-radius: var(--radius-sm);
+}
+
+.mouse-result-good {
+    background: var(--teal-light);
+    color: var(--teal);
+}
+
+.mouse-result-bad {
+    background: var(--coral-light);
+    color: var(--coral);
+}
+
+/* --- BMAL1 Visual (Scene 7) --- */
+.bmal1-visual {
+    width: 100%;
+    max-width: 500px;
+}
+
+.clock-gene-svg {
+    width: 100%;
+    height: auto;
+}
+
+.bmal1-curve {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: drawBmal 2s ease forwards 0.5s;
+}
+
+@keyframes drawBmal {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* --- Pulse Dot Animation --- */
+@keyframes pulseDot {
+
+    0%,
+    100% {
+        r: 4;
+        opacity: 0.5;
+    }
+
+    50% {
+        r: 8;
+        opacity: 1;
+    }
+}
+
+.pulse-dot {
+    animation: pulseDot 2s ease-in-out infinite;
+}
+
+/* --- Bias Visual (Scene 11) --- */
+.bias-visual {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 700px;
+    justify-content: center;
+}
+
+.bias-person {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.bias-icon {
+    font-weight: 900;
+    font-size: 18px;
+    color: var(--teal);
+    margin-bottom: 12px;
+}
+
+.bias-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    max-width: 200px;
+}
+
+.bias-arrow {
+    font-size: 28px;
+    color: var(--text-light);
+}
+
+.bias-result {
+    text-align: center;
+}
+
+.bias-result-text {
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.bias-reason {
+    font-size: 15px;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* --- Reverse Cause Visual (Scene 12) --- */
+.reverse-cause {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.rc-box {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 24px 32px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    text-align: center;
+}
+
+.rc-label {
+    margin-bottom: 12px;
+}
+
+.rc-flow {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.rc-arrow {
+    color: var(--text-light);
+    margin: 0 8px;
+}
+
+.rc-rotate {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--coral);
+    animation: rotateHint 2s ease-in-out infinite;
+}
+
+@keyframes rotateHint {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+}
+
+/* --- J-MICC Visual (Scene 13) --- */
+.jmicc-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.jmicc-step {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.jmicc-label {
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 170px;
+    text-align: right;
+}
+
+.jmicc-bar {
+    flex: 1;
+    height: 28px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.jmicc-fill {
+    height: 100%;
+    border-radius: 14px;
+    width: 0;
+    transition: width 1.5s ease;
+}
+
+.scene.active .jmicc-fill {
+    width: var(--w);
+}
+
+.jmicc-before {
+    background: linear-gradient(90deg, var(--coral), #f97316);
+}
+
+.jmicc-after {
+    background: linear-gradient(90deg, var(--teal-light), var(--teal));
+}
+
+.jmicc-result {
+    font-size: 15px;
+    font-weight: 900;
+    min-width: 100px;
+}
+
+.jmicc-arrow {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-light);
+    padding: 8px 0;
+}
+
+/* --- Dual Impact Cards (Scene 17) --- */
+.dual-impact {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.impact-card {
+    flex: 1;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 28px 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.impact-bad {
+    border-top: 4px solid var(--coral);
+}
+
+.impact-good {
+    border-top: 4px solid var(--teal);
+}
+
+.impact-label {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+.impact-value {
+    margin: 8px 0;
+}
+
+.impact-desc {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+/* --- BMJ Detail (Scene 16) --- */
+.bmj-detail {
+    display: flex;
+    gap: 24px;
+    margin-top: 12px;
+}
+
+.bmj-stat {
+    background: var(--card-bg);
+    border-radius: var(--radius-sm);
+    padding: 16px 24px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.bmj-num {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--primary);
+}
+
+.bmj-label {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+/* --- Clock Reset Icons (Scene 22) --- */
+.clock-reset-icon {
+    width: 60px;
+    height: 60px;
+    margin: 8px auto;
+}
+
+.clock-reset-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Jetlag Visual (Scene 24) --- */
+.jetlag-visual {
+    width: 100%;
+    max-width: 500px;
+}
+
+.jetlag-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.jetlag-clock {
+    text-align: center;
+}
+
+.jetlag-clock svg {
+    width: 80px;
+    height: 80px;
+}
+
+.jetlag-label {
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.jetlag-brain .jetlag-label {
+    color: var(--primary);
+}
+
+.jetlag-organ .jetlag-label {
+    color: var(--coral);
+}
+
+.jetlag-mismatch {
+    animation: shake 1s ease-in-out infinite;
+}
+
+.jetlag-mismatch svg {
+    width: 40px;
+    height: 40px;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-3px);
+    }
+
+    75% {
+        transform: translateX(3px);
+    }
+}
+
+/* --- Three Factors Circle (Scene 25) --- */
+.three-factors {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+}
+
+.factor-circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.factor-what {
+    background: linear-gradient(135deg, var(--teal-light), var(--teal));
+    color: white;
+}
+
+.factor-howmuch {
+    background: linear-gradient(135deg, var(--primary-light), var(--primary));
+    color: white;
+}
+
+.factor-when {
+    background: linear-gradient(135deg, var(--amber-light), var(--amber));
+    color: white;
+}
+
+.factor-main {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.factor-sub {
+    font-size: 12px;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.factor-connector {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--text-light);
+}
+
+/* --- Factor Circle Pulse --- */
+@keyframes factorPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.scene.active .factor-circle {
+    animation: factorPulse 3s ease-in-out infinite;
+}
+
+.scene.active .factor-howmuch {
+    animation-delay: 0.5s;
+}
+
+.scene.active .factor-when {
+    animation-delay: 1s;
+}
+
+/* --- Breakfast Detail (Scene 26) --- */
+.breakfast-detail {
+    margin-top: 12px;
+    text-align: left;
+}
+
+.bd-item {
+    font-size: 14px;
+    padding: 6px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.bd-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.bd-bad::before {
+    background: var(--coral-light);
+    border: 2px solid var(--coral);
+}
+
+.bd-good::before {
+    background: var(--teal-light);
+    border: 2px solid var(--teal);
+}
+
+/* --- Value Visual (Scene 29) --- */
+.value-visual {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.value-wrong,
+.value-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    box-shadow: var(--shadow);
+}
+
+.value-wrong {
+    border-left: 4px solid var(--coral);
+}
+
+.value-right {
+    border-left: 4px solid var(--teal);
+}
+
+.value-x {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--coral-light);
+    color: var(--coral);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.value-check {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--teal-light);
+    color: var(--teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.value-text {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* --- Literacy Cards (Scene 30) --- */
+.literacy-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.literacy-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--primary);
+}
+
+.literacy-q {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* --- Micro Animations --- */
+@keyframes floatUp {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+.scene.active .alert-icon {
+    animation: floatUp 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        box-shadow: var(--shadow);
+    }
+
+    50% {
+        box-shadow: 0 4px 30px rgba(79, 70, 229, 0.15);
+    }
+}
+
+.scene.active .quote-card {
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes barGrow {
+    from {
+        width: 0;
+    }
+}
+
+.scene.active .jmicc-fill {
+    animation: barGrow 1.5s ease forwards;
+}
+
+/* --- Dark Scene --- */
+.dark-scene {
+    background: #1a1a2e;
+    color: #e2e8f0;
+}
+
+.dark-scene .scene-title {
+    color: #e2e8f0;
+}
+
+.light-text {
+    color: #e2e8f0;
+}

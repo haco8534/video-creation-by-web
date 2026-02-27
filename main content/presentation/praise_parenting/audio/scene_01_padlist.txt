@@ -1,0 +1,2 @@
+file 'D:/myfolder/動画生成/main content/presentation/praise_parenting/audio/scene_01_concat.wav'
+file 'D:/myfolder/動画生成/main content/presentation/praise_parenting/audio/scene_01_pad.wav'

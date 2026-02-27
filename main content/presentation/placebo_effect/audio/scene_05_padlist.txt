@@ -1,0 +1,2 @@
+file 'D:/myfolder/動画生成/main content/presentation/placebo_effect/audio/scene_05_concat.wav'
+file 'D:/myfolder/動画生成/main content/presentation/placebo_effect/audio/scene_05_pad.wav'

@@ -1,0 +1,3 @@
+file 'D:/myfolder/動画生成/main content/presentation/fake_news_spread/audio/scene_11_00.wav'
+file 'D:/myfolder/動画生成/main content/presentation/fake_news_spread/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/fake_news_spread/audio/scene_11_01.wav'

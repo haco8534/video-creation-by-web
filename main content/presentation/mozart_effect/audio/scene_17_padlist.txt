@@ -1,0 +1,2 @@
+file 'D:/myfolder/動画生成/main content/presentation/mozart_effect/audio/scene_17_concat.wav'
+file 'D:/myfolder/動画生成/main content/presentation/mozart_effect/audio/scene_17_pad.wav'

@@ -259,6 +259,12 @@ npx tsc --noEmit
 - [ ] `src/Root.tsx` に Composition が登録された
 - [ ] `npx tsc --noEmit` が正常終了した
 
+> ⚠️ **レンダリングは自動実行しない。** Remotionのレンダリングは非常に時間がかかるため、ユーザーが自分の都合のいいタイミングで手動実行する。
+> レンダリングコマンド（参考）:
+> ```powershell
+> npx remotion render {project_id}-video-subtitles output/{project_id}.mp4 --codec h264
+> ```
+
 ---
 
 # Phase D: 完成品整理
@@ -266,15 +272,14 @@ npx tsc --noEmit
 **作業ディレクトリ**: `d:\myfolder\動画生成\完成品`
 
 ### 前提条件
-- Phase C が完了し、Remotion Studioでプレビュー確認済みであること
-- レンダリングが完了していること（`{REMOTION_DIR}/output/{project_id}.mp4` が存在する）
+- Phase C が完了していること
 
 ### 完成品フォルダの構造
 
 ```
 完成品/
 └── {テーマ名}/
-    ├── {テーマ名}.mp4       ← Remotionレンダリング済み動画
+    ├── {テーマ名}.mp4       ← Remotionレンダリング済み動画（ユーザーが後でコピー）
     ├── 概要欄.md            ← YouTube概要欄テキスト
     ├── サムネイル.jpg        ← サムネイル画像（あれば）
     └── 台本.md              ← 完成台本
@@ -290,39 +295,38 @@ npx tsc --noEmit
 New-Item -ItemType Directory -Force -Path "{完成品DIR}"
 ```
 
-#### D2. 最終成果物をコピー
+#### D2. 動画以外の成果物をコピー
 
 // turbo
-1. レンダリング済み動画をコピー:
-```powershell
-Copy-Item "{REMOTION_DIR}/output/{project_id}.mp4" "{完成品DIR}/{テーマ名}.mp4"
-```
-
-// turbo
-2. 台本をコピー:
+1. 台本をコピー:
 ```powershell
 Copy-Item "{台本DIR}/script.md" "{完成品DIR}/台本.md"
 ```
 
 // turbo
-3. YouTube概要欄テキストをコピー:
+2. YouTube概要欄テキストをコピー:
 ```powershell
 Copy-Item "{台本DIR}/description.md" "{完成品DIR}/概要欄.md"
 ```
 
-4. サムネイル画像をコピー（存在する場合）:
+3. サムネイル画像をコピー（存在する場合）:
 ```powershell
 # サムネイル画像のパスはテーマによって異なるため、ユーザーに確認する
 # 例: Copy-Item "path/to/thumbnail.jpg" "{完成品DIR}/サムネイル.jpg"
 ```
 
+> ⚠️ **動画ファイルはユーザーがレンダリング完了後に手動でコピーする:**
+> ```powershell
+> Copy-Item "{REMOTION_DIR}/output/{project_id}.mp4" "{完成品DIR}/{テーマ名}.mp4"
+> ```
+
 ### Phase D 完了条件
 
 - [ ] `{完成品DIR}/` フォルダが存在する
-- [ ] `{完成品DIR}/{テーマ名}.mp4` が存在し、ファイルサイズが妥当である
 - [ ] `{完成品DIR}/台本.md` が存在する
 - [ ] `{完成品DIR}/概要欄.md` が存在する
 - [ ] サムネイル画像がある場合、`{完成品DIR}/サムネイル.jpg` としてコピー済み
+- [ ] ユーザーへレンダリングコマンドと動画コピーコマンドを案内済み
 
 ---
 

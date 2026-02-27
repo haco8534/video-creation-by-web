@@ -1,0 +1,2 @@
+file 'D:/myfolder/動画生成/main content/presentation/fake_news_spread/audio/scene_24_concat.wav'
+file 'D:/myfolder/動画生成/main content/presentation/fake_news_spread/audio/scene_24_pad.wav'

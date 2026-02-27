@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>朝食を抜くと太るって本当？</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+     BLOCK 1: 導入
+     ============================== -->
+
+    <!-- Scene 0: タイトルカード -->
+    <div class="scene" id="scene-0">
+        <canvas id="canvas-0" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-amber">INTRODUCTION</div>
+            <h2 class="title-medium stagger-item">「朝食を抜くと太る」<br><span class="accent-primary">って本当？</span></h2>
+            <div class="title-sub stagger-item">科学が暴く常識のウソと体内時計の真実</div>
+        </div>
+    </div>
+
+    <!-- Scene 1: テキスト強調「朝食は1日で最も大事な食事」 -->
+    <div class="scene" id="scene-1">
+        <canvas id="canvas-1" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">"朝食は<span class="accent-primary">1日で最も大事な食事</span>"</div>
+            <div class="emphasis-sub stagger-item">学校でも会社でも、テレビでも雑誌でも</div>
+            <div class="emphasis-sub stagger-item">誰もが知っている「常識」</div>
+            <div class="footnote stagger-item">でも、この「常識」には驚く裏話がある</div>
+        </div>
+    </div>
+
+    <!-- Scene 2: 引用カード「1944年 General Foods社のキャンペーン」 -->
+    <div class="scene" id="scene-2">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">この「常識」の起源</h2>
+            <div class="quote-card quote-warning stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">"Breakfast is the <span class="accent-coral">most important</span> meal of the
+                    day"</div>
+                <div class="quote-source">General Foods 社 マーケティングキャンペーン, 1944年</div>
+            </div>
+            <div class="cereal-timeline stagger-item">
+                <div class="cereal-node">
+                    <div class="cereal-year">1906</div>
+                    <div class="cereal-label">ケロッグ社設立</div>
+                </div>
+                <div class="cereal-arrow">&rarr;</div>
+                <div class="cereal-node">
+                    <div class="cereal-year">1944</div>
+                    <div class="cereal-label">GF社キャンペーン</div>
+                </div>
+                <div class="cereal-arrow">&rarr;</div>
+                <div class="cereal-node">
+                    <div class="cereal-year">現在</div>
+                    <div class="cereal-label">「常識」として定着</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">科学的根拠ではなく、シリアル販促が起源</div>
+        </div>
+    </div>
+
+    <!-- Scene 3: 段階的リスト「この動画でわかる3つのこと」 -->
+    <div class="scene" id="scene-3">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">この動画でわかる<span class="accent-primary">3つのこと</span></h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text">「朝食を抜くと太る」の根拠に隠された<span class="accent-coral">3つの罠</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">2</div>
+                    <div class="numbered-text">最新のRCTが出した<span class="accent-primary">通説と真逆の結論</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">3</div>
+                    <div class="numbered-text">朝食の<span class="accent-teal">本当の意味</span>を教える時間栄養学</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">まずは「なぜ信じられてきたのか」から見ていこう</div>
+        </div>
+    </div>
+
+    <!-- ==============================
+     BLOCK 2: 通説とその根拠
+     ============================== -->
+
+    <!-- Scene 4: 数値インパクト「11万人のコホート調査」 -->
+    <div class="scene" id="scene-4">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">大規模コホート調査</h2>
+            <div class="source-badge stagger-item">大阪大学・国立がん研究センター / 日本人対象</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-primary">11</span><span class="num-unit">万人+</span>
+            </div>
+            <div class="emphasis-sub stagger-item">長期追跡した大規模疫学調査</div>
+            <div class="footnote stagger-item">朝食欠食者に肥満・脂質異常症・高血圧・糖尿病が多かった</div>
+        </div>
+    </div>
+
+    <!-- Scene 5: 段階的リスト「観察研究が示す朝食と肥満の関連」 -->
+    <div class="scene" id="scene-5">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">観察研究が示す<span class="accent-coral">朝食欠食のリスク</span></h2>
+            <div class="risk-cards stagger-item">
+                <div class="risk-card">
+                    <div class="risk-icon risk-icon-obesity"></div>
+                    <div class="risk-name">肥満</div>
+                    <div class="risk-detail">+11%</div>
+                </div>
+                <div class="risk-card">
+                    <div class="risk-icon risk-icon-lipid"></div>
+                    <div class="risk-name">脂質異常症</div>
+                </div>
+                <div class="risk-card">
+                    <div class="risk-icon risk-icon-bp"></div>
+                    <div class="risk-name">高血圧</div>
+                </div>
+                <div class="risk-card">
+                    <div class="risk-icon risk-icon-diabetes"></div>
+                    <div class="risk-name">糖尿病</div>
+                </div>
+            </div>
+            <div class="source-badge stagger-item">メタ分析：週3日以上の欠食で肥満リスク11%増</div>
+            <div class="footnote stagger-item">複数の観察研究が一貫して関連を指摘</div>
+        </div>
+    </div>
+
+    <!-- Scene 6: フロー図「名古屋大学マウス実験」 -->
+    <div class="scene" id="scene-6">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">マウス実験のメカニズム</h2>
+            <div class="source-badge stagger-item">名古屋大学 小田裕昭研究グループ / PLoS ONE</div>
+            <div class="mouse-experiment stagger-item">
+                <div class="mouse-group">
+                    <div class="mouse-label safe-badge">3食マウス</div>
+                    <svg class="mouse-svg" viewBox="0 0 120 60">
+                        <rect x="5" y="15" width="30" height="30" rx="4" fill="#14b8a6" opacity="0.3" />
+                        <rect x="45" y="15" width="30" height="30" rx="4" fill="#14b8a6" opacity="0.3" />
+                        <rect x="85" y="15" width="30" height="30" rx="4" fill="#14b8a6" opacity="0.3" />
+                        <text x="20" y="35" text-anchor="middle" fill="#0d9488" font-size="9" font-weight="700">朝</text>
+                        <text x="60" y="35" text-anchor="middle" fill="#0d9488" font-size="9" font-weight="700">昼</text>
+                        <text x="100" y="35" text-anchor="middle" fill="#0d9488" font-size="9"
+                            font-weight="700">夜</text>
+                    </svg>
+                    <div class="mouse-result mouse-result-good">体重 安定</div>
+                </div>
+                <div class="mouse-vs">同じカロリー</div>
+                <div class="mouse-group">
+                    <div class="mouse-label danger-badge">朝食抜きマウス</div>
+                    <svg class="mouse-svg" viewBox="0 0 120 60">
+                        <rect x="5" y="15" width="30" height="30" rx="4" fill="#ef4444" opacity="0.15" stroke="#ef4444"
+                            stroke-dasharray="4" />
+                        <rect x="45" y="15" width="30" height="30" rx="4" fill="#f59e0b" opacity="0.3" />
+                        <rect x="85" y="15" width="30" height="30" rx="4" fill="#ef4444" opacity="0.5" />
+                        <text x="20" y="35" text-anchor="middle" fill="#ef4444" font-size="9" font-weight="700">X</text>
+                        <text x="60" y="35" text-anchor="middle" fill="#d97706" font-size="9" font-weight="700">昼</text>
+                        <text x="100" y="35" text-anchor="middle" fill="#ef4444" font-size="9"
+                            font-weight="700">夜+</text>
+                    </svg>
+                    <div class="mouse-result mouse-result-bad">体重増加 + 筋肉減少</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">同カロリーでも食事タイミングで体組成が変化</div>
+        </div>
+    </div>
+
+    <!-- Scene 7: テキスト強調「BMAL1遺伝子と脂肪蓄積」 -->
+    <div class="scene" id="scene-7">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">鍵を握る時計遺伝子</h2>
+            <div class="bmal1-visual stagger-item">
+                <svg class="clock-gene-svg" viewBox="0 0 300 200">
+                    <defs>
+                        <linearGradient id="bmalGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.1" />
+                            <stop offset="50%" style="stop-color:#ef4444;stop-opacity:0.4" />
+                            <stop offset="100%" style="stop-color:#ef4444;stop-opacity:0.1" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="20" y="140" width="260" height="30" rx="6" fill="url(#bmalGrad)" />
+                    <text x="40" y="135" fill="#6366f1" font-size="12" font-weight="700">朝</text>
+                    <text x="145" y="135" fill="#94a3b8" font-size="12" font-weight="700">昼</text>
+                    <text x="240" y="135" fill="#ef4444" font-size="12" font-weight="700">夜</text>
+                    <path class="bmal1-curve" d="M30,120 Q80,110 150,90 Q220,30 270,20" stroke="#ef4444"
+                        stroke-width="3" fill="none" stroke-linecap="round" />
+                    <circle class="pulse-dot" cx="270" cy="20" r="5" fill="#ef4444" />
+                    <text x="150" y="15" text-anchor="middle" fill="#1a1a2e" font-size="14" font-weight="900">BMAL1
+                        活性</text>
+                </svg>
+            </div>
+            <div class="emphasis-text stagger-item"><span class="accent-coral">BMAL1</span> = 脂肪蓄積を促す時計遺伝子</div>
+            <div class="emphasis-sub stagger-item">夜間に最も活性化 → 夜に食事が偏ると脂肪蓄積リスク増</div>
+            <div class="footnote stagger-item">朝食を抜くことで夜型の食事パターンに偏りやすい</div>
+        </div>
+    </div>
+
+    <!-- Scene 8: 注意喚起「ここに大きな落とし穴がある」 -->
+    <div class="scene" id="scene-8">
+        <div class="content center-layout">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">でも、ここに<span class="accent-coral">大きな落とし穴</span>がある</div>
+                <div class="alert-sub">今紹介した研究には、共通する重大な弱点が潜んでいる</div>
+            </div>
+            <div class="emphasis-sub stagger-item">「証明された」と思ったその気持ちが、ガラッと変わるかも</div>
+            <div class="footnote stagger-item">次のセクションで3つの罠を解き明かす</div>
+        </div>
+    </div>
+
+    <!-- ==============================
+     BLOCK 3: 観察研究の3つの罠
+     ============================== -->
+
+    <!-- Scene 9: タイトルカード「観察研究の3つの罠」 -->
+    <div class="scene" id="scene-9">
+        <canvas id="canvas-9" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral">TOPIC 1</div>
+            <h2 class="title-medium stagger-item">観察研究の<br><span class="accent-coral">3つの罠</span></h2>
+            <div class="title-sub stagger-item">その研究、本当に「証明」している？</div>
+        </div>
+    </div>
+
+    <!-- Scene 10: 比較対照「観察研究 vs RCT」 -->
+    <div class="scene" id="scene-10">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">研究の<span class="accent-primary">2つのタイプ</span></h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge safe-badge">観察研究</div>
+                    <div class="vs-title">人々を<span class="accent-teal">観察</span></div>
+                    <div class="vs-desc">パターンを見つける</div>
+                    <div class="vs-detail">わかるのは「関連」だけ</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge primary-badge">介入研究 (RCT)</div>
+                    <div class="vs-title">ランダムに<span class="accent-primary">分けて比較</span></div>
+                    <div class="vs-desc">原因を特定できる</div>
+                    <div class="vs-detail">「因果関係」に迫れる</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">
+                <svg class="analogy-svg" viewBox="0 0 300 50">
+                    <text x="30" y="30" fill="#f59e0b" font-size="12" font-weight="700">アイスの売上</text>
+                    <line x1="110" y1="25" x2="190" y2="25" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4" />
+                    <text x="145" y="20" text-anchor="middle" fill="#94a3b8" font-size="10">相関</text>
+                    <text x="205" y="30" fill="#ef4444" font-size="12" font-weight="700">水難事故</text>
+                </svg>
+                <div class="note-text">相関 ≠ 因果（夏という第三の要因）</div>
+            </div>
+            <div class="footnote stagger-item">朝食研究のほとんどは左の「観察研究」</div>
+        </div>
+    </div>
+
+    <!-- Scene 11: 段階的リスト「罠①：ヘルシーユーザーバイアス」 -->
+    <div class="scene" id="scene-11">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">罠 1：<span class="accent-coral">ヘルシーユーザーバイアス</span></h2>
+            <div class="bias-visual stagger-item">
+                <div class="bias-person bias-healthy">
+                    <div class="bias-icon">朝食あり</div>
+                    <div class="bias-tags">
+                        <span class="tag-item tag-teal">運動する</span>
+                        <span class="tag-item tag-teal">禁煙</span>
+                        <span class="tag-item tag-teal">野菜を食べる</span>
+                        <span class="tag-item tag-teal">早寝</span>
+                    </div>
+                </div>
+                <div class="bias-arrow">&rarr;</div>
+                <div class="bias-result">
+                    <div class="bias-result-text accent-teal">痩せている</div>
+                    <div class="bias-reason">朝食のおかげ？<br><span class="accent-coral">or 生活全体の結果？</span></div>
+                </div>
+            </div>
+            <div class="source-badge stagger-item">11万人調査でも欠食者は外食多め・就寝遅い傾向</div>
+            <div class="footnote stagger-item">朝食だけの効果ではないかもしれない</div>
+        </div>
+    </div>
+
+    <!-- Scene 12: テキスト強調「罠②：逆因果」 -->
+    <div class="scene" id="scene-12">
+        <canvas id="canvas-12" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">罠 2：<span class="accent-coral">逆因果</span></h2>
+            <div class="reverse-cause stagger-item">
+                <div class="rc-box rc-wrong">
+                    <div class="rc-label danger-badge">通常の解釈</div>
+                    <div class="rc-flow">朝食を抜く <span class="rc-arrow">&rarr;</span> 太る</div>
+                </div>
+                <div class="rc-rotate">逆かも?</div>
+                <div class="rc-box rc-right">
+                    <div class="rc-label safe-badge">逆因果の可能性</div>
+                    <div class="rc-flow">太っている <span class="rc-arrow">&rarr;</span> ダイエットで朝食を抜く</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">因果関係が逆転している可能性がある</div>
+            <div class="footnote stagger-item">女子栄養大学などの研究者が指摘</div>
+        </div>
+    </div>
+
+    <!-- Scene 13: 数値インパクト「罠③：J-MICC — 食事の質で関連が消える」 -->
+    <div class="scene" id="scene-13">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">罠 3：<span class="accent-coral">交絡因子</span></h2>
+            <div class="source-badge stagger-item">J-MICC Study / 日本多施設共同コホート研究</div>
+            <div class="jmicc-visual stagger-item">
+                <div class="jmicc-step">
+                    <div class="jmicc-label">食事の質を調整「前」</div>
+                    <div class="jmicc-bar">
+                        <div class="jmicc-fill jmicc-before" style="--w:75%"></div>
+                    </div>
+                    <div class="jmicc-result">関連<span class="accent-coral">あり</span></div>
+                </div>
+                <div class="jmicc-arrow">&darr; 食事の質を統計調整</div>
+                <div class="jmicc-step">
+                    <div class="jmicc-label">食事の質を調整「後」</div>
+                    <div class="jmicc-bar">
+                        <div class="jmicc-fill jmicc-after" style="--w:10%"></div>
+                    </div>
+                    <div class="jmicc-result">関連<span class="accent-teal">消滅</span></div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">大事なのは「朝食を食べるか」より「何を食べるか」</div>
+            <div class="footnote stagger-item">朝食欠食とメタボの関連は食事の質が原因だった</div>
+        </div>
+    </div>
+
+    <!-- Scene 14: 注意喚起「じゃあRCTだとどうなる？」 -->
+    <div class="scene" id="scene-14">
+        <div class="content center-layout">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">?</div>
+                <div class="alert-title">じゃあ <span class="accent-primary">RCT</span> だとどうなる？</div>
+                <div class="alert-sub">因果関係に迫れるランダム化比較試験の結果は……</div>
+            </div>
+            <div class="emphasis-text-large stagger-item">通説と<span class="accent-coral">正反対</span>の結論</div>
+            <div class="footnote stagger-item">世界最高峰の医学誌BMJに掲載された衝撃の論文</div>
+        </div>
+    </div>
+
+    <!-- ==============================
+     BLOCK 4: RCTの結論
+     ============================== -->
+
+    <!-- Scene 15: タイトルカード「RCTが出した"逆の結論"」 -->
+    <div class="scene" id="scene-15">
+        <canvas id="canvas-15" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary">TOPIC 2</div>
+            <h2 class="title-medium stagger-item">RCTが出した<br><span class="accent-primary">"逆の結論"</span></h2>
+            <div class="title-sub stagger-item">BMJ 2019年メタ分析</div>
+        </div>
+    </div>
+
+    <!-- Scene 16: 引用カード「BMJ 2019 Sievert et al.」 -->
+    <div class="scene" id="scene-16">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">世界最高峰の医学誌が発表</h2>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">Effect of breakfast on <span class="accent-primary">weight and energy
+                        intake</span>: systematic review and meta-analysis of <span class="accent-coral">randomised
+                        controlled trials</span></div>
+                <div class="quote-source">Sievert K et al., BMJ 2019;364:l42</div>
+            </div>
+            <div class="bmj-detail stagger-item">
+                <div class="bmj-stat">
+                    <div class="bmj-num">13</div>
+                    <div class="bmj-label">件のRCT</div>
+                </div>
+                <div class="bmj-stat">
+                    <div class="bmj-num">BMJ</div>
+                    <div class="bmj-label">世界最高峰の医学誌</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">朝食を食べたグループと抜いたグループをランダムに比較</div>
+        </div>
+    </div>
+
+    <!-- Scene 17: 数値インパクト「+260kcal / -0.44kg」 -->
+    <div class="scene" id="scene-17">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">衝撃の結果</h2>
+            <div class="source-badge stagger-item">Sievert et al., BMJ 2019 / 13 RCTs メタ分析</div>
+            <div class="dual-impact stagger-item">
+                <div class="impact-card impact-bad">
+                    <div class="impact-label">朝食を食べた群</div>
+                    <div class="impact-value"><span class="big-num accent-coral">+260</span><span
+                            class="num-unit">kcal/日</span></div>
+                    <div class="impact-desc">1日の摂取カロリーが増加</div>
+                </div>
+                <div class="impact-card impact-good">
+                    <div class="impact-label">朝食を抜いた群</div>
+                    <div class="impact-value"><span class="big-num accent-teal">-0.44</span><span
+                            class="num-unit">kg</span></div>
+                    <div class="impact-desc">体重がやや軽い</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">朝食分のカロリーがまるまる上乗せ — 他の食事は減らなかった</div>
+            <div class="footnote stagger-item">「朝食を食べれば痩せる」という根拠はRCTでは見つからなかった</div>
+        </div>
+    </div>
+
+    <!-- Scene 18: 比較対照「4ヶ月RCT — 有意差なし」 -->
+    <div class="scene" id="scene-18">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">4ヶ月間のRCT結果</h2>
+            <div class="source-badge stagger-item">肥満・過体重者対象 / ランダム化比較試験</div>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge safe-badge">朝食を食べた群</div>
+                    <div class="vs-title">4ヶ月後の体重</div>
+                    <div class="vs-desc">変化なし</div>
+                </div>
+                <div class="vs-divider stagger-item">=</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge primary-badge">朝食を抜いた群</div>
+                    <div class="vs-title">4ヶ月後の体重</div>
+                    <div class="vs-desc">変化なし</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">有意差なし — 朝食の有無は体重に影響しなかった</div>
+            <div class="footnote stagger-item">4ヶ月という十分な期間を経ても差は出なかった</div>
+        </div>
+    </div>
+
+    <!-- Scene 19: テキスト強調「タイミングより総カロリー」 -->
+    <div class="scene" id="scene-19">
+        <canvas id="canvas-19" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">体重管理にとって大事なこと</h2>
+            <div class="source-badge stagger-item">Johns Hopkins University, 2024</div>
+            <div class="emphasis-text stagger-item">大事なのは<span class="accent-primary">タイミング</span>より</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-coral">総カロリー</span></div>
+            <div class="emphasis-sub stagger-item">24時間の総カロリー消費量にも有意差なし</div>
+            <div class="emphasis-sub stagger-item">短期断食で代謝が落ちるという説も根拠が薄い</div>
+            <div class="footnote stagger-item">「代謝が下がる」もRCTでは否定的</div>
+        </div>
+    </div>
+
+    <!-- Scene 20: 注意喚起「朝食は完全に意味ない？」 -->
+    <div class="scene" id="scene-20">
+        <div class="content center-layout">
+            <div class="alert-card alert-teal stagger-item">
+                <div class="alert-icon">i</div>
+                <div class="alert-title">じゃあ朝食は<span class="accent-teal">完全に意味ない</span>？</div>
+                <div class="alert-sub">「太るか痩せるか」とは別の、大事な意味がある</div>
+            </div>
+            <div class="emphasis-text stagger-item">ここからは<span class="accent-teal">時間栄養学</span>の視点へ</div>
+            <div class="footnote stagger-item">新しい科学が教える「朝食の本当の役割」</div>
+        </div>
+    </div>
+
+    <!-- ==============================
+     BLOCK 5: 時間栄養学
+     ============================== -->
+
+    <!-- Scene 21: タイトルカード「時間栄養学の新視点」 -->
+    <div class="scene" id="scene-21">
+        <canvas id="canvas-21" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-teal">TOPIC 3</div>
+            <h2 class="title-medium stagger-item">時間栄養学の<br><span class="accent-teal">新視点</span></h2>
+            <div class="title-sub stagger-item">Chrono-Nutrition — いつ食べるかの科学</div>
+        </div>
+    </div>
+
+    <!-- Scene 22: 比較対照「主時計 vs 末梢時計」 -->
+    <div class="scene" id="scene-22">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">2つの<span class="accent-teal">体内時計</span></h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge amber-badge">主時計</div>
+                    <div class="vs-title">脳（視交叉上核）</div>
+                    <div class="vs-desc">リセット方法</div>
+                    <div class="clock-reset-icon">
+                        <svg viewBox="0 0 60 60">
+                            <circle cx="30" cy="30" r="25" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" />
+                            <circle cx="30" cy="15" r="6" fill="#f59e0b" opacity="0.8">
+                                <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+                            </circle>
+                        </svg>
+                    </div>
+                    <div class="vs-detail accent-amber">朝の光</div>
+                </div>
+                <div class="vs-divider stagger-item">+</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge teal-badge">末梢時計</div>
+                    <div class="vs-title">肝臓・胃腸・筋肉</div>
+                    <div class="vs-desc">リセット方法</div>
+                    <div class="clock-reset-icon">
+                        <svg viewBox="0 0 60 60">
+                            <circle cx="30" cy="30" r="25" fill="#ccfbf1" stroke="#14b8a6" stroke-width="2" />
+                            <rect x="20" y="22" width="20" height="16" rx="3" fill="#14b8a6" opacity="0.6">
+                                <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s"
+                                    repeatCount="indefinite" />
+                            </rect>
+                        </svg>
+                    </div>
+                    <div class="vs-detail accent-teal">朝食</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">光だけではダメ — 食事のシグナルも必要</div>
+            <div class="footnote stagger-item">日本時間栄養学会（2014年設立）の知見に基づく</div>
+        </div>
+    </div>
+
+    <!-- Scene 23: フロー図「朝食が末梢時計をリセットする仕組み」 -->
+    <div class="scene" id="scene-23">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">末梢時計リセットの仕組み</h2>
+            <div class="flow-chain">
+                <div class="flow-node stagger-item">
+                    <div class="flow-year flow-icon-sun"></div>
+                    <div class="flow-text"><span class="flow-name">起床</span><br>光で主時計リセット<br><span
+                            class="flow-sub">脳「朝だ！」</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year flow-icon-food"></div>
+                    <div class="flow-text"><span class="flow-name">朝食</span><br>消化酵素・ホルモン分泌<br><span
+                            class="flow-sub">内臓にシグナル送信</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year flow-icon-sync"></div>
+                    <div class="flow-text"><span class="flow-name">同調</span><br>脳と内臓の時計が一致<br><span
+                            class="flow-sub">代謝効率が最適化</span></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">起床後1時間以内の朝食がリセット効果を最大化する</div>
+        </div>
+    </div>
+
+    <!-- Scene 24: 段階的リスト「体内時差ボケ」 -->
+    <div class="scene" id="scene-24">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">朝食を抜くと<span class="accent-coral">体内時差ボケ</span></h2>
+            <div class="jetlag-visual stagger-item">
+                <div class="jetlag-box">
+                    <div class="jetlag-clock jetlag-brain">
+                        <svg viewBox="0 0 80 80">
+                            <circle cx="40" cy="40" r="35" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2" />
+                            <line x1="40" y1="40" x2="40" y2="18" stroke="#4f46e5" stroke-width="3"
+                                stroke-linecap="round" />
+                            <line x1="40" y1="40" x2="55" y2="40" stroke="#4f46e5" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                        <div class="jetlag-label">脳「朝だ！」</div>
+                    </div>
+                    <div class="jetlag-mismatch">
+                        <svg viewBox="0 0 40 40">
+                            <line x1="5" y1="5" x2="35" y2="35" stroke="#ef4444" stroke-width="3"
+                                stroke-linecap="round" />
+                            <line x1="35" y1="5" x2="5" y2="35" stroke="#ef4444" stroke-width="3"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="jetlag-clock jetlag-organ">
+                        <svg viewBox="0 0 80 80">
+                            <circle cx="40" cy="40" r="35" fill="#fee2e2" stroke="#ef4444" stroke-width="2" />
+                            <line x1="40" y1="40" x2="28" y2="52" stroke="#ef4444" stroke-width="3"
+                                stroke-linecap="round" />
+                            <line x1="40" y1="40" x2="52" y2="52" stroke="#ef4444" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                        <div class="jetlag-label">内臓「まだ夜…」</div>
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">正しい理解：「朝食を抜くと太る」ではなく</div>
+            <div class="emphasis-text stagger-item">「体内時計がズレると<span class="accent-coral">代謝に影響が出る</span>」</div>
+            <div class="footnote stagger-item">海外からの帰国時の時差ボケが毎朝体内で起きる状態</div>
+        </div>
+    </div>
+
+    <!-- Scene 25: テキスト強調「3つの要素」 -->
+    <div class="scene" id="scene-25">
+        <canvas id="canvas-25" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">本当に大事な<span class="accent-primary">3つの要素</span></h2>
+            <div class="three-factors stagger-item">
+                <div class="factor-circle factor-what">
+                    <div class="factor-main">何を</div>
+                    <div class="factor-sub">WHAT</div>
+                </div>
+                <div class="factor-connector">&times;</div>
+                <div class="factor-circle factor-howmuch">
+                    <div class="factor-main">どれだけ</div>
+                    <div class="factor-sub">HOW MUCH</div>
+                </div>
+                <div class="factor-connector">&times;</div>
+                <div class="factor-circle factor-when">
+                    <div class="factor-main">いつ</div>
+                    <div class="factor-sub">WHEN</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">「食べるか食べないか」の二択じゃない</div>
+            <div class="footnote stagger-item">この3つのバランスが体重管理にも健康にも大切</div>
+        </div>
+    </div>
+
+    <!-- Scene 26: 横並びカード「朝食の○と×」 -->
+    <div class="scene" id="scene-26">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">同じ「朝食」で<span class="accent-primary">この違い</span></h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge danger-badge">NG例</div>
+                    <div class="vs-title">菓子パン + ジュース</div>
+                    <div class="breakfast-detail">
+                        <div class="bd-item bd-bad">血糖値が急上昇・急降下</div>
+                        <div class="bd-item bd-bad">エネルギーがすぐ切れる</div>
+                        <div class="bd-item bd-bad">体内時計リセット効果 低</div>
+                    </div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge safe-badge">OK例</div>
+                    <div class="vs-title">卵 + 野菜 + ご飯</div>
+                    <div class="breakfast-detail">
+                        <div class="bd-item bd-good">血糖値が安定</div>
+                        <div class="bd-item bd-good">午前中のエネルギー持続</div>
+                        <div class="bd-item bd-good">体内時計リセット効果 高</div>
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">炭水化物 + タンパク質のセットが最も効果的</div>
+            <div class="footnote stagger-item">「食べるかどうか」より「何を食べるか」がずっと大事</div>
+        </div>
+    </div>
+
+    <!-- ==============================
+     BLOCK 6: まとめ
+     ============================== -->
+
+    <!-- Scene 27: テキスト強調「結局、朝食を食べるべき？」 -->
+    <div class="scene" id="scene-27">
+        <canvas id="canvas-27" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary">CONCLUSION</div>
+            <h2 class="title-medium stagger-item">結局、朝食を<br><span class="accent-primary">食べるべき？</span></h2>
+            <div class="title-sub stagger-item">科学的に証明されていること、いないこと</div>
+        </div>
+    </div>
+
+    <!-- Scene 28: まとめカード「3つのポイント」 -->
+    <div class="scene" id="scene-28">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">今日の<span class="accent-primary">3つのポイント</span></h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle number-coral">1</div>
+                    <div class="numbered-text">「朝食を抜くと太る」の根拠は<span class="accent-coral">観察研究</span><br><span
+                            class="text-sub">ヘルシーユーザーバイアス・逆因果・交絡因子が潜む</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle number-primary">2</div>
+                    <div class="numbered-text">RCTでは朝食に<span class="accent-primary">減量効果は見つかっていない</span><br><span
+                            class="text-sub">BMJ メタ分析：朝食群は1日+260kcal</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle number-teal">3</div>
+                    <div class="numbered-text">朝食には<span class="accent-teal">体内時計のリセット</span>という別の価値がある<br><span
+                            class="text-sub">「何を・どれだけ・いつ」の3要素で考えよう</span></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">「食べるべきか否か」の二択を超えた判断が大切</div>
+        </div>
+    </div>
+
+    <!-- Scene 29: 段階的リスト「3つのポイント詳細」 -->
+    <div class="scene" id="scene-29">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">朝食の<span class="accent-teal">本当の価値</span></h2>
+            <div class="value-visual stagger-item">
+                <div class="value-wrong">
+                    <div class="value-x">X</div>
+                    <div class="value-text">朝食を食べれば痩せる</div>
+                </div>
+                <div class="value-right">
+                    <div class="value-check">O</div>
+                    <div class="value-text">朝食で<span class="accent-teal">体内時計をリセット</span>できる</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">「食べるか食べないか」ではなく</div>
+            <div class="emphasis-text stagger-item">「何を・どれだけ・いつ」で<span class="accent-primary">考えよう</span></div>
+            <div class="footnote stagger-item">自分の生活リズムに合った質のいい食事が大切</div>
+        </div>
+    </div>
+
+    <!-- Scene 30: テキスト強調「情報リテラシーの大切さ」 -->
+    <div class="scene" id="scene-30">
+        <canvas id="canvas-30" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">エビデンスを見極める力</h2>
+            <div class="literacy-cards stagger-item">
+                <div class="literacy-card">
+                    <div class="literacy-q">その情報の<span class="accent-primary">根拠</span>は何か？</div>
+                </div>
+                <div class="literacy-card">
+                    <div class="literacy-q"><span class="accent-coral">相関</span>なのか<span
+                            class="accent-teal">因果</span>なのか？</div>
+                </div>
+                <div class="literacy-card">
+                    <div class="literacy-q">誰が<span class="accent-amber">何の目的</span>で言っているか？</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">「常識」をそのまま信じるのではなく</div>
+            <div class="emphasis-sub stagger-item">自分で考える力を持とう</div>
+        </div>
+    </div>
+
+    <!-- Scene 31: エンディング -->
+    <div class="scene" id="scene-31">
+        <canvas id="canvas-31" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <h2 class="title-medium stagger-item">ご視聴<span class="accent-primary">ありがとう</span></h2>
+            <div class="title-sub stagger-item">チャンネル登録 & 高評価 お願いします</div>
+            <div class="emphasis-sub stagger-item">次回もまた「当たり前」を一緒に検証しよう</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -573,59 +573,192 @@ SVGのパス描画アニメーションを活用：
 
 ---
 
-## 🎭 マイクロアニメーション（必須）
+## 🎭 マイクロアニメーション（必須・最重要）
 
-> ⚠️ **stagger-itemとCanvas背景だけではアニメーションが「しょぼい」と感じる。** 各プロジェクトで最低 **3種類のマイクロアニメーション** を追加すること。
+> ⚠️ **stagger-item と Canvas 背景だけではアニメーションが「しょぼい」。** `@keyframes` を **最低8種類以上** 定義し、**すべてのビジュアル要素タイプに個別の入場アニメーションを適用**すること。これを怠ると「動きがない静止画スライド」になり、ユーザーから修正を求められる。
 
-マイクロアニメーションとは、小さな要素に付ける微細な動きで、画面に「生きている感」を与えるもの。以下は過去プロジェクトで使用したマイクロアニメーション例：
+### 必須の @keyframes 定義（最低8種類）
+
+以下の @keyframes は **全プロジェクトで必ず定義** すること。テーマ固有のアニメーションはこれに加えて追加する。
 
 ```css
-/* パルスドット: 脳のホットスポットや重要ポイントが脈動する */
-@keyframes pulseDot {
-    0%, 100% { r: 4; opacity: 0.5; }
-    50% { r: 8; opacity: 1; }
-}
-.pulse-dot { animation: pulseDot 2s ease-in-out infinite; }
-.pulse-dot-delay { animation: pulseDot 2s ease-in-out infinite 0.5s; }
-
-/* パルスリング: VS比較のWanting側アイコンが脈動する */
-@keyframes pulseRing {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 1; }
+/* 1. シーンフェードイン（.scene.active に適用） */
+@keyframes sceneFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
-/* スロットリール: 数字が上下に微動する */
-@keyframes slotSpin {
-    0% { transform: translateY(-2px); }
-    100% { transform: translateY(2px); }
-}
-.slot-reel { animation: slotSpin 0.5s ease-in-out infinite alternate; }
-
-/* 通知バッジ: 赤いドットが脈動する */
-@keyframes notifPulse {
-    0%, 100% { opacity: 0.3; transform: scale(0.8); }
-    50% { opacity: 1; transform: scale(1.2); }
+/* 2. カードスライドアップ（カード系要素の入場） */
+@keyframes cardSlideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
 }
 
-/* リール振動: ニアミスリールが横に揺れる */
-@keyframes reelShake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-4px); }
-    75% { transform: translateX(4px); }
+/* 3. 数値ポップイン（インパクト数値の出現） */
+@keyframes numberPop {
+    0%   { transform: scale(0.5); opacity: 0; }
+    60%  { transform: scale(1.08); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* 4. バーフィル（バーチャートの伸長） */
+@keyframes barFill {
+    from { width: 0; }
+    to   { width: var(--bar-width); }
+}
+
+/* 5. フロート（語源カード等の浮遊） */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px); }
+}
+
+/* 6. パルスグロー（重要要素の脈動） */
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(91, 76, 219, 0.2); }
+    50%      { box-shadow: 0 0 20px 8px rgba(91, 76, 219, 0.15); }
+}
+
+/* 7. バウンスイン（VS文字・矢印等のバウンス入場） */
+@keyframes bounceIn {
+    0%   { transform: scale(0); }
+    50%  { transform: scale(1.12); }
+    70%  { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+/* 8. タイトルリビール（タイトル文字のクリップ出現） */
+@keyframes titleReveal {
+    0%   { clip-path: inset(0 100% 0 0); }
+    100% { clip-path: inset(0 0 0 0); }
 }
 ```
 
-### マイクロアニメーションの使い所
+以下は **テーマに応じて追加** する @keyframes の例：
 
-| 場面 | アニメーション例 |
-|------|------------------|
-| 重要な数値・ポイント | パルスドット、グロー効果 |
-| VS比較のアイコン | パルスリング |
-| スロット・ギャンブル | スロットリール微動 |
-| 通知・SNS | 通知バッジ脈動 |
-| 警告・注意喚起 | 振動（シェイク） |
-| SVGグラフ | パス描画（`stroke-dashoffset`）、ドット出現 |
-| バーチャート | `width: 0 → var(--w)` のトランジション |
+```css
+/* 警告シェイク（ノセボ・危険系） */
+@keyframes warningShake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-3px); }
+    20%, 40%, 60%, 80% { transform: translateX(3px); }
+}
+
+/* 脈動リング（ランク1要素） */
+@keyframes pulseRing {
+    0%   { box-shadow: 0 0 0 0 rgba(91, 76, 219, 0.4); }
+    70%  { box-shadow: 0 0 0 16px rgba(91, 76, 219, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(91, 76, 219, 0); }
+}
+
+/* グラデーションシフト（タイトル背景） */
+@keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* SVGライン描画 */
+@keyframes drawLine {
+    from { stroke-dashoffset: 500; }
+    to   { stroke-dashoffset: 0; }
+}
+
+/* ドットパルス */
+@keyframes dotPulse {
+    0%, 100% { opacity: 0.4; transform: scale(0.8); }
+    50%      { opacity: 1;   transform: scale(1.3); }
+}
+```
+
+### 必須の適用ルール（全プロジェクト共通）
+
+`@keyframes` を定義するだけでは不十分。**以下の要素タイプごとに `.scene.active` セレクタで適用ルールを書くこと。** これを忘れると各要素が「ただ出現するだけ」になり見栄えがない。
+
+```css
+/* ======= カード系（全種類に適用） ======= */
+/* 各カードタイプに cardSlideUp + 時差付き */
+.scene.active .point-card,
+.scene.active .summary-card,
+.scene.active .vs-card,
+.scene.active .scope-card,
+.scene.active .doctor-card,
+.scene.active .drug-card,
+.scene.active .gene-card,
+.scene.active .words-card {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+/* カード1枚目、2枚目、3枚目に時差を設定 */
+.scene.active .XXX-card:nth-child(1) { animation-delay: 0.3s; }
+.scene.active .XXX-card:nth-child(2) { animation-delay: 0.5s; }
+.scene.active .XXX-card:nth-child(3) { animation-delay: 0.7s; }
+
+/* ======= 数値インパクト ======= */
+.scene.active .impact-number {
+    animation: numberPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+/* ======= バーチャート ======= */
+.scene.active .vs-bar,
+.scene.active .nocebo-bar,
+.scene.active .h-bar {
+    animation: barFill 1.2s ease-out forwards;
+    animation-delay: 0.6s;
+    width: 0;  /* 初期値を0にして伸長させる */
+}
+
+/* ======= タイムライン・フロー ======= */
+.scene.active .timeline-item,
+.scene.active .cond-step,
+.scene.active .flow-node {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+/* nth-child(odd) で時差設定（矢印要素がnth-child(even)に入るため） */
+.scene.active .timeline-item:nth-child(1) { animation-delay: 0.2s; }
+.scene.active .timeline-item:nth-child(3) { animation-delay: 0.5s; }
+.scene.active .timeline-item:nth-child(5) { animation-delay: 0.8s; }
+
+/* ======= 矢印・VS文字 ======= */
+.scene.active .timeline-arrow,
+.scene.active .vs-center,
+.scene.active .words-vs {
+    animation: bounceIn 0.6s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+/* ======= 重要要素のパルスグロー ======= */
+.scene.active .result-node,
+.scene.active .highlight-step,
+.scene.active .ol-result {
+    animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* ======= タイトルアクセント ======= */
+.scene.active .title-accent {
+    animation: titleReveal 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+```
+
+> ⚠️ **上記は「最低限」のテンプレート。** 実際のプロジェクトでは、テーマ固有のビジュアル要素（例: 薬のカプセル、脳のSVG等）にも個別のアニメーションを適用すること。
+
+### アニメーション適用の原則
+
+| 原則 | 説明 |
+|------|------|
+| **全カード型要素に `cardSlideUp` + 時差** | 複数カードが並ぶ場面で、1枚ずつ順番に現れる演出。`animation-delay` を `0.2s` 刻みで設定 |
+| **数値は `numberPop`** | `impact-number` など大きな数字はスケール+フェードで「ドン！」と登場 |
+| **バーは `barFill`** | 初期 `width: 0` → アニメーションで `var(--bar-width)` まで伸長 |
+| **矢印・VS文字は `bounceIn`** | 弾むように登場し、注目を集める |
+| **重要ノードは `pulseGlow`** | 結果ノードやハイライト要素が常に脈動し「ここが重要」と示す |
+| **タイトルは `titleReveal`** | タイトルアクセント文字がクリップで左→右に出現 |
+| **フロート系は `float`** | 浮遊感を出す（語源カード、エンディング等） |
+| **ダーク/警告シーンは `warningShake`** | 1回だけ揺れて危険性を伝える |
 
 ---
 
@@ -660,15 +793,23 @@ SVGのパス描画アニメーションを活用：
 
 2. **全CSSクラスが定義されていること**: HTMLで参照しているCSSクラス（`.label--amber`, `.title-huge` 等）が必ず `style.css` に定義されていること。
 
-3. **CSS zoom互換のサイズ指定（必須）**: 録画時は `document.body.style.zoom` でコンテンツを拡大するため、**`.scene` のサイズには `100vw` / `100vh` を絶対に使わず、`width: 100%; height: 100%` を使うこと**。`vw`/`vh` はズーム前のビューポートサイズを参照するため、zoom適用時にコンテンツが画面外にはみ出し、右下にずれる。
+3. **CSS zoom互換のサイズ指定（必須・最重要）**: 録画時は `document.body.style.zoom` でコンテンツを拡大するため、サイズ指定を間違えると**コンテンツが右下にずれて画面外にはみ出す致命的バグ**になる。
+
+   **以下の3パターンすべてが禁止：**
    ```css
-   /* ❌ NG: zoom適用時にコンテンツが右下にずれる */
+   /* ❌ NG 1: vw/vh — ズーム前のビューポートサイズを参照してしまう */
    .scene { width: 100vw; height: 100vh; }
 
-   /* ✅ OK: zoom適用時も正しく中央配置される */
-   html, body { width: 100%; height: 100%; }
+   /* ❌ NG 2: ピクセル固定値 — zoom 1.5倍で 1920×1.5=2880px にはみ出す */
+   html, body { width: 1920px; height: 1080px; }
+   .scene { width: 1920px; height: 1080px; }
+
+   /* ✅ OK: 唯一の正解 — 100%はzoom適用後の親要素に対する相対値 */
+   html, body { width: 100%; height: 100%; overflow: hidden; }
    .scene { width: 100%; height: 100%; }
    ```
+
+   > ⚠️ **この間違いは過去に繰り返し発生している。** `1920px`/`1080px` のハードコードは `100%` と同じに見えるが、CSS zoomが適用されると完全に壊れる。**絶対に `100%` 以外を使わないこと。**
 
 4. **シーン切替時のフェードインアニメーション（必須）**: `.scene.active` にフェードインアニメーションを必ず適用すること。これにより、録画時のシーン切替が滑らかになる。
    ```css
@@ -730,10 +871,12 @@ presentation/
 - [ ] 数値シーンに `.impact-number` + `.big-num` が使われているか
 - [ ] 比較シーンに `.vs-container` が使われているか
 - [ ] **カスタムSVG図解が4個以上** 含まれているか（パターンカタログ外のビジュアル）
-- [ ] **マイクロアニメーション（`@keyframes`）が3種類以上** 定義されているか（stagger/sceneFadeIn/drawLine以外）
+- [ ] **マイクロアニメーション `@keyframes` が8種類以上** 定義されているか（`sceneFadeIn`, `cardSlideUp`, `numberPop`, `barFill`, `float`, `pulseGlow`, `bounceIn`, `titleReveal` + テーマ固有）
+- [ ] **全カード型要素に `.scene.active .XXX-card { animation: cardSlideUp }` + 時差** が適用されているか
+- [ ] **数値インパクトに `numberPop`**、バーに `barFill`、矢印に `bounceIn` が適用されているか
 - [ ] 各シーンが **4つの情報層**（タイトル + ビジュアル + 出典/根拠 + 補足）を持っているか
 - [ ] `window.goTo(index)` がすべてのシーンに正しく対応しているか
-- [ ] CSS zoom 互換のサイズ指定（`vw`/`vh` 不使用）を守っているか
+- [ ] CSS zoom 互換のサイズ指定（`vw`/`vh` も `1920px`/`1080px` も不使用、**`100%` のみ**）を守っているか
 - [ ] `.scene.active` にフェードインアニメーションが適用されているか
 - [ ] Google Fonts（Noto Sans JP）が `<head>` で読み込まれているか
 

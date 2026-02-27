@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <title>プラセボ効果はどこまで「効く」のか？</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Scene 0: タイトル -->
+    <div class="scene" id="scene-0">
+        <canvas class="canvas-bg" id="canvas-0"></canvas>
+        <div class="scene-content">
+            <div class="title-main stagger-item">プラセボ効果はどこまで</div>
+            <div class="title-accent stagger-item">「効く」のか？</div>
+            <div class="title-sub stagger-item">PLACEBO EFFECT — SCIENCE OR ILLUSION?</div>
+            <div class="title-line stagger-item"></div>
+        </div>
+    </div>
+
+    <!-- Scene 1: NEJM 2002 偽の膝手術 -->
+    <div class="scene" id="scene-1">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">LANDMARK STUDY</div>
+            <div class="scene-title stagger-item">偽の膝手術が<br>本物と同じ効果</div>
+            <div class="quote-card stagger-item">
+                <div class="quote-source">New England Journal of Medicine, 2002</div>
+                <div class="quote-text">Moseley et al.</div>
+            </div>
+            <div class="study-visual stagger-item">
+                <svg viewBox="0 0 600 180" class="surgery-svg">
+                    <rect x="10" y="20" width="170" height="140" rx="12" fill="var(--clr-primary-light)"
+                        stroke="var(--clr-primary)" stroke-width="2" />
+                    <text x="95" y="70" text-anchor="middle" class="svg-label">本物の手術</text>
+                    <text x="95" y="100" text-anchor="middle" class="svg-num">Group A</text>
+                    <rect x="215" y="20" width="170" height="140" rx="12" fill="var(--clr-secondary-light)"
+                        stroke="var(--clr-secondary)" stroke-width="2" />
+                    <text x="300" y="70" text-anchor="middle" class="svg-label">洗浄手術</text>
+                    <text x="300" y="100" text-anchor="middle" class="svg-num">Group B</text>
+                    <rect x="420" y="20" width="170" height="140" rx="12" fill="var(--clr-accent-light)"
+                        stroke="var(--clr-accent)" stroke-width="2" />
+                    <text x="505" y="70" text-anchor="middle" class="svg-label">偽手術</text>
+                    <text x="505" y="100" text-anchor="middle" class="svg-num">Group C</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 2: 24ヶ月後 有意差なし -->
+    <div class="scene" id="scene-2">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">RESULT</div>
+            <div class="scene-title stagger-item">24ヶ月後</div>
+            <div class="impact-number stagger-item">有意差なし</div>
+            <div class="impact-desc stagger-item">偽手術群と本物の手術群で<br>痛みの改善に統計的有意差が認められなかった</div>
+            <div class="result-bars stagger-item">
+                <svg viewBox="0 0 600 120" class="result-svg">
+                    <text x="10" y="30" class="svg-label">本物</text>
+                    <rect x="80" y="12" width="420" height="28" rx="6" fill="var(--clr-primary)" opacity="0.7" />
+                    <text x="510" y="32" class="svg-label">改善</text>
+                    <text x="10" y="70" class="svg-label">偽</text>
+                    <rect x="80" y="52" width="410" height="28" rx="6" fill="var(--clr-accent)" opacity="0.7" />
+                    <text x="500" y="72" class="svg-label">改善</text>
+                    <line x1="490" y1="8" x2="490" y2="90" stroke="var(--clr-text-muted)" stroke-width="1"
+                        stroke-dasharray="4" />
+                    <text x="300" y="108" text-anchor="middle" class="svg-label-sm">24ヶ月後の痛みスコア</text>
+                </svg>
+            </div>
+            <div class="patient-count stagger-item">
+                <span class="big-num">180</span>
+                <span class="big-unit">人の患者</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 3: この動画でわかる3つのこと -->
+    <div class="scene" id="scene-3">
+        <canvas class="canvas-bg" id="canvas-3"></canvas>
+        <div class="scene-content">
+            <div class="scene-title stagger-item">この動画でわかる<br>3つのこと</div>
+            <div class="three-points">
+                <div class="point-card stagger-item">
+                    <div class="point-num">01</div>
+                    <div class="point-text">脳の中で何が<br>起きているのか</div>
+                </div>
+                <div class="point-card stagger-item">
+                    <div class="point-num">02</div>
+                    <div class="point-text">色・値段・形で<br>効果が変わる</div>
+                </div>
+                <div class="point-card stagger-item">
+                    <div class="point-num">03</div>
+                    <div class="point-text">効かないもの &<br>ノセボ効果</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 4: プラセボとは何か -->
+    <div class="scene" id="scene-4">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">DEFINITION</div>
+            <div class="scene-title stagger-item">プラセボとは何か？</div>
+            <div class="etymology-card stagger-item">
+                <div class="etymology-latin">placēbō</div>
+                <div class="etymology-meaning">「私は喜ばせるだろう」</div>
+                <div class="etymology-origin">ラテン語起源 — 医学用語化: 1785年</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 5: ビーチャーのWW2エピソード -->
+    <div class="scene" id="scene-5">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">HISTORY</div>
+            <div class="scene-title stagger-item">ヘンリー・ビーチャー</div>
+            <div class="timeline-flow stagger-item">
+                <div class="timeline-item">
+                    <div class="timeline-year">1944</div>
+                    <div class="timeline-event">WW2 前線<br>モルヒネ不足</div>
+                </div>
+                <div class="timeline-arrow">→</div>
+                <div class="timeline-item">
+                    <div class="timeline-year">実験</div>
+                    <div class="timeline-event">食塩水を<br>鎮痛薬として注射</div>
+                </div>
+                <div class="timeline-arrow">→</div>
+                <div class="timeline-item">
+                    <div class="timeline-year">結果</div>
+                    <div class="timeline-event">兵士の<br>ショック回避</div>
+                </div>
+            </div>
+            <div class="person-tag stagger-item">ハーバード大学 麻酔科医</div>
+        </div>
+    </div>
+
+    <!-- Scene 6: 約35%の患者にプラセボが有効 -->
+    <div class="scene" id="scene-6">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">THE POWERFUL PLACEBO</div>
+            <div class="scene-title stagger-item">1955年 画期的論文</div>
+            <div class="impact-number stagger-item">約35<span class="percent">%</span></div>
+            <div class="impact-desc stagger-item">の患者にプラセボが有効</div>
+            <div class="footnote stagger-item">※この数字には後に重要な批判が出る</div>
+        </div>
+    </div>
+
+    <!-- Scene 7: 脳の中で何が起きているのか タイトル -->
+    <div class="scene" id="scene-7">
+        <canvas class="canvas-bg" id="canvas-7"></canvas>
+        <div class="scene-content">
+            <div class="chapter-num stagger-item">CHAPTER 02</div>
+            <div class="scene-title stagger-item">脳の中で<br>何が起きているのか</div>
+            <div class="chapter-line stagger-item"></div>
+        </div>
+    </div>
+
+    <!-- Scene 8: 期待 → 脳 → 神経伝達物質 -->
+    <div class="scene" id="scene-8">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">MECHANISM</div>
+            <div class="scene-title stagger-item">期待が脳を動かす</div>
+            <div class="brain-flow stagger-item">
+                <div class="brain-node">
+                    <div class="brain-icon">💊→🧠</div>
+                    <div class="brain-label">期待</div>
+                </div>
+                <div class="brain-connector"></div>
+                <div class="brain-node">
+                    <div class="brain-icon-text">前頭前皮質</div>
+                    <div class="brain-label">PFC</div>
+                </div>
+                <div class="brain-connector"></div>
+                <div class="brain-node">
+                    <div class="brain-icon-text">PAG</div>
+                    <div class="brain-label">中脳水道周囲灰白質</div>
+                </div>
+                <div class="brain-connector"></div>
+                <div class="brain-node result-node">
+                    <div class="brain-icon-text">鎮痛物質</div>
+                    <div class="brain-label">内因性オピオイド放出</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 9: パーキンソン病 PETスキャン -->
+    <div class="scene" id="scene-9">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">PET SCAN EVIDENCE</div>
+            <div class="scene-title stagger-item">パーキンソン病とプラセボ</div>
+            <div class="pet-visual stagger-item">
+                <div class="pet-card">
+                    <div class="pet-label">偽薬投与後</div>
+                    <div class="pet-brain">
+                        <svg viewBox="0 0 200 200" class="brain-svg">
+                            <ellipse cx="100" cy="100" rx="80" ry="90" fill="var(--clr-bg-alt)"
+                                stroke="var(--clr-text-muted)" stroke-width="1" />
+                            <ellipse cx="75" cy="85" rx="22" ry="18" fill="var(--clr-accent)" opacity="0.7"
+                                class="dopamine-pulse" />
+                            <ellipse cx="125" cy="85" rx="22" ry="18" fill="var(--clr-accent)" opacity="0.7"
+                                class="dopamine-pulse" />
+                            <text x="100" y="145" text-anchor="middle" class="svg-label-sm">線条体</text>
+                        </svg>
+                    </div>
+                    <div class="pet-result">ドーパミン放出を確認</div>
+                </div>
+            </div>
+            <div class="study-ref stagger-item">de la Fuente-Fernández et al., Science 2001</div>
+        </div>
+    </div>
+
+    <!-- Scene 10: 信じる度合い＝ドーパミン放出量 -->
+    <div class="scene" id="scene-10">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">CORRELATION</div>
+            <div class="scene-title stagger-item">信じる度合い</div>
+            <div class="correlation-visual stagger-item">
+                <svg viewBox="0 0 500 250" class="corr-svg">
+                    <line x1="60" y1="220" x2="460" y2="220" stroke="var(--clr-text-muted)" stroke-width="2" />
+                    <line x1="60" y1="220" x2="60" y2="20" stroke="var(--clr-text-muted)" stroke-width="2" />
+                    <text x="260" y="248" text-anchor="middle" class="svg-axis">確信度 →</text>
+                    <text x="30" y="120" text-anchor="middle" class="svg-axis" transform="rotate(-90 30 120)">ドーパミン
+                        →</text>
+                    <line x1="80" y1="200" x2="440" y2="40" stroke="var(--clr-accent)" stroke-width="4"
+                        stroke-linecap="round" />
+                    <circle cx="120" cy="185" r="8" fill="var(--clr-primary)" opacity="0.6" />
+                    <circle cx="200" cy="155" r="8" fill="var(--clr-primary)" opacity="0.6" />
+                    <circle cx="280" cy="115" r="8" fill="var(--clr-primary)" opacity="0.6" />
+                    <circle cx="360" cy="75" r="8" fill="var(--clr-primary)" opacity="0.6" />
+                    <circle cx="420" cy="50" r="8" fill="var(--clr-primary)" opacity="0.6" />
+                </svg>
+            </div>
+            <div class="key-message stagger-item">信じるほど多くのドーパミンが放出される</div>
+        </div>
+    </div>
+
+    <!-- Scene 11: 条件付けメカニズム -->
+    <div class="scene" id="scene-11">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">CONDITIONING</div>
+            <div class="scene-title stagger-item">条件付けメカニズム</div>
+            <div class="conditioning-flow stagger-item">
+                <div class="cond-step">
+                    <div class="cond-icon">🔔</div>
+                    <div class="cond-text">過去の薬体験</div>
+                </div>
+                <div class="cond-arrow">＋</div>
+                <div class="cond-step">
+                    <div class="cond-icon">💊</div>
+                    <div class="cond-text">鎮痛効果</div>
+                </div>
+                <div class="cond-arrow">→</div>
+                <div class="cond-step highlight-step">
+                    <div class="cond-icon">🧠</div>
+                    <div class="cond-text">偽薬でも<br>同じ反応</div>
+                </div>
+            </div>
+            <div class="key-message stagger-item">パブロフの犬と同じ原理が体内で起きている</div>
+        </div>
+    </div>
+
+    <!-- Scene 12: プラセボが効く条件 タイトル -->
+    <div class="scene" id="scene-12">
+        <canvas class="canvas-bg" id="canvas-12"></canvas>
+        <div class="scene-content">
+            <div class="chapter-num stagger-item">CHAPTER 03</div>
+            <div class="scene-title stagger-item">プラセボが<br>"効く"条件</div>
+            <div class="chapter-line stagger-item"></div>
+        </div>
+    </div>
+
+    <!-- Scene 13: 高い薬 vs 安い薬 -->
+    <div class="scene" id="scene-13">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">PRICE EFFECT</div>
+            <div class="scene-title stagger-item">値段が効果を左右する</div>
+            <div class="vs-comparison stagger-item">
+                <div class="vs-card vs-high">
+                    <div class="vs-price">$2.50</div>
+                    <div class="vs-yen">約400円</div>
+                    <div class="vs-bar" style="--bar-width: 85%"></div>
+                    <div class="vs-result">85.4%</div>
+                    <div class="vs-desc">鎮痛効果あり</div>
+                </div>
+                <div class="vs-center">VS</div>
+                <div class="vs-card vs-low">
+                    <div class="vs-price">$0.10</div>
+                    <div class="vs-yen">約15円</div>
+                    <div class="vs-bar" style="--bar-width: 61%"></div>
+                    <div class="vs-result">61%</div>
+                    <div class="vs-desc">鎮痛効果あり</div>
+                </div>
+            </div>
+            <div class="study-ref stagger-item">Waber et al., JAMA 2008</div>
+        </div>
+    </div>
+
+    <!-- Scene 14: 赤い薬 vs 青い薬 -->
+    <div class="scene" id="scene-14">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">COLOR EFFECT</div>
+            <div class="scene-title stagger-item">薬の色が効果を変える</div>
+            <div class="pill-comparison stagger-item">
+                <div class="pill-card pill-red">
+                    <div class="pill-shape red-pill"></div>
+                    <div class="pill-effect">興奮・覚醒</div>
+                </div>
+                <div class="pill-card pill-blue">
+                    <div class="pill-shape blue-pill"></div>
+                    <div class="pill-effect">鎮静・リラックス</div>
+                </div>
+            </div>
+            <div class="culture-note stagger-item">
+                <span class="flag">🇮🇹</span> イタリア人男性には青い薬の鎮静効果が出にくい — 文化がプラセボを変える
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 15: 投与形態の序列 -->
+    <div class="scene" id="scene-15">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">FORM HIERARCHY</div>
+            <div class="scene-title stagger-item">投与形態の影響力</div>
+            <div class="hierarchy-list stagger-item">
+                <div class="hierarchy-item h-top">
+                    <div class="h-rank">1</div>
+                    <div class="h-name">注射</div>
+                    <div class="h-bar" style="--h-width: 100%"></div>
+                </div>
+                <div class="hierarchy-item">
+                    <div class="h-rank">2</div>
+                    <div class="h-name">カプセル</div>
+                    <div class="h-bar" style="--h-width: 80%"></div>
+                </div>
+                <div class="hierarchy-item">
+                    <div class="h-rank">3</div>
+                    <div class="h-name">錠剤</div>
+                    <div class="h-bar" style="--h-width: 60%"></div>
+                </div>
+            </div>
+            <div class="key-message stagger-item">ブランド名 ＞ ジェネリック名</div>
+        </div>
+    </div>
+
+    <!-- Scene 16: 医師の態度 -->
+    <div class="scene" id="scene-16">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">DOCTOR EFFECT</div>
+            <div class="scene-title stagger-item">医師の態度が薬になる</div>
+            <div class="doctor-compare stagger-item">
+                <div class="doctor-card warm">
+                    <div class="doctor-emoji">👨‍⚕️✨</div>
+                    <div class="doctor-type">温かく丁寧</div>
+                    <div class="doctor-result">大きな改善</div>
+                </div>
+                <div class="doctor-card cold">
+                    <div class="doctor-emoji">👨‍⚕️</div>
+                    <div class="doctor-type">事務的</div>
+                    <div class="doctor-result">小さな改善</div>
+                </div>
+            </div>
+            <div class="study-ref stagger-item">Kaptchuk et al., BMJ 2008</div>
+        </div>
+    </div>
+
+    <!-- Scene 17: 開放型プラセボ -->
+    <div class="scene" id="scene-17">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">OPEN-LABEL PLACEBO</div>
+            <div class="scene-title stagger-item">偽薬と知っていても効く</div>
+            <div class="open-label-visual stagger-item">
+                <div class="ol-step">
+                    <div class="ol-icon">💊</div>
+                    <div class="ol-text">「これは偽薬です」<br>と正直に伝える</div>
+                </div>
+                <div class="ol-arrow">→</div>
+                <div class="ol-step ol-result">
+                    <div class="ol-icon">📊</div>
+                    <div class="ol-text">無治療群の<br><strong>2倍</strong>の症状緩和</div>
+                </div>
+            </div>
+            <div class="study-ref stagger-item">Kaptchuk et al., PLoS ONE 2010 — IBS患者</div>
+        </div>
+    </div>
+
+    <!-- Scene 18: 医療の儀式 -->
+    <div class="scene" id="scene-18">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">RITUAL</div>
+            <div class="scene-title stagger-item">「医療の儀式」が<br>脳にスイッチを入れる</div>
+            <div class="ritual-visual stagger-item">
+                <div class="ritual-icons">
+                    <div class="ritual-item">
+                        <svg viewBox="0 0 80 80">
+                            <rect x="10" y="10" width="60" height="60" rx="10" fill="var(--clr-primary-light)"
+                                stroke="var(--clr-primary)" stroke-width="2" /><text x="40" y="48" text-anchor="middle"
+                                class="svg-label-sm">処方</text>
+                        </svg>
+                    </div>
+                    <div class="ritual-plus">+</div>
+                    <div class="ritual-item">
+                        <svg viewBox="0 0 80 80">
+                            <rect x="10" y="10" width="60" height="60" rx="10" fill="var(--clr-secondary-light)"
+                                stroke="var(--clr-secondary)" stroke-width="2" /><text x="40" y="48"
+                                text-anchor="middle" class="svg-label-sm">服用</text>
+                        </svg>
+                    </div>
+                    <div class="ritual-plus">+</div>
+                    <div class="ritual-item">
+                        <svg viewBox="0 0 80 80">
+                            <rect x="10" y="10" width="60" height="60" rx="10" fill="var(--clr-accent-light)"
+                                stroke="var(--clr-accent)" stroke-width="2" /><text x="40" y="48" text-anchor="middle"
+                                class="svg-label-sm">期待</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="key-message stagger-item">薬を飲む行為そのものが条件付けの合図</div>
+        </div>
+    </div>
+
+    <!-- Scene 19: プラセボが効かないもの タイトル -->
+    <div class="scene" id="scene-19">
+        <canvas class="canvas-bg" id="canvas-19"></canvas>
+        <div class="scene-content">
+            <div class="chapter-num stagger-item">CHAPTER 04</div>
+            <div class="scene-title stagger-item">プラセボが<br>"効かない"もの</div>
+            <div class="chapter-line stagger-item"></div>
+        </div>
+    </div>
+
+    <!-- Scene 20: がんの腫瘍反応 2.7% -->
+    <div class="scene" id="scene-20">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">CANCER LIMITATION</div>
+            <div class="scene-title stagger-item">がんの腫瘍には効かない</div>
+            <div class="impact-number stagger-item">2.7<span class="percent">%</span></div>
+            <div class="impact-desc stagger-item">プラセボ群での客観的腫瘍反応率</div>
+            <div class="cancer-bar stagger-item">
+                <svg viewBox="0 0 500 60" class="cancer-svg">
+                    <rect x="0" y="10" width="500" height="40" rx="8" fill="var(--clr-bg-alt)"
+                        stroke="var(--clr-text-muted)" stroke-width="1" />
+                    <rect x="2" y="12" width="14" height="36" rx="6" fill="var(--clr-danger)" />
+                    <text x="250" y="36" text-anchor="middle" class="svg-label-sm">97.3% — 腫瘍に変化なし</text>
+                </svg>
+            </div>
+            <div class="zero-note stagger-item">完全消失はほぼゼロ</div>
+        </div>
+    </div>
+
+    <!-- Scene 21: 効く vs 効かない -->
+    <div class="scene" id="scene-21">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">SCOPE</div>
+            <div class="scene-title stagger-item">効く領域・効かない領域</div>
+            <div class="scope-compare stagger-item">
+                <div class="scope-card scope-yes">
+                    <div class="scope-header">効きやすい</div>
+                    <div class="scope-items">
+                        <div class="scope-item">痛み</div>
+                        <div class="scope-item">吐き気</div>
+                        <div class="scope-item">疲労感</div>
+                        <div class="scope-item">不安</div>
+                    </div>
+                    <div class="scope-note">脳が調節する主観的症状</div>
+                </div>
+                <div class="scope-card scope-no">
+                    <div class="scope-header">効きにくい</div>
+                    <div class="scope-items">
+                        <div class="scope-item">血糖値</div>
+                        <div class="scope-item">コレステロール</div>
+                        <div class="scope-item">腫瘍サイズ</div>
+                        <div class="scope-item">感染症</div>
+                    </div>
+                    <div class="scope-note">客観的な生理指標</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 22: ビーチャーの35%は過大評価 -->
+    <div class="scene" id="scene-22">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">REASSESSMENT</div>
+            <div class="scene-title stagger-item">35%は過大評価だった</div>
+            <div class="reassess-visual stagger-item">
+                <div class="reassess-original">
+                    <div class="reassess-num">35%</div>
+                    <div class="reassess-label">ビーチャーの報告</div>
+                </div>
+                <div class="reassess-arrow">→</div>
+                <div class="reassess-factors">
+                    <div class="factor-item">自然治癒</div>
+                    <div class="factor-item">統計的退行</div>
+                    <div class="factor-item">測定バイアス</div>
+                </div>
+            </div>
+            <div class="study-ref stagger-item">Kienle & Kienle, Preventive Medicine 1997</div>
+        </div>
+    </div>
+
+    <!-- Scene 23: プラセボが効きやすい人の遺伝子 -->
+    <div class="scene" id="scene-23">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">GENETICS</div>
+            <div class="scene-title stagger-item">遺伝子がプラセボの<br>効きやすさを決める</div>
+            <div class="gene-visual stagger-item">
+                <div class="gene-card">
+                    <div class="gene-name">COMT</div>
+                    <div class="gene-desc">ドーパミン代謝に関与</div>
+                    <svg viewBox="0 0 200 40" class="gene-bar-svg">
+                        <rect x="0" y="8" width="200" height="24" rx="4" fill="var(--clr-bg-alt)" />
+                        <rect x="0" y="8" width="160" height="24" rx="4" fill="var(--clr-secondary)" opacity="0.6" />
+                        <text x="100" y="26" text-anchor="middle" class="svg-label-sm" fill="white">高反応型</text>
+                    </svg>
+                </div>
+                <div class="gene-card">
+                    <div class="gene-name">μ-オピオイド受容体</div>
+                    <div class="gene-desc">鎮痛反応の個人差</div>
+                    <svg viewBox="0 0 200 40" class="gene-bar-svg">
+                        <rect x="0" y="8" width="200" height="24" rx="4" fill="var(--clr-bg-alt)" />
+                        <rect x="0" y="8" width="120" height="24" rx="4" fill="var(--clr-secondary)" opacity="0.6" />
+                        <text x="100" y="26" text-anchor="middle" class="svg-label-sm" fill="white">中反応型</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="study-ref stagger-item">Hall et al., PLoS ONE 2012</div>
+        </div>
+    </div>
+
+    <!-- Scene 24: ノセボ効果 タイトル -->
+    <div class="scene" id="scene-24">
+        <canvas class="canvas-bg" id="canvas-24"></canvas>
+        <div class="scene-content">
+            <div class="scene-label stagger-item">DARK SIDE</div>
+            <div class="scene-title stagger-item">ノセボ効果</div>
+            <div class="nocebo-sub stagger-item">言葉が副作用を作る</div>
+            <div class="chapter-line stagger-item"></div>
+        </div>
+    </div>
+
+    <!-- Scene 25: ベータ遮断薬のノセボ -->
+    <div class="scene" id="scene-25">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">NOCEBO CASE 1</div>
+            <div class="scene-title stagger-item">言葉が副作用を3〜4倍に</div>
+            <div class="nocebo-visual stagger-item">
+                <div class="nocebo-card">
+                    <div class="nocebo-group">「副作用あり」と告知</div>
+                    <div class="nocebo-bar" style="--bar-width: 100%"></div>
+                    <div class="nocebo-mult">3〜4倍</div>
+                </div>
+                <div class="nocebo-card">
+                    <div class="nocebo-group">告知なし</div>
+                    <div class="nocebo-bar" style="--bar-width: 28%"></div>
+                    <div class="nocebo-mult">基準</div>
+                </div>
+            </div>
+            <div class="key-message stagger-item">β遮断薬 — 性的副作用の報告率</div>
+        </div>
+    </div>
+
+    <!-- Scene 26: 硬膜外麻酔の言葉遣い -->
+    <div class="scene" id="scene-26">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">NOCEBO CASE 2</div>
+            <div class="scene-title stagger-item">言葉の選び方で痛みが変わる</div>
+            <div class="words-compare stagger-item">
+                <div class="words-card words-bad">
+                    <div class="words-quote">「蜂に刺されたような<br>痛みがあります」</div>
+                    <div class="words-result">強い痛み</div>
+                </div>
+                <div class="words-vs">VS</div>
+                <div class="words-card words-good">
+                    <div class="words-quote">「少しチクッと<br>しますよ」</div>
+                    <div class="words-result">軽い痛み</div>
+                </div>
+            </div>
+            <div class="key-message stagger-item">硬膜外麻酔での実験結果</div>
+        </div>
+    </div>
+
+    <!-- Scene 27: 抗うつ薬のノセボ -->
+    <div class="scene" id="scene-27">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">NOCEBO CASE 3</div>
+            <div class="scene-title stagger-item">偽薬が持つはずの「副作用」</div>
+            <div class="drug-nocebo stagger-item">
+                <div class="drug-card">
+                    <div class="drug-name">三環系のプラセボ</div>
+                    <div class="drug-sides">口渇 ・ 便秘</div>
+                </div>
+                <div class="drug-card">
+                    <div class="drug-name">SSRI系のプラセボ</div>
+                    <div class="drug-sides">別の副作用を報告</div>
+                </div>
+            </div>
+            <div class="key-message stagger-item">偽薬なのにその薬特有の副作用が出る</div>
+        </div>
+    </div>
+
+    <!-- Scene 28: 3つのポイント -->
+    <div class="scene" id="scene-28">
+        <canvas class="canvas-bg" id="canvas-28"></canvas>
+        <div class="scene-content">
+            <div class="scene-label stagger-item">SUMMARY</div>
+            <div class="scene-title stagger-item">今日の3つのポイント</div>
+            <div class="summary-cards">
+                <div class="summary-card stagger-item">
+                    <div class="summary-num">1</div>
+                    <div class="summary-text">プラセボは気のせいではない<br><small>脳内物質の放出をPETで確認</small></div>
+                </div>
+                <div class="summary-card stagger-item">
+                    <div class="summary-num">2</div>
+                    <div class="summary-text">文脈が効果を左右する<br><small>値段・色・医師・知っていても効く</small></div>
+                </div>
+                <div class="summary-card stagger-item">
+                    <div class="summary-num">3</div>
+                    <div class="summary-text">限界とノセボ効果<br><small>がんには効かない / 言葉が害を生む</small></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 29: 脳と体のつながり -->
+    <div class="scene" id="scene-29">
+        <canvas class="canvas-bg" id="canvas-29"></canvas>
+        <div class="scene-content">
+            <div class="scene-title stagger-item">脳と体のつながり</div>
+            <div class="connection-text stagger-item">
+                <p>期待・不安・信頼</p>
+                <p class="connector-arrow">↕</p>
+                <p>実測可能な身体反応</p>
+            </div>
+            <div class="key-message stagger-item">それは気のせいでもなく、魔法でもなく、科学</div>
+        </div>
+    </div>
+
+    <!-- Scene 30: エンディング -->
+    <div class="scene" id="scene-30">
+        <canvas class="canvas-bg" id="canvas-30"></canvas>
+        <div class="scene-content">
+            <div class="end-thanks stagger-item">ご視聴ありがとうございました</div>
+            <div class="end-cta stagger-item">チャンネル登録・高評価<br>よろしくお願いします</div>
+            <div class="end-line stagger-item"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
