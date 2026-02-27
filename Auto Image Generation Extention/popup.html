@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemini Image Auto Generator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="header-icon">✦</div>
+      <h1>Gemini Image Auto</h1>
+      <p class="header-sub">画像生成自動化</p>
+    </header>
+
+    <!-- ステータスバー -->
+    <div class="status-bar" id="statusBar">
+      <div class="status-indicator" id="statusIndicator"></div>
+      <span class="status-text" id="statusText">待機中</span>
+      <span class="status-count" id="statusCount"></span>
+    </div>
+
+    <!-- タブ切り替え -->
+    <div class="tab-bar">
+      <button class="tab active" data-tab="text" id="tabText">
+        <span class="tab-icon">✏️</span> テキスト入力
+      </button>
+      <button class="tab" data-tab="csv" id="tabCsv">
+        <span class="tab-icon">📄</span> CSV読込
+      </button>
+    </div>
+
+    <!-- テキスト入力タブ -->
+    <div class="tab-content active" id="panelText">
+      <div class="input-section">
+        <textarea id="promptInput" class="prompt-input"
+          placeholder="1行に1つのプロンプトを入力&#10;&#10;例:&#10;猫の絵を描いて&#10;犬の絵を描いて&#10;ウサギの絵を描いて" rows="6"></textarea>
+        <div class="input-hint">
+          <span>💡 1行 = 1プロンプト</span>
+          <span class="line-count" id="lineCount">0行</span>
+        </div>
+        <button class="btn btn-add" id="addBtn">
+          <span class="btn-icon">＋</span>
+          まとめてキューに追加
+        </button>
+      </div>
+    </div>
+
+    <!-- CSV読込タブ -->
+    <div class="tab-content" id="panelCsv">
+      <div class="csv-section">
+        <div class="drop-zone" id="dropZone">
+          <div class="drop-zone-icon">📁</div>
+          <p class="drop-zone-text">CSVファイルをドラッグ&ドロップ</p>
+          <p class="drop-zone-sub">またはクリックしてファイルを選択</p>
+          <input type="file" id="csvFileInput" accept=".csv,.tsv,.txt" hidden>
+        </div>
+        <div class="csv-options">
+          <label class="csv-option">
+            <span>プロンプト列</span>
+            <select id="csvColumnSelect" class="setting-input">
+              <option value="0">1列目</option>
+              <option value="1">2列目</option>
+              <option value="2">3列目</option>
+              <option value="auto">自動検出</option>
+            </select>
+          </label>
+          <label class="csv-option">
+            <input type="checkbox" id="csvHasHeader" checked>
+            <span>1行目はヘッダー</span>
+          </label>
+        </div>
+        <div class="csv-preview" id="csvPreview" style="display:none;">
+          <div class="csv-preview-header">
+            <span>プレビュー</span>
+            <span class="csv-preview-count" id="csvPreviewCount">0件</span>
+          </div>
+          <div class="csv-preview-list" id="csvPreviewList"></div>
+          <button class="btn btn-add" id="csvImportBtn">
+            <span class="btn-icon">＋</span>
+            すべてキューに追加
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- コントロールボタン -->
+    <div class="controls">
+      <button class="btn btn-start" id="startBtn" disabled>
+        <span class="btn-icon">▶</span>
+        スタート
+      </button>
+      <button class="btn btn-stop" id="stopBtn" style="display:none;">
+        <span class="btn-icon">⏹</span>
+        停止
+      </button>
+      <button class="btn btn-clear" id="clearBtn">
+        <span class="btn-icon">🗑</span>
+      </button>
+    </div>
+
+    <!-- 進捗バー -->
+    <div class="progress-section" id="progressSection" style="display:none;">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="progress-text" id="progressText">0 / 0</div>
+    </div>
+
+    <!-- キュー一覧 -->
+    <div class="queue-section">
+      <div class="queue-header">
+        <h2>キュー</h2>
+        <span class="queue-count" id="queueCount">0件</span>
+      </div>
+      <div class="queue-list" id="queueList">
+        <div class="queue-empty" id="queueEmpty">
+          <div class="empty-icon">📋</div>
+          <p>プロンプトが登録されていません</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 設定 -->
+    <details class="settings-section">
+      <summary class="settings-toggle">⚙ 設定</summary>
+      <div class="settings-content">
+        <label class="setting-item">
+          <span>タイムアウト（秒）</span>
+          <input type="number" id="timeoutInput" class="setting-input" value="300" min="60" max="600">
+        </label>
+        <label class="setting-item">
+          <span>送信間隔（秒）</span>
+          <input type="number" id="delayInput" class="setting-input" value="3" min="1" max="30">
+        </label>
+      </div>
+    </details>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
