@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <title>食品添加物は危険？の大誤解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Scene 0: 「食品添加物は危険」の大誤解 -->
+    <div class="scene" id="scene-0">
+        <canvas id="canvas-0" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral">TOPIC</div>
+            <h2 class="title-huge stagger-item">「食品添加物は危険」<br><span class="accent-primary">の大誤解</span></h2>
+            <div class="title-sub stagger-item">あなたの不安は科学的に正しいのか？</div>
+        </div>
+    </div>
+
+    <!-- Scene 1: 64.2%が「不安」 -->
+    <div class="scene" id="scene-1">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">食品の安全性で最も不安なこと</h2>
+            <div class="source-badge stagger-item">2024年 食品安全意識調査</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-coral">64.2</span><span class="num-unit">%</span>
+            </div>
+            <div class="emphasis-sub stagger-item">日本人の<span class="accent-coral">3人に2人</span>が添加物に不安を感じている</div>
+            <div class="footnote stagger-item">食品安全に関する不安事項として第1位</div>
+        </div>
+    </div>
+
+    <!-- Scene 2: 「でも、立ち止まって考えてほしい」 -->
+    <div class="scene" id="scene-2">
+        <canvas id="canvas-2" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">不安に思う気持ちは<span class="accent-primary">わかる</span></div>
+            <div class="emphasis-text-large stagger-item">でも<span class="accent-coral">科学的根拠</span>を見ると……</div>
+            <div class="three-points-preview stagger-item">
+                <div class="preview-item"><span class="preview-num">1</span>安全性の仕組み</div>
+                <div class="preview-item"><span class="preview-num">2</span>「無添加」の誤解</div>
+                <div class="preview-item"><span class="preview-num">3</span>添加物の真の役割</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 3: パラケルスス「量が毒を作る」 -->
+    <div class="scene" id="scene-3">
+        <canvas id="canvas-3" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">毒性学の父</h2>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">全てのものは毒であり、<br>毒でないものなど存在しない。<br><span
+                        class="accent-primary">その量こそが、毒であるか否かを決める。</span></div>
+                <div class="quote-source">パラケルスス (1493-1541) スイスの医師・化学者</div>
+            </div>
+            <div class="emphasis-sub stagger-item">500年前に確立された毒性学の大原則</div>
+        </div>
+    </div>
+
+    <!-- Scene 4: 水も塩も酸素も「量」次第 -->
+    <div class="scene" id="scene-4">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">「量」で安全か危険かが決まる</h2>
+            <div class="dose-visual stagger-item">
+                <div class="dose-card dose-safe">
+                    <div class="dose-icon">
+                        <svg viewBox="0 0 60 60" width="60" height="60">
+                            <path
+                                d="M30 5 C30 5 15 20 15 35 C15 43.28 21.72 50 30 50 C38.28 50 45 43.28 45 35 C45 20 30 5 30 5Z"
+                                fill="#60a5fa" opacity="0.7" />
+                            <path
+                                d="M30 15 C30 15 22 25 22 35 C22 39.42 25.58 43 30 43 C34.42 43 38 39.42 38 35 C38 25 30 15 30 15Z"
+                                fill="#93c5fd" opacity="0.5" />
+                        </svg>
+                    </div>
+                    <div class="dose-name">水</div>
+                    <div class="dose-detail">適量<span class="accent-teal">→ 生命維持に必須</span></div>
+                </div>
+                <div class="dose-arrow">→</div>
+                <div class="dose-card dose-danger">
+                    <div class="dose-icon">
+                        <svg viewBox="0 0 60 60" width="60" height="60">
+                            <path d="M30 5 C30 5 8 25 8 38 C8 50 18 55 30 55 C42 55 52 50 52 38 C52 25 30 5 30 5Z"
+                                fill="#ef4444" opacity="0.7" />
+                            <text x="30" y="38" text-anchor="middle" fill="white" font-size="14"
+                                font-weight="bold">!</text>
+                        </svg>
+                    </div>
+                    <div class="dose-name">水 6L+</div>
+                    <div class="dose-detail">過量<span class="accent-coral">→ 水中毒で命に関わる</span></div>
+                </div>
+            </div>
+            <div class="dose-visual stagger-item">
+                <div class="dose-card dose-safe">
+                    <div class="dose-icon">
+                        <svg viewBox="0 0 60 60" width="60" height="60">
+                            <rect x="15" y="20" width="30" height="25" rx="3" fill="#f59e0b" opacity="0.6" />
+                            <rect x="20" y="15" width="20" height="8" rx="2" fill="#fbbf24" opacity="0.8" />
+                            <text x="30" y="37" text-anchor="middle" fill="white" font-size="10"
+                                font-weight="bold">NaCl</text>
+                        </svg>
+                    </div>
+                    <div class="dose-name">塩</div>
+                    <div class="dose-detail">適量<span class="accent-teal">→ 人体に必要不可欠</span></div>
+                </div>
+                <div class="dose-arrow">→</div>
+                <div class="dose-card dose-danger">
+                    <div class="dose-icon">
+                        <svg viewBox="0 0 60 60" width="60" height="60">
+                            <rect x="10" y="15" width="40" height="30" rx="3" fill="#ef4444" opacity="0.7" />
+                            <text x="30" y="35" text-anchor="middle" fill="white" font-size="9"
+                                font-weight="bold">180-300g</text>
+                        </svg>
+                    </div>
+                    <div class="dose-name">塩 大量</div>
+                    <div class="dose-detail">過量<span class="accent-coral">→ 致死量に達する</span></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">どんな物質も「量」次第で毒にも薬にもなる</div>
+        </div>
+    </div>
+
+    <!-- Scene 5: 「毒か薬かは量次第」具体例 -->
+    <div class="scene" id="scene-5">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">毒も薬も「量」で決まる</h2>
+            <div class="vs-container stagger-item">
+                <div class="vs-card vs-left">
+                    <div class="vs-badge danger-badge">猛毒</div>
+                    <div class="vs-title">ボツリヌス毒素</div>
+                    <div class="vs-desc">地球上最強クラスの猛毒</div>
+                </div>
+                <div class="vs-divider stagger-item">
+                    <svg viewBox="0 0 60 60" width="50" height="50">
+                        <circle cx="30" cy="30" r="25" fill="none" stroke="#4f46e5" stroke-width="2"
+                            stroke-dasharray="5,3" />
+                        <text x="30" y="35" text-anchor="middle" fill="#4f46e5" font-size="12"
+                            font-weight="bold">量</text>
+                    </svg>
+                </div>
+                <div class="vs-card vs-right">
+                    <div class="vs-badge safe-badge">美容</div>
+                    <div class="vs-title">ボトックス注射</div>
+                    <div class="vs-desc">ごく微量で安全に使用</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">同じ物質でも量が変われば毒にも薬にもなる</div>
+            <div class="footnote stagger-item">「量が毒を作る」は500年かけて証明された大原則</div>
+        </div>
+    </div>
+
+    <!-- Scene 6: 「量が毒を作る」500年の大原則 -->
+    <div class="scene" id="scene-6">
+        <canvas id="canvas-6" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">毒性学の大原則</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-primary">量</span>が毒を作る</div>
+            <div class="emphasis-sub stagger-item">食品添加物の安全性もこの原則で守られている</div>
+            <div class="footnote stagger-item">次のセクション：世界で最も厳しい安全性チェック</div>
+        </div>
+    </div>
+
+    <!-- Scene 7: 食品添加物の安全性評価プロセス -->
+    <div class="scene" id="scene-7">
+        <canvas id="canvas-7" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary">TOPIC 1</div>
+            <h2 class="title-medium stagger-item">添加物の安全は<br><span class="accent-primary">どう守られているのか</span></h2>
+            <div class="title-sub stagger-item">世界で最も厳しい安全性評価プロセス</div>
+        </div>
+    </div>
+
+    <!-- Scene 8: NOAEL → 安全係数100 → ADI -->
+    <div class="scene" id="scene-8">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">安全性評価のプロセス</h2>
+            <div class="source-badge stagger-item">JECFA (WHO/FAO) 1956年〜</div>
+            <div class="safety-flow stagger-item">
+                <div class="flow-node">
+                    <div class="flow-year">Step 1</div>
+                    <div class="flow-text"><span class="flow-name">動物実験</span><br>急性・慢性・発がん性<br>遺伝・繁殖毒性<br><span
+                            class="flow-sub">全テストをクリア</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node">
+                    <div class="flow-year">Step 2</div>
+                    <div class="flow-text"><span class="flow-name">NOAEL</span><br>無毒性量を特定<br><span
+                            class="flow-sub">影響ゼロの最大量</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node flow-node-highlight">
+                    <div class="flow-year">Step 3</div>
+                    <div class="flow-text"><span class="flow-name">÷ 100</span><br>安全係数を適用<br><span
+                            class="flow-sub">さらに100分の1に</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node">
+                    <div class="flow-year">結果</div>
+                    <div class="flow-text"><span class="flow-name">ADI</span><br>一日摂取許容量<br><span
+                            class="flow-sub">一生食べても安全な量</span></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">ADI = Acceptable Daily Intake（一日摂取許容量）</div>
+        </div>
+    </div>
+
+    <!-- Scene 9: 安全係数100倍 -->
+    <div class="scene" id="scene-9">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">安全係数100倍の仕組み</h2>
+            <div class="safety-factor-visual stagger-item">
+                <div class="sf-box sf-animal">
+                    <div class="sf-label">動物→人間</div>
+                    <div class="sf-value">÷ 10</div>
+                    <div class="sf-desc">種差を考慮</div>
+                </div>
+                <div class="sf-times">×</div>
+                <div class="sf-box sf-human">
+                    <div class="sf-label">個人差</div>
+                    <div class="sf-value">÷ 10</div>
+                    <div class="sf-desc">子供・高齢者を含む</div>
+                </div>
+                <div class="sf-equals">=</div>
+                <div class="sf-box sf-result">
+                    <div class="sf-label">安全係数</div>
+                    <div class="sf-value accent-primary">÷ 100</div>
+                    <div class="sf-desc">NOAELの100分の1</div>
+                </div>
+            </div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-primary">100</span><span class="num-unit">倍</span>
+            </div>
+            <div class="emphasis-sub stagger-item">動物で安全だった量のさらに<span class="accent-primary">100分の1</span>しか使えない</div>
+        </div>
+    </div>
+
+    <!-- Scene 10: ソルビン酸：ADI vs 実際 -->
+    <div class="scene" id="scene-10">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">ソルビン酸（保存料）の場合</h2>
+            <div class="source-badge stagger-item">厚生労働省 マーケットバスケット調査</div>
+            <div class="adi-compare stagger-item">
+                <div class="adi-bar-group">
+                    <div class="adi-label">ADI（安全上限）</div>
+                    <div class="bar-track">
+                        <div class="bar-fill bar-adi" style="--w: 100%">
+                            <span class="bar-value">1,470 mg/日</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="adi-bar-group">
+                    <div class="adi-label">実際の摂取量</div>
+                    <div class="bar-track">
+                        <div class="bar-fill bar-actual" style="--w: 0.12%">
+                            <span class="bar-value-outside">1.8 mg/日</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">
+                <svg viewBox="0 0 200 120" width="200" height="120" class="adi-ring-svg">
+                    <circle cx="100" cy="60" r="50" fill="none" stroke="#e5e7eb" stroke-width="12" />
+                    <circle cx="100" cy="60" r="50" fill="none" stroke="#4f46e5" stroke-width="12"
+                        stroke-dasharray="0.47 313.65" stroke-linecap="round" transform="rotate(-90 100 60)"
+                        class="ring-fill-animate" />
+                    <text x="100" y="55" text-anchor="middle" fill="#4f46e5" font-size="16"
+                        font-weight="900">0.15%</text>
+                    <text x="100" y="75" text-anchor="middle" fill="#6c757d" font-size="10">ADI比</text>
+                </svg>
+            </div>
+            <div class="footnote stagger-item">体重60kgの成人の場合 / ADI: 25mg/kg体重/日</div>
+        </div>
+    </div>
+
+    <!-- Scene 11: ADIの0.15% -->
+    <div class="scene" id="scene-11">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">実際の摂取量はADIのごく一部</h2>
+            <div class="source-badge stagger-item">令和5年度 食品添加物一日摂取量調査</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-coral">0.15</span><span class="num-unit">%</span>
+            </div>
+            <div class="emphasis-sub stagger-item">安全と判断された量のさらに<span class="accent-coral">1%にすら届かない</span></div>
+            <div class="footnote stagger-item">ソルビン酸のADI対比 / 2023年度調査結果</div>
+        </div>
+    </div>
+
+    <!-- Scene 12: マーケットバスケット調査 -->
+    <div class="scene" id="scene-12">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">主要添加物のADI比</h2>
+            <div class="source-badge stagger-item">厚生労働省 マーケットバスケット調査（毎年実施）</div>
+            <div class="additive-bars stagger-item">
+                <div class="h-bar-group">
+                    <div class="h-bar-label">ソルビン酸</div>
+                    <div class="bar-track">
+                        <div class="bar-fill h-bar bar-primary" style="--w: 15%"></div>
+                    </div>
+                    <div class="h-bar-value">0.15%</div>
+                </div>
+                <div class="h-bar-group">
+                    <div class="h-bar-label">安息香酸</div>
+                    <div class="bar-track">
+                        <div class="bar-fill h-bar bar-teal" style="--w: 10%"></div>
+                    </div>
+                    <div class="h-bar-value">0.10%</div>
+                </div>
+                <div class="h-bar-group">
+                    <div class="h-bar-label">赤色3号</div>
+                    <div class="bar-track">
+                        <div class="bar-fill h-bar bar-amber" style="--w: 4.8%"></div>
+                    </div>
+                    <div class="h-bar-value">0.048%</div>
+                </div>
+                <div class="h-bar-group">
+                    <div class="h-bar-label">ステビア</div>
+                    <div class="bar-track">
+                        <div class="bar-fill h-bar bar-coral" style="--w: 22%"></div>
+                    </div>
+                    <div class="h-bar-value">0.22%</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">どの添加物も軒並み<span class="accent-primary">ADIの1%未満</span></div>
+            <div class="footnote stagger-item">実際にスーパーの食品を買って含有量を分析する国の調査</div>
+        </div>
+    </div>
+
+    <!-- Scene 13: 「天然＝安全」は科学的に正しいのか？ -->
+    <div class="scene" id="scene-13">
+        <canvas id="canvas-13" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral">TOPIC 2</div>
+            <h2 class="title-medium stagger-item">天然＝安全、人工＝危険？<br><span class="accent-coral">大誤解を斬る</span></h2>
+            <div class="title-sub stagger-item">この思い込み、科学的に間違いです</div>
+        </div>
+    </div>
+
+    <!-- Scene 14: 天然の猛毒たち -->
+    <div class="scene" id="scene-14">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">天然にも猛毒が存在する</h2>
+            <div class="triple-card">
+                <div class="factor-card factor-danger stagger-item">
+                    <div class="factor-icon poison-icon">
+                        <svg viewBox="0 0 60 60" width="50" height="50">
+                            <ellipse cx="30" cy="35" rx="18" ry="14" fill="#a78bfa" opacity="0.6" />
+                            <circle cx="22" cy="26" r="5" fill="#8b5cf6" opacity="0.4" />
+                            <circle cx="38" cy="22" r="7" fill="#7c3aed" opacity="0.3" />
+                            <text x="30" y="40" text-anchor="middle" fill="white" font-size="8"
+                                font-weight="bold">芽</text>
+                        </svg>
+                    </div>
+                    <div class="factor-name">ソラニン</div>
+                    <div class="factor-desc">じゃがいもの芽<br><span class="accent-coral">天然の毒</span></div>
+                </div>
+                <div class="factor-card factor-danger stagger-item">
+                    <div class="factor-icon poison-icon">
+                        <svg viewBox="0 0 60 60" width="50" height="50">
+                            <circle cx="30" cy="30" r="20" fill="#fbbf24" opacity="0.3" />
+                            <circle cx="25" cy="25" r="6" fill="#f59e0b" opacity="0.5" />
+                            <circle cx="35" cy="35" r="8" fill="#d97706" opacity="0.4" />
+                            <circle cx="30" cy="28" r="4" fill="#b45309" opacity="0.6" />
+                        </svg>
+                    </div>
+                    <div class="factor-name">アフラトキシン</div>
+                    <div class="factor-desc">カビ毒<br><span class="accent-coral">天然の発がん物質</span></div>
+                </div>
+                <div class="factor-card factor-danger stagger-item">
+                    <div class="factor-icon poison-icon">
+                        <svg viewBox="0 0 60 60" width="50" height="50">
+                            <ellipse cx="30" cy="32" rx="22" ry="14" fill="#60a5fa" opacity="0.4" />
+                            <path d="M20 28 Q30 15 40 28" fill="none" stroke="#3b82f6" stroke-width="2" />
+                            <circle cx="30" cy="35" r="3" fill="#1d4ed8" opacity="0.8" />
+                        </svg>
+                    </div>
+                    <div class="factor-name">テトロドトキシン</div>
+                    <div class="factor-desc">ふぐ毒<br><span class="accent-coral">青酸カリの1,000倍</span></div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">すべて<span class="accent-coral">天然</span>の毒。「天然＝安全」は誤り</div>
+            <div class="footnote stagger-item">WHO / FDA Natural Toxins Fact Sheet</div>
+        </div>
+    </div>
+
+    <!-- Scene 15: 「天然だから安全」という思い込みこそが危険 -->
+    <div class="scene" id="scene-15">
+        <canvas id="canvas-15" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">安全性を決めるのは</div>
+            <div class="emphasis-text-large stagger-item">「天然か人工か」ではなく<br><span class="accent-primary">「量」</span></div>
+            <div class="safe-compare stagger-item">
+                <div class="safe-item safe-checked">
+                    <span class="safe-icon">&#10003;</span>
+                    <span>食品添加物 = 安全性審査済み</span>
+                </div>
+                <div class="safe-item safe-unchecked">
+                    <span class="safe-icon">&#10007;</span>
+                    <span>天然毒 = 安全性審査なし</span>
+                </div>
+            </div>
+            <div class="footnote stagger-item">むしろ添加物の方が安全性を確認されている分安心</div>
+        </div>
+    </div>
+
+    <!-- Scene 16: 「無添加」表示のからくり -->
+    <div class="scene" id="scene-16">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">「無添加」表示の問題</h2>
+            <div class="source-badge stagger-item">消費者庁 2022年3月 ガイドライン策定</div>
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">「保存料無添加」の裏側<br><span class="accent-coral">別の物質で同じ機能を代替</span></div>
+                <div class="alert-sub">見た目は「無添加」でも実態は変わらない</div>
+            </div>
+            <div class="emphasis-sub stagger-item">消費者庁が「問題あり」と認定して規制に動いた</div>
+            <div class="footnote stagger-item">2024年4月から厳格適用開始</div>
+        </div>
+    </div>
+
+    <!-- Scene 17: 消費者庁ガイドライン -->
+    <div class="scene" id="scene-17">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">消費者庁ガイドラインの問題類型</h2>
+            <div class="source-badge stagger-item">消費者庁「食品添加物の不使用表示に関するガイドライン」2022年</div>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text">「無添加」だから<span class="accent-coral">安全・健康にいい</span>と連想させる表示</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">2</div>
+                    <div class="numbered-text"><span class="accent-coral">代替物質</span>を使いながら「不使用」と表示</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">3</div>
+                    <div class="numbered-text">そもそも<span class="accent-coral">使われない添加物</span>をわざわざ「不使用」と強調</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">「無添加＝安全」は<span class="accent-coral">政府が認めた誤解</span></div>
+            <div class="footnote stagger-item">10類型の問題表示パターンが明示された</div>
+        </div>
+    </div>
+
+    <!-- Scene 18: 複合影響（カクテル効果）の調査結果 -->
+    <div class="scene" id="scene-18">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">複合影響（カクテル効果）</h2>
+            <div class="source-badge stagger-item">食品安全委員会 2007年3月 報告書</div>
+            <div class="vs-container stagger-item">
+                <div class="vs-card vs-left">
+                    <div class="vs-badge danger-badge">懸念</div>
+                    <div class="vs-title">複数の添加物を<br>同時に摂取したら？</div>
+                    <div class="vs-desc">いわゆる「カクテル効果」</div>
+                </div>
+                <div class="vs-divider stagger-item">→</div>
+                <div class="vs-card vs-right vs-card-safe">
+                    <div class="vs-badge safe-badge">結論</div>
+                    <div class="vs-title">日常的な摂取範囲で<br>複合影響の可能性は<br><span class="accent-teal">極めて低い</span></div>
+                    <div class="vs-desc">大規模調査の結果</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">国際機関の研究・最新文献を集めて徹底調査した結論</div>
+        </div>
+    </div>
+
+    <!-- Scene 19: リスク認知バイアス -->
+    <div class="scene" id="scene-19">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">なぜ添加物を怖いと感じるのか</h2>
+            <div class="bias-visual stagger-item">
+                <div class="bias-center">
+                    <svg viewBox="0 0 120 120" width="100" height="100">
+                        <circle cx="60" cy="60" r="50" fill="none" stroke="#e5e7eb" stroke-width="3" />
+                        <circle cx="60" cy="60" r="50" fill="none" stroke="#ef4444" stroke-width="3"
+                            stroke-dasharray="104.7 209.4" stroke-linecap="round" transform="rotate(-90 60 60)"
+                            class="bias-ring" />
+                        <text x="60" y="55" text-anchor="middle" fill="#ef4444" font-size="10"
+                            font-weight="900">バイアス</text>
+                        <text x="60" y="72" text-anchor="middle" fill="#6c757d" font-size="8">3つ全て該当</text>
+                    </svg>
+                </div>
+                <div class="bias-items">
+                    <div class="bias-item stagger-item">
+                        <div class="bias-num">1</div>
+                        <div class="bias-text">自分で<span class="accent-coral">コントロールできない</span></div>
+                    </div>
+                    <div class="bias-item stagger-item">
+                        <div class="bias-num">2</div>
+                        <div class="bias-text"><span class="accent-coral">人工的</span>なもの</div>
+                    </div>
+                    <div class="bias-item stagger-item">
+                        <div class="bias-num">3</div>
+                        <div class="bias-text"><span class="accent-coral">目に見えない</span>もの</div>
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">食品添加物はこの3つ<span class="accent-coral">全部</span>に当てはまる</div>
+            <div class="footnote stagger-item">リスク認知バイアス：実際のリスクと感じるリスクのズレ</div>
+        </div>
+    </div>
+
+    <!-- Scene 20: 添加物がなければ食卓はどうなる？ -->
+    <div class="scene" id="scene-20">
+        <canvas id="canvas-20" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-teal">TOPIC 3</div>
+            <h2 class="title-medium stagger-item">添加物があるから<br><span class="accent-teal">安全な食卓</span></h2>
+            <div class="title-sub stagger-item">もし添加物がなくなったら？</div>
+        </div>
+    </div>
+
+    <!-- Scene 21: 保存料あり vs なし -->
+    <div class="scene" id="scene-21">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">保存料の食中毒防止効果</h2>
+            <div class="vs-container stagger-item">
+                <div class="vs-card vs-left vs-card-safe">
+                    <div class="vs-badge safe-badge">保存料あり</div>
+                    <div class="vs-title">微生物の増殖を抑制</div>
+                    <div class="vs-desc">日持ち向上・食中毒防止</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right">
+                    <div class="vs-badge danger-badge">保存料なし</div>
+                    <div class="vs-title">日持ち激減</div>
+                    <div class="vs-desc">食中毒リスク増大</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">お弁当・おにぎり・ハム・ちくわ・かまぼこ……</div>
+            <div class="footnote stagger-item">ソルビン酸は酸性環境下で微生物の代謝を阻害する</div>
+        </div>
+    </div>
+
+    <!-- Scene 22: 「添加物を避ける」行動が逆にリスクを上げる -->
+    <div class="scene" id="scene-22">
+        <div class="content center-layout">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">添加物を避ける行動が<br><span class="accent-coral">逆にリスクを上げる</span></div>
+                <div class="alert-sub">食品ロス増加・食中毒リスク上昇</div>
+            </div>
+            <div class="role-tags stagger-item">
+                <div class="role-tag tag-primary">保存料</div>
+                <div class="role-tag tag-teal">着色料</div>
+                <div class="role-tag tag-amber">酸化防止剤</div>
+                <div class="role-tag tag-coral">乳化剤</div>
+                <div class="role-tag tag-purple">増粘剤</div>
+            </div>
+            <div class="emphasis-sub stagger-item">マヨネーズの分離防止もアイスの滑らかさも添加物のおかげ</div>
+            <div class="footnote stagger-item">コンビニ・スーパーの食品の大半は添加物なしでは成り立たない</div>
+        </div>
+    </div>
+
+    <!-- Scene 23: 昔からの添加物 -->
+    <div class="scene" id="scene-23">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">人類は何千年も前から「添加物」を使ってきた</h2>
+            <div class="triple-card">
+                <div class="factor-card factor-safe stagger-item">
+                    <div class="factor-icon">
+                        <svg viewBox="0 0 60 60" width="50" height="50">
+                            <rect x="18" y="15" width="24" height="30" rx="4" fill="#e0e7ff" />
+                            <rect x="22" y="20" width="16" height="20" rx="2" fill="#c7d2fe" />
+                            <text x="30" y="34" text-anchor="middle" fill="#4f46e5" font-size="8"
+                                font-weight="bold">MgCl2</text>
+                        </svg>
+                    </div>
+                    <div class="factor-name">にがり</div>
+                    <div class="factor-desc">豆腐の凝固剤<br><span class="accent-primary">塩化マグネシウム</span></div>
+                </div>
+                <div class="factor-card factor-safe stagger-item">
+                    <div class="factor-icon">
+                        <svg viewBox="0 0 60 60" width="50" height="50">
+                            <ellipse cx="30" cy="32" rx="20" ry="15" fill="#dcfce7" />
+                            <path d="M20 25 Q30 10 40 25" fill="#86efac" opacity="0.7" />
+                            <path d="M25 28 Q30 18 35 28" fill="#4ade80" opacity="0.5" />
+                        </svg>
+                    </div>
+                    <div class="factor-name">しその葉</div>
+                    <div class="factor-desc">梅干しの着色<br><span class="accent-teal">天然の着色料</span></div>
+                </div>
+                <div class="factor-card factor-safe stagger-item">
+                    <div class="factor-icon">
+                        <svg viewBox="0 0 60 60" width="50" height="50">
+                            <rect x="15" y="20" width="30" height="22" rx="3" fill="#fef3c7" />
+                            <rect x="18" y="24" width="24" height="14" rx="2" fill="#fde68a" />
+                            <text x="30" y="34" text-anchor="middle" fill="#b45309" font-size="8"
+                                font-weight="bold">岩塩</text>
+                        </svg>
+                    </div>
+                    <div class="factor-name">岩塩</div>
+                    <div class="factor-desc">食肉の保存<br><span class="accent-amber">何千年もの歴史</span></div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">現代の添加物は昔からの知恵を<span class="accent-primary">科学的に安全性を確認</span>して使用
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 24: AF-2禁止事例 -->
+    <div class="scene dark-scene" id="scene-24">
+        <div class="content card-layout">
+            <h2 class="scene-title light-text stagger-item">危険な添加物はちゃんと禁止される</h2>
+            <div class="dark-list">
+                <div class="dark-item stagger-item">
+                    <div class="dark-icon">1965</div>
+                    <div class="dark-content">
+                        <div class="dark-title">AF-2 認可</div>
+                        <div class="dark-desc">豆腐・かまぼこに広く使用</div>
+                    </div>
+                </div>
+                <div class="dark-item stagger-item">
+                    <div class="dark-icon">1970s</div>
+                    <div class="dark-content">
+                        <div class="dark-title">変異原性・発がん性を発見</div>
+                        <div class="dark-desc">複数の大学研究チームが報告</div>
+                    </div>
+                </div>
+                <div class="dark-item stagger-item">
+                    <div class="dark-icon dark-icon-alert">1974</div>
+                    <div class="dark-content">
+                        <div class="dark-title">使用禁止</div>
+                        <div class="dark-desc">発見からわずか数年で取り消し</div>
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-sub light-text stagger-item">「一度許可したら放置」ではない。<span
+                    class="accent-coral">50年以上機能し続ける安全制度</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 25: 冒頭の問い回収 -->
+    <div class="scene" id="scene-25">
+        <canvas id="canvas-25" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">最初の質問に戻ります</div>
+            <div class="emphasis-text-large stagger-item">食品添加物は<br><span class="accent-primary">本当に怖いのか？</span></div>
+            <div class="emphasis-sub stagger-item">「怖い」情報に「量」の話は入っていましたか？</div>
+        </div>
+    </div>
+
+    <!-- Scene 26: 今日の3つのポイント -->
+    <div class="scene" id="scene-26">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">今日の3つのポイント</h2>
+            <div class="numbered-list summary-list">
+                <div class="numbered-item summary-item stagger-item">
+                    <div class="number-circle summary-num">1</div>
+                    <div class="numbered-text"><span class="accent-primary">量が毒を作る</span><br>物質ではなく量が安全を決める</div>
+                </div>
+                <div class="numbered-item summary-item stagger-item">
+                    <div class="number-circle summary-num">2</div>
+                    <div class="numbered-text">摂取量はADIの<span class="accent-primary">1%未満</span><br>何重もの安全マージン</div>
+                </div>
+                <div class="numbered-item summary-item stagger-item">
+                    <div class="number-circle summary-num">3</div>
+                    <div class="numbered-text">「天然＝安全」に<span class="accent-coral">根拠なし</span><br>天然にも猛毒がある</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 27: 本当に気にすべきリスク -->
+    <div class="scene" id="scene-27">
+        <div class="content center-layout">
+            <div class="alert-card alert-warm stagger-item">
+                <div class="alert-icon alert-icon-warm">&#9888;</div>
+                <div class="alert-title">本当に気にすべきリスク</div>
+                <div class="alert-sub">添加物より影響が大きいもの</div>
+            </div>
+            <div class="risk-tags stagger-item">
+                <div class="risk-tag">栄養バランスの偏り</div>
+                <div class="risk-tag">食べ過ぎ</div>
+                <div class="risk-tag">塩分の過剰摂取</div>
+                <div class="risk-tag">運動不足</div>
+            </div>
+            <div class="emphasis-sub stagger-item">「何を避けるか」より<span class="accent-primary">「何をどれだけ食べるか」</span></div>
+            <div class="footnote stagger-item">添加物を避けることに必死で大事なことを見落とさない</div>
+        </div>
+    </div>
+
+    <!-- Scene 28: コアメッセージ -->
+    <div class="scene" id="scene-28">
+        <canvas id="canvas-28" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">食品添加物は</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-primary">世界で最も厳密に</span><br>安全性審査を受けた物質群
+            </div>
+            <div class="core-message stagger-item">
+                <div class="core-line">怖がるんじゃなくて</div>
+                <div class="core-line core-highlight"><span class="accent-primary">知ること</span></div>
+                <div class="core-line">それが不安をなくす一番の方法</div>
+            </div>
+            <div class="footnote stagger-item">不安を感じたら → 食品安全委員会・厚生労働省のデータを確認</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

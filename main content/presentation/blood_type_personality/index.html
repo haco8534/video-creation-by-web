@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>血液型性格診断の真実</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== Scene 0: タイトルカード ===== -->
+    <div class="scene active" id="scene-0">
+        <canvas id="canvas-0" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral">PSEUDOSCIENCE</div>
+            <h2 class="title-large stagger-item">血液型性格診断の<br><span class="accent-coral">真実</span></h2>
+            <div class="title-sub stagger-item">科学が100年かけて出した結論</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 1: 数値インパクト「40%が信じている」 ===== -->
+    <div class="scene" id="scene-1">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">日本人が信じている割合</h2>
+            <div class="source-badge stagger-item">NRI調査 (2016) / athome調査 (2017)</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-coral">40</span><span class="num-unit">%以上</span>
+            </div>
+            <div class="emphasis-sub stagger-item">日本人の約40%が血液型で性格がわかると信じている</div>
+            <div class="footnote stagger-item">30代女性に限ると51.6%が肯定</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 2: テキスト強調「0.3%」 ===== -->
+    <div class="scene" id="scene-2">
+        <canvas id="canvas-2" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">血液型が性格を説明できるのは</div>
+            <div class="emphasis-text-large stagger-item">たった<span class="accent-coral">0.3%</span>以下</div>
+            <div class="emphasis-sub stagger-item">つまり99.7%は血液型と無関係</div>
+            <div class="source-badge stagger-item">縄田健悟 (2014) 日米10,000人以上の大規模調査</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 3: タイトルカード「そもそも血液型って何？」 ===== -->
+    <div class="scene" id="scene-3">
+        <canvas id="canvas-3" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary">BIOLOGY</div>
+            <h2 class="title-medium stagger-item">そもそも<br><span class="accent-primary">血液型</span>って何？</h2>
+            <div class="title-sub stagger-item">赤血球の「糖鎖」の違い</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 4: 段階的リスト「ABO型の仕組み」 ===== -->
+    <div class="scene" id="scene-4">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">ABO式血液型のしくみ</h2>
+            <div class="blood-type-visual stagger-item">
+                <div class="blood-cell-container">
+                    <div class="blood-cell cell-a">
+                        <svg viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="40" class="cell-body" />
+                            <circle cx="20" cy="25" r="5" class="antigen-a" />
+                            <circle cx="75" cy="30" r="5" class="antigen-a" />
+                            <circle cx="30" cy="80" r="5" class="antigen-a" />
+                            <circle cx="70" cy="75" r="5" class="antigen-a" />
+                        </svg>
+                        <div class="cell-label">A型</div>
+                        <div class="cell-desc">A抗原あり</div>
+                    </div>
+                    <div class="blood-cell cell-b">
+                        <svg viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="40" class="cell-body" />
+                            <rect x="16" y="21" width="10" height="10" rx="2" class="antigen-b" />
+                            <rect x="70" y="26" width="10" height="10" rx="2" class="antigen-b" />
+                            <rect x="25" y="75" width="10" height="10" rx="2" class="antigen-b" />
+                            <rect x="65" y="70" width="10" height="10" rx="2" class="antigen-b" />
+                        </svg>
+                        <div class="cell-label">B型</div>
+                        <div class="cell-desc">B抗原あり</div>
+                    </div>
+                    <div class="blood-cell cell-ab">
+                        <svg viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="40" class="cell-body" />
+                            <circle cx="20" cy="25" r="5" class="antigen-a" />
+                            <rect x="70" y="26" width="10" height="10" rx="2" class="antigen-b" />
+                            <circle cx="30" cy="80" r="5" class="antigen-a" />
+                            <rect x="65" y="70" width="10" height="10" rx="2" class="antigen-b" />
+                        </svg>
+                        <div class="cell-label">AB型</div>
+                        <div class="cell-desc">両方あり</div>
+                    </div>
+                    <div class="blood-cell cell-o">
+                        <svg viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="40" class="cell-body cell-body-o" />
+                        </svg>
+                        <div class="cell-label">O型</div>
+                        <div class="cell-desc">どちらもなし</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">違いは赤血球表面の糖鎖の種類だけ</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 5: 比較対照「糖鎖 vs 脳」 ===== -->
+    <div class="scene" id="scene-5">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">糖鎖抗原と脳のしくみ</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge safe-badge">赤血球表面</div>
+                    <div class="vs-title">糖鎖抗原</div>
+                    <div class="vs-desc">免疫の識別タグ<br>輸血時に重要</div>
+                </div>
+                <div class="vs-divider stagger-item">≠</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge danger-badge">脳・神経系</div>
+                    <div class="vs-title">性格形成</div>
+                    <div class="vs-desc">数千の遺伝子<br>+ 環境要因</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">生物学的につながる仕組みは存在しない</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 6: テキスト強調「赤血球と脳は別世界」 ===== -->
+    <div class="scene" id="scene-6">
+        <canvas id="canvas-6" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">性格は<span class="accent-primary">ポリジーン形質</span></div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-coral">数千以上</span>の遺伝子が関与</div>
+            <div class="emphasis-sub stagger-item">たった1つのABO遺伝子では決まらない</div>
+            <div class="footnote stagger-item">性格の遺伝率は40〜60% ― 行動遺伝学のコンセンサス</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 7: タイトルカード「100年前にすでに否定」 ===== -->
+    <div class="scene" id="scene-7">
+        <canvas id="canvas-7" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-amber">HISTORY</div>
+            <h2 class="title-medium stagger-item">100年前にすでに<br><span class="accent-amber">否定されていた</span></h2>
+            <div class="title-sub stagger-item">血液型性格診断の知られざる歴史</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 8: 引用カード「古川竹二」 ===== -->
+    <div class="scene" id="scene-8">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">血液型性格診断の始まり</h2>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">血液型による<span class="accent-primary">氣質の研究</span></div>
+                <div class="quote-source">古川竹二 (1927) 心理學研究 第2巻4号</div>
+            </div>
+            <div class="emphasis-sub stagger-item">東京女子高等師範学校の教授が提唱</div>
+            <div class="footnote stagger-item">A型は控えめで慎重、B型は活発で楽天的と分類</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 9: 数値インパクト「300人」 ===== -->
+    <div class="scene" id="scene-9">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">古川の研究の問題点</h2>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-coral">約300</span><span class="num-unit">人</span>
+            </div>
+            <div class="emphasis-sub stagger-item">サンプル数がわずか約300人</div>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text">性格は<span class="accent-coral">自己申告</span>に依存</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">2</div>
+                    <div class="numbered-text"><span class="accent-coral">統計処理</span>が不十分</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 10: テキスト強調「B型差別への反論動機」 ===== -->
+    <div class="scene" id="scene-10">
+        <canvas id="canvas-10" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">研究の動機のひとつは</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-amber">差別への対抗</span></div>
+            <div class="emphasis-sub stagger-item">「B型が多い東洋人は野蛮だ」という欧米の偏見に反論するため</div>
+            <div class="footnote stagger-item">しかし後にこの研究自体が新たな差別を生むことに…</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 11: テキスト強調「1933年否定」 ===== -->
+    <div class="scene" id="scene-11">
+        <canvas id="canvas-11" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item"><span class="accent-coral">1933</span>年</div>
+            <div class="emphasis-text-large stagger-item">日本法医学会が<span class="accent-coral">正式に否定</span></div>
+            <div class="emphasis-sub stagger-item">「科学的根拠がない」と結論</div>
+            <div class="footnote stagger-item">学問の世界では完全に忘れ去られた</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 12: フロー図「提唱→否定→復活」 ===== -->
+    <div class="scene" id="scene-12">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">血液型性格診断の100年</h2>
+            <div class="flow-chain">
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">1927</div>
+                    <div class="flow-text"><span class="flow-name">古川竹二</span><br>論文を発表<br><span
+                            class="flow-sub">サンプル約300人</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node flow-node-danger stagger-item">
+                    <div class="flow-year">1933</div>
+                    <div class="flow-text"><span class="flow-name">法医学会</span><br>正式に否定<br><span
+                            class="flow-sub">「根拠なし」</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">〜1970</div>
+                    <div class="flow-text"><span class="flow-name">忘却期間</span><br>約40年間<br><span
+                            class="flow-sub">学界からは消滅</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node flow-node-warning stagger-item">
+                    <div class="flow-year">1971</div>
+                    <div class="flow-text"><span class="flow-name">能見正比古</span><br>復活させる<br><span
+                            class="flow-sub">大ベストセラー</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 13: テキスト強調「能見は放送作家」 ===== -->
+    <div class="scene" id="scene-13">
+        <canvas id="canvas-13" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">復活させた人物の正体</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-coral">科学者ではなく</span><br>放送作家</div>
+            <div class="emphasis-sub stagger-item">能見正比古 ― 法律家・放送作家</div>
+            <div class="footnote stagger-item">医学や心理学の専門教育は受けていない</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 14: 注意喚起「否定された学説のリサイクル」 ===== -->
+    <div class="scene" id="scene-14">
+        <div class="content center-layout">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">否定された学説の<span class="accent-coral">無断リサイクル</span></div>
+                <div class="alert-sub">法医学会が否定した説を、非専門家が科学的検証なしに復活させた</div>
+            </div>
+            <div class="footnote stagger-item">累計数百万部のベストセラーで日本全体に浸透</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 15: タイトルカード「科学者が本気で検証」 ===== -->
+    <div class="scene" id="scene-15">
+        <canvas id="canvas-15" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-teal">SCIENCE</div>
+            <h2 class="title-medium stagger-item">科学者が<span class="accent-teal">本気で</span><br>検証した結果</h2>
+            <div class="title-sub stagger-item">何十年にもわたる大規模検証</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 16: 引用カード「松井豊」 ===== -->
+    <div class="scene" id="scene-16">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">1980年代の大規模検証</h2>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">血液型による性格の相違に関する<br><span class="accent-primary">統計的検討</span></div>
+                <div class="quote-source">松井豊 (1991) 社会心理学者</div>
+            </div>
+            <div class="emphasis-sub stagger-item">全国規模の信頼性の高いデータベースを使用</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 17: 数値インパクト「12,418人」 ===== -->
+    <div class="scene" id="scene-17">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">松井豊の調査規模</h2>
+            <div class="source-badge stagger-item">JNNデータバンク 1980/82/86/88年</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-primary">12,418</span><span class="num-unit">人</span>
+            </div>
+            <div class="emphasis-sub stagger-item">延べ12,418人 × 4回にわたる調査</div>
+            <div class="footnote stagger-item">古川の300人の約40倍の規模</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 18: 比較テーブル「24項目中1項目」 ===== -->
+    <div class="scene" id="scene-18">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">松井豊の調査結果</h2>
+            <div class="result-visual stagger-item">
+                <div class="result-bar-container">
+                    <div class="result-bar-label">有意差なし</div>
+                    <div class="result-bar-track">
+                        <div class="result-bar-fill result-bar-none" style="--w:95.8%">23項目</div>
+                    </div>
+                </div>
+                <div class="result-bar-container">
+                    <div class="result-bar-label">有意差あり</div>
+                    <div class="result-bar-track">
+                        <div class="result-bar-fill result-bar-found" style="--w:4.2%">1</div>
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">しかもその1項目も年度ごとに結果がバラバラ</div>
+            <div class="footnote stagger-item">一貫した差はゼロ ― 松井豊 (1991)</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 19: 数値インパクト「0.3%以下」 ===== -->
+    <div class="scene" id="scene-19">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">縄田健悟の結論</h2>
+            <div class="source-badge stagger-item">縄田健悟 (2014) 心理学研究 / 日米10,000人以上</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-coral">0.3</span><span class="num-unit">%以下</span>
+            </div>
+            <div class="emphasis-sub stagger-item">血液型が性格を説明できる最大の割合</div>
+            <div class="footnote stagger-item">68項目中65項目で有意差なし</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 20: 横並びカード「世界の検証」 ===== -->
+    <div class="scene" id="scene-20">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">世界の検証結果</h2>
+            <div class="triple-card">
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-coral">JP</div>
+                    <div class="factor-name">日本</div>
+                    <div class="factor-desc">松井豊<br>12,418人<br><span class="accent-coral">有意差なし</span></div>
+                </div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-primary">US</div>
+                    <div class="factor-name">アメリカ</div>
+                    <div class="factor-desc">縄田健悟<br>10,000人+<br><span class="accent-coral">0.3%以下</span></div>
+                </div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-teal">UK</div>
+                    <div class="factor-name">イギリス</div>
+                    <div class="factor-desc">Rogers &amp; Glendon<br>Big Five検証<br><span
+                            class="accent-coral">相関なし</span></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">どの国でも結果は同じ：関連性ゼロ</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 21: テキスト強調「ビッグファイブ」 ===== -->
+    <div class="scene" id="scene-21">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">ビッグファイブ性格モデルでも否定</h2>
+            <div class="big5-visual stagger-item">
+                <div class="big5-item">
+                    <div class="big5-icon">E</div>
+                    <div class="big5-label">外向性</div>
+                </div>
+                <div class="big5-item">
+                    <div class="big5-icon">A</div>
+                    <div class="big5-label">協調性</div>
+                </div>
+                <div class="big5-item">
+                    <div class="big5-icon">C</div>
+                    <div class="big5-label">誠実性</div>
+                </div>
+                <div class="big5-item">
+                    <div class="big5-icon">N</div>
+                    <div class="big5-label">神経症的傾向</div>
+                </div>
+                <div class="big5-item">
+                    <div class="big5-icon">O</div>
+                    <div class="big5-label">開放性</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">5因子すべてで血液型との有意な相関なし</div>
+            <div class="source-badge stagger-item">Rogers &amp; Glendon (2003) Personality and Individual Differences
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 22: テキスト強調「誰一人証明できなかった」 ===== -->
+    <div class="scene" id="scene-22">
+        <canvas id="canvas-22" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">世界中の科学者が何十年もかけて検証</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-coral">誰一人として</span><br>証明できなかった</div>
+            <div class="emphasis-sub stagger-item">血液型と性格の関連を示す科学的証拠はゼロ</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 23: タイトルカード「なぜ当たると感じるか」 ===== -->
+    <div class="scene" id="scene-23">
+        <canvas id="canvas-23" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary">PSYCHOLOGY</div>
+            <h2 class="title-medium stagger-item">なぜ<span class="accent-primary">当たる</span>と<br>感じるのか</h2>
+            <div class="title-sub stagger-item">3つの心理メカニズム</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 24: 段階的リスト「3メカニズム」 ===== -->
+    <div class="scene" id="scene-24">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">「当たる」の正体</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text"><span class="accent-primary">バーナム効果</span><br>曖昧な記述を「自分のこと」と感じる</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">2</div>
+                    <div class="numbered-text"><span class="accent-teal">確証バイアス</span><br>当たった記憶だけが残る</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">3</div>
+                    <div class="numbered-text"><span class="accent-amber">自己成就予言</span><br>信じることで本当にそうなる</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 25: 引用カード「フォーラーの実験」 ===== -->
+    <div class="scene" id="scene-25">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">バーナム効果の実証</h2>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">全員に<span class="accent-coral">まったく同じ</span>診断文を配布<br>しかし「当たっている」と感じた</div>
+                <div class="quote-source">Forer (1949) 心理学実験</div>
+            </div>
+            <div class="emphasis-sub stagger-item">曖昧で誰にでも当てはまる表現 → 「自分だけに当てはまる」と錯覚</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 26: 数値インパクト「4.26/5点」 ===== -->
+    <div class="scene" id="scene-26">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">フォーラーの実験結果</h2>
+            <div class="source-badge stagger-item">Forer (1949) / 学生を対象とした性格テスト</div>
+            <div class="forer-visual stagger-item">
+                <div class="forer-score">
+                    <svg viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="54" class="ring-bg" />
+                        <circle cx="60" cy="60" r="54" class="ring-fill ring-forer" style="--percent:85.2" />
+                    </svg>
+                    <div class="ring-center-label"><span class="accent-primary">4.26</span><span
+                            class="ring-sub">/5</span></div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">全員同じ文章なのに「当たっている」と評価</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 27: 比較対照「確証バイアス」 ===== -->
+    <div class="scene" id="scene-27">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">確証バイアスの仕組み</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge safe-badge">記憶に残る</div>
+                    <div class="vs-title">当たった!</div>
+                    <div class="vs-desc">A型の人が几帳面<br>→「やっぱり！」</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge danger-badge">すぐ忘れる</div>
+                    <div class="vs-title">外れた…</div>
+                    <div class="vs-desc">A型なのにズボラ<br>→「例外だね」</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">50%しか当たっていなくても「よく当たる」と感じる</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 28: フロー図「自己成就予言」 ===== -->
+    <div class="scene" id="scene-28">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">自己成就予言のサイクル</h2>
+            <div class="cycle-visual stagger-item">
+                <div class="cycle-node cycle-node-1">
+                    <div class="cycle-icon">1</div>
+                    <div class="cycle-text">「B型だから<br>マイペース」<br>と信じる</div>
+                </div>
+                <div class="cycle-arrow">&darr;</div>
+                <div class="cycle-node cycle-node-2">
+                    <div class="cycle-icon">2</div>
+                    <div class="cycle-text">無意識に<br>マイペースな<br>行動を選ぶ</div>
+                </div>
+                <div class="cycle-arrow">&darr;</div>
+                <div class="cycle-node cycle-node-3">
+                    <div class="cycle-icon">3</div>
+                    <div class="cycle-text">「やっぱり<br>B型だから」<br>と確信</div>
+                </div>
+                <div class="cycle-arrow cycle-arrow-loop">&uarr;</div>
+            </div>
+            <div class="footnote stagger-item">信念→行動→確信…終わりのないループ</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 29: 比較対照「血液型 vs 占星術」 ===== -->
+    <div class="scene" id="scene-29">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">同じ仕組みの異なる文化</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge safe-badge">日本・韓国</div>
+                    <div class="vs-title">血液型</div>
+                    <div class="vs-desc">4タイプ<br>A / B / O / AB</div>
+                </div>
+                <div class="vs-divider stagger-item">=</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge safe-badge">欧米</div>
+                    <div class="vs-title">星座占い</div>
+                    <div class="vs-desc">12タイプ<br>おひつじ〜うお</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">バーナム効果・確証バイアス・自己成就予言 ― すべて共通</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 30: 注意喚起「楽しいだけじゃ済まない」 ===== -->
+    <div class="scene" id="scene-30">
+        <div class="content center-layout">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">「楽しいから」では<span class="accent-coral">済まない</span></div>
+                <div class="alert-sub">血液型性格診断には星座占いにはない深刻な実害がある</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 31: タイトルカード「楽しいだけでは済まない」 ===== -->
+    <div class="scene dark-scene" id="scene-31">
+        <canvas id="canvas-31" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral">DISCRIMINATION</div>
+            <h2 class="title-medium light-text stagger-item">「楽しいだけ」では<br><span class="accent-coral">済まない</span></h2>
+            <div class="title-sub light-text stagger-item">ブラッドタイプハラスメントの実態</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 32: 段階的リスト「ブラハラの実例」 ===== -->
+    <div class="scene dark-scene" id="scene-32">
+        <div class="content card-layout">
+            <h2 class="scene-title light-text stagger-item">ブラハラの実例</h2>
+            <div class="dark-list">
+                <div class="dark-item stagger-item">
+                    <div class="dark-icon">1</div>
+                    <div class="dark-content">
+                        <div class="dark-title">決めつけ発言</div>
+                        <div class="dark-desc">「B型だから自己中」「AB型は変わり者」</div>
+                    </div>
+                </div>
+                <div class="dark-item stagger-item">
+                    <div class="dark-icon">2</div>
+                    <div class="dark-content">
+                        <div class="dark-title">チーム分け差別</div>
+                        <div class="dark-desc">「B型だから別のグループにして」</div>
+                    </div>
+                </div>
+                <div class="dark-item stagger-item">
+                    <div class="dark-icon">3</div>
+                    <div class="dark-content">
+                        <div class="dark-title">採用差別</div>
+                        <div class="dark-desc">血液型を理由に不採用にする企業の存在</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 33: 引用カード「厚労省ガイドライン」 ===== -->
+    <div class="scene" id="scene-33">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">公的機関も問題視</h2>
+            <div class="quote-card quote-warning stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">採用面接で血液型を尋ねることは<br><span class="accent-coral">不適切</span></div>
+                <div class="quote-source">厚生労働省 公正な採用選考ガイドライン</div>
+            </div>
+            <div class="emphasis-sub stagger-item">B型男性の結婚率にも悪影響 ― RIETI調査</div>
+            <div class="footnote stagger-item">2009年にはBPOがテレビ局に要望書を提出</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 34: テキスト強調「差別が差別を生んだ」 ===== -->
+    <div class="scene" id="scene-34">
+        <canvas id="canvas-34" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">差別に対抗するための研究が</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-coral">新たな差別</span>を生んだ</div>
+            <div class="emphasis-sub stagger-item">歴史が教えるもっとも皮肉な教訓</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 35: まとめカード「3つのポイント」 ===== -->
+    <div class="scene" id="scene-35">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">今日の3つのポイント</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-primary">1</div>
+                    <div class="numbered-text">血液型と性格の関連は<br><span class="accent-primary">数万人規模の調査で完全に否定</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-teal">2</div>
+                    <div class="numbered-text">「当たる」はバーナム効果と確証バイアス<br><span class="accent-teal">心理の仕組みが生む錯覚</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-coral">3</div>
+                    <div class="numbered-text">血液型で人を判断することは<br><span class="accent-coral">差別とハラスメントにつながる</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 36: テキスト強調「核心メッセージ」 ===== -->
+    <div class="scene" id="scene-36">
+        <canvas id="canvas-36" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">血液型で性格は<span class="accent-coral">わからない</span></div>
+            <div class="emphasis-text-large stagger-item">でも人を<span class="accent-coral">傷つける</span>ことは<br>できてしまう</div>
+            <div class="emphasis-sub stagger-item">大事なのは血液型のラベルではなく、目の前のその人自身</div>
+        </div>
+    </div>
+
+    <!-- ===== Scene 37: エンディング ===== -->
+    <div class="scene" id="scene-37">
+        <canvas id="canvas-37" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <h2 class="title-medium stagger-item">ご視聴ありがとう<br>ございました</h2>
+            <div class="title-sub stagger-item">チャンネル登録お願いします</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

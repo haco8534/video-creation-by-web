@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お金で幸福は買えないは本当か？</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== BLOCK 1: 導入 ===== -->
+
+    <!-- Scene 0: タイトルカード -->
+    <div class="scene" id="scene-0">
+        <canvas id="canvas-0" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-amber">INTRODUCTION</div>
+            <h2 class="title-huge stagger-item">&ldquo;お金で幸福は買えない&rdquo;<br><span class="accent-amber">は本当か？</span></h2>
+            <div class="title-sub stagger-item">科学が出した意外な答え</div>
+        </div>
+    </div>
+
+    <!-- Scene 1: 数値インパクト「年収800万円＝幸福の限界？」 -->
+    <div class="scene" id="scene-1">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">年収800万円＝幸福の限界？</h2>
+            <div class="source-badge stagger-item">Kahneman & Deaton (2010) / PNAS / N=450,000+</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-amber">800</span><span class="num-unit">万円</span>
+            </div>
+            <div class="emphasis-sub stagger-item">この金額を超えると幸福度は頭打ち……とされていた</div>
+            <div class="footnote stagger-item">※ 原論文では年間世帯収入$75,000（2010年当時のレート換算）</div>
+        </div>
+    </div>
+
+    <!-- Scene 2: テキスト強調「この常識、最近ひっくり返されました」 -->
+    <div class="scene" id="scene-2">
+        <canvas id="canvas-2" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">この<span class="accent-amber">超有名な研究結果</span></div>
+            <div class="emphasis-text-large stagger-item">最近<span class="accent-coral">ひっくり返された</span></div>
+            <div class="emphasis-sub stagger-item">しかも提唱者カーネマン本人との共同研究で</div>
+            <div class="footnote stagger-item">Killingsworth, Kahneman & Mellers (2023) PNAS</div>
+        </div>
+    </div>
+
+    <!-- ===== BLOCK 2: 前提知識 ===== -->
+
+    <!-- Scene 3: 比較対照「感情的幸福 vs 人生評価」 -->
+    <div class="scene" id="scene-3">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">「幸福」には<span class="accent-primary">2種類</span>ある</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge safe-badge">TYPE A</div>
+                    <div class="vs-icon-circle accent-bg-teal">
+                        <svg viewBox="0 0 40 40" width="40" height="40">
+                            <circle cx="20" cy="20" r="14" fill="none" stroke="#fff" stroke-width="2" />
+                            <path d="M12 22 a8 8 0 0 0 16 0" fill="none" stroke="#fff" stroke-width="2"
+                                stroke-linecap="round" />
+                            <circle cx="14" cy="17" r="2" fill="#fff" />
+                            <circle cx="26" cy="17" r="2" fill="#fff" />
+                        </svg>
+                    </div>
+                    <div class="vs-title">感情的幸福</div>
+                    <div class="vs-desc">日々の気分・喜び・ストレスの頻度</div>
+                    <div class="vs-detail">Experienced Well-being</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge info-badge">TYPE B</div>
+                    <div class="vs-icon-circle accent-bg-primary">
+                        <svg viewBox="0 0 40 40" width="40" height="40">
+                            <rect x="8" y="12" width="24" height="18" rx="3" fill="none" stroke="#fff"
+                                stroke-width="2" />
+                            <line x1="8" y1="18" x2="32" y2="18" stroke="#fff" stroke-width="2" />
+                            <line x1="20" y1="18" x2="20" y2="30" stroke="#fff" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <div class="vs-title">人生評価</div>
+                    <div class="vs-desc">人生全体への満足度</div>
+                    <div class="vs-detail">Evaluative Well-being</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">この2つは独立した概念 ── 同じ「幸福度」でも測定対象が異なる</div>
+        </div>
+    </div>
+
+    <!-- Scene 4: 段階的リスト「感情的幸福の例」 -->
+    <div class="scene" id="scene-4">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">感情的幸福とは</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-teal">1</div>
+                    <div class="numbered-text">今日<span class="accent-teal">楽しかった</span>か</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-coral">2</div>
+                    <div class="numbered-text"><span class="accent-coral">ストレス</span>を感じたか</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-amber">3</div>
+                    <div class="numbered-text"><span class="accent-amber">怒り</span>を覚えたか</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">「今この瞬間」の幸福を測定する</div>
+            <div class="footnote stagger-item">スマートフォンアプリでリアルタイム計測するアプローチが近年主流</div>
+        </div>
+    </div>
+
+    <!-- Scene 5: 段階的リスト「人生評価の例」 -->
+    <div class="scene" id="scene-5">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">人生評価とは</h2>
+            <div class="life-eval-visual stagger-item">
+                <svg viewBox="0 0 320 220" width="320" height="220" class="ladder-svg">
+                    <rect x="60" y="10" width="12" height="200" rx="4" fill="#e0e7ff" />
+                    <rect x="248" y="10" width="12" height="200" rx="4" fill="#e0e7ff" />
+                    <line x1="72" y1="190" x2="248" y2="190" stroke="#c7d2fe" stroke-width="4" stroke-linecap="round" />
+                    <line x1="72" y1="150" x2="248" y2="150" stroke="#c7d2fe" stroke-width="4" stroke-linecap="round" />
+                    <line x1="72" y1="110" x2="248" y2="110" stroke="#c7d2fe" stroke-width="4" stroke-linecap="round" />
+                    <line x1="72" y1="70" x2="248" y2="70" stroke="#c7d2fe" stroke-width="4" stroke-linecap="round" />
+                    <line x1="72" y1="30" x2="248" y2="30" stroke="#c7d2fe" stroke-width="4" stroke-linecap="round" />
+                    <text x="40" y="195" text-anchor="end" fill="#6c757d" font-size="14" font-weight="700">0</text>
+                    <text x="40" y="75" text-anchor="end" fill="#6c757d" font-size="14" font-weight="700">8</text>
+                    <text x="40" y="35" text-anchor="end" fill="#4f46e5" font-size="14" font-weight="900">10</text>
+                    <circle cx="160" cy="70" r="12" fill="#4f46e5" class="ladder-dot" />
+                    <text x="180" y="75" fill="#4f46e5" font-size="16" font-weight="700">あなたの人生は？</text>
+                </svg>
+            </div>
+            <div class="emphasis-sub stagger-item">「自分の人生全体にどれくらい満足していますか？」（0〜10段階）</div>
+            <div class="footnote stagger-item">Cantril Self-Anchoring Scale（キャントリルの階段尺度）が代表的手法</div>
+        </div>
+    </div>
+
+    <!-- Scene 6: テキスト強調「同じ幸福度でも測っているものが違う」 -->
+    <div class="scene" id="scene-6">
+        <canvas id="canvas-6" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">「800万円で<span class="accent-coral">頭打ち</span>」は</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-teal">感情的幸福</span>だけの話</div>
+            <div class="emphasis-sub stagger-item"><span class="accent-primary">人生評価</span>は年収が上がるほどずっと上がり続けていた</div>
+            <div class="footnote stagger-item">メディアでは「幸福度」と一括りにされ、この重要な区別が省略されている</div>
+        </div>
+    </div>
+
+    <!-- ===== BLOCK 3: 年収800万円問題の真相 ===== -->
+
+    <!-- Scene 7: タイトルカード -->
+    <div class="scene" id="scene-7">
+        <canvas id="canvas-7" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary">TOPIC 1</div>
+            <h2 class="title-medium stagger-item">年収800万円問題の<br><span class="accent-primary">真相</span></h2>
+            <div class="title-sub stagger-item">3つの研究が描く物語</div>
+        </div>
+    </div>
+
+    <!-- Scene 8: 数値インパクト「45万人調査」 -->
+    <div class="scene" id="scene-8">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">第1章：2010年の結論</h2>
+            <div class="source-badge stagger-item">Kahneman & Deaton (2010) / PNAS</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-primary">45</span><span class="num-unit">万人+</span>
+            </div>
+            <div class="emphasis-sub stagger-item">Gallup-Healthways Well-Being Index のデータを分析</div>
+            <div class="footnote stagger-item">米国全体を代表する大規模調査</div>
+        </div>
+    </div>
+
+    <!-- Scene 9: 引用カード「カーネマンの結論」 -->
+    <div class="scene" id="scene-9">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">カーネマンの結論</h2>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">年収 <span class="accent-amber">$75,000</span> を超えると<br>感情的幸福は<span
+                        class="accent-coral">頭打ち</span>になる</div>
+                <div class="quote-source">Daniel Kahneman, Nobel Laureate, 2010</div>
+            </div>
+            <div class="emphasis-sub stagger-item">ノーベル賞受賞者の発表としてメディアで大々的に報じられた</div>
+        </div>
+    </div>
+
+    <!-- Scene 10: テキスト強調「11年後、異議を唱える男」 -->
+    <div class="scene dark-scene" id="scene-10">
+        <canvas id="canvas-10" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text light-text stagger-item">11年後</div>
+            <div class="emphasis-text-large light-text stagger-item">異議を唱える<span class="accent-amber">研究者</span>が現れた
+            </div>
+            <div class="emphasis-sub light-text-sub stagger-item">Matthew Killingsworth ── ペンシルベニア大学</div>
+        </div>
+    </div>
+
+    <!-- Scene 11: 数値インパクト「170万件」 -->
+    <div class="scene" id="scene-11">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">キリングスワースの武器</h2>
+            <div class="source-badge stagger-item">Killingsworth (2021) / PNAS / N=33,391</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-teal">170</span><span class="num-unit">万件+</span>
+            </div>
+            <div class="emphasis-sub stagger-item">スマホアプリによるリアルタイム幸福度レポート</div>
+            <div class="footnote stagger-item">33,391人の日常をリアルタイムで捕捉した前例のない規模</div>
+        </div>
+    </div>
+
+    <!-- Scene 12: 比較対照「カーネマン vs キリングスワース」 -->
+    <div class="scene" id="scene-12">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">測定方法の違い</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge info-badge">2010</div>
+                    <div class="vs-title">回顧型</div>
+                    <div class="vs-desc">「昨日どうだった？」</div>
+                    <div class="vs-detail">記憶に依存</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge safe-badge">2021</div>
+                    <div class="vs-title">リアルタイム型</div>
+                    <div class="vs-desc">「今この瞬間どう？」</div>
+                    <div class="vs-detail">記憶バイアスなし</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">キリングスワースの結論：$75,000以上でも幸福度は上がり続ける</div>
+        </div>
+    </div>
+
+    <!-- Scene 13: テキスト強調「2023年共同研究」 -->
+    <div class="scene" id="scene-13">
+        <canvas id="canvas-13" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">2023年</div>
+            <div class="emphasis-text-large stagger-item">まさかの<span class="accent-primary">共同研究</span></div>
+            <div class="emphasis-sub stagger-item">「敵対的共同研究」── 対立する研究者が同じデータを共同分析</div>
+            <div class="footnote stagger-item">Adversarial Collaboration：科学的対立を建設的に解決する手法</div>
+        </div>
+    </div>
+
+    <!-- Scene 14: フロー図「人による」 -->
+    <div class="scene" id="scene-14">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">2023年の結論：人による</h2>
+            <div class="source-badge stagger-item">Killingsworth, Kahneman & Mellers (2023) PNAS</div>
+            <div class="income-happiness-visual stagger-item">
+                <svg viewBox="0 0 480 260" width="480" height="260" class="income-svg">
+                    <!-- 軸 -->
+                    <line x1="60" y1="220" x2="460" y2="220" stroke="#cbd5e1" stroke-width="2" />
+                    <line x1="60" y1="220" x2="60" y2="20" stroke="#cbd5e1" stroke-width="2" />
+                    <text x="260" y="252" text-anchor="middle" fill="#6c757d" font-size="13" font-weight="700">年収</text>
+                    <text x="25" y="120" text-anchor="middle" fill="#6c757d" font-size="13" font-weight="700"
+                        transform="rotate(-90 25 120)">幸福度</text>
+                    <!-- $100k ライン -->
+                    <line x1="280" y1="20" x2="280" y2="220" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="6 4" />
+                    <text x="280" y="238" text-anchor="middle" fill="#94a3b8" font-size="11">$100k</text>
+                    <!-- 上位層ライン（加速） -->
+                    <path d="M80 190 Q200 160 280 110 Q360 50 440 20" fill="none" stroke="#14b8a6" stroke-width="3"
+                        class="trend-line trend-top" stroke-linecap="round" />
+                    <text x="445" y="18" fill="#14b8a6" font-size="12" font-weight="700">上位層</text>
+                    <!-- 大多数ライン -->
+                    <path d="M80 195 Q200 170 280 140 Q360 115 440 90" fill="none" stroke="#4f46e5" stroke-width="3"
+                        class="trend-line trend-majority" stroke-linecap="round" />
+                    <text x="445" y="88" fill="#4f46e5" font-size="12" font-weight="700">大多数</text>
+                    <!-- 下位20%ライン（頭打ち） -->
+                    <path d="M80 200 Q200 180 280 165 Q360 160 440 160" fill="none" stroke="#ef4444" stroke-width="3"
+                        class="trend-line trend-bottom" stroke-linecap="round" />
+                    <text x="445" y="158" fill="#ef4444" font-size="12" font-weight="700">下位20%</text>
+                </svg>
+            </div>
+            <div class="emphasis-sub stagger-item">大多数は上昇を続ける ── ただし対数的（倍々のお金で同じ幸福増分）</div>
+        </div>
+    </div>
+
+    <!-- ===== BLOCK 4: 宝くじ当選者 ===== -->
+
+    <!-- Scene 15: タイトルカード -->
+    <div class="scene" id="scene-15">
+        <canvas id="canvas-15" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral">TOPIC 2</div>
+            <h2 class="title-medium stagger-item">宝くじ当選者は<br><span class="accent-coral">幸せか？</span></h2>
+            <div class="title-sub stagger-item">幸福の錯覚と適応の心理学</div>
+        </div>
+    </div>
+
+    <!-- Scene 16: 引用カード「ブリックマン1978年」 -->
+    <div class="scene" id="scene-16">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">ブリックマンの発見</h2>
+            <div class="quote-card quote-warning stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">宝くじ高額当選者は<br>一般人と比べて<span class="accent-coral">有意に幸福ではなかった</span></div>
+                <div class="quote-source">Brickman, Coates & Janoff-Bulman, 1978, JPSP</div>
+            </div>
+            <div class="emphasis-sub stagger-item">3グループ比較：当選者 / 事故被害者 / 一般人</div>
+        </div>
+    </div>
+
+    <!-- Scene 17: 数値インパクト「22人」 -->
+    <div class="scene" id="scene-17">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">この研究の重大な弱点</h2>
+            <div class="source-badge stagger-item">Brickman et al. (1978) JPSP</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-coral">22</span><span class="num-unit">人</span>
+            </div>
+            <div class="emphasis-sub stagger-item">世界中で何十年も引用されてきた研究のサンプルサイズ</div>
+            <div class="footnote stagger-item">統制群もわずか22人。現代の基準では統計的検出力が著しく不足</div>
+        </div>
+    </div>
+
+    <!-- Scene 18: フロー図「快楽順応の仕組み」 -->
+    <div class="scene" id="scene-18">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">快楽順応（ヘドニック・トレッドミル）</h2>
+            <div class="treadmill-visual stagger-item">
+                <div class="treadmill-track">
+                    <div class="treadmill-runner">
+                        <svg viewBox="0 0 60 80" width="60" height="80">
+                            <circle cx="30" cy="16" r="12" fill="#4f46e5" />
+                            <line x1="30" y1="28" x2="30" y2="52" stroke="#4f46e5" stroke-width="4"
+                                stroke-linecap="round" />
+                            <line x1="30" y1="52" x2="18" y2="72" stroke="#4f46e5" stroke-width="3"
+                                stroke-linecap="round" />
+                            <line x1="30" y1="52" x2="42" y2="72" stroke="#4f46e5" stroke-width="3"
+                                stroke-linecap="round" />
+                            <line x1="30" y1="38" x2="14" y2="48" stroke="#4f46e5" stroke-width="3"
+                                stroke-linecap="round" />
+                            <line x1="30" y1="38" x2="46" y2="48" stroke="#4f46e5" stroke-width="3"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="treadmill-belt"></div>
+                </div>
+            </div>
+            <div class="flow-chain stagger-item">
+                <div class="flow-node">
+                    <div class="flow-year accent-amber">昇給!</div>
+                    <div class="flow-text"><span class="flow-name">幸福度UP</span></div>
+                </div>
+                <div class="flow-arrow">&rarr;</div>
+                <div class="flow-node">
+                    <div class="flow-year accent-coral">数ヶ月後</div>
+                    <div class="flow-text"><span class="flow-name">慣れる</span></div>
+                </div>
+                <div class="flow-arrow">&rarr;</div>
+                <div class="flow-node">
+                    <div class="flow-year">期待値UP</div>
+                    <div class="flow-text"><span class="flow-name">元に戻る</span></div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">良いことにも悪いことにも人はすぐ慣れてしまう</div>
+        </div>
+    </div>
+
+    <!-- Scene 19: 数値インパクト「3,362人×22年」 -->
+    <div class="scene" id="scene-19">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">最新の大規模追跡調査</h2>
+            <div class="source-badge stagger-item">Lindqvist, Östling & Cesarini / スウェーデン追跡研究</div>
+            <div class="dual-impact stagger-item">
+                <div class="dual-item">
+                    <div class="big-num accent-teal">3,362</div>
+                    <div class="num-unit">人</div>
+                </div>
+                <div class="dual-sep">&times;</div>
+                <div class="dual-item">
+                    <div class="big-num accent-primary">22</div>
+                    <div class="num-unit">年間</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">ブリックマンの22人 vs 最新の3,362人</div>
+            <div class="footnote stagger-item">宝くじ購入者を5〜22年追跡した大規模縦断研究</div>
+        </div>
+    </div>
+
+    <!-- Scene 20: 比較対照「1978年 vs 最新」 -->
+    <div class="scene" id="scene-20">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">結論は逆転した</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge danger-badge">1978</div>
+                    <div class="vs-title">当選者は幸福でない</div>
+                    <div class="vs-desc">N=22 / 短期調査</div>
+                    <div class="vs-detail">日常の楽しみ低下</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge safe-badge">最新</div>
+                    <div class="vs-title">当選者は満足度が高い</div>
+                    <div class="vs-desc">N=3,362 / 最長22年</div>
+                    <div class="vs-detail">時間が経っても持続</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">サンプルサイズと追跡期間の違いが結論を大きく変えた</div>
+        </div>
+    </div>
+
+    <!-- Scene 21: テキスト強調「イースタリンのパラドックス」 -->
+    <div class="scene" id="scene-21">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">もう1つのパラドックス</h2>
+            <div class="easterlin-visual stagger-item">
+                <svg viewBox="0 0 400 200" width="400" height="200" class="easterlin-svg">
+                    <!-- GDP矢印 -->
+                    <path d="M40 160 L180 60" stroke="#f59e0b" stroke-width="3" fill="none"
+                        marker-end="url(#arrowAmber)" class="gdp-line" />
+                    <text x="110" y="90" fill="#f59e0b" font-size="14" font-weight="700"
+                        transform="rotate(-33 110 90)">GDP</text>
+                    <!-- 幸福度フラット -->
+                    <path d="M200 100 L360 100" stroke="#ef4444" stroke-width="3" fill="none" stroke-dasharray="0"
+                        class="happiness-flat" />
+                    <text x="280" y="88" fill="#ef4444" font-size="14" font-weight="700">幸福度</text>
+                    <defs>
+                        <marker id="arrowAmber" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b" />
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            <div class="emphasis-text stagger-item">国全体が豊かになっても</div>
+            <div class="emphasis-text-large stagger-item">平均幸福度は<span class="accent-coral">上がらない</span></div>
+            <div class="emphasis-sub stagger-item">理由：周囲も同時に裕福になると、相対的な位置は変わらない</div>
+            <div class="footnote stagger-item">Easterlin (1974) "Does Economic Growth Improve the Human Lot?"</div>
+        </div>
+    </div>
+
+    <!-- ===== BLOCK 5: 4つの使い方 ===== -->
+
+    <!-- Scene 22: タイトルカード -->
+    <div class="scene" id="scene-22">
+        <canvas id="canvas-22" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-teal">TOPIC 3</div>
+            <h2 class="title-medium stagger-item">科学が示す<br><span class="accent-teal">4つの使い方</span></h2>
+            <div class="title-sub stagger-item">お金で幸福を買う正しい方法</div>
+        </div>
+    </div>
+
+    <!-- Scene 23: 横並びカード「4つの概要」 -->
+    <div class="scene" id="scene-23">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">幸福を買う4つのルール</h2>
+            <div class="quad-card">
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-primary">1</div>
+                    <div class="factor-name">経験を買う</div>
+                    <div class="factor-desc">モノより体験</div>
+                </div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-teal">2</div>
+                    <div class="factor-name">人のために使う</div>
+                    <div class="factor-desc">向社会的支出</div>
+                </div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-amber">3</div>
+                    <div class="factor-name">時間を買う</div>
+                    <div class="factor-desc">自由時間の確保</div>
+                </div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-coral">4</div>
+                    <div class="factor-name">比較をやめる</div>
+                    <div class="factor-desc">相対評価の罠</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">すべて査読付き論文で裏付けられた方法</div>
+        </div>
+    </div>
+
+    <!-- Scene 24: 引用カード「ギロヴィッチ教授」 -->
+    <div class="scene" id="scene-24">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">ルール1：経験を買う</h2>
+            <div class="source-badge stagger-item">Van Boven & Gilovich (2003) / JPSP / Cornell University</div>
+            <div class="experience-visual stagger-item">
+                <div class="exp-item exp-thing">
+                    <svg viewBox="0 0 60 60" width="48" height="48">
+                        <rect x="8" y="15" width="44" height="32" rx="4" fill="#ef4444" opacity="0.2" />
+                        <rect x="12" y="8" width="36" height="8" rx="3" fill="#ef4444" opacity="0.4" />
+                    </svg>
+                    <div class="exp-label accent-coral">ブランドバッグ</div>
+                    <div class="exp-bar">
+                        <div class="exp-fill exp-fill-thing" style="--w:35%"></div>
+                    </div>
+                </div>
+                <div class="exp-vs">vs</div>
+                <div class="exp-item exp-experience">
+                    <svg viewBox="0 0 60 60" width="48" height="48">
+                        <path d="M10 45 Q20 20 30 30 Q40 15 50 25" fill="none" stroke="#14b8a6" stroke-width="3"
+                            stroke-linecap="round" />
+                        <circle cx="50" cy="25" r="4" fill="#14b8a6" />
+                        <circle cx="15" cy="15" r="8" fill="#f59e0b" opacity="0.5" />
+                    </svg>
+                    <div class="exp-label accent-teal">旅行・体験</div>
+                    <div class="exp-bar">
+                        <div class="exp-fill exp-fill-exp" style="--w:80%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="numbered-list compact-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-teal">1</div>
+                    <div class="numbered-text"><span class="accent-teal">記憶</span>として残る</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-teal">2</div>
+                    <div class="numbered-text">他人と<span class="accent-teal">比較しにくい</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-teal">3</div>
+                    <div class="numbered-text"><span class="accent-teal">人格の一部</span>になる</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-teal">4</div>
+                    <div class="numbered-text"><span class="accent-teal">期待段階</span>から楽しい</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 25: 数値インパクト「5ドル」 -->
+    <div class="scene" id="scene-25">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">ルール2：人のために使う</h2>
+            <div class="source-badge stagger-item">Dunn, Aknin & Norton (2008) / Science</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-teal">5</span><span class="num-unit">ドル</span>
+            </div>
+            <div class="emphasis-sub stagger-item">たった<span class="accent-teal">約700円</span>でも効果あり</div>
+            <div class="prosocial-visual stagger-item">
+                <div class="prosocial-from">自分</div>
+                <div class="prosocial-arrow">
+                    <svg viewBox="0 0 80 30" width="80" height="30">
+                        <path d="M5 15 L65 15" stroke="#14b8a6" stroke-width="3" fill="none"
+                            marker-end="url(#arrowTeal)" />
+                        <defs>
+                            <marker id="arrowTeal" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#14b8a6" />
+                            </marker>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="prosocial-to">他者</div>
+                <div class="prosocial-result">= 幸福度UP</div>
+            </div>
+            <div class="footnote stagger-item">文化を超えて世界中で確認された普遍的傾向</div>
+        </div>
+    </div>
+
+    <!-- Scene 26: フロー図「お金→時間→幸福」 -->
+    <div class="scene" id="scene-26">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">ルール3：時間を買う</h2>
+            <div class="source-badge stagger-item">Whillans et al. (2017) / PNAS</div>
+            <div class="flow-chain time-flow stagger-item">
+                <div class="flow-node flow-node-money">
+                    <div class="flow-year accent-amber">STEP 1</div>
+                    <div class="flow-text"><span class="flow-name">お金</span><br><span class="flow-sub">家事代行・配達等</span>
+                    </div>
+                </div>
+                <div class="flow-arrow">&rarr;</div>
+                <div class="flow-node flow-node-time">
+                    <div class="flow-year accent-primary">STEP 2</div>
+                    <div class="flow-text"><span class="flow-name">自由時間</span><br><span class="flow-sub">好きなことに使う</span>
+                    </div>
+                </div>
+                <div class="flow-arrow">&rarr;</div>
+                <div class="flow-node flow-node-happy">
+                    <div class="flow-year accent-teal">STEP 3</div>
+                    <div class="flow-text"><span class="flow-name">幸福</span><br><span class="flow-sub">コントロール感UP</span>
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">お金の最大の力は「コントロール感」と「自律性」を高めること</div>
+            <div class="footnote stagger-item">選択肢が増え、自分の望む生き方ができるようになることが幸福の鍵</div>
+        </div>
+    </div>
+
+    <!-- Scene 27: テキスト強調「幸福は金額ではなく使い方で決まる」 -->
+    <div class="scene" id="scene-27">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">ルール4：比較をやめる</h2>
+            <div class="relative-income-visual stagger-item">
+                <div class="ri-scenario ri-happy">
+                    <div class="ri-you">あなた<br><span class="accent-teal">500万</span></div>
+                    <div class="ri-others">周囲<br><span class="ri-others-val">400万</span></div>
+                    <div class="ri-face">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <circle cx="24" cy="24" r="20" fill="#ccfbf1" stroke="#14b8a6" stroke-width="2" />
+                            <circle cx="17" cy="20" r="2" fill="#14b8a6" />
+                            <circle cx="31" cy="20" r="2" fill="#14b8a6" />
+                            <path d="M15 30 a9 7 0 0 0 18 0" fill="none" stroke="#14b8a6" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="ri-scenario ri-sad">
+                    <div class="ri-you">あなた<br><span class="accent-coral">500万</span></div>
+                    <div class="ri-others">周囲<br><span class="ri-others-val">600万</span></div>
+                    <div class="ri-face">
+                        <svg viewBox="0 0 48 48" width="40" height="40">
+                            <circle cx="24" cy="24" r="20" fill="#fee2e2" stroke="#ef4444" stroke-width="2" />
+                            <circle cx="17" cy="20" r="2" fill="#ef4444" />
+                            <circle cx="31" cy="20" r="2" fill="#ef4444" />
+                            <path d="M15 34 a9 7 0 0 1 18 0" fill="none" stroke="#ef4444" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">同じ年収500万円でも、周囲との比較で幸福度は真逆になる</div>
+            <div class="footnote stagger-item">Luttmer (2005) QJE / 相対所得仮説</div>
+        </div>
+    </div>
+
+    <!-- ===== BLOCK 6: まとめ ===== -->
+
+    <!-- Scene 28: まとめカード「今日わかったこと3つ」 -->
+    <div class="scene" id="scene-28">
+        <canvas id="canvas-28" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-amber">SUMMARY</div>
+            <h2 class="title-medium stagger-item">今日わかったこと<br><span class="accent-amber">3つ</span></h2>
+        </div>
+    </div>
+
+    <!-- Scene 29: 段階的リスト「3つのポイント」 -->
+    <div class="scene" id="scene-29">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">まとめ</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-primary">1</div>
+                    <div class="numbered-text">「800万円で頭打ち」は<span class="accent-primary">不正確</span><br><span
+                            class="text-sub">大多数は上がり続ける（ただし対数的）</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-coral">2</div>
+                    <div class="numbered-text">人は良いことにも<span class="accent-coral">すぐ慣れる</span><br><span
+                            class="text-sub">快楽順応がリセットを引き起こす</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-teal">3</div>
+                    <div class="numbered-text">「<span class="accent-teal">使い方</span>」が幸福の鍵<br><span
+                            class="text-sub">経験・他者・時間・比較回避の4原則</span></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">Kahneman, Killingsworth, Brickman, Gilovich, Dunn, Easterlin … 数十年の研究の結論
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 30: テキスト強調「お金で幸福は買える──正しい使い方を知っていれば」 -->
+    <div class="scene" id="scene-30">
+        <canvas id="canvas-30" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">お金で幸福は<span class="accent-teal">買える</span></div>
+            <div class="emphasis-text-large stagger-item">正しい<span class="accent-amber">使い方</span>を<br>知っていれば</div>
+            <div class="emphasis-sub stagger-item">大事なのは「いくら持っているか」よりも「どう使うか」</div>
+        </div>
+    </div>
+
+    <!-- Scene 31: テキスト強調「不幸を防ぐ力」 -->
+    <div class="scene" id="scene-31">
+        <div class="content center-layout">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">お金は<span class="accent-coral">不幸を防ぐ力</span>も持っている</div>
+                <div class="alert-sub">「お金で幸福は買えない」と言い切れるのは、すでに十分持っている人だけかもしれない</div>
+            </div>
+            <div class="emphasis-sub stagger-item">生活に困っている人にとって、お金は確実に幸福度を改善する</div>
+            <div class="footnote stagger-item">基本的ニーズの充足は幸福の前提条件</div>
+        </div>
+    </div>
+
+    <!-- Scene 32: タイトルカード「エンディング」 -->
+    <div class="scene" id="scene-32">
+        <canvas id="canvas-32" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <h2 class="title-medium stagger-item">ご視聴ありがとう<br>ございました</h2>
+            <div class="title-sub stagger-item">チャンネル登録 & グッドボタンお願いします</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

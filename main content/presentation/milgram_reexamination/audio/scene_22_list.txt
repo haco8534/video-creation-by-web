@@ -1,0 +1,3 @@
+file 'D:/myfolder/動画生成/main content/presentation/milgram_reexamination/audio/scene_22_00.wav'
+file 'D:/myfolder/動画生成/main content/presentation/milgram_reexamination/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/milgram_reexamination/audio/scene_22_01.wav'

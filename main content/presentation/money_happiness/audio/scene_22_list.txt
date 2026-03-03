@@ -1,0 +1,3 @@
+file 'D:/myfolder/動画生成/main content/presentation/money_happiness/audio/scene_22_00.wav'
+file 'D:/myfolder/動画生成/main content/presentation/money_happiness/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/money_happiness/audio/scene_22_01.wav'

@@ -1,0 +1,82 @@
+[
+    {
+        "surface": "Delayed",
+        "pronunciation": "ディレイド",
+        "accent_type": 1
+    },
+    {
+        "surface": "Onset",
+        "pronunciation": "オンセット",
+        "accent_type": 1
+    },
+    {
+        "surface": "Muscle",
+        "pronunciation": "マッスル",
+        "accent_type": 1
+    },
+    {
+        "surface": "Soreness",
+        "pronunciation": "ソーネス",
+        "accent_type": 1
+    },
+    {
+        "surface": "Repeated",
+        "pronunciation": "リピーテッド",
+        "accent_type": 1
+    },
+    {
+        "surface": "Bout",
+        "pronunciation": "バウト",
+        "accent_type": 1
+    },
+    {
+        "surface": "Effect",
+        "pronunciation": "エフェクト",
+        "accent_type": 1
+    },
+    {
+        "surface": "A.V.",
+        "pronunciation": "エーブイ",
+        "accent_type": 3
+    },
+    {
+        "surface": "UC",
+        "pronunciation": "ユーシー",
+        "accent_type": 3
+    },
+    {
+        "surface": "乳酸シャトル",
+        "pronunciation": "ニューサンシャトル",
+        "accent_type": 1
+    },
+    {
+        "surface": "糖新生",
+        "pronunciation": "トウシンセイ",
+        "accent_type": 3
+    },
+    {
+        "surface": "微細損傷",
+        "pronunciation": "ビサイソンショー",
+        "accent_type": 5
+    },
+    {
+        "surface": "遅発性筋肉痛",
+        "pronunciation": "チハツセイキンニクツー",
+        "accent_type": 1
+    },
+    {
+        "surface": "痛覚",
+        "pronunciation": "ツーカク",
+        "accent_type": 0
+    },
+    {
+        "surface": "筋線維",
+        "pronunciation": "キンセンイ",
+        "accent_type": 3
+    },
+    {
+        "surface": "発痛物質",
+        "pronunciation": "ハッツーブッシツ",
+        "accent_type": 5
+    }
+]

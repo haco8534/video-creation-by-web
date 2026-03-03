@@ -68,6 +68,22 @@ BGMは `public/bgm/Mineral.mp3` に配置済み（共通素材）。もし別の
 
 ---
 
+## STEP 1.5: scene_map.json の title を検証（必須）
+
+字幕データを生成する前に、`scene_map.json` の `title` フィールドにビジュアルパターン名が混入していないか**必ず**チェックする。
+
+// turbo
+
+```powershell
+node -e "const fs=require('fs'); const d=JSON.parse(fs.readFileSync('{main_content_dir}/scene_map.json','utf8')); const bad=['タイトルカード','数値インパクト','フロー図','テキスト強調','比較対照','段階的リスト','引用カード','タイムライン','脳のSVG','まとめ3ポイント','エンディング']; let errors=0; d.scenes.forEach(s=>{const found=bad.filter(b=>s.title.startsWith(b)||s.title.includes('「')); if(found.length>0){console.log('❌ Scene '+s.id+': \"'+s.title+'\" ← パターン名混入: '+found.join(', ')); errors++;} else {console.log('✅ Scene '+s.id+': \"'+s.title+'\"');}}); if(errors>0){console.log('\n🚨 '+errors+'件のtitleを修正してください'); process.exit(1);} else {console.log('\n✅ 全titleが正常です');}"
+```
+
+> 🚨 **エラーがある場合**: scene_map.json の title を修正してから STEP 2 に進むこと。
+> `<!-- SCENE: ビジュアルパターン「コンテンツタイトル」 -->` の「コンテンツタイトル」部分のみを title に入れる。
+> 括弧「」も除去すること。
+
+---
+
 ## STEP 2: 字幕タイミングデータを自動生成
 
 // turbo

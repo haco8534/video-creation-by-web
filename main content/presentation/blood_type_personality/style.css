@@ -1,0 +1,939 @@
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #f8f9fa;
+    color: #1a1a2e;
+}
+
+/* ============================================================
+   COLOR TOKENS
+   ============================================================ */
+:root {
+    --primary: #4f46e5;
+    --primary-light: #eef2ff;
+    --coral: #ef4444;
+    --coral-light: #fef2f2;
+    --teal: #0d9488;
+    --teal-light: #f0fdfa;
+    --amber: #d97706;
+    --amber-light: #fffbeb;
+    --dark-bg: #0f172a;
+    --dark-card: #1e293b;
+    --dark-text: #e2e8f0;
+}
+
+/* Accent color helpers */
+.accent-primary {
+    color: var(--primary);
+}
+
+.accent-coral {
+    color: var(--coral);
+}
+
+.accent-teal {
+    color: var(--teal);
+}
+
+.accent-amber {
+    color: var(--amber);
+}
+
+.accent-bg-primary {
+    background: var(--primary);
+    color: #fff;
+}
+
+.accent-bg-coral {
+    background: var(--coral);
+    color: #fff;
+}
+
+.accent-bg-teal {
+    background: var(--teal);
+    color: #fff;
+}
+
+.accent-bg-amber {
+    background: var(--amber);
+    color: #fff;
+}
+
+/* ============================================================
+   SCENE SYSTEM
+   ============================================================ */
+.scene {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.scene.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scene.dark-scene {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, #1e293b 100%);
+    color: var(--dark-text);
+}
+
+.bg-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+}
+
+/* ============================================================
+   LAYOUT MODES
+   ============================================================ */
+.center-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2%;
+}
+
+.card-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+}
+
+/* ============================================================
+   STAGGER ANIMATIONS
+   ============================================================ */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(24px);
+}
+
+.scene.active .stagger-item {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.scene.active .stagger-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.scene.active .stagger-item:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.scene.active .stagger-item:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.scene.active .stagger-item:nth-child(4) {
+    animation-delay: 0.55s;
+}
+
+.scene.active .stagger-item:nth-child(5) {
+    animation-delay: 0.7s;
+}
+
+.scene.active .stagger-item:nth-child(6) {
+    animation-delay: 0.85s;
+}
+
+.scene.active .stagger-item:nth-child(7) {
+    animation-delay: 1.0s;
+}
+
+.scene.active .stagger-item:nth-child(8) {
+    animation-delay: 1.15s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+.title-large {
+    font-size: clamp(36px, 5vw, 72px);
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.title-medium {
+    font-size: clamp(28px, 4vw, 56px);
+    font-weight: 900;
+    line-height: 1.25;
+}
+
+.title-sub {
+    font-size: clamp(14px, 1.6vw, 24px);
+    color: #64748b;
+    font-weight: 400;
+}
+
+.scene-title {
+    font-size: clamp(20px, 2.8vw, 40px);
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.dark-scene .scene-title,
+.scene-title.light-text {
+    color: var(--dark-text);
+}
+
+.light-text {
+    color: var(--dark-text) !important;
+}
+
+/* ============================================================
+   BADGES
+   ============================================================ */
+.section-badge {
+    display: inline-block;
+    padding: 0.4em 1.4em;
+    border-radius: 100px;
+    font-size: clamp(10px, 1.2vw, 16px);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.source-badge {
+    display: inline-block;
+    padding: 0.3em 1em;
+    border-radius: 100px;
+    font-size: clamp(9px, 1vw, 14px);
+    background: var(--primary-light);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* ============================================================
+   IMPACT NUMBERS
+   ============================================================ */
+.impact-number {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.1em;
+}
+
+.big-num {
+    font-size: clamp(48px, 10vw, 140px);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.num-unit {
+    font-size: clamp(18px, 2.5vw, 36px);
+    font-weight: 700;
+    color: #64748b;
+}
+
+/* ============================================================
+   EMPHASIS TEXTS
+   ============================================================ */
+.emphasis-text {
+    font-size: clamp(16px, 2.2vw, 32px);
+    font-weight: 700;
+    color: #334155;
+}
+
+.emphasis-text-large {
+    font-size: clamp(28px, 4.5vw, 64px);
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.emphasis-sub {
+    font-size: clamp(13px, 1.4vw, 20px);
+    color: #64748b;
+    font-weight: 500;
+    max-width: 80%;
+}
+
+.footnote {
+    font-size: clamp(10px, 1vw, 14px);
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+/* ============================================================
+   QUOTE CARD
+   ============================================================ */
+.quote-card {
+    background: #fff;
+    border-left: 4px solid var(--primary);
+    border-radius: 12px;
+    padding: 4% 5%;
+    max-width: 80%;
+    text-align: left;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.quote-warning {
+    border-left-color: var(--coral);
+}
+
+.quote-mark {
+    font-size: clamp(24px, 3vw, 48px);
+    color: var(--primary);
+    line-height: 1;
+    font-weight: 900;
+}
+
+.quote-text {
+    font-size: clamp(14px, 1.8vw, 26px);
+    font-weight: 700;
+    margin: 1% 0;
+}
+
+.quote-source {
+    font-size: clamp(10px, 1vw, 14px);
+    color: #94a3b8;
+}
+
+/* ============================================================
+   VS / COMPARISON
+   ============================================================ */
+.vs-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+    width: 100%;
+}
+
+.vs-card {
+    flex: 1;
+    max-width: 35%;
+    background: #fff;
+    padding: 4%;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.vs-badge {
+    display: inline-block;
+    padding: 0.25em 0.8em;
+    border-radius: 100px;
+    font-size: clamp(9px, 1vw, 13px);
+    font-weight: 700;
+    margin-bottom: 1%;
+}
+
+.safe-badge {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.danger-badge {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.vs-title {
+    font-size: clamp(18px, 2.4vw, 34px);
+    font-weight: 900;
+}
+
+.vs-desc {
+    font-size: clamp(12px, 1.2vw, 18px);
+    color: #64748b;
+    margin-top: 2%;
+    line-height: 1.5;
+}
+
+.vs-divider {
+    font-size: clamp(28px, 4vw, 56px);
+    font-weight: 900;
+    color: #d1d5db;
+}
+
+.comparison-note {
+    font-size: clamp(12px, 1.3vw, 18px);
+    color: #64748b;
+    font-weight: 600;
+    margin-top: 2%;
+}
+
+/* ============================================================
+   BLOOD TYPE VISUALS
+   ============================================================ */
+.blood-type-visual {
+    width: 100%;
+}
+
+.blood-cell-container {
+    display: flex;
+    justify-content: center;
+    gap: 4%;
+    width: 100%;
+}
+
+.blood-cell {
+    text-align: center;
+    flex: 1;
+    max-width: 18%;
+}
+
+.blood-cell svg {
+    width: 80%;
+    height: auto;
+}
+
+.cell-body {
+    fill: #fecaca;
+    stroke: #ef4444;
+    stroke-width: 2;
+}
+
+.cell-body-o {
+    fill: #e2e8f0;
+    stroke: #94a3b8;
+}
+
+.antigen-a {
+    fill: var(--primary);
+}
+
+.antigen-b {
+    fill: var(--teal);
+}
+
+.cell-label {
+    font-size: clamp(14px, 1.8vw, 24px);
+    font-weight: 900;
+    margin-top: 4%;
+}
+
+.cell-desc {
+    font-size: clamp(10px, 1vw, 14px);
+    color: #94a3b8;
+}
+
+/* ============================================================
+   FLOW CHART
+   ============================================================ */
+.flow-chain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5%;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.flow-node {
+    background: #fff;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2% 2.5%;
+    text-align: center;
+    min-width: 15%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.flow-node-danger {
+    border-color: var(--coral);
+    background: var(--coral-light);
+}
+
+.flow-node-warning {
+    border-color: var(--amber);
+    background: var(--amber-light);
+}
+
+.flow-year {
+    font-size: clamp(10px, 1.2vw, 16px);
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.flow-node-danger .flow-year {
+    color: var(--coral);
+}
+
+.flow-node-warning .flow-year {
+    color: var(--amber);
+}
+
+.flow-text {
+    font-size: clamp(10px, 1vw, 14px);
+    line-height: 1.4;
+    margin-top: 4%;
+}
+
+.flow-name {
+    font-weight: 700;
+    font-size: clamp(11px, 1.1vw, 15px);
+}
+
+.flow-sub {
+    font-size: clamp(8px, 0.8vw, 11px);
+    color: #94a3b8;
+}
+
+.flow-arrow {
+    font-size: clamp(16px, 2vw, 28px);
+    color: #d1d5db;
+    font-weight: 900;
+}
+
+/* ============================================================
+   NUMBERED LIST
+   ============================================================ */
+.numbered-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+    width: 100%;
+    max-width: 70%;
+}
+
+.numbered-item {
+    display: flex;
+    align-items: center;
+    gap: 3%;
+    background: #fff;
+    padding: 2.5% 4%;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.number-circle {
+    width: clamp(32px, 4vw, 52px);
+    height: clamp(32px, 4vw, 52px);
+    border-radius: 50%;
+    background: var(--primary-light);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(14px, 1.8vw, 24px);
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+.numbered-text {
+    font-size: clamp(13px, 1.4vw, 20px);
+    text-align: left;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+/* ============================================================
+   TRIPLE CARD
+   ============================================================ */
+.triple-card {
+    display: flex;
+    gap: 3%;
+    justify-content: center;
+    width: 100%;
+}
+
+.factor-card {
+    flex: 1;
+    max-width: 28%;
+    background: #fff;
+    padding: 3.5%;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.factor-icon {
+    width: clamp(36px, 4.5vw, 60px);
+    height: clamp(36px, 4.5vw, 60px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 5%;
+    font-size: clamp(14px, 1.6vw, 22px);
+    font-weight: 900;
+}
+
+.factor-name {
+    font-size: clamp(14px, 1.6vw, 22px);
+    font-weight: 900;
+}
+
+.factor-desc {
+    font-size: clamp(10px, 1vw, 14px);
+    color: #64748b;
+    line-height: 1.5;
+    margin-top: 4%;
+}
+
+/* ============================================================
+   RESULT BAR
+   ============================================================ */
+.result-visual {
+    width: 80%;
+}
+
+.result-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 2%;
+    margin-bottom: 3%;
+}
+
+.result-bar-label {
+    font-size: clamp(11px, 1.1vw, 15px);
+    font-weight: 700;
+    min-width: 15%;
+    text-align: right;
+    color: #64748b;
+}
+
+.result-bar-track {
+    flex: 1;
+    background: #f1f5f9;
+    border-radius: 8px;
+    height: clamp(30px, 4vw, 48px);
+    overflow: hidden;
+}
+
+.result-bar-fill {
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(11px, 1.2vw, 16px);
+    font-weight: 700;
+    color: #fff;
+    width: 0;
+}
+
+.scene.active .result-bar-fill {
+    animation: growBar 1s ease forwards 0.5s;
+}
+
+@keyframes growBar {
+    to {
+        width: var(--w);
+    }
+}
+
+.result-bar-none {
+    background: linear-gradient(90deg, #94a3b8, #64748b);
+}
+
+.result-bar-found {
+    background: var(--coral);
+}
+
+/* ============================================================
+   BIG FIVE VISUAL
+   ============================================================ */
+.big5-visual {
+    display: flex;
+    gap: 3%;
+    justify-content: center;
+    width: 100%;
+}
+
+.big5-item {
+    text-align: center;
+}
+
+.big5-icon {
+    width: clamp(36px, 5vw, 64px);
+    height: clamp(36px, 5vw, 64px);
+    border-radius: 50%;
+    background: var(--primary-light);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(16px, 2vw, 28px);
+    font-weight: 900;
+    margin: 0 auto 8%;
+}
+
+.big5-label {
+    font-size: clamp(10px, 1.1vw, 15px);
+    font-weight: 700;
+}
+
+/* ============================================================
+   FORER RING CHART
+   ============================================================ */
+.forer-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.forer-score {
+    position: relative;
+    width: clamp(100px, 15vw, 200px);
+    height: clamp(100px, 15vw, 200px);
+}
+
+.forer-score svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.ring-bg {
+    fill: none;
+    stroke: #e2e8f0;
+    stroke-width: 8;
+}
+
+.ring-fill {
+    fill: none;
+    stroke: var(--primary);
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-dasharray: 339.292;
+    stroke-dashoffset: 339.292;
+}
+
+.scene.active .ring-forer {
+    animation: drawRing 1.5s ease forwards 0.5s;
+}
+
+@keyframes drawRing {
+    to {
+        stroke-dashoffset: calc(339.292 * (1 - var(--percent) / 100));
+    }
+}
+
+.ring-center-label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(20px, 3vw, 40px);
+    font-weight: 900;
+}
+
+.ring-sub {
+    font-size: clamp(12px, 1.5vw, 20px);
+    color: #94a3b8;
+    font-weight: 700;
+}
+
+/* ============================================================
+   SELF-FULFILLING CYCLE
+   ============================================================ */
+.cycle-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1%;
+    width: 100%;
+}
+
+.cycle-node {
+    display: flex;
+    align-items: center;
+    gap: 3%;
+    background: #fff;
+    padding: 2% 4%;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    min-width: 50%;
+}
+
+.cycle-node-1 {
+    border-left: 4px solid var(--amber);
+}
+
+.cycle-node-2 {
+    border-left: 4px solid var(--primary);
+}
+
+.cycle-node-3 {
+    border-left: 4px solid var(--coral);
+}
+
+.cycle-icon {
+    width: clamp(28px, 3.5vw, 44px);
+    height: clamp(28px, 3.5vw, 44px);
+    border-radius: 50%;
+    background: var(--primary-light);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: clamp(12px, 1.4vw, 18px);
+    flex-shrink: 0;
+}
+
+.cycle-text {
+    font-size: clamp(11px, 1.2vw, 16px);
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.cycle-arrow {
+    font-size: clamp(16px, 2vw, 28px);
+    color: #d1d5db;
+    font-weight: 900;
+}
+
+.cycle-arrow-loop {
+    color: var(--coral);
+}
+
+/* ============================================================
+   ALERT CARD
+   ============================================================ */
+.alert-card {
+    background: var(--coral-light);
+    border: 2px solid var(--coral);
+    border-radius: 16px;
+    padding: 4% 6%;
+    max-width: 70%;
+    text-align: center;
+}
+
+.alert-icon {
+    width: clamp(36px, 4.5vw, 56px);
+    height: clamp(36px, 4.5vw, 56px);
+    border-radius: 50%;
+    background: var(--coral);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(18px, 2.2vw, 28px);
+    font-weight: 900;
+    margin: 0 auto 2%;
+}
+
+.alert-title {
+    font-size: clamp(16px, 2vw, 28px);
+    font-weight: 900;
+}
+
+.alert-sub {
+    font-size: clamp(12px, 1.2vw, 18px);
+    color: #64748b;
+    margin-top: 2%;
+}
+
+/* ============================================================
+   DARK / DISCRIMINATION SCENE
+   ============================================================ */
+.dark-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+    width: 100%;
+    max-width: 70%;
+}
+
+.dark-item {
+    display: flex;
+    align-items: center;
+    gap: 3%;
+    background: var(--dark-card);
+    padding: 3% 4%;
+    border-radius: 12px;
+    border-left: 4px solid var(--coral);
+}
+
+.dark-icon {
+    width: clamp(28px, 3.5vw, 44px);
+    height: clamp(28px, 3.5vw, 44px);
+    border-radius: 50%;
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--coral);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: clamp(12px, 1.4vw, 18px);
+    flex-shrink: 0;
+}
+
+.dark-content {
+    flex: 1;
+}
+
+.dark-title {
+    font-size: clamp(14px, 1.6vw, 22px);
+    font-weight: 700;
+    color: #f1f5f9;
+}
+
+.dark-desc {
+    font-size: clamp(11px, 1.1vw, 15px);
+    color: #94a3b8;
+    margin-top: 2%;
+}
+
+/* ============================================================
+   PULSE ANIMATION (for key numbers)
+   ============================================================ */
+.scene.active .big-num {
+    animation: fadeInUp 0.6s ease forwards, pulseBig 2s ease-in-out 1s infinite;
+}
+
+@keyframes pulseBig {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — never use vw/vh for element sizing
+   All sizes use 100% or clamp-based values
+   ============================================================ */

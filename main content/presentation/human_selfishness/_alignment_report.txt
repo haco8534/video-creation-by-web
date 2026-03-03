@@ -1,0 +1,136 @@
+SCRIPT SCENES: 33
+HTML SCENES: 33
+
+=== SIDE BY SIDE ===
+
+Scene 0: OK
+  Script: タイトルカード | 人間は利己的な生き物？
+  HTML:   タイトルカード
+
+Scene 1: OK
+  Script: 段階的リスト | 「利己的」を支える有名な言葉たち
+  HTML:   段階的リスト 「利己的」を支える有名な言葉たち
+
+Scene 2: OK
+  Script: テキスト強調 | 「利己的な遺伝子」──世界一誤解されたタイトル
+  HTML:   テキスト強調 「利己的な遺伝子」──世界一誤解されたタイトル
+
+Scene 3: OK
+  Script: 段階的リスト | 「利己的」を支える3つの柱
+  HTML:   段階的リスト 「利己的」を支える3つの柱
+
+Scene 4: OK
+  Script: 引用カード | ホッブズの言葉
+  HTML:   引用カード ホッブズの言葉
+
+Scene 5: OK
+  Script: テキスト強調 | ホモ・エコノミクスの仮定
+  HTML:   テキスト強調 ホモ・エコノミクス
+
+Scene 6: OK
+  Script: テキスト強調 | 「利己的な遺伝子」の衝撃
+  HTML:   テキスト強調 利己的な遺伝子の衝撃
+
+Scene 7: OK
+  Script: 注意喚起 | でも、この3本柱が揺らいでいるとしたら？
+  HTML:   注意喚起 3本柱が揺らいでいる
+
+Scene 8: OK
+  Script: タイトルカード | あの名著の真実
+  HTML:   タイトルカード TOPIC 1
+
+Scene 9: OK
+  Script: 比較対照 | 遺伝子の「利己性」と人間の行動は別物
+  HTML:   比較対照 遺伝子 vs 個体
+
+Scene 10: OK
+  Script: 引用カード | ドーキンス自身の言葉
+  HTML:   引用カード ドーキンス自身の言葉
+
+Scene 11: OK
+  Script: テキスト強調 | むしろ、利他行動を説明する理論だった
+  HTML:   テキスト強調 利他行動を説明する理論
+
+Scene 12: OK
+  Script: フロー図 | ハミルトンの法則 rB > C
+  HTML:   数式 ハミルトンの法則 rB > C
+
+Scene 13: OK
+  Script: 引用カード | ダーウィンも「協力」を語っていた
+  HTML:   引用カード ダーウィンも協力を語っていた
+
+Scene 14: OK
+  Script: タイトルカード | 科学で「利己的な人間」を検証する
+  HTML:   タイトルカード TOPIC 2
+
+Scene 15: OK
+  Script: フロー図 | 最後通牒ゲームのルール
+  HTML:   フロー図 最後通牒ゲームのルール
+
+Scene 16: OK
+  Script: 比較対照 | 経済学の予測 vs 実際の人間
+  HTML:   比較対照 経済学の予測 vs 実際
+
+Scene 17: OK
+  Script: 数値インパクト | 提案者は平均40%を相手に渡す
+  HTML:   数値インパクト 最後通牒ゲーム結果
+
+Scene 18: OK
+  Script: 比較対照 | 独裁者ゲーム──拒否権なしでも分ける
+  HTML:   比較対照 独裁者ゲーム
+
+Scene 19: OK
+  Script: 段階的リスト | 脳科学が示す「利他の報酬」
+  HTML:   段階的リスト 脳科学のエビデンス
+
+Scene 20: OK
+  Script: テキスト強調 | 人を助けること＝脳の報酬
+  HTML:   テキスト強調 オキシトシン
+
+Scene 21: OK
+  Script: 注意喚起 | 心理的利己主義の「循環論法」
+  HTML:   注意喚起 心理的利己主義の循環論法
+
+Scene 22: OK
+  Script: タイトルカード | 協力──進化の第3の柱
+  HTML:   タイトルカード TOPIC 3
+
+Scene 23: OK
+  Script: 段階的リスト | 協力の5つのメカニズム
+  HTML:   段階的リスト 協力の5つのメカニズム
+
+Scene 24: OK
+  Script: 横並びカード | 5つのメカニズムの概要
+  HTML:   横並びカード 間接互恵と評判
+
+Scene 25: MISMATCH
+  Script: 段階的リスト | ネットワーク選択と集団選択
+  HTML:   引用カード ノワック「進化の第3の柱」
+
+Scene 26: OK
+  Script: 数値インパクト | 阪神大震災──75%が住民の手で救出
+  HTML:   数値インパクト 阪神大震災 75%
+
+Scene 27: OK
+  Script: テキスト強調 | 危機が引き出す人間の「本性」
+  HTML:   テキスト強調 危機で助け合う
+
+Scene 28: OK
+  Script: 注意喚起 | 利他的罰──ズルい人を許さない心理
+  HTML:   注意喚起 利他的罰
+
+Scene 29: OK
+  Script: まとめカード | 今日の3つのポイント
+  HTML:   段階的リスト 3つのポイント
+
+Scene 30: OK
+  Script: 段階的リスト | 3つのポイントの振り返り
+  HTML:   段階的リスト 3つのポイントの振り返り
+
+Scene 31: OK
+  Script: テキスト強調 | 利己と利他はコインの裏表
+  HTML:   テキスト強調 コインの裏表
+
+Scene 32: OK
+  Script: テキスト強調 | 人間の本性は「可能性」
+  HTML:   テキスト強調 「どちらにもなれる」

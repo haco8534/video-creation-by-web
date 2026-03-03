@@ -1,0 +1,57 @@
+[
+    {
+        "surface": "ホモ・エコノミクス",
+        "pronunciation": "ホモエコノミクス",
+        "accent_type": 5
+    },
+    {
+        "surface": "ドーキンス",
+        "pronunciation": "ドーキンス",
+        "accent_type": 1
+    },
+    {
+        "surface": "ハミルトン",
+        "pronunciation": "ハミルトン",
+        "accent_type": 3
+    },
+    {
+        "surface": "トリヴァース",
+        "pronunciation": "トリヴァース",
+        "accent_type": 3
+    },
+    {
+        "surface": "ノワック",
+        "pronunciation": "ノワック",
+        "accent_type": 1
+    },
+    {
+        "surface": "ブレグマン",
+        "pronunciation": "ブレグマン",
+        "accent_type": 3
+    },
+    {
+        "surface": "fMRI",
+        "pronunciation": "エフエムアールアイ",
+        "accent_type": 7
+    },
+    {
+        "surface": "rB",
+        "pronunciation": "アールビー",
+        "accent_type": 3
+    },
+    {
+        "surface": "オキシトシン",
+        "pronunciation": "オキシトシン",
+        "accent_type": 4
+    },
+    {
+        "surface": "PNAS",
+        "pronunciation": "ピーナス",
+        "accent_type": 1
+    },
+    {
+        "surface": "カーネマン",
+        "pronunciation": "カーネマン",
+        "accent_type": 3
+    }
+]

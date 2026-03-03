@@ -1,0 +1,44 @@
+# YouTube概要欄：「お金で幸福は買えない」は本当か？——科学が出した意外な答え
+
+<!-- 以下をそのままYouTubeの概要欄にコピー＆ペーストして使う -->
+
+「年収800万円を超えたら幸福度は頭打ち」——この超有名な研究を覚えていますか？
+2010年にノーベル経済学賞のカーネマンが発表したこの結論、実は2021年に真逆の研究が登場し、2023年には両者が「敵対的共同研究」で決着をつけました。
+
+この動画では、お金と幸福の関係を科学的に深掘りします。
+宝くじ当選者の研究（あの有名な研究のサンプルはたった22人！？）、快楽順応の心理学、そして研究が示す「お金で幸福を買う4つの方法」まで、最新の論文をもとにずんだもんとめたんがわかりやすく解説します。
+
+▼ もくじ（タイムスタンプ）
+00:00 オープニング — 年収800万円のウソとホント
+02:00 前提知識 — 「幸福」って何を測ってるの？
+04:30 年収800万円問題の真相 — 3つの研究が描く物語
+09:00 宝くじ当選者は幸せか？ — 幸福の錯覚と適応
+13:00 科学が示す4つの使い方 — お金で幸福を買う方法
+17:00 まとめ — お金で幸福は買える、ただし……
+<!-- ※時間は推定値です。動画完成後に実際の時間に合わせて微調整してください -->
+
+▼ 参考文献・一次資料
+この動画の内容は以下の学術論文・公的資料等に基づいています。
+
+【学術論文】
+• Kahneman, D. & Deaton, A. (2010). "High Income Improves Evaluation of Life But Not Emotional Well-Being." PNAS, 107(38), 16489-16493.
+• Killingsworth, M. A. (2021). "Experienced well-being rises with income, even above $75,000 per year." PNAS, 118(4), e2016976118.
+• Killingsworth, M. A., Kahneman, D. & Mellers, B. (2023). "Income and emotional well-being: A conflict resolved." PNAS, 120(10), e2208661120.
+• Brickman, P., Coates, D. & Janoff-Bulman, R. (1978). "Lottery Winners and Accident Victims: Is Happiness Relative?" Journal of Personality and Social Psychology, 36(8), 917–927.
+• Easterlin, R. A. (1974). "Does Economic Growth Improve the Human Lot?" In Nations and Households in Economic Growth, Academic Press.
+• Van Boven, L. & Gilovich, T. (2003). "To Do or to Have? That Is the Question." Journal of Personality and Social Psychology, 85(6), 1193-1202.
+• Dunn, E. W., Aknin, L. B. & Norton, M. I. (2008). "Spending Money on Others Promotes Happiness." Science, 319(5870), 1687-1688.
+• Whillans, A. V. et al. (2017). "Buying time promotes happiness." PNAS, 114(32), 8523-8527.
+• Luttmer, E. F. P. (2005). "Neighbors as Negatives: Relative Earnings and Well-Being." Quarterly Journal of Economics, 120(3), 963-1002.
+• Jebb, A. T. et al. (2018). "Happiness, income satiation and turning points around the world." Nature Human Behaviour, 2, 33-38.
+
+【書籍】
+• Dunn, E. & Norton, M. (2013). 『Happy Money: The Science of Happier Spending』 Simon & Schuster
+
+---
+
+📘 このチャンネルについて
+一次情報と研究データに基づきながら、難しいテーマをずんだもんとめたんの対話で楽しくわかりやすく解説するチャンネルです。
+「わかりやすく親しみやすい。でも、ちゃんと本当のことを言っている。」を大切にしています。
+
+#お金と幸福 #幸福度 #カーネマン #行動経済学 #心理学

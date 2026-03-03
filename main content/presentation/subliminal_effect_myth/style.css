@@ -1,0 +1,1167 @@
+/* ============================================================
+   Design Tokens
+   ============================================================ */
+:root {
+    --bg: #0c0a1a;
+    --surface: #161230;
+    --text: #e8e6f0;
+    --text-dim: #a09cb8;
+    --primary: #7c3aed;
+    --primary-glow: #a78bfa;
+    --coral: #f43f5e;
+    --coral-glow: #fb7185;
+    --teal: #14b8a6;
+    --teal-glow: #2dd4bf;
+    --amber: #f59e0b;
+    --amber-glow: #fbbf24;
+    --card-bg: rgba(22, 18, 48, 0.92);
+    --card-border: rgba(124, 58, 237, 0.18);
+    --radius: 16px;
+    --radius-sm: 10px;
+    --font: 'Noto Sans JP', sans-serif;
+}
+
+/* ============================================================
+   Reset & Base
+   ============================================================ */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ============================================================
+   Scene Framework
+   ============================================================ */
+.scene {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    background: var(--bg);
+    width: 100%;
+    height: 100%;
+}
+
+.scene.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scene.active .stagger-item {
+    animation: staggerIn 0.6s ease forwards;
+}
+
+.scene.active .stagger-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.scene.active .stagger-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .stagger-item:nth-child(3) {
+    animation-delay: 0.35s;
+}
+
+.scene.active .stagger-item:nth-child(4) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .stagger-item:nth-child(5) {
+    animation-delay: 0.65s;
+}
+
+.scene.active .stagger-item:nth-child(6) {
+    animation-delay: 0.8s;
+}
+
+.scene.active .stagger-item:nth-child(7) {
+    animation-delay: 0.95s;
+}
+
+.stagger-item {
+    opacity: 0;
+    transform: translateY(18px);
+}
+
+.bg-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    width: 88%;
+    max-width: 1100px;
+}
+
+/* Dark scene variant */
+.dark-scene {
+    background: #0a0512;
+}
+
+/* ============================================================
+   Layouts
+   ============================================================ */
+.center-layout {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+}
+
+.card-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+/* ============================================================
+   Typography
+   ============================================================ */
+.title-medium {
+    font-size: clamp(36px, 4.2vw, 64px);
+    font-weight: 900;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+.title-sub {
+    font-size: clamp(15px, 1.6vw, 22px);
+    color: var(--text-dim);
+    font-weight: 400;
+}
+
+.scene-title {
+    font-size: clamp(26px, 2.8vw, 40px);
+    font-weight: 900;
+    letter-spacing: -0.01em;
+}
+
+.light-text {
+    color: #f0eef8;
+}
+
+/* Accent colors */
+.accent-primary {
+    color: var(--primary-glow);
+}
+
+.accent-coral {
+    color: var(--coral);
+}
+
+.accent-teal {
+    color: var(--teal-glow);
+}
+
+.accent-amber {
+    color: var(--amber);
+}
+
+/* ============================================================
+   Section Badges
+   ============================================================ */
+.section-badge {
+    display: inline-block;
+    padding: 6px 20px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.accent-bg-primary {
+    background: var(--primary);
+}
+
+.accent-bg-coral {
+    background: var(--coral);
+}
+
+.accent-bg-teal {
+    background: var(--teal);
+}
+
+.accent-bg-amber {
+    background: var(--amber);
+}
+
+/* ============================================================
+   Source Badge
+   ============================================================ */
+.source-badge {
+    display: inline-block;
+    padding: 5px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    color: var(--text-dim);
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    background: rgba(124, 58, 237, 0.06);
+}
+
+/* ============================================================
+   Impact Numbers
+   ============================================================ */
+.big-num {
+    font-size: clamp(60px, 7vw, 108px);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.num-unit {
+    font-size: clamp(20px, 2.4vw, 32px);
+    font-weight: 700;
+    color: var(--text-dim);
+    margin-left: 4px;
+}
+
+.impact-number {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.impact-result {
+    font-size: 32px;
+    color: var(--text-dim);
+}
+
+/* Dual Impact */
+.dual-impact {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.impact-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 30px 44px;
+    text-align: center;
+}
+
+.impact-label {
+    font-size: 14px;
+    color: var(--text-dim);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+}
+
+/* Dual Result */
+.dual-result {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.result-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 28px 36px;
+    text-align: center;
+    min-width: 220px;
+    border: 1px solid var(--card-border);
+}
+
+.result-objective {
+    border-color: rgba(244, 63, 94, 0.3);
+}
+
+.result-subjective {
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+.result-type {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--text-dim);
+    margin-bottom: 10px;
+}
+
+.result-desc {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+/* ============================================================
+   Emphasis Text
+   ============================================================ */
+.emphasis-text {
+    font-size: clamp(18px, 2vw, 28px);
+    color: var(--text-dim);
+    font-weight: 400;
+}
+
+.emphasis-text-large {
+    font-size: clamp(30px, 3.6vw, 54px);
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+.emphasis-sub {
+    font-size: clamp(14px, 1.5vw, 20px);
+    color: var(--text-dim);
+}
+
+.footnote {
+    font-size: clamp(11px, 1vw, 14px);
+    color: rgba(160, 156, 184, 0.6);
+}
+
+.comparison-note {
+    font-size: clamp(13px, 1.2vw, 16px);
+    color: var(--text-dim);
+    padding: 10px 20px;
+    border-left: 3px solid var(--primary);
+    background: rgba(124, 58, 237, 0.05);
+    border-radius: 0 8px 8px 0;
+    text-align: left;
+    max-width: 700px;
+}
+
+/* ============================================================
+   Quote
+   ============================================================ */
+.quote-inline {
+    font-size: clamp(16px, 1.8vw, 24px);
+    font-style: italic;
+    color: var(--amber);
+    padding: 12px 24px;
+    border-left: 3px solid var(--amber);
+    max-width: 600px;
+    text-align: left;
+}
+
+.quote-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 32px 40px;
+    text-align: center;
+    max-width: 650px;
+}
+
+.quote-warning {
+    border-color: rgba(244, 63, 94, 0.3);
+    background: rgba(244, 63, 94, 0.05);
+}
+
+.quote-warm {
+    border-color: rgba(124, 58, 237, 0.3);
+    background: rgba(124, 58, 237, 0.06);
+}
+
+.quote-mark {
+    font-size: 48px;
+    line-height: 0.8;
+    color: var(--primary-glow);
+    opacity: 0.5;
+}
+
+.quote-text {
+    font-size: clamp(18px, 2vw, 28px);
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 8px 0 12px;
+}
+
+.quote-source {
+    font-size: 13px;
+    color: var(--text-dim);
+}
+
+/* ============================================================
+   Numbered List
+   ============================================================ */
+.numbered-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 700px;
+    width: 100%;
+}
+
+.numbered-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-sm);
+    padding: 16px 20px;
+}
+
+.number-circle {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.numbered-text {
+    font-size: clamp(14px, 1.4vw, 18px);
+    line-height: 1.5;
+}
+
+/* ============================================================
+   VS / Comparison
+   ============================================================ */
+.vs-container {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.vs-container.compact {
+    gap: 16px;
+}
+
+.vs-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 24px 32px;
+    text-align: center;
+    min-width: 200px;
+    max-width: 300px;
+    flex: 1;
+}
+
+.vs-badge {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+}
+
+.safe-badge {
+    background: rgba(20, 184, 166, 0.15);
+    color: var(--teal-glow);
+    border: 1px solid rgba(20, 184, 166, 0.3);
+}
+
+.danger-badge {
+    background: rgba(244, 63, 94, 0.12);
+    color: var(--coral);
+    border: 1px solid rgba(244, 63, 94, 0.3);
+}
+
+.vs-title {
+    font-size: clamp(16px, 1.6vw, 22px);
+    font-weight: 900;
+    margin: 8px 0;
+}
+
+.vs-desc {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.5;
+}
+
+.vs-detail {
+    font-size: 13px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.vs-divider {
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 900;
+    color: var(--text-dim);
+    opacity: 0.5;
+}
+
+/* ============================================================
+   Flow Chain
+   ============================================================ */
+.flow-chain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.vertical-flow {
+    flex-direction: column;
+    gap: 8px;
+}
+
+.flow-node {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-sm);
+    padding: 16px 22px;
+    text-align: center;
+    min-width: 160px;
+}
+
+.flow-year {
+    font-size: 13px;
+    font-weight: 900;
+    color: var(--primary-glow);
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+}
+
+.flow-text {
+    font-size: clamp(12px, 1.2vw, 16px);
+    line-height: 1.5;
+    color: var(--text-dim);
+}
+
+.flow-name {
+    color: var(--text);
+    font-weight: 700;
+}
+
+.flow-arrow {
+    font-size: 24px;
+    color: var(--primary-glow);
+    opacity: 0.5;
+}
+
+.flow-arrow-down {
+    font-size: 20px;
+    color: var(--primary-glow);
+    opacity: 0.5;
+}
+
+/* ============================================================
+   Brain SVG
+   ============================================================ */
+.brain-visual {
+    width: 100%;
+    max-width: 340px;
+}
+
+.brain-svg {
+    width: 100%;
+    height: auto;
+}
+
+.brain-label {
+    font-size: 10px;
+    fill: var(--text-dim);
+    text-anchor: middle;
+    font-family: var(--font);
+}
+
+.brain-hotspot {
+    fill: var(--primary);
+    opacity: 0.6;
+}
+
+.scene.active .hotspot-1 {
+    animation: hotspotPulse 2s ease infinite;
+}
+
+.scene.active .hotspot-2 {
+    animation: hotspotPulse 2s ease 0.3s infinite;
+}
+
+.scene.active .hotspot-3 {
+    animation: hotspotPulse 2s ease 0.6s infinite;
+}
+
+.scene.active .hotspot-4 {
+    animation: hotspotPulse 2s ease 0.9s infinite;
+}
+
+/* ============================================================
+   Alert Card
+   ============================================================ */
+.alert-card {
+    background: rgba(244, 63, 94, 0.06);
+    border: 1px solid rgba(244, 63, 94, 0.25);
+    border-radius: var(--radius);
+    padding: 24px 32px;
+    text-align: center;
+    max-width: 650px;
+}
+
+.alert-info {
+    background: rgba(124, 58, 237, 0.06);
+    border-color: rgba(124, 58, 237, 0.25);
+}
+
+.alert-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--coral);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 18px;
+    margin: 0 auto 12px;
+}
+
+.alert-info .alert-icon {
+    background: var(--primary);
+}
+
+.alert-title {
+    font-size: clamp(16px, 1.6vw, 22px);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.alert-sub {
+    font-size: 14px;
+    color: var(--text-dim);
+    margin-top: 8px;
+}
+
+/* ============================================================
+   Experiment Visual
+   ============================================================ */
+.experiment-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.exp-step {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+    text-align: center;
+    min-width: 180px;
+}
+
+.exp-icon {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--primary-glow);
+    margin-bottom: 10px;
+}
+
+.exp-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-dim);
+}
+
+.exp-arrow {
+    font-size: 28px;
+    color: var(--primary-glow);
+    opacity: 0.5;
+}
+
+/* ============================================================
+   Swap Visual
+   ============================================================ */
+.swap-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.swap-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 20px 28px;
+    text-align: center;
+    min-width: 180px;
+}
+
+.swap-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+}
+
+.swap-content {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+}
+
+.swap-memory {
+    background: rgba(124, 58, 237, 0.15);
+    color: var(--primary-glow);
+}
+
+.swap-esteem {
+    background: rgba(245, 158, 11, 0.15);
+    color: var(--amber);
+}
+
+.swap-arrow {
+    font-size: 20px;
+    color: var(--text-dim);
+    margin: 6px 0;
+}
+
+.swap-icon {
+    font-size: 28px;
+    color: var(--coral);
+    font-weight: 900;
+}
+
+/* ============================================================
+   Meta-Analysis Bar
+   ============================================================ */
+.meta-analysis-visual {
+    width: 100%;
+    max-width: 600px;
+}
+
+.meta-bar-container {
+    text-align: left;
+    padding: 20px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    border: 1px solid var(--card-border);
+}
+
+.meta-label {
+    font-size: 14px;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+}
+
+.bar-track {
+    width: 100%;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(90deg, var(--coral), var(--coral-glow));
+}
+
+.scene.active .bar-negligible {
+    animation: barGrow 1.2s ease forwards;
+}
+
+.meta-result {
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+}
+
+/* ============================================================
+   Bias Flow
+   ============================================================ */
+.bias-visual {
+    max-width: 400px;
+}
+
+.bias-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.bias-step {
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+}
+
+.bias-belief {
+    background: rgba(124, 58, 237, 0.12);
+    color: var(--primary-glow);
+    border: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+.bias-search {
+    background: rgba(245, 158, 11, 0.12);
+    color: var(--amber);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.bias-confirm {
+    background: rgba(244, 63, 94, 0.12);
+    color: var(--coral);
+    border: 1px solid rgba(244, 63, 94, 0.3);
+}
+
+.bias-arrow {
+    font-size: 18px;
+    color: var(--text-dim);
+    opacity: 0.5;
+}
+
+/* ============================================================
+   Dark Scene Items
+   ============================================================ */
+.dark-note {
+    font-size: clamp(14px, 1.4vw, 18px);
+    color: rgba(240, 238, 248, 0.6);
+    line-height: 1.6;
+    text-align: center;
+}
+
+.dark-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 650px;
+    width: 100%;
+}
+
+.dark-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 20px;
+    background: rgba(22, 18, 48, 0.6);
+    border: 1px solid rgba(244, 63, 94, 0.15);
+    border-radius: var(--radius-sm);
+}
+
+.dark-icon {
+    flex-shrink: 0;
+    font-size: 13px;
+    font-weight: 900;
+    color: var(--coral);
+    padding: 6px 12px;
+    background: rgba(244, 63, 94, 0.1);
+    border-radius: 6px;
+}
+
+.dark-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #f0eef8;
+    margin-bottom: 4px;
+}
+
+.dark-desc {
+    font-size: 14px;
+    color: rgba(240, 238, 248, 0.6);
+    line-height: 1.5;
+}
+
+/* ============================================================
+   Summary Cards
+   ============================================================ */
+.summary-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 700px;
+    width: 100%;
+}
+
+.summary-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+}
+
+.summary-num {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.summary-text {
+    font-size: clamp(15px, 1.5vw, 20px);
+    line-height: 1.5;
+}
+
+/* ============================================================
+   Animations (minimum 8 @keyframes)
+   ============================================================ */
+@keyframes staggerIn {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes hotspotPulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+        r: 14;
+    }
+
+    50% {
+        opacity: 0.9;
+        r: 18;
+    }
+}
+
+@keyframes barGrow {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--w, 3%);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 12px rgba(124, 58, 237, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 24px rgba(124, 58, 237, 0.4);
+    }
+}
+
+@keyframes borderShimmer {
+    0% {
+        border-color: rgba(124, 58, 237, 0.15);
+    }
+
+    50% {
+        border-color: rgba(124, 58, 237, 0.35);
+    }
+
+    100% {
+        border-color: rgba(124, 58, 237, 0.15);
+    }
+}
+
+@keyframes floatUp {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes textGlow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 8px rgba(124, 58, 237, 0.2);
+    }
+
+    50% {
+        text-shadow: 0 0 16px rgba(124, 58, 237, 0.45);
+    }
+}
+
+/* Apply micro-animations */
+.scene.active .impact-card {
+    animation: fadeInScale 0.5s ease 0.3s forwards, glowPulse 3s ease infinite 1s;
+    opacity: 0;
+}
+
+.scene.active .vs-left {
+    animation: slideInLeft 0.5s ease 0.3s forwards;
+    opacity: 0;
+}
+
+.scene.active .vs-right {
+    animation: slideInRight 0.5s ease 0.3s forwards;
+    opacity: 0;
+}
+
+.scene.active .emphasis-text-large {
+    animation: fadeInScale 0.6s ease 0.2s forwards;
+    opacity: 0;
+}
+
+.scene.active .quote-card {
+    animation: scaleIn 0.5s ease 0.3s forwards, borderShimmer 3s ease infinite 1s;
+    opacity: 0;
+}
+
+.scene.active .alert-card {
+    animation: fadeInScale 0.5s ease 0.15s forwards;
+    opacity: 0;
+}
+
+.scene.active .flow-node {
+    animation: scaleIn 0.4s ease forwards;
+    opacity: 0;
+}
+
+.scene.active .swap-card {
+    animation: fadeInScale 0.5s ease 0.2s forwards;
+    opacity: 0;
+}
+
+.scene.active .result-card {
+    animation: fadeInScale 0.5s ease 0.3s forwards;
+    opacity: 0;
+}
+
+.scene.active .summary-card {
+    animation: slideInRight 0.5s ease forwards;
+    opacity: 0;
+}
+
+.scene.active .summary-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .summary-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.scene.active .summary-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.scene.active .bias-step {
+    animation: fadeInScale 0.4s ease forwards;
+    opacity: 0;
+}
+
+.scene.active .bias-belief {
+    animation-delay: 0.2s;
+}
+
+.scene.active .bias-search {
+    animation-delay: 0.4s;
+}
+
+.scene.active .bias-confirm {
+    animation-delay: 0.6s;
+}
+
+/* Title glow */
+.scene.active .title-medium {
+    animation: textGlow 3s ease infinite;
+}

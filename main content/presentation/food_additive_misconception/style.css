@@ -1,0 +1,1569 @@
+/* ========================================
+   食品添加物は危険？の大誤解 - Style
+   Theme: Health/Science - Green & Indigo
+   ======================================== */
+
+/* === Design Tokens === */
+:root {
+    --bg: #f0f4f8;
+    --text: #1a1a2e;
+    --text-light: #6c757d;
+    --primary: #4f46e5;
+    --primary-light: #e0e7ff;
+    --teal: #14b8a6;
+    --teal-light: #ccfbf1;
+    --coral: #ef4444;
+    --coral-light: #fee2e2;
+    --amber: #f59e0b;
+    --amber-light: #fef3c7;
+    --purple: #8b5cf6;
+    --purple-light: #ede9fe;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.1);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* === Reset & Base === */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* === Scene Base === */
+.scene {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    overflow: hidden;
+}
+
+.scene.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: sceneFadeIn 0.5s ease both;
+}
+
+/* === Canvas Background === */
+.bg-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* === Content Containers === */
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    width: 90%;
+}
+
+.center-layout {
+    text-align: center;
+}
+
+.card-layout {
+    text-align: center;
+}
+
+/* === Typography === */
+.title-huge {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+}
+
+.title-medium {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.title-sub {
+    font-size: 22px;
+    color: var(--text-light);
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+.scene-title {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.emphasis-text {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-light);
+}
+
+.emphasis-text-large {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 16px;
+}
+
+.emphasis-sub {
+    font-size: 20px;
+    color: var(--text);
+    margin-top: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.footnote {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-top: 12px;
+    font-style: italic;
+}
+
+/* === Accent Colors === */
+.accent-primary {
+    color: var(--primary);
+}
+
+.accent-teal {
+    color: var(--teal);
+}
+
+.accent-coral {
+    color: var(--coral);
+}
+
+.accent-amber {
+    color: var(--amber);
+}
+
+.accent-purple {
+    color: var(--purple);
+}
+
+/* === Accent Backgrounds === */
+.accent-bg-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.accent-bg-teal {
+    background: var(--teal);
+    color: white;
+}
+
+.accent-bg-coral {
+    background: var(--coral);
+    color: white;
+}
+
+.accent-bg-amber {
+    background: var(--amber);
+    color: white;
+}
+
+/* === Section Badge === */
+.section-badge {
+    display: inline-block;
+    padding: 6px 24px;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* === Source Badge === */
+.source-badge {
+    display: inline-block;
+    padding: 4px 16px;
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+/* === Impact Number === */
+.impact-number {
+    margin: 20px 0 8px;
+}
+
+.big-num {
+    font-size: 96px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -3px;
+}
+
+.num-unit {
+    font-size: 36px;
+    font-weight: 700;
+    margin-left: 4px;
+    color: var(--text-light);
+}
+
+/* === Quote Card === */
+.quote-card {
+    background: var(--card-bg);
+    padding: 32px 40px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--primary);
+    text-align: left;
+    margin: 20px auto;
+    max-width: 800px;
+    position: relative;
+}
+
+.quote-card.quote-warning {
+    border-left-color: var(--coral);
+}
+
+.quote-card.quote-warm {
+    border-left-color: var(--amber);
+}
+
+.quote-mark {
+    font-size: 60px;
+    color: var(--primary);
+    opacity: 0.2;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.quote-text {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    padding-left: 20px;
+}
+
+.quote-source {
+    font-size: 14px;
+    color: var(--text-light);
+    padding-left: 20px;
+}
+
+/* === VS Container === */
+.vs-container {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.vs-card {
+    background: var(--card-bg);
+    padding: 24px 28px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    flex: 1;
+    max-width: 340px;
+    text-align: center;
+}
+
+.vs-card-safe {
+    border: 2px solid var(--teal);
+}
+
+.vs-left {
+    border-top: 4px solid var(--coral);
+}
+
+.vs-right {
+    border-top: 4px solid var(--teal);
+}
+
+.vs-badge {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.safe-badge {
+    background: var(--teal-light);
+    color: var(--teal);
+}
+
+.danger-badge {
+    background: var(--coral-light);
+    color: var(--coral);
+}
+
+.vs-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.vs-desc {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.vs-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--text-light);
+    min-width: 40px;
+}
+
+.comparison-note {
+    font-size: 16px;
+    color: var(--text);
+    margin-top: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* === Numbered List === */
+.numbered-list {
+    margin: 16px 0;
+    text-align: left;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.numbered-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 20px;
+    margin-bottom: 10px;
+    background: var(--card-bg);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow);
+}
+
+.number-circle {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.numbered-text {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* === Triple Card === */
+.triple-card {
+    display: flex;
+    gap: 16px;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.factor-card {
+    background: var(--card-bg);
+    padding: 24px 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    flex: 1;
+    max-width: 260px;
+    text-align: center;
+}
+
+.factor-card.factor-danger {
+    border-bottom: 4px solid var(--coral);
+}
+
+.factor-card.factor-safe {
+    border-bottom: 4px solid var(--teal);
+}
+
+.factor-icon {
+    margin-bottom: 10px;
+}
+
+.poison-icon {
+    filter: drop-shadow(0 2px 8px rgba(239, 68, 68, 0.3));
+}
+
+.factor-name {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 6px;
+}
+
+.factor-desc {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* === Flow Chain === */
+.flow-chain,
+.safety-flow {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+    margin: 20px 0;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.flow-node {
+    background: var(--card-bg);
+    padding: 16px 14px;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow);
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+    border-top: 3px solid var(--primary);
+}
+
+.flow-node-highlight {
+    border-top-color: var(--coral);
+    background: var(--coral-light);
+}
+
+.flow-year {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.flow-node-highlight .flow-year {
+    color: var(--coral);
+}
+
+.flow-text {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.flow-name {
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.flow-sub {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+.flow-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--primary);
+    font-weight: 900;
+    min-width: 30px;
+}
+
+/* === Alert Card === */
+.alert-card {
+    background: var(--card-bg);
+    padding: 28px 32px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--coral);
+    text-align: left;
+    margin: 16px auto;
+    max-width: 700px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.alert-card.alert-warm {
+    border-left-color: var(--amber);
+}
+
+.alert-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    background: var(--coral);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.alert-icon-warm {
+    background: var(--amber);
+}
+
+.alert-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.alert-sub {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+/* === Dark Scene === */
+.dark-scene {
+    background: #1a1a2e !important;
+    color: #e0e0e0;
+}
+
+.dark-scene .scene-title {
+    color: #e8e8e8;
+}
+
+.light-text {
+    color: #e0e0e0 !important;
+}
+
+.dark-list {
+    margin: 16px 0;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dark-item {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 16px 20px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--primary);
+}
+
+.dark-icon {
+    font-size: 14px;
+    font-weight: 900;
+    color: var(--primary);
+    min-width: 50px;
+    text-align: center;
+}
+
+.dark-icon-alert {
+    color: var(--coral) !important;
+}
+
+.dark-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.dark-desc {
+    font-size: 14px;
+    color: #a0a0a0;
+}
+
+/* === Bar Chart === */
+.bar-track {
+    background: #e5e7eb;
+    border-radius: 12px;
+    height: 32px;
+    width: 100%;
+    position: relative;
+    overflow: visible;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 12px;
+    width: 0;
+    transition: width 1.5s ease;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    min-width: 0;
+}
+
+.scene.active .bar-fill {
+    width: var(--w);
+}
+
+.bar-adi {
+    background: linear-gradient(90deg, var(--primary), #818cf8);
+}
+
+.bar-actual {
+    background: linear-gradient(90deg, var(--coral), #f87171);
+    min-width: 4px !important;
+}
+
+.bar-primary {
+    background: linear-gradient(90deg, var(--primary), #818cf8);
+}
+
+.bar-teal {
+    background: linear-gradient(90deg, var(--teal), #5eead4);
+}
+
+.bar-amber {
+    background: linear-gradient(90deg, var(--amber), #fbbf24);
+}
+
+.bar-coral {
+    background: linear-gradient(90deg, var(--coral), #f87171);
+}
+
+.bar-value {
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+}
+
+.bar-value-outside {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--coral);
+}
+
+/* === ADI Compare Visual === */
+.adi-compare {
+    margin: 24px 0;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.adi-bar-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.adi-label {
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 120px;
+    text-align: right;
+}
+
+.adi-ring-svg {
+    margin-top: 8px;
+}
+
+.ring-fill-animate {
+    animation: ringDraw 2s ease forwards;
+    animation-delay: 0.5s;
+}
+
+/* === Horizontal Bar Groups === */
+.additive-bars {
+    margin: 16px auto;
+    max-width: 600px;
+}
+
+.h-bar-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.h-bar-label {
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 80px;
+    text-align: right;
+}
+
+.h-bar-value {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary);
+    min-width: 60px;
+}
+
+.h-bar {
+    height: 24px !important;
+    border-radius: 8px !important;
+}
+
+.h-bar-group .bar-track {
+    height: 24px;
+    flex: 1;
+}
+
+/* === Custom: Dose Visual === */
+.dose-visual {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 12px auto;
+    justify-content: center;
+}
+
+.dose-card {
+    background: var(--card-bg);
+    padding: 16px 20px;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow);
+    text-align: center;
+    width: 180px;
+}
+
+.dose-safe {
+    border-top: 3px solid var(--teal);
+}
+
+.dose-danger {
+    border-top: 3px solid var(--coral);
+}
+
+.dose-icon {
+    margin-bottom: 6px;
+}
+
+.dose-name {
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 4px;
+}
+
+.dose-detail {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.dose-arrow {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--text-light);
+}
+
+/* === Custom: Safety Factor Visual === */
+.safety-factor-visual {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+.sf-box {
+    background: var(--card-bg);
+    padding: 20px 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    min-width: 150px;
+}
+
+.sf-animal {
+    border-top: 3px solid var(--amber);
+}
+
+.sf-human {
+    border-top: 3px solid var(--teal);
+}
+
+.sf-result {
+    border-top: 3px solid var(--primary);
+    background: var(--primary-light);
+}
+
+.sf-label {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 6px;
+}
+
+.sf-value {
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.sf-desc {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+.sf-times,
+.sf-equals {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--text-light);
+}
+
+/* === Custom: Bias Visual === */
+.bias-visual {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    justify-content: center;
+    margin: 16px 0;
+}
+
+.bias-center {
+    flex-shrink: 0;
+}
+
+.bias-items {
+    text-align: left;
+}
+
+.bias-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    margin-bottom: 8px;
+    background: var(--card-bg);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow);
+    border-left: 3px solid var(--coral);
+}
+
+.bias-num {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    border-radius: 50%;
+    background: var(--coral);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.bias-text {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.bias-ring {
+    animation: ringDraw 2s ease forwards;
+    stroke-dasharray: 104.7 209.4;
+    stroke-dashoffset: 104.7;
+}
+
+/* === Custom: Safe Compare === */
+.safe-compare {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.safe-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    font-size: 18px;
+    font-weight: 600;
+    background: var(--card-bg);
+    box-shadow: var(--shadow);
+    max-width: 500px;
+    width: 100%;
+}
+
+.safe-checked {
+    border-left: 4px solid var(--teal);
+}
+
+.safe-unchecked {
+    border-left: 4px solid var(--coral);
+}
+
+.safe-icon {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.safe-checked .safe-icon {
+    color: var(--teal);
+}
+
+.safe-unchecked .safe-icon {
+    color: var(--coral);
+}
+
+/* === Tags === */
+.role-tags,
+.risk-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 16px 0;
+}
+
+.role-tag,
+.risk-tag {
+    padding: 8px 20px;
+    border-radius: 24px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.tag-primary {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.tag-teal {
+    background: var(--teal-light);
+    color: var(--teal);
+}
+
+.tag-amber {
+    background: var(--amber-light);
+    color: var(--amber);
+}
+
+.tag-coral {
+    background: var(--coral-light);
+    color: var(--coral);
+}
+
+.tag-purple {
+    background: var(--purple-light);
+    color: var(--purple);
+}
+
+.risk-tag {
+    background: var(--amber-light);
+    color: var(--amber);
+    border: 2px solid var(--amber);
+}
+
+/* === Three Points Preview === */
+.three-points-preview {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.preview-item {
+    background: var(--card-bg);
+    padding: 12px 20px;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow);
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.preview-num {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+/* === Core Message === */
+.core-message {
+    margin-top: 24px;
+}
+
+.core-line {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-light);
+}
+
+.core-highlight {
+    font-size: 40px !important;
+    color: var(--text) !important;
+    margin: 12px 0;
+}
+
+/* === Summary List === */
+.summary-list .summary-item {
+    padding: 18px 24px;
+    border-left: 4px solid var(--primary);
+}
+
+.summary-list .summary-item:nth-child(3) {
+    border-left-color: var(--coral);
+}
+
+.summary-num {
+    font-size: 18px;
+}
+
+/* =============================================
+   STAGGER ITEM ANIMATION
+   ============================================= */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity var(--transition), transform var(--transition);
+}
+
+.scene.active .stagger-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scene.active .stagger-item:nth-child(1) {
+    transition-delay: 0.0s;
+}
+
+.scene.active .stagger-item:nth-child(2) {
+    transition-delay: 0.12s;
+}
+
+.scene.active .stagger-item:nth-child(3) {
+    transition-delay: 0.24s;
+}
+
+.scene.active .stagger-item:nth-child(4) {
+    transition-delay: 0.36s;
+}
+
+.scene.active .stagger-item:nth-child(5) {
+    transition-delay: 0.48s;
+}
+
+.scene.active .stagger-item:nth-child(6) {
+    transition-delay: 0.60s;
+}
+
+.scene.active .stagger-item:nth-child(7) {
+    transition-delay: 0.72s;
+}
+
+.scene.active .stagger-item:nth-child(8) {
+    transition-delay: 0.84s;
+}
+
+/* =============================================
+   @KEYFRAMES (8+ mandatory)
+   ============================================= */
+
+/* 1. Scene Fade In */
+@keyframes sceneFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* 2. Card Slide Up */
+@keyframes cardSlideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 3. Number Pop */
+@keyframes numberPop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 4. Bar Fill */
+@keyframes barFill {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--w);
+    }
+}
+
+/* 5. Float */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* 6. Pulse Glow */
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 20px 8px rgba(79, 70, 229, 0.15);
+    }
+}
+
+/* 7. Bounce In */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.12);
+        opacity: 1;
+    }
+
+    70% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* 8. Title Reveal */
+@keyframes titleReveal {
+    0% {
+        clip-path: inset(0 100% 0 0);
+        opacity: 0;
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+    }
+}
+
+/* 9. Ring Draw */
+@keyframes ringDraw {
+    from {
+        stroke-dashoffset: 314;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* 10. Warning Shake */
+@keyframes warningShake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-3px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(3px);
+    }
+}
+
+/* 11. Gradient Shift */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 12. Dot Pulse */
+@keyframes dotPulse {
+
+    0%,
+    100% {
+        opacity: 0.4;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+/* 13. Scale In */
+@keyframes scaleIn {
+    from {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* =============================================
+   ANIMATION APPLICATION RULES
+   ============================================= */
+
+/* Cards */
+.scene.active .factor-card,
+.scene.active .vs-card,
+.scene.active .dose-card,
+.scene.active .sf-box,
+.scene.active .bias-item,
+.scene.active .safe-item,
+.scene.active .preview-item {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .factor-card:nth-child(1),
+.scene.active .dose-card:nth-child(1),
+.scene.active .preview-item:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .factor-card:nth-child(2),
+.scene.active .dose-card:nth-child(2),
+.scene.active .preview-item:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .factor-card:nth-child(3),
+.scene.active .dose-card:nth-child(3),
+.scene.active .preview-item:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+/* Impact Number */
+.scene.active .impact-number {
+    animation: numberPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+/* Bars */
+.scene.active .h-bar,
+.scene.active .bar-adi,
+.scene.active .bar-actual {
+    animation: barFill 1.2s ease-out forwards;
+    animation-delay: 0.6s;
+    width: 0;
+}
+
+/* Flow Nodes */
+.scene.active .flow-node {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .flow-node:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .flow-node:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .flow-node:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.scene.active .flow-node:nth-child(7) {
+    animation-delay: 1.1s;
+}
+
+/* Arrows & VS */
+.scene.active .flow-arrow,
+.scene.active .vs-divider,
+.scene.active .dose-arrow {
+    animation: bounceIn 0.6s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+/* Highlight nodes pulse */
+.scene.active .flow-node-highlight {
+    animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* Dark items */
+.scene.active .dark-item {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .dark-item:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .dark-item:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.scene.active .dark-item:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+/* Numbered items */
+.scene.active .numbered-item {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .numbered-item:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .numbered-item:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.scene.active .numbered-item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Alert card */
+.scene.active .alert-card {
+    animation: cardSlideUp 0.6s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+/* Tags */
+.scene.active .role-tag,
+.scene.active .risk-tag {
+    animation: scaleIn 0.4s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .role-tag:nth-child(1),
+.scene.active .risk-tag:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .role-tag:nth-child(2),
+.scene.active .risk-tag:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.scene.active .role-tag:nth-child(3),
+.scene.active .risk-tag:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .role-tag:nth-child(4),
+.scene.active .risk-tag:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.scene.active .role-tag:nth-child(5) {
+    animation-delay: 0.7s;
+}
+
+/* Title animation */
+.scene.active .title-huge,
+.scene.active .title-medium {
+    animation: titleReveal 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+/* Emphasis large text */
+.scene.active .emphasis-text-large {
+    animation: scaleIn 0.6s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+/* Summary items special styling */
+.summary-item {
+    transition: transform 0.3s ease;
+}
+
+/* Core message lines */
+.scene.active .core-line {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .core-line:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .core-line:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.scene.active .core-line:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+/* Quote card */
+.scene.active .quote-card {
+    animation: cardSlideUp 0.6s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+/* Section badge */
+.scene.active .section-badge {
+    animation: scaleIn 0.5s ease-out forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+}
+
+/* Safe compare items */
+.scene.active .safe-item:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .safe-item:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+/* H-bar groups stagger */
+.scene.active .h-bar-group:nth-child(1) .h-bar {
+    animation-delay: 0.4s;
+}
+
+.scene.active .h-bar-group:nth-child(2) .h-bar {
+    animation-delay: 0.6s;
+}
+
+.scene.active .h-bar-group:nth-child(3) .h-bar {
+    animation-delay: 0.8s;
+}
+
+.scene.active .h-bar-group:nth-child(4) .h-bar {
+    animation-delay: 1.0s;
+}
+
+/* SF boxes stagger */
+.scene.active .sf-box:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .sf-box:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .sf-box:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.scene.active .sf-times,
+.scene.active .sf-equals {
+    animation: bounceIn 0.5s ease-out forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+}

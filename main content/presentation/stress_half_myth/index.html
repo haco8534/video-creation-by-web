@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>「ストレスは体に悪い」は半分嘘だった</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Scene 0: テキスト強調「ストレスは体に悪い？」 -->
+    <div class="scene" id="scene-0">
+        <canvas id="canvas-0" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">みんなが信じている常識</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-coral">「ストレスは体に悪い」</span></div>
+            <div class="emphasis-sub stagger-item">本当にそうなのか？最新科学が覆す真実</div>
+            <div class="question-mark-bg stagger-item">?</div>
+        </div>
+    </div>
+
+    <!-- Scene 1: 数値インパクト「年間2万人の早死に」 -->
+    <div class="scene" id="scene-1">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">ストレス関連の早期死亡</h2>
+            <div class="source-badge stagger-item">Keller et al. (2012) / Health Psychology / n=28,753</div>
+            <div class="impact-number stagger-item">
+                <span class="num-prefix">年間 約</span>
+                <span class="big-num accent-coral">20,000</span>
+                <span class="num-unit">人</span>
+            </div>
+            <div class="emphasis-sub stagger-item">アメリカで推計されたストレス関連死亡者数</div>
+            <div class="footnote stagger-item">しかし、その原因はストレスそのものではなかった——</div>
+        </div>
+    </div>
+
+    <!-- Scene 2: テキスト強調「信念が体を壊す」 -->
+    <div class="scene" id="scene-2">
+        <canvas id="canvas-2" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">2万人を殺していた犯人は</div>
+            <div class="emphasis-text-large stagger-item">
+                <span class="accent-coral">「ストレスは体に悪い」</span><br>
+                という<span class="accent-primary">信念</span>そのもの
+            </div>
+            <div class="emphasis-sub stagger-item">考え方ひとつが、生死を分けていた</div>
+            <!-- カスタムビジュアル: 信念の矢印 -->
+            <div class="belief-arrow-visual stagger-item">
+                <svg viewBox="0 0 400 80" class="belief-svg">
+                    <defs>
+                        <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#ef4444" />
+                            <stop offset="100%" style="stop-color:#1a1a2e" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M20,40 L340,40" stroke="url(#arrowGrad)" stroke-width="4" fill="none"
+                        class="belief-line" />
+                    <polygon points="340,25 380,40 340,55" fill="#1a1a2e" class="belief-arrowhead" />
+                    <text x="60" y="30" fill="#ef4444" font-size="14" font-weight="700">信念</text>
+                    <text x="280" y="30" fill="#1a1a2e" font-size="14" font-weight="700">健康被害</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 3: タイトルカード「衝撃の大規模調査」 -->
+    <div class="scene" id="scene-3">
+        <canvas id="canvas-3" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary stagger-item">RESEARCH</div>
+            <h2 class="title-medium stagger-item">衝撃の<br><span class="accent-primary">大規模調査</span></h2>
+            <div class="title-sub stagger-item">Keller et al. (2012) — 約29,000人 × 8年間追跡</div>
+        </div>
+    </div>
+
+    <!-- Scene 4: フロー図「研究デザイン」 -->
+    <div class="scene" id="scene-4">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">研究デザイン</h2>
+            <div class="source-badge stagger-item">Keller et al. (2012) / Health Psychology / NHIS 1998</div>
+            <div class="flow-chain">
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">1998</div>
+                    <div class="flow-text"><span class="flow-name">NHIS調査</span><br>29,000人に質問<br><span
+                            class="flow-sub">ストレスの量 + 信念</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">Q1</div>
+                    <div class="flow-text"><span class="flow-name">ストレスの量</span><br>どれくらい感じた？<br><span
+                            class="flow-sub">低〜高の5段階</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">Q2</div>
+                    <div class="flow-text"><span class="flow-name">ストレスの信念</span><br>健康に悪いと思う？<br><span
+                            class="flow-sub">はい / いいえ</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">2006</div>
+                    <div class="flow-text"><span class="flow-name">8年後の追跡</span><br>死亡データと照合<br><span
+                            class="flow-sub">National Death Index</span></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">年齢・性別・収入・既往歴などで統計的に補正</div>
+        </div>
+    </div>
+
+    <!-- Scene 5: 数値インパクト「死亡リスク43%増加」 -->
+    <div class="scene" id="scene-5">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">高ストレス + 有害だと信じた場合</h2>
+            <div class="source-badge stagger-item">Keller et al. (2012) / n=28,753 / 8年追跡</div>
+            <div class="impact-number stagger-item">
+                <span class="num-prefix">死亡リスク</span>
+                <span class="big-num accent-coral">43</span>
+                <span class="num-unit">%増加</span>
+            </div>
+            <div class="emphasis-sub stagger-item">年齢・性別・収入・既往歴を統計的に補正した結果</div>
+            <!-- カスタムSVG: リスクバー -->
+            <div class="risk-bar-visual stagger-item">
+                <div class="risk-bar-row">
+                    <div class="risk-label">ベースライン</div>
+                    <div class="risk-track">
+                        <div class="risk-fill risk-base" style="--w:60%"></div>
+                    </div>
+                    <div class="risk-value">1.0x</div>
+                </div>
+                <div class="risk-bar-row">
+                    <div class="risk-label">高ストレス+有害信念</div>
+                    <div class="risk-track">
+                        <div class="risk-fill risk-high" style="--w:86%"></div>
+                    </div>
+                    <div class="risk-value accent-coral">1.43x</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">ハザード比 HR=1.43, 95% CI</div>
+        </div>
+    </div>
+
+    <!-- Scene 6: 比較対照「信じる vs 信じない」 -->
+    <div class="scene" id="scene-6">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">同じストレスでも結果が分かれた</h2>
+            <div class="source-badge stagger-item">Keller et al. (2012) / Health Psychology</div>
+            <div class="vs-container stagger-item">
+                <div class="vs-card vs-left">
+                    <div class="vs-badge danger-badge">有害だと信じた</div>
+                    <div class="vs-title">死亡リスク<br><span class="accent-coral big-inline">+43%</span></div>
+                    <div class="vs-desc">ストレスは体に悪いと確信</div>
+                    <div class="vs-detail">血管収縮・コルチゾール高止まり</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right">
+                    <div class="vs-badge safe-badge">有害だと信じなかった</div>
+                    <div class="vs-title">死亡リスク<br><span class="accent-teal big-inline">増加なし</span></div>
+                    <div class="vs-desc">ストレスを気にしていなかった</div>
+                    <div class="vs-detail">低ストレス群よりも低い場合も</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">違いは「信念」だけ ― ストレスの量は同じ</div>
+        </div>
+    </div>
+
+    <!-- Scene 7: 数値インパクト「米国死因第15位相当」 -->
+    <div class="scene" id="scene-7">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">もし「信念」が死因なら</h2>
+            <div class="source-badge stagger-item">Keller et al. (2012) 推計値</div>
+            <div class="impact-number stagger-item">
+                <span class="num-prefix">アメリカ死因ランキング</span>
+                <span class="big-num accent-primary">第15位</span>
+            </div>
+            <div class="emphasis-sub stagger-item">皮膚がん・エイズによる死亡数を上回る</div>
+            <!-- カスタムSVG: 死因ランキングバー -->
+            <div class="rank-visual stagger-item">
+                <div class="rank-item"><span class="rank-num">13位</span><span class="rank-name">腎臓病</span>
+                    <div class="rank-bar" style="--w:70%"></div>
+                </div>
+                <div class="rank-item"><span class="rank-num">14位</span><span class="rank-name">敗血症</span>
+                    <div class="rank-bar" style="--w:65%"></div>
+                </div>
+                <div class="rank-item rank-highlight"><span class="rank-num">15位</span><span
+                        class="rank-name accent-coral">ストレス信念</span>
+                    <div class="rank-bar rank-bar-stress" style="--w:60%"></div>
+                </div>
+                <div class="rank-item"><span class="rank-num">16位</span><span class="rank-name">肝疾患</span>
+                    <div class="rank-bar" style="--w:55%"></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">年間約20,000人（推計）</div>
+        </div>
+    </div>
+
+    <!-- Scene 8: 引用カード「マクゴニガルのTED」 -->
+    <div class="scene" id="scene-8">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">科学界に衝撃を与えた提言</h2>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">ストレスについての<span class="accent-primary">考え方を変えれば</span>、<br>体の反応を変えることができる</div>
+                <div class="quote-source">Kelly McGonigal — TED Talk 2013（再生回数3,000万回以上）</div>
+            </div>
+            <div class="emphasis-sub stagger-item">健康心理学者がストレス研究の常識を塗り替えた</div>
+            <div class="footnote stagger-item">Stanford University / 著書「The Upside of Stress」(2015)</div>
+        </div>
+    </div>
+
+    <!-- Scene 9: タイトルカード「ストレス反応の科学」 -->
+    <div class="scene" id="scene-9">
+        <canvas id="canvas-9" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-teal stagger-item">MECHANISM</div>
+            <h2 class="title-medium stagger-item">ストレス反応の<br><span class="accent-teal">科学</span></h2>
+            <div class="title-sub stagger-item">チャレンジ反応 と 脅威反応 ― 2つの体の答え</div>
+        </div>
+    </div>
+
+    <!-- Scene 10: 比較対照「チャレンジ反応 vs 脅威反応」 -->
+    <div class="scene" id="scene-10">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">2つのストレス反応</h2>
+            <div class="vs-container stagger-item">
+                <div class="vs-card vs-left challenge-card">
+                    <div class="vs-badge safe-badge">Challenge</div>
+                    <div class="vs-title">チャレンジ反応</div>
+                    <div class="vs-desc">対処できると感じた時</div>
+                    <div class="vs-detail-list">
+                        <div class="vs-detail-item">血管拡張</div>
+                        <div class="vs-detail-item">酸素供給↑</div>
+                        <div class="vs-detail-item">集中力向上</div>
+                        <div class="vs-detail-item">DHEA↑</div>
+                    </div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right threat-card">
+                    <div class="vs-badge danger-badge">Threat</div>
+                    <div class="vs-title">脅威反応</div>
+                    <div class="vs-desc">対処できないと感じた時</div>
+                    <div class="vs-detail-list">
+                        <div class="vs-detail-item">血管収縮</div>
+                        <div class="vs-detail-item">血流減少</div>
+                        <div class="vs-detail-item">恐怖・フリーズ</div>
+                        <div class="vs-detail-item">コルチゾール↑↑</div>
+                    </div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">同じストレスでも、体の反応は正反対になる</div>
+        </div>
+    </div>
+
+    <!-- Scene 11: フロー図「チャレンジ反応のメカニズム」 -->
+    <div class="scene" id="scene-11">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">チャレンジ反応のメカニズム</h2>
+            <div class="source-badge stagger-item">Jamieson et al. (2012) / Harvard University</div>
+            <!-- カスタムSVG: 心血管パターン -->
+            <div class="cardio-visual stagger-item">
+                <svg viewBox="0 0 600 200" class="cardio-svg">
+                    <text x="50" y="30" fill="#1a1a2e" font-size="14" font-weight="700">心臓出力</text>
+                    <rect x="50" y="40" width="120" height="30" rx="8" fill="#e0e7ff" class="cardio-bar" />
+                    <rect x="50" y="40" width="100" height="30" rx="8" fill="#4f46e5"
+                        class="cardio-fill challenge-bar-anim" />
+                    <text x="50" y="90" fill="#1a1a2e" font-size="14" font-weight="700">血管拡張度</text>
+                    <rect x="50" y="100" width="120" height="30" rx="8" fill="#ccfbf1" class="cardio-bar" />
+                    <rect x="50" y="100" width="110" height="30" rx="8" fill="#14b8a6"
+                        class="cardio-fill challenge-bar-anim" />
+                    <text x="300" y="30" fill="#1a1a2e" font-size="12">喜び・勇気の状態と</text>
+                    <text x="300" y="50" fill="#4f46e5" font-size="16" font-weight="700">同じ心血管パターン</text>
+                    <!-- ハートSVG -->
+                    <g transform="translate(420,80)">
+                        <path d="M25,45 C25,20 0,0 0,20 C0,35 25,55 25,55 C25,55 50,35 50,20 C50,0 25,20 25,45Z"
+                            fill="#ef4444" opacity="0.6" class="heart-pulse" />
+                    </g>
+                    <text x="300" y="160" fill="#6c757d" font-size="11">チャレンジ反応では血管が拡張し、</text>
+                    <text x="300" y="178" fill="#6c757d" font-size="11">脳と筋肉に酸素が効率的に届く</text>
+                </svg>
+            </div>
+            <div class="footnote stagger-item">「ドキドキは体が挑戦に備えている証拠」と再解釈するだけで反応が変化</div>
+        </div>
+    </div>
+
+    <!-- Scene 12: 横並びカード「コルチゾールとDHEA」 -->
+    <div class="scene" id="scene-12">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">2つのストレスホルモン</h2>
+            <div class="triple-card hormone-cards">
+                <div class="factor-card cortisol-card stagger-item">
+                    <div class="factor-icon accent-bg-coral">C</div>
+                    <div class="factor-name">コルチゾール</div>
+                    <div class="factor-desc">カタボリック（分解系）</div>
+                    <div class="factor-detail">エネルギー動員・炎症促進</div>
+                    <div class="factor-tag tag-coral">壊す系</div>
+                </div>
+                <div class="factor-card dhea-card stagger-item">
+                    <div class="factor-icon accent-bg-teal">D</div>
+                    <div class="factor-name">DHEA</div>
+                    <div class="factor-desc">アナボリック（構築系）</div>
+                    <div class="factor-detail">組織修復・免疫強化・神経保護</div>
+                    <div class="factor-tag tag-teal">直す系</div>
+                </div>
+            </div>
+            <!-- カスタムSVG: アナボリックインデックス -->
+            <div class="anabolic-index-visual stagger-item">
+                <div class="index-label">アナボリックインデックス（DHEA/コルチゾール比）</div>
+                <div class="index-scale">
+                    <div class="index-low">低い = 体が壊れるモード</div>
+                    <div class="index-arrow">&rarr;</div>
+                    <div class="index-high">高い = 成長するモード</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">ストレスマインドセットがこのバランスに直接影響する</div>
+        </div>
+    </div>
+
+    <!-- Scene 13: 段階的リスト「ハーバード大学の実験」 -->
+    <div class="scene" id="scene-13">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">ハーバード大学のスピーチ実験</h2>
+            <div class="source-badge stagger-item">Jamieson et al. (2012) / J. Experimental Psychology</div>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text">被験者にストレスの多い<span class="accent-primary">スピーチテスト</span>を実施</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">2</div>
+                    <div class="numbered-text">一方のグループに「ドキドキは<span class="accent-primary">体が準備している証拠</span>」と説明</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">3</div>
+                    <div class="numbered-text">結果：血管が<span class="accent-teal">収縮せずに拡張</span> ― より健康的な心血管反応</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">たった一言の説明で、体の生理反応が変化した</div>
+            <div class="footnote stagger-item">対照群は通常の脅威反応（血管収縮）を示した</div>
+        </div>
+    </div>
+
+    <!-- Scene 14: 引用カード「Crum 2017 研究」 -->
+    <div class="scene" id="scene-14">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">マインドセット操作実験</h2>
+            <div class="source-badge stagger-item">Crum et al. (2017) / Anxiety, Stress & Coping</div>
+            <div class="quote-card quote-warm stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">「ストレスは力になる」と教わったグループは<br>脅威的な状況でも<span
+                        class="accent-primary">アナボリックホルモンが急上昇</span></div>
+                <div class="quote-source">Alia Crum — Stanford University</div>
+            </div>
+            <!-- カスタムビジュアル: ホルモン比較 -->
+            <div class="hormone-comparison stagger-item">
+                <div class="hormone-bar-group">
+                    <div class="hormone-bar-label">DHEA上昇（力になるマインドセット）</div>
+                    <div class="hormone-bar-track">
+                        <div class="hormone-bar-fill hormone-high" style="--w:85%"></div>
+                    </div>
+                </div>
+                <div class="hormone-bar-group">
+                    <div class="hormone-bar-label">DHEA上昇（消耗マインドセット）</div>
+                    <div class="hormone-bar-track">
+                        <div class="hormone-bar-fill hormone-low" style="--w:35%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">認知の柔軟性・ポジティブ感情も大幅に向上</div>
+        </div>
+    </div>
+
+    <!-- Scene 15: タイトルカード「もう一つのストレスホルモン」 -->
+    <div class="scene" id="scene-15">
+        <canvas id="canvas-15" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-amber stagger-item">OXYTOCIN</div>
+            <h2 class="title-medium stagger-item">もう一つの<br><span class="accent-amber">ストレスホルモン</span></h2>
+            <div class="title-sub stagger-item">「愛情ホルモン」の知られざる役割</div>
+        </div>
+    </div>
+
+    <!-- Scene 16: テキスト強調「オキシトシンの正体」 -->
+    <div class="scene" id="scene-16">
+        <canvas id="canvas-16" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">抱擁ホルモン = 愛情ホルモン</div>
+            <div class="emphasis-text-large stagger-item">実は<span class="accent-amber">ストレスホルモン</span>でもある</div>
+            <div class="emphasis-sub stagger-item">矛盾ではない ― むしろ合理的なメカニズム</div>
+            <!-- カスタムSVG: オキシトシン分子風 -->
+            <div class="oxy-molecule stagger-item">
+                <svg viewBox="0 0 200 200" class="molecule-svg">
+                    <circle cx="100" cy="100" r="40" fill="none" stroke="#f59e0b" stroke-width="2"
+                        class="molecule-ring" />
+                    <circle cx="100" cy="60" r="8" fill="#f59e0b" opacity="0.7" class="molecule-dot md1" />
+                    <circle cx="140" cy="100" r="8" fill="#f59e0b" opacity="0.7" class="molecule-dot md2" />
+                    <circle cx="100" cy="140" r="8" fill="#f59e0b" opacity="0.7" class="molecule-dot md3" />
+                    <circle cx="60" cy="100" r="8" fill="#f59e0b" opacity="0.7" class="molecule-dot md4" />
+                    <text x="100" y="105" text-anchor="middle" fill="#f59e0b" font-size="16" font-weight="900">OT</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 17: フロー図「オキシトシンの働き」 -->
+    <div class="scene" id="scene-17">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">オキシトシンの働き</h2>
+            <div class="flow-chain oxy-flow">
+                <div class="flow-node stagger-item">
+                    <div class="flow-year oxy-icon">!</div>
+                    <div class="flow-text"><span class="flow-name">ストレス発生</span><br>脳がストレスを感知<br><span
+                            class="flow-sub">下垂体が反応</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year oxy-icon">OT</div>
+                    <div class="flow-text"><span class="flow-name">オキシトシン分泌</span><br>社会的つながりを<br><span
+                            class="flow-sub">求めるシグナル</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year oxy-icon">&#9829;</div>
+                    <div class="flow-text"><span class="flow-name">心臓保護</span><br>心筋細胞の修復促進<br><span
+                            class="flow-sub">コルチゾール抑制</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year oxy-icon">&#x1f91d;</div>
+                    <div class="flow-text"><span class="flow-name">つながり行動</span><br>他者を助ける・頼る<br><span
+                            class="flow-sub">ストレス耐性UP</span></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">ストレス反応に「協力して乗り越えろ」という仕組みが内蔵されている</div>
+        </div>
+    </div>
+
+    <!-- Scene 18: 数値インパクト「ケアギビングの効果」 -->
+    <div class="scene" id="scene-18">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">他者を助けるとストレスの害が消える</h2>
+            <div class="source-badge stagger-item">Poulin et al. (2013) / Am J Public Health / n=846</div>
+            <div class="vs-container stagger-item">
+                <div class="vs-card vs-left">
+                    <div class="vs-badge safe-badge">ケアギビングあり</div>
+                    <div class="vs-title">死亡リスク</div>
+                    <div class="impact-number-sm"><span class="accent-teal">増加なし</span></div>
+                    <div class="vs-desc">他者を助けていた</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right">
+                    <div class="vs-badge danger-badge">ケアギビングなし</div>
+                    <div class="vs-title">死亡リスク</div>
+                    <div class="impact-number-sm"><span class="accent-coral">有意に増加</span></div>
+                    <div class="vs-desc">他者を助けていなかった</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">人を助ける行動がストレスの「毒消し」になる</div>
+            <div class="footnote stagger-item">5年間追跡 ― 強いストレスがあっても死亡リスクが打ち消された</div>
+        </div>
+    </div>
+
+    <!-- Scene 19: 横並びカード「オキシトシンの3つの効果」 -->
+    <div class="scene" id="scene-19">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">オキシトシンの3つの保護効果</h2>
+            <div class="triple-card">
+                <div class="factor-card oxy-effect-card stagger-item">
+                    <div class="factor-icon accent-bg-amber">1</div>
+                    <div class="factor-name">コルチゾール抑制</div>
+                    <div class="factor-desc">ストレスホルモンを抑え血圧を下げる</div>
+                </div>
+                <div class="factor-card oxy-effect-card stagger-item">
+                    <div class="factor-icon accent-bg-amber">2</div>
+                    <div class="factor-name">心臓修復</div>
+                    <div class="factor-desc">心筋細胞のダメージを修復する</div>
+                </div>
+                <div class="factor-card oxy-effect-card stagger-item">
+                    <div class="factor-icon accent-bg-amber">3</div>
+                    <div class="factor-name">つながり促進</div>
+                    <div class="factor-desc">社会的サポートを求める行動を引き出す</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">スイッチは「人とのつながり」</div>
+            <div class="footnote stagger-item">ストレス反応の中にストレスから守る仕組みが内蔵されている</div>
+        </div>
+    </div>
+
+    <!-- Scene 20: タイトルカード「でも半分は本当に怖い」 -->
+    <div class="scene dark-scene" id="scene-20">
+        <canvas id="canvas-20" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral stagger-item">WARNING</div>
+            <h2 class="title-medium light-text stagger-item">でも<span class="accent-coral">半分は</span><br>本当に怖い</h2>
+            <div class="title-sub light-text-dim stagger-item">慢性ストレスの害は確実に存在する</div>
+        </div>
+    </div>
+
+    <!-- Scene 21: 比較対照「急性ストレス vs 慢性ストレス」 -->
+    <div class="scene" id="scene-21">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">急性ストレス vs 慢性ストレス</h2>
+            <div class="comparison-table">
+                <div class="comp-row comp-header stagger-item">
+                    <div class="comp-cell"></div>
+                    <div class="comp-cell accent-teal">急性ストレス</div>
+                    <div class="comp-cell accent-coral">慢性ストレス</div>
+                </div>
+                <div class="comp-row stagger-item">
+                    <div class="comp-cell comp-name">持続時間</div>
+                    <div class="comp-cell">短時間</div>
+                    <div class="comp-cell">数か月〜数年</div>
+                </div>
+                <div class="comp-row stagger-item">
+                    <div class="comp-cell comp-name">ホルモン</div>
+                    <div class="comp-cell">速やかに正常化</div>
+                    <div class="comp-cell">高止まり</div>
+                </div>
+                <div class="comp-row stagger-item">
+                    <div class="comp-cell comp-name">免疫</div>
+                    <div class="comp-cell"><span class="accent-teal">一時的に向上</span></div>
+                    <div class="comp-cell"><span class="accent-coral">抑制</span></div>
+                </div>
+                <div class="comp-row stagger-item">
+                    <div class="comp-cell comp-name">脳</div>
+                    <div class="comp-cell"><span class="accent-teal">集中力向上</span></div>
+                    <div class="comp-cell"><span class="accent-coral">萎縮・機能低下</span></div>
+                </div>
+                <div class="comp-row stagger-item">
+                    <div class="comp-cell comp-name">総合評価</div>
+                    <div class="comp-cell"><span class="accent-teal">味方にできる</span></div>
+                    <div class="comp-cell"><span class="accent-coral">確実に有害</span></div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">問題は逃げ場のないストレスが慢性化すること</div>
+        </div>
+    </div>
+
+    <!-- Scene 22: 段階的リスト「慢性ストレスの3つの害」 -->
+    <div class="scene dark-scene" id="scene-22">
+        <div class="content card-layout">
+            <h2 class="scene-title light-text stagger-item">慢性ストレスの3つの害</h2>
+            <div class="dark-list">
+                <div class="dark-item stagger-item">
+                    <div class="dark-icon">1</div>
+                    <div class="dark-content">
+                        <div class="dark-title">テロメア短縮</div>
+                        <div class="dark-desc">染色体のキャップ構造が短縮 → 細胞老化が加速</div>
+                        <div class="dark-source">Epel et al. (2004) PNAS — 介護者は10年分老化</div>
+                    </div>
+                </div>
+                <div class="dark-item stagger-item">
+                    <div class="dark-icon">2</div>
+                    <div class="dark-content">
+                        <div class="dark-title">アロスタティック負荷</div>
+                        <div class="dark-desc">体の適応システムの「すり減り」→ 慢性疾患リスク↑</div>
+                        <div class="dark-source">McEwen (1998) NEJM — 高血圧・動脈硬化・免疫抑制</div>
+                    </div>
+                </div>
+                <div class="dark-item stagger-item">
+                    <div class="dark-icon">3</div>
+                    <div class="dark-content">
+                        <div class="dark-title">脳へのダメージ</div>
+                        <div class="dark-desc">扁桃体肥大・海馬萎縮・前頭前皮質の灰白質減少</div>
+                        <div class="dark-source">ストレスに過敏 + 対処力低下 = 悪循環</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footnote light-text-dim stagger-item">慢性ストレスは確実に体を蝕む ― ここは「本当」の部分</div>
+        </div>
+    </div>
+
+    <!-- Scene 23: テキスト強調「急性は味方、慢性は敵」 -->
+    <div class="scene" id="scene-23">
+        <canvas id="canvas-23" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">結論</div>
+            <div class="dual-message stagger-item">
+                <div class="dual-left">
+                    <div class="dual-label accent-teal">急性ストレス</div>
+                    <div class="dual-value">味方にできる</div>
+                </div>
+                <div class="dual-divider"></div>
+                <div class="dual-right">
+                    <div class="dual-label accent-coral">慢性ストレス</div>
+                    <div class="dual-value">確実に敵</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">大事なのは、この2つを区別すること</div>
+        </div>
+    </div>
+
+    <!-- Scene 24: タイトルカード「ストレスを味方にする3ステップ」 -->
+    <div class="scene" id="scene-24">
+        <canvas id="canvas-24" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary stagger-item">ACTION</div>
+            <h2 class="title-medium stagger-item">ストレスを味方にする<br><span class="accent-primary">3ステップ</span></h2>
+            <div class="title-sub stagger-item">研究から導き出された実践法</div>
+        </div>
+    </div>
+
+    <!-- Scene 25: 段階的リスト「3つのステップ」 -->
+    <div class="scene" id="scene-25">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">ストレスを味方にする3ステップ</h2>
+            <div class="numbered-list step-cards">
+                <div class="numbered-item step-card stagger-item">
+                    <div class="number-circle step-circle">1</div>
+                    <div class="numbered-text">
+                        <span class="step-name accent-primary">認める (Acknowledge)</span><br>
+                        ストレスを感じている自分をそのまま認識する
+                    </div>
+                </div>
+                <div class="numbered-item step-card stagger-item">
+                    <div class="number-circle step-circle">2</div>
+                    <div class="numbered-text">
+                        <span class="step-name accent-teal">歓迎する (Welcome)</span><br>
+                        大切なことに真剣に取り組んでいる証拠と意味づけ
+                    </div>
+                </div>
+                <div class="numbered-item step-card stagger-item">
+                    <div class="number-circle step-circle">3</div>
+                    <div class="numbered-text">
+                        <span class="step-name accent-amber">活用する (Channel)</span><br>
+                        エネルギーを行動や人とのつながりに変える
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">ストレスは「排除する」のではなく「使いこなす」</div>
+        </div>
+    </div>
+
+    <!-- Scene 26: 引用カード「マクゴニガルの言葉」 -->
+    <div class="scene" id="scene-26">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">ストレスと意味ある人生</h2>
+            <div class="quote-card quote-warm stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">ストレス反応を追いかけるということは<br><span
+                        class="accent-primary">人生で最も意味のあるもの</span>を<br>追いかけるということだ</div>
+                <div class="quote-source">Kelly McGonigal — The Upside of Stress (2015)</div>
+            </div>
+            <div class="emphasis-sub stagger-item">ストレスを感じることは、充実した人生の証拠</div>
+        </div>
+    </div>
+
+    <!-- Scene 27: 横並びカード「今日からできること」 -->
+    <div class="scene" id="scene-27">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">今日からできる3つのこと</h2>
+            <div class="triple-card action-cards">
+                <div class="factor-card action-card stagger-item">
+                    <div class="factor-icon accent-bg-primary">1</div>
+                    <div class="factor-name">再解釈する</div>
+                    <div class="factor-desc">「ドキドキは体が準備している証拠」と唱える</div>
+                    <div class="factor-evidence">Harvard研究で効果実証済み</div>
+                </div>
+                <div class="factor-card action-card stagger-item">
+                    <div class="factor-icon accent-bg-teal">2</div>
+                    <div class="factor-name">誰かを助ける</div>
+                    <div class="factor-desc">困っている人を一人助ける ― 些細なことでOK</div>
+                    <div class="factor-evidence">オキシトシン分泌でストレス軽減</div>
+                </div>
+                <div class="factor-card action-card stagger-item">
+                    <div class="factor-icon accent-bg-amber">3</div>
+                    <div class="factor-name">気持ちを共有</div>
+                    <div class="factor-desc">ストレスを感じている仲間と共有する</div>
+                    <div class="factor-evidence">社会的つながりが最大の武器</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">全部今日からできること</div>
+        </div>
+    </div>
+
+    <!-- Scene 28: テキスト強調「まとめ」 -->
+    <div class="scene" id="scene-28">
+        <canvas id="canvas-28" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">まとめ</div>
+            <div class="summary-cards stagger-item">
+                <div class="summary-card">
+                    <div class="summary-icon accent-coral">&#x26A0;</div>
+                    <div class="summary-text">慢性ストレスの害は<span class="accent-coral">本物</span></div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon accent-primary">&#x1F4A1;</div>
+                    <div class="summary-text">でも信念が健康への影響を<span class="accent-primary">左右する</span></div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon accent-teal">&#x1F4AA;</div>
+                    <div class="summary-text">ストレスは<span class="accent-teal">最強の味方</span>になりうる</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">付き合い方次第で、ストレスの意味は変わる</div>
+        </div>
+    </div>
+
+    <!-- Scene 29: テキスト強調「エンディング」 -->
+    <div class="scene" id="scene-29">
+        <canvas id="canvas-29" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text-large stagger-item">ストレスを<span class="accent-primary">味方</span>にしよう</div>
+            <div class="emphasis-sub stagger-item">考え方を変えるだけで、体の反応は今日から変わり始める</div>
+            <div class="end-cta stagger-item">チャンネル登録・高評価よろしくお願いします</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>「筋肉痛は乳酸のせい」は完全な誤解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== SCENE 0: タイトルカード ===== -->
+    <div class="scene active" id="scene-0">
+        <canvas id="canvas-0" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral">MYTH BUSTING</div>
+            <h2 class="title-huge stagger-item">「筋肉痛は乳酸のせい」は<br><span class="accent-coral">完全な誤解</span></h2>
+            <div class="title-sub stagger-item">30年以上前に否定された常識と、乳酸の驚くべき正体</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 1: 数値インパクト - 乳酸が原因と答える人が大多数 ===== -->
+    <div class="scene" id="scene-1">
+        <canvas id="canvas-1" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">筋肉痛の原因は？</h2>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-coral">?</span>
+            </div>
+            <div class="emphasis-text stagger-item">ほとんどの人が<span class="accent-coral">「乳酸」</span>と答える</div>
+            <div class="emphasis-sub stagger-item">しかしそれは30年以上前に否定された情報</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 2: 段階的リスト - この動画でわかる3つのこと ===== -->
+    <div class="scene" id="scene-2">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">この動画でわかること</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text">筋肉痛の<span class="accent-primary">本当の原因</span>は何か</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">2</div>
+                    <div class="numbered-text">乳酸説を<span class="accent-coral">一発で否定</span>した決定的実験</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">3</div>
+                    <div class="numbered-text">乳酸は<span class="accent-teal">ヒーロー</span>だったという真実</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 3: タイトルカード - 乳酸＝疲労物質の歴史 ===== -->
+    <div class="scene dark-scene" id="scene-3">
+        <canvas id="canvas-3" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-amber">HISTORY</div>
+            <h2 class="title-medium light-text stagger-item">なぜ「乳酸＝疲労物質」と<br><span class="accent-amber">信じられたのか</span>
+            </h2>
+            <div class="title-sub light-text stagger-item">170年以上続く誤解の歴史をたどる</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 4: フロー図 - タイムライン 1850→1907→1922 ===== -->
+    <div class="scene dark-scene" id="scene-4">
+        <div class="content card-layout">
+            <h2 class="scene-title light-text stagger-item">乳酸＝疲労物質説のタイムライン</h2>
+            <div class="flow-chain">
+                <div class="flow-node dark-node stagger-item">
+                    <div class="flow-year">1850s</div>
+                    <div class="flow-text"><span class="flow-name">デュ・ボワ＝レイモン</span><br>「筋肉は酸性になる」<br><span
+                            class="flow-sub">乳酸が原因と推測</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node dark-node stagger-item">
+                    <div class="flow-year">1907</div>
+                    <div class="flow-text"><span class="flow-name">フレッチャー＆ホプキンズ</span><br>カエル筋肉実験<br><span
+                            class="flow-sub">低酸素で乳酸蓄積を確認</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node dark-node stagger-item highlight-node">
+                    <div class="flow-year">1922</div>
+                    <div class="flow-text"><span class="flow-name">ヒル＆マイヤーホフ</span><br>ノーベル賞受賞<br><span
+                            class="flow-sub">100年の定説が確立</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 5: 引用カード - カエル筋肉実験 ===== -->
+    <div class="scene" id="scene-5">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">カエルの筋肉実験（1907年）</h2>
+            <div class="experiment-visual stagger-item">
+                <div class="exp-step">
+                    <div class="exp-icon exp-frog">
+                        <svg viewBox="0 0 80 80" width="60" height="60">
+                            <ellipse cx="40" cy="40" rx="32" ry="24" fill="#86efac" stroke="#16a34a" stroke-width="2" />
+                            <circle cx="30" cy="32" r="4" fill="#1a1a2e" />
+                            <circle cx="50" cy="32" r="4" fill="#1a1a2e" />
+                        </svg>
+                    </div>
+                    <div class="exp-label">カエル筋肉を摘出</div>
+                </div>
+                <div class="exp-arrow">&rarr;</div>
+                <div class="exp-step">
+                    <div class="exp-icon exp-shock">
+                        <svg viewBox="0 0 80 80" width="60" height="60">
+                            <path d="M40 10 L48 32 L60 32 L50 48 L58 48 L38 70 L42 50 L32 50 L36 32 L24 32Z"
+                                fill="#f59e0b" stroke="#d97706" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="exp-label">電気刺激</div>
+                </div>
+                <div class="exp-arrow">&rarr;</div>
+                <div class="exp-step">
+                    <div class="exp-icon exp-acid">
+                        <svg viewBox="0 0 80 80" width="60" height="60">
+                            <rect x="20" y="20" width="40" height="50" rx="4" fill="#fef3c7" stroke="#f59e0b"
+                                stroke-width="2" /><text x="40" y="50" text-anchor="middle" fill="#d97706"
+                                font-size="16" font-weight="bold">H+</text>
+                        </svg>
+                    </div>
+                    <div class="exp-label">乳酸が蓄積</div>
+                </div>
+            </div>
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">ただし<span class="accent-coral">体から取り出した</span>筋肉の話</div>
+                <div class="alert-sub">生体内では血流が乳酸を運び去るため条件が異なる</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 6: 数値インパクト - ノーベル賞が100年の誤解を生んだ ===== -->
+    <div class="scene dark-scene" id="scene-6">
+        <canvas id="canvas-6" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <h2 class="scene-title light-text stagger-item">ノーベル賞が生んだ誤解</h2>
+            <div class="source-badge stagger-item">Hill & Meyerhof (1922) ノーベル生理学・医学賞</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-amber">100</span><span class="num-unit light-text">年間</span>
+            </div>
+            <div class="emphasis-sub light-text stagger-item">「乳酸＝疲労物質」が教科書の定説であり続けた</div>
+            <div class="footnote light-text stagger-item">相関関係と因果関係の混同が誤解を長期化させた</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 7: タイトルカード - 筋肉痛の正体 ===== -->
+    <div class="scene" id="scene-7">
+        <canvas id="canvas-7" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary">TOPIC 1</div>
+            <h2 class="title-medium stagger-item">筋肉痛の正体を<br><span class="accent-primary">解き明かす</span></h2>
+            <div class="title-sub stagger-item">Delayed Onset Muscle Soreness (DOMS)</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 8: 段階的リスト - 3ステップ ===== -->
+    <div class="scene" id="scene-8">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">筋肉痛が起こる3ステップ</h2>
+            <div class="source-badge stagger-item">遅発性筋肉痛（DOMS）のメカニズム</div>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item step-card-1">
+                    <div class="number-circle step-1">1</div>
+                    <div class="numbered-text">筋線維の<span class="accent-coral">微細損傷</span>
+                        <div class="text-sub">マイクロトラウマが発生</div>
+                    </div>
+                </div>
+                <div class="numbered-item stagger-item step-card-2">
+                    <div class="number-circle step-2">2</div>
+                    <div class="numbered-text"><span class="accent-amber">炎症反応</span>が起きる<div class="text-sub">
+                            免疫細胞（マクロファージ等）が修復開始</div>
+                    </div>
+                </div>
+                <div class="numbered-item stagger-item step-card-3">
+                    <div class="number-circle step-3">3</div>
+                    <div class="numbered-text"><span class="accent-primary">発痛物質</span>が神経を刺激<div class="text-sub">
+                            ブラジキニン・プロスタグランジン等</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">乳酸はこのプロセスに一切関与しない</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 9: フロー図 - 微細損傷→炎症→発痛物質→痛み ===== -->
+    <div class="scene" id="scene-9">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">筋肉痛のメカニズム</h2>
+            <div class="mechanism-flow stagger-item">
+                <div class="mech-node mech-damage">
+                    <svg viewBox="0 0 60 60" width="48" height="48">
+                        <line x1="10" y1="10" x2="50" y2="50" stroke="#ef4444" stroke-width="3" class="crack-line" />
+                        <line x1="50" y1="10" x2="10" y2="50" stroke="#ef4444" stroke-width="3" class="crack-line" />
+                        <rect x="5" y="5" width="50" height="50" rx="8" fill="none" stroke="#6b7280" stroke-width="2" />
+                    </svg>
+                    <div class="mech-label">微細損傷</div>
+                </div>
+                <div class="mech-arrow">&darr;</div>
+                <div class="mech-node mech-immune">
+                    <svg viewBox="0 0 60 60" width="48" height="48">
+                        <circle cx="30" cy="30" r="20" fill="#dbeafe" stroke="#3b82f6" stroke-width="2" />
+                        <circle cx="30" cy="30" r="8" fill="#3b82f6" />
+                    </svg>
+                    <div class="mech-label">免疫細胞が集合</div>
+                </div>
+                <div class="mech-arrow">&darr;</div>
+                <div class="mech-node mech-pain">
+                    <svg viewBox="0 0 60 60" width="48" height="48">
+                        <circle cx="30" cy="30" r="20" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" /><text x="30"
+                            y="36" text-anchor="middle" fill="#d97706" font-size="20" font-weight="bold">!</text>
+                    </svg>
+                    <div class="mech-label">発痛物質が放出</div>
+                </div>
+                <div class="mech-arrow">&darr;</div>
+                <div class="mech-node mech-nerve highlight-node">
+                    <svg viewBox="0 0 60 60" width="48" height="48">
+                        <path d="M10 50 Q30 10 50 50" fill="none" stroke="#ef4444" stroke-width="3"
+                            class="nerve-path" />
+                        <circle cx="30" cy="25" r="6" fill="#ef4444" class="pulse-dot" />
+                    </svg>
+                    <div class="mech-label">神経感作 → 痛み</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 10: 注意喚起 - 発痛物質が神経を刺激 ===== -->
+    <div class="scene" id="scene-10">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">なぜ触っただけで痛いのか</h2>
+            <div class="sensitization-visual stagger-item">
+                <div class="nerve-card normal-state">
+                    <div class="nerve-title">通常時</div>
+                    <div class="nerve-bar-container">
+                        <div class="nerve-bar" style="--w:30%"></div>
+                    </div>
+                    <div class="nerve-desc">刺激に対して適度に反応</div>
+                </div>
+                <div class="sensitize-arrow">&rarr;</div>
+                <div class="nerve-card sensitized-state">
+                    <div class="nerve-title accent-coral">感作後</div>
+                    <div class="nerve-bar-container">
+                        <div class="nerve-bar nerve-bar-high" style="--w:90%"></div>
+                    </div>
+                    <div class="nerve-desc">同じ刺激でも「激痛」に感じる</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">ブラジキニン等の発痛物質が痛覚神経を<span class="accent-coral">過敏化</span>させる</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 11: 比較対照 - エキセントリック vs コンセントリック ===== -->
+    <div class="scene" id="scene-11">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">痛みを生む動き vs 痛みにくい動き</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge danger-badge">痛みやすい</div>
+                    <div class="vs-title">エキセントリック収縮</div>
+                    <div class="eccentric-visual">
+                        <svg viewBox="0 0 120 80" width="120" height="80">
+                            <rect x="10" y="30" width="50" height="20" rx="10" fill="#fee2e2" stroke="#ef4444"
+                                stroke-width="2" />
+                            <line x1="60" y1="40" x2="110" y2="40" stroke="#ef4444" stroke-width="2"
+                                stroke-dasharray="5,3" />
+                            <polygon points="105,35 115,40 105,45" fill="#ef4444" />
+                        </svg>
+                    </div>
+                    <div class="vs-desc">筋肉が伸びながら力を出す</div>
+                    <div class="vs-examples">階段を降りる / ダンベルを下ろす / スクワットで下がる</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge safe-badge">痛みにくい</div>
+                    <div class="vs-title">コンセントリック収縮</div>
+                    <div class="concentric-visual">
+                        <svg viewBox="0 0 120 80" width="120" height="80">
+                            <rect x="35" y="30" width="50" height="20" rx="10" fill="#dcfce7" stroke="#16a34a"
+                                stroke-width="2" />
+                            <line x1="10" y1="40" x2="35" y2="40" stroke="#16a34a" stroke-width="2"
+                                stroke-dasharray="5,3" />
+                            <polygon points="40,35 30,40 40,45" fill="#16a34a" />
+                        </svg>
+                    </div>
+                    <div class="vs-desc">筋肉が縮みながら力を出す</div>
+                    <div class="vs-examples">階段を上がる / ダンベルを持ち上げる</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 12: 数値インパクト - DOMS 12〜72時間 ===== -->
+    <div class="scene" id="scene-12">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">筋肉痛のタイムライン</h2>
+            <div class="timeline-bar stagger-item">
+                <div class="tl-segment tl-lactate">
+                    <div class="tl-label">乳酸</div>
+                    <div class="tl-duration">30分〜1時間で消失</div>
+                </div>
+                <div class="tl-segment tl-doms">
+                    <div class="tl-label">DOMS</div>
+                    <div class="tl-duration">12〜72時間後にピーク</div>
+                </div>
+            </div>
+            <div class="tl-axis stagger-item">
+                <span>0h</span><span>1h</span><span>12h</span><span>24h</span><span>48h</span><span>72h</span><span>7日</span>
+            </div>
+            <div class="emphasis-text stagger-item">乳酸はとっくに消えているのに<br><span class="accent-coral">筋肉痛はその後に来る</span></div>
+            <div class="footnote stagger-item">時間差だけでも乳酸は原因でないとわかる</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 13: タイトルカード - 乳酸説を否定した実験 ===== -->
+    <div class="scene" id="scene-13">
+        <canvas id="canvas-13" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral">TOPIC 2</div>
+            <h2 class="title-medium stagger-item">乳酸説を否定した<br><span class="accent-coral">決定的な実験</span></h2>
+            <div class="title-sub stagger-item">1983年 ランニング比較実験</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 14: 比較対照 - 下り坂 vs 平地 ===== -->
+    <div class="scene" id="scene-14">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">下り坂 vs 平地ランニング実験</h2>
+            <div class="source-badge stagger-item">1983年 トレッドミル走 45分間</div>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge safe-badge">条件A</div>
+                    <div class="vs-title">平地ランニング</div>
+                    <div class="run-visual">
+                        <svg viewBox="0 0 120 60" width="120" height="60">
+                            <line x1="10" y1="50" x2="110" y2="50" stroke="#6b7280" stroke-width="3" />
+                            <circle cx="60" cy="35" r="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="vs-detail">乳酸 <span class="accent-teal">上昇</span></div>
+                    <div class="vs-detail">筋肉痛 <span class="accent-teal">なし</span></div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge danger-badge">条件B</div>
+                    <div class="vs-title">下り坂ランニング</div>
+                    <div class="run-visual">
+                        <svg viewBox="0 0 120 60" width="120" height="60">
+                            <line x1="10" y1="20" x2="110" y2="50" stroke="#6b7280" stroke-width="3" />
+                            <circle cx="60" cy="35" r="10" fill="#fee2e2" stroke="#ef4444" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="vs-detail">乳酸 <span class="accent-coral">上がらず</span></div>
+                    <div class="vs-detail">筋肉痛 <span class="accent-coral">激しい</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 15: 数値インパクト - 乳酸が上がらないのに痛い ===== -->
+    <div class="scene" id="scene-15">
+        <canvas id="canvas-15" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">乳酸説の完全否定</h2>
+            <div class="paradox-visual stagger-item">
+                <div class="paradox-card">
+                    <div class="paradox-label">平地</div>
+                    <div class="paradox-row">
+                        <span>乳酸</span>
+                        <div class="paradox-bar-track">
+                            <div class="paradox-bar paradox-high" style="--w:80%"></div>
+                        </div>
+                        <span class="accent-teal">高い</span>
+                    </div>
+                    <div class="paradox-row">
+                        <span>痛み</span>
+                        <div class="paradox-bar-track">
+                            <div class="paradox-bar paradox-low" style="--w:10%"></div>
+                        </div>
+                        <span class="accent-teal">なし</span>
+                    </div>
+                </div>
+                <div class="paradox-card">
+                    <div class="paradox-label">下り坂</div>
+                    <div class="paradox-row">
+                        <span>乳酸</span>
+                        <div class="paradox-bar-track">
+                            <div class="paradox-bar paradox-low" style="--w:15%"></div>
+                        </div>
+                        <span class="accent-coral">低い</span>
+                    </div>
+                    <div class="paradox-row">
+                        <span>痛み</span>
+                        <div class="paradox-bar-track">
+                            <div class="paradox-bar paradox-high-pain" style="--w:90%"></div>
+                        </div>
+                        <span class="accent-coral">激痛</span>
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-text stagger-item">乳酸が原因なら<span class="accent-coral">真逆の結果</span>になるはず</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 16: テキスト強調 - 下り坂＝エキセントリック ===== -->
+    <div class="scene" id="scene-16">
+        <canvas id="canvas-16" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">なぜ下り坂が痛いのか</h2>
+            <div class="emphasis-text-large stagger-item">下り坂＝<span class="accent-coral">エキセントリック収縮</span>の連続</div>
+            <div class="emphasis-sub stagger-item">着地のたびに太ももの筋肉がブレーキをかける</div>
+            <div class="emphasis-sub stagger-item">筋肉が伸びながら体を支える → <span class="accent-coral">微細損傷</span>が多発</div>
+            <div class="comparison-note stagger-item">乳酸の量は無関係。物理的ダメージが痛みを決める</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 17: 注意喚起 - 運動中の焼ける痛み ===== -->
+    <div class="scene" id="scene-17">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">運動中の「焼ける痛み」の正体</h2>
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">犯人は<span class="accent-coral">水素イオン（H+）</span></div>
+                <div class="alert-sub">乳酸ではなく、水素イオンの蓄積でpHが低下し筋肉が酸性化</div>
+            </div>
+            <div class="h-ion-visual stagger-item">
+                <div class="ph-scale">
+                    <div class="ph-bar">
+                        <div class="ph-indicator" style="--pos:70%">
+                            <div class="ph-dot"></div>
+                            <div class="ph-label">pH低下</div>
+                        </div>
+                    </div>
+                    <div class="ph-labels"><span>酸性</span><span>中性</span><span>アルカリ性</span></div>
+                </div>
+            </div>
+            <div class="quote-card quote-warm stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">乳酸はむしろ酸性化を<span class="accent-teal">防ぐ方向</span>に働いている</div>
+                <div class="quote-source">現代スポーツ生理学の知見</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 18: タイトルカード - 乳酸はヒーロー ===== -->
+    <div class="scene" id="scene-18">
+        <canvas id="canvas-18" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-teal">TOPIC 3</div>
+            <h2 class="title-medium stagger-item">乳酸の名誉回復<br><span class="accent-teal">悪者からヒーローへ</span></h2>
+            <div class="title-sub stagger-item">乳酸シャトル理論がすべてを変えた</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 19: 引用カード - ブルックス教授 ===== -->
+    <div class="scene" id="scene-19">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">乳酸シャトル理論（1985年）</h2>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">乳酸は疲労の原因ではなく<br><span class="accent-teal">エネルギーの配達員</span>である</div>
+                <div class="quote-source">George A. Brooks, UC Berkeley (1985)</div>
+            </div>
+            <div class="discovery-card stagger-item">
+                <div class="disc-before">
+                    <div class="disc-label accent-coral">従来の認識</div>
+                    <div class="disc-text">燃えカス・ゴミ・老廃物</div>
+                </div>
+                <div class="disc-arrow">&rarr;</div>
+                <div class="disc-after">
+                    <div class="disc-label accent-teal">新しい認識</div>
+                    <div class="disc-text">エネルギー運搬体・シグナル分子</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 20: フロー図 - 乳酸シャトル ===== -->
+    <div class="scene" id="scene-20">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">乳酸シャトルの仕組み</h2>
+            <div class="shuttle-visual stagger-item">
+                <div class="shuttle-source">
+                    <div class="shuttle-icon">
+                        <svg viewBox="0 0 60 60" width="50" height="50">
+                            <rect x="5" y="10" width="50" height="40" rx="8" fill="#fee2e2" stroke="#ef4444"
+                                stroke-width="2" />
+                            <rect x="15" y="18" width="30" height="6" rx="3" fill="#ef4444" />
+                            <rect x="15" y="28" width="30" height="6" rx="3" fill="#ef4444" />
+                            <rect x="15" y="38" width="30" height="6" rx="3" fill="#ef4444" />
+                        </svg>
+                    </div>
+                    <div class="shuttle-label">筋肉</div>
+                </div>
+                <div class="shuttle-path">
+                    <div class="shuttle-molecule shuttle-m1"></div>
+                    <div class="shuttle-molecule shuttle-m2"></div>
+                    <div class="shuttle-molecule shuttle-m3"></div>
+                    <div class="shuttle-path-label">血流で全身へ</div>
+                </div>
+                <div class="shuttle-targets">
+                    <div class="shuttle-target stagger-item">
+                        <div class="target-icon target-heart">
+                            <svg viewBox="0 0 40 40" width="36" height="36">
+                                <path d="M20 35 L6 22 C2 16 6 8 14 10 L20 16 L26 10 C34 8 38 16 34 22Z"
+                                    fill="#ef4444" />
+                            </svg>
+                        </div>
+                        <div class="target-name">心臓</div>
+                    </div>
+                    <div class="shuttle-target stagger-item">
+                        <div class="target-icon target-brain">
+                            <svg viewBox="0 0 40 40" width="36" height="36">
+                                <ellipse cx="20" cy="18" rx="16" ry="14" fill="#c4b5fd" stroke="#7c3aed"
+                                    stroke-width="1.5" />
+                                <path d="M10 22 Q20 32 30 22" fill="none" stroke="#7c3aed" stroke-width="1.5" />
+                            </svg>
+                        </div>
+                        <div class="target-name">脳</div>
+                    </div>
+                    <div class="shuttle-target stagger-item">
+                        <div class="target-icon target-liver">
+                            <svg viewBox="0 0 40 40" width="36" height="36">
+                                <ellipse cx="20" cy="20" rx="14" ry="16" fill="#bbf7d0" stroke="#16a34a"
+                                    stroke-width="1.5" />
+                            </svg>
+                        </div>
+                        <div class="target-name">肝臓</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">届いた先でエネルギー源として再利用される</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 21: 横並びカード - 心臓・脳 ===== -->
+    <div class="scene" id="scene-21">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">乳酸が支える重要臓器</h2>
+            <div class="triple-card">
+                <div class="factor-card stagger-item factor-heart">
+                    <div class="factor-icon accent-bg-coral">
+                        <svg viewBox="0 0 40 40" width="32" height="32">
+                            <path d="M20 35 L6 22 C2 16 6 8 14 10 L20 16 L26 10 C34 8 38 16 34 22Z" fill="#fff" />
+                        </svg>
+                    </div>
+                    <div class="factor-name">心臓</div>
+                    <div class="factor-desc">運動中の<span class="accent-coral">優先エネルギー源</span></div>
+                    <div class="factor-detail">走っているときの心臓は乳酸で動いている</div>
+                </div>
+                <div class="factor-card stagger-item factor-brain">
+                    <div class="factor-icon accent-bg-primary">
+                        <svg viewBox="0 0 40 40" width="32" height="32">
+                            <ellipse cx="20" cy="18" rx="14" ry="12" fill="#fff" />
+                            <path d="M10 22 Q20 30 30 22" fill="none" stroke="#fff" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="factor-name">脳</div>
+                    <div class="factor-desc">エネルギー代謝の<span class="accent-primary">最大20%</span></div>
+                    <div class="factor-detail">運動中にブドウ糖が不足すると乳酸が代替燃料に</div>
+                </div>
+                <div class="factor-card stagger-item factor-liver">
+                    <div class="factor-icon accent-bg-teal">
+                        <svg viewBox="0 0 40 40" width="32" height="32">
+                            <ellipse cx="20" cy="20" rx="12" ry="14" fill="#fff" />
+                        </svg>
+                    </div>
+                    <div class="factor-name">肝臓</div>
+                    <div class="factor-desc"><span class="accent-teal">糖新生</span>の原料</div>
+                    <div class="factor-detail">乳酸をグルコースに再変換して全身に供給</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 22: テキスト強調 - 脳のアストロサイト ===== -->
+    <div class="scene" id="scene-22">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">脳の中にも乳酸シャトルがあった</h2>
+            <div class="source-badge stagger-item">筑波大学研究 / アストロサイト-ニューロン乳酸シャトル</div>
+            <div class="brain-shuttle-visual stagger-item">
+                <div class="brain-cell astrocyte">
+                    <div class="cell-label">アストロサイト</div>
+                    <div class="cell-desc">乳酸を生成</div>
+                </div>
+                <div class="brain-arrow">&rarr;</div>
+                <div class="brain-cell neuron highlight-node">
+                    <div class="cell-label">神経細胞</div>
+                    <div class="cell-desc">乳酸をエネルギーに</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">「運動すると頭がスッキリする」の一因</div>
+            <div class="footnote stagger-item">乳酸が脳にエネルギーを届けることで認知機能をサポート</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 23: テキスト強調 - ラクトルモン ===== -->
+    <div class="scene" id="scene-23">
+        <canvas id="canvas-23" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">乳酸の新しい名前</h2>
+            <div class="emphasis-text-large stagger-item"><span class="accent-teal">ラクトルモン</span></div>
+            <div class="emphasis-sub stagger-item">Lactate + Hormone = Lactormone</div>
+            <div class="tag-cloud stagger-item">
+                <div class="tag-item tag-teal">エネルギー運搬</div>
+                <div class="tag-item tag-primary">シグナル伝達</div>
+                <div class="tag-item tag-amber">遺伝子発現制御</div>
+                <div class="tag-item tag-coral">炎症制御</div>
+            </div>
+            <div class="comparison-note stagger-item">100年間「疲労の犯人」が、実は体を支える縁の下のヒーロー</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 24: 横並びカード - 2つの俗説 ===== -->
+    <div class="scene" id="scene-24">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">おまけ：もう2つの俗説を斬る</h2>
+            <div class="triple-card dual-card">
+                <div class="factor-card stagger-item myth-card">
+                    <div class="factor-icon accent-bg-coral">
+                        <svg viewBox="0 0 40 40" width="32" height="32"><text x="20" y="28" text-anchor="middle"
+                                fill="#fff" font-size="24" font-weight="bold">1</text></svg>
+                    </div>
+                    <div class="factor-name">「年を取ると筋肉痛が遅れる」</div>
+                    <div class="factor-desc"><span class="accent-coral">科学的に未確立</span></div>
+                    <div class="factor-detail">年齢ではなく運動強度の違いが原因</div>
+                </div>
+                <div class="factor-card stagger-item myth-card">
+                    <div class="factor-icon accent-bg-coral">
+                        <svg viewBox="0 0 40 40" width="32" height="32"><text x="20" y="28" text-anchor="middle"
+                                fill="#fff" font-size="24" font-weight="bold">2</text></svg>
+                    </div>
+                    <div class="factor-name">「筋肉痛が来ないと効いてない」</div>
+                    <div class="factor-desc"><span class="accent-coral">科学的に誤り</span></div>
+                    <div class="factor-detail">筋肥大の最重要因子は機械的張力</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 25: 数値インパクト - 90%が誤解 ===== -->
+    <div class="scene" id="scene-25">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">「遅れる」と感じる人の割合</h2>
+            <div class="source-badge stagger-item">信州大学 口頭調査</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-coral">90</span><span class="num-unit">%以上</span>
+            </div>
+            <div class="emphasis-sub stagger-item">が「加齢で筋肉痛が遅れた」と回答</div>
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">しかし<span class="accent-teal">実験では否定</span></div>
+                <div class="alert-sub">18〜22歳 vs 60〜70歳代で発症タイミングに有意差なし</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 26: 注意喚起 - 繰り返し効果 ===== -->
+    <div class="scene" id="scene-26">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">繰り返し効果（Repeated Bout Effect）</h2>
+            <div class="rbe-visual stagger-item">
+                <div class="rbe-bar-group">
+                    <div class="rbe-bar-item">
+                        <div class="rbe-label">1回目</div>
+                        <div class="rbe-bar-track">
+                            <div class="rbe-bar rbe-first" style="--w:90%"></div>
+                        </div>
+                    </div>
+                    <div class="rbe-bar-item">
+                        <div class="rbe-label">2回目</div>
+                        <div class="rbe-bar-track">
+                            <div class="rbe-bar rbe-second" style="--w:45%"></div>
+                        </div>
+                    </div>
+                    <div class="rbe-bar-item">
+                        <div class="rbe-label">3回目</div>
+                        <div class="rbe-bar-track">
+                            <div class="rbe-bar rbe-third" style="--w:20%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">同じ運動を繰り返すと<span class="accent-teal">筋肉痛が激減</span></div>
+            <div class="source-badge stagger-item">軽い事前運動で高強度運動の筋損傷を約50%軽減</div>
+            <div class="footnote stagger-item">痛みが減るのは体が弱くなったのではなく、適応して強くなった証拠</div>
+        </div>
+    </div>
+
+    <!-- ===== SCENE 27: まとめカード ===== -->
+    <div class="scene" id="scene-27">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">今日の3つのポイント</h2>
+            <div class="numbered-list summary-list">
+                <div class="numbered-item stagger-item summary-item-1">
+                    <div class="number-circle summary-num">1</div>
+                    <div class="numbered-text">筋肉痛の原因は<span class="accent-primary">筋線維の微細損傷</span>と<span
+                            class="accent-primary">炎症反応</span></div>
+                </div>
+                <div class="numbered-item stagger-item summary-item-2">
+                    <div class="number-circle summary-num">2</div>
+                    <div class="numbered-text">乳酸は<span class="accent-coral">30分〜1時間で消える</span>。翌日の筋肉痛には無関係</div>
+                </div>
+                <div class="numbered-item stagger-item summary-item-3">
+                    <div class="number-circle summary-num">3</div>
+                    <div class="numbered-text">乳酸は<span class="accent-teal">全身にエネルギーを届けるヒーロー</span>だった</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">科学は進歩する。常識をアップデートしよう</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

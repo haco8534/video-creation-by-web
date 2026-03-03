@@ -91,7 +91,7 @@ for (const sceneDur of sceneDurations) {
             text: line.text,
             speakerColor: SPEAKER_COLORS[line.speaker] || '#888888',
             sceneId: sceneDur.id,
-            sceneTitle: sceneDur.title,
+            sceneTitle: sceneMapEntry.title || sceneDur.title,
         });
 
         lineTime += lineDuration + interLineSilence;

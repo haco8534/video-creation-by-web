@@ -1,0 +1,1330 @@
+/* ===============================================
+   依存症は意志の弱さじゃなかった
+   Style System - addiction_brain_science
+   =============================================== */
+
+/* --- Reset & Base --- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Design Tokens --- */
+:root {
+    --primary: #6366f1;
+    --primary-light: #818cf8;
+    --primary-bg: #e0e7ff;
+    --coral: #f87171;
+    --coral-light: #fca5a5;
+    --coral-bg: #fee2e2;
+    --teal: #14b8a6;
+    --teal-light: #5eead4;
+    --teal-bg: #ccfbf1;
+    --amber: #f59e0b;
+    --amber-light: #fbbf24;
+    --amber-bg: #fef3c7;
+    --dark: #0f172a;
+    --dark-2: #1e293b;
+    --dark-3: #334155;
+    --light: #f8fafc;
+    --light-2: #e2e8f0;
+    --light-3: #94a3b8;
+    --radius: 16px;
+    --radius-sm: 8px;
+    --radius-lg: 24px;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    --shadow-glow-primary: 0 0 40px rgba(99, 102, 241, 0.3);
+    --shadow-glow-coral: 0 0 40px rgba(248, 113, 113, 0.3);
+    --shadow-glow-teal: 0 0 40px rgba(20, 184, 166, 0.3);
+}
+
+/* --- Scene Container --- */
+.scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: var(--dark);
+    overflow: hidden;
+}
+
+.scene.active {
+    display: flex;
+}
+
+.bg-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* --- Content Layout --- */
+.content {
+    position: relative;
+    z-index: 1;
+    width: 88%;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.center-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.card-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+/* --- Typography --- */
+.title-medium {
+    font-size: 2.8rem;
+    font-weight: 900;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: var(--light);
+}
+
+.title-sub {
+    font-size: 1.3rem;
+    color: var(--light-3);
+    font-weight: 400;
+}
+
+.scene-title {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--light);
+    letter-spacing: 0.02em;
+}
+
+.emphasis-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--light-2);
+    line-height: 1.5;
+}
+
+.emphasis-text-large {
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: var(--light);
+    line-height: 1.3;
+}
+
+.emphasis-sub {
+    font-size: 1.05rem;
+    color: var(--light-3);
+    max-width: 650px;
+    line-height: 1.6;
+}
+
+.footnote {
+    font-size: 0.85rem;
+    color: var(--light-3);
+    opacity: 0.7;
+    margin-top: 0.5rem;
+}
+
+.text-sub {
+    font-size: 0.9rem;
+    color: var(--light-3);
+    font-weight: 400;
+}
+
+/* --- Accents --- */
+.accent-primary {
+    color: var(--primary-light);
+}
+
+.accent-coral {
+    color: var(--coral);
+}
+
+.accent-teal {
+    color: var(--teal-light);
+}
+
+.accent-amber {
+    color: var(--amber-light);
+}
+
+.accent-bg-primary {
+    background: var(--primary);
+    color: #fff;
+}
+
+.accent-bg-coral {
+    background: var(--coral);
+    color: #fff;
+}
+
+.accent-bg-teal {
+    background: var(--teal);
+    color: #fff;
+}
+
+.accent-bg-amber {
+    background: var(--amber);
+    color: #fff;
+}
+
+/* --- Badges --- */
+.section-badge {
+    display: inline-block;
+    padding: 0.35rem 1.2rem;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.source-badge {
+    display: inline-block;
+    padding: 0.25rem 0.8rem;
+    border-radius: 100px;
+    font-size: 0.7rem;
+    font-weight: 400;
+    background: var(--dark-3);
+    color: var(--light-3);
+    letter-spacing: 0.03em;
+}
+
+.danger-badge {
+    background: var(--coral);
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 100px;
+    font-weight: 700;
+}
+
+.safe-badge {
+    background: var(--teal);
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 100px;
+    font-weight: 700;
+}
+
+/* --- Impact Numbers --- */
+.impact-number {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.big-num {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.num-unit {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--light-2);
+}
+
+/* --- Numbered List --- */
+.numbered-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 700px;
+}
+
+.numbered-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--dark-2);
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--dark-3);
+    text-align: left;
+}
+
+.number-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.nc-primary {
+    background: var(--primary);
+}
+
+.nc-amber {
+    background: var(--amber);
+}
+
+.nc-teal {
+    background: var(--teal);
+}
+
+.numbered-text {
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* --- Untreated Bar --- */
+.untreated-visual {
+    width: 100%;
+    max-width: 600px;
+}
+
+.untreated-bar {
+    position: relative;
+    width: 100%;
+    height: 48px;
+    background: var(--coral);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.untreated-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--w);
+    height: 100%;
+    background: var(--teal);
+    border-radius: var(--radius) 0 0 var(--radius);
+    animation: barGrow 1.5s ease-out forwards;
+}
+
+.untreated-label-left,
+.untreated-label-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.untreated-label-left {
+    left: 8px;
+    color: #fff;
+}
+
+.untreated-label-right {
+    right: 12px;
+    color: #fff;
+}
+
+/* --- Flow Chain (History) --- */
+.flow-chain {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flow-node {
+    background: var(--dark-2);
+    border: 1px solid var(--dark-3);
+    border-radius: var(--radius);
+    padding: 1rem 1.2rem;
+    min-width: 160px;
+    text-align: center;
+}
+
+.flow-year {
+    font-size: 0.75rem;
+    color: var(--primary-light);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.3rem;
+}
+
+.flow-name {
+    font-weight: 900;
+    font-size: 1rem;
+    color: var(--light);
+}
+
+.flow-text {
+    font-size: 0.85rem;
+    color: var(--light-2);
+    line-height: 1.5;
+}
+
+.flow-sub {
+    font-size: 0.75rem;
+    color: var(--light-3);
+}
+
+.flow-arrow,
+.flow-arrow-h {
+    font-size: 1.5rem;
+    color: var(--primary-light);
+    font-weight: 900;
+}
+
+/* --- VS / Comparison --- */
+.vs-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.vs-card {
+    background: var(--dark-2);
+    border: 1px solid var(--dark-3);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.5rem;
+    flex: 1;
+    max-width: 280px;
+    text-align: center;
+}
+
+.vs-left {
+    border-color: var(--coral);
+    border-width: 2px;
+}
+
+.vs-right {
+    border-color: var(--teal);
+    border-width: 2px;
+}
+
+.vs-badge {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 100px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.vs-title {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--light);
+    margin-bottom: 0.4rem;
+}
+
+.vs-desc {
+    font-size: 0.85rem;
+    color: var(--light-2);
+    line-height: 1.6;
+}
+
+.vs-detail {
+    font-size: 0.8rem;
+    color: var(--light-3);
+    margin-top: 0.4rem;
+    font-weight: 700;
+}
+
+.vs-divider {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--light-3);
+    flex-shrink: 0;
+}
+
+.comparison-note {
+    font-size: 0.9rem;
+    color: var(--light-3);
+    margin-top: 0.5rem;
+}
+
+/* --- Triple Card (報酬系) --- */
+.triple-card {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.factor-card {
+    background: var(--dark-2);
+    border: 1px solid var(--dark-3);
+    border-radius: var(--radius);
+    padding: 1rem;
+    min-width: 130px;
+    text-align: center;
+}
+
+.factor-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brain-region-svg {
+    width: 50px;
+    height: 50px;
+}
+
+.factor-name {
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--light);
+}
+
+.factor-desc {
+    font-size: 0.8rem;
+    color: var(--light-3);
+    line-height: 1.5;
+}
+
+/* --- Dopamine Bar --- */
+.dopamine-visual {
+    width: 100%;
+    max-width: 550px;
+}
+
+.dopamine-compare {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.dopa-bar-group {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.dopa-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    width: 110px;
+    text-align: right;
+    color: var(--light-2);
+}
+
+.dopa-bar-track {
+    flex: 1;
+    height: 28px;
+    background: var(--dark-3);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.dopa-bar {
+    height: 100%;
+    border-radius: var(--radius-sm);
+    animation: barGrow 1.5s ease-out forwards;
+}
+
+.dopa-normal {
+    width: var(--w);
+    background: var(--primary);
+}
+
+.dopa-drug {
+    width: var(--w);
+    background: linear-gradient(90deg, var(--coral), var(--amber));
+}
+
+/* --- Tolerance Cycle SVG --- */
+.tolerance-cycle {
+    width: 100%;
+    max-width: 450px;
+}
+
+.cycle-svg {
+    width: 100%;
+    height: auto;
+}
+
+.cycle-svg text {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.cycle-path {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: drawPath 2s ease forwards;
+}
+
+.cycle-path.p1 {
+    animation-delay: 0.3s;
+}
+
+.cycle-path.p2 {
+    animation-delay: 0.8s;
+}
+
+.cycle-path.p3 {
+    animation-delay: 1.3s;
+}
+
+/* --- Quote Card --- */
+.quote-card {
+    background: var(--dark-2);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 1.5rem 2rem;
+    text-align: left;
+    max-width: 650px;
+    position: relative;
+}
+
+.quote-warm {
+    border-left-color: var(--amber);
+}
+
+.quote-mark {
+    font-size: 3rem;
+    color: var(--primary-light);
+    position: absolute;
+    top: 0.3rem;
+    left: 0.8rem;
+    opacity: 0.3;
+    line-height: 1;
+}
+
+.quote-warm .quote-mark {
+    color: var(--amber-light);
+}
+
+.quote-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--light);
+    font-weight: 700;
+}
+
+.quote-source {
+    font-size: 0.75rem;
+    color: var(--light-3);
+    margin-top: 0.6rem;
+}
+
+/* --- PET Visual --- */
+.pet-visual {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.pet-brain {
+    text-align: center;
+}
+
+.pet-brain svg {
+    width: 100px;
+    height: 100px;
+}
+
+.pet-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-top: 0.3rem;
+}
+
+.pet-normal .pet-label {
+    color: var(--primary-light);
+}
+
+.pet-addict .pet-label {
+    color: var(--coral);
+}
+
+.pet-arrow {
+    font-size: 2rem;
+    color: var(--light-3);
+}
+
+/* --- Prefrontal Bar --- */
+.prefrontal-bar-container {
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+.pf-bar {
+    height: 16px;
+    border-radius: var(--radius-sm);
+    width: var(--w);
+    animation: barGrow 1.2s ease-out forwards;
+}
+
+.pf-bar-normal {
+    background: var(--teal);
+}
+
+.pf-bar-addict {
+    background: var(--coral);
+}
+
+/* --- Brake Visual --- */
+.brake-visual {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.brake-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.brake-icon {
+    font-size: 0.85rem;
+    font-weight: 900;
+    width: 60px;
+    text-align: center;
+    padding: 0.3rem;
+    border-radius: var(--radius-sm);
+}
+
+.brake-accel {
+    background: var(--coral-bg);
+    color: var(--coral);
+}
+
+.brake-brake {
+    background: var(--primary-bg);
+    color: var(--primary);
+}
+
+.brake-bar-track {
+    flex: 1;
+    height: 22px;
+    background: var(--dark-3);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.brake-bar {
+    height: 100%;
+    border-radius: var(--radius-sm);
+    width: var(--w);
+    animation: barGrow 1.2s ease-out forwards;
+}
+
+.brake-bar-full {
+    background: var(--coral);
+}
+
+.brake-bar-low {
+    background: var(--primary);
+}
+
+/* --- Stage Cards (3段階) --- */
+.addiction-stages {
+    display: flex;
+    align-items: stretch;
+    gap: 0.5rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.stage-card {
+    background: var(--dark-2);
+    border: 1px solid var(--dark-3);
+    border-radius: var(--radius);
+    padding: 1rem;
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+}
+
+.stage-1 {
+    border-color: var(--teal);
+}
+
+.stage-2 {
+    border-color: var(--amber);
+}
+
+.stage-3 {
+    border-color: var(--coral);
+}
+
+.stage-num {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--light-3);
+}
+
+.stage-name {
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: var(--light);
+    margin-bottom: 0.5rem;
+}
+
+.stage-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.stage-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.stage-bar-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    width: 50px;
+    text-align: right;
+    color: var(--light-3);
+}
+
+.stage-bar-track {
+    flex: 1;
+    height: 12px;
+    background: var(--dark-3);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.stage-bar {
+    height: 100%;
+    border-radius: 6px;
+    width: var(--w);
+    animation: barGrow 1.5s ease-out forwards;
+}
+
+.stage-bar-w {
+    background: var(--amber);
+}
+
+.stage-bar-l {
+    background: var(--teal);
+}
+
+.stage-arrow {
+    font-size: 1.5rem;
+    color: var(--light-3);
+    display: flex;
+    align-items: center;
+}
+
+.stage-desc {
+    font-size: 0.75rem;
+    color: var(--light-3);
+    margin-top: 0.4rem;
+}
+
+/* --- Alert Card --- */
+.alert-card {
+    background: var(--dark-2);
+    border: 2px solid var(--coral);
+    border-radius: var(--radius);
+    padding: 1.2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    box-shadow: var(--shadow-glow-coral);
+}
+
+.alert-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--coral);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+
+.alert-title {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--light);
+}
+
+.alert-sub {
+    font-size: 0.9rem;
+    color: var(--light-3);
+}
+
+/* --- Sensitization Visual --- */
+.sensitization-visual {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.sens-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.sens-label {
+    font-size: 0.9rem;
+    font-weight: 900;
+    width: 70px;
+    text-align: right;
+    color: var(--light-2);
+}
+
+.sens-bar-track {
+    flex: 1;
+    height: 24px;
+    background: var(--dark-3);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.sens-bar {
+    height: 100%;
+    border-radius: var(--radius-sm);
+    width: var(--w);
+    animation: barGrow 1.5s ease-out forwards;
+}
+
+.sens-bar-up {
+    background: linear-gradient(90deg, var(--amber), var(--coral));
+}
+
+.sens-bar-down {
+    background: var(--teal);
+}
+
+.sens-arrow-up {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--coral);
+    animation: pulse 1s infinite;
+}
+
+.sens-arrow-down {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--teal);
+}
+
+/* --- Vietnam Visual --- */
+.vietnam-visual {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.vietnam-stat {
+    text-align: center;
+}
+
+.vietnam-label {
+    font-size: 0.85rem;
+    color: var(--light-3);
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.vietnam-num {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.vietnam-unit {
+    font-size: 1.2rem;
+}
+
+.vietnam-vs {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--light-3);
+}
+
+/* --- Environment Visual --- */
+.env-visual {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.env-card {
+    background: var(--dark-2);
+    border-radius: var(--radius);
+    padding: 1rem 1.5rem;
+    text-align: center;
+    min-width: 140px;
+}
+
+.env-war {
+    border: 2px solid var(--coral);
+}
+
+.env-home {
+    border: 2px solid var(--teal);
+}
+
+.env-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.env-desc {
+    font-size: 0.8rem;
+    color: var(--light-3);
+    line-height: 1.5;
+}
+
+.env-arrow {
+    font-size: 2rem;
+    color: var(--teal-light);
+    font-weight: 900;
+}
+
+/* --- Recovery Note --- */
+.recovery-note {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.recovery-item {
+    background: var(--dark-2);
+    border: 1px solid var(--teal);
+    border-radius: var(--radius-sm);
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--teal-light);
+}
+
+/* --- Learning Visual --- */
+.learning-visual {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.learn-card {
+    background: var(--dark-2);
+    border-radius: var(--radius);
+    padding: 1rem 1.5rem;
+    text-align: center;
+    min-width: 150px;
+}
+
+.learn-old {
+    border: 2px solid var(--coral);
+}
+
+.learn-new {
+    border: 2px solid var(--teal);
+}
+
+.learn-label {
+    font-size: 0.9rem;
+    font-weight: 900;
+    color: var(--light);
+    margin-bottom: 0.3rem;
+}
+
+.learn-desc {
+    font-size: 0.8rem;
+    color: var(--light-3);
+    line-height: 1.5;
+}
+
+.learn-arrow {
+    font-size: 2rem;
+    color: var(--teal-light);
+    font-weight: 900;
+}
+
+/* ========================================
+   Animations
+   ======================================== */
+
+/* Stagger Item Animation */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.scene.active .stagger-item {
+    animation: fadeSlideUp 0.6s ease forwards;
+}
+
+.scene.active .stagger-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.scene.active .stagger-item:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.scene.active .stagger-item:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.scene.active .stagger-item:nth-child(4) {
+    animation-delay: 0.55s;
+}
+
+.scene.active .stagger-item:nth-child(5) {
+    animation-delay: 0.7s;
+}
+
+.scene.active .stagger-item:nth-child(6) {
+    animation-delay: 0.85s;
+}
+
+.scene.active .stagger-item:nth-child(7) {
+    animation-delay: 1.0s;
+}
+
+.scene.active .stagger-item:nth-child(8) {
+    animation-delay: 1.15s;
+}
+
+.scene.active .stagger-item:nth-child(9) {
+    animation-delay: 1.3s;
+}
+
+.scene.active .stagger-item:nth-child(10) {
+    animation-delay: 1.45s;
+}
+
+/* Stagger for children inside containers */
+.numbered-item.stagger-item:nth-of-type(1) {
+    animation-delay: 0.2s;
+}
+
+.numbered-item.stagger-item:nth-of-type(2) {
+    animation-delay: 0.4s;
+}
+
+.numbered-item.stagger-item:nth-of-type(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes barGrow {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--w);
+    }
+}
+
+@keyframes drawPath {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(99, 102, 241, 0.5);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* --- Additional Hover/Interaction --- */
+.vs-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.factor-card {
+    transition: transform 0.3s;
+}
+
+.numbered-item {
+    transition: transform 0.3s;
+}
+
+.quote-card {
+    transition: box-shadow 0.3s;
+}
+
+/* --- Text gradients --- */
+.big-num.accent-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.big-num.accent-coral {
+    background: linear-gradient(135deg, var(--coral), var(--amber));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.big-num.accent-teal {
+    background: linear-gradient(135deg, var(--teal), var(--teal-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .title-medium {
+        font-size: 2rem;
+    }
+
+    .emphasis-text-large {
+        font-size: 1.8rem;
+    }
+
+    .big-num {
+        font-size: 3.5rem;
+    }
+
+    .flow-chain {
+        flex-direction: column;
+    }
+
+    .vs-container {
+        flex-direction: column;
+    }
+
+    .triple-card {
+        flex-direction: column;
+    }
+
+    .addiction-stages {
+        flex-direction: column;
+    }
+
+    .vietnam-visual {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

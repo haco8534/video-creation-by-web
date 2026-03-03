@@ -1,0 +1,1385 @@
+/* ============================================================
+   Design Tokens
+   ============================================================ */
+:root {
+    --primary: #4f46e5;
+    --primary-light: rgba(79, 70, 229, 0.10);
+    --accent-coral: #ef4444;
+    --accent-coral-light: rgba(239, 68, 68, 0.10);
+    --accent-teal: #14b8a6;
+    --accent-teal-light: rgba(20, 184, 166, 0.10);
+    --accent-amber: #f59e0b;
+    --accent-amber-light: rgba(245, 158, 11, 0.10);
+    --bg: #fafbfc;
+    --surface: #ffffff;
+    --text: #1e293b;
+    --text-secondary: #64748b;
+    --border: rgba(0, 0, 0, 0.06);
+    --radius: 18px;
+    --radius-sm: 10px;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.10);
+    --font: 'Noto Sans JP', sans-serif;
+}
+
+/* ============================================================
+   Reset & Base
+   ============================================================ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ============================================================
+   Canvas Background
+   ============================================================ */
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ============================================================
+   Scene Base
+   ============================================================ */
+.scene {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.scene.active {
+    display: flex;
+}
+
+.content-area {
+    position: relative;
+    z-index: 2;
+    width: 78%;
+    max-width: 1320px;
+    padding: 56px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.content-area.center-text {
+    align-items: center;
+    text-align: center;
+}
+
+/* ============================================================
+   Typography
+   ============================================================ */
+.scene-heading {
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    color: var(--text);
+}
+
+.big-text {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+}
+
+.accent-primary {
+    color: var(--primary);
+}
+
+.accent-coral {
+    color: var(--accent-coral);
+}
+
+.accent-teal {
+    color: var(--accent-teal);
+}
+
+.accent-amber {
+    color: var(--accent-amber);
+}
+
+.scene-footnote {
+    font-size: 18px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+/* ============================================================
+   Section Badge
+   ============================================================ */
+.section-badge {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    background: var(--primary-light);
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+.section-badge.accent-bg-coral {
+    background: var(--accent-coral-light);
+    color: var(--accent-coral);
+}
+
+.section-badge.accent-bg-teal {
+    background: var(--accent-teal-light);
+    color: var(--accent-teal);
+}
+
+.section-badge.accent-bg-amber {
+    background: var(--accent-amber-light);
+    color: var(--accent-amber);
+}
+
+/* ============================================================
+   Title Scene
+   ============================================================ */
+.title-scene {
+    align-items: center;
+    text-align: center;
+}
+
+.title-badge {
+    display: inline-block;
+    padding: 8px 24px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    background: linear-gradient(135deg, var(--primary-light), var(--accent-coral-light));
+    color: var(--primary);
+}
+
+.title-main {
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.3;
+    letter-spacing: -0.03em;
+}
+
+.title-sub {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.title-year {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--accent-amber);
+    letter-spacing: 4px;
+}
+
+.shock-bolt-svg {
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.4;
+}
+
+/* ============================================================
+   Impact Number
+   ============================================================ */
+.impact-number {
+    font-size: 120px;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--primary), var(--accent-teal));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+.impact-number.accent-coral {
+    background: linear-gradient(135deg, var(--accent-coral), #f97316);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.impact-number.small-impact {
+    font-size: 72px;
+}
+
+.impact-unit {
+    font-size: 0.5em;
+}
+
+.impact-label {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+/* ============================================================
+   Fact Badge
+   ============================================================ */
+.fact-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    font-size: 17px;
+    font-weight: 600;
+    box-shadow: var(--shadow);
+}
+
+.fact-icon {
+    font-size: 22px;
+}
+
+/* ============================================================
+   Numbered List
+   ============================================================ */
+.numbered-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.numbered-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 28px;
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    font-size: 22px;
+    font-weight: 700;
+    box-shadow: var(--shadow);
+}
+
+.num-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+/* ============================================================
+   Timeline Card
+   ============================================================ */
+.timeline-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 28px;
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.timeline-year {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--primary);
+    min-width: 120px;
+}
+
+.timeline-text {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* ============================================================
+   Quote Card
+   ============================================================ */
+.quote-card {
+    padding: 22px 30px;
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    border-left: 5px solid var(--primary);
+    box-shadow: var(--shadow);
+    font-size: 19px;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ============================================================
+   VS Container
+   ============================================================ */
+.vs-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.vs-card {
+    flex: 1;
+    padding: 28px;
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.vs-card.accent-border-coral {
+    border-color: var(--accent-coral);
+    border-width: 2px;
+}
+
+.vs-card.accent-border-amber {
+    border-color: var(--accent-amber);
+    border-width: 2px;
+}
+
+.vs-title {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--text);
+}
+
+.vs-text {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 6px 0;
+}
+
+.vs-desc {
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin-top: 8px;
+}
+
+.vs-verdict {
+    font-size: 15px;
+    font-weight: 800;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+.vs-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.neq-badge {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-coral-light);
+    color: var(--accent-coral);
+    font-size: 22px;
+    font-weight: 900;
+}
+
+/* ============================================================
+   Alert Card
+   ============================================================ */
+.alert-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 26px;
+    border-radius: var(--radius-sm);
+    background: var(--accent-teal-light);
+    border: 1px solid rgba(20, 184, 166, 0.2);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.alert-card.alert-danger {
+    background: var(--accent-coral-light);
+    border-color: rgba(239, 68, 68, 0.2);
+}
+
+.alert-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+/* ============================================================
+   Experiment Layout
+   ============================================================ */
+.experiment-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.role-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 24px 28px;
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    text-align: center;
+    min-width: 160px;
+}
+
+.role-icon {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.role-label {
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.role-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.experimenter-card {
+    border-color: var(--accent-amber);
+    border-width: 2px;
+}
+
+.arrow-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.arrow-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent-coral);
+    letter-spacing: 1px;
+}
+
+/* ============================================================
+   Pressure List
+   ============================================================ */
+.pressure-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.pressure-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 24px;
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    font-size: 20px;
+    font-weight: 700;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s;
+}
+
+.pressure-item.pressure-last {
+    background: var(--accent-coral-light);
+    border-color: rgba(239, 68, 68, 0.3);
+    color: var(--accent-coral);
+}
+
+.pressure-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    color: white;
+    font-size: 16px;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+.pressure-last .pressure-num {
+    background: var(--accent-coral);
+}
+
+/* ============================================================
+   Divider
+   ============================================================ */
+.divider-line {
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent-teal));
+    border-radius: 2px;
+    margin: 8px auto;
+}
+
+/* ============================================================
+   Book Card
+   ============================================================ */
+.book-card {
+    display: flex;
+    align-items: stretch;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--surface);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border);
+}
+
+.book-spine {
+    width: 12px;
+    background: linear-gradient(180deg, var(--accent-coral), #f97316);
+    flex-shrink: 0;
+}
+
+.book-content {
+    padding: 24px 30px;
+}
+
+.book-title {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--accent-coral);
+    margin-bottom: 6px;
+}
+
+.book-author {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.book-desc {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.finding-tags {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: var(--shadow);
+}
+
+/* ============================================================
+   Donut Chart
+   ============================================================ */
+.donut-chart-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+}
+
+.donut-chart {
+    overflow: visible;
+}
+
+.donut-fill {
+    stroke-dasharray: 0 502;
+    animation: donut-anim 1.2s ease-out 0.5s forwards;
+}
+
+.donut-fill-alt {
+    stroke-dasharray: 0 502;
+    animation: donut-anim-alt 1.2s ease-out 0.8s forwards;
+}
+
+@keyframes donut-anim {
+    to {
+        stroke-dasharray: 281 221;
+    }
+}
+
+@keyframes donut-anim-alt {
+    to {
+        stroke-dasharray: 221 281;
+    }
+}
+
+.donut-text-big {
+    font-size: 36px;
+    font-weight: 900;
+    fill: var(--accent-coral);
+    font-family: var(--font);
+}
+
+.donut-text-small {
+    font-size: 14px;
+    font-weight: 700;
+    fill: var(--text-secondary);
+    font-family: var(--font);
+}
+
+.donut-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.legend-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.legend-dot.coral {
+    background: var(--accent-coral);
+}
+
+.legend-dot.teal {
+    background: var(--accent-teal);
+}
+
+/* ============================================================
+   Bar Chart
+   ============================================================ */
+.bar-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.bar-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.bar-label {
+    font-size: 16px;
+    font-weight: 700;
+    min-width: 100px;
+    text-align: right;
+    color: var(--text-secondary);
+}
+
+.bar-track {
+    flex: 1;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bar-fill {
+    height: 100%;
+    width: var(--fill-width);
+    background: var(--bar-color);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    animation: bar-grow 0.8s ease-out forwards;
+    transform-origin: left;
+}
+
+.bar-value {
+    font-size: 14px;
+    font-weight: 800;
+    color: white;
+}
+
+@keyframes bar-grow {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* ============================================================
+   Range Display
+   ============================================================ */
+.range-display {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: center;
+    margin: 16px 0;
+}
+
+.range-min,
+.range-max {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.range-num {
+    font-size: 80px;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--accent-teal), var(--primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+.range-num.accent-coral {
+    background: linear-gradient(135deg, var(--accent-coral), #f97316);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.range-unit {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.range-label {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.range-connector {
+    display: flex;
+    align-items: center;
+}
+
+/* ============================================================
+   Conflict Visual
+   ============================================================ */
+.conflict-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.conflict-card {
+    text-align: center;
+    padding: 28px 36px;
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.conflict-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.conflict-text {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.conflict-vs {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent-coral);
+}
+
+.result-banner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 32px;
+    border-radius: var(--radius-sm);
+    background: var(--accent-teal-light);
+    border: 2px solid var(--accent-teal);
+    justify-content: center;
+}
+
+.result-arrow {
+    font-size: 28px;
+    color: var(--accent-teal);
+}
+
+.result-text {
+    font-size: 26px;
+    font-weight: 900;
+}
+
+/* ============================================================
+   Theory Authors
+   ============================================================ */
+.theory-authors {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+}
+
+.author-name {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--accent-amber);
+}
+
+.author-desc {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* ============================================================
+   Effectiveness Chart
+   ============================================================ */
+.effectiveness-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.eff-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.eff-label {
+    font-size: 16px;
+    font-weight: 700;
+    min-width: 200px;
+    text-align: right;
+    color: var(--text-secondary);
+}
+
+.eff-bar-track {
+    flex: 1;
+    height: 24px;
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.eff-bar {
+    height: 100%;
+    border-radius: 6px;
+    animation: bar-grow 0.8s ease-out forwards;
+    transform-origin: left;
+}
+
+.eff-bar.high {
+    width: 85%;
+    background: var(--accent-teal);
+}
+
+.eff-bar.medium {
+    width: 55%;
+    background: var(--accent-amber);
+}
+
+.eff-bar.low {
+    width: 25%;
+    background: var(--accent-coral);
+}
+
+.eff-result {
+    font-size: 15px;
+    font-weight: 700;
+    min-width: 120px;
+    color: var(--text-secondary);
+}
+
+/* ============================================================
+   Replication Cards
+   ============================================================ */
+.replication-cards {
+    display: flex;
+    gap: 18px;
+}
+
+.rep-card {
+    flex: 1;
+    padding: 24px;
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rep-year {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--primary);
+}
+
+.rep-place {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.rep-researcher {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.rep-result {
+    font-size: 16px;
+    font-weight: 800;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+/* ============================================================
+   Interpretation Flow
+   ============================================================ */
+.interpretation-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-top: 16px;
+}
+
+.interp-old {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 28px;
+    border-radius: var(--radius-sm);
+    background: rgba(239, 68, 68, 0.06);
+    border: 1px solid rgba(239, 68, 68, 0.15);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-decoration: line-through;
+}
+
+.interp-cross {
+    font-size: 22px;
+    color: var(--accent-coral);
+}
+
+.interp-arrow {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--primary);
+}
+
+.interp-new {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 30px;
+    border-radius: var(--radius-sm);
+    background: var(--accent-teal-light);
+    border: 2px solid var(--accent-teal);
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.interp-check {
+    font-size: 22px;
+    color: var(--accent-teal);
+}
+
+/* ============================================================
+   Triple Card
+   ============================================================ */
+.triple-card {
+    display: flex;
+    gap: 16px;
+}
+
+.mini-card {
+    flex: 1;
+    padding: 22px 20px;
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.mini-icon {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.mini-title {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.mini-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* ============================================================
+   Hidden Experiment
+   ============================================================ */
+.hidden-experiment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.condition-card {
+    padding: 20px 32px;
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    border: 2px dashed var(--accent-coral);
+    text-align: center;
+}
+
+.condition-label {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--accent-coral);
+    margin-bottom: 6px;
+}
+
+.condition-detail {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+/* ============================================================
+   Summary
+   ============================================================ */
+.summary-intro {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.summary-points {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.summary-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 22px 28px;
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.point-num {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+.point-content {
+    flex: 1;
+}
+
+.point-title {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.point-content p {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* ============================================================
+   Lesson
+   ============================================================ */
+.lesson-text {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.6;
+}
+
+.big-accent {
+    font-size: 36px;
+}
+
+.lesson-sub {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.shield-svg {
+    opacity: 0.5;
+    margin-top: 12px;
+}
+
+/* ============================================================
+   Voltage Meter
+   ============================================================ */
+.voltage-meter {
+    padding: 20px 28px;
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.meter-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text);
+    text-align: center;
+}
+
+.meter-scale {
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+}
+
+.meter-svg {
+    overflow: visible;
+}
+
+.meter-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.meter-label.safe {
+    color: var(--accent-teal);
+}
+
+.meter-label.moderate {
+    color: var(--accent-amber);
+}
+
+.meter-label.danger {
+    color: var(--accent-coral);
+}
+
+.meter-label.lethal {
+    color: var(--accent-coral);
+    font-weight: 900;
+    animation: pulse-glow 2s infinite;
+}
+
+/* ============================================================
+   Stagger Animations
+   ============================================================ */
+.scene.active [data-stagger="1"] {
+    animation-delay: 0.15s;
+}
+
+.scene.active [data-stagger="2"] {
+    animation-delay: 0.35s;
+}
+
+.scene.active [data-stagger="3"] {
+    animation-delay: 0.55s;
+}
+
+.scene.active [data-stagger="4"] {
+    animation-delay: 0.75s;
+}
+
+.scene.active [data-stagger="5"] {
+    animation-delay: 0.95s;
+}
+
+.scene.active [data-stagger="6"] {
+    animation-delay: 1.15s;
+}
+
+/* ============================================================
+   Core Animations
+   ============================================================ */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.slide-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pop-in {
+    opacity: 0;
+    transform: scale(0.7);
+    animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes popIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.bounce-in {
+    opacity: 0;
+    transform: scale(0.5);
+    animation: bounceIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes bounceIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.draw-line {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: drawLine 2s ease-out forwards;
+}
+
+@keyframes drawLine {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* ============================================================
+   Pulse / Float
+   ============================================================ */
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 20px 6px rgba(79, 70, 229, 0.15);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

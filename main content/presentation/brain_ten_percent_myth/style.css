@@ -1,0 +1,1371 @@
+/* ==================================================================
+   BRAIN 10% MYTH — PRESENTATION STYLESHEET
+   Theme: Clean scientific white with indigo/teal/coral accents
+   ================================================================== */
+
+/* ---------- RESET & ROOT ---------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #f8f9fa;
+    --text: #1a1a2e;
+    --text-light: #6c757d;
+    --primary: #6366f1;
+    --primary-light: #e0e7ff;
+    --teal: #14b8a6;
+    --teal-light: #ccfbf1;
+    --coral: #ef4444;
+    --coral-light: #fee2e2;
+    --amber: #f59e0b;
+    --amber-light: #fef3c7;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.1);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ---------- SCENE BASE ---------- */
+.scene {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    background: var(--bg);
+    overflow: hidden;
+}
+
+.scene.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: sceneFadeIn 0.5s ease both;
+}
+
+/* ---------- DARK SCENE ---------- */
+.dark-scene {
+    background: #111827;
+}
+
+.dark-scene .scene-title {
+    color: #f1f5f9;
+}
+
+.light-text {
+    color: #f1f5f9 !important;
+}
+
+.light-text-dim {
+    color: #94a3b8 !important;
+}
+
+/* ---------- CANVAS BACKGROUND ---------- */
+.bg-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ---------- CONTENT LAYOUTS ---------- */
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 960px;
+    width: 90%;
+    padding: 40px 24px;
+}
+
+.center-layout {
+    text-align: center;
+}
+
+.card-layout {
+    text-align: center;
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+.title-large {
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+}
+
+.title-medium {
+    font-size: 2.4rem;
+    font-weight: 900;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+}
+
+.title-sub {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-top: 8px;
+}
+
+.scene-title {
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin-bottom: 18px;
+}
+
+/* ---------- ACCENT COLORS ---------- */
+.accent-primary {
+    color: var(--primary);
+}
+
+.accent-teal {
+    color: var(--teal);
+}
+
+.accent-coral {
+    color: var(--coral);
+}
+
+.accent-amber {
+    color: var(--amber);
+}
+
+.accent-bg-primary {
+    background: var(--primary);
+    color: #fff;
+}
+
+.accent-bg-teal {
+    background: var(--teal);
+    color: #fff;
+}
+
+.accent-bg-coral {
+    background: var(--coral);
+    color: #fff;
+}
+
+.accent-bg-amber {
+    background: var(--amber);
+    color: #fff;
+}
+
+/* ---------- SECTION BADGE ---------- */
+.section-badge {
+    display: inline-block;
+    padding: 6px 20px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+/* ---------- SOURCE BADGE ---------- */
+.source-badge {
+    display: inline-block;
+    background: var(--primary-light);
+    color: var(--primary);
+    padding: 4px 16px;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+/* ---------- EMPHASIS TEXT ---------- */
+.emphasis-text {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.emphasis-text-large {
+    font-size: 2.8rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.emphasis-sub {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+/* ---------- FOOTNOTE ---------- */
+.footnote {
+    font-size: 0.7rem;
+    color: #adb5bd;
+    margin-top: 16px;
+}
+
+/* ---------- IMPACT NUMBER ---------- */
+.impact-number {
+    margin: 16px 0 8px;
+}
+
+.big-num {
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.num-unit {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-left: 4px;
+}
+
+.num-dash {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin: 0 8px;
+}
+
+/* ---------- STAT ROW ---------- */
+.stat-row {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 20px;
+}
+
+.stat-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 16px 28px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+/* ---------- NUMBERED LIST ---------- */
+.numbered-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.numbered-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 18px 24px;
+    box-shadow: var(--shadow);
+    text-align: left;
+}
+
+.summary-item {
+    border-left: 4px solid var(--primary);
+}
+
+.number-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.numbered-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ---------- VS CONTAINER ---------- */
+.vs-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 16px;
+    margin: 16px 0;
+    flex-wrap: wrap;
+}
+
+.vs-card {
+    flex: 1;
+    min-width: 200px;
+    max-width: 340px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 24px 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.vs-left {
+    border-top: 4px solid var(--teal);
+}
+
+.vs-right {
+    border-top: 4px solid var(--coral);
+}
+
+.vs-badge {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 999px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+}
+
+.safe-badge {
+    background: var(--teal-light);
+    color: var(--teal);
+}
+
+.danger-badge {
+    background: var(--coral-light);
+    color: var(--coral);
+}
+
+.vs-title {
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.vs-desc {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+.vs-detail {
+    font-size: 0.75rem;
+    color: var(--primary);
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.vs-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--text-light);
+    min-width: 40px;
+}
+
+.comparison-note {
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 700;
+    margin-top: 12px;
+}
+
+/* ---------- TRIPLE / FACTOR CARDS ---------- */
+.triple-card {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 16px 0;
+}
+
+.factor-card {
+    flex: 1;
+    min-width: 180px;
+    max-width: 260px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 24px 16px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.factor-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.2rem;
+    margin: 0 auto 12px;
+}
+
+.factor-name {
+    font-size: 1rem;
+    font-weight: 900;
+    margin-bottom: 6px;
+}
+
+.factor-desc {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+.factor-stat {
+    font-size: 0.75rem;
+    color: var(--primary);
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+/* ---------- FLOW CHAIN ---------- */
+.flow-chain {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 8px;
+    margin: 16px 0;
+    flex-wrap: wrap;
+}
+
+.flow-node {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 16px 14px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    min-width: 140px;
+    max-width: 180px;
+    flex: 1;
+}
+
+.flow-node-highlight {
+    border: 2px solid var(--primary);
+    background: var(--primary-light);
+}
+
+.flow-year {
+    font-size: 0.75rem;
+    font-weight: 900;
+    color: var(--primary);
+    margin-bottom: 6px;
+}
+
+.flow-text {
+    font-size: 0.8rem;
+    line-height: 1.45;
+}
+
+.flow-name {
+    font-weight: 900;
+    color: var(--text);
+}
+
+.flow-sub {
+    font-size: 0.7rem;
+    color: var(--text-light);
+}
+
+.flow-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: var(--text-light);
+    min-width: 24px;
+}
+
+/* ---------- QUOTE CARD ---------- */
+.quote-card {
+    background: var(--card-bg);
+    border-left: 4px solid var(--primary);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+    box-shadow: var(--shadow);
+    text-align: left;
+    max-width: 680px;
+    margin: 16px auto;
+}
+
+.quote-warning {
+    border-left-color: var(--coral);
+}
+
+.quote-warm {
+    border-left-color: var(--amber);
+}
+
+.quote-mark {
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.quote-warning .quote-mark {
+    color: var(--coral);
+}
+
+.quote-warm .quote-mark {
+    color: var(--amber);
+}
+
+.quote-text {
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.quote-source {
+    font-size: 0.7rem;
+    color: var(--text-light);
+}
+
+/* ---------- ALERT CARD ---------- */
+.alert-card {
+    background: var(--coral-light);
+    border-left: 4px solid var(--coral);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    text-align: left;
+    max-width: 600px;
+    margin: 16px auto;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.alert-dark {
+    background: rgba(239, 68, 68, 0.12);
+    border-left-color: var(--coral);
+}
+
+.alert-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--coral);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.alert-title {
+    font-size: 1.1rem;
+    font-weight: 900;
+    margin-bottom: 4px;
+}
+
+.alert-sub {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* ---------- BAR COMPARISON ---------- */
+.bar-comparison {
+    max-width: 560px;
+    margin: 20px auto;
+}
+
+.bar-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.bar-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    min-width: 60px;
+    text-align: right;
+}
+
+.bar-track {
+    flex: 1;
+    height: 28px;
+    background: #e5e7eb;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 14px;
+    width: 0;
+    transition: width 1.5s ease;
+}
+
+.bar-rest {
+    background: linear-gradient(90deg, var(--primary), #818cf8);
+}
+
+.bar-focus {
+    background: linear-gradient(90deg, var(--coral), #f97316);
+}
+
+.scene.active .bar-fill {
+    width: var(--w);
+}
+
+.bar-value {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-light);
+    min-width: 70px;
+}
+
+/* ---------- DARK LIST ---------- */
+.dark-list {
+    max-width: 440px;
+    margin: 16px auto 0;
+}
+
+.dark-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.dark-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #e2e8f0;
+}
+
+/* ================================================================
+   CUSTOM VISUALS — BRAIN SCAN
+   ================================================================ */
+.brain-scan-visual {
+    max-width: 360px;
+    margin: 12px auto;
+    text-align: center;
+}
+
+.brain-svg {
+    width: 100%;
+    max-width: 300px;
+}
+
+.brain-outline {
+    stroke-dasharray: 800;
+    stroke-dashoffset: 800;
+    animation: drawLine 2s ease forwards 0.3s;
+}
+
+.brain-region {
+    fill: var(--primary);
+    opacity: 0;
+    animation: dotPulse 1.5s ease-in-out infinite;
+}
+
+.scene.active .brain-region {
+    opacity: 0.6;
+}
+
+.region-1 {
+    animation-delay: 0.2s;
+}
+
+.region-2 {
+    animation-delay: 0.4s;
+}
+
+.region-3 {
+    animation-delay: 0.6s;
+}
+
+.region-4 {
+    animation-delay: 0.8s;
+}
+
+.region-5 {
+    animation-delay: 1.0s;
+}
+
+.region-6 {
+    animation-delay: 1.2s;
+}
+
+.region-7 {
+    animation-delay: 1.4s;
+}
+
+.region-8 {
+    animation-delay: 1.6s;
+}
+
+.brain-connection {
+    stroke: var(--primary);
+    stroke-width: 1.5;
+    opacity: 0.2;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+}
+
+.scene.active .brain-connection {
+    animation: drawLine 1.5s ease forwards;
+    animation-delay: 0.8s;
+}
+
+.scan-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-top: 8px;
+}
+
+/* ================================================================
+   CUSTOM VISUALS — ENERGY RINGS
+   ================================================================ */
+.energy-visual {
+    margin: 12px auto;
+}
+
+.energy-ring-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.energy-ring {
+    position: relative;
+    text-align: center;
+}
+
+.energy-ring svg {
+    width: 120px;
+    height: 120px;
+}
+
+.ring-bg {
+    fill: none;
+    stroke: #e5e7eb;
+    stroke-width: 10;
+}
+
+.ring-fill {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 339.292;
+    stroke-dashoffset: 339.292;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    transition: stroke-dashoffset 1.5s ease;
+}
+
+.ring-weight {
+    stroke: var(--teal);
+}
+
+.ring-energy {
+    stroke: var(--coral);
+}
+
+.scene.active .ring-fill {
+    stroke-dashoffset: calc(339.292 * (1 - var(--percent) / 100));
+}
+
+.ring-center-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+.ring-label-bottom {
+    font-size: 0.7rem;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+.energy-vs {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+/* ================================================================
+   CUSTOM VISUALS — GAGE
+   ================================================================ */
+.gage-visual {
+    margin: 12px auto;
+    max-width: 500px;
+}
+
+.gage-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    box-shadow: var(--shadow);
+}
+
+.gage-icon {
+    flex-shrink: 0;
+}
+
+.gage-head-svg {
+    width: 80px;
+}
+
+.gage-rod {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+}
+
+.scene.active .gage-rod {
+    animation: drawLine 1.2s ease forwards 0.5s;
+}
+
+.gage-title {
+    font-size: 1.1rem;
+    font-weight: 900;
+    margin-bottom: 4px;
+}
+
+.gage-desc {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* ================================================================
+   CUSTOM VISUALS — DMN NETWORK
+   ================================================================ */
+.dmn-visual {
+    margin: 12px auto;
+    max-width: 420px;
+}
+
+.dmn-svg {
+    width: 100%;
+}
+
+.dmn-node {
+    fill: var(--primary);
+    opacity: 0;
+}
+
+.scene.active .dmn-node {
+    animation: dotAppear 0.5s ease forwards;
+}
+
+.node-1 {
+    animation-delay: 0.3s;
+}
+
+.node-2 {
+    animation-delay: 0.5s;
+}
+
+.node-3 {
+    animation-delay: 0.5s;
+}
+
+.node-4 {
+    animation-delay: 0.7s;
+}
+
+.node-5 {
+    animation-delay: 0.9s;
+}
+
+.node-6 {
+    animation-delay: 0.9s;
+}
+
+.dmn-label {
+    fill: #fff;
+    font-size: 8px;
+    font-weight: 700;
+    text-anchor: middle;
+    dominant-baseline: central;
+}
+
+.dmn-connection {
+    stroke: var(--primary);
+    stroke-width: 1.5;
+    opacity: 0.15;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+}
+
+.scene.active .dmn-connection {
+    animation: drawLine 1.2s ease forwards 0.6s;
+}
+
+/* ================================================================
+   STAGGER ANIMATIONS
+   ================================================================ */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity var(--transition), transform var(--transition);
+}
+
+.scene.active .stagger-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scene.active .stagger-item:nth-child(1) {
+    transition-delay: 0.0s;
+}
+
+.scene.active .stagger-item:nth-child(2) {
+    transition-delay: 0.12s;
+}
+
+.scene.active .stagger-item:nth-child(3) {
+    transition-delay: 0.24s;
+}
+
+.scene.active .stagger-item:nth-child(4) {
+    transition-delay: 0.36s;
+}
+
+.scene.active .stagger-item:nth-child(5) {
+    transition-delay: 0.48s;
+}
+
+.scene.active .stagger-item:nth-child(6) {
+    transition-delay: 0.60s;
+}
+
+.scene.active .stagger-item:nth-child(7) {
+    transition-delay: 0.72s;
+}
+
+.scene.active .stagger-item:nth-child(8) {
+    transition-delay: 0.84s;
+}
+
+.scene.active .stagger-item:nth-child(9) {
+    transition-delay: 0.96s;
+}
+
+.scene.active .stagger-item:nth-child(10) {
+    transition-delay: 1.08s;
+}
+
+/* ================================================================
+   @KEYFRAMES — CORE (8 REQUIRED + EXTRAS)
+   ================================================================ */
+@keyframes sceneFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes cardSlideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes numberPop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes barFill {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--w);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 20px 8px rgba(99, 102, 241, 0.15);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+    70% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes titleReveal {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes drawLine {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes dotPulse {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(0.9);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scale(1.15);
+    }
+}
+
+@keyframes dotAppear {
+    from {
+        opacity: 0;
+        r: 0;
+    }
+
+    to {
+        opacity: 0.85;
+    }
+}
+
+@keyframes warningShake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-3px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(3px);
+    }
+}
+
+@keyframes pulseRing {
+    0% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 16px rgba(99, 102, 241, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ================================================================
+   ANIMATION APPLICATION RULES
+   ================================================================ */
+/* Cards */
+.scene.active .factor-card,
+.scene.active .stat-card,
+.scene.active .vs-card,
+.scene.active .gage-card {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .factor-card:nth-child(1),
+.scene.active .vs-card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .factor-card:nth-child(2),
+.scene.active .vs-card:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .factor-card:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+/* Numbers */
+.scene.active .impact-number {
+    animation: numberPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+/* Flow nodes */
+.scene.active .flow-node {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .flow-node:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .flow-node:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .flow-node:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.scene.active .flow-node:nth-child(7) {
+    animation-delay: 1.1s;
+}
+
+/* Arrows */
+.scene.active .flow-arrow,
+.scene.active .vs-divider {
+    animation: bounceIn 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .flow-arrow:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.scene.active .flow-arrow:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+.scene.active .flow-arrow:nth-child(6) {
+    animation-delay: 1.0s;
+}
+
+.scene.active .vs-divider {
+    animation-delay: 0.5s;
+}
+
+/* Alert shake */
+.scene.active .alert-card {
+    animation: cardSlideUp 0.5s ease-out forwards, warningShake 0.5s ease-in-out 1s 1;
+    opacity: 0;
+    animation-delay: 0.3s;
+}
+
+/* Pulse on highlight nodes */
+.scene.active .flow-node-highlight {
+    animation: cardSlideUp 0.5s ease-out forwards, pulseGlow 2.5s ease-in-out 1.2s infinite;
+    opacity: 0;
+}
+
+/* Summary items pulse */
+.scene.active .summary-item {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .summary-item:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .summary-item:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .summary-item:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+/* Title accent */
+.scene.active .title-large .accent-coral,
+.scene.active .title-medium .accent-primary,
+.scene.active .title-medium .accent-teal,
+.scene.active .title-medium .accent-coral {
+    animation: titleReveal 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+/* Numbered items */
+.scene.active .numbered-item {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .numbered-item:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .numbered-item:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.scene.active .numbered-item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Quote cards */
+.scene.active .quote-card {
+    animation: cardSlideUp 0.6s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+/* Bars */
+.scene.active .bar-fill {
+    animation: barFill 1.2s ease-out forwards;
+    animation-delay: 0.6s;
+    width: 0;
+}
+
+/* Dark items */
+.scene.active .dark-item {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .dark-item:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .dark-item:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+/* Float on ending */
+#scene-29 .quote-card,
+#scene-30 .title-medium {
+    animation: float 3s ease-in-out infinite 1s;
+}

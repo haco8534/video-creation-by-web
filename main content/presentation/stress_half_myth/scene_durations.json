@@ -1,0 +1,887 @@
+[
+  {
+    "id": 0,
+    "title": "ストレスは体に悪い？",
+    "duration": 35.4,
+    "audioFiles": [
+      {
+        "file": "scene_00_00.wav",
+        "duration": 5.696,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_00_01.wav",
+        "duration": 7.456,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_00_02.wav",
+        "duration": 7.8933333333333335,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_00_03.wav",
+        "duration": 8.362666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_00_04.wav",
+        "duration": 4.266666666666667,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "title": "年間2万人の早死に",
+    "duration": 31.4,
+    "audioFiles": [
+      {
+        "file": "scene_01_00.wav",
+        "duration": 3.104,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_01_01.wav",
+        "duration": 8.373333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_01_02.wav",
+        "duration": 3.477333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_01_03.wav",
+        "duration": 6.389333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_01_04.wav",
+        "duration": 8.352,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "信念が体を壊す",
+    "duration": 33.8,
+    "audioFiles": [
+      {
+        "file": "scene_02_00.wav",
+        "duration": 3.3813333333333335,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_02_01.wav",
+        "duration": 3.872,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_02_02.wav",
+        "duration": 6.986666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_02_03.wav",
+        "duration": 4.810666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_02_04.wav",
+        "duration": 6.517333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_02_05.wav",
+        "duration": 6.197333333333333,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "衝撃の大規模調査",
+    "duration": 16.4,
+    "audioFiles": [
+      {
+        "file": "scene_03_00.wav",
+        "duration": 6.570666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_03_01.wav",
+        "duration": 5.386666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_03_02.wav",
+        "duration": 3.3386666666666667,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "研究デザイン",
+    "duration": 27.4,
+    "audioFiles": [
+      {
+        "file": "scene_04_00.wav",
+        "duration": 6.144,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_04_01.wav",
+        "duration": 10.293333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_04_02.wav",
+        "duration": 5.248,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_04_03.wav",
+        "duration": 4.341333333333333,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "死亡リスク43%増加",
+    "duration": 19.1,
+    "audioFiles": [
+      {
+        "file": "scene_05_00.wav",
+        "duration": 4.053333333333334,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_05_01.wav",
+        "duration": 7.488,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_05_02.wav",
+        "duration": 3.968,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_05_03.wav",
+        "duration": 2.24,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "信じる vs 信じない",
+    "duration": 37.8,
+    "audioFiles": [
+      {
+        "file": "scene_06_00.wav",
+        "duration": 8.416,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_06_01.wav",
+        "duration": 5.237333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_06_02.wav",
+        "duration": 5.184,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_06_03.wav",
+        "duration": 8.544,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_06_04.wav",
+        "duration": 8.746666666666666,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "米国死因第15位相当",
+    "duration": 25.3,
+    "audioFiles": [
+      {
+        "file": "scene_07_00.wav",
+        "duration": 6.752,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_07_01.wav",
+        "duration": 8.170666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_07_02.wav",
+        "duration": 9.269333333333334,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "マクゴニガルのTED",
+    "duration": 23,
+    "audioFiles": [
+      {
+        "file": "scene_08_00.wav",
+        "duration": 6.56,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_08_01.wav",
+        "duration": 4.501333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_08_02.wav",
+        "duration": 5.664,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_08_03.wav",
+        "duration": 4.8533333333333335,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "ストレス反応の科学",
+    "duration": 13.7,
+    "audioFiles": [
+      {
+        "file": "scene_09_00.wav",
+        "duration": 8.746666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_09_01.wav",
+        "duration": 4.1066666666666665,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "チャレンジ反応 vs 脅威反応",
+    "duration": 33.6,
+    "audioFiles": [
+      {
+        "file": "scene_10_00.wav",
+        "duration": 7.562666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_10_01.wav",
+        "duration": 9.066666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_10_02.wav",
+        "duration": 5.248,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_10_03.wav",
+        "duration": 10.336,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "チャレンジ反応のメカニズム",
+    "duration": 38.2,
+    "audioFiles": [
+      {
+        "file": "scene_11_00.wav",
+        "duration": 8.981333333333334,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_11_01.wav",
+        "duration": 7.072,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_11_02.wav",
+        "duration": 3.925333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_11_03.wav",
+        "duration": 8.096,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_11_04.wav",
+        "duration": 8.426666666666666,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "コルチゾールとDHEA",
+    "duration": 42.2,
+    "audioFiles": [
+      {
+        "file": "scene_12_00.wav",
+        "duration": 9.141333333333334,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_12_01.wav",
+        "duration": 8.064,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_12_02.wav",
+        "duration": 4.298666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_12_03.wav",
+        "duration": 5.664,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_12_04.wav",
+        "duration": 5.482666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_12_05.wav",
+        "duration": 7.552,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "ハーバード大学のスピーチ実験",
+    "duration": 32.7,
+    "audioFiles": [
+      {
+        "file": "scene_13_00.wav",
+        "duration": 6.24,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_13_01.wav",
+        "duration": 9.088,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_13_02.wav",
+        "duration": 6.410666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_13_03.wav",
+        "duration": 6.250666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_13_04.wav",
+        "duration": 3.050666666666667,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "マインドセット操作実験",
+    "duration": 32,
+    "audioFiles": [
+      {
+        "file": "scene_14_00.wav",
+        "duration": 6.634666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_14_01.wav",
+        "duration": 7.818666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_14_02.wav",
+        "duration": 10.485333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_14_03.wav",
+        "duration": 5.642666666666667,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "もう一つのストレスホルモン",
+    "duration": 8.7,
+    "audioFiles": [
+      {
+        "file": "scene_15_00.wav",
+        "duration": 4.330666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_15_01.wav",
+        "duration": 3.52,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "オキシトシンの正体",
+    "duration": 18.2,
+    "audioFiles": [
+      {
+        "file": "scene_16_00.wav",
+        "duration": 8.565333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_16_01.wav",
+        "duration": 4.117333333333334,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_16_02.wav",
+        "duration": 4.394666666666667,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "オキシトシンの働き",
+    "duration": 36.7,
+    "audioFiles": [
+      {
+        "file": "scene_17_00.wav",
+        "duration": 5.472,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_17_01.wav",
+        "duration": 4.597333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_17_02.wav",
+        "duration": 6.218666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_17_03.wav",
+        "duration": 3.989333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_17_04.wav",
+        "duration": 9.269333333333334,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_17_05.wav",
+        "duration": 5.141333333333334,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "ケアギビングの効果",
+    "duration": 34.7,
+    "audioFiles": [
+      {
+        "file": "scene_18_00.wav",
+        "duration": 5.354666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_18_01.wav",
+        "duration": 6.368,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_18_02.wav",
+        "duration": 7.84,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_18_03.wav",
+        "duration": 3.2533333333333334,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_18_04.wav",
+        "duration": 6.752,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_18_05.wav",
+        "duration": 3.104,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "オキシトシンの3つの保護効果",
+    "duration": 26,
+    "audioFiles": [
+      {
+        "file": "scene_19_00.wav",
+        "duration": 9.92,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_19_01.wav",
+        "duration": 2.912,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_19_02.wav",
+        "duration": 7.434666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_19_03.wav",
+        "duration": 4.288,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "でも半分は本当に怖い",
+    "duration": 18.6,
+    "audioFiles": [
+      {
+        "file": "scene_20_00.wav",
+        "duration": 6.293333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_20_01.wav",
+        "duration": 5.514666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_20_02.wav",
+        "duration": 5.674666666666667,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "title": "急性ストレス vs 慢性ストレス",
+    "duration": 23.8,
+    "audioFiles": [
+      {
+        "file": "scene_21_00.wav",
+        "duration": 7.1146666666666665,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_21_01.wav",
+        "duration": 4.8213333333333335,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_21_02.wav",
+        "duration": 7.210666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_21_03.wav",
+        "duration": 3.2746666666666666,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "慢性ストレスの3つの害",
+    "duration": 76.9,
+    "audioFiles": [
+      {
+        "file": "scene_22_00.wav",
+        "duration": 6.016,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_22_01.wav",
+        "duration": 5.984,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_22_02.wav",
+        "duration": 8.170666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_22_03.wav",
+        "duration": 2.517333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_22_04.wav",
+        "duration": 8.128,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_22_05.wav",
+        "duration": 7.658666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_22_06.wav",
+        "duration": 8.394666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_22_07.wav",
+        "duration": 2.528,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_22_08.wav",
+        "duration": 2.336,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_22_09.wav",
+        "duration": 11.232,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_22_10.wav",
+        "duration": 5.642666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_22_11.wav",
+        "duration": 4.512,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "急性は味方、慢性は敵",
+    "duration": 21.8,
+    "audioFiles": [
+      {
+        "file": "scene_23_00.wav",
+        "duration": 9.045333333333334,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_23_01.wav",
+        "duration": 6.816,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_23_02.wav",
+        "duration": 4.832,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "ストレスを味方にする3ステップ",
+    "duration": 10.1,
+    "audioFiles": [
+      {
+        "file": "scene_24_00.wav",
+        "duration": 4.181333333333333,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_24_01.wav",
+        "duration": 5.12,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "title": "3つのステップ",
+    "duration": 52.9,
+    "audioFiles": [
+      {
+        "file": "scene_25_00.wav",
+        "duration": 6.9013333333333335,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_25_01.wav",
+        "duration": 5.002666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_25_02.wav",
+        "duration": 2.1226666666666665,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_25_03.wav",
+        "duration": 9.386666666666667,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_25_04.wav",
+        "duration": 6.0906666666666665,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_25_05.wav",
+        "duration": 3.6586666666666665,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_25_06.wav",
+        "duration": 9.696,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_25_07.wav",
+        "duration": 7.445333333333333,
+        "speaker": "めたん"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "title": "ストレスと意味ある人生",
+    "duration": 30.1,
+    "audioFiles": [
+      {
+        "file": "scene_26_00.wav",
+        "duration": 4.16,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_26_01.wav",
+        "duration": 7.744,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_26_02.wav",
+        "duration": 6.858666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_26_03.wav",
+        "duration": 4.874666666666666,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_26_04.wav",
+        "duration": 4.8,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "title": "今日からできること",
+    "duration": 32.8,
+    "audioFiles": [
+      {
+        "file": "scene_27_00.wav",
+        "duration": 3.936,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_27_01.wav",
+        "duration": 9.408,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_27_02.wav",
+        "duration": 7.381333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_27_03.wav",
+        "duration": 7.925333333333334,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_27_04.wav",
+        "duration": 2.485333333333333,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "title": "まとめ",
+    "duration": 26.9,
+    "audioFiles": [
+      {
+        "file": "scene_28_00.wav",
+        "duration": 5.568,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_28_01.wav",
+        "duration": 8.213333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_28_02.wav",
+        "duration": 7.189333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_28_03.wav",
+        "duration": 4.576,
+        "speaker": "ずんだもん"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "title": "ストレスを味方にしよう",
+    "duration": 19.7,
+    "audioFiles": [
+      {
+        "file": "scene_29_00.wav",
+        "duration": 7.445333333333333,
+        "speaker": "めたん"
+      },
+      {
+        "file": "scene_29_01.wav",
+        "duration": 3.498666666666667,
+        "speaker": "ずんだもん"
+      },
+      {
+        "file": "scene_29_02.wav",
+        "duration": 7.626666666666667,
+        "speaker": "ずんだもん"
+      }
+    ]
+  }
+]

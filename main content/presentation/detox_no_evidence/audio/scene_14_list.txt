@@ -1,0 +1,5 @@
+file 'D:/myfolder/動画生成/main content/presentation/detox_no_evidence/audio/scene_14_00.wav'
+file 'D:/myfolder/動画生成/main content/presentation/detox_no_evidence/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/detox_no_evidence/audio/scene_14_01.wav'
+file 'D:/myfolder/動画生成/main content/presentation/detox_no_evidence/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/detox_no_evidence/audio/scene_14_02.wav'

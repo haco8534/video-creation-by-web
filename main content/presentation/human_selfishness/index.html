@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人間は本来「利己的」なのか？</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Scene 0: タイトルカード -->
+    <section class="scene active" id="scene-0">
+        <canvas id="canvas-title" class="bg-canvas"></canvas>
+        <div class="scene-content title-card">
+            <div class="title-label stagger-item">HUMAN NATURE</div>
+            <h1 class="title-main stagger-item">人間は本来<br><span class="accent-coral">「利己的」</span>なのか？</h1>
+            <div class="title-accent-line stagger-item"></div>
+            <div class="title-sub stagger-item">進化・脳・実験が暴いた本当の答え</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: 段階的リスト 「利己的」を支える有名な言葉たち -->
+    <section class="scene" id="scene-1">
+        <div class="scene-content card-layout">
+            <h2 class="section-title stagger-item">「人間は利己的」を支える<span class="accent-primary">3つの知的伝統</span></h2>
+            <div class="three-pillars">
+                <div class="pillar-card stagger-item">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 60 60">
+                            <rect x="15" y="10" width="30" height="40" rx="3" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                            <line x1="22" y1="20" x2="38" y2="20" stroke="currentColor" stroke-width="1.5" />
+                            <line x1="22" y1="28" x2="38" y2="28" stroke="currentColor" stroke-width="1.5" />
+                            <line x1="22" y1="36" x2="32" y2="36" stroke="currentColor" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <div class="pillar-label">哲学</div>
+                    <div class="pillar-name">ホッブズ</div>
+                    <div class="pillar-desc">万人の万人に対する闘争</div>
+                </div>
+                <div class="pillar-card stagger-item">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 60 60">
+                            <circle cx="30" cy="30" r="18" fill="none" stroke="currentColor" stroke-width="2" />
+                            <path d="M20 35 L25 20 L30 30 L35 15 L40 25" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="pillar-label">経済学</div>
+                    <div class="pillar-name">ホモ・エコノミクス</div>
+                    <div class="pillar-desc">合理的利益最大化</div>
+                </div>
+                <div class="pillar-card stagger-item">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 60 60">
+                            <ellipse cx="30" cy="30" rx="12" ry="20" fill="none" stroke="currentColor" stroke-width="2"
+                                transform="rotate(-30 30 30)" />
+                            <ellipse cx="30" cy="30" rx="12" ry="20" fill="none" stroke="currentColor" stroke-width="2"
+                                transform="rotate(30 30 30)" />
+                            <circle cx="30" cy="30" r="4" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <div class="pillar-label">進化生物学</div>
+                    <div class="pillar-name">利己的な遺伝子</div>
+                    <div class="pillar-desc">遺伝子中心の進化論</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">しかし、この3本柱はすべて現代の研究で揺らいでいる</div>
+        </div>
+    </section>
+
+    <!-- Scene 2: テキスト強調 「利己的な遺伝子」──世界一誤解されたタイトル -->
+    <section class="scene" id="scene-2">
+        <canvas id="canvas-2" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <div class="emphasis-label stagger-item">1976 — BESTSELLER</div>
+            <div class="emphasis-main stagger-item">
+                <span class="accent-coral">「利己的な遺伝子」</span><br>──世界一<span class="accent-primary">誤解された</span>タイトル
+            </div>
+            <div class="emphasis-sub stagger-item">「遺伝子すら利己的」→「人間は利己的に決まっている」という誤解が定着</div>
+            <div class="footnote stagger-item">でもこの動画を見終わる頃には、きっと見方が変わる</div>
+        </div>
+    </section>
+
+    <!-- Scene 3: 段階的リスト 「利己的」を支える3つの柱 -->
+    <section class="scene" id="scene-3">
+        <div class="scene-content card-layout">
+            <h2 class="section-title stagger-item">「人間は利己的」の<span class="accent-coral">3本柱</span>を整理する</h2>
+            <div class="three-pillars">
+                <div class="pillar-card stagger-item">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 60 60">
+                            <rect x="15" y="10" width="30" height="40" rx="3" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                            <line x1="22" y1="20" x2="38" y2="20" stroke="currentColor" stroke-width="1.5" />
+                            <line x1="22" y1="28" x2="38" y2="28" stroke="currentColor" stroke-width="1.5" />
+                            <line x1="22" y1="36" x2="32" y2="36" stroke="currentColor" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <div class="pillar-label">第1の柱</div>
+                    <div class="pillar-name">ホッブズの哲学</div>
+                    <div class="pillar-desc">17世紀・清教徒革命の混乱から生まれた思想</div>
+                </div>
+                <div class="pillar-card stagger-item">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 60 60">
+                            <circle cx="30" cy="30" r="18" fill="none" stroke="currentColor" stroke-width="2" />
+                            <path d="M20 35 L25 20 L30 30 L35 15 L40 25" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="pillar-label">第2の柱</div>
+                    <div class="pillar-name">経済学の仮定</div>
+                    <div class="pillar-desc">ホモ・エコノミクス＝合理的利益最大化</div>
+                </div>
+                <div class="pillar-card stagger-item">
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 60 60">
+                            <ellipse cx="30" cy="30" rx="12" ry="20" fill="none" stroke="currentColor" stroke-width="2"
+                                transform="rotate(-30 30 30)" />
+                            <ellipse cx="30" cy="30" rx="12" ry="20" fill="none" stroke="currentColor" stroke-width="2"
+                                transform="rotate(30 30 30)" />
+                            <circle cx="30" cy="30" r="4" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <div class="pillar-label">第3の柱</div>
+                    <div class="pillar-name">利己的な遺伝子</div>
+                    <div class="pillar-desc">遺伝子中心の進化論</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">この3つを順番に検証していく</div>
+        </div>
+    </section>
+
+    <!-- Scene 4: 引用カード ホッブズの言葉 -->
+    <section class="scene dark-scene" id="scene-4">
+        <div class="scene-content center-layout">
+            <h2 class="section-title light-text stagger-item">哲学の巨人の人間観</h2>
+            <div class="quote-card quote-warning stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">人間の生活は<br><span class="accent-coral">孤独で、貧しく、<br>不快で、残忍で、短い</span></div>
+                <div class="quote-source">トマス・ホッブズ『リヴァイアサン』1651年</div>
+            </div>
+            <div class="emphasis-sub light-text stagger-item">清教徒革命の混乱が生んだ人間観</div>
+            <div class="footnote light-text stagger-item">しかしルソーは「自然状態の人間は善良」と反論した</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: テキスト強調 ホモ・エコノミクス -->
+    <section class="scene" id="scene-5">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">経済学の大前提</h2>
+            <div class="source-badge stagger-item">新古典派経済学</div>
+            <div class="homo-economicus-visual stagger-item">
+                <div class="he-card">
+                    <div class="he-icon">
+                        <svg viewBox="0 0 80 80">
+                            <circle cx="40" cy="25" r="12" fill="none" stroke="currentColor" stroke-width="2" />
+                            <path d="M20 60 Q20 42 40 38 Q60 42 60 60" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                            <circle cx="55" cy="20" r="8" fill="none" stroke="#f59e0b" stroke-width="2" />
+                            <text x="55" y="24" text-anchor="middle" fill="#f59e0b" font-size="10"
+                                font-weight="700">$</text>
+                        </svg>
+                    </div>
+                    <div class="he-title">ホモ・エコノミクス</div>
+                    <div class="he-desc">感情に左右されず<br>常に自己利益を最大化</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">この仮定で経済モデルが構築されてきた</div>
+            <div class="footnote stagger-item">しかし2002年、カーネマンのノーベル賞がこの前提を揺るがした</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: テキスト強調 利己的な遺伝子の衝撃 -->
+    <section class="scene" id="scene-6">
+        <canvas id="canvas-5" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <div class="emphasis-label stagger-item">1976</div>
+            <div class="emphasis-main stagger-item">
+                <span class="accent-primary">利己的な遺伝子</span>
+            </div>
+            <div class="book-visual stagger-item">
+                <div class="book-card">
+                    <div class="book-author">Richard Dawkins</div>
+                    <div class="book-title">The Selfish Gene</div>
+                    <div class="book-impact">世界的ベストセラー</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">「遺伝子が利己的なら、人間も利己的」という<span class="accent-coral">誤解</span>が広まった</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: 注意喚起 3本柱が揺らいでいる -->
+    <section class="scene" id="scene-7">
+        <div class="scene-content center-layout">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">この<span class="accent-coral">3本柱すべて</span>が<br>現代の研究で揺らいでいる</div>
+                <div class="alert-sub">哲学も、経済学も、進化生物学も</div>
+            </div>
+            <div class="shaking-pillars stagger-item">
+                <div class="shake-pillar shake-1">哲学</div>
+                <div class="shake-pillar shake-2">経済学</div>
+                <div class="shake-pillar shake-3">進化生物学</div>
+            </div>
+            <div class="emphasis-sub stagger-item">順番に検証していこう</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: タイトルカード TOPIC 1 -->
+    <section class="scene" id="scene-8">
+        <canvas id="canvas-ch1" class="bg-canvas"></canvas>
+        <div class="scene-content chapter-title">
+            <div class="chapter-number stagger-item">TOPIC 01</div>
+            <h2 class="chapter-name stagger-item">「利己的な遺伝子」の<br><span class="accent-primary">本当の意味</span></h2>
+            <div class="chapter-line stagger-item"></div>
+            <div class="chapter-sub stagger-item">The Real Meaning of The Selfish Gene</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: 比較対照 遺伝子 vs 個体 -->
+    <section class="scene" id="scene-9">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">遺伝子の「利己性」と人間の行動は<span class="accent-coral">別物</span></h2>
+            <div class="vs-layout">
+                <div class="vs-side gene-side stagger-item">
+                    <div class="vs-icon">
+                        <svg viewBox="0 0 80 80">
+                            <ellipse cx="40" cy="40" rx="12" ry="28" fill="none" stroke="currentColor" stroke-width="2"
+                                transform="rotate(-30 40 40)" />
+                            <ellipse cx="40" cy="40" rx="12" ry="28" fill="none" stroke="currentColor" stroke-width="2"
+                                transform="rotate(30 40 40)" />
+                            <circle cx="30" cy="28" r="3" fill="currentColor" />
+                            <circle cx="50" cy="28" r="3" fill="currentColor" />
+                            <circle cx="35" cy="42" r="3" fill="currentColor" />
+                            <circle cx="45" cy="52" r="3" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <div class="vs-title">遺伝子レベル</div>
+                    <div class="vs-result neutral">自己複製を最大化</div>
+                    <div class="vs-detail">「利己的」は<span class="accent-teal">比喩</span></div>
+                </div>
+                <div class="vs-center-badge stagger-item">
+                    <div class="vs-badge">≠</div>
+                </div>
+                <div class="vs-side human-side stagger-item">
+                    <div class="vs-icon">
+                        <svg viewBox="0 0 80 80">
+                            <circle cx="40" cy="25" r="12" fill="none" stroke="currentColor" stroke-width="2" />
+                            <path d="M20 65 Q20 45 40 40 Q60 45 60 65" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                            <path d="M32 22 Q40 28 48 22" fill="none" stroke="currentColor" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <div class="vs-title">個体レベル</div>
+                    <div class="vs-result safe">利他行動も生み出す</div>
+                    <div class="vs-detail">遺伝子に<span class="accent-primary">支配されていない</span></div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">ドーキンス：「この本は個人の利己主義を推奨するものではない」</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: 引用カード ドーキンス自身の言葉 -->
+    <section class="scene" id="scene-10">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">著者自身の「誤解否定」</h2>
+            <div class="source-badge stagger-item">The Selfish Gene — 40th Anniversary Edition, 2006</div>
+            <div class="quote-card quote-warm stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">この本は個人の利己主義を<br><span class="accent-primary">推奨するものではない</span></div>
+                <div class="quote-source">リチャード・ドーキンス</div>
+            </div>
+            <div class="dawkins-detail stagger-item">
+                <div class="detail-item">避妊を例に「人間は遺伝子に支配されていない」と強調</div>
+                <div class="detail-item">本書には利他主義についても多く記述されている</div>
+            </div>
+            <div class="footnote stagger-item">世界で最も誤解された科学書タイトルの一つ</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: テキスト強調 利他行動を説明する理論 -->
+    <section class="scene" id="scene-11">
+        <div class="scene-content center-layout">
+            <div class="emphasis-label stagger-item">PARADOX</div>
+            <div class="emphasis-main stagger-item">
+                「利己的な遺伝子」理論は<br>むしろ<span class="accent-primary">利他行動を説明する</span><br>理論だった
+            </div>
+            <div class="bee-visual stagger-item">
+                <svg viewBox="0 0 300 120" class="bee-svg">
+                    <!-- 働きバチ -->
+                    <ellipse cx="80" cy="60" rx="25" ry="18" fill="none" stroke="#f59e0b" stroke-width="2" />
+                    <line x1="65" y1="55" x2="55" y2="45" stroke="#f59e0b" stroke-width="1.5" />
+                    <line x1="65" y1="65" x2="55" y2="75" stroke="#f59e0b" stroke-width="1.5" />
+                    <text x="80" y="64" text-anchor="middle" fill="#f59e0b" font-size="10" font-weight="700">働きバチ</text>
+                    <!-- 矢印 -->
+                    <path d="M110 60 L160 60" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6" />
+                    <polygon points="160,55 170,60 160,65" fill="#94a3b8" />
+                    <text x="140" y="50" text-anchor="middle" fill="#94a3b8" font-size="9">奉仕</text>
+                    <!-- 女王バチ -->
+                    <ellipse cx="220" cy="60" rx="30" ry="22" fill="none" stroke="#4f46e5" stroke-width="2" />
+                    <path d="M205 42 L210 48 L215 42 L220 48 L225 42 L230 48 L235 42" fill="none" stroke="#4f46e5"
+                        stroke-width="1.5" />
+                    <text x="220" y="64" text-anchor="middle" fill="#4f46e5" font-size="10"
+                        font-weight="700">女王バチ</text>
+                </svg>
+            </div>
+            <div class="emphasis-sub stagger-item">自分では繁殖せず、女王のために一生を捧げる＝究極の利他行動</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: 数式 ハミルトンの法則 rB > C -->
+    <section class="scene" id="scene-12">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">ハミルトンの法則</h2>
+            <div class="source-badge stagger-item">Hamilton, W.D. — 1964 / J. Theoretical Biology</div>
+            <div class="formula-container stagger-item">
+                <div class="formula-part formula-r">r<div class="formula-label">血縁度</div>
+                </div>
+                <div class="formula-op">&times;</div>
+                <div class="formula-part formula-b">B<div class="formula-label">利益</div>
+                </div>
+                <div class="formula-op">&gt;</div>
+                <div class="formula-part formula-c">C<div class="formula-label">コスト</div>
+                </div>
+            </div>
+            <div class="hamilton-example stagger-item">
+                <div class="he-card">
+                    <div class="he-title">働きバチの場合</div>
+                    <div class="he-desc">姉妹との血縁度 = <span class="accent-primary">0.75</span><br>親子の0.5より高い</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">利己的な遺伝子が<span class="accent-primary">利他的な行動</span>を生み出すメカニズム</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: 引用カード ダーウィンも協力を語っていた -->
+    <section class="scene" id="scene-13">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">ダーウィンの<span class="accent-primary">本当のメッセージ</span></h2>
+            <div class="darwin-compare stagger-item">
+                <div class="darwin-card wrong">
+                    <div class="darwin-label accent-coral">誤解</div>
+                    <div class="darwin-text">「適者生存」＝弱肉強食</div>
+                    <div class="darwin-note">※造語はスペンサー</div>
+                </div>
+                <div class="darwin-arrow">→</div>
+                <div class="darwin-card correct">
+                    <div class="darwin-label accent-teal">事実</div>
+                    <div class="darwin-text">「同情心を持つ集団は繁栄する」</div>
+                    <div class="darwin-note">『人間の由来』1871年</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">ダーウィン自身は「弱肉強食」を主張していなかった</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: タイトルカード TOPIC 2 -->
+    <section class="scene" id="scene-14">
+        <canvas id="canvas-ch2" class="bg-canvas"></canvas>
+        <div class="scene-content chapter-title">
+            <div class="chapter-number stagger-item">TOPIC 02</div>
+            <h2 class="chapter-name stagger-item">実験が暴いた<br><span class="accent-coral">人間の本性</span></h2>
+            <div class="chapter-line stagger-item"></div>
+            <div class="chapter-sub stagger-item">Behavioral Economics &amp; Neuroscience</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: フロー図 最後通牒ゲームのルール -->
+    <section class="scene" id="scene-15">
+        <div class="scene-content card-layout">
+            <h2 class="section-title stagger-item">最後通牒ゲーム</h2>
+            <div class="source-badge stagger-item">Ultimatum Game — Güth et al. 1982</div>
+            <div class="game-visual">
+                <div class="game-step stagger-item">
+                    <div class="game-icon">
+                        <svg viewBox="0 0 60 60">
+                            <circle cx="30" cy="20" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+                            <path d="M18 48 Q18 35 30 32 Q42 35 42 48" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="game-label">提案者</div>
+                    <div class="game-desc">分け方を決める</div>
+                </div>
+                <div class="game-arrow stagger-item">
+                    <svg viewBox="0 0 80 30">
+                        <path d="M5 15 L65 15 L57 7 M65 15 L57 23" stroke="currentColor" stroke-width="2" fill="none" />
+                    </svg>
+                    <span>1,000円を分配</span>
+                </div>
+                <div class="game-step stagger-item">
+                    <div class="game-icon">
+                        <svg viewBox="0 0 60 60">
+                            <circle cx="30" cy="20" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+                            <path d="M18 48 Q18 35 30 32 Q42 35 42 48" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="game-label">受取人</div>
+                    <div class="game-desc">受諾 or 拒否</div>
+                </div>
+            </div>
+            <div class="game-rule stagger-item">
+                <div class="rule-item rule-accept">受諾 → 提案通りに分配</div>
+                <div class="rule-item rule-reject">拒否 → <span class="accent-coral">両者ともゼロ円</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scene 1: 比較対照 経済学の予測 vs 実際 -->
+    <section class="scene" id="scene-16">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">ホモ・エコノミクスの予測 vs 現実</h2>
+            <div class="vs-layout">
+                <div class="vs-side predict-side stagger-item">
+                    <div class="vs-icon">
+                        <svg viewBox="0 0 80 80">
+                            <rect x="15" y="15" width="50" height="50" rx="6" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                            <text x="40" y="48" text-anchor="middle" fill="currentColor" font-size="18"
+                                font-weight="700">1円</text>
+                        </svg>
+                    </div>
+                    <div class="vs-title">理論上の予測</div>
+                    <div class="vs-result neutral">1円だけ渡し、受取人も受諾</div>
+                    <div class="vs-detail">「ゼロよりマシ」の合理的判断</div>
+                </div>
+                <div class="vs-center-badge stagger-item">
+                    <div class="vs-badge">VS</div>
+                </div>
+                <div class="vs-side reality-side stagger-item">
+                    <div class="vs-icon">
+                        <svg viewBox="0 0 80 80">
+                            <rect x="15" y="15" width="50" height="50" rx="6" fill="none" stroke="#4f46e5"
+                                stroke-width="2" />
+                            <text x="40" y="48" text-anchor="middle" fill="#4f46e5" font-size="14"
+                                font-weight="700">30-50%</text>
+                        </svg>
+                    </div>
+                    <div class="vs-title">実際の結果</div>
+                    <div class="vs-result safe">平均30〜50%を提示</div>
+                    <div class="vs-detail">最頻値は<span class="accent-primary">50%（均等割）</span></div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">約半数が20%以下の不公平な提案を「自分の取り分ゼロでも」拒否した</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: 数値インパクト 最後通牒ゲーム結果 -->
+    <section class="scene" id="scene-17">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">予測と現実のギャップ</h2>
+            <div class="source-badge stagger-item">複数のメタ分析 / 世界各国で追試</div>
+            <div class="ultimatum-bars stagger-item">
+                <div class="ubar-group">
+                    <div class="ubar-label">理論上の提示額</div>
+                    <div class="ubar-track">
+                        <div class="ubar-fill ubar-theory" style="--w:1%"></div>
+                    </div>
+                    <div class="ubar-value accent-coral">0.1%</div>
+                </div>
+                <div class="ubar-group">
+                    <div class="ubar-label">実際の平均提示額</div>
+                    <div class="ubar-track">
+                        <div class="ubar-fill ubar-actual" style="--w:42%"></div>
+                    </div>
+                    <div class="ubar-value accent-primary">40-50%</div>
+                </div>
+            </div>
+            <div class="impact-number-group stagger-item">
+                <span class="impact-number">50</span>
+                <span class="impact-number-unit">%が拒否</span>
+            </div>
+            <div class="emphasis-sub stagger-item">不公平な提案（20%以下）に対する拒否率</div>
+            <div class="footnote stagger-item">カーネマン（2002年ノーベル経済学賞）が「人間は合理的でない」と実証</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: 比較対照 独裁者ゲーム -->
+    <section class="scene" id="scene-18">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">独裁者ゲーム──拒否権なしでも</h2>
+            <div class="source-badge stagger-item">Engel, C. — 2011 / Experimental Economics メタ分析</div>
+            <div class="dictator-visual stagger-item">
+                <div class="dict-card">
+                    <div class="dict-icon">
+                        <svg viewBox="0 0 80 80">
+                            <circle cx="40" cy="22" r="12" fill="none" stroke="currentColor" stroke-width="2" />
+                            <path d="M20 60 Q20 42 40 38 Q60 42 60 60" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                            <path d="M28 12 L40 5 L52 12" fill="none" stroke="#f59e0b" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="dict-title">独裁者が全権を握る</div>
+                    <div class="dict-desc">受取人に拒否権なし</div>
+                </div>
+            </div>
+            <div class="dictator-stats stagger-item">
+                <div class="dict-stat">
+                    <div class="dict-stat-num accent-primary">60<span class="stat-unit">%</span></div>
+                    <div class="dict-stat-label">正の金額を分配</div>
+                </div>
+                <div class="dict-stat">
+                    <div class="dict-stat-num accent-teal">30<span class="stat-unit">%</span></div>
+                    <div class="dict-stat-label">平均分配率</div>
+                </div>
+                <div class="dict-stat">
+                    <div class="dict-stat-num accent-amber">17<span class="stat-unit">%</span></div>
+                    <div class="dict-stat-label">完全均等分配</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">見返りゼロの状況でも、人間は見知らぬ相手に分け与えた</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: 段階的リスト 脳科学のエビデンス -->
+    <section class="scene" id="scene-19">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">脳科学が示す<span class="accent-primary">利他の報酬</span></h2>
+            <div class="brain-reward-visual stagger-item">
+                <svg viewBox="0 0 300 180" class="brain-reward-svg">
+                    <!-- 脳のシルエット -->
+                    <ellipse cx="150" cy="90" rx="100" ry="70" fill="none" stroke="#94a3b8" stroke-width="1.5"
+                        class="brain-outline" />
+                    <!-- 報酬系 -->
+                    <ellipse cx="130" cy="100" rx="20" ry="14" fill="rgba(79,70,229,0.15)" stroke="#4f46e5"
+                        stroke-width="2" class="reward-area pulse-reward" />
+                    <text x="130" y="104" text-anchor="middle" fill="#4f46e5" font-size="9" font-weight="700">報酬系</text>
+                    <!-- 眼窩前頭前野 -->
+                    <ellipse cx="150" cy="50" rx="22" ry="12" fill="rgba(20,184,166,0.1)" stroke="#14b8a6"
+                        stroke-width="1.5" />
+                    <text x="150" y="54" text-anchor="middle" fill="#14b8a6" font-size="8"
+                        font-weight="600">眼窩前頭前野</text>
+                    <!-- 線条体 -->
+                    <ellipse cx="175" cy="85" rx="16" ry="10" fill="rgba(245,158,11,0.1)" stroke="#f59e0b"
+                        stroke-width="1.5" />
+                    <text x="175" y="89" text-anchor="middle" fill="#f59e0b" font-size="8" font-weight="600">線条体</text>
+                    <!-- ラベル -->
+                    <text x="270" y="95" fill="#4f46e5" font-size="10" font-weight="700">活動UP</text>
+                    <path d="M195 95 L250 95" stroke="#4f46e5" stroke-width="1.5" stroke-dasharray="4" />
+                </svg>
+            </div>
+            <div class="source-badge stagger-item">Moll et al. 2006, PNAS / Harbaugh et al. 2007, Science</div>
+            <div class="emphasis-sub stagger-item">利他行動時、脳は<span class="accent-primary">「ご褒美」</span>として処理していた</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: テキスト強調 オキシトシン -->
+    <section class="scene" id="scene-20">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">「愛情ホルモン」オキシトシン</h2>
+            <div class="source-badge stagger-item">Zak et al. 2005 / Kosfeld et al. 2005, Nature</div>
+            <div class="oxytocin-visual stagger-item">
+                <div class="oxy-card oxy-trust">
+                    <div class="oxy-icon">
+                        <svg viewBox="0 0 50 50">
+                            <path d="M25 10 L30 20 L40 20 L32 28 L35 38 L25 32 L15 38 L18 28 L10 20 L20 20Z" fill="none"
+                                stroke="currentColor" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <div class="oxy-label">信頼</div>
+                </div>
+                <div class="oxy-card oxy-empathy">
+                    <div class="oxy-icon">
+                        <svg viewBox="0 0 50 50">
+                            <path
+                                d="M25 40 Q10 28 10 18 Q10 10 18 10 Q25 10 25 18 Q25 10 32 10 Q40 10 40 18 Q40 28 25 40Z"
+                                fill="none" stroke="currentColor" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <div class="oxy-label">共感</div>
+                </div>
+                <div class="oxy-card oxy-coop">
+                    <div class="oxy-icon">
+                        <svg viewBox="0 0 50 50">
+                            <circle cx="18" cy="22" r="7" fill="none" stroke="currentColor" stroke-width="1.5" />
+                            <circle cx="32" cy="22" r="7" fill="none" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M10 42 Q10 32 18 30 Q25 32 25 42" fill="none" stroke="currentColor"
+                                stroke-width="1.5" />
+                            <path d="M25 42 Q25 32 32 30 Q40 32 40 42" fill="none" stroke="currentColor"
+                                stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <div class="oxy-label">協力</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">利他行動でオキシトシン分泌が増加 → 恐怖反応を抑制 → 共感を強化</div>
+            <div class="footnote stagger-item">利他性は脳の仕組みとして組み込まれている</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: 注意喚起 心理的利己主義の循環論法 -->
+    <section class="scene" id="scene-21">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">「善意も利己的」は<span class="accent-coral">循環論法</span></h2>
+            <div class="source-badge stagger-item">Feinberg, J. / Rachels, J.</div>
+            <div class="circular-visual stagger-item">
+                <svg viewBox="0 0 300 200" class="circular-svg">
+                    <!-- 循環矢印 -->
+                    <path d="M150 30 Q230 30 230 100 Q230 170 150 170 Q70 170 70 100 Q70 30 150 30" fill="none"
+                        stroke="#ef4444" stroke-width="2" stroke-dasharray="8" class="circular-path" />
+                    <polygon points="155,28 150,20 145,28" fill="#ef4444" transform="rotate(10 150 30)" />
+                    <!-- テキスト -->
+                    <text x="150" y="75" text-anchor="middle" fill="#ef4444" font-size="11"
+                        font-weight="700">「助けて満足した」</text>
+                    <text x="150" y="110" text-anchor="middle" fill="#ef4444" font-size="14" font-weight="900">↓</text>
+                    <text x="150" y="135" text-anchor="middle" fill="#ef4444" font-size="11"
+                        font-weight="700">「だから利己的だ」</text>
+                </svg>
+            </div>
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">「助けたい」という<span class="accent-primary">欲求自体が利他的</span></div>
+                <div class="alert-sub">満足感は副産物であって動機ではない</div>
+            </div>
+            <div class="footnote stagger-item">反証不可能な理論は科学として成立しない</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: タイトルカード TOPIC 3 -->
+    <section class="scene" id="scene-22">
+        <canvas id="canvas-ch3" class="bg-canvas"></canvas>
+        <div class="scene-content chapter-title">
+            <div class="chapter-number stagger-item">TOPIC 03</div>
+            <h2 class="chapter-name stagger-item">なぜ人間は<br><span class="accent-teal">協力する生き物</span>になったのか</h2>
+            <div class="chapter-line stagger-item"></div>
+            <div class="chapter-sub stagger-item">The Evolution of Cooperation</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: 段階的リスト 協力の5つのメカニズム -->
+    <section class="scene" id="scene-23">
+        <div class="scene-content card-layout">
+            <h2 class="section-title stagger-item">協力が進化する<span class="accent-primary">5つのメカニズム</span></h2>
+            <div class="source-badge stagger-item">Nowak, M.A. — 2006 / Science 314</div>
+            <div class="five-mech">
+                <div class="mech-card stagger-item">
+                    <div class="mech-num">1</div>
+                    <div class="mech-name">血縁選択</div>
+                    <div class="mech-desc">家族を助ける</div>
+                </div>
+                <div class="mech-card stagger-item">
+                    <div class="mech-num">2</div>
+                    <div class="mech-name">直接互恵</div>
+                    <div class="mech-desc">お互い様</div>
+                </div>
+                <div class="mech-card stagger-item">
+                    <div class="mech-num">3</div>
+                    <div class="mech-name">間接互恵</div>
+                    <div class="mech-desc">評判の力</div>
+                </div>
+                <div class="mech-card stagger-item">
+                    <div class="mech-num">4</div>
+                    <div class="mech-name">ネットワーク選択</div>
+                    <div class="mech-desc">協力者が集まる</div>
+                </div>
+                <div class="mech-card stagger-item">
+                    <div class="mech-num">5</div>
+                    <div class="mech-name">集団選択</div>
+                    <div class="mech-desc">協力集団が勝つ</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">利他行動は複数の独立したメカニズムで進化しうる</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: 横並びカード 間接互恵と評判 -->
+    <section class="scene" id="scene-24">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">間接互恵──<span class="accent-primary">評判</span>の力</h2>
+            <div class="reputation-flow stagger-item">
+                <div class="rep-step">
+                    <div class="rep-icon">
+                        <svg viewBox="0 0 60 60">
+                            <circle cx="20" cy="25" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+                            <path d="M10 48 Q10 38 20 35 Q30 38 30 48" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                            <path d="M35 30 L45 25 M35 35 L45 35 M35 40 L45 40" stroke="#14b8a6" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <div class="rep-text">Aを助ける</div>
+                </div>
+                <div class="rep-arrow">→</div>
+                <div class="rep-step">
+                    <div class="rep-icon rep-talk">
+                        <svg viewBox="0 0 60 60">
+                            <path d="M10 15 L50 15 L50 40 L30 40 L20 50 L22 40 L10 40Z" fill="none"
+                                stroke="currentColor" stroke-width="2" />
+                            <text x="30" y="32" text-anchor="middle" fill="currentColor" font-size="10"
+                                font-weight="700">良い人!</text>
+                        </svg>
+                    </div>
+                    <div class="rep-text">評判が広まる</div>
+                </div>
+                <div class="rep-arrow">→</div>
+                <div class="rep-step">
+                    <div class="rep-icon">
+                        <svg viewBox="0 0 60 60">
+                            <circle cx="40" cy="25" r="10" fill="none" stroke="#14b8a6" stroke-width="2" />
+                            <path d="M30 48 Q30 38 40 35 Q50 38 50 48" fill="none" stroke="#14b8a6" stroke-width="2" />
+                            <path d="M15 30 L25 25" stroke="#14b8a6" stroke-width="1.5" />
+                            <polygon points="25,23 27,28 22,27" fill="#14b8a6" />
+                        </svg>
+                    </div>
+                    <div class="rep-text">Bが助けてくれる</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">情けは人のためならず──科学的にも正しかった</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: 引用カード ノワック「進化の第3の柱」 -->
+    <section class="scene" id="scene-25">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">進化の<span class="accent-primary">第3の柱</span></h2>
+            <div class="quote-card quote-warm stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">協力は突然変異と自然選択に並ぶ<br><span class="accent-primary">進化の第3の柱</span>だ</div>
+                <div class="quote-source">マーティン・ノワック（ハーバード大学）2011年</div>
+            </div>
+            <div class="three-pillars-evo stagger-item">
+                <div class="evo-pillar">突然変異</div>
+                <div class="evo-pillar">自然選択</div>
+                <div class="evo-pillar evo-highlight">協力</div>
+            </div>
+            <div class="footnote stagger-item">単細胞→多細胞、社会の形成──すべて「協力」の結果</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: 数値インパクト 阪神大震災 75% -->
+    <section class="scene" id="scene-26">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">災害が引き出す<span class="accent-teal">人間の本性</span></h2>
+            <div class="source-badge stagger-item">阪神・淡路大震災 / 災害研究</div>
+            <div class="impact-number-group stagger-item">
+                <span class="impact-number">75</span>
+                <span class="impact-number-unit">%以上</span>
+            </div>
+            <div class="emphasis-sub stagger-item">瓦礫の下の人々が<span class="accent-primary">近隣住民の手で</span>救出された割合</div>
+            <div class="disaster-detail stagger-item">
+                <div class="disaster-stat">消防や自衛隊ではなく住民同士の相互扶助</div>
+                <div class="disaster-stat">被災者はより多く寄付・ボランティアに参加</div>
+            </div>
+            <div class="footnote stagger-item">「追い詰められると本性が出る」──その本性は協力だった</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: テキスト強調 危機で助け合う -->
+    <section class="scene" id="scene-27">
+        <canvas id="canvas-26" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <div class="emphasis-label stagger-item">EVIDENCE</div>
+            <div class="emphasis-main stagger-item">
+                映画やドラマとは違い<br>現実の災害データは<br><span class="accent-teal">「人間は危機で助け合う」</span><br>ことを示している
+            </div>
+            <div class="emphasis-sub stagger-item">Solnit, R. (2009) 『A Paradise Built in Hell』</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: 注意喚起 利他的罰 -->
+    <section class="scene" id="scene-28">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">利他的罰──不正を<span class="accent-coral">許さない</span>心理</h2>
+            <div class="source-badge stagger-item">Fehr, E. &amp; Gächter, S. — 2002 / Nature 415</div>
+            <div class="punishment-visual stagger-item">
+                <svg viewBox="0 0 320 140" class="punishment-svg">
+                    <!-- ズルする人 -->
+                    <circle cx="80" cy="50" r="20" fill="none" stroke="#ef4444" stroke-width="2" />
+                    <text x="80" y="54" text-anchor="middle" fill="#ef4444" font-size="10" font-weight="700">ズル</text>
+                    <!-- 罰する人 -->
+                    <circle cx="240" cy="50" r="20" fill="none" stroke="#4f46e5" stroke-width="2" />
+                    <text x="240" y="54" text-anchor="middle" fill="#4f46e5" font-size="10" font-weight="700">罰</text>
+                    <!-- 矢印 -->
+                    <path d="M105 50 L215 50" stroke="#ef4444" stroke-width="2" />
+                    <polygon points="215,45 225,50 215,55" fill="#ef4444" />
+                    <text x="160" y="42" text-anchor="middle" fill="#94a3b8" font-size="9">自分のお金を使って罰する</text>
+                    <!-- コスト表示 -->
+                    <text x="240" y="95" text-anchor="middle" fill="#ef4444" font-size="10">自分も損する</text>
+                    <text x="240" y="115" text-anchor="middle" fill="#4f46e5" font-size="11"
+                        font-weight="700">でもやる</text>
+                </svg>
+            </div>
+            <div class="emphasis-sub stagger-item">「不正を許さない」気持ちが損得を超える</div>
+            <div class="footnote stagger-item">この正義感が社会の協力を維持してきた</div>
+        </div>
+    </section>
+
+    <!-- Scene 29: 段階的リスト 3つのポイント -->
+    <section class="scene" id="scene-29">
+        <div class="scene-content card-layout">
+            <h2 class="section-title stagger-item">今日の<span class="accent-primary">3つのポイント</span></h2>
+            <div class="summary-list">
+                <div class="summary-item stagger-item">
+                    <div class="summary-num">1</div>
+                    <div class="summary-content">
+                        <div class="summary-title">利己的な遺伝子の真実</div>
+                        <div class="summary-text">人間が利己的という主張<span class="accent-coral">ではない</span>。<br>むしろ利他行動を説明する理論
+                        </div>
+                    </div>
+                </div>
+                <div class="summary-item stagger-item">
+                    <div class="summary-num">2</div>
+                    <div class="summary-content">
+                        <div class="summary-title">科学的実証</div>
+                        <div class="summary-text">ゲーム実験と脳科学が<br>人間の<span class="accent-primary">利他性を科学的に実証</span></div>
+                    </div>
+                </div>
+                <div class="summary-item stagger-item">
+                    <div class="summary-num">3</div>
+                    <div class="summary-content">
+                        <div class="summary-title">協力こそ最大の武器</div>
+                        <div class="summary-text">災害時の行動が<br>人間の<span class="accent-teal">協力する本性</span>を証明</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scene 30: 段階的リスト 3つのポイントの振り返り -->
+    <section class="scene" id="scene-30">
+        <div class="scene-content card-layout">
+            <h2 class="section-title stagger-item">3つのポイントを<span class="accent-primary">振り返る</span></h2>
+            <div class="summary-list">
+                <div class="summary-item stagger-item">
+                    <div class="summary-num">2</div>
+                    <div class="summary-content">
+                        <div class="summary-title">科学的実証</div>
+                        <div class="summary-text">ゲーム実験と脳科学が<br>人間の<span class="accent-primary">利他性を科学的に実証</span></div>
+                    </div>
+                </div>
+                <div class="summary-item stagger-item">
+                    <div class="summary-num">3</div>
+                    <div class="summary-content">
+                        <div class="summary-title">協力こそ最大の武器</div>
+                        <div class="summary-text">災害時の行動が<br>人間の<span class="accent-teal">協力する本性</span>を証明</div>
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">人間は見返りがなくても分け、不公平にはコストを払ってでも抵抗する</div>
+        </div>
+    </section>
+
+    <!-- Scene 31: テキスト強調 コインの裏表 -->
+    <section class="scene" id="scene-31">
+        <div class="scene-content center-layout">
+            <div class="emphasis-label stagger-item">CONCLUSION</div>
+            <div class="coin-visual stagger-item">
+                <div class="coin-side coin-selfish">
+                    <div class="coin-label">利己性</div>
+                </div>
+                <div class="coin-edge">
+                    <svg viewBox="0 0 20 80">
+                        <rect x="6" y="0" width="8" height="80" rx="4" fill="url(#coinGrad)" />
+                        <defs>
+                            <linearGradient id="coinGrad" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#ef4444" />
+                                <stop offset="100%" stop-color="#4f46e5" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="coin-side coin-altruistic">
+                    <div class="coin-label">利他性</div>
+                </div>
+            </div>
+            <div class="emphasis-main stagger-item">
+                どちらが引き出されるかは<br><span class="accent-primary">社会の設計次第</span>
+            </div>
+            <div class="emphasis-sub stagger-item">利己と利他は対立ではなくコインの裏表</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: テキスト強調 「どちらにもなれる」 -->
+    <section class="scene" id="scene-32">
+        <canvas id="canvas-31" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <div class="emphasis-label stagger-item">THE ANSWER</div>
+            <div class="emphasis-main large stagger-item">
+                <span class="accent-primary">「どちらにもなれる」</span><br>が科学の答え
+            </div>
+            <div class="emphasis-sub stagger-item">利己的な遺伝子が、利他的な人間を生み出す</div>
+            <div class="footnote stagger-item">これが進化の一番面白いところ</div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

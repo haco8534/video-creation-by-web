@@ -1,0 +1,1547 @@
+/* ============================
+   STRESS HALF MYTH - STYLE.CSS
+   テーマ: ストレスは体に悪い？
+   デザイン: クリーンホワイト + アクセントカラー
+   ============================ */
+
+/* ===== カラートークン ===== */
+:root {
+    --bg: #f8f9fa;
+    --bg-dark: #1a1a2e;
+    --text: #1a1a2e;
+    --text-light: #6c757d;
+    --primary: #4f46e5;
+    --primary-light: #e0e7ff;
+    --primary-glow: rgba(79, 70, 229, 0.15);
+    --teal: #14b8a6;
+    --teal-light: #ccfbf1;
+    --teal-glow: rgba(20, 184, 166, 0.15);
+    --coral: #ef4444;
+    --coral-light: #fee2e2;
+    --coral-glow: rgba(239, 68, 68, 0.15);
+    --amber: #f59e0b;
+    --amber-light: #fef3c7;
+    --amber-glow: rgba(245, 158, 11, 0.15);
+    --card-bg: #ffffff;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.1);
+    --shadow-glow-primary: 0 0 30px rgba(79, 70, 229, 0.12);
+    --shadow-glow-coral: 0 0 30px rgba(239, 68, 68, 0.12);
+    --shadow-glow-teal: 0 0 30px rgba(20, 184, 166, 0.12);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --radius-xs: 4px;
+    --transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ===== リセット + ベース ===== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ===== シーン共通 ===== */
+.scene {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg);
+}
+
+.scene.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: sceneFadeIn 0.5s ease both;
+}
+
+/* ===== ダークシーン ===== */
+.dark-scene {
+    background: var(--bg-dark);
+}
+
+.dark-scene .scene-title {
+    color: #e2e8f0;
+}
+
+.light-text {
+    color: #e2e8f0;
+}
+
+.light-text-dim {
+    color: #94a3b8;
+}
+
+/* ===== コンテンツレイアウト ===== */
+.content {
+    position: relative;
+    z-index: 2;
+    max-width: 85%;
+    padding: 40px;
+}
+
+.center-layout {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    max-width: 85%;
+}
+
+/* ===== Canvas背景 ===== */
+.bg-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ===== タイポグラフィ ===== */
+.scene-title {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--text);
+    letter-spacing: -0.02em;
+}
+
+.title-medium {
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.3;
+    color: var(--text);
+    letter-spacing: -0.03em;
+}
+
+.title-sub {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-light);
+    margin-top: 8px;
+}
+
+.emphasis-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.emphasis-text-large {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.4;
+    color: var(--text);
+}
+
+.emphasis-sub {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-light);
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.footnote {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-top: 8px;
+}
+
+/* ===== アクセントカラー ===== */
+.accent-primary {
+    color: var(--primary);
+}
+
+.accent-teal {
+    color: var(--teal);
+}
+
+.accent-coral {
+    color: var(--coral);
+}
+
+.accent-amber {
+    color: var(--amber);
+}
+
+.accent-bg-primary {
+    background: var(--primary);
+    color: #fff;
+}
+
+.accent-bg-teal {
+    background: var(--teal);
+    color: #fff;
+}
+
+.accent-bg-coral {
+    background: var(--coral);
+    color: #fff;
+}
+
+.accent-bg-amber {
+    background: var(--amber);
+    color: #fff;
+}
+
+/* ===== セクションバッジ ===== */
+.section-badge {
+    display: inline-block;
+    padding: 6px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+/* ===== 出典バッジ ===== */
+.source-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+/* ===== インパクト数値 ===== */
+.impact-number {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.big-num {
+    font-size: 96px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.num-prefix {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.num-unit {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.big-inline {
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.impact-number-sm {
+    font-size: 28px;
+    font-weight: 900;
+    margin: 8px 0;
+}
+
+/* ===== VS 比較カード ===== */
+.vs-container {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+    margin: 16px 0;
+    width: 100%;
+    max-width: 800px;
+}
+
+.vs-card {
+    flex: 1;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.vs-left {
+    border-color: #e2e8f0;
+}
+
+.vs-right {
+    border-color: #e2e8f0;
+}
+
+.vs-left:hover {
+    border-color: var(--teal);
+}
+
+.vs-right:hover {
+    border-color: var(--coral);
+}
+
+.vs-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.safe-badge {
+    background: var(--teal-light);
+    color: var(--teal);
+}
+
+.danger-badge {
+    background: var(--coral-light);
+    color: var(--coral);
+}
+
+.vs-title {
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.vs-desc {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.vs-detail {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 8px;
+}
+
+.vs-divider {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--text-light);
+}
+
+.comparison-note {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary);
+    text-align: center;
+    padding: 12px 20px;
+    background: var(--primary-light);
+    border-radius: var(--radius-sm);
+}
+
+/* VS Detail List */
+.vs-detail-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.vs-detail-item {
+    font-size: 13px;
+    color: var(--text);
+    padding: 4px 10px;
+    background: #f1f5f9;
+    border-radius: var(--radius-xs);
+}
+
+.challenge-card .vs-detail-item {
+    background: var(--teal-light);
+}
+
+.threat-card .vs-detail-item {
+    background: var(--coral-light);
+}
+
+/* ===== フロー図 ===== */
+.flow-chain {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flow-node {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    min-width: 140px;
+    flex-shrink: 0;
+}
+
+.flow-year {
+    font-size: 14px;
+    font-weight: 900;
+    color: var(--primary);
+    margin-bottom: 6px;
+    padding: 2px 10px;
+    background: var(--primary-light);
+    border-radius: 12px;
+    display: inline-block;
+}
+
+.flow-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.flow-name {
+    font-weight: 900;
+    color: var(--text);
+}
+
+.flow-sub {
+    font-size: 11px;
+    color: var(--text-light);
+}
+
+.flow-arrow {
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--primary);
+}
+
+/* ===== 横並びカード ===== */
+.triple-card {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.factor-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    flex: 1;
+    min-width: 180px;
+    max-width: 260px;
+}
+
+.factor-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 900;
+    margin: 0 auto 12px;
+    color: #fff;
+}
+
+.factor-name {
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 6px;
+}
+
+.factor-desc {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+.factor-detail {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 6px;
+}
+
+.factor-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.tag-coral {
+    background: var(--coral-light);
+    color: var(--coral);
+}
+
+.tag-teal {
+    background: var(--teal-light);
+    color: var(--teal);
+}
+
+.tag-amber {
+    background: var(--amber-light);
+    color: var(--amber);
+}
+
+.factor-evidence {
+    font-size: 11px;
+    color: var(--primary);
+    margin-top: 8px;
+    padding: 4px 8px;
+    background: var(--primary-light);
+    border-radius: var(--radius-xs);
+}
+
+/* ===== 段階的リスト ===== */
+.numbered-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.numbered-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.number-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+.numbered-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.step-name {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.step-circle {
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+}
+
+/* ===== 引用カード ===== */
+.quote-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--primary);
+    text-align: left;
+    max-width: 700px;
+    position: relative;
+}
+
+.quote-warm {
+    border-left-color: var(--amber);
+}
+
+.quote-warning {
+    border-left-color: var(--coral);
+}
+
+.quote-mark {
+    font-size: 64px;
+    font-weight: 900;
+    color: var(--primary);
+    opacity: 0.2;
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    line-height: 1;
+}
+
+.quote-text {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.7;
+    color: var(--text);
+    padding-left: 8px;
+}
+
+.quote-source {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-top: 12px;
+    padding-left: 8px;
+}
+
+/* ===== 比較テーブル ===== */
+.comparison-table {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.comp-row {
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 2px;
+}
+
+.comp-header {
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.comp-cell {
+    padding: 12px 16px;
+    background: var(--card-bg);
+    font-size: 14px;
+    text-align: center;
+    border-radius: var(--radius-xs);
+}
+
+.comp-name {
+    font-weight: 700;
+    background: #f1f5f9;
+    text-align: left;
+}
+
+/* ===== ダークリスト ===== */
+.dark-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.dark-item {
+    display: flex;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--coral);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+.dark-content {
+    flex: 1;
+}
+
+.dark-title {
+    font-size: 18px;
+    font-weight: 900;
+    color: #e2e8f0;
+    margin-bottom: 4px;
+}
+
+.dark-desc {
+    font-size: 14px;
+    color: #94a3b8;
+    line-height: 1.5;
+}
+
+.dark-source {
+    font-size: 11px;
+    color: #64748b;
+    margin-top: 6px;
+}
+
+/* ===== カスタムビジュアル: 信念の矢印 ===== */
+.belief-arrow-visual {
+    margin-top: 16px;
+}
+
+.belief-svg {
+    width: 400px;
+    height: 80px;
+}
+
+.belief-line {
+    stroke-dasharray: 340;
+    stroke-dashoffset: 340;
+}
+
+.scene.active .belief-line {
+    animation: drawLine 1.5s ease forwards 0.8s;
+}
+
+.belief-arrowhead {
+    opacity: 0;
+}
+
+.scene.active .belief-arrowhead {
+    animation: fadeInScale 0.4s ease forwards 2.2s;
+}
+
+/* ===== カスタムビジュアル: リスクバー ===== */
+.risk-bar-visual {
+    width: 100%;
+    max-width: 500px;
+    margin: 16px auto 0;
+}
+
+.risk-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.risk-label {
+    font-size: 13px;
+    font-weight: 700;
+    width: 180px;
+    text-align: right;
+    color: var(--text);
+}
+
+.risk-track {
+    flex: 1;
+    height: 24px;
+    background: #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.risk-fill {
+    height: 100%;
+    border-radius: 12px;
+    width: 0;
+    transition: width 1.5s ease;
+}
+
+.risk-base {
+    background: #94a3b8;
+}
+
+.risk-high {
+    background: linear-gradient(90deg, var(--coral), #dc2626);
+}
+
+.scene.active .risk-fill {
+    width: var(--w);
+}
+
+.risk-value {
+    font-size: 16px;
+    font-weight: 900;
+    width: 60px;
+}
+
+/* ===== カスタムビジュアル: 死因ランキング ===== */
+.rank-visual {
+    width: 100%;
+    max-width: 500px;
+    margin: 8px auto 0;
+}
+
+.rank-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    padding: 4px 0;
+}
+
+.rank-num {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-light);
+    width: 36px;
+}
+
+.rank-name {
+    font-size: 13px;
+    font-weight: 700;
+    width: 100px;
+}
+
+.rank-bar {
+    flex: 1;
+    height: 18px;
+    background: #cbd5e1;
+    border-radius: 9px;
+    width: 0;
+    transition: width 1.2s ease;
+}
+
+.rank-bar-stress {
+    background: linear-gradient(90deg, var(--coral), #f97316);
+}
+
+.scene.active .rank-bar {
+    width: var(--w);
+}
+
+.rank-highlight {
+    background: var(--coral-light);
+    padding: 6px 8px;
+    border-radius: var(--radius-sm);
+}
+
+/* ===== カスタムビジュアル: 心血管パターン ===== */
+.cardio-visual {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cardio-svg {
+    width: 100%;
+    height: auto;
+}
+
+.cardio-bar {
+    opacity: 1;
+}
+
+.cardio-fill {
+    width: 0;
+}
+
+.scene.active .cardio-fill {
+    animation: barFillSvg 1.5s ease forwards 0.5s;
+}
+
+.heart-pulse {
+    animation: heartBeat 1.5s ease-in-out infinite;
+}
+
+/* ===== カスタムビジュアル: ホルモン比較バー ===== */
+.hormone-comparison {
+    width: 100%;
+    max-width: 500px;
+    margin: 12px auto 0;
+}
+
+.hormone-bar-group {
+    margin-bottom: 12px;
+}
+
+.hormone-bar-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.hormone-bar-track {
+    height: 20px;
+    background: #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.hormone-bar-fill {
+    height: 100%;
+    border-radius: 10px;
+    width: 0;
+    transition: width 1.5s ease;
+}
+
+.hormone-high {
+    background: linear-gradient(90deg, var(--teal), #059669);
+}
+
+.hormone-low {
+    background: linear-gradient(90deg, #94a3b8, #64748b);
+}
+
+.scene.active .hormone-bar-fill {
+    width: var(--w);
+}
+
+/* ===== カスタムビジュアル: アナボリックインデックス ===== */
+.anabolic-index-visual {
+    background: #f1f5f9;
+    padding: 16px 24px;
+    border-radius: var(--radius);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.index-label {
+    font-size: 15px;
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 12px;
+}
+
+.index-scale {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.index-low {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--coral);
+    padding: 6px 12px;
+    background: var(--coral-light);
+    border-radius: var(--radius-sm);
+}
+
+.index-high {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--teal);
+    padding: 6px 12px;
+    background: var(--teal-light);
+    border-radius: var(--radius-sm);
+}
+
+.index-arrow {
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--text-light);
+}
+
+/* ===== カスタムビジュアル: オキシトシン分子 ===== */
+.oxy-molecule {
+    margin-top: 12px;
+}
+
+.molecule-svg {
+    width: 120px;
+    height: 120px;
+}
+
+.molecule-ring {
+    stroke-dasharray: 260;
+    stroke-dashoffset: 260;
+}
+
+.scene.active .molecule-ring {
+    animation: drawLine 2s ease forwards 0.5s;
+}
+
+.molecule-dot {
+    opacity: 0;
+}
+
+.scene.active .md1 {
+    animation: dotAppear 0.4s ease forwards 1s;
+}
+
+.scene.active .md2 {
+    animation: dotAppear 0.4s ease forwards 1.2s;
+}
+
+.scene.active .md3 {
+    animation: dotAppear 0.4s ease forwards 1.4s;
+}
+
+.scene.active .md4 {
+    animation: dotAppear 0.4s ease forwards 1.6s;
+}
+
+/* オキシトシンフロー */
+.oxy-flow .flow-node {
+    border: 2px solid var(--amber-light);
+}
+
+.oxy-icon {
+    background: var(--amber-light) !important;
+    color: var(--amber) !important;
+}
+
+/* ===== カスタムビジュアル: デュアルメッセージ ===== */
+.dual-message {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 16px 0;
+}
+
+.dual-left,
+.dual-right {
+    background: var(--card-bg);
+    padding: 24px 36px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.dual-label {
+    font-size: 14px;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.dual-value {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--text);
+}
+
+.dual-divider {
+    width: 2px;
+    height: 60px;
+    background: #e2e8f0;
+}
+
+/* ===== サマリーカード ===== */
+.summary-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.summary-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--card-bg);
+    padding: 16px 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.summary-icon {
+    font-size: 28px;
+    width: 48px;
+    text-align: center;
+}
+
+.summary-text {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* ===== 疑問符背景 ===== */
+.question-mark-bg {
+    position: absolute;
+    font-size: 300px;
+    font-weight: 900;
+    color: rgba(79, 70, 229, 0.04);
+    bottom: -40px;
+    right: 40px;
+    line-height: 1;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ===== エンディングCTA ===== */
+.end-cta {
+    font-size: 16px;
+    color: var(--text-light);
+    padding: 12px 24px;
+    background: var(--primary-light);
+    border-radius: var(--radius-sm);
+    margin-top: 16px;
+}
+
+/* ============================
+   STAGGER ANIMATION
+   ============================ */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity var(--transition), transform var(--transition);
+}
+
+.scene.active .stagger-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scene.active .stagger-item:nth-child(1) {
+    transition-delay: 0.0s;
+}
+
+.scene.active .stagger-item:nth-child(2) {
+    transition-delay: 0.12s;
+}
+
+.scene.active .stagger-item:nth-child(3) {
+    transition-delay: 0.24s;
+}
+
+.scene.active .stagger-item:nth-child(4) {
+    transition-delay: 0.36s;
+}
+
+.scene.active .stagger-item:nth-child(5) {
+    transition-delay: 0.48s;
+}
+
+.scene.active .stagger-item:nth-child(6) {
+    transition-delay: 0.6s;
+}
+
+.scene.active .stagger-item:nth-child(7) {
+    transition-delay: 0.72s;
+}
+
+.scene.active .stagger-item:nth-child(8) {
+    transition-delay: 0.84s;
+}
+
+/* ============================
+   @KEYFRAMES (必須8種類 + テーマ固有)
+   ============================ */
+
+/* 1. シーンフェードイン */
+@keyframes sceneFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* 2. カードスライドアップ */
+@keyframes cardSlideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 3. 数値ポップイン */
+@keyframes numberPop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 4. バーフィル */
+@keyframes barFill {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--w);
+    }
+}
+
+/* 5. フロート */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* 6. パルスグロー */
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 var(--primary-glow);
+    }
+
+    50% {
+        box-shadow: 0 0 20px 8px var(--primary-glow);
+    }
+}
+
+/* 7. バウンスイン */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+    70% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* 8. タイトルリビール */
+@keyframes titleReveal {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* === テーマ固有 === */
+
+/* 9. SVGライン描画 */
+@keyframes drawLine {
+    from {
+        stroke-dashoffset: 500;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* 10. ドット出現 */
+@keyframes dotAppear {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+}
+
+/* 11. フェードインスケール */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 12. ハートビート */
+@keyframes heartBeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.15);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.1);
+    }
+}
+
+/* 13. SVGバーフィル */
+@keyframes barFillSvg {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* 14. 警告シェイク */
+@keyframes warningShake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-3px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(3px);
+    }
+}
+
+/* 15. パルスリング */
+@keyframes pulseRing {
+    0% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 16px rgba(239, 68, 68, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+    }
+}
+
+/* 16. グラデーションシフト */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ============================
+   アニメーション適用ルール
+   ============================ */
+
+/* カード系 */
+.scene.active .factor-card,
+.scene.active .vs-card,
+.scene.active .summary-card,
+.scene.active .dark-item,
+.scene.active .numbered-item,
+.scene.active .action-card {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .factor-card:nth-child(1),
+.scene.active .numbered-item:nth-child(1),
+.scene.active .dark-item:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .factor-card:nth-child(2),
+.scene.active .numbered-item:nth-child(2),
+.scene.active .dark-item:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .factor-card:nth-child(3),
+.scene.active .numbered-item:nth-child(3),
+.scene.active .dark-item:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+/* 数値インパクト */
+.scene.active .impact-number {
+    animation: numberPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+.scene.active .impact-number-sm {
+    animation: numberPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+/* バー系 */
+.scene.active .risk-fill,
+.scene.active .hormone-bar-fill,
+.scene.active .rank-bar {
+    animation: barFill 1.2s ease-out forwards;
+    animation-delay: 0.6s;
+    width: 0;
+}
+
+/* フロー系 */
+.scene.active .flow-node {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .flow-node:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .flow-node:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .flow-node:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.scene.active .flow-node:nth-child(7) {
+    animation-delay: 1.1s;
+}
+
+/* 矢印・VS */
+.scene.active .flow-arrow,
+.scene.active .vs-divider {
+    animation: bounceIn 0.6s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+/* 重要要素パルス */
+.scene.active .rank-highlight {
+    animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+.scene.active .step-circle {
+    animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* ダークシーンアイコン */
+.dark-scene .dark-icon {
+    animation: pulseRing 2s ease-in-out infinite;
+}
+
+/* タイトルアクセント */
+.scene.active .accent-primary,
+.scene.active .accent-coral,
+.scene.active .accent-teal,
+.scene.active .accent-amber {
+    animation: titleReveal 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+/* エンディング浮遊 */
+.scene.active .end-cta {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* サマリーカード時差 */
+.scene.active .summary-card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .summary-card:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.scene.active .summary-card:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+/* 引用カードのグロー */
+.scene.active .quote-card {
+    animation: cardSlideUp 0.6s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+/* コンプテーブル行 */
+.scene.active .comp-row {
+    animation: cardSlideUp 0.4s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .comp-row:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .comp-row:nth-child(2) {
+    animation-delay: 0.35s;
+}
+
+.scene.active .comp-row:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .comp-row:nth-child(4) {
+    animation-delay: 0.65s;
+}
+
+.scene.active .comp-row:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.scene.active .comp-row:nth-child(6) {
+    animation-delay: 0.95s;
+}

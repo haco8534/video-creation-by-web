@@ -90,10 +90,19 @@ async function main() {
 
     if (!fs.existsSync(AUDIO_DIR)) fs.mkdirSync(AUDIO_DIR, { recursive: true });
 
+    // Load manifest (tracks which text each WAV was generated from)
+    const MANIFEST_PATH = path.join(AUDIO_DIR, '.manifest.json');
+    let manifest = {};
+    if (fs.existsSync(MANIFEST_PATH)) {
+        try { manifest = JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf-8')); } catch (e) { manifest = {}; }
+    }
+
     const sceneDurations = [];
     let totalLines = 0;
     scenes.forEach(s => { totalLines += s.lines.length; });
     let processedLines = 0;
+    let skipped = 0;
+    let regenerated = 0;
 
     for (const scene of scenes) {
         let sceneDuration = scene.hold_sec || 0;
@@ -107,23 +116,35 @@ async function main() {
             const filename = `scene_${String(scene.id).padStart(2, '0')}_${String(li).padStart(2, '0')}.wav`;
             const filepath = path.join(AUDIO_DIR, filename);
 
-            if (fs.existsSync(filepath)) {
+            // SKIP only if file exists AND text matches manifest
+            const manifestText = manifest[filename];
+            const textMatch = manifestText === line.text;
+
+            if (fs.existsSync(filepath) && textMatch) {
                 const buf = fs.readFileSync(filepath);
                 const dur = getWavDuration(buf);
                 sceneDuration += dur;
                 sceneAudioFiles.push({ file: filename, duration: dur, speaker: line.speaker });
                 processedLines++;
+                skipped++;
                 console.log(`[${processedLines}/${totalLines}] SKIP ${filename} (${dur.toFixed(1)}s)`);
                 continue;
             }
 
-            console.log(`[${processedLines + 1}/${totalLines}] Generating ${filename} ...`);
+            if (fs.existsSync(filepath) && !textMatch) {
+                console.log(`[${processedLines + 1}/${totalLines}] REGEN ${filename} (text changed) ...`);
+                regenerated++;
+            } else {
+                console.log(`[${processedLines + 1}/${totalLines}] Generating ${filename} ...`);
+            }
+
             try {
                 const wav = await synthesize(line.text, speakerId, voicevox_url, speedScale);
                 fs.writeFileSync(filepath, wav);
                 const dur = getWavDuration(wav);
                 sceneDuration += dur;
                 sceneAudioFiles.push({ file: filename, duration: dur, speaker: line.speaker });
+                manifest[filename] = line.text;
                 console.log(`  -> ${dur.toFixed(1)}s`);
             } catch (e) {
                 console.error(`  ERROR: ${e.message}`);
@@ -145,11 +166,16 @@ async function main() {
         console.log(`Scene ${scene.id} "${scene.title}": ${sceneDuration.toFixed(1)}s total\n`);
     }
 
+    // Save manifest
+    fs.writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2), 'utf-8');
+
     const durFile = path.join(PROJECT_DIR, 'scene_durations.json');
     fs.writeFileSync(durFile, JSON.stringify(sceneDurations, null, 2), 'utf-8');
 
     const totalDur = sceneDurations.reduce((a, s) => a + s.duration, 0);
     console.log(`\n=== Done! Total: ${(totalDur / 60).toFixed(1)} min (${totalDur.toFixed(1)}s) ===`);
+    if (regenerated > 0) console.log(`⚠️  ${regenerated} files regenerated due to text changes`);
+    console.log(`   ${skipped} skipped, ${processedLines - skipped} generated`);
 }
 
 main().catch(console.error);

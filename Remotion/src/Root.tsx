@@ -1,41 +1,26 @@
 import { Composition } from "remotion";
-import {
-  VideoWithSubtitles,
-  TOTAL_FRAMES as VIDEO_SUB_TOTAL_FRAMES,
-} from "./projects/10000h_effort/VideoWithSubtitles";
 
-import {
-  VideoWithSubtitles as MarshmallowVideo,
-  TOTAL_FRAMES as MARSHMALLOW_TOTAL_FRAMES,
-} from "./projects/marshmallow_experiment/VideoWithSubtitles";
-import {
-  VideoWithSubtitles as TenKRuleVideo,
-  TOTAL_FRAMES as TENK_RULE_TOTAL_FRAMES,
-} from "./projects/10000h_rule/VideoWithSubtitles";
-import {
-  VideoWithSubtitles as DunningKrugerVideo,
-  TOTAL_FRAMES as DK_TOTAL_FRAMES,
-} from "./projects/dunning_kruger/VideoWithSubtitles";
-import {
-  VideoWithSubtitles as CarbRestrictionVideo,
-  TOTAL_FRAMES as CARB_TOTAL_FRAMES,
-} from "./projects/carb_restriction/VideoWithSubtitles";
-import {
-  VideoWithSubtitles as IqIntelligenceVideo,
-  TOTAL_FRAMES as IQ_TOTAL_FRAMES,
-} from "./projects/iq_intelligence/VideoWithSubtitles";
-import {
-  VideoWithSubtitles as MultitaskVideo,
-  TOTAL_FRAMES as MULTITASK_TOTAL_FRAMES,
-} from "./projects/multitask/VideoWithSubtitles";
-import {
-  VideoWithSubtitles as DopamineVideo,
-  TOTAL_FRAMES as DOPAMINE_TOTAL_FRAMES,
-} from "./projects/dopamine_not_pleasure/VideoWithSubtitles";
+// === Active Projects ===
 import {
   VideoWithSubtitles as AttentionEconomyVideo,
   TOTAL_FRAMES as ATTENTION_TOTAL_FRAMES,
 } from "./projects/attention_economy/VideoWithSubtitles";
+import {
+  VideoWithSubtitles as FakeNewsSpreadVideo,
+  TOTAL_FRAMES as FAKE_NEWS_TOTAL_FRAMES,
+} from "./projects/fake_news_spread/VideoWithSubtitles";
+import {
+  VideoWithSubtitles as AddictionBrainScienceVideo,
+  TOTAL_FRAMES as ADDICTION_TOTAL_FRAMES,
+} from "./projects/addiction_brain_science/VideoWithSubtitles";
+import {
+  VideoWithSubtitles as MehrabianRuleVideo,
+  TOTAL_FRAMES as MEHRABIAN_TOTAL_FRAMES,
+} from "./projects/mehrabian_rule/VideoWithSubtitles";
+import {
+  VideoWithSubtitles as DunningKrugerVideo,
+  TOTAL_FRAMES as DK_TOTAL_FRAMES,
+} from "./projects/dunning_kruger/VideoWithSubtitles";
 import {
   VideoWithSubtitles as SkippingBreakfastVideo,
   TOTAL_FRAMES as BREAKFAST_TOTAL_FRAMES,
@@ -52,11 +37,56 @@ import {
   VideoWithSubtitles as MozartEffectVideo,
   TOTAL_FRAMES as MOZART_TOTAL_FRAMES,
 } from "./projects/mozart_effect/VideoWithSubtitles";
+
 import {
-  VideoWithSubtitles as FakeNewsSpreadVideo,
-  TOTAL_FRAMES as FAKE_NEWS_TOTAL_FRAMES,
-} from "./projects/fake_news_spread/VideoWithSubtitles";
+  VideoWithSubtitles as BrainLateralizationMythVideo,
+  TOTAL_FRAMES as BRAIN_LATERALIZATION_TOTAL_FRAMES,
+} from "./projects/brain_lateralization_myth/VideoWithSubtitles";
+import {
+  VideoWithSubtitles as MilgramReexaminationVideo,
+  TOTAL_FRAMES as MILGRAM_TOTAL_FRAMES,
+} from "./projects/milgram_reexamination/VideoWithSubtitles";
+import {
+  VideoWithSubtitles as BrainTenPercentMythVideo,
+  TOTAL_FRAMES as BRAIN_TEN_PERCENT_TOTAL_FRAMES,
+} from "./projects/brain_ten_percent_myth/VideoWithSubtitles";
+import {
+  VideoWithSubtitles as StressHalfMythVideo,
+  TOTAL_FRAMES as STRESS_HALF_MYTH_TOTAL_FRAMES,
+} from "./projects/stress_half_myth/VideoWithSubtitles";
+import {
+  VideoWithSubtitles as MoneyHappinessVideo,
+  TOTAL_FRAMES as MONEY_HAPPINESS_TOTAL_FRAMES,
+} from "./projects/money_happiness/VideoWithSubtitles";
+import {
+  VideoWithSubtitles as BloodTypePersonalityVideo,
+  TOTAL_FRAMES as BLOOD_TYPE_TOTAL_FRAMES,
+} from "./projects/blood_type_personality/VideoWithSubtitles";
+import {
+  VideoWithSubtitles as LacticAcidMythVideo,
+  TOTAL_FRAMES as LACTIC_ACID_TOTAL_FRAMES,
+} from "./projects/lactic_acid_myth/VideoWithSubtitles";
+import {
+  VideoWithSubtitles as SubliminalEffectMythVideo,
+  TOTAL_FRAMES as SUBLIMINAL_TOTAL_FRAMES,
+} from "./projects/subliminal_effect_myth/VideoWithSubtitles";
+import {
+  VideoWithSubtitles as DetoxNoEvidenceVideo,
+  TOTAL_FRAMES as DETOX_TOTAL_FRAMES,
+} from "./projects/detox_no_evidence/VideoWithSubtitles";
+import {
+  VideoWithSubtitles as HumanSelfishnessVideo,
+  TOTAL_FRAMES as HUMAN_SELFISHNESS_TOTAL_FRAMES,
+} from "./projects/human_selfishness/VideoWithSubtitles";
+import {
+  VideoWithSubtitles as FoodAdditiveMisconceptionVideo,
+  TOTAL_FRAMES as FOOD_ADDITIVE_TOTAL_FRAMES,
+} from "./projects/food_additive_misconception/VideoWithSubtitles";
 import "./index.css";
+
+// Archived (rendered): 10000h_rule, iq_intelligence, dopamine_not_pleasure,
+//   marshmallow_experiment, multitask, carb_restriction, 10000h_effort
+// Archived (scrapped): diffusion_model
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -78,26 +108,17 @@ export const RemotionRoot: React.FC = () => {
         height={1080}
       />
       <Composition
-        id="10000h-rule-video-subtitles"
-        component={TenKRuleVideo}
-        durationInFrames={TENK_RULE_TOTAL_FRAMES}
+        id="addiction-brain-science-video-subtitles"
+        component={AddictionBrainScienceVideo}
+        durationInFrames={ADDICTION_TOTAL_FRAMES}
         fps={30}
         width={1920}
         height={1080}
       />
       <Composition
-        id="10000h-video-subtitles"
-        component={VideoWithSubtitles}
-        durationInFrames={VIDEO_SUB_TOTAL_FRAMES}
-        fps={30}
-        width={1920}
-        height={1080}
-      />
-
-      <Composition
-        id="marshmallow-experiment-video-subtitles"
-        component={MarshmallowVideo}
-        durationInFrames={MARSHMALLOW_TOTAL_FRAMES}
+        id="mehrabian-rule-video-subtitles"
+        component={MehrabianRuleVideo}
+        durationInFrames={MEHRABIAN_TOTAL_FRAMES}
         fps={30}
         width={1920}
         height={1080}
@@ -106,38 +127,6 @@ export const RemotionRoot: React.FC = () => {
         id="dunning-kruger-video-subtitles"
         component={DunningKrugerVideo}
         durationInFrames={DK_TOTAL_FRAMES}
-        fps={30}
-        width={1920}
-        height={1080}
-      />
-      <Composition
-        id="carb-restriction-video-subtitles"
-        component={CarbRestrictionVideo}
-        durationInFrames={CARB_TOTAL_FRAMES}
-        fps={30}
-        width={1920}
-        height={1080}
-      />
-      <Composition
-        id="iq-intelligence-video-subtitles"
-        component={IqIntelligenceVideo}
-        durationInFrames={IQ_TOTAL_FRAMES}
-        fps={30}
-        width={1920}
-        height={1080}
-      />
-      <Composition
-        id="multitask-video-subtitles"
-        component={MultitaskVideo}
-        durationInFrames={MULTITASK_TOTAL_FRAMES}
-        fps={30}
-        width={1920}
-        height={1080}
-      />
-      <Composition
-        id="dopamine-not-pleasure-video-subtitles"
-        component={DopamineVideo}
-        durationInFrames={DOPAMINE_TOTAL_FRAMES}
         fps={30}
         width={1920}
         height={1080}
@@ -170,6 +159,95 @@ export const RemotionRoot: React.FC = () => {
         id="mozart-effect-video-subtitles"
         component={MozartEffectVideo}
         durationInFrames={MOZART_TOTAL_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+
+      <Composition
+        id="brain-lateralization-myth-video-subtitles"
+        component={BrainLateralizationMythVideo}
+        durationInFrames={BRAIN_LATERALIZATION_TOTAL_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="milgram-reexamination-video-subtitles"
+        component={MilgramReexaminationVideo}
+        durationInFrames={MILGRAM_TOTAL_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="brain-ten-percent-myth-video-subtitles"
+        component={BrainTenPercentMythVideo}
+        durationInFrames={BRAIN_TEN_PERCENT_TOTAL_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="stress-half-myth-video-subtitles"
+        component={StressHalfMythVideo}
+        durationInFrames={STRESS_HALF_MYTH_TOTAL_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="money-happiness-video-subtitles"
+        component={MoneyHappinessVideo}
+        durationInFrames={MONEY_HAPPINESS_TOTAL_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="blood-type-personality-video-subtitles"
+        component={BloodTypePersonalityVideo}
+        durationInFrames={BLOOD_TYPE_TOTAL_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="lactic-acid-myth-video-subtitles"
+        component={LacticAcidMythVideo}
+        durationInFrames={LACTIC_ACID_TOTAL_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="subliminal-effect-myth-video-subtitles"
+        component={SubliminalEffectMythVideo}
+        durationInFrames={SUBLIMINAL_TOTAL_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="detox-no-evidence-video-subtitles"
+        component={DetoxNoEvidenceVideo}
+        durationInFrames={DETOX_TOTAL_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="human-selfishness-video-subtitles"
+        component={HumanSelfishnessVideo}
+        durationInFrames={HUMAN_SELFISHNESS_TOTAL_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="food-additive-misconception-video-subtitles"
+        component={FoodAdditiveMisconceptionVideo}
+        durationInFrames={FOOD_ADDITIVE_TOTAL_FRAMES}
         fps={30}
         width={1920}
         height={1080}

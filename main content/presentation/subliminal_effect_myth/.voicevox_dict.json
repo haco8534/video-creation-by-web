@@ -1,0 +1,212 @@
+[
+    {
+        "surface": "CD",
+        "pronunciation": "シーディー",
+        "accent_type": 3
+    },
+    {
+        "surface": "CBC",
+        "pronunciation": "シービーシー",
+        "accent_type": 5
+    },
+    {
+        "surface": "CIA",
+        "pronunciation": "シーアイエー",
+        "accent_type": 5
+    },
+    {
+        "surface": "FCC",
+        "pronunciation": "エフシーシー",
+        "accent_type": 5
+    },
+    {
+        "surface": "NHK",
+        "pronunciation": "エヌエイチケー",
+        "accent_type": 5
+    },
+    {
+        "surface": "Close-Up",
+        "pronunciation": "クローズアップ",
+        "accent_type": 1
+    },
+    {
+        "surface": "TBS",
+        "pronunciation": "ティービーエス",
+        "accent_type": 5
+    },
+    {
+        "surface": "Lipton",
+        "pronunciation": "リプトン",
+        "accent_type": 1
+    },
+    {
+        "surface": "Ice",
+        "pronunciation": "アイス",
+        "accent_type": 1
+    },
+    {
+        "surface": "Vicary",
+        "pronunciation": "ヴィカリー",
+        "accent_type": 1
+    },
+    {
+        "surface": "Greenwald",
+        "pronunciation": "グリーンウォルド",
+        "accent_type": 1
+    },
+    {
+        "surface": "Spangenberg",
+        "pronunciation": "スパンゲンバーグ",
+        "accent_type": 1
+    },
+    {
+        "surface": "Pratkanis",
+        "pronunciation": "プラトカニス",
+        "accent_type": 1
+    },
+    {
+        "surface": "Eskenazi",
+        "pronunciation": "エスケナジー",
+        "accent_type": 1
+    },
+    {
+        "surface": "Karremans",
+        "pronunciation": "カレマンス",
+        "accent_type": 1
+    },
+    {
+        "surface": "Stroebe",
+        "pronunciation": "ストレーベ",
+        "accent_type": 1
+    },
+    {
+        "surface": "Claus",
+        "pronunciation": "クラウス",
+        "accent_type": 1
+    },
+    {
+        "surface": "Trappey",
+        "pronunciation": "トラッピー",
+        "accent_type": 1
+    },
+    {
+        "surface": "Huestegge",
+        "pronunciation": "ヒューステーゲ",
+        "accent_type": 1
+    },
+    {
+        "surface": "Smarandescu",
+        "pronunciation": "スマランデスク",
+        "accent_type": 1
+    },
+    {
+        "surface": "Shimp",
+        "pronunciation": "シンプ",
+        "accent_type": 1
+    },
+    {
+        "surface": "Psychology",
+        "pronunciation": "サイコロジー",
+        "accent_type": 1
+    },
+    {
+        "surface": "Marketing",
+        "pronunciation": "マーケティング",
+        "accent_type": 1
+    },
+    {
+        "surface": "Psychological",
+        "pronunciation": "サイコロジカル",
+        "accent_type": 1
+    },
+    {
+        "surface": "Skeptical",
+        "pronunciation": "スケプティカル",
+        "accent_type": 1
+    },
+    {
+        "surface": "Inquirer",
+        "pronunciation": "インクワイアラー",
+        "accent_type": 1
+    },
+    {
+        "surface": "JESP",
+        "pronunciation": "ジェスプ",
+        "accent_type": 1
+    },
+    {
+        "surface": "Step",
+        "pronunciation": "ステップ",
+        "accent_type": 1
+    },
+    {
+        "surface": "FACT",
+        "pronunciation": "ファクト",
+        "accent_type": 1
+    },
+    {
+        "surface": "MYTH",
+        "pronunciation": "ミス",
+        "accent_type": 1
+    },
+    {
+        "surface": "OK",
+        "pronunciation": "オーケー",
+        "accent_type": 3
+    },
+    {
+        "surface": "NG",
+        "pronunciation": "エヌジー",
+        "accent_type": 3
+    },
+    {
+        "surface": "New",
+        "pronunciation": "ニュー",
+        "accent_type": 0
+    },
+    {
+        "surface": "The",
+        "pronunciation": "ザ",
+        "accent_type": 0
+    },
+    {
+        "surface": "vs",
+        "pronunciation": "バーサス",
+        "accent_type": 1
+    },
+    {
+        "surface": "PC",
+        "pronunciation": "ピーシー",
+        "accent_type": 3
+    },
+    {
+        "surface": "INTRODUCTION",
+        "pronunciation": "イントロダクション",
+        "accent_type": 1
+    },
+    {
+        "surface": "BASICS",
+        "pronunciation": "ベーシックス",
+        "accent_type": 1
+    },
+    {
+        "surface": "TOPIC",
+        "pronunciation": "トピック",
+        "accent_type": 1
+    },
+    {
+        "surface": "CONCLUSION",
+        "pronunciation": "コンクルージョン",
+        "accent_type": 1
+    },
+    {
+        "surface": "EU",
+        "pronunciation": "イーユー",
+        "accent_type": 3
+    },
+    {
+        "surface": "ms",
+        "pronunciation": "ミリセコンド",
+        "accent_type": 1
+    }
+]

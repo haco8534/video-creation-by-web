@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>「右脳型・左脳型」は完全な迷信</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ====== SCENE 0: タイトルカード「あなたは右脳型？左脳型？」 ====== -->
+    <div class="scene active" id="scene-0">
+        <canvas id="canvas-0" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary">INTRODUCTION</div>
+            <h2 class="title-medium stagger-item">あなたは<br><span class="accent-primary">右脳型？左脳型？</span></h2>
+            <div class="title-sub stagger-item">その質問自体が、科学的にはナンセンスだった</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 1: 数値インパクト「教師の80%が信じている」 ====== -->
+    <div class="scene" id="scene-1">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">世界中の教師が信じる迷信</h2>
+            <div class="source-badge stagger-item">Frontiers in Psychology / 英・蘭・希・中の教師対象 国際調査</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-primary">80</span><span class="num-unit">%</span>
+            </div>
+            <div class="emphasis-sub stagger-item">の教師が「右脳型・左脳型」を信じている</div>
+            <div class="bar-comparison stagger-item">
+                <div class="bar-row">
+                    <div class="bar-label">世界平均</div>
+                    <div class="bar-track">
+                        <div class="bar-fill bar-primary" style="--w:80%"></div>
+                    </div>
+                    <div class="bar-value">80%</div>
+                </div>
+                <div class="bar-row">
+                    <div class="bar-label">英蘭希中</div>
+                    <div class="bar-track">
+                        <div class="bar-fill bar-teal" style="--w:70%"></div>
+                    </div>
+                    <div class="bar-value">70%</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">教える側が信じている — それほど根深い迷信</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 2: 段階的リスト「この動画でわかること」 ====== -->
+    <div class="scene" id="scene-2">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">この動画でわかること</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text">迷信が<span class="accent-primary">どう生まれたか</span>の歴史</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">2</div>
+                    <div class="numbered-text">科学が<span class="accent-coral">どう否定したか</span>の決定的証拠</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">3</div>
+                    <div class="numbered-text">迷信を信じ続けると<span class="accent-amber">何を失うのか</span></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">脳科学の一次資料に基づく徹底検証</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 3: タイトルカード「脳の左右差は実在する」 ====== -->
+    <div class="scene" id="scene-3">
+        <canvas id="canvas-3" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-teal">FACT CHECK</div>
+            <h2 class="title-medium stagger-item">脳の左右差は<br><span class="accent-teal">実在する</span></h2>
+            <div class="title-sub stagger-item">「事実」と「迷信」の境界線を引く</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 4: 比較対照「左脳の得意分野 vs 右脳の得意分野」 ====== -->
+    <div class="scene" id="scene-4">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">脳の左右で得意分野が違う</h2>
+            <div class="source-badge stagger-item">ラテラリゼーション（側性化）/ 神経科学の確立された知見</div>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge safe-badge">左脳</div>
+                    <div class="vs-title">言語・論理</div>
+                    <div class="vs-detail">言葉を組み立てる</div>
+                    <div class="vs-detail">順序立てて考える</div>
+                    <div class="vs-detail">計算処理</div>
+                </div>
+                <div class="vs-divider stagger-item">
+                    <!-- Brain SVG -->
+                    <svg class="brain-icon" viewBox="0 0 80 80" width="60" height="60">
+                        <path class="brain-left" d="M40 10 C20 10 10 25 10 40 C10 55 20 70 40 70" fill="none"
+                            stroke="#4f46e5" stroke-width="3" />
+                        <path class="brain-right" d="M40 10 C60 10 70 25 70 40 C70 55 60 70 40 70" fill="none"
+                            stroke="#14b8a6" stroke-width="3" />
+                        <line class="brain-bridge" x1="40" y1="30" x2="40" y2="50" stroke="#f59e0b" stroke-width="2"
+                            stroke-dasharray="4,3" />
+                    </svg>
+                </div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge teal-badge">右脳</div>
+                    <div class="vs-title">空間・認識</div>
+                    <div class="vs-detail">顔を見分ける</div>
+                    <div class="vs-detail">空間を把握する</div>
+                    <div class="vs-detail">音楽の処理</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">これは科学的事実 — でもここからが問題</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 5: テキスト強調「『得意分野がある』≠『人を分類できる』」 ====== -->
+    <div class="scene" id="scene-5">
+        <canvas id="canvas-5" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">「脳の左右に<span class="accent-primary">得意分野がある</span>」</div>
+            <div class="emphasis-neq stagger-item">&ne;</div>
+            <div class="emphasis-text stagger-item">「人を<span class="accent-coral">右脳型・左脳型に分けられる</span>」</div>
+            <div class="emphasis-sub stagger-item">右手と左手で得意な作業が違っても<br>「右手人間」「左手人間」とは言わない</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 6: 引用カード「ブローカ」 ====== -->
+    <div class="scene" id="scene-6">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">言語と脳の関係の発見</h2>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">我々は<span class="accent-primary">左半球で話す</span></div>
+                <div class="quote-source">Paul Broca（ポール・ブローカ）, 1861年, フランス外科医</div>
+            </div>
+            <div class="brain-area-visual stagger-item">
+                <svg class="brain-area-svg" viewBox="0 0 200 160" width="280" height="224">
+                    <path
+                        d="M100 15 C50 15 20 50 20 85 C20 120 50 150 100 150 C150 150 180 120 180 85 C180 50 150 15 100 15Z"
+                        fill="#f0f0ff" stroke="#4f46e5" stroke-width="2" />
+                    <circle class="broca-dot" cx="65" cy="60" r="12" fill="#4f46e5" opacity="0" />
+                    <text x="65" y="64" text-anchor="middle" fill="#fff" font-size="9" font-weight="700"
+                        class="area-label">B</text>
+                    <circle class="wernicke-dot" cx="130" cy="75" r="12" fill="#14b8a6" opacity="0" />
+                    <text x="130" y="79" text-anchor="middle" fill="#fff" font-size="9" font-weight="700"
+                        class="area-label">W</text>
+                    <path class="arcuate-path" d="M75 55 Q100 30 125 70" fill="none" stroke="#f59e0b" stroke-width="2"
+                        stroke-dasharray="200" stroke-dashoffset="200" />
+                </svg>
+                <div class="area-legend">
+                    <span class="legend-item"><span class="dot-primary"></span>ブローカ野（発話）</span>
+                    <span class="legend-item"><span class="dot-teal"></span>ウェルニッケ野（理解）</span>
+                </div>
+            </div>
+            <div class="footnote stagger-item">右利きの約95%で言語機能は左脳に局在</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 7: 注意喚起「ここまでは正しい。でも問題はこの先」 ====== -->
+    <div class="scene" id="scene-7">
+        <div class="content center-layout">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">ここまでは<span class="accent-teal">正しい科学的事実</span></div>
+                <div class="alert-sub">「左脳が言語に強い」は事実<br>でも「あなたは左脳型」は<span class="accent-coral">飛躍</span></div>
+            </div>
+            <div class="fact-vs-myth stagger-item">
+                <div class="fvm-item fvm-fact">
+                    <div class="fvm-label">事実</div>
+                    <div class="fvm-text">脳の場所ごとに得意分野がある</div>
+                </div>
+                <div class="fvm-arrow">&darr; 飛躍</div>
+                <div class="fvm-item fvm-myth">
+                    <div class="fvm-label">迷信</div>
+                    <div class="fvm-text">人を右脳型・左脳型に分類できる</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 8: タイトルカード「ノーベル賞研究が生んだ誤解」 ====== -->
+    <div class="scene" id="scene-8">
+        <canvas id="canvas-8" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary">TOPIC 1</div>
+            <h2 class="title-medium stagger-item">ノーベル賞研究が<br>生んだ<span class="accent-coral">"誤解"</span></h2>
+            <div class="title-sub stagger-item">1960年代 — ロジャー・スペリーの分離脳研究</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 9: フロー図「スペリーの分離脳実験の仕組み」 ====== -->
+    <div class="scene" id="scene-9">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">分離脳実験の仕組み</h2>
+            <div class="source-badge stagger-item">Roger Sperry / カリフォルニア工科大学（Caltech）/ 1960年代</div>
+            <div class="split-brain-visual stagger-item">
+                <div class="sb-brain">
+                    <svg viewBox="0 0 240 180" width="340" height="250">
+                        <path d="M120 20 C65 20 25 55 25 95 C25 135 65 165 120 165" fill="#e0e7ff" stroke="#4f46e5"
+                            stroke-width="2.5" />
+                        <path d="M120 20 C175 20 215 55 215 95 C215 135 175 165 120 165" fill="#ccfbf1" stroke="#14b8a6"
+                            stroke-width="2.5" />
+                        <text x="70" y="85" text-anchor="middle" fill="#4f46e5" font-size="13"
+                            font-weight="700">左脳</text>
+                        <text x="70" y="102" text-anchor="middle" fill="#4f46e5" font-size="10">言語</text>
+                        <text x="170" y="85" text-anchor="middle" fill="#14b8a6" font-size="13"
+                            font-weight="700">右脳</text>
+                        <text x="170" y="102" text-anchor="middle" fill="#14b8a6" font-size="10">空間認識</text>
+                        <line class="corpus-callosum-cut" x1="120" y1="40" x2="120" y2="145" stroke="#ef4444"
+                            stroke-width="3" stroke-dasharray="8,5" />
+                        <text x="120" y="175" text-anchor="middle" fill="#ef4444" font-size="10"
+                            font-weight="700">脳梁を切断</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">てんかん治療のために脳梁を切断した患者を研究</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 10: 数値インパクト「脳梁＝2〜3億本の神経線維」 ====== -->
+    <div class="scene" id="scene-10">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">脳梁（のうりょう）の正体</h2>
+            <div class="source-badge stagger-item">Cleveland Clinic / NIH / 神経解剖学</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-primary">2</span><span class="num-tilde">〜</span><span
+                    class="big-num accent-primary">3</span><span class="num-unit">億本</span>
+            </div>
+            <div class="emphasis-sub stagger-item">の神経線維が左右の脳をつなぐ</div>
+            <div class="corpus-visual stagger-item">
+                <svg viewBox="0 0 300 80" width="400" height="100">
+                    <rect x="20" y="20" width="100" height="40" rx="8" fill="#e0e7ff" stroke="#4f46e5"
+                        stroke-width="2" />
+                    <text x="70" y="45" text-anchor="middle" fill="#4f46e5" font-size="13" font-weight="700">左脳</text>
+                    <rect x="180" y="20" width="100" height="40" rx="8" fill="#ccfbf1" stroke="#14b8a6"
+                        stroke-width="2" />
+                    <text x="230" y="45" text-anchor="middle" fill="#14b8a6" font-size="13" font-weight="700">右脳</text>
+                    <line class="fiber-line f1" x1="120" y1="28" x2="180" y2="28" stroke="#f59e0b" stroke-width="1.5"
+                        opacity="0" />
+                    <line class="fiber-line f2" x1="120" y1="35" x2="180" y2="35" stroke="#f59e0b" stroke-width="1.5"
+                        opacity="0" />
+                    <line class="fiber-line f3" x1="120" y1="42" x2="180" y2="42" stroke="#f59e0b" stroke-width="1.5"
+                        opacity="0" />
+                    <line class="fiber-line f4" x1="120" y1="49" x2="180" y2="49" stroke="#f59e0b" stroke-width="1.5"
+                        opacity="0" />
+                    <line class="fiber-line f5" x1="120" y1="56" x2="180" y2="56" stroke="#f59e0b" stroke-width="1.5"
+                        opacity="0" />
+                </svg>
+            </div>
+            <div class="footnote stagger-item">健常者の脳は常にこの「橋」を通じて左右が連携している</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 11: 注意喚起「分離脳患者≠健常者の脳」 ====== -->
+    <div class="scene" id="scene-11">
+        <div class="content center-layout">
+            <div class="alert-card alert-danger stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">分離脳患者 &ne; <span class="accent-coral">健常者の脳</span></div>
+                <div class="alert-sub">2〜3億本の脳梁が繋がっている普通の脳に<br>切断後の結果を当てはめるのは<span class="accent-coral">根本的な誤り</span>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">スペリーの発見は「脳梁を切断した特殊な状態」での話</div>
+            <div class="footnote stagger-item">1981年 ノーベル生理学・医学賞受賞</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 12: フロー図「科学→メディア→自己啓発→大衆化」 ====== -->
+    <div class="scene" id="scene-12">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">迷信が広まった流れ</h2>
+            <div class="flow-chain">
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">1960s</div>
+                    <div class="flow-text"><span class="flow-name">スペリー</span><br>分離脳研究<br><span
+                            class="flow-sub">科学的発見</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">1981</div>
+                    <div class="flow-text"><span class="flow-name">ノーベル賞</span><br>受賞<br><span
+                            class="flow-sub">権威付け</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node flow-node-danger stagger-item">
+                    <div class="flow-year">1970s-</div>
+                    <div class="flow-text"><span class="flow-name">メディア</span><br>拡大解釈<br><span
+                            class="flow-sub">「右脳型vs左脳型」</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node flow-node-danger stagger-item">
+                    <div class="flow-year">1980s-</div>
+                    <div class="flow-text"><span class="flow-name">自己啓発</span><br>商品化<br><span
+                            class="flow-sub">右脳開発ビジネス</span></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">科学者の意図とは異なる形で一般化された</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 13: 引用カード「ベティ・エドワーズ」 ====== -->
+    <div class="scene" id="scene-13">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">迷信を広めたベストセラー</h2>
+            <div class="quote-card quote-warning stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text"><span class="accent-coral">右脳モード</span>で描けば<br>絵がうまくなる</div>
+                <div class="quote-source">Betty Edwards『脳の右側で描け』1979年 / 世界的ベストセラー</div>
+            </div>
+            <div class="fact-vs-myth stagger-item">
+                <div class="fvm-item fvm-fact">
+                    <div class="fvm-label">事実</div>
+                    <div class="fvm-text">描画テクニック自体は効果的</div>
+                </div>
+                <div class="fvm-arrow">&darr;</div>
+                <div class="fvm-item fvm-myth">
+                    <div class="fvm-label">問題</div>
+                    <div class="fvm-text">「右脳/左脳モード」の理論は疑似科学</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 14: タイトルカード「1,011人の脳スキャンが出した答え」 ====== -->
+    <div class="scene" id="scene-14">
+        <canvas id="canvas-14" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral">TOPIC 2</div>
+            <h2 class="title-medium stagger-item"><span class="accent-primary">1,011人</span>の脳スキャンが<br>出した答え</h2>
+            <div class="title-sub stagger-item">2013年 — ユタ大学の決定的研究</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 15: 段階的リスト「ユタ大学研究の方法と結果」 ====== -->
+    <div class="scene" id="scene-15">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">ユタ大学研究の概要</h2>
+            <div class="source-badge stagger-item">Nielsen et al. (2013) / PLOS ONE / ユタ大学</div>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text"><span class="accent-primary">1,011人</span>の脳をfMRIでスキャン<div
+                            class="text-sub">被験者は7歳〜29歳の幅広い年齢層</div>
+                    </div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">2</div>
+                    <div class="numbered-text"><span class="accent-primary">安静時</span>の脳活動パターンを分析<div class="text-sub">
+                            左右半球の活動を詳細に比較</div>
+                    </div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">3</div>
+                    <div class="numbered-text">片方が<span class="accent-coral">優位な人はゼロ</span>
+                        <div class="text-sub">全員が左右の脳を均等に使用</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">機能的磁気共鳴画像法（fMRI）による大規模調査</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 16: テキスト強調「右脳型・左脳型の人間は存在しない」 ====== -->
+    <div class="scene" id="scene-16">
+        <canvas id="canvas-16" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="source-badge stagger-item">Nielsen et al. (2013) PLOS ONE 論文結論</div>
+            <div class="emphasis-text-large stagger-item">右脳型・左脳型の人間は</div>
+            <div class="emphasis-text-huge stagger-item"><span class="accent-coral">存在しない</span></div>
+            <div class="emphasis-sub stagger-item">1,011人全員が左右の脳を均等に使用</div>
+            <div class="zero-badge stagger-item">該当者 <span class="accent-coral">0</span> 人 / 1,011人中</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 17: 比較対照「局所的な機能分化 vs 個人全体の優位性」 ====== -->
+    <div class="scene" id="scene-17">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">混同しやすいポイント</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge safe-badge">事実</div>
+                    <div class="vs-title">局所的な機能分化</div>
+                    <div class="vs-desc">特定の脳の場所が<br>特定の仕事に特化</div>
+                    <div class="vs-detail">ブローカ野 → 発話</div>
+                    <div class="vs-detail">ウェルニッケ野 → 理解</div>
+                </div>
+                <div class="vs-divider stagger-item">&ne;</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge danger-badge">迷信</div>
+                    <div class="vs-title">個人全体の優位性</div>
+                    <div class="vs-desc">あなたの脳全体が<br>片方寄り</div>
+                    <div class="vs-detail accent-coral">科学的根拠なし</div>
+                    <div class="vs-detail accent-coral">1,011人中ゼロ</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">サッカーチームのたとえ：フォワードが攻撃に強くても「攻撃型チーム」とは限らない</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 18: 横並びカード「創造性に使われる脳領域（左右両方）」 ====== -->
+    <div class="scene" id="scene-18">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">創造性は脳全体で生まれる</h2>
+            <div class="source-badge stagger-item">複数のfMRI研究 / NIH・ResearchGate</div>
+            <div class="creativity-brain stagger-item">
+                <svg viewBox="0 0 280 180" width="380" height="240">
+                    <path d="M140 15 C75 15 25 55 25 95 C25 135 75 170 140 170" fill="#f0f0ff" stroke="#4f46e5"
+                        stroke-width="2" />
+                    <path d="M140 15 C205 15 255 55 255 95 C255 135 205 170 140 170" fill="#f0fff4" stroke="#14b8a6"
+                        stroke-width="2" />
+                    <circle class="creative-dot cd1" cx="80" cy="65" r="8" fill="#4f46e5" opacity="0" />
+                    <text x="80" y="69" text-anchor="middle" fill="#fff" font-size="7" class="cd-label">IFG</text>
+                    <circle class="creative-dot cd2" cx="110" cy="50" r="8" fill="#6366f1" opacity="0" />
+                    <text x="110" y="54" text-anchor="middle" fill="#fff" font-size="7" class="cd-label">mPFC</text>
+                    <circle class="creative-dot cd3" cx="90" cy="110" r="8" fill="#818cf8" opacity="0" />
+                    <text x="90" y="114" text-anchor="middle" fill="#fff" font-size="6" class="cd-label">海馬</text>
+                    <circle class="creative-dot cd4" cx="190" cy="60" r="8" fill="#14b8a6" opacity="0" />
+                    <text x="190" y="64" text-anchor="middle" fill="#fff" font-size="7" class="cd-label">TPJ</text>
+                    <circle class="creative-dot cd5" cx="200" cy="100" r="8" fill="#0d9488" opacity="0" />
+                    <text x="200" y="104" text-anchor="middle" fill="#fff" font-size="7" class="cd-label">PCC</text>
+                    <circle class="creative-dot cd6" cx="140" cy="140" r="8" fill="#f59e0b" opacity="0" />
+                    <text x="140" y="144" text-anchor="middle" fill="#fff" font-size="6" class="cd-label">小脳</text>
+                </svg>
+            </div>
+            <div class="triple-card">
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-primary">左</div>
+                    <div class="factor-name">下前頭回・mPFC・海馬</div>
+                </div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-teal">右</div>
+                    <div class="factor-name">TPJ・PCC・側頭極</div>
+                </div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-amber">両</div>
+                    <div class="factor-name">小脳・前帯状皮質</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">「右脳＝創造性」は完全な迷信</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 19: 注意喚起「右脳を鍛えれば創造的になるも迷信」 ====== -->
+    <div class="scene" id="scene-19">
+        <div class="content center-layout">
+            <div class="alert-card alert-danger stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">「右脳を鍛えれば<span class="accent-coral">創造的になる</span>」</div>
+                <div class="alert-sub">→ 科学的根拠<span class="accent-coral">なし</span></div>
+            </div>
+            <div class="emphasis-sub stagger-item">創造性は左右両半球の複数領域が協調して実現する</div>
+            <div class="footnote stagger-item">絵を描くときも構図を考える論理的作業が必要</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 20: タイトルカード「迷信を信じると何が起きるのか」 ====== -->
+    <div class="scene" id="scene-20">
+        <canvas id="canvas-20" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral">TOPIC 3</div>
+            <h2 class="title-medium stagger-item">迷信を信じると<br><span class="accent-coral">何が起きるのか</span></h2>
+            <div class="title-sub stagger-item">あなたの可能性を奪う「思い込み」の罠</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 21: テキスト強調「自己成就的予言の罠」 ====== -->
+    <div class="scene" id="scene-21">
+        <canvas id="canvas-21" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">「自分は<span class="accent-coral">右脳型</span>だから数学は無理」</div>
+            <div class="prophecy-cycle stagger-item">
+                <svg viewBox="0 0 300 200" width="380" height="250">
+                    <path class="cycle-arrow" d="M150 30 A80 80 0 1 1 149 30" fill="none" stroke="#ef4444"
+                        stroke-width="2.5" stroke-dasharray="500" stroke-dashoffset="500" />
+                    <circle cx="150" cy="30" r="24" fill="#fee2e2" stroke="#ef4444" stroke-width="2" />
+                    <text x="150" y="27" text-anchor="middle" fill="#ef4444" font-size="8" font-weight="700">思い込み</text>
+                    <text x="150" y="38" text-anchor="middle" fill="#ef4444" font-size="7">「苦手だ」</text>
+                    <circle cx="240" cy="120" r="24" fill="#fee2e2" stroke="#ef4444" stroke-width="2" />
+                    <text x="240" y="117" text-anchor="middle" fill="#ef4444" font-size="8" font-weight="700">回避</text>
+                    <text x="240" y="128" text-anchor="middle" fill="#ef4444" font-size="7">挑戦しない</text>
+                    <circle cx="60" cy="120" r="24" fill="#fee2e2" stroke="#ef4444" stroke-width="2" />
+                    <text x="60" y="117" text-anchor="middle" fill="#ef4444" font-size="8" font-weight="700">確信</text>
+                    <text x="60" y="128" text-anchor="middle" fill="#ef4444" font-size="7">やっぱり苦手</text>
+                    <text x="150" y="185" text-anchor="middle" fill="#ef4444" font-size="11"
+                        font-weight="900">自己成就的予言</text>
+                </svg>
+            </div>
+            <div class="emphasis-sub stagger-item">科学的根拠のない迷信が、実際の能力を制限する</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 22: 段階的リスト「迷信が消えない4つの理由」 ====== -->
+    <div class="scene" id="scene-22">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">迷信が消えない4つの理由</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text">「<span class="accent-primary">本当の科学</span>」に基づくから一見もっともらしい<div
+                            class="text-sub">機能分化は事実 → 分類も正しいと誤解</div>
+                    </div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">2</div>
+                    <div class="numbered-text">人を<span class="accent-amber">分類したい</span>心理的欲求<div class="text-sub">
+                            血液型占いと同じ仕組み</div>
+                    </div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">3</div>
+                    <div class="numbered-text">「<span class="accent-teal">科学的に聞こえる</span>」から説得力がある<div class="text-sub">
+                            血液型よりも信じやすい</div>
+                    </div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">4</div>
+                    <div class="numbered-text">「<span class="accent-coral">右脳開発</span>」ビジネスが商業的に成立<div class="text-sub">
+                            お金になるから迷信が温存される</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 23: 比較対照「右脳開発ビジネス vs 科学的事実」 ====== -->
+    <div class="scene" id="scene-23">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">右脳開発ビジネスの実態</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge danger-badge">ビジネス</div>
+                    <div class="vs-title">右脳開発セミナー</div>
+                    <div class="vs-desc">「右脳を鍛えて<br>創造性アップ！」</div>
+                    <div class="vs-detail accent-coral">科学的根拠なし</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge safe-badge">科学</div>
+                    <div class="vs-title">脳科学の事実</div>
+                    <div class="vs-desc">創造性は両半球が<br>協調して生まれる</div>
+                    <div class="vs-detail accent-teal">fMRI研究で確認済み</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">Deans for Impact：「資源の大量の誤配分」と指摘</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 24: 注意喚起「OECDの神経神話」 ====== -->
+    <div class="scene dark-scene" id="scene-24">
+        <canvas id="canvas-24" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <h2 class="scene-title light-text stagger-item">OECDが定義した「神経神話」</h2>
+            <div class="source-badge stagger-item">OECD (2002) "Understanding the Brain"</div>
+            <div class="neuromyth-card stagger-item">
+                <div class="nm-label">NEUROMYTH</div>
+                <div class="nm-title">ニューロミス（神経神話）</div>
+                <div class="nm-desc">脳に関する科学的知見が誤って一般化された迷信</div>
+                <div class="nm-example">代表例：「右脳型・左脳型」「脳は10%しか使っていない」</div>
+            </div>
+            <div class="footnote light-text stagger-item">国際機関が正式に名前をつけるほど深刻な問題</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 25: テキスト強調「脳は変われる — 神経可塑性」 ====== -->
+    <div class="scene" id="scene-25">
+        <canvas id="canvas-25" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-teal stagger-item">POSITIVE</div>
+            <div class="emphasis-text stagger-item">脳は<span class="accent-teal">変われる</span></div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-primary">神経可塑性</span></div>
+            <div class="plasticity-visual stagger-item">
+                <svg viewBox="0 0 300 100" width="400" height="130">
+                    <circle cx="60" cy="50" r="6" fill="#cbd5e1" />
+                    <circle cx="150" cy="50" r="6" fill="#cbd5e1" />
+                    <circle cx="240" cy="50" r="6" fill="#cbd5e1" />
+                    <line class="synapse-line s1" x1="66" y1="50" x2="144" y2="50" stroke="#14b8a6" stroke-width="2"
+                        stroke-dasharray="100" stroke-dashoffset="100" />
+                    <line class="synapse-line s2" x1="156" y1="50" x2="234" y2="50" stroke="#14b8a6" stroke-width="2"
+                        stroke-dasharray="100" stroke-dashoffset="100" />
+                    <text x="60" y="80" text-anchor="middle" fill="#64748b" font-size="10">学習前</text>
+                    <text x="150" y="80" text-anchor="middle" fill="#14b8a6" font-size="10" font-weight="700">学習中</text>
+                    <text x="240" y="80" text-anchor="middle" fill="#4f46e5" font-size="10" font-weight="700">学習後</text>
+                    <circle class="synapse-grow sg1" cx="105" cy="50" r="0" fill="#14b8a6" opacity="0" />
+                    <circle class="synapse-grow sg2" cx="195" cy="50" r="0" fill="#4f46e5" opacity="0" />
+                </svg>
+            </div>
+            <div class="emphasis-sub stagger-item">年齢に関係なく、脳は新しい経験で構造も機能も変化し続ける</div>
+            <div class="footnote stagger-item">脳スキャンで確認済みの科学的事実</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 26: まとめカード「今日のまとめ」 ====== -->
+    <div class="scene" id="scene-26">
+        <canvas id="canvas-26" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-amber">SUMMARY</div>
+            <h2 class="title-medium stagger-item">今日の<span class="accent-amber">まとめ</span></h2>
+            <div class="title-sub stagger-item">「右脳型・左脳型」は完全な迷信だった</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 27: 段階的リスト「今日の3つのポイント」 ====== -->
+    <div class="scene" id="scene-27">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">今日の3つのポイント</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text">脳の左右で得意分野が違うのは<span class="accent-teal">科学的事実</span>
+                        <div class="text-sub">でも「人の分類」とは全く別の話</div>
+                    </div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">2</div>
+                    <div class="numbered-text">ノーベル賞の<span class="accent-primary">分離脳研究</span>が歪められて迷信に<div
+                            class="text-sub">脳梁2〜3億本でつながった普通の脳に当てはめた誤り</div>
+                    </div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">3</div>
+                    <div class="numbered-text"><span class="accent-coral">1,011人</span>の脳スキャンで完全否定<div class="text-sub">
+                            右脳型・左脳型の人間は存在しない（2013年ユタ大学）</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 28: テキスト強調「あなたは右脳型でも左脳型でもない」 ====== -->
+    <div class="scene" id="scene-28">
+        <canvas id="canvas-28" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">あなたは</div>
+            <div class="emphasis-text-large stagger-item">右脳型でも<span class="accent-coral">左脳型でもない</span></div>
+            <div class="emphasis-sub stagger-item">あなたの脳は常に2〜3億本の脳梁を通じて<br>左右が全力で協力し合っている</div>
+        </div>
+    </div>
+
+    <!-- ====== SCENE 29: テキスト強調「脳はいつでも、あなたの味方」 ====== -->
+    <div class="scene" id="scene-29">
+        <canvas id="canvas-29" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">脳に「型」はない</div>
+            <div class="emphasis-text-large stagger-item">あるのは<span class="accent-teal">無限の可能性</span></div>
+            <div class="emphasis-sub stagger-item">脳はいつでも、あなたの味方</div>
+            <div class="footnote stagger-item">安心して、やりたいことに挑戦してほしい</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

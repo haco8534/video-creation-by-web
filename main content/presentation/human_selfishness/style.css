@@ -1,0 +1,1699 @@
+/* ===================================
+   Human Selfishness Presentation
+   Style System
+   =================================== */
+
+/* ---- Color Tokens ---- */
+:root {
+    --bg: #f8f9fa;
+    --text: #1a1a2e;
+    --text-light: #6c757d;
+    --primary: #4f46e5;
+    --primary-light: #e0e7ff;
+    --teal: #14b8a6;
+    --teal-light: #ccfbf1;
+    --coral: #ef4444;
+    --coral-light: #fee2e2;
+    --amber: #f59e0b;
+    --amber-light: #fef3c7;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.1);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ---- Reset & Base ---- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ---- Scene System ---- */
+.scene {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.scene.active {
+    display: flex;
+    animation: sceneFadeIn 0.5s ease both;
+}
+
+/* ---- Canvas Background ---- */
+.bg-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ---- Scene Content Layouts ---- */
+.scene-content {
+    position: relative;
+    z-index: 1;
+    width: 88%;
+    max-width: 1100px;
+    text-align: center;
+}
+
+.center-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+/* ---- Stagger Animation System ---- */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity var(--transition), transform var(--transition);
+}
+
+.scene.active .stagger-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scene.active .stagger-item:nth-child(1) {
+    transition-delay: 0.0s;
+}
+
+.scene.active .stagger-item:nth-child(2) {
+    transition-delay: 0.12s;
+}
+
+.scene.active .stagger-item:nth-child(3) {
+    transition-delay: 0.24s;
+}
+
+.scene.active .stagger-item:nth-child(4) {
+    transition-delay: 0.36s;
+}
+
+.scene.active .stagger-item:nth-child(5) {
+    transition-delay: 0.48s;
+}
+
+.scene.active .stagger-item:nth-child(6) {
+    transition-delay: 0.60s;
+}
+
+.scene.active .stagger-item:nth-child(7) {
+    transition-delay: 0.72s;
+}
+
+.scene.active .stagger-item:nth-child(8) {
+    transition-delay: 0.84s;
+}
+
+/* ---- Accent Colors ---- */
+.accent-primary {
+    color: var(--primary);
+}
+
+.accent-coral {
+    color: var(--coral);
+}
+
+.accent-teal {
+    color: var(--teal);
+}
+
+.accent-amber {
+    color: var(--amber);
+}
+
+.accent-bg-primary {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+/* ===================================
+   Title Card
+   =================================== */
+.title-card {
+    text-align: center;
+}
+
+.title-label {
+    display: inline-block;
+    padding: 6px 20px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    border-radius: 30px;
+    margin-bottom: 8px;
+}
+
+.title-main {
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.3;
+    color: var(--text);
+}
+
+.title-accent-line {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--teal));
+    border-radius: 2px;
+    margin: 12px auto;
+}
+
+.title-sub {
+    font-size: 18px;
+    color: var(--text-light);
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+/* ===================================
+   Chapter Title
+   =================================== */
+.chapter-title {
+    text-align: center;
+}
+
+.chapter-number {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.chapter-name {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+.chapter-line {
+    width: 60px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
+    margin: 12px auto;
+}
+
+.chapter-sub {
+    font-size: 16px;
+    color: var(--text-light);
+    letter-spacing: 1px;
+}
+
+/* ===================================
+   Section Title
+   =================================== */
+.section-title {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+
+/* ===================================
+   Source Badge
+   =================================== */
+.source-badge {
+    display: inline-block;
+    padding: 4px 16px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* ===================================
+   Footnote
+   =================================== */
+.footnote {
+    font-size: 13px;
+    color: var(--text-light);
+    border-top: 1px solid #e2e8f0;
+    padding-top: 10px;
+    margin-top: 8px;
+    max-width: 600px;
+}
+
+/* ===================================
+   Emphasis Text
+   =================================== */
+.emphasis-label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--primary);
+}
+
+.emphasis-main {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1.5;
+}
+
+.emphasis-main.large {
+    font-size: 44px;
+}
+
+.emphasis-sub {
+    font-size: 16px;
+    color: var(--text-light);
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* ===================================
+   Impact Number
+   =================================== */
+.impact-number-group {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 4px;
+}
+
+.impact-number {
+    font-size: 100px;
+    font-weight: 900;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.impact-number-unit {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+/* ===================================
+   VS Layout
+   =================================== */
+.vs-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+}
+
+.vs-side {
+    flex: 1;
+    max-width: 300px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.vs-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 12px;
+    color: var(--text-light);
+}
+
+.vs-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.vs-title {
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.vs-result {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.vs-result.neutral {
+    background: #f1f5f9;
+    color: var(--text-light);
+}
+
+.vs-result.safe {
+    background: var(--teal-light);
+    color: var(--teal);
+}
+
+.vs-result.danger {
+    background: var(--coral-light);
+    color: var(--coral);
+}
+
+.vs-detail {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+.vs-center-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vs-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 900;
+    box-shadow: var(--shadow);
+}
+
+.comparison-note {
+    font-size: 14px;
+    color: var(--text-light);
+    background: #f8f9fa;
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--primary);
+    max-width: 600px;
+    text-align: left;
+}
+
+/* ===================================
+   Quote Card
+   =================================== */
+.quote-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--primary);
+    max-width: 600px;
+    text-align: left;
+    position: relative;
+}
+
+.quote-card.quote-warning {
+    border-left-color: var(--coral);
+}
+
+.quote-card.quote-warm {
+    border-left-color: var(--amber);
+}
+
+.quote-mark {
+    font-size: 60px;
+    font-weight: 900;
+    color: var(--primary-light);
+    line-height: 0.5;
+    position: absolute;
+    top: 16px;
+    left: 20px;
+}
+
+.quote-text {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.6;
+    padding-left: 20px;
+}
+
+.quote-source {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-top: 12px;
+    padding-left: 20px;
+}
+
+/* ===================================
+   Alert Card
+   =================================== */
+.alert-card {
+    background: var(--coral-light);
+    border-radius: var(--radius);
+    padding: 20px 28px;
+    border-left: 4px solid var(--coral);
+    max-width: 560px;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.alert-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--coral);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+.alert-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.alert-sub {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+/* ===================================
+   Dark Scene
+   =================================== */
+.dark-scene {
+    background: #0f172a;
+}
+
+.dark-scene .section-title {
+    color: #e2e8f0;
+}
+
+.light-text {
+    color: #e2e8f0 !important;
+}
+
+.dark-scene .quote-card {
+    background: #1e293b;
+    border-left-color: var(--coral);
+}
+
+.dark-scene .quote-mark {
+    color: rgba(239, 68, 68, 0.2);
+}
+
+.dark-scene .quote-text {
+    color: #f1f5f9;
+}
+
+.dark-scene .quote-source {
+    color: #94a3b8;
+}
+
+.dark-scene .footnote {
+    color: #94a3b8;
+    border-top-color: #334155;
+}
+
+/* ===================================
+   Three Pillars (Scene 2)
+   =================================== */
+.three-pillars {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.pillar-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 24px 20px;
+    box-shadow: var(--shadow);
+    width: 200px;
+    text-align: center;
+}
+
+.pillar-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 12px;
+    color: var(--primary);
+}
+
+.pillar-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.pillar-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.pillar-name {
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 6px;
+}
+
+.pillar-desc {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+/* ===================================
+   Homo Economicus Visual (Scene 4)
+   =================================== */
+.homo-economicus-visual {
+    margin: 8px 0;
+}
+
+.he-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 24px 32px;
+    box-shadow: var(--shadow);
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.he-icon {
+    width: 64px;
+    height: 64px;
+    color: var(--text-light);
+}
+
+.he-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.he-title {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.he-desc {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* ===================================
+   Book Visual (Scene 5)
+   =================================== */
+.book-visual {
+    margin: 8px 0;
+}
+
+.book-card {
+    background: linear-gradient(135deg, #1e293b, #334155);
+    border-radius: var(--radius);
+    padding: 28px 40px;
+    box-shadow: var(--shadow-lg);
+    display: inline-block;
+    text-align: center;
+    color: white;
+    position: relative;
+    border: 2px solid rgba(79, 70, 229, 0.3);
+}
+
+.book-author {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #94a3b8;
+    margin-bottom: 8px;
+}
+
+.book-title {
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.book-impact {
+    font-size: 12px;
+    padding: 3px 12px;
+    background: rgba(79, 70, 229, 0.2);
+    border-radius: 12px;
+    display: inline-block;
+    color: #a5b4fc;
+}
+
+/* ===================================
+   Shaking Pillars (Scene 6)
+   =================================== */
+.shaking-pillars {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin: 8px 0;
+}
+
+.shake-pillar {
+    padding: 10px 24px;
+    background: var(--card-bg);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--coral);
+    border-bottom: 3px solid var(--coral);
+}
+
+.scene.active .shake-pillar.shake-1 {
+    animation: warningShake 0.6s ease 0.5s;
+}
+
+.scene.active .shake-pillar.shake-2 {
+    animation: warningShake 0.6s ease 0.8s;
+}
+
+.scene.active .shake-pillar.shake-3 {
+    animation: warningShake 0.6s ease 1.1s;
+}
+
+/* ===================================
+   Dawkins Detail (Scene 9)
+   =================================== */
+.dawkins-detail {
+    max-width: 500px;
+    text-align: left;
+}
+
+.detail-item {
+    font-size: 14px;
+    color: var(--text-light);
+    padding: 6px 12px;
+    border-left: 2px solid var(--primary-light);
+    margin-bottom: 6px;
+}
+
+/* ===================================
+   Bee Visual (Scene 10) — Custom SVG
+   =================================== */
+.bee-visual {
+    margin: 8px 0;
+}
+
+.bee-svg {
+    width: 320px;
+    height: 130px;
+}
+
+/* ===================================
+   Formula (Scene 11) — Custom
+   =================================== */
+.formula-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.formula-part {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 20px 28px;
+    box-shadow: var(--shadow);
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--primary);
+    position: relative;
+    text-align: center;
+    min-width: 80px;
+}
+
+.formula-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-light);
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.formula-r {
+    color: var(--teal);
+}
+
+.formula-b {
+    color: var(--primary);
+}
+
+.formula-c {
+    color: var(--coral);
+}
+
+.formula-op {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.hamilton-example {
+    margin-top: 8px;
+}
+
+/* ===================================
+   Darwin Compare (Scene 12) — Custom
+   =================================== */
+.darwin-compare {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+}
+
+.darwin-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    box-shadow: var(--shadow);
+    max-width: 260px;
+    text-align: center;
+}
+
+.darwin-card.wrong {
+    border-top: 3px solid var(--coral);
+}
+
+.darwin-card.correct {
+    border-top: 3px solid var(--teal);
+}
+
+.darwin-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.darwin-text {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.darwin-note {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 6px;
+}
+
+.darwin-arrow {
+    font-size: 28px;
+    color: var(--text-light);
+    font-weight: 700;
+}
+
+/* ===================================
+   Game Visual (Scene 14) — Custom
+   =================================== */
+.game-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.game-step {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    min-width: 140px;
+}
+
+.game-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 8px;
+    color: var(--primary);
+}
+
+.game-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.game-label {
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.game-desc {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+.game-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: var(--text-light);
+}
+
+.game-arrow svg {
+    width: 60px;
+    height: 24px;
+}
+
+.game-arrow span {
+    font-size: 11px;
+}
+
+.game-rule {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.rule-item {
+    padding: 8px 20px;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rule-accept {
+    background: var(--teal-light);
+    color: var(--teal);
+}
+
+.rule-reject {
+    background: var(--coral-light);
+    color: var(--coral);
+}
+
+/* ===================================
+   Ultimatum Bars (Scene 16) — Custom SVG
+   =================================== */
+.ultimatum-bars {
+    width: 100%;
+    max-width: 500px;
+}
+
+.ubar-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.ubar-label {
+    font-size: 13px;
+    font-weight: 600;
+    width: 140px;
+    text-align: right;
+}
+
+.ubar-track {
+    flex: 1;
+    height: 28px;
+    background: #f1f5f9;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.ubar-fill {
+    height: 100%;
+    border-radius: 14px;
+    width: 0;
+    transition: width 1.5s ease;
+}
+
+.ubar-theory {
+    background: var(--coral);
+}
+
+.ubar-actual {
+    background: linear-gradient(90deg, var(--primary), var(--teal));
+}
+
+.scene.active .ubar-fill {
+    width: var(--w);
+}
+
+.ubar-value {
+    font-size: 14px;
+    font-weight: 700;
+    width: 60px;
+}
+
+/* ===================================
+   Dictator Visual (Scene 17) — Custom
+   =================================== */
+.dictator-visual {
+    margin: 8px 0;
+}
+
+.dict-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 20px 28px;
+    box-shadow: var(--shadow);
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.dict-icon {
+    width: 64px;
+    height: 64px;
+    color: var(--amber);
+}
+
+.dict-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.dict-title {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.dict-desc {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+.dictator-stats {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.dict-stat {
+    text-align: center;
+}
+
+.dict-stat-num {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.dict-stat-num .stat-unit {
+    font-size: 20px;
+}
+
+.dict-stat-label {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+/* ===================================
+   Brain Reward Visual (Scene 18) — Custom SVG
+   =================================== */
+.brain-reward-visual {
+    margin: 4px 0;
+}
+
+.brain-reward-svg {
+    width: 320px;
+    height: 190px;
+}
+
+.brain-outline {
+    opacity: 0.6;
+}
+
+.pulse-reward {
+    animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* ===================================
+   Oxytocin Visual (Scene 19) — Custom
+   =================================== */
+.oxytocin-visual {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.oxy-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    width: 120px;
+}
+
+.oxy-icon {
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 8px;
+}
+
+.oxy-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.oxy-trust {
+    color: var(--primary);
+    border-top: 3px solid var(--primary);
+}
+
+.oxy-empathy {
+    color: var(--coral);
+    border-top: 3px solid var(--coral);
+}
+
+.oxy-coop {
+    color: var(--teal);
+    border-top: 3px solid var(--teal);
+}
+
+.oxy-label {
+    font-size: 15px;
+    font-weight: 900;
+}
+
+/* ===================================
+   Circular Visual (Scene 20) — Custom SVG
+   =================================== */
+.circular-visual {
+    margin: 4px 0;
+}
+
+.circular-svg {
+    width: 300px;
+    height: 200px;
+}
+
+.circular-path {
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+}
+
+.scene.active .circular-path {
+    animation: drawCircular 2s ease forwards 0.5s;
+}
+
+@keyframes drawCircular {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* ===================================
+   Five Mechanisms (Scene 22)
+   =================================== */
+.five-mech {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.mech-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 16px 14px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    width: 140px;
+}
+
+.mech-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 900;
+    margin: 0 auto 8px;
+}
+
+.mech-name {
+    font-size: 15px;
+    font-weight: 900;
+    margin-bottom: 4px;
+}
+
+.mech-desc {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+/* ===================================
+   Reputation Flow (Scene 23) — Custom
+   =================================== */
+.reputation-flow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+}
+
+.rep-step {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 16px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    min-width: 100px;
+}
+
+.rep-icon {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 8px;
+    color: var(--primary);
+}
+
+.rep-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.rep-icon.rep-talk {
+    color: var(--amber);
+}
+
+.rep-text {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.rep-arrow {
+    font-size: 24px;
+    color: var(--text-light);
+    font-weight: 700;
+}
+
+/* ===================================
+   Evolution Pillars (Scene 24)
+   =================================== */
+.three-pillars-evo {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.evo-pillar {
+    padding: 12px 24px;
+    background: var(--card-bg);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.evo-pillar.evo-highlight {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 4px 16px rgba(79, 70, 229, 0.3);
+    animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* ===================================
+   Disaster Detail (Scene 25)
+   =================================== */
+.disaster-detail {
+    max-width: 500px;
+    text-align: left;
+}
+
+.disaster-stat {
+    font-size: 14px;
+    color: var(--text-light);
+    padding: 6px 12px;
+    border-left: 2px solid var(--teal);
+    margin-bottom: 6px;
+}
+
+/* ===================================
+   Punishment Visual (Scene 27) — Custom SVG
+   =================================== */
+.punishment-visual {
+    margin: 4px 0;
+}
+
+.punishment-svg {
+    width: 340px;
+    height: 150px;
+}
+
+/* ===================================
+   Summary List (Scene 29)
+   =================================== */
+.summary-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 560px;
+    width: 100%;
+}
+
+.summary-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 18px 24px;
+    box-shadow: var(--shadow);
+    text-align: left;
+}
+
+.summary-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+.summary-content {
+    flex: 1;
+}
+
+.summary-title {
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 4px;
+}
+
+.summary-text {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* ===================================
+   Coin Visual (Scene 30) — Custom
+   =================================== */
+.coin-visual {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+.coin-side {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.coin-selfish {
+    background: linear-gradient(135deg, var(--coral-light), rgba(239, 68, 68, 0.2));
+    color: var(--coral);
+    border: 2px solid var(--coral);
+}
+
+.coin-altruistic {
+    background: linear-gradient(135deg, var(--primary-light), rgba(79, 70, 229, 0.2));
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.coin-label {
+    font-size: 16px;
+}
+
+.coin-edge svg {
+    width: 20px;
+    height: 80px;
+}
+
+/* ===================================
+   @keyframes — Required 8+ types
+   =================================== */
+
+/* 1. Scene Fade In */
+@keyframes sceneFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* 2. Card Slide Up */
+@keyframes cardSlideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 3. Number Pop */
+@keyframes numberPop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 4. Bar Fill */
+@keyframes barFill {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--w);
+    }
+}
+
+/* 5. Float */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* 6. Pulse Glow */
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 20px 8px rgba(79, 70, 229, 0.15);
+    }
+}
+
+/* 7. Bounce In */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+    70% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* 8. Title Reveal */
+@keyframes titleReveal {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* 9. Warning Shake */
+@keyframes warningShake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-3px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(3px);
+    }
+}
+
+/* 10. Gradient Shift */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 11. Draw Line (SVG) */
+@keyframes drawLine {
+    from {
+        stroke-dashoffset: 500;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* 12. Dot Pulse */
+@keyframes dotPulse {
+
+    0%,
+    100% {
+        opacity: 0.4;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+/* ===================================
+   Animation Application Rules
+   =================================== */
+
+/* Cards */
+.scene.active .pillar-card,
+.scene.active .mech-card,
+.scene.active .oxy-card,
+.scene.active .game-step,
+.scene.active .rep-step,
+.scene.active .summary-item,
+.scene.active .darwin-card,
+.scene.active .dict-card,
+.scene.active .he-card,
+.scene.active .book-card {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .pillar-card:nth-child(1),
+.scene.active .mech-card:nth-child(1),
+.scene.active .oxy-card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .pillar-card:nth-child(2),
+.scene.active .mech-card:nth-child(2),
+.scene.active .oxy-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .pillar-card:nth-child(3),
+.scene.active .mech-card:nth-child(3),
+.scene.active .oxy-card:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.scene.active .mech-card:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+.scene.active .mech-card:nth-child(5) {
+    animation-delay: 1.1s;
+}
+
+/* Impact Numbers */
+.scene.active .impact-number {
+    animation: numberPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+.scene.active .dict-stat-num {
+    animation: numberPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    opacity: 0;
+}
+
+.scene.active .dict-stat:nth-child(1) .dict-stat-num {
+    animation-delay: 0.3s;
+}
+
+.scene.active .dict-stat:nth-child(2) .dict-stat-num {
+    animation-delay: 0.5s;
+}
+
+.scene.active .dict-stat:nth-child(3) .dict-stat-num {
+    animation-delay: 0.7s;
+}
+
+/* Bar Charts */
+.scene.active .ubar-fill {
+    animation: barFill 1.2s ease-out forwards;
+    animation-delay: 0.6s;
+    width: 0;
+}
+
+/* VS Badge */
+.scene.active .vs-badge {
+    animation: bounceIn 0.6s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+/* Arrows */
+.scene.active .game-arrow,
+.scene.active .rep-arrow,
+.scene.active .darwin-arrow {
+    animation: bounceIn 0.6s ease-out forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+/* Important highlights */
+.scene.active .evo-highlight {
+    animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* Title accents */
+.scene.active .title-accent-line {
+    animation: titleReveal 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+/* Floating elements */
+.scene.active .book-card {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Coin sides */
+.scene.active .coin-selfish {
+    animation: float 2.5s ease-in-out infinite;
+}
+
+.scene.active .coin-altruistic {
+    animation: float 2.5s ease-in-out infinite 0.5s;
+}
+
+/* Summary items stagger */
+.scene.active .summary-item:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .summary-item:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .summary-item:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+/* Shake pillars */
+.scene.active .shake-pillar {
+    animation: warningShake 0.6s ease forwards;
+}
+
+/* Brain pulse */
+.scene.active .pulse-reward {
+    animation: pulseGlow 2s ease-in-out infinite;
+}

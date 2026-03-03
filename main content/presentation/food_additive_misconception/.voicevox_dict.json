@@ -1,0 +1,117 @@
+[
+    {
+        "surface": "NOAEL",
+        "pronunciation": "ノーエル",
+        "accent_type": 1
+    },
+    {
+        "surface": "ADI",
+        "pronunciation": "エーディーアイ",
+        "accent_type": 1
+    },
+    {
+        "surface": "JECFA",
+        "pronunciation": "ジェクファ",
+        "accent_type": 1
+    },
+    {
+        "surface": "WHO",
+        "pronunciation": "ダブリューエイチオー",
+        "accent_type": 1
+    },
+    {
+        "surface": "FAO",
+        "pronunciation": "エフエーオー",
+        "accent_type": 1
+    },
+    {
+        "surface": "FDA",
+        "pronunciation": "エフディーエー",
+        "accent_type": 1
+    },
+    {
+        "surface": "AF-2",
+        "pronunciation": "エーエフツー",
+        "accent_type": 1
+    },
+    {
+        "surface": "SNS",
+        "pronunciation": "エスエヌエス",
+        "accent_type": 1
+    },
+    {
+        "surface": "パラケルスス",
+        "pronunciation": "パラケルスス",
+        "accent_type": 5
+    },
+    {
+        "surface": "テトロドトキシン",
+        "pronunciation": "テトロドトキシン",
+        "accent_type": 5
+    },
+    {
+        "surface": "アフラトキシン",
+        "pronunciation": "アフラトキシン",
+        "accent_type": 5
+    },
+    {
+        "surface": "ソラニン",
+        "pronunciation": "ソラニン",
+        "accent_type": 1
+    },
+    {
+        "surface": "ソルビン酸",
+        "pronunciation": "ソルビンサン",
+        "accent_type": 4
+    },
+    {
+        "surface": "安息香酸",
+        "pronunciation": "アンソクコウサン",
+        "accent_type": 5
+    },
+    {
+        "surface": "ボツリヌス菌",
+        "pronunciation": "ボツリヌスキン",
+        "accent_type": 5
+    },
+    {
+        "surface": "ボトックス",
+        "pronunciation": "ボトックス",
+        "accent_type": 1
+    },
+    {
+        "surface": "無毒性量",
+        "pronunciation": "ムドクセイリョー",
+        "accent_type": 5
+    },
+    {
+        "surface": "変異原性",
+        "pronunciation": "ヘンイゲンセイ",
+        "accent_type": 5
+    },
+    {
+        "surface": "発がん性",
+        "pronunciation": "ハツガンセイ",
+        "accent_type": 4
+    },
+    {
+        "surface": "遺伝毒性",
+        "pronunciation": "イデンドクセイ",
+        "accent_type": 5
+    },
+    {
+        "surface": "繁殖毒性",
+        "pronunciation": "ハンショクドクセイ",
+        "accent_type": 5
+    },
+    {
+        "surface": "急性毒性",
+        "pronunciation": "キューセイドクセイ",
+        "accent_type": 5
+    },
+    {
+        "surface": "慢性毒性",
+        "pronunciation": "マンセイドクセイ",
+        "accent_type": 5
+    }
+]

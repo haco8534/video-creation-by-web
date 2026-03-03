@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>依存症は意志の弱さじゃなかった</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Scene 0: タイトルカード -->
+    <div class="scene" id="scene-0">
+        <canvas id="canvas-0" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary">NEUROSCIENCE</div>
+            <h2 class="title-medium">依存症は<br><span class="accent-primary">意志の弱さじゃなかった</span></h2>
+            <div class="title-sub stagger-item">脳科学が覆した常識</div>
+        </div>
+    </div>
+
+    <!-- Scene 1: テキスト強調「骨折の比喩」 -->
+    <div class="scene" id="scene-1">
+        <canvas id="canvas-1" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">骨折した人に<span class="accent-coral">「気合で歩け」</span>とは言わない</div>
+            <div class="emphasis-text-large stagger-item">でも依存症には<span class="accent-coral">……？</span></div>
+            <div class="emphasis-sub stagger-item">「意志が弱い」「自業自得」──その"常識"が間違いだった</div>
+        </div>
+    </div>
+
+    <!-- Scene 2: 数値インパクト「304万人」 -->
+    <div class="scene" id="scene-2">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">日本のアルコール依存症</h2>
+            <div class="source-badge stagger-item">厚生労働省 2024年度調査速報 / AUDIT 15点以上</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-primary">304</span><span class="num-unit">万人</span>
+            </div>
+            <div class="emphasis-sub stagger-item">しかし治療を受けているのは……</div>
+            <div class="untreated-visual stagger-item">
+                <div class="untreated-bar">
+                    <div class="untreated-fill" style="--w:3%"></div>
+                    <div class="untreated-label-left">治療あり<br><span class="accent-teal">3%</span></div>
+                    <div class="untreated-label-right">未治療<br><span class="accent-coral">97%</span></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">外来受診約10.7万人（2022年度NDB）</div>
+        </div>
+    </div>
+
+    <!-- Scene 3: 段階的リスト「この動画でわかること」 -->
+    <div class="scene" id="scene-3">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">この動画でわかること</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text">依存症の脳で<span class="accent-primary">何が起きているのか</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">2</div>
+                    <div class="numbered-text">なぜ<span class="accent-coral">楽しくないのにやめられない</span>のか</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">3</div>
+                    <div class="numbered-text">脳は変わっても<span class="accent-teal">取り戻せる</span>という希望</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 4: タイトルカード Block2 -->
+    <div class="scene" id="scene-4">
+        <canvas id="canvas-4" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral">HISTORY</div>
+            <h2 class="title-medium">依存症は<br><span class="accent-coral">"悪い人の病気"</span>だった</h2>
+            <div class="title-sub stagger-item">偏見の歴史をたどる</div>
+        </div>
+    </div>
+
+    <!-- Scene 5: フロー図「歴史年表」 -->
+    <div class="scene" id="scene-5">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">依存症観の歴史</h2>
+            <div class="flow-chain">
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">古代</div>
+                    <div class="flow-text"><span class="flow-name">道徳モデル</span><br>「自制心がない」<br><span
+                            class="flow-sub">性格の問題とされた</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">1849</div>
+                    <div class="flow-text"><span class="flow-name">マグヌス・フス</span><br>「慢性アルコール中毒」<br><span
+                            class="flow-sub">医学的概念の誕生</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">1980s</div>
+                    <div class="flow-text"><span class="flow-name">脳病モデル</span><br>「アディクション」へ<br><span
+                            class="flow-sub">慢性疾患として認識</span></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">数千年間続いた「道徳の問題」から「脳の病気」へ</div>
+        </div>
+    </div>
+
+    <!-- Scene 6: 比較対照「中毒 vs 依存症」 -->
+    <div class="scene" id="scene-6">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">用語の転換</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge danger-badge">旧</div>
+                    <div class="vs-title">中毒</div>
+                    <div class="vs-desc">「毒に当たった」<br>自分が悪いという響き</div>
+                    <div class="vs-detail">罰すべきもの</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge safe-badge">新</div>
+                    <div class="vs-title">依存症</div>
+                    <div class="vs-desc">脳と行動の慢性疾患<br>医学的な用語</div>
+                    <div class="vs-detail">治療すべきもの</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">言葉を変えることで社会の認識が変わる</div>
+        </div>
+    </div>
+
+    <!-- Scene 7: テキスト強調「DSM-5」 -->
+    <div class="scene" id="scene-7">
+        <canvas id="canvas-7" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="source-badge stagger-item">アメリカ精神医学会 DSM-5（2013年）</div>
+            <div class="emphasis-text stagger-item">行動依存も<span class="accent-primary">"脳の病気"</span></div>
+            <div class="emphasis-text-large stagger-item">として<span class="accent-primary">公式認定</span></div>
+            <div class="emphasis-sub stagger-item">ギャンブル依存症が薬物依存と同じ章に分類された</div>
+        </div>
+    </div>
+
+    <!-- Scene 8: タイトルカード Block3 -->
+    <div class="scene" id="scene-8">
+        <canvas id="canvas-8" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary">BRAIN SCIENCE</div>
+            <h2 class="title-medium">脳に<br><span class="accent-primary">何が起きているのか</span></h2>
+            <div class="title-sub stagger-item">依存症の3つの変化</div>
+        </div>
+    </div>
+
+    <!-- Scene 9: 横並びカード「報酬系」 -->
+    <div class="scene" id="scene-9">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">脳の報酬系</h2>
+            <div class="triple-card">
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-primary">
+                        <svg viewBox="0 0 60 60" class="brain-region-svg">
+                            <circle cx="30" cy="30" r="22" fill="none" stroke="#4f46e5" stroke-width="2" />
+                            <circle cx="30" cy="30" r="8" fill="#4f46e5" opacity="0.6">
+                                <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" />
+                            </circle>
+                        </svg>
+                    </div>
+                    <div class="factor-name">腹側被蓋野</div>
+                    <div class="factor-desc">ドーパミンの「源泉」</div>
+                </div>
+                <div class="flow-arrow-h stagger-item">&rarr;</div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-amber">
+                        <svg viewBox="0 0 60 60" class="brain-region-svg">
+                            <circle cx="30" cy="30" r="22" fill="none" stroke="#f59e0b" stroke-width="2" />
+                            <circle cx="30" cy="30" r="8" fill="#f59e0b" opacity="0.6">
+                                <animate attributeName="r" values="8;14;8" dur="1.5s" repeatCount="indefinite" />
+                            </circle>
+                        </svg>
+                    </div>
+                    <div class="factor-name">側坐核</div>
+                    <div class="factor-desc">「もっと欲しい！」<br>欲求の中枢</div>
+                </div>
+                <div class="flow-arrow-h stagger-item">&rarr;</div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-teal">
+                        <svg viewBox="0 0 60 60" class="brain-region-svg">
+                            <circle cx="30" cy="30" r="22" fill="none" stroke="#14b8a6" stroke-width="2" />
+                            <rect x="18" y="24" width="24" height="12" rx="4" fill="#14b8a6" opacity="0.5" />
+                        </svg>
+                    </div>
+                    <div class="factor-name">前頭前野</div>
+                    <div class="factor-desc">理性のブレーキ<br>衝動を抑制</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">アクセル（欲求）とブレーキ（理性）のバランス</div>
+        </div>
+    </div>
+
+    <!-- Scene 10: 数値インパクト「2〜10倍」 -->
+    <div class="scene" id="scene-10">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">依存性物質のドーパミン放出</h2>
+            <div class="source-badge stagger-item">NIDA（米国国立薬物濫用研究所）</div>
+            <div class="dopamine-visual stagger-item">
+                <div class="dopamine-compare">
+                    <div class="dopa-bar-group">
+                        <div class="dopa-label">通常の報酬</div>
+                        <div class="dopa-bar-track">
+                            <div class="dopa-bar dopa-normal" style="--w:15%"></div>
+                        </div>
+                    </div>
+                    <div class="dopa-bar-group">
+                        <div class="dopa-label">依存性物質</div>
+                        <div class="dopa-bar-track">
+                            <div class="dopa-bar dopa-drug" style="--w:100%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-coral">2〜10</span><span class="num-unit">倍</span>
+            </div>
+            <div class="emphasis-sub stagger-item">100Vのコンセントに1000Vを流すようなもの</div>
+            <div class="footnote stagger-item">報酬系が「ハイジャック」される</div>
+        </div>
+    </div>
+
+    <!-- Scene 11: フロー図「耐性サイクル」 -->
+    <div class="scene" id="scene-11">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">第1の変化：耐性</h2>
+            <div class="tolerance-cycle stagger-item">
+                <svg viewBox="0 0 400 280" class="cycle-svg">
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#4f46e5" />
+                        </marker>
+                    </defs>
+                    <!-- Cycle nodes -->
+                    <rect x="120" y="10" width="160" height="50" rx="12" fill="#e0e7ff" stroke="#4f46e5"
+                        stroke-width="2" />
+                    <text x="200" y="40" text-anchor="middle" fill="#4f46e5" font-size="14"
+                        font-weight="700">大量のドーパミン</text>
+                    <path d="M 310 35 Q 360 35 360 100" fill="none" stroke="#4f46e5" stroke-width="2"
+                        marker-end="url(#arrowhead)" class="cycle-path p1" />
+                    <rect x="280" y="100" width="120" height="60" rx="12" fill="#fee2e2" stroke="#ef4444"
+                        stroke-width="2" />
+                    <text x="340" y="125" text-anchor="middle" fill="#ef4444" font-size="13"
+                        font-weight="700">D2受容体</text>
+                    <text x="340" y="145" text-anchor="middle" fill="#ef4444" font-size="13" font-weight="700">減少</text>
+                    <path d="M 340 160 Q 340 210 260 220" fill="none" stroke="#ef4444" stroke-width="2"
+                        marker-end="url(#arrowhead)" class="cycle-path p2" />
+                    <rect x="120" y="200" width="160" height="50" rx="12" fill="#fef3c7" stroke="#f59e0b"
+                        stroke-width="2" />
+                    <text x="200" y="230" text-anchor="middle" fill="#f59e0b" font-size="14"
+                        font-weight="700">もっと強い刺激を求める</text>
+                    <path d="M 120 225 Q 50 225 50 100 Q 50 35 120 35" fill="none" stroke="#f59e0b" stroke-width="2"
+                        marker-end="url(#arrowhead)" class="cycle-path p3" />
+                </svg>
+            </div>
+            <div class="emphasis-sub stagger-item">同じ量では同じ効果が得られなくなる悪循環</div>
+        </div>
+    </div>
+
+    <!-- Scene 12: 引用カード「ヴォルコウ」 -->
+    <div class="scene" id="scene-12">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">第2の変化：受容体の減少</h2>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">PETスキャンで依存症患者の脳を撮影すると<br><span class="accent-coral">D2受容体が明らかに減少</span>していた
+                </div>
+                <div class="quote-source">ノーラ・ヴォルコウ, NIDA所長 / NIH PET研究</div>
+            </div>
+            <div class="pet-visual stagger-item">
+                <div class="pet-brain pet-normal">
+                    <svg viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="50" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2" />
+                        <circle cx="40" cy="50" r="8" fill="#4f46e5" opacity="0.8" />
+                        <circle cx="60" cy="40" r="10" fill="#4f46e5" opacity="0.9" />
+                        <circle cx="80" cy="50" r="8" fill="#4f46e5" opacity="0.8" />
+                        <circle cx="50" cy="70" r="7" fill="#4f46e5" opacity="0.7" />
+                        <circle cx="70" cy="70" r="7" fill="#4f46e5" opacity="0.7" />
+                    </svg>
+                    <div class="pet-label">健常者</div>
+                </div>
+                <div class="pet-arrow">&rarr;</div>
+                <div class="pet-brain pet-addict">
+                    <svg viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="50" fill="#fee2e2" stroke="#ef4444" stroke-width="2" />
+                        <circle cx="40" cy="50" r="4" fill="#ef4444" opacity="0.4" />
+                        <circle cx="60" cy="40" r="5" fill="#ef4444" opacity="0.5" />
+                        <circle cx="80" cy="50" r="3" fill="#ef4444" opacity="0.3" />
+                        <circle cx="50" cy="70" r="3" fill="#ef4444" opacity="0.3" />
+                        <circle cx="70" cy="70" r="4" fill="#ef4444" opacity="0.4" />
+                    </svg>
+                    <div class="pet-label">依存症患者</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">ドーパミンの「受け皿」が減り、通常の快楽も感じにくくなる</div>
+        </div>
+    </div>
+
+    <!-- Scene 13: 比較対照「前頭前野」 -->
+    <div class="scene" id="scene-13">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">第3の変化：前頭前野の機能低下</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge safe-badge">健常者</div>
+                    <div class="vs-title">ブレーキ正常</div>
+                    <div class="prefrontal-bar-container">
+                        <div class="pf-bar pf-bar-normal" style="--w:90%"></div>
+                    </div>
+                    <div class="vs-desc">衝動を抑制できる<br>合理的な判断が可能</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge danger-badge">依存症患者</div>
+                    <div class="vs-title">ブレーキ故障</div>
+                    <div class="prefrontal-bar-container">
+                        <div class="pf-bar pf-bar-addict" style="--w:25%"></div>
+                    </div>
+                    <div class="vs-desc">衝動を抑制できない<br>前頭前野が萎縮</div>
+                </div>
+            </div>
+            <div class="source-badge stagger-item">AMED / 京都大学 MRI研究</div>
+        </div>
+    </div>
+
+    <!-- Scene 14: テキスト強調「ブレーキが壊れている」 -->
+    <div class="scene" id="scene-14">
+        <canvas id="canvas-14" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item"><span class="accent-coral">意志が弱い</span>のではない</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-primary">ブレーキが壊れている</span></div>
+            <div class="brake-visual stagger-item">
+                <div class="brake-item">
+                    <div class="brake-icon brake-accel">欲求</div>
+                    <div class="brake-bar-track">
+                        <div class="brake-bar brake-bar-full" style="--w:95%"></div>
+                    </div>
+                </div>
+                <div class="brake-item">
+                    <div class="brake-icon brake-brake">理性</div>
+                    <div class="brake-bar-track">
+                        <div class="brake-bar brake-bar-low" style="--w:15%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">アクセル全開 × ブレーキ故障 ＝ 物理的な脳の変化</div>
+        </div>
+    </div>
+
+    <!-- Scene 15: タイトルカード Block4 -->
+    <div class="scene" id="scene-15">
+        <canvas id="canvas-15" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral">WANTING vs LIKING</div>
+            <h2 class="title-medium">楽しくないのに<br><span class="accent-coral">やめられない</span></h2>
+        </div>
+    </div>
+
+    <!-- Scene 16: 比較対照「Wanting vs Liking」 -->
+    <div class="scene" id="scene-16">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">脳の2つのシステム</h2>
+            <div class="source-badge stagger-item">Robinson & Berridge (1993) ミシガン大学</div>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge" style="background:#f59e0b;color:#fff">欲求</div>
+                    <div class="vs-title">Wanting</div>
+                    <div class="vs-desc">「欲しい」「渇望」<br>ドーパミン系が担当</div>
+                    <div class="vs-detail">衝動・動機づけ</div>
+                </div>
+                <div class="vs-divider stagger-item">≠</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge" style="background:#14b8a6;color:#fff">快楽</div>
+                    <div class="vs-title">Liking</div>
+                    <div class="vs-desc">「楽しい」「心地よい」<br>オピオイド系が担当</div>
+                    <div class="vs-detail">実際の快感体験</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">SNSを延々スクロール＝Wantingだけが動いている状態</div>
+        </div>
+    </div>
+
+    <!-- Scene 17: 段階的リスト「依存の3段階」 -->
+    <div class="scene" id="scene-17">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">依存の3段階</h2>
+            <div class="addiction-stages stagger-item">
+                <div class="stage-card stage-1">
+                    <div class="stage-num">1</div>
+                    <div class="stage-name">ハマる</div>
+                    <div class="stage-bars">
+                        <div class="stage-bar-row"><span class="stage-bar-label">Wanting</span>
+                            <div class="stage-bar-track">
+                                <div class="stage-bar stage-bar-w" style="--w:70%"></div>
+                            </div>
+                        </div>
+                        <div class="stage-bar-row"><span class="stage-bar-label">Liking</span>
+                            <div class="stage-bar-track">
+                                <div class="stage-bar stage-bar-l" style="--w:70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stage-desc">純粋な快楽期</div>
+                </div>
+                <div class="stage-arrow">&rarr;</div>
+                <div class="stage-card stage-2">
+                    <div class="stage-num">2</div>
+                    <div class="stage-name">慣れる</div>
+                    <div class="stage-bars">
+                        <div class="stage-bar-row"><span class="stage-bar-label">Wanting</span>
+                            <div class="stage-bar-track">
+                                <div class="stage-bar stage-bar-w" style="--w:80%"></div>
+                            </div>
+                        </div>
+                        <div class="stage-bar-row"><span class="stage-bar-label">Liking</span>
+                            <div class="stage-bar-track">
+                                <div class="stage-bar stage-bar-l" style="--w:40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stage-desc">耐性でLiking↓</div>
+                </div>
+                <div class="stage-arrow">&rarr;</div>
+                <div class="stage-card stage-3">
+                    <div class="stage-num">3</div>
+                    <div class="stage-name">囚われる</div>
+                    <div class="stage-bars">
+                        <div class="stage-bar-row"><span class="stage-bar-label">Wanting</span>
+                            <div class="stage-bar-track">
+                                <div class="stage-bar stage-bar-w" style="--w:95%"></div>
+                            </div>
+                        </div>
+                        <div class="stage-bar-row"><span class="stage-bar-label">Liking</span>
+                            <div class="stage-bar-track">
+                                <div class="stage-bar stage-bar-l" style="--w:10%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stage-desc">Wanting暴走</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">インセンティブ感作：Wantingを担当する回路がどんどん敏感になる</div>
+        </div>
+    </div>
+
+    <!-- Scene 18: 注意喚起「Wanting↑ Liking↓」 -->
+    <div class="scene" id="scene-18">
+        <div class="content center-layout">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">インセンティブ<span class="accent-coral">感作</span></div>
+                <div class="alert-sub">繰り返し使用 → Wanting回路が過敏に</div>
+            </div>
+            <div class="sensitization-visual stagger-item">
+                <div class="sens-row">
+                    <span class="sens-label">Wanting</span>
+                    <div class="sens-bar-track">
+                        <div class="sens-bar sens-bar-up" style="--w:95%"></div>
+                    </div>
+                    <span class="sens-arrow-up">↑↑</span>
+                </div>
+                <div class="sens-row">
+                    <span class="sens-label">Liking</span>
+                    <div class="sens-bar-track">
+                        <div class="sens-bar sens-bar-down" style="--w:15%"></div>
+                    </div>
+                    <span class="sens-arrow-down">↓↓</span>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">楽しくないのに、もっと欲しくなる</div>
+        </div>
+    </div>
+
+    <!-- Scene 19: テキスト強調「WantingがLikingを追い越す」 -->
+    <div class="scene" id="scene-19">
+        <canvas id="canvas-19" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">依存症の正体</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-coral">Wanting</span>が<span
+                    class="accent-teal">Liking</span>を追い越す</div>
+            <div class="emphasis-sub stagger-item">本人も楽しくないと分かっている。やめたいとも思っている。</div>
+            <div class="emphasis-sub stagger-item">でもWantingが「もっと、もっと」と叫び続ける。</div>
+        </div>
+    </div>
+
+    <!-- Scene 20: タイトルカード Block5 -->
+    <div class="scene" id="scene-20">
+        <canvas id="canvas-20" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-teal">RECOVERY</div>
+            <h2 class="title-medium">環境が脳を変える<br><span class="accent-teal">回復の希望</span></h2>
+        </div>
+    </div>
+
+    <!-- Scene 21: 数値インパクト「ベトナム帰還兵95%」 -->
+    <div class="scene" id="scene-21">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">ベトナム帰還兵のヘロイン</h2>
+            <div class="source-badge stagger-item">Lee Robins (1993) / 追跡調査</div>
+            <div class="vietnam-visual stagger-item">
+                <div class="vietnam-stat">
+                    <div class="vietnam-label">米国内の再発率</div>
+                    <div class="vietnam-num accent-coral">90%<span class="vietnam-unit">以上</span></div>
+                </div>
+                <div class="vietnam-vs">vs</div>
+                <div class="vietnam-stat">
+                    <div class="vietnam-label">帰還兵の再使用率</div>
+                    <div class="vietnam-num accent-teal">5%</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">環境が変わったことで依存から回復できた</div>
+        </div>
+    </div>
+
+    <!-- Scene 22: 引用カード「ウッド教授」 -->
+    <div class="scene" id="scene-22">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">環境の力</h2>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">依存の悪習慣を<span
+                        class="accent-primary">「学んだ環境」</span>から<br>全く異なる環境に移動した。<br>薬物と結びついた<span
+                        class="accent-coral">「手がかり」</span>が消えた。</div>
+                <div class="quote-source">ウェンデイ・ウッド, 南カリフォルニア大学教授</div>
+            </div>
+            <div class="env-visual stagger-item">
+                <div class="env-card env-war">
+                    <div class="env-icon">戦場</div>
+                    <div class="env-desc">ストレス × 薬物<br>仲間の使用</div>
+                </div>
+                <div class="env-arrow">&rarr;</div>
+                <div class="env-card env-home">
+                    <div class="env-icon">帰国</div>
+                    <div class="env-desc">家族 × 日常<br>手がかりゼロ</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 23: 数値インパクト「自然回復54%」 -->
+    <div class="scene" id="scene-23">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">回復は可能</h2>
+            <div class="source-badge stagger-item">Recovery Research Institute (2024) / 大規模調査</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-teal">54</span><span class="num-unit">%</span>
+            </div>
+            <div class="emphasis-sub stagger-item">正式な治療を受けずに依存症から回復した人の割合</div>
+            <div class="recovery-note stagger-item">
+                <div class="recovery-item">環境の変化</div>
+                <div class="recovery-item">人間関係の再構築</div>
+                <div class="recovery-item">自助グループ</div>
+            </div>
+            <div class="footnote stagger-item">治療は重要。しかし回復への道は一つではない</div>
+        </div>
+    </div>
+
+    <!-- Scene 24: 引用カード「マーク・ルイス」 -->
+    <div class="scene" id="scene-24">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">学習モデル</h2>
+            <div class="quote-card quote-warm stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">依存症は<span class="accent-amber">「深い学習」</span>の結果であり<br>新しい学習で<span
+                        class="accent-teal">上書きできる</span></div>
+                <div class="quote-source">マーク・ルイス, 神経科学者 / "The Biology of Desire" (2015)</div>
+            </div>
+            <div class="learning-visual stagger-item">
+                <div class="learn-card learn-old">
+                    <div class="learn-label">依存の学習</div>
+                    <div class="learn-desc">悪い方向に使われた<br>脳の正常な適応</div>
+                </div>
+                <div class="learn-arrow">&rarr;</div>
+                <div class="learn-card learn-new">
+                    <div class="learn-label">回復の学習</div>
+                    <div class="learn-desc">新しい経験で<br>脳を書き換える</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">脳は常に変化し続ける臓器──変わったら終わりではない</div>
+        </div>
+    </div>
+
+    <!-- Scene 25: テキスト強調「脳は変わるが変えられる」 -->
+    <div class="scene" id="scene-25">
+        <canvas id="canvas-25" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">脳は<span class="accent-coral">変わる</span></div>
+            <div class="emphasis-text-large stagger-item">でも<span class="accent-teal">変えることもできる</span></div>
+            <div class="emphasis-sub stagger-item">環境を変え、人とのつながりを作り、新しい体験を重ねる</div>
+        </div>
+    </div>
+
+    <!-- Scene 26: まとめカード -->
+    <div class="scene" id="scene-26">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">今日わかった3つのこと</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle nc-primary">1</div>
+                    <div class="numbered-text">報酬系がハイジャック → D2受容体減少 → <span class="accent-coral">前頭前野が萎縮</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle nc-amber">2</div>
+                    <div class="numbered-text">Wantingが暴走し<span class="accent-coral">楽しくないのにやめられない</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle nc-teal">3</div>
+                    <div class="numbered-text">環境と学習で<span class="accent-teal">脳は変えることができる</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 27: 段階的リスト「私たちにできること」 -->
+    <div class="scene" id="scene-27">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">私たちにできること</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle nc-primary">1</div>
+                    <div class="numbered-text"><span class="accent-primary">「自業自得」と決めつけない</span><br><span
+                            class="text-sub">依存症は脳の変化であって人格の問題ではない</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle nc-teal">2</div>
+                    <div class="numbered-text"><span class="accent-teal">孤立させない</span><br><span
+                            class="text-sub">環境とつながりが回復の鍵</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle nc-amber">3</div>
+                    <div class="numbered-text"><span class="accent-amber">自分のWantingに気づく</span><br><span
+                            class="text-sub">「本当に楽しい？」と問いかける</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 28: テキスト強調「骨折フック回収」 -->
+    <div class="scene" id="scene-28">
+        <canvas id="canvas-28" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">骨折の仕組みを知っているから</div>
+            <div class="emphasis-text stagger-item">「気合で歩け」とは言わない</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-primary">依存症も同じ</span></div>
+            <div class="emphasis-sub stagger-item">仕組みを知れば「意志が弱い」なんて言葉は出てこない</div>
+        </div>
+    </div>
+
+    <!-- Scene 29: テキスト強調「最後のメッセージ」 -->
+    <div class="scene" id="scene-29">
+        <canvas id="canvas-29" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">理解することが</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-primary">いちばん大きな最初の一歩</span></div>
+            <div class="emphasis-sub stagger-item">その理解が、304万人のうちの誰かを救うかもしれない</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

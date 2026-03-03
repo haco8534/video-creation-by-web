@@ -1,0 +1,122 @@
+[
+    {
+        "surface": "CYP450",
+        "pronunciation": "シーワイピーヨンヒャクゴジュウ",
+        "accent_type": 1
+    },
+    {
+        "surface": "CYP",
+        "pronunciation": "シーワイピー",
+        "accent_type": 1
+    },
+    {
+        "surface": "detoxification",
+        "pronunciation": "ディトキシフィケーション",
+        "accent_type": 5
+    },
+    {
+        "surface": "detox",
+        "pronunciation": "ディトックス",
+        "accent_type": 3
+    },
+    {
+        "surface": "FTC",
+        "pronunciation": "エフティーシー",
+        "accent_type": 1
+    },
+    {
+        "surface": "NHS",
+        "pronunciation": "エヌエイチエス",
+        "accent_type": 1
+    },
+    {
+        "surface": "BDA",
+        "pronunciation": "ビーディーエー",
+        "accent_type": 1
+    },
+    {
+        "surface": "NPR",
+        "pronunciation": "エヌピーアール",
+        "accent_type": 1
+    },
+    {
+        "surface": "FDA",
+        "pronunciation": "エフディーエー",
+        "accent_type": 1
+    },
+    {
+        "surface": "NIH",
+        "pronunciation": "エヌアイエイチ",
+        "accent_type": 1
+    },
+    {
+        "surface": "Kinoki",
+        "pronunciation": "キノキ",
+        "accent_type": 1
+    },
+    {
+        "surface": "TikTok",
+        "pronunciation": "ティックトック",
+        "accent_type": 3
+    },
+    {
+        "surface": "Phase I",
+        "pronunciation": "フェーズワン",
+        "accent_type": 3
+    },
+    {
+        "surface": "Phase II",
+        "pronunciation": "フェーズツー",
+        "accent_type": 3
+    },
+    {
+        "surface": "vs",
+        "pronunciation": "バーサス",
+        "accent_type": 1
+    },
+    {
+        "surface": "RCT",
+        "pronunciation": "アールシーティー",
+        "accent_type": 1
+    },
+    {
+        "surface": "グルタチオン",
+        "pronunciation": "グルタチオン",
+        "accent_type": 4
+    },
+    {
+        "surface": "ブシャール",
+        "pronunciation": "ブシャール",
+        "accent_type": 3
+    },
+    {
+        "surface": "チトクローム",
+        "pronunciation": "チトクローム",
+        "accent_type": 4
+    },
+    {
+        "surface": "抱合反応",
+        "pronunciation": "ホウゴウハンノウ",
+        "accent_type": 5
+    },
+    {
+        "surface": "自家中毒説",
+        "pronunciation": "ジカチュウドクセツ",
+        "accent_type": 5
+    },
+    {
+        "surface": "腸内細菌叢",
+        "pronunciation": "チョウナイサイキンソウ",
+        "accent_type": 7
+    },
+    {
+        "surface": "低ナトリウム血症",
+        "pronunciation": "テイナトリウムケッショウ",
+        "accent_type": 7
+    },
+    {
+        "surface": "P450",
+        "pronunciation": "ピーヨンヒャクゴジュウ",
+        "accent_type": 1
+    }
+]

@@ -1,0 +1,1841 @@
+/* ============================================================
+   ROOT TOKENS
+   ============================================================ */
+:root {
+    --bg: #f8f9fa;
+    --text: #1a1a2e;
+    --text-light: #6c757d;
+    --primary: #4f46e5;
+    --primary-light: #e0e7ff;
+    --teal: #14b8a6;
+    --teal-light: #ccfbf1;
+    --coral: #ef4444;
+    --coral-light: #fee2e2;
+    --amber: #f59e0b;
+    --amber-light: #fef3c7;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.1);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+/* ============================================================
+   SCENE BASE
+   ============================================================ */
+.scene {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    background: var(--bg);
+}
+
+.scene.active {
+    opacity: 1;
+    pointer-events: auto;
+    animation: sceneFadeIn 0.5s ease;
+}
+
+/* ============================================================
+   DARK SCENE
+   ============================================================ */
+.dark-scene {
+    background: #0f172a;
+}
+
+.dark-scene .scene-title {
+    color: #e2e8f0;
+}
+
+.light-text {
+    color: #e2e8f0 !important;
+}
+
+/* ============================================================
+   CANVAS BACKGROUND
+   ============================================================ */
+.bg-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ============================================================
+   CONTENT LAYOUTS
+   ============================================================ */
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 85%;
+    width: 100%;
+}
+
+.center-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.card-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+.title-huge {
+    font-size: 54px;
+    font-weight: 900;
+    line-height: 1.3;
+    letter-spacing: -1px;
+}
+
+.title-medium {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+}
+
+.title-sub {
+    font-size: 20px;
+    color: var(--text-light);
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+.scene-title {
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+.emphasis-text {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.emphasis-text-large {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+.emphasis-sub {
+    font-size: 18px;
+    color: var(--text-light);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.footnote {
+    font-size: 14px;
+    color: #9ca3af;
+    margin-top: 8px;
+}
+
+.text-sub {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+.comparison-note {
+    font-size: 16px;
+    color: var(--text-light);
+    background: var(--primary-light);
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    margin-top: 8px;
+}
+
+/* ============================================================
+   ACCENT COLORS
+   ============================================================ */
+.accent-primary {
+    color: var(--primary);
+}
+
+.accent-coral {
+    color: var(--coral);
+}
+
+.accent-teal {
+    color: var(--teal);
+}
+
+.accent-amber {
+    color: var(--amber);
+}
+
+/* ============================================================
+   ACCENT BACKGROUNDS
+   ============================================================ */
+.accent-bg-primary {
+    background: var(--primary);
+    color: #fff;
+}
+
+.accent-bg-coral {
+    background: var(--coral);
+    color: #fff;
+}
+
+.accent-bg-teal {
+    background: var(--teal);
+    color: #fff;
+}
+
+.accent-bg-amber {
+    background: var(--amber);
+    color: #fff;
+}
+
+/* ============================================================
+   BADGES
+   ============================================================ */
+.section-badge {
+    display: inline-block;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.source-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: #f1f5f9;
+    border-radius: 20px;
+    font-size: 13px;
+    color: var(--text-light);
+    border: 1px solid #e2e8f0;
+}
+
+.dark-scene .source-badge {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #94a3b8;
+}
+
+/* ============================================================
+   NUMBERED LIST
+   ============================================================ */
+.numbered-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.numbered-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: var(--card-bg);
+    padding: 20px 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: left;
+}
+
+.number-circle {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 900;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numbered-text {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* Step-specific colors */
+.step-1 {
+    background: var(--coral);
+}
+
+.step-2 {
+    background: var(--amber);
+}
+
+.step-3 {
+    background: var(--primary);
+}
+
+/* Summary-specific */
+.summary-num {
+    background: var(--teal);
+}
+
+.summary-list .numbered-item {
+    border-left: 4px solid var(--teal);
+}
+
+/* ============================================================
+   IMPACT NUMBER
+   ============================================================ */
+.impact-number {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.big-num {
+    font-size: 96px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.num-unit {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+/* ============================================================
+   VS CONTAINER
+   ============================================================ */
+.vs-container {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.vs-card {
+    flex: 1;
+    background: var(--card-bg);
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.vs-left {
+    border-top: 4px solid var(--teal);
+}
+
+.vs-right {
+    border-top: 4px solid var(--coral);
+}
+
+.vs-badge {
+    padding: 4px 14px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.safe-badge {
+    background: var(--teal-light);
+    color: var(--teal);
+}
+
+.danger-badge {
+    background: var(--coral-light);
+    color: var(--coral);
+}
+
+.vs-title {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.vs-desc {
+    font-size: 15px;
+    color: var(--text-light);
+}
+
+.vs-examples {
+    font-size: 13px;
+    color: #9ca3af;
+    margin-top: 4px;
+}
+
+.vs-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--text-light);
+    min-width: 40px;
+}
+
+.vs-detail {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 4px 0;
+}
+
+/* ============================================================
+   QUOTE CARD
+   ============================================================ */
+.quote-card {
+    background: var(--card-bg);
+    padding: 24px 28px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--primary);
+    text-align: left;
+    max-width: 600px;
+    width: 100%;
+}
+
+.quote-card.quote-warning {
+    border-left-color: var(--coral);
+}
+
+.quote-card.quote-warm {
+    border-left-color: var(--amber);
+}
+
+.quote-mark {
+    font-size: 48px;
+    color: var(--primary);
+    line-height: 0.8;
+    font-weight: 900;
+}
+
+.quote-text {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 8px 0;
+}
+
+.quote-source {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+/* ============================================================
+   ALERT CARD
+   ============================================================ */
+.alert-card {
+    background: var(--card-bg);
+    padding: 20px 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--coral);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+}
+
+.alert-icon {
+    min-width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--coral);
+    color: #fff;
+    font-weight: 900;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alert-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.alert-sub {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+/* ============================================================
+   FLOW CHAIN
+   ============================================================ */
+.flow-chain {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flow-node {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    min-width: 180px;
+    text-align: center;
+}
+
+.dark-node {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.dark-node .flow-text {
+    color: #e2e8f0;
+}
+
+.flow-year {
+    font-size: 14px;
+    font-weight: 900;
+    color: var(--amber);
+    margin-bottom: 8px;
+}
+
+.flow-text {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.flow-name {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.dark-node .flow-name {
+    color: var(--amber);
+}
+
+.flow-sub {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+.flow-arrow {
+    font-size: 28px;
+    color: var(--text-light);
+    font-weight: 300;
+}
+
+.dark-scene .flow-arrow {
+    color: #64748b;
+}
+
+.highlight-node {
+    border: 2px solid var(--amber);
+    animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* ============================================================
+   TRIPLE CARD
+   ============================================================ */
+.triple-card {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    justify-content: center;
+}
+
+.dual-card {
+    max-width: 600px;
+}
+
+.factor-card {
+    flex: 1;
+    background: var(--card-bg);
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.factor-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.factor-name {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.factor-desc {
+    font-size: 15px;
+}
+
+.factor-detail {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+/* ============================================================
+   TAG CLOUD
+   ============================================================ */
+.tag-cloud {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.tag-item {
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.tag-teal {
+    background: var(--teal-light);
+    color: var(--teal);
+}
+
+.tag-primary {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.tag-amber {
+    background: var(--amber-light);
+    color: var(--amber);
+}
+
+.tag-coral {
+    background: var(--coral-light);
+    color: var(--coral);
+}
+
+/* ============================================================
+   STAGGER ANIMATION
+   ============================================================ */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity var(--transition), transform var(--transition);
+}
+
+.scene.active .stagger-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scene.active .stagger-item:nth-child(1) {
+    transition-delay: 0.0s;
+}
+
+.scene.active .stagger-item:nth-child(2) {
+    transition-delay: 0.12s;
+}
+
+.scene.active .stagger-item:nth-child(3) {
+    transition-delay: 0.24s;
+}
+
+.scene.active .stagger-item:nth-child(4) {
+    transition-delay: 0.36s;
+}
+
+.scene.active .stagger-item:nth-child(5) {
+    transition-delay: 0.48s;
+}
+
+.scene.active .stagger-item:nth-child(6) {
+    transition-delay: 0.60s;
+}
+
+.scene.active .stagger-item:nth-child(7) {
+    transition-delay: 0.72s;
+}
+
+.scene.active .stagger-item:nth-child(8) {
+    transition-delay: 0.84s;
+}
+
+/* ============================================================
+   KEYFRAMES (REQUIRED 8+)
+   ============================================================ */
+@keyframes sceneFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes cardSlideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes numberPop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes barFill {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--w);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 20px 8px rgba(245, 158, 11, 0.15);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+    70% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes titleReveal {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes drawLine {
+    from {
+        stroke-dashoffset: 200;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes dotPulse {
+
+    0%,
+    100% {
+        opacity: 0.4;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+@keyframes shuttleMove {
+    0% {
+        transform: translateX(0);
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(80px);
+        opacity: 0.3;
+    }
+}
+
+@keyframes crackAppear {
+    from {
+        stroke-dashoffset: 80;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* ============================================================
+   ANIMATION APPLICATIONS
+   ============================================================ */
+.scene.active .numbered-item {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .numbered-item:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .numbered-item:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .numbered-item:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.scene.active .impact-number {
+    animation: numberPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+.scene.active .vs-card {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .vs-left {
+    animation-delay: 0.3s;
+}
+
+.scene.active .vs-right {
+    animation-delay: 0.6s;
+}
+
+.scene.active .vs-divider {
+    animation: bounceIn 0.6s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.scene.active .factor-card {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .factor-card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .factor-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .factor-card:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.scene.active .flow-node {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .flow-node:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .flow-node:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .flow-node:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.scene.active .flow-arrow {
+    animation: bounceIn 0.6s ease-out forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+.scene.active .quote-card {
+    animation: cardSlideUp 0.6s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+.scene.active .alert-card {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+.scene.active .tag-item {
+    animation: cardSlideUp 0.4s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .tag-item:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .tag-item:nth-child(2) {
+    animation-delay: 0.35s;
+}
+
+.scene.active .tag-item:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .tag-item:nth-child(4) {
+    animation-delay: 0.65s;
+}
+
+.scene.active .title-huge,
+.scene.active .title-medium {
+    animation: titleReveal 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+.scene.active .highlight-node {
+    animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* ============================================================
+   CUSTOM VISUAL: EXPERIMENT (SCENE 5)
+   ============================================================ */
+.experiment-visual {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    margin: 12px 0;
+}
+
+.exp-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background: var(--card-bg);
+    padding: 16px 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.exp-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exp-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.exp-arrow {
+    font-size: 28px;
+    color: var(--text-light);
+}
+
+/* ============================================================
+   CUSTOM VISUAL: MECHANISM FLOW (SCENE 9)
+   ============================================================ */
+.mechanism-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.mech-node {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--card-bg);
+    padding: 14px 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    min-width: 280px;
+}
+
+.mech-label {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.mech-arrow {
+    font-size: 24px;
+    color: var(--text-light);
+}
+
+.mech-nerve {
+    border: 2px solid var(--coral);
+}
+
+.crack-line {
+    stroke-dasharray: 80;
+    stroke-dashoffset: 80;
+}
+
+.scene.active .crack-line {
+    animation: crackAppear 1s ease forwards 0.5s;
+}
+
+.nerve-path {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+}
+
+.scene.active .nerve-path {
+    animation: drawLine 1.5s ease forwards 0.8s;
+}
+
+.pulse-dot {
+    animation: dotPulse 1.5s ease-in-out infinite;
+}
+
+/* ============================================================
+   CUSTOM VISUAL: SENSITIZATION (SCENE 10)
+   ============================================================ */
+.sensitization-visual {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.nerve-card {
+    background: var(--card-bg);
+    padding: 20px 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    min-width: 200px;
+    text-align: center;
+}
+
+.nerve-title {
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.nerve-bar-container {
+    height: 24px;
+    background: #f1f5f9;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 8px 0;
+}
+
+.nerve-bar {
+    height: 100%;
+    border-radius: 12px;
+    background: var(--teal);
+    width: 0;
+    transition: width 1.2s ease;
+}
+
+.nerve-bar-high {
+    background: var(--coral);
+}
+
+.scene.active .nerve-bar {
+    width: var(--w);
+}
+
+.nerve-desc {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-top: 8px;
+}
+
+.sensitize-arrow {
+    font-size: 28px;
+    color: var(--text-light);
+}
+
+.sensitized-state {
+    border: 2px solid var(--coral);
+}
+
+/* ============================================================
+   CUSTOM VISUAL: ECCENTRIC/CONCENTRIC SVG (SCENE 11)
+   ============================================================ */
+.eccentric-visual,
+.concentric-visual {
+    display: flex;
+    justify-content: center;
+    padding: 8px 0;
+}
+
+/* ============================================================
+   CUSTOM VISUAL: TIMELINE BAR (SCENE 12)
+   ============================================================ */
+.timeline-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.tl-segment {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    border-radius: var(--radius-sm);
+}
+
+.tl-lactate {
+    background: var(--teal-light);
+    border-left: 4px solid var(--teal);
+    width: 25%;
+}
+
+.tl-doms {
+    background: var(--coral-light);
+    border-left: 4px solid var(--coral);
+    width: 85%;
+}
+
+.tl-label {
+    font-weight: 900;
+    font-size: 14px;
+    min-width: 50px;
+}
+
+.tl-duration {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.tl-axis {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    font-size: 12px;
+    color: #9ca3af;
+    padding: 0 4px;
+}
+
+/* ============================================================
+   CUSTOM VISUAL: PARADOX BARS (SCENE 15)
+   ============================================================ */
+.paradox-visual {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    flex-direction: column;
+}
+
+.paradox-card {
+    background: var(--card-bg);
+    padding: 16px 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.paradox-label {
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.paradox-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 6px 0;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.paradox-bar-track {
+    flex: 1;
+    height: 16px;
+    background: #f1f5f9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.paradox-bar {
+    height: 100%;
+    border-radius: 8px;
+    width: 0;
+    transition: width 1.2s ease;
+}
+
+.paradox-high {
+    background: var(--teal);
+}
+
+.paradox-low {
+    background: #d1d5db;
+}
+
+.paradox-high-pain {
+    background: var(--coral);
+}
+
+.scene.active .paradox-bar {
+    width: var(--w);
+}
+
+/* ============================================================
+   CUSTOM VISUAL: pH SCALE (SCENE 17)
+   ============================================================ */
+.h-ion-visual {
+    width: 100%;
+    max-width: 500px;
+    margin: 8px 0;
+}
+
+.ph-scale {
+    position: relative;
+}
+
+.ph-bar {
+    height: 20px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #ef4444, #f59e0b, #14b8a6);
+    position: relative;
+}
+
+.ph-indicator {
+    position: absolute;
+    top: -8px;
+    left: var(--pos);
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ph-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #1a1a2e;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ph-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--coral);
+    margin-top: 4px;
+}
+
+.ph-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 6px;
+}
+
+/* ============================================================
+   CUSTOM VISUAL: DISCOVERY CARD (SCENE 19)
+   ============================================================ */
+.discovery-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.disc-before,
+.disc-after {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    min-width: 200px;
+    text-align: center;
+}
+
+.disc-before {
+    border-top: 4px solid var(--coral);
+}
+
+.disc-after {
+    border-top: 4px solid var(--teal);
+}
+
+.disc-label {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.disc-text {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.disc-arrow {
+    font-size: 28px;
+    color: var(--text-light);
+}
+
+/* ============================================================
+   CUSTOM VISUAL: LACTATE SHUTTLE (SCENE 20)
+   ============================================================ */
+.shuttle-visual {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+.shuttle-source {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.shuttle-label {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.shuttle-path {
+    flex: 1;
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shuttle-path::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--coral), var(--teal));
+    border-radius: 2px;
+}
+
+.shuttle-path-label {
+    position: relative;
+    z-index: 1;
+    font-size: 12px;
+    color: var(--text-light);
+    background: var(--bg);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.shuttle-molecule {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--amber);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.shuttle-m1 {
+    left: 10%;
+    animation: shuttleMove 3s ease-in-out infinite;
+}
+
+.shuttle-m2 {
+    left: 30%;
+    animation: shuttleMove 3s ease-in-out infinite 0.8s;
+}
+
+.shuttle-m3 {
+    left: 50%;
+    animation: shuttleMove 3s ease-in-out infinite 1.6s;
+}
+
+.shuttle-targets {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.shuttle-target {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.target-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.target-heart {
+    background: var(--coral-light);
+}
+
+.target-brain {
+    background: var(--primary-light);
+}
+
+.target-liver {
+    background: var(--teal-light);
+}
+
+.target-name {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* ============================================================
+   CUSTOM VISUAL: BRAIN SHUTTLE (SCENE 22)
+   ============================================================ */
+.brain-shuttle-visual {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: center;
+    margin: 16px 0;
+}
+
+.brain-cell {
+    background: var(--card-bg);
+    padding: 24px 32px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    min-width: 160px;
+}
+
+.astrocyte {
+    border-top: 4px solid var(--primary);
+}
+
+.neuron {
+    border-top: 4px solid var(--teal);
+}
+
+.cell-label {
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.cell-desc {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.brain-arrow {
+    font-size: 32px;
+    color: var(--amber);
+    font-weight: 900;
+}
+
+/* ============================================================
+   CUSTOM VISUAL: MYTH CARDS (SCENE 24)
+   ============================================================ */
+.myth-card {
+    border-top: 4px solid var(--coral);
+}
+
+/* ============================================================
+   CUSTOM VISUAL: RBE BARS (SCENE 26)
+   ============================================================ */
+.rbe-visual {
+    width: 100%;
+    max-width: 500px;
+    margin: 12px 0;
+}
+
+.rbe-bar-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.rbe-bar-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.rbe-label {
+    min-width: 60px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: right;
+}
+
+.rbe-bar-track {
+    flex: 1;
+    height: 28px;
+    background: #f1f5f9;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.rbe-bar {
+    height: 100%;
+    border-radius: 14px;
+    width: 0;
+    transition: width 1.5s ease;
+}
+
+.rbe-first {
+    background: var(--coral);
+}
+
+.rbe-second {
+    background: var(--amber);
+}
+
+.rbe-third {
+    background: var(--teal);
+}
+
+.scene.active .rbe-bar {
+    width: var(--w);
+}
+
+/* ============================================================
+   RUN VISUAL SVG (SCENE 14)
+   ============================================================ */
+.run-visual {
+    display: flex;
+    justify-content: center;
+    padding: 8px 0;
+}
+
+/* ============================================================
+   FACTOR CARD ICONS SPECIFIC STYLES
+   ============================================================ */
+.factor-heart {
+    border-top: 3px solid var(--coral);
+}
+
+.factor-brain {
+    border-top: 3px solid var(--primary);
+}
+
+.factor-liver {
+    border-top: 3px solid var(--teal);
+}
+
+/* ============================================================
+   MICRO-ANIMATION ENHANCEMENTS
+   ============================================================ */
+.scene.active .exp-step {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .exp-step:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .exp-step:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .exp-step:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.scene.active .mech-node {
+    animation: cardSlideUp 0.4s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .mech-node:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .mech-node:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .mech-node:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.scene.active .mech-node:nth-child(7) {
+    animation-delay: 1.1s;
+}
+
+.scene.active .mech-arrow {
+    animation: bounceIn 0.4s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .mech-arrow:nth-child(2) {
+    animation-delay: 0.35s;
+}
+
+.scene.active .mech-arrow:nth-child(4) {
+    animation-delay: 0.65s;
+}
+
+.scene.active .mech-arrow:nth-child(6) {
+    animation-delay: 0.95s;
+}
+
+.scene.active .paradox-card {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .paradox-card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .paradox-card:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.scene.active .shuttle-target {
+    animation: cardSlideUp 0.4s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .shuttle-target:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .shuttle-target:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.scene.active .shuttle-target:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.scene.active .nerve-card {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .nerve-card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .nerve-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.scene.active .brain-cell {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .brain-cell:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .brain-cell:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.scene.active .brain-arrow {
+    animation: bounceIn 0.6s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.scene.active .disc-before,
+.scene.active .disc-after {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .disc-before {
+    animation-delay: 0.3s;
+}
+
+.scene.active .disc-after {
+    animation-delay: 0.6s;
+}
+
+.scene.active .disc-arrow {
+    animation: bounceIn 0.6s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.scene.active .rbe-bar-item {
+    animation: cardSlideUp 0.4s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .rbe-bar-item:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .rbe-bar-item:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .rbe-bar-item:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.scene.active .section-badge {
+    animation: bounceIn 0.5s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.1s;
+}
+
+/* Summary items special animation */
+.scene.active .summary-item-1 {
+    animation-delay: 0.3s;
+}
+
+.scene.active .summary-item-2 {
+    animation-delay: 0.6s;
+}
+
+.scene.active .summary-item-3 {
+    animation-delay: 0.9s;
+}
+
+/* ============================================================
+   RESPONSIVE ADJUSTMENTS (minimal)
+   ============================================================ */
+@media (max-width: 900px) {
+    .title-huge {
+        font-size: 36px;
+    }
+
+    .title-medium {
+        font-size: 32px;
+    }
+
+    .emphasis-text-large {
+        font-size: 36px;
+    }
+
+    .big-num {
+        font-size: 72px;
+    }
+
+    .vs-container {
+        flex-direction: column;
+    }
+
+    .triple-card {
+        flex-direction: column;
+    }
+
+    .flow-chain {
+        flex-direction: column;
+    }
+
+    .shuttle-visual {
+        flex-direction: column;
+    }
+}

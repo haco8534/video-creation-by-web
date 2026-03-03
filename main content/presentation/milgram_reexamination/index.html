@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920,height=1080,initial-scale=1">
+    <title>ミルグラム実験の再検証</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- SCENE 0: タイトル -->
+    <section class="scene active" data-scene="0">
+        <div class="content-area title-scene">
+            <div class="title-badge">SOCIAL PSYCHOLOGY</div>
+            <h1 class="title-main fade-in">世界一有名な心理実験は、<br><span class="accent-coral">嘘</span>だったのか？</h1>
+            <div class="title-sub slide-up">ミルグラム実験の再検証</div>
+            <div class="title-year bounce-in">1961 → 2013</div>
+            <svg class="shock-bolt-svg" viewBox="0 0 100 180" width="80" height="140">
+                <path d="M55 0 L30 70 L50 70 L20 180 L75 90 L52 90 L80 0 Z" fill="none" stroke="var(--accent-amber)"
+                    stroke-width="3" class="draw-line" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- SCENE 1: 教科書の"65%" -->
+    <section class="scene" data-scene="1">
+        <div class="content-area">
+            <div class="section-badge">INTRODUCTION</div>
+            <h2 class="scene-heading fade-in">教科書に載っている<span class="accent-coral">"65%"</span></h2>
+            <div class="impact-number pop-in" data-stagger="1">65<span class="impact-unit">%</span></div>
+            <p class="impact-label slide-up" data-stagger="2">被験者が最大450Vまで従った</p>
+            <div class="fact-badge slide-up" data-stagger="3">
+                <span class="fact-icon">📖</span> 心理学の教科書に必ず登場する数字
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 2: この動画でわかること -->
+    <section class="scene" data-scene="2">
+        <div class="content-area">
+            <div class="section-badge">OVERVIEW</div>
+            <h2 class="scene-heading fade-in">この動画でわかること</h2>
+            <div class="numbered-list">
+                <div class="numbered-item slide-up" data-stagger="1">
+                    <span class="num-circle">1</span>
+                    <span>ミルグラム実験の正確な中身</span>
+                </div>
+                <div class="numbered-item slide-up" data-stagger="2">
+                    <span class="num-circle">2</span>
+                    <span>再検証で見つかった衝撃の事実</span>
+                </div>
+                <div class="numbered-item slide-up" data-stagger="3">
+                    <span class="num-circle">3</span>
+                    <span>この実験から本当に学ぶべき教訓</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 3: ミルグラム実験とは -->
+    <section class="scene" data-scene="3">
+        <div class="content-area">
+            <div class="section-badge">HISTORY</div>
+            <h2 class="scene-heading fade-in">ミルグラム実験とは何だったのか</h2>
+            <div class="timeline-card slide-up" data-stagger="1">
+                <div class="timeline-year">1961</div>
+                <div class="timeline-text">イェール大学で実施</div>
+            </div>
+            <div class="timeline-card slide-up" data-stagger="2">
+                <div class="timeline-year">S. Milgram</div>
+                <div class="timeline-text">ユダヤ系アメリカ人心理学者</div>
+            </div>
+            <div class="quote-card slide-up" data-stagger="3">
+                <p>"命令に従っただけだ" —アイヒマンの弁明を検証したかった</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 4: 実験の仕組み -->
+    <section class="scene" data-scene="4">
+        <div class="content-area">
+            <div class="section-badge">EXPERIMENT</div>
+            <h2 class="scene-heading fade-in">実験の仕組み</h2>
+            <div class="experiment-layout">
+                <div class="role-card slide-up" data-stagger="1">
+                    <svg class="role-icon" viewBox="0 0 60 60" width="50" height="50">
+                        <circle cx="30" cy="20" r="12" fill="none" stroke="var(--primary)" stroke-width="2.5" />
+                        <path d="M10 55 Q30 35 50 55" fill="none" stroke="var(--primary)" stroke-width="2.5" />
+                    </svg>
+                    <div class="role-label">先生役（被験者）</div>
+                    <div class="role-desc">電撃ボタンを押す</div>
+                </div>
+                <div class="arrow-connector fade-in" data-stagger="2">
+                    <svg viewBox="0 0 120 40" width="120" height="40">
+                        <line x1="0" y1="20" x2="100" y2="20" stroke="var(--accent-coral)" stroke-width="3"
+                            stroke-dasharray="8 4" />
+                        <polygon points="100,10 120,20 100,30" fill="var(--accent-coral)" />
+                    </svg>
+                    <span class="arrow-label">15V → 450V</span>
+                </div>
+                <div class="role-card slide-up" data-stagger="3">
+                    <svg class="role-icon" viewBox="0 0 60 60" width="50" height="50">
+                        <circle cx="30" cy="20" r="12" fill="none" stroke="var(--accent-teal)" stroke-width="2.5" />
+                        <path d="M10 55 Q30 35 50 55" fill="none" stroke="var(--accent-teal)" stroke-width="2.5" />
+                        <line x1="18" y1="38" x2="42" y2="38" stroke="var(--accent-coral)" stroke-width="2"
+                            stroke-dasharray="4 3" />
+                    </svg>
+                    <div class="role-label">生徒役（サクラ）</div>
+                    <div class="role-desc">演技で悲鳴を上げる</div>
+                </div>
+            </div>
+            <div class="role-card experimenter-card pop-in" data-stagger="4">
+                <svg class="role-icon" viewBox="0 0 60 60" width="40" height="40">
+                    <circle cx="30" cy="18" r="10" fill="none" stroke="var(--accent-amber)" stroke-width="2.5" />
+                    <rect x="15" y="32" width="30" height="20" rx="3" fill="none" stroke="var(--accent-amber)"
+                        stroke-width="2.5" />
+                </svg>
+                <div class="role-label">実験者（白衣）</div>
+                <div class="role-desc">圧力をかける</div>
+            </div>
+            <!-- 電圧メーター -->
+            <div class="voltage-meter slide-up" data-stagger="5">
+                <div class="meter-title">ショック装置：30段階の電圧</div>
+                <div class="meter-scale">
+                    <svg class="meter-svg" viewBox="0 0 600 60" width="600" height="60">
+                        <!-- 電圧バー -->
+                        <defs>
+                            <linearGradient id="voltGrad" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="var(--accent-teal)" />
+                                <stop offset="50%" stop-color="var(--accent-amber)" />
+                                <stop offset="100%" stop-color="var(--accent-coral)" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="10" y="10" width="580" height="16" rx="4" fill="url(#voltGrad)" opacity="0.8"
+                            class="draw-line" />
+                        <!-- 目盛り -->
+                        <line x1="10" y1="30" x2="10" y2="40" stroke="var(--text-secondary)" stroke-width="1.5" />
+                        <text x="10" y="54" text-anchor="middle" font-size="11" fill="var(--text-secondary)"
+                            font-family="var(--font)" font-weight="700">15V</text>
+                        <line x1="200" y1="30" x2="200" y2="40" stroke="var(--text-secondary)" stroke-width="1.5" />
+                        <text x="200" y="54" text-anchor="middle" font-size="11" fill="var(--text-secondary)"
+                            font-family="var(--font)" font-weight="700">150V</text>
+                        <line x1="390" y1="30" x2="390" y2="40" stroke="var(--accent-amber)" stroke-width="1.5" />
+                        <text x="390" y="54" text-anchor="middle" font-size="11" fill="var(--accent-amber)"
+                            font-family="var(--font)" font-weight="700">300V</text>
+                        <line x1="590" y1="30" x2="590" y2="40" stroke="var(--accent-coral)" stroke-width="2" />
+                        <text x="590" y="54" text-anchor="middle" font-size="11" fill="var(--accent-coral)"
+                            font-family="var(--font)" font-weight="900">450V</text>
+                    </svg>
+                </div>
+                <div class="meter-labels">
+                    <span class="meter-label safe">軽いショック</span>
+                    <span class="meter-label moderate">中程度</span>
+                    <span class="meter-label danger">⚡ 危険：重度のショック</span>
+                    <span class="meter-label lethal">XXX</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 5: 4段階の圧力 -->
+    <section class="scene" data-scene="5">
+        <div class="content-area">
+            <div class="section-badge">PRESSURE</div>
+            <h2 class="scene-heading fade-in">4段階の圧力フレーズ</h2>
+            <div class="pressure-list">
+                <div class="pressure-item slide-up" data-stagger="1">
+                    <span class="pressure-num">1</span>
+                    <span>"実験を続けてください"</span>
+                </div>
+                <div class="pressure-item slide-up" data-stagger="2">
+                    <span class="pressure-num">2</span>
+                    <span>"あなたに続ける義務があります"</span>
+                </div>
+                <div class="pressure-item slide-up" data-stagger="3">
+                    <span class="pressure-num">3</span>
+                    <span>"実験のために絶対に必要です"</span>
+                </div>
+                <div class="pressure-item pressure-last slide-up" data-stagger="4">
+                    <span class="pressure-num">4</span>
+                    <span>"選択の余地はありません"</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 6: アイヒマン裁判 -->
+    <section class="scene" data-scene="6">
+        <div class="content-area">
+            <div class="section-badge">CONTEXT</div>
+            <h2 class="scene-heading fade-in">アイヒマン裁判との関連</h2>
+            <div class="vs-container">
+                <div class="vs-card slide-up" data-stagger="1">
+                    <div class="vs-title">精神科医の予測</div>
+                    <div class="impact-number small-impact">1<span class="impact-unit">%</span></div>
+                    <p class="vs-desc">最大まで行く人の割合</p>
+                </div>
+                <div class="vs-divider pop-in" data-stagger="2">
+                    <span class="neq-badge">×65</span>
+                </div>
+                <div class="vs-card slide-up" data-stagger="3">
+                    <div class="vs-title">実際の結果</div>
+                    <div class="impact-number small-impact accent-coral">65<span class="impact-unit">%</span></div>
+                    <p class="vs-desc">26人/40人が最大まで</p>
+                </div>
+            </div>
+            <div class="quote-card slide-up" data-stagger="4">
+                <p>"普通の人間でも、権威に命令されれば残虐な行為をする" —ミルグラムの結論</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 7: ここまでが教科書の話 -->
+    <section class="scene" data-scene="7">
+        <div class="content-area center-text">
+            <div class="big-text fade-in">ここまでが</div>
+            <div class="big-text accent-primary pop-in" data-stagger="1">"教科書の話"</div>
+            <div class="divider-line slide-up" data-stagger="2"></div>
+            <div class="big-text slide-up" data-stagger="3">ここからが<span class="accent-coral">本題</span></div>
+            <div class="alert-card slide-up" data-stagger="4">
+                <span class="alert-icon">🔍</span>
+                <span>近年、アーカイブが公開され再検証が進んだ</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 8: アーカイブが暴いた真実 -->
+    <section class="scene" data-scene="8">
+        <div class="content-area">
+            <div class="section-badge accent-bg-coral">RE-EXAMINATION</div>
+            <h2 class="scene-heading fade-in">アーカイブが暴いた真実</h2>
+            <div class="book-card slide-up" data-stagger="1">
+                <div class="book-spine"></div>
+                <div class="book-content">
+                    <div class="book-title">Behind the Shock Machine</div>
+                    <div class="book-author">Gina Perry, 2013</div>
+                    <div class="book-desc">ミルグラムの個人アーカイブを徹底調査</div>
+                </div>
+            </div>
+            <div class="finding-tags">
+                <span class="tag slide-up" data-stagger="2">📝 未公開メモ</span>
+                <span class="tag slide-up" data-stagger="3">🎙️ 音声記録</span>
+                <span class="tag slide-up" data-stagger="4">📋 ノート</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 9: 56%しか信じていなかった -->
+    <section class="scene" data-scene="9">
+        <div class="content-area">
+            <div class="section-badge accent-bg-coral">FINDING 1</div>
+            <h2 class="scene-heading fade-in"><span class="accent-coral">56%</span>しか電撃を信じていなかった</h2>
+            <div class="donut-chart-container pop-in" data-stagger="1">
+                <svg class="donut-chart" viewBox="0 0 200 200" width="200" height="200">
+                    <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(0,0,0,0.06)" stroke-width="24" />
+                    <circle cx="100" cy="100" r="80" fill="none" stroke="var(--accent-coral)" stroke-width="24"
+                        stroke-dasharray="281 221" stroke-dashoffset="126" class="donut-fill" />
+                    <circle cx="100" cy="100" r="80" fill="none" stroke="var(--accent-teal)" stroke-width="24"
+                        stroke-dasharray="221 281" stroke-dashoffset="-155" class="donut-fill-alt" />
+                    <text x="100" y="95" text-anchor="middle" class="donut-text-big">56%</text>
+                    <text x="100" y="115" text-anchor="middle" class="donut-text-small">信じていた</text>
+                </svg>
+                <div class="donut-legend">
+                    <div class="legend-item"><span class="legend-dot coral"></span>信じていた 56%</div>
+                    <div class="legend-item"><span class="legend-dot teal"></span>疑っていた 44%</div>
+                </div>
+            </div>
+            <div class="alert-card slide-up" data-stagger="2">
+                <span class="alert-icon">⚠️</span>
+                <span>信じていないなら「服従」とは言えない</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 10: 論文 vs アーカイブ -->
+    <section class="scene" data-scene="10">
+        <div class="content-area">
+            <div class="section-badge accent-bg-coral">FINDING 2</div>
+            <h2 class="scene-heading fade-in">公開論文 vs アーカイブの実態</h2>
+            <div class="vs-container">
+                <div class="vs-card slide-up" data-stagger="1">
+                    <div class="vs-title">📄 論文上</div>
+                    <p class="vs-text">厳密に標準化された手順</p>
+                    <p class="vs-text">再現可能な科学実験</p>
+                </div>
+                <div class="vs-divider pop-in" data-stagger="2">
+                    <span class="neq-badge">≠</span>
+                </div>
+                <div class="vs-card accent-border-coral slide-up" data-stagger="3">
+                    <div class="vs-title">🎙️ 音声記録</div>
+                    <p class="vs-text accent-coral">アドリブで追加圧力</p>
+                    <p class="vs-text accent-coral">台本にない説得</p>
+                </div>
+            </div>
+            <div class="quote-card slide-up" data-stagger="4">
+                <p>"ショックは永久的な損傷を与えません" ←台本にない言葉で説得</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 11: 隠された条件24 -->
+    <section class="scene" data-scene="11">
+        <div class="content-area">
+            <div class="section-badge accent-bg-coral">FINDING 3</div>
+            <h2 class="scene-heading fade-in">隠された<span class="accent-coral">"条件24"</span></h2>
+            <div class="hidden-experiment">
+                <div class="condition-card slide-up" data-stagger="1">
+                    <div class="condition-label">条件24：知人ペア</div>
+                    <div class="condition-detail">友人・家族を生徒役にする</div>
+                </div>
+                <div class="impact-number pop-in" data-stagger="2">15<span class="impact-unit">%</span></div>
+                <p class="impact-label slide-up" data-stagger="3">服従率が65% → 15%に激減</p>
+            </div>
+            <div class="alert-card alert-danger slide-up" data-stagger="4">
+                <span class="alert-icon">🚫</span>
+                <span>ミルグラムはこれを「惨憺たる失敗」と呼び、論文に載せなかった</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 12: 倫理的問題 -->
+    <section class="scene" data-scene="12">
+        <div class="content-area">
+            <div class="section-badge accent-bg-coral">ETHICS</div>
+            <h2 class="scene-heading fade-in">倫理的問題とその影響</h2>
+            <div class="triple-card">
+                <div class="mini-card slide-up" data-stagger="1">
+                    <div class="mini-icon">😰</div>
+                    <div class="mini-title">不十分なデブリーフィング</div>
+                    <p>電撃が偽物と知らないまま帰された被験者</p>
+                </div>
+                <div class="mini-card slide-up" data-stagger="2">
+                    <div class="mini-icon">📅</div>
+                    <div class="mini-title">長期的トラウマ</div>
+                    <p>何十年後もトラウマを抱えた元被験者</p>
+                </div>
+                <div class="mini-card slide-up" data-stagger="3">
+                    <div class="mini-icon">⚖️</div>
+                    <div class="mini-title">Baumrind (1964)</div>
+                    <p>倫理審査委員会の制度化のきっかけに</p>
+                </div>
+            </div>
+            <div class="fact-badge slide-up" data-stagger="4">
+                <span class="fact-icon">🏛️</span> 現代では絶対に許可されない実験
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 13: 24の実験が語ること -->
+    <section class="scene" data-scene="13">
+        <div class="content-area">
+            <div class="section-badge accent-bg-teal">VARIATIONS</div>
+            <h2 class="scene-heading fade-in">24の実験が語ること</h2>
+            <div class="big-text fade-in">教科書は<span class="accent-coral">65%</span>だけを載せている</div>
+            <div class="alert-card slide-up" data-stagger="1">
+                <span class="alert-icon">📊</span>
+                <span>実は24種類のバリエーション実験がある</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 14: 条件別服従率 -->
+    <section class="scene" data-scene="14">
+        <div class="content-area">
+            <div class="section-badge accent-bg-teal">DATA</div>
+            <h2 class="scene-heading fade-in">条件別の服従率</h2>
+            <div class="bar-chart">
+                <div class="bar-row slide-up" data-stagger="1">
+                    <span class="bar-label">基本条件</span>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="--fill-width:65%;--bar-color:var(--primary)"><span
+                                class="bar-value">65%</span></div>
+                    </div>
+                </div>
+                <div class="bar-row slide-up" data-stagger="2">
+                    <span class="bar-label">同室</span>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="--fill-width:40%;--bar-color:var(--accent-teal)"><span
+                                class="bar-value">40%</span></div>
+                    </div>
+                </div>
+                <div class="bar-row slide-up" data-stagger="3">
+                    <span class="bar-label">接触</span>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="--fill-width:30%;--bar-color:var(--accent-teal)"><span
+                                class="bar-value">30%</span></div>
+                    </div>
+                </div>
+                <div class="bar-row slide-up" data-stagger="4">
+                    <span class="bar-label">電話指示</span>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="--fill-width:20.5%;--bar-color:var(--accent-amber)"><span
+                                class="bar-value">20.5%</span></div>
+                    </div>
+                </div>
+                <div class="bar-row slide-up" data-stagger="5">
+                    <span class="bar-label">私服</span>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="--fill-width:20%;--bar-color:var(--accent-amber)"><span
+                                class="bar-value">20%</span></div>
+                    </div>
+                </div>
+                <div class="bar-row slide-up" data-stagger="6">
+                    <span class="bar-label">雑居ビル</span>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="--fill-width:47%;--bar-color:var(--accent-teal)"><span
+                                class="bar-value">47%</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 15: 15%〜92.5% -->
+    <section class="scene" data-scene="15">
+        <div class="content-area center-text">
+            <div class="section-badge accent-bg-teal">RANGE</div>
+            <h2 class="scene-heading fade-in">同じ"人間"でここまで変わる</h2>
+            <div class="range-display">
+                <div class="range-min pop-in" data-stagger="1">
+                    <span class="range-num">15</span><span class="range-unit">%</span>
+                    <span class="range-label">知人ペア</span>
+                </div>
+                <div class="range-connector fade-in" data-stagger="2">
+                    <svg viewBox="0 0 200 8" width="200" height="8">
+                        <line x1="0" y1="4" x2="200" y2="4" stroke="var(--primary)" stroke-width="3"
+                            stroke-dasharray="6 4" />
+                    </svg>
+                </div>
+                <div class="range-max pop-in" data-stagger="3">
+                    <span class="range-num accent-coral">92.5</span><span class="range-unit">%</span>
+                    <span class="range-label">代理実行</span>
+                </div>
+            </div>
+            <div class="fact-badge slide-up" data-stagger="4">
+                <span class="fact-icon">🔑</span> 「人間の本質」ではなく「状況の力」
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 16: 矛盾する指示 → 全員拒否 -->
+    <section class="scene" data-scene="16">
+        <div class="content-area">
+            <div class="section-badge accent-bg-teal">KEY FINDING</div>
+            <h2 class="scene-heading fade-in">2人の実験者が矛盾する指示</h2>
+            <div class="conflict-visual">
+                <div class="conflict-card slide-up" data-stagger="1">
+                    <div class="conflict-icon">👨‍🔬</div>
+                    <div class="conflict-text">"続けろ"</div>
+                </div>
+                <div class="conflict-vs pop-in" data-stagger="2">VS</div>
+                <div class="conflict-card slide-up" data-stagger="3">
+                    <div class="conflict-icon">👨‍🔬</div>
+                    <div class="conflict-text">"やめろ"</div>
+                </div>
+            </div>
+            <div class="result-banner bounce-in" data-stagger="4">
+                <div class="result-arrow">→</div>
+                <div class="result-text">全員が<span class="accent-coral">即座に拒否</span></div>
+            </div>
+            <p class="scene-footnote slide-up" data-stagger="5">権威が一枚岩でなくなった瞬間、誰も従わない</p>
+        </div>
+    </section>
+
+    <!-- SCENE 17: 積極的追随 タイトル -->
+    <section class="scene" data-scene="17">
+        <div class="content-area">
+            <div class="section-badge accent-bg-amber">NEW THEORY</div>
+            <h2 class="scene-heading fade-in">盲目的服従ではなく<br><span class="accent-amber">"積極的追随"</span></h2>
+            <div class="theory-authors slide-up" data-stagger="1">
+                <span class="author-name">Haslam & Reicher (2012)</span>
+                <span class="author-desc">Engaged Followership</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 18: 盲目的服従 vs 積極的追随 -->
+    <section class="scene" data-scene="18">
+        <div class="content-area">
+            <div class="section-badge accent-bg-amber">COMPARISON</div>
+            <h2 class="scene-heading fade-in">2つの解釈</h2>
+            <div class="vs-container">
+                <div class="vs-card slide-up" data-stagger="1">
+                    <div class="vs-title">盲目的服従</div>
+                    <p class="vs-text">代理状態に入る</p>
+                    <p class="vs-text">ロボットのように従う</p>
+                    <p class="vs-text">責任を感じない</p>
+                    <div class="vs-verdict">❌ Milgram (1974)</div>
+                </div>
+                <div class="vs-divider pop-in" data-stagger="2">
+                    <span class="neq-badge">VS</span>
+                </div>
+                <div class="vs-card accent-border-amber slide-up" data-stagger="3">
+                    <div class="vs-title">積極的追随</div>
+                    <p class="vs-text accent-amber">科学への貢献意識</p>
+                    <p class="vs-text accent-amber">目的を共有して参加</p>
+                    <p class="vs-text accent-amber">自ら正当化</p>
+                    <div class="vs-verdict accent-amber">✅ Haslam & Reicher</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 19: 4番目の命令が最も効かない -->
+    <section class="scene" data-scene="19">
+        <div class="content-area">
+            <div class="section-badge accent-bg-amber">EVIDENCE</div>
+            <h2 class="scene-heading fade-in">最も強い命令が<span class="accent-coral">最も効かない</span></h2>
+            <div class="effectiveness-chart">
+                <div class="eff-item slide-up" data-stagger="1">
+                    <span class="eff-label">"科学のために必要"</span>
+                    <div class="eff-bar-track">
+                        <div class="eff-bar high"></div>
+                    </div>
+                    <span class="eff-result">効果：高い</span>
+                </div>
+                <div class="eff-item slide-up" data-stagger="2">
+                    <span class="eff-label">"続ける義務がある"</span>
+                    <div class="eff-bar-track">
+                        <div class="eff-bar medium"></div>
+                    </div>
+                    <span class="eff-result">効果：中程度</span>
+                </div>
+                <div class="eff-item slide-up" data-stagger="3">
+                    <span class="eff-label">"選択の余地はない"</span>
+                    <div class="eff-bar-track">
+                        <div class="eff-bar low"></div>
+                    </div>
+                    <span class="eff-result accent-coral">効果：最も低い</span>
+                </div>
+            </div>
+            <div class="alert-card slide-up" data-stagger="4">
+                <span class="alert-icon">💡</span>
+                <span>「命令」は逆効果。「大義名分」が人を動かす</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 20: 現代の再現 Burger 2009 -->
+    <section class="scene" data-scene="20">
+        <div class="content-area">
+            <div class="section-badge accent-bg-amber">REPLICATION</div>
+            <h2 class="scene-heading fade-in">現代の再現実験</h2>
+            <div class="replication-cards">
+                <div class="rep-card slide-up" data-stagger="1">
+                    <div class="rep-year">2009</div>
+                    <div class="rep-place">🇺🇸 サンタクララ大学</div>
+                    <div class="rep-researcher">Burger</div>
+                    <div class="rep-result">150V時点で<span class="accent-coral">70%</span>が継続</div>
+                </div>
+                <div class="rep-card slide-up" data-stagger="2">
+                    <div class="rep-year">2017</div>
+                    <div class="rep-place">🇵🇱 SWPS大学</div>
+                    <div class="rep-researcher">Doliński et al.</div>
+                    <div class="rep-result">約<span class="accent-coral">90%</span>が最高レベルまで</div>
+                </div>
+                <div class="rep-card slide-up" data-stagger="3">
+                    <div class="rep-year">2010</div>
+                    <div class="rep-place">🇫🇷 France 2テレビ</div>
+                    <div class="rep-researcher">"死のゲーム"</div>
+                    <div class="rep-result"><span class="accent-coral">81%</span>が服従（司会者が権威）</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 21: 現象は存在する、解釈が違う -->
+    <section class="scene" data-scene="21">
+        <div class="content-area center-text">
+            <div class="section-badge accent-bg-amber">INTERPRETATION</div>
+            <h2 class="scene-heading fade-in">現象は存在する。<br>でも<span class="accent-amber">解釈</span>が違う</h2>
+            <div class="interpretation-flow">
+                <div class="interp-old slide-up" data-stagger="1">
+                    <span class="interp-cross">✕</span>
+                    <span>"人間は権威に弱い"</span>
+                </div>
+                <div class="interp-arrow pop-in" data-stagger="2">↓</div>
+                <div class="interp-new slide-up" data-stagger="3">
+                    <span class="interp-check">✓</span>
+                    <span>"大義名分を与えられると自分で正当化できてしまう"</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 22: 今日のまとめ -->
+    <section class="scene" data-scene="22">
+        <div class="content-area">
+            <div class="section-badge">SUMMARY</div>
+            <h2 class="scene-heading fade-in">今日のまとめ</h2>
+            <div class="summary-intro slide-up">
+                ミルグラム実験の再検証から見えてきた3つのポイント
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 23: 3つのポイント -->
+    <section class="scene" data-scene="23">
+        <div class="content-area">
+            <div class="section-badge">KEY POINTS</div>
+            <h2 class="scene-heading fade-in">今日の3つのポイント</h2>
+            <div class="summary-points">
+                <div class="summary-point slide-up" data-stagger="1">
+                    <span class="point-num">1</span>
+                    <div class="point-content">
+                        <div class="point-title">実験の信頼性に重大な疑問</div>
+                        <p>半数が電撃を信じず / 手順未標準化 / 結果の隠蔽</p>
+                    </div>
+                </div>
+                <div class="summary-point slide-up" data-stagger="2">
+                    <span class="point-num">2</span>
+                    <div class="point-content">
+                        <div class="point-title">状況が行動を決める</div>
+                        <p>服従率15%〜92.5% / 人の本質ではなく状況の力</p>
+                    </div>
+                </div>
+                <div class="summary-point slide-up" data-stagger="3">
+                    <span class="point-num">3</span>
+                    <div class="point-content">
+                        <div class="point-title">盲目的服従→積極的追随</div>
+                        <p>命令ではなく大義名分が人を動かす</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCENE 24: 本当の教訓 -->
+    <section class="scene" data-scene="24">
+        <div class="content-area center-text">
+            <div class="section-badge accent-bg-coral">LESSON</div>
+            <h2 class="scene-heading fade-in">本当の教訓</h2>
+            <div class="lesson-text pop-in" data-stagger="1">
+                どんなに正しそうに見える要求でも<br>
+                <span class="accent-coral big-accent">自分の頭で考えることをやめてはいけない</span>
+            </div>
+            <div class="lesson-sub slide-up" data-stagger="2">
+                違和感を無視しない。それだけが防波堤。
+            </div>
+            <svg class="shield-svg pop-in" data-stagger="3" viewBox="0 0 100 120" width="80" height="96">
+                <path d="M50 5 L90 25 L85 75 Q50 110 50 110 Q50 110 15 75 L10 25 Z" fill="none"
+                    stroke="var(--accent-teal)" stroke-width="3" class="draw-line" />
+                <text x="50" y="70" text-anchor="middle" font-size="28" fill="var(--accent-teal)"
+                    font-weight="900">🧠</text>
+            </svg>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
