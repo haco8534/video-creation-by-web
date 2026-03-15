@@ -1,0 +1,475 @@
+/* ============================================================
+   Custom Visuals — Photographic Memory Myth
+   ============================================================ */
+
+/* Brain ≠ Camera visual */
+.memory-myth-visual {
+    width: 100%;
+    max-width: 420px;
+    margin: 8px auto;
+}
+
+.myth-svg {
+    width: 100%;
+}
+
+.scene.active .not-equal line {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 60;
+    animation: drawLine 0.8s ease forwards 0.5s;
+}
+
+/* Kim Peek book reading SVG */
+.kim-peek-visual {
+    width: 100%;
+    max-width: 320px;
+    margin: 12px auto;
+}
+
+.peek-svg {
+    width: 100%;
+}
+
+/* Stereogram experiment diagram */
+.stereogram-visual {
+    width: 100%;
+    max-width: 460px;
+    margin: 0 auto 16px;
+}
+
+.stereo-svg {
+    width: 100%;
+}
+
+
+
+/* Ayumu bar comparison */
+.ayumu-bar-visual {
+    width: 100%;
+    max-width: 370px;
+    margin: 12px auto 0;
+}
+
+.ayumu-svg {
+    width: 100%;
+}
+
+.scene.active .ayumu-bar {
+    animation: barFill 1.2s ease-out forwards 0.4s;
+    width: 0;
+}
+
+.scene.active .human-bar {
+    animation: barFill 1s ease-out forwards 0.6s;
+    width: 0;
+}
+
+/* Loftus smashed vs hit */
+.loftus-visual {
+    width: 100%;
+    max-width: 400px;
+    margin: 12px auto 0;
+}
+
+.loftus-svg {
+    width: 100%;
+}
+
+.scene.active .smashed-bar {
+    animation: barFill 1.2s ease-out forwards 0.3s;
+    width: 0;
+}
+
+.scene.active .hit-bar {
+    animation: barFill 1s ease-out forwards 0.5s;
+    width: 0;
+}
+
+/* Dresler training progress */
+.dresler-visual {
+    width: 100%;
+    max-width: 400px;
+    margin: 12px auto 0;
+}
+
+.dresler-svg {
+    width: 100%;
+}
+
+/* Brain connectivity visual */
+.brain-connectivity-visual {
+    width: 100%;
+    max-width: 420px;
+    margin: 12px auto 0;
+}
+
+.connectivity-svg {
+    width: 100%;
+}
+
+.scene.active .conn-line {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: drawLine 1s ease forwards;
+}
+
+.scene.active .conn-line:nth-child(5) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .conn-line:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .conn-line:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.scene.active .conn-line:nth-child(8) {
+    animation-delay: 0.9s;
+}
+
+.scene.active .conn-line:nth-child(9) {
+    animation-delay: 1.1s;
+}
+
+/* VS card border adjustments for this project */
+.vs-left {
+    border-top: 3px solid var(--teal);
+}
+
+.vs-right {
+    border-top: 3px solid var(--coral);
+}
+
+.vs-badge.safe-badge {
+    background: var(--teal-light);
+    color: var(--teal);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.vs-badge.danger-badge {
+    background: var(--coral-light);
+    color: var(--coral);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.vs-badge-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--coral));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.vs-desc {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.scene.active .vs-side {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .vs-left {
+    animation-delay: 0.3s;
+}
+
+.scene.active .vs-right {
+    animation-delay: 0.5s;
+}
+
+.scene.active .vs-center-badge {
+    animation: bounceIn 0.6s ease-out forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+/* Numbered list */
+.numbered-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.numbered-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    box-shadow: var(--shadow);
+}
+
+.number-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--teal));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.numbered-text {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.scene.active .numbered-item {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .numbered-item:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .numbered-item:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.scene.active .numbered-item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Footnote */
+.footnote {
+    font-size: 12px;
+    color: var(--text-light);
+    text-align: center;
+    margin-top: 16px;
+    padding: 8px 20px;
+    background: rgba(99, 102, 241, 0.05);
+    border-radius: 8px;
+}
+
+/* Quote card */
+.quote-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--primary);
+    max-width: 600px;
+    text-align: left;
+}
+
+.quote-mark {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.quote-text {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.quote-source {
+    font-size: 13px;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+/* Alert card */
+.alert-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--coral);
+    max-width: 600px;
+    text-align: left;
+}
+
+.alert-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--coral);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.alert-title {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.alert-sub {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.scene.active .alert-card {
+    animation: warningShake 0.5s ease 0.3s;
+}
+
+/* Triple card / Factor card */
+.triple-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 8px;
+}
+
+.factor-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 28px 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.factor-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 22px;
+    color: white;
+}
+
+.accent-bg-primary {
+    background: var(--primary);
+}
+
+.factor-name {
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.factor-desc {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+.scene.active .factor-card {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .factor-card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .factor-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .factor-card:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+/* Flow chain */
+.flow-chain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    margin-top: 16px;
+}
+
+.flow-node {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 20px 16px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    min-width: 140px;
+    max-width: 200px;
+    flex: 1;
+    border-top: 3px solid var(--primary);
+}
+
+.flow-year {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.flow-text {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.flow-arrow {
+    font-size: 24px;
+    color: var(--text-light);
+}
+
+.scene.active .flow-node {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .flow-node:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .flow-node:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .flow-node:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.scene.active .flow-arrow {
+    animation: bounceIn 0.4s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .flow-arrow:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.scene.active .flow-arrow:nth-child(4) {
+    animation-delay: 0.7s;
+}

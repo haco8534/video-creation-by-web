@@ -1,0 +1,62 @@
+[
+    {
+        "surface": "アーラウ",
+        "pronunciation": "アーラウ",
+        "accent_type": 1
+    },
+    {
+        "surface": "ルイトポルト",
+        "pronunciation": "ルイトポルト",
+        "accent_type": 1
+    },
+    {
+        "surface": "ギムナジウム",
+        "pronunciation": "ギムナジウム",
+        "accent_type": 5
+    },
+    {
+        "surface": "ポーリーネ",
+        "pronunciation": "ポーリーネ",
+        "accent_type": 3
+    },
+    {
+        "surface": "チューリッヒ",
+        "pronunciation": "チューリッヒ",
+        "accent_type": 1
+    },
+    {
+        "surface": "リプリーズ",
+        "pronunciation": "リプリーズ",
+        "accent_type": 3
+    },
+    {
+        "surface": "ビリーブ",
+        "pronunciation": "ビリーブ",
+        "accent_type": 3
+    },
+    {
+        "surface": "イット",
+        "pronunciation": "イット",
+        "accent_type": 1
+    },
+    {
+        "surface": "ユークリッド",
+        "pronunciation": "ユークリッド",
+        "accent_type": 4
+    },
+    {
+        "surface": "アンダードッグ",
+        "pronunciation": "アンダードッグ",
+        "accent_type": 5
+    },
+    {
+        "surface": "ETH",
+        "pronunciation": "イーティーエイチ",
+        "accent_type": 5
+    },
+    {
+        "surface": "判官贔屓",
+        "pronunciation": "ホウガンビイキ",
+        "accent_type": 5
+    }
+]

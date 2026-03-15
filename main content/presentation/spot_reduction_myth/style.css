@@ -1,0 +1,1382 @@
+/* ========================================
+   「部分痩せ」は物理的に不可能 - Stylesheet
+   Theme: Clean White with Coral/Indigo accents
+   ======================================== */
+
+/* ===== CSS Variables ===== */
+:root {
+    --bg: #f8f9fa;
+    --text: #1a1a2e;
+    --text-light: #6c757d;
+    --primary: #4f46e5;
+    --primary-light: #e0e7ff;
+    --teal: #14b8a6;
+    --teal-light: #ccfbf1;
+    --coral: #ef4444;
+    --coral-light: #fee2e2;
+    --amber: #f59e0b;
+    --amber-light: #fef3c7;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.1);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ===== Scene Base ===== */
+.scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.scene.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: sceneFadeIn 0.5s ease both;
+}
+
+/* ===== Canvas Background ===== */
+.bg-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ===== Content Layouts ===== */
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    width: 90%;
+}
+
+.center-layout {
+    text-align: center;
+}
+
+.card-layout {
+    text-align: center;
+}
+
+/* ===== Typography ===== */
+.title-huge {
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+.title-medium {
+    font-size: 2.6rem;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.title-sub {
+    font-size: 1.15rem;
+    color: var(--text-light);
+    margin-top: 8px;
+    font-weight: 400;
+}
+
+.scene-title {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 24px;
+}
+
+.emphasis-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.emphasis-text-large {
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 16px;
+}
+
+.emphasis-sub {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-top: 16px;
+    font-weight: 500;
+}
+
+.footnote {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-top: 12px;
+}
+
+.text-sub {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 4px;
+    font-weight: 400;
+}
+
+/* ===== Accent Colors ===== */
+.accent-primary {
+    color: var(--primary);
+}
+
+.accent-teal {
+    color: var(--teal);
+}
+
+.accent-coral {
+    color: var(--coral);
+}
+
+.accent-amber {
+    color: var(--amber);
+}
+
+.accent-bg-primary {
+    background: var(--primary);
+    color: #fff;
+}
+
+.accent-bg-teal {
+    background: var(--teal);
+    color: #fff;
+}
+
+.accent-bg-coral {
+    background: var(--coral);
+    color: #fff;
+}
+
+.accent-bg-amber {
+    background: var(--amber);
+    color: #fff;
+}
+
+/* ===== Section Badge ===== */
+.section-badge {
+    display: inline-block;
+    padding: 6px 20px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 16px;
+}
+
+/* ===== Source Badge ===== */
+.source-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+/* ===== Impact Number ===== */
+.impact-number {
+    margin: 8px 0;
+}
+
+.big-num {
+    font-size: 5rem;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1;
+}
+
+.num-unit {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-left: 4px;
+}
+
+/* ===== Numbered List ===== */
+.numbered-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.numbered-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--card-bg);
+    padding: 20px 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: left;
+}
+
+.number-circle {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.number-circle.nc-amber {
+    background: var(--amber);
+}
+
+.numbered-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* ===== Flow Chain (Vertical) ===== */
+.flow-chain {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.flow-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.flow-node {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--card-bg);
+    padding: 14px 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    width: 100%;
+    text-align: left;
+}
+
+.flow-step-num {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+.flow-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.flow-name {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.flow-arrow-down {
+    font-size: 1.6rem;
+    color: var(--primary);
+    font-weight: 900;
+    line-height: 1;
+}
+
+/* ===== VS Container ===== */
+.vs-container {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+    justify-content: center;
+    margin: 16px 0;
+}
+
+.vs-card {
+    flex: 1;
+    max-width: 320px;
+    background: var(--card-bg);
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.vs-badge {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.safe-badge {
+    background: var(--teal-light);
+    color: var(--teal);
+}
+
+.danger-badge {
+    background: var(--coral-light);
+    color: var(--coral);
+}
+
+.vs-title {
+    font-size: 1.3rem;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.vs-desc {
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+.vs-detail {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+.vs-fat-result {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-top: 12px;
+    color: var(--coral);
+}
+
+.vs-divider {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--text-light);
+}
+
+/* ===== Alert Card ===== */
+.alert-card {
+    background: var(--card-bg);
+    border-left: 5px solid var(--coral);
+    padding: 24px 28px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto 16px;
+}
+
+.alert-card.alert-warning {
+    border-left-color: var(--amber);
+}
+
+.alert-icon {
+    display: inline-flex;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--coral);
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.alert-warning .alert-icon {
+    background: var(--amber);
+}
+
+.alert-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.alert-sub {
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+/* ===== Quote Card ===== */
+.quote-card {
+    background: var(--card-bg);
+    border-left: 5px solid var(--primary);
+    padding: 28px 32px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: left;
+    max-width: 750px;
+    margin: 0 auto 16px;
+}
+
+.quote-mark {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: -8px;
+}
+
+.quote-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.quote-source {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+/* ===== Triple Card ===== */
+.triple-card {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin: 16px 0;
+}
+
+.factor-card {
+    flex: 1;
+    max-width: 260px;
+    background: var(--card-bg);
+    padding: 28px 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.factor-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.3rem;
+    margin: 0 auto 12px;
+}
+
+.factor-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.factor-desc {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* ===== Comparison Table ===== */
+.comparison-table {
+    max-width: 750px;
+    margin: 0 auto;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.comp-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 14px 20px;
+}
+
+.comp-header {
+    background: var(--primary);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.comp-cell {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.comp-name {
+    font-weight: 600;
+}
+
+.comp-bad {
+    background: #fff5f5;
+}
+
+.comp-good {
+    background: #f0fdf4;
+}
+
+.comp-row:not(.comp-header) {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* ===== Summary Cards ===== */
+.summary-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.summary-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--card-bg);
+    padding: 20px 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: left;
+}
+
+.summary-num {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.summary-text {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ===== Custom Visual: Spot Ad ===== */
+.spot-ad-visual {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.ad-card {
+    position: relative;
+    background: #fff;
+    border: 2px dashed #d1d5db;
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    width: 200px;
+    text-align: center;
+}
+
+.ad-fake {
+    opacity: 0.7;
+}
+
+.ad-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--coral-light);
+    color: var(--coral);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 0.9rem;
+    margin: 0 auto 8px;
+}
+
+.ad-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--text);
+}
+
+.ad-stamp {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--coral);
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    transform: rotate(8deg);
+}
+
+/* ===== Custom Visual: Transport SVG ===== */
+.transport-visual {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.transport-svg {
+    width: 100%;
+}
+
+.fat-source {
+    fill: var(--coral-light);
+    stroke: var(--coral);
+    stroke-width: 2;
+    opacity: 0;
+    animation: dotAppear 0.5s ease forwards;
+    animation-delay: calc(var(--d) * 0.2s);
+}
+
+.scene.active .fat-source {
+    opacity: 1;
+}
+
+.fat-label {
+    fill: var(--coral);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.muscle-dest {
+    fill: var(--primary-light);
+    stroke: var(--primary);
+    stroke-width: 2;
+    opacity: 0;
+    animation: dotAppear 0.5s ease forwards;
+    animation-delay: calc(var(--d) * 0.2s);
+}
+
+.scene.active .muscle-dest {
+    opacity: 1;
+}
+
+.muscle-label {
+    fill: var(--primary);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.blood-path {
+    stroke: var(--primary);
+    stroke-width: 2.5;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    fill: none;
+}
+
+.scene.active .blood-path {
+    animation: drawLine 1.5s ease forwards 0.8s;
+}
+
+/* ===== Custom Visual: Direct vs Route ===== */
+.direct-vs-visual {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.direct-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 16px;
+    text-align: center;
+    width: 240px;
+}
+
+.direct-wrong {
+    border: 2px solid var(--coral-light);
+}
+
+.direct-right {
+    border: 2px solid var(--primary-light);
+}
+
+.direct-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-light);
+}
+
+/* ===== Custom Visual: Experiment Bars ===== */
+.experiment-visual {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin: 16px 0;
+}
+
+.exp-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 16px;
+    text-align: center;
+    width: 200px;
+}
+
+.exp-icon {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.exp-bar-track {
+    height: 12px;
+    background: #e2e8f0;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.exp-bar-fill {
+    height: 100%;
+    border-radius: 6px;
+    width: 0;
+    transition: width 1.2s ease;
+}
+
+.scene.active .exp-bar-fill {
+    width: var(--w);
+}
+
+.exp-bar-belly {
+    background: var(--coral);
+}
+
+.exp-bar-back {
+    background: var(--amber);
+}
+
+.exp-bar-hip {
+    background: var(--teal);
+}
+
+.exp-result {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+/* ===== Custom Visual: Tennis SVG ===== */
+.tennis-visual {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.tennis-svg {
+    width: 100%;
+}
+
+.tennis-bar-muscle,
+.tennis-bar-muscle2,
+.tennis-bar-fat,
+.tennis-bar-fat2 {
+    width: 0;
+    transition: width 1.5s ease;
+}
+
+.scene.active .tennis-bar-muscle {
+    width: var(--w);
+}
+
+.scene.active .tennis-bar-muscle2 {
+    width: var(--w);
+}
+
+.scene.active .tennis-bar-fat {
+    width: var(--w);
+}
+
+.scene.active .tennis-bar-fat2 {
+    width: var(--w);
+}
+
+/* ===== Custom Visual: Body Type ===== */
+.body-type-visual {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.body-card {
+    text-align: center;
+    max-width: 200px;
+}
+
+.body-icon {
+    height: 140px;
+    margin-bottom: 12px;
+}
+
+.body-icon svg {
+    height: 100%;
+    width: auto;
+}
+
+.body-label {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.body-desc {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* ===== Custom Visual: Bias Flow ===== */
+.bias-visual {
+    margin: 20px 0;
+}
+
+.bias-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.bias-step {
+    background: var(--card-bg);
+    padding: 10px 16px;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.bias-wrong {
+    background: var(--coral-light);
+    color: var(--coral);
+    border: 2px solid var(--coral);
+}
+
+.bias-arrow {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    font-weight: 700;
+}
+
+/* ===== Stagger Animation ===== */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity var(--transition), transform var(--transition);
+}
+
+.scene.active .stagger-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scene.active .stagger-item:nth-child(1) {
+    transition-delay: 0.0s;
+}
+
+.scene.active .stagger-item:nth-child(2) {
+    transition-delay: 0.12s;
+}
+
+.scene.active .stagger-item:nth-child(3) {
+    transition-delay: 0.24s;
+}
+
+.scene.active .stagger-item:nth-child(4) {
+    transition-delay: 0.36s;
+}
+
+.scene.active .stagger-item:nth-child(5) {
+    transition-delay: 0.48s;
+}
+
+.scene.active .stagger-item:nth-child(6) {
+    transition-delay: 0.60s;
+}
+
+.scene.active .stagger-item:nth-child(7) {
+    transition-delay: 0.72s;
+}
+
+.scene.active .stagger-item:nth-child(8) {
+    transition-delay: 0.84s;
+}
+
+.scene.active .stagger-item:nth-child(9) {
+    transition-delay: 0.96s;
+}
+
+.scene.active .stagger-item:nth-child(10) {
+    transition-delay: 1.08s;
+}
+
+/* ===== Keyframe Animations ===== */
+
+/* 1. Scene fade in */
+@keyframes sceneFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* 2. Card slide up */
+@keyframes cardSlideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 3. Number pop */
+@keyframes numberPop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 4. Bar fill */
+@keyframes barFill {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--bar-width);
+    }
+}
+
+/* 5. Float */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* 6. Pulse glow */
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 20px 8px rgba(79, 70, 229, 0.15);
+    }
+}
+
+/* 7. Bounce in */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+    70% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* 8. Title reveal */
+@keyframes titleReveal {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* 9. Draw line (SVG) */
+@keyframes drawLine {
+    from {
+        stroke-dashoffset: 200;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* 10. Dot appear */
+@keyframes dotAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 11. Warning shake */
+@keyframes warningShake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-3px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(3px);
+    }
+}
+
+/* 12. Gradient shift */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 13. Stamp appear */
+@keyframes stampAppear {
+    0% {
+        transform: rotate(8deg) scale(0);
+    }
+
+    60% {
+        transform: rotate(8deg) scale(1.2);
+    }
+
+    100% {
+        transform: rotate(8deg) scale(1);
+    }
+}
+
+/* ===== Animation Application Rules ===== */
+
+/* Card types slide up */
+.scene.active .numbered-item,
+.scene.active .factor-card,
+.scene.active .vs-card,
+.scene.active .summary-card,
+.scene.active .exp-card,
+.scene.active .body-card,
+.scene.active .direct-card,
+.scene.active .ad-card {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .numbered-item:nth-child(1),
+.scene.active .factor-card:nth-child(1),
+.scene.active .exp-card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .numbered-item:nth-child(2),
+.scene.active .factor-card:nth-child(2),
+.scene.active .exp-card:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .numbered-item:nth-child(3),
+.scene.active .factor-card:nth-child(3),
+.scene.active .exp-card:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+/* VS cards */
+.scene.active .vs-card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .vs-card:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+/* Impact number pop */
+.scene.active .impact-number {
+    animation: numberPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+/* VS divider bounce */
+.scene.active .vs-divider {
+    animation: bounceIn 0.6s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+/* Alert icon pulse */
+.scene.active .alert-icon {
+    animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* Flow arrows bounce */
+.scene.active .flow-arrow-down {
+    animation: bounceIn 0.4s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .flow-arrow-down:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.scene.active .flow-arrow-down:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.scene.active .flow-arrow-down:nth-child(6) {
+    animation-delay: 0.8s;
+}
+
+/* Ad stamp pop */
+.scene.active .ad-stamp {
+    animation: stampAppear 0.5s ease-out forwards;
+    animation-delay: 0.8s;
+    transform: rotate(8deg) scale(0);
+}
+
+/* Bias wrong card shake */
+.scene.active .bias-wrong {
+    animation: warningShake 0.5s ease 1.2s;
+}
+
+/* Comparison table rows */
+.scene.active .comp-row {
+    animation: cardSlideUp 0.4s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .comp-row:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .comp-row:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.scene.active .comp-row:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.scene.active .comp-row:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.scene.active .comp-row:nth-child(5) {
+    animation-delay: 1.0s;
+}
+
+/* Summary cards */
+.scene.active .summary-card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .summary-card:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.scene.active .summary-card:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+/* Body cards float */
+.scene.active .body-card {
+    animation: cardSlideUp 0.5s ease-out forwards, float 3s ease-in-out 1.5s infinite;
+    opacity: 0;
+}
+
+.scene.active .body-card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .body-card:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+/* Flow nodes */
+.scene.active .flow-node {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .flow-node:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .flow-node:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .flow-node:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.scene.active .flow-node:nth-child(7) {
+    animation-delay: 1.1s;
+}
+
+/* Title accent animation */
+.scene.active .accent-primary,
+.scene.active .accent-coral,
+.scene.active .accent-teal,
+.scene.active .accent-amber {
+    display: inline-block;
+}
+
+/* Bias flow steps */
+.scene.active .bias-step {
+    animation: cardSlideUp 0.4s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .bias-step:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .bias-step:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .bias-step:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.scene.active .bias-step:nth-child(7) {
+    animation-delay: 1.1s;
+}
+
+.scene.active .bias-arrow {
+    animation: bounceIn 0.4s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .bias-arrow:nth-child(2) {
+    animation-delay: 0.35s;
+}
+
+.scene.active .bias-arrow:nth-child(4) {
+    animation-delay: 0.65s;
+}
+
+.scene.active .bias-arrow:nth-child(6) {
+    animation-delay: 0.95s;
+}
+
+/* Dark scene support (not used in this project but defined for compatibility) */
+.dark-scene {
+    background: #1a1a2e;
+}
+
+.dark-scene .scene-title {
+    color: #e2e8f0;
+}
+
+.dark-scene .light-text {
+    color: #e2e8f0;
+}

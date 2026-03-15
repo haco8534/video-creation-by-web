@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自由意志は幻想なのか？</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Scene 0: タイトルカード | 自由意志は幻想なのか？ -->
+    <div class="scene" id="scene-0">
+        <canvas id="canvas-0" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary stagger-item">INTRODUCTION</div>
+            <h2 class="title-huge stagger-item">「自由意志」は<br><span class="accent-primary">幻想</span>なのか？</h2>
+            <div class="title-sub stagger-item">脳科学が暴いた衝撃の真実</div>
+        </div>
+    </div>
+
+    <!-- Scene 1: テキスト強調 | あなたの脳はもう決めていた -->
+    <div class="scene" id="scene-1">
+        <canvas id="canvas-1" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">あなたが「見よう」と思った<span class="accent-primary">その瞬間</span></div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-coral">0.5秒前</span>に</div>
+            <div class="emphasis-text stagger-item">脳はもう<span class="accent-primary">決めていた</span></div>
+            <div class="emphasis-sub stagger-item">──脳波計で測定された科学的データ</div>
+        </div>
+    </div>
+
+    <!-- Scene 2: 段階的リスト | この動画でわかる3つのこと -->
+    <div class="scene" id="scene-2">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">この動画でわかる<span class="accent-primary">3つ</span>のこと</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text">「自由意志はない」と主張する<span class="accent-primary">脳科学の実験</span>の中身</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">2</div>
+                    <div class="numbered-text">その実験が<span class="accent-coral">大きく誤解されていた</span>という衝撃の反証</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">3</div>
+                    <div class="numbered-text">自由意志がないと信じると<span class="accent-amber">人はどう変わる</span>のか</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 3: タイトルカード | そもそも「自由意志」とは何か -->
+    <div class="scene" id="scene-3">
+        <canvas id="canvas-3" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-teal stagger-item">DEFINITION</div>
+            <h2 class="title-medium stagger-item">そもそも<br><span class="accent-teal">「自由意志」</span>とは何か</h2>
+            <div class="title-sub stagger-item">自分の行動を自分で選んでいるという感覚</div>
+        </div>
+    </div>
+
+    <!-- Scene 4: 横並びカード | 自由意志をめぐる3つの立場 -->
+    <div class="scene" id="scene-4">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">自由意志をめぐる<span class="accent-primary">3つの立場</span></h2>
+            <div class="triple-card">
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-coral">否</div>
+                    <div class="factor-name">ハード決定論</div>
+                    <div class="factor-desc">自由意志は完全に幻想</div>
+                </div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-primary">肯</div>
+                    <div class="factor-name">自由意志論</div>
+                    <div class="factor-desc">自由な選択力がある</div>
+                </div>
+                <div class="factor-card factor-card-highlight stagger-item">
+                    <div class="factor-icon accent-bg-teal">両</div>
+                    <div class="factor-name">両立論</div>
+                    <div class="factor-desc">哲学者の多数派</div>
+                    <div class="factor-badge">MAJORITY</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">PhilPapers Survey: 哲学者の約59%が両立論を支持</div>
+        </div>
+    </div>
+
+    <!-- Scene 5: 段階的リスト | 決定論・両立論・自由意志論 -->
+    <div class="scene" id="scene-5">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">3つの立場の<span class="accent-primary">核心</span></h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle coral-circle">1</div>
+                    <div class="numbered-text"><span class="accent-coral">決定論</span>：すべては因果連鎖で決まる<div class="text-sub">── ドミノ倒しのように</div></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">2</div>
+                    <div class="numbered-text"><span class="accent-primary">自由意志論</span>：人は自由に選べる<div class="text-sub">── 直感に最も近い立場</div></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle teal-circle">3</div>
+                    <div class="numbered-text"><span class="accent-teal">両立論</span>：「強制されていない」＝自由<div class="text-sub">── 自由の定義を再設計</div></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">両立論は「どこからが自由か」を実用的に線引きする</div>
+        </div>
+    </div>
+
+    <!-- Scene 6: タイトルカード | リベット実験──脳は意識に先行する -->
+    <div class="scene" id="scene-6">
+        <canvas id="canvas-6" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral stagger-item">TOPIC 1</div>
+            <h2 class="title-medium stagger-item">リベット実験<br><span class="accent-coral">脳は意識に先行する</span></h2>
+            <div class="title-sub stagger-item">1983年 ── 自由意志論争の火種</div>
+        </div>
+    </div>
+
+    <!-- Scene 7: フロー図 | 脳活動→意識→動作の時系列 -->
+    <div class="scene" id="scene-7">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">リベット実験の<span class="accent-primary">3つの測定</span></h2>
+            <div class="source-badge stagger-item">Libet (1983) Brain, 106(3)</div>
+            <div class="flow-chain">
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">測定 1</div>
+                    <div class="flow-text"><span class="flow-name">脳波</span><br>準備電位（RP）<br><span class="flow-sub">EEGで計測</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">測定 2</div>
+                    <div class="flow-text"><span class="flow-name">意識</span><br>「動かそう」と思った瞬間<br><span class="flow-sub">時計で報告</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">測定 3</div>
+                    <div class="flow-text"><span class="flow-name">動作</span><br>手首が動いた瞬間<br><span class="flow-sub">筋電位で検出</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 8: 数値インパクト | -550ms→-200ms→0ms -->
+    <div class="scene" id="scene-8">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">衝撃のタイムライン</h2>
+            <div class="source-badge stagger-item">Libet (1983) Brain, 106(3), 623-642</div>
+            <!-- Custom SVG: Timeline visualization -->
+            <div class="timeline-visual stagger-item">
+                <svg viewBox="0 0 800 200" class="timeline-svg">
+                    <line x1="50" y1="100" x2="750" y2="100" class="timeline-base" />
+                    <circle cx="150" cy="100" r="24" class="timeline-dot timeline-dot-brain" />
+                    <text x="150" y="105" class="timeline-label">脳</text>
+                    <text x="150" y="60" class="timeline-time accent-fill-coral">-550ms</text>
+                    <text x="150" y="155" class="timeline-desc">準備電位</text>
+                    <line x1="150" y1="124" x2="450" y2="124" class="timeline-gap-line" />
+                    <text x="300" y="140" class="timeline-gap-text">0.35秒のギャップ</text>
+                    <circle cx="450" cy="100" r="24" class="timeline-dot timeline-dot-conscious" />
+                    <text x="450" y="105" class="timeline-label">意識</text>
+                    <text x="450" y="60" class="timeline-time accent-fill-primary">-200ms</text>
+                    <text x="450" y="155" class="timeline-desc">「動かそう」</text>
+                    <circle cx="700" cy="100" r="24" class="timeline-dot timeline-dot-action" />
+                    <text x="700" y="105" class="timeline-label">動作</text>
+                    <text x="700" y="60" class="timeline-time accent-fill-teal">0ms</text>
+                    <text x="700" y="155" class="timeline-desc">手首が動く</text>
+                </svg>
+            </div>
+            <div class="emphasis-sub stagger-item">意識は脳の<span class="accent-coral">後追い</span>をしているだけ？</div>
+        </div>
+    </div>
+
+    <!-- Scene 9: 数値インパクト | 最大10秒前に予測可能 -->
+    <div class="scene" id="scene-9">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">ヘインズの追試（2008）</h2>
+            <div class="source-badge stagger-item">Soon et al. (2008) Nature Neuroscience, 11</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-primary">7</span><span class="num-unit">秒前</span>
+            </div>
+            <div class="emphasis-sub stagger-item">fMRIで<span class="accent-primary">意識的決定の最大7秒前</span>に予測可能</div>
+            <div class="accuracy-visual stagger-item">
+                <div class="accuracy-bar">
+                    <div class="accuracy-fill" style="--w:60%"></div>
+                    <div class="accuracy-label">予測精度 <span class="accent-primary">60%</span>（偶然 = 50%）</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">前頭極皮質（BA10）と頭頂葉（楔前部）の脳活動パターン</div>
+        </div>
+    </div>
+
+    <!-- Scene 10: 引用カード | サポルスキー「自由意志は完全に幻想である」 -->
+    <div class="scene" id="scene-10">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">2023年の断言</h2>
+            <div class="quote-card quote-warning stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">自由意志は<br><span class="accent-coral">完全に幻想だ</span></div>
+                <div class="quote-source">Robert Sapolsky (2023) 『Determined』 Stanford University, Penguin Press</div>
+            </div>
+            <div class="emphasis-sub stagger-item">すべての行為は遺伝子と環境の因果連鎖の不可避的結果</div>
+            <div class="footnote stagger-item">700ページ以上の大著で自由意志の不在を論証</div>
+        </div>
+    </div>
+
+    <!-- Scene 11: タイトルカード | 定説が覆った2012年 -->
+    <div class="scene" id="scene-11">
+        <canvas id="canvas-11" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-teal stagger-item">TOPIC 2</div>
+            <h2 class="title-medium stagger-item">定説が覆った<br><span class="accent-teal">2012年</span></h2>
+            <div class="title-sub stagger-item">準備電位の意味が根本から変わった</div>
+        </div>
+    </div>
+
+    <!-- Scene 12: 比較対照 | 従来の解釈 vs シュルガーの再解釈 -->
+    <div class="scene" id="scene-12">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">準備電位の<span class="accent-primary">解釈が一変</span></h2>
+            <div class="source-badge stagger-item">Schurger et al. (2012) PNAS, 109(42)</div>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge danger-badge">従来</div>
+                    <div class="vs-title">無意識の決定信号</div>
+                    <div class="vs-desc">脳が先に決めていた証拠</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge safe-badge">新解釈</div>
+                    <div class="vs-title">ランダムなノイズ</div>
+                    <div class="vs-desc">神経の揺らぎが閾値超え</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">確率的蓄積モデル（Stochastic Accumulator Model）</div>
+        </div>
+    </div>
+
+    <!-- Scene 13: テキスト強調 | 準備電位は「決定」ではなく「ノイズ」だった -->
+    <div class="scene" id="scene-13">
+        <canvas id="canvas-13" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">準備電位は</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-coral">決定</span>ではなく</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-teal">ノイズ</span>だった</div>
+            <!-- Custom SVG: Neural noise visualization -->
+            <div class="noise-visual stagger-item">
+                <svg viewBox="0 0 600 120" class="noise-svg">
+                    <path d="M0,60 Q30,20 60,60 Q90,100 120,60 Q150,30 180,60 Q210,85 240,60 Q270,25 300,60 Q330,90 360,60 Q390,35 420,60 Q450,80 480,60 Q510,40 540,60 Q570,75 600,60" class="noise-line" fill="none" stroke-width="3"/>
+                    <line x1="0" y1="35" x2="600" y2="35" class="threshold-line" stroke-dasharray="8,8"/>
+                    <text x="605" y="38" class="threshold-text">閾値</text>
+                </svg>
+            </div>
+            <div class="emphasis-sub stagger-item">グラフの傾斜はデータ平均化の産物に過ぎなかった</div>
+        </div>
+    </div>
+
+    <!-- Scene 14: テキスト強調 | リベット実験は「くじ引き」レベルの選択しか調べていない -->
+    <div class="scene" id="scene-14">
+        <canvas id="canvas-14" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">調べていた選択は</div>
+            <div class="trivial-visual stagger-item">
+                <div class="trivial-card trivial-left">
+                    <div class="trivial-icon">🖐</div>
+                    <div class="trivial-label">手首を動かす</div>
+                    <div class="trivial-type accent-coral">恣意的動作</div>
+                </div>
+                <div class="trivial-ne">&ne;</div>
+                <div class="trivial-card trivial-right">
+                    <div class="trivial-icon">💍</div>
+                    <div class="trivial-label">人生の重要な決断</div>
+                    <div class="trivial-type accent-teal">熟慮的判断</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">熟慮を要する意思決定には<span class="accent-teal">準備電位が出ない</span></div>
+            <div class="footnote stagger-item">予測精度60% ── コイン投げと大差なし</div>
+        </div>
+    </div>
+
+    <!-- Scene 15: 引用カード | リベット自身「意識には拒否権がある」 -->
+    <div class="scene" id="scene-15">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">リベット自身の言葉</h2>
+            <div class="quote-card quote-warm stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">意識には<span class="accent-teal">拒否権</span>がある</div>
+                <div class="quote-source">Benjamin Libet (1985) Behavioral and Brain Sciences, 8(4)</div>
+            </div>
+            <!-- Custom visual: Free will vs Free won't -->
+            <div class="freewont-visual stagger-item">
+                <div class="freewont-card">
+                    <div class="freewont-label accent-coral">Free Will</div>
+                    <div class="freewont-desc">行動を開始する力</div>
+                    <div class="freewont-status">疑問</div>
+                </div>
+                <div class="freewont-arrow">&rarr;</div>
+                <div class="freewont-card freewont-highlight">
+                    <div class="freewont-label accent-teal">Free Won't</div>
+                    <div class="freewont-desc">行動をやめる力</div>
+                    <div class="freewont-status">意識にあるかも</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">「自由な意志」が無くても「自由な拒否」はあるかもしれない</div>
+        </div>
+    </div>
+
+    <!-- Scene 16: 比較対照 | 2023年 サポルスキー vs ミッチェル -->
+    <div class="scene" id="scene-16">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">2023年 ── 科学者の意見が<span class="accent-primary">真っ二つ</span></h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge danger-badge">否定派</div>
+                    <div class="vs-title">Sapolsky</div>
+                    <div class="vs-detail">『Determined』</div>
+                    <div class="vs-desc">完全に幻想</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge safe-badge">肯定派</div>
+                    <div class="vs-title">Mitchell</div>
+                    <div class="vs-detail">『Free Agents』</div>
+                    <div class="vs-desc">進化が生んだリアルな能力</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">同じ年、正反対の本が同時出版 ── 科学者でも未決着</div>
+        </div>
+    </div>
+
+    <!-- Scene 17: タイトルカード | 自由意志を捨てた人間はどうなるか -->
+    <div class="scene" id="scene-17">
+        <canvas id="canvas-17" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-amber stagger-item">TOPIC 3</div>
+            <h2 class="title-medium stagger-item">自由意志を捨てた<br>人間は<span class="accent-amber">どうなるか</span></h2>
+            <div class="title-sub stagger-item">信念が行動を変える心理学実験</div>
+        </div>
+    </div>
+
+    <!-- Scene 18: 数値インパクト | カンニングが増加した心理実験 -->
+    <div class="scene" id="scene-18">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">「自由意志はない」と読んだだけで</h2>
+            <div class="source-badge stagger-item">Vohs & Schooler (2008) Psychological Science, 19(1)</div>
+            <!-- Custom SVG: Cheating increase visualization -->
+            <div class="cheat-visual stagger-item">
+                <div class="cheat-group">
+                    <div class="cheat-bar-label">普通の文章</div>
+                    <div class="cheat-bar">
+                        <div class="cheat-fill cheat-control" style="--w:35%"></div>
+                    </div>
+                </div>
+                <div class="cheat-group">
+                    <div class="cheat-bar-label">決定論的文章</div>
+                    <div class="cheat-bar">
+                        <div class="cheat-fill cheat-test" style="--w:65%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="impact-number stagger-item">
+                <span class="accent-coral">カンニング</span>が<span class="big-num accent-coral">有意に</span>増加
+            </div>
+            <div class="footnote stagger-item">「どうせ自分はコントロールできない」 → 倫理のブレーキが外れる</div>
+        </div>
+    </div>
+
+    <!-- Scene 19: 段階的リスト | 攻撃性↑ 助け合い↓ 自制心↓ -->
+    <div class="scene" id="scene-19">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">自由意志を信じないと<span class="accent-coral">こう変わる</span></h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle coral-circle">1</div>
+                    <div class="numbered-text"><span class="accent-coral">攻撃性</span>が上がる<div class="text-sub">Baumeister et al. (2009)</div></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle coral-circle">2</div>
+                    <div class="numbered-text"><span class="accent-coral">助け合い</span>が減る<div class="text-sub">向社会的行動の低下</div></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle coral-circle">3</div>
+                    <div class="numbered-text"><span class="accent-coral">自制心</span>が低下する<div class="text-sub">衝動的行動・依存の増加</div></div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">逆に自由意志を信じる人は仕事・学業成績が高い傾向</div>
+        </div>
+    </div>
+
+    <!-- Scene 20: 比較対照 | 刑罰の根拠：応報主義 vs 結果主義 -->
+    <div class="scene" id="scene-20">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">法律と自由意志 ── <span class="accent-primary">Mens Rea</span></h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge danger-badge">応報主義</div>
+                    <div class="vs-title">罰する</div>
+                    <div class="vs-desc">自分の意思で悪を選んだ</div>
+                    <div class="vs-detail">自由意志が前提</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge safe-badge">結果主義</div>
+                    <div class="vs-title">治す</div>
+                    <div class="vs-desc">再犯防止・社会防衛</div>
+                    <div class="vs-detail">行為は因果の結果</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">自由意志がなければ罰する正当性が消える</div>
+        </div>
+    </div>
+
+    <!-- Scene 21: テキスト強調 | 罰する世界 vs 治す世界 -->
+    <div class="scene" id="scene-21">
+        <canvas id="canvas-21" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item"><span class="accent-coral">罰する</span>世界から</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-teal">治す</span>世界へ</div>
+            <div class="emphasis-sub stagger-item">ドイツ刑法学では両立論が通説</div>
+            <div class="emphasis-sub stagger-item">日本の刑法：心神喪失なら責任を問わない</div>
+            <div class="footnote stagger-item">「常に100%自由」でも「常にゼロ」でもない ── グラデーション</div>
+        </div>
+    </div>
+
+    <!-- Scene 22: タイトルカード | まとめ──「ある or ない」を超えて -->
+    <div class="scene" id="scene-22">
+        <canvas id="canvas-22" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary stagger-item">SUMMARY</div>
+            <h2 class="title-medium stagger-item">まとめ<br><span class="accent-primary">「ある or ない」</span>を超えて</h2>
+        </div>
+    </div>
+
+    <!-- Scene 23: まとめカード | 今日の3つのポイント -->
+    <div class="scene" id="scene-23">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">今日の<span class="accent-primary">3つのポイント</span></h2>
+            <div class="numbered-list">
+                <div class="numbered-item summary-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text">リベット実験の準備電位は<span class="accent-teal">ノイズだった</span><div class="text-sub">シュルガー (2012) が覆した</div></div>
+                </div>
+                <div class="numbered-item summary-item stagger-item">
+                    <div class="number-circle">2</div>
+                    <div class="numbered-text">科学者でも<span class="accent-primary">結論は出ていない</span><div class="text-sub">サポルスキー vs ミッチェル (2023)</div></div>
+                </div>
+                <div class="numbered-item summary-item stagger-item">
+                    <div class="number-circle">3</div>
+                    <div class="numbered-text">「ない」と信じると<span class="accent-coral">行動が悪化する</span><div class="text-sub">カンニング↑ 攻撃性↑ 助け合い↓</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 24: テキスト強調 | 自由意志は二択ではなくグラデーション -->
+    <div class="scene" id="scene-24">
+        <canvas id="canvas-24" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">自由意志は</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-primary">二択</span>ではなく</div>
+            <div class="gradient-visual stagger-item">
+                <div class="gradient-bar">
+                    <span class="gradient-left">完全に幻想</span>
+                    <span class="gradient-right">完全に自由</span>
+                </div>
+            </div>
+            <div class="emphasis-text stagger-item"><span class="accent-teal">グラデーション</span></div>
+            <div class="emphasis-sub stagger-item">大事なのは、より良い選択をしようとする姿勢</div>
+        </div>
+    </div>
+
+    <!-- Scene 25: 引用カード | 哲学者ストローソンの言葉 -->
+    <div class="scene" id="scene-25">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">哲学者ストローソンの言葉</h2>
+            <div class="quote-card quote-warm stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">人間が互いに賞賛し、感謝し、非難し合う営みは<br><span class="accent-teal">自由意志の有無とは無関係に成り立つ</span></div>
+                <div class="quote-source">P.F. Strawson (1962) Proceedings of the British Academy</div>
+            </div>
+            <div class="emphasis-sub stagger-item">自由意志の存在に関わらず、人間関係と道徳は成立する</div>
+        </div>
+    </div>
+
+    <!-- Scene 26: テキスト強調 | あなたの選択は、あなたのものだ -->
+    <div class="scene" id="scene-26">
+        <canvas id="canvas-26" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">自由意志があろうとなかろうと</div>
+            <div class="emphasis-text-large stagger-item">あなたの選択は<br><span class="accent-primary">あなたのもの</span></div>
+            <div class="emphasis-sub stagger-item">── この動画を最後まで見てくれたあなたへ</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

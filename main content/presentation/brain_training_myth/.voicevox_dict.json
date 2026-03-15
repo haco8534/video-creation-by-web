@@ -1,0 +1,42 @@
+[
+    {
+        "surface": "Lumosity",
+        "pronunciation": "ルモシティ",
+        "accent_type": 3
+    },
+    {
+        "surface": "BrainHQ",
+        "pronunciation": "ブレインエイチキュー",
+        "accent_type": 5
+    },
+    {
+        "surface": "Lumos Labs",
+        "pronunciation": "ルモスラブズ",
+        "accent_type": 3
+    },
+    {
+        "surface": "CogniFit",
+        "pronunciation": "コグニフィット",
+        "accent_type": 3
+    },
+    {
+        "surface": "Elevate",
+        "pronunciation": "エレベート",
+        "accent_type": 3
+    },
+    {
+        "surface": "Peak",
+        "pronunciation": "ピーク",
+        "accent_type": 1
+    },
+    {
+        "surface": "BDNF",
+        "pronunciation": "ビーディーエヌエフ",
+        "accent_type": 0
+    },
+    {
+        "surface": "ACTIVE",
+        "pronunciation": "アクティブ",
+        "accent_type": 1
+    }
+]

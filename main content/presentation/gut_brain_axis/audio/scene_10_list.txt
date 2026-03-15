@@ -1,0 +1,5 @@
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/gut_brain_axis/audio/scene_10_00.wav'
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/gut_brain_axis/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/gut_brain_axis/audio/scene_10_01.wav'
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/gut_brain_axis/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/gut_brain_axis/audio/scene_10_02.wav'

@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>「アインシュタインは学校の成績が悪かった」は嘘</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Scene 0: アインシュタインは成績が悪かった？ -->
+    <section class="scene active" id="scene-0">
+        <canvas id="canvas-0" class="bg-canvas"></canvas>
+        <div class="scene-content title-card">
+            <div class="title-label stagger-item">FACT CHECK</div>
+            <h1 class="title-main stagger-item">「アインシュタインは<br>成績が<span class="accent-coral">悪かった</span>」<br>は嘘</h1>
+            <div class="title-accent-line stagger-item"></div>
+            <div class="title-sub stagger-item">Einstein's Report Card — The Truth</div>
+        </div>
+    </section>
+
+    <!-- Scene 1: よくある誤解3つ -->
+    <section class="scene" id="scene-1">
+        <div class="scene-content">
+            <h2 class="section-title stagger-item">よくある<span class="accent-coral">誤解</span></h2>
+            <div class="three-points-grid">
+                <div class="myth-card stagger-item">
+                    <div class="myth-x">X</div>
+                    <div class="myth-text">数学が<br>苦手だった</div>
+                </div>
+                <div class="myth-card stagger-item">
+                    <div class="myth-x">X</div>
+                    <div class="myth-text">勉強に<br>ついていけなかった</div>
+                </div>
+                <div class="myth-card stagger-item">
+                    <div class="myth-x">X</div>
+                    <div class="myth-text">天才は成績が<br>悪いものだ</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">これらはすべて事実と異なる</div>
+        </div>
+    </section>
+
+    <!-- Scene 2: 成績表が残っている -->
+    <section class="scene" id="scene-2">
+        <div class="scene-content center-layout">
+            <div class="emphasis-label stagger-item">EVIDENCE</div>
+            <div class="emphasis-main stagger-item">
+                成績表が<br><span class="accent-primary">実物で残っている</span>
+            </div>
+            <div class="report-card-visual stagger-item">
+                <svg viewBox="0 0 300 200" class="report-svg">
+                    <rect x="20" y="10" width="260" height="180" rx="8" fill="none" stroke="#94a3b8" stroke-width="2" />
+                    <text x="150" y="35" text-anchor="middle" fill="#1a1a2e" font-size="14"
+                        font-weight="700">Maturitatszeugnis 1896</text>
+                    <line x1="40" y1="45" x2="260" y2="45" stroke="#e2e8f0" stroke-width="1" />
+                    <text x="50" y="65" fill="#64748b" font-size="10">Algebra</text>
+                    <text x="230" y="65" fill="#3b82f6" font-size="14" font-weight="900">6</text>
+                    <text x="50" y="85" fill="#64748b" font-size="10">Geometrie</text>
+                    <text x="230" y="85" fill="#3b82f6" font-size="14" font-weight="900">6</text>
+                    <text x="50" y="105" fill="#64748b" font-size="10">Physik</text>
+                    <text x="230" y="105" fill="#3b82f6" font-size="14" font-weight="900">6</text>
+                    <text x="50" y="125" fill="#64748b" font-size="10">Geschichte</text>
+                    <text x="230" y="125" fill="#3b82f6" font-size="14" font-weight="900">6</text>
+                    <text x="50" y="145" fill="#64748b" font-size="10">Chemie</text>
+                    <text x="230" y="145" fill="#14b8a6" font-size="14" font-weight="900">5</text>
+                    <text x="50" y="165" fill="#64748b" font-size="10">Franzosisch</text>
+                    <text x="230" y="165" fill="#f59e0b" font-size="14" font-weight="900">3</text>
+                    <rect x="218" y="52" width="30" height="80" rx="4" fill="rgba(59,130,246,0.08)" />
+                </svg>
+            </div>
+            <div class="emphasis-sub stagger-item">1896年 アーラウ州立学校卒業試験 — Wikimedia Commons</div>
+        </div>
+    </section>
+
+    <!-- Scene 3: ドイツとスイスの採点基準 -->
+    <section class="scene" id="scene-3">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">採点基準の<span class="accent-coral">トリック</span></h2>
+            <div class="grade-compare stagger-item">
+                <div class="grade-card germany">
+                    <div class="grade-flag">DE</div>
+                    <div class="grade-country">ドイツ</div>
+                    <div class="grade-scale">
+                        <span class="grade-best">1</span> = 最高
+                        <span class="grade-worst">6</span> = 最低
+                    </div>
+                </div>
+                <div class="grade-vs stagger-item">VS</div>
+                <div class="grade-card switzerland">
+                    <div class="grade-flag">CH</div>
+                    <div class="grade-country">スイス</div>
+                    <div class="grade-scale">
+                        <span class="grade-best">6</span> = 最高
+                        <span class="grade-worst">1</span> = 最低
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">完全に逆の採点システム</div>
+        </div>
+    </section>
+
+    <!-- Scene 4: 「6」を見て最低点と誤解した？ -->
+    <section class="scene" id="scene-4">
+        <canvas id="canvas-4" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <div class="emphasis-label stagger-item">KEY POINT</div>
+            <div class="emphasis-main stagger-item">
+                スイスの<span class="accent-primary">「6」</span>は<br>最高評価
+            </div>
+            <div class="misread-visual stagger-item">
+                <div class="misread-card wrong">
+                    <div class="misread-label">ドイツ基準で見ると</div>
+                    <div class="misread-grade">6 = <span class="accent-coral">最低!</span></div>
+                </div>
+                <div class="misread-arrow">→</div>
+                <div class="misread-card correct">
+                    <div class="misread-label">実際のスイス基準</div>
+                    <div class="misread-grade">6 = <span class="accent-primary">最高!</span></div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">この勘違いが誤解の一因と考えられている</div>
+        </div>
+    </section>
+
+    <!-- Scene 5: アーラウ校の成績表（科目別） -->
+    <section class="scene" id="scene-5">
+        <div class="scene-content">
+            <h2 class="section-title stagger-item">アーラウ校 成績表<span class="accent-primary">（1896年）</span></h2>
+            <div class="grade-table">
+                <div class="grade-row grade-header stagger-item">
+                    <div class="grade-cell subject-cell">科目</div>
+                    <div class="grade-cell score-cell">評価</div>
+                    <div class="grade-cell bar-cell">6段階</div>
+                </div>
+                <div class="grade-row stagger-item">
+                    <div class="grade-cell subject-cell">代数</div>
+                    <div class="grade-cell score-cell score-max">6</div>
+                    <div class="grade-cell bar-cell">
+                        <div class="score-bar" style="--w:100%">
+                            <div class="score-bar-fill bar-max"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grade-row stagger-item">
+                    <div class="grade-cell subject-cell">幾何学</div>
+                    <div class="grade-cell score-cell score-max">6</div>
+                    <div class="grade-cell bar-cell">
+                        <div class="score-bar" style="--w:100%">
+                            <div class="score-bar-fill bar-max"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grade-row stagger-item">
+                    <div class="grade-cell subject-cell">描写幾何学</div>
+                    <div class="grade-cell score-cell score-max">6</div>
+                    <div class="grade-cell bar-cell">
+                        <div class="score-bar" style="--w:100%">
+                            <div class="score-bar-fill bar-max"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grade-row stagger-item">
+                    <div class="grade-cell subject-cell">物理</div>
+                    <div class="grade-cell score-cell score-max">6</div>
+                    <div class="grade-cell bar-cell">
+                        <div class="score-bar" style="--w:100%">
+                            <div class="score-bar-fill bar-max"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grade-row stagger-item">
+                    <div class="grade-cell subject-cell">歴史</div>
+                    <div class="grade-cell score-cell score-max">6</div>
+                    <div class="grade-cell bar-cell">
+                        <div class="score-bar" style="--w:100%">
+                            <div class="score-bar-fill bar-max"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grade-row stagger-item">
+                    <div class="grade-cell subject-cell">ドイツ語</div>
+                    <div class="grade-cell score-cell score-high">5</div>
+                    <div class="grade-cell bar-cell">
+                        <div class="score-bar" style="--w:83%">
+                            <div class="score-bar-fill bar-high"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grade-row stagger-item">
+                    <div class="grade-cell subject-cell">化学</div>
+                    <div class="grade-cell score-cell score-high">5</div>
+                    <div class="grade-cell bar-cell">
+                        <div class="score-bar" style="--w:83%">
+                            <div class="score-bar-fill bar-high"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grade-row stagger-item">
+                    <div class="grade-cell subject-cell">フランス語</div>
+                    <div class="grade-cell score-cell score-low">3</div>
+                    <div class="grade-cell bar-cell">
+                        <div class="score-bar" style="--w:50%">
+                            <div class="score-bar-fill bar-low"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="source-badge stagger-item">Wikimedia Commons — 成績表原本画像</div>
+        </div>
+    </section>
+
+    <!-- Scene 6: 得意科目と苦手科目 -->
+    <section class="scene" id="scene-6">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">得意と苦手</h2>
+            <div class="strength-weakness stagger-item">
+                <div class="sw-card strength">
+                    <div class="sw-badge safe-badge">得意</div>
+                    <div class="sw-items">
+                        <div class="sw-item">代数 <span class="accent-primary">6</span></div>
+                        <div class="sw-item">幾何学 <span class="accent-primary">6</span></div>
+                        <div class="sw-item">物理 <span class="accent-primary">6</span></div>
+                        <div class="sw-item">歴史 <span class="accent-primary">6</span></div>
+                    </div>
+                </div>
+                <div class="sw-card weakness">
+                    <div class="sw-badge danger-badge">苦手</div>
+                    <div class="sw-items">
+                        <div class="sw-item">フランス語 <span class="accent-amber">3</span></div>
+                        <div class="sw-item">地理 <span class="accent-amber">4</span></div>
+                        <div class="sw-item">美術 <span class="accent-amber">4</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">苦手科目はあるが「成績が悪い」とは程遠い</div>
+        </div>
+    </section>
+
+    <!-- Scene 7: 母ポーリーネの手紙 -->
+    <section class="scene" id="scene-7">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">母親の手紙</h2>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">昨日アルバートの成績表を<br>受け取ったけど、<br><span class="accent-primary">また一番だったの</span></div>
+                <div class="quote-source">ポーリーネ・アインシュタイン — 妹への手紙（1886年頃）</div>
+            </div>
+            <div class="emphasis-sub stagger-item">The Collected Papers of Albert Einstein</div>
+        </div>
+    </section>
+
+    <!-- Scene 8: 12歳でユークリッド幾何学を独学 -->
+    <section class="scene" id="scene-8">
+        <div class="scene-content center-layout">
+            <div class="impact-label stagger-item">MATHEMATICS</div>
+            <div class="impact-number-group">
+                <span class="impact-number stagger-item">12</span>
+                <span class="impact-number-unit stagger-item">歳</span>
+            </div>
+            <div class="impact-desc stagger-item">ユークリッド幾何学を<br><span class="accent-primary">独学でマスター</span></div>
+            <div class="timeline-badge stagger-item">
+                <svg viewBox="0 0 400 60" class="timeline-svg">
+                    <line x1="20" y1="30" x2="380" y2="30" stroke="#e2e8f0" stroke-width="2" />
+                    <circle cx="80" cy="30" r="8" fill="#3b82f6" class="tl-dot" />
+                    <text x="80" y="55" text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="700">9歳</text>
+                    <text x="80" y="18" text-anchor="middle" fill="#64748b" font-size="8">ピタゴラス証明</text>
+                    <circle cx="180" cy="30" r="10" fill="#3b82f6" class="tl-dot tl-active" />
+                    <text x="180" y="55" text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="700">12歳</text>
+                    <text x="180" y="18" text-anchor="middle" fill="#1a1a2e" font-size="8" font-weight="700">幾何学</text>
+                    <circle cx="280" cy="30" r="10" fill="#6366f1" class="tl-dot" />
+                    <text x="280" y="55" text-anchor="middle" fill="#6366f1" font-size="10" font-weight="700">14歳</text>
+                    <text x="280" y="18" text-anchor="middle" fill="#64748b" font-size="8">微積分</text>
+                </svg>
+            </div>
+            <div class="emphasis-sub stagger-item">親戚にもらった教科書を夏休みに読破</div>
+        </div>
+    </section>
+
+    <!-- Scene 9: 14歳で微分積分をマスター -->
+    <section class="scene" id="scene-9">
+        <canvas id="canvas-9" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <div class="emphasis-label stagger-item">PRODIGY</div>
+            <div class="emphasis-main stagger-item">
+                <span class="accent-primary">14歳</span>で<br>微分積分をマスター
+            </div>
+            <div class="calc-visual stagger-item">
+                <div class="calc-compare">
+                    <div class="calc-card">
+                        <div class="calc-age accent-primary">14歳</div>
+                        <div class="calc-who">アインシュタイン</div>
+                        <div class="calc-what">独学で微積分習得</div>
+                    </div>
+                    <div class="calc-vs">vs</div>
+                    <div class="calc-card">
+                        <div class="calc-age accent-amber">17-18歳</div>
+                        <div class="calc-who">日本の高校生</div>
+                        <div class="calc-what">授業で微積分を学習</div>
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">本人証言「15歳前に微積分をマスターした」</div>
+        </div>
+    </section>
+
+    <!-- Scene 10: でも苦手科目もあった -->
+    <section class="scene" id="scene-10">
+        <div class="scene-content center-layout">
+            <div class="emphasis-label stagger-item">BALANCE</div>
+            <div class="emphasis-main stagger-item">
+                天才でも<br><span class="accent-amber">苦手はある</span>
+            </div>
+            <div class="weakness-detail stagger-item">
+                <div class="weak-item">
+                    <div class="weak-subject">フランス語</div>
+                    <div class="weak-score accent-amber">3 / 6</div>
+                    <div class="weak-note">合格ギリギリ</div>
+                </div>
+                <div class="weak-item">
+                    <div class="weak-subject">地理・美術</div>
+                    <div class="weak-score accent-amber">4 / 6</div>
+                    <div class="weak-note">標準レベル</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">「苦手科目がある」と「成績が悪い」はまったく違う</div>
+        </div>
+    </section>
+
+    <!-- Scene 11: ETH入試の真相 -->
+    <section class="scene" id="scene-11">
+        <div class="scene-content">
+            <h2 class="section-title stagger-item">ETH入試の<span class="accent-coral">真相</span></h2>
+            <div class="eth-flow">
+                <div class="eth-step stagger-item">
+                    <div class="eth-year">1895</div>
+                    <div class="eth-content">
+                        <div class="eth-title">16歳で受験</div>
+                        <div class="eth-desc">正規の受験年齢より2歳若い</div>
+                    </div>
+                </div>
+                <div class="eth-arrow stagger-item">
+                    <svg viewBox="0 0 40 30">
+                        <path d="M5 15 L30 15 L22 7 M30 15 L22 23" stroke="currentColor" stroke-width="2" fill="none" />
+                    </svg>
+                </div>
+                <div class="eth-step stagger-item">
+                    <div class="eth-year eth-fail">不合格</div>
+                    <div class="eth-content">
+                        <div class="eth-title">総合点が不足</div>
+                        <div class="eth-desc">フランス語・植物学・動物学で失点</div>
+                    </div>
+                </div>
+                <div class="eth-arrow stagger-item">
+                    <svg viewBox="0 0 40 30">
+                        <path d="M5 15 L30 15 L22 7 M30 15 L22 23" stroke="currentColor" stroke-width="2" fill="none" />
+                    </svg>
+                </div>
+                <div class="eth-step stagger-item">
+                    <div class="eth-year eth-pass">合格</div>
+                    <div class="eth-content">
+                        <div class="eth-title">翌年アーラウ経由で入学</div>
+                        <div class="eth-desc">数学・物理は最高ランク</div>
+                    </div>
+                </div>
+            </div>
+            <div class="source-badge stagger-item">ETH Zurich / Wikipedia</div>
+        </div>
+    </section>
+
+    <!-- Scene 12: 入試 理系は最高 vs 文系で不合格 -->
+    <section class="scene" id="scene-12">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">入試の中身</h2>
+            <div class="vs-layout stagger-item">
+                <div class="vs-side pass-side">
+                    <div class="vs-badge safe-badge">合格科目</div>
+                    <div class="vs-title">数学・物理</div>
+                    <div class="vs-result safe">最高ランク</div>
+                </div>
+                <div class="vs-center-badge stagger-item">
+                    <div class="vs-badge-circle">VS</div>
+                </div>
+                <div class="vs-side fail-side">
+                    <div class="vs-badge danger-badge">不合格科目</div>
+                    <div class="vs-title">フランス語・植物学</div>
+                    <div class="vs-result danger">点数不足</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">「数学が苦手」とは正反対の結果</div>
+        </div>
+    </section>
+
+    <!-- Scene 13: 「成績が悪い」ではなく「興味がないことはやらない」 -->
+    <section class="scene" id="scene-13">
+        <canvas id="canvas-13" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <div class="emphasis-label stagger-item">INSIGHT</div>
+            <div class="emphasis-main stagger-item">
+                「成績が悪い」ではなく<br><span class="accent-primary">「好きなことだけ突き抜けていた」</span>
+            </div>
+            <div class="emphasis-sub stagger-item">翌年アーラウ予備校経由でETHに合格</div>
+        </div>
+    </section>
+
+    <!-- Scene 14: 嘘が広まった3つの原因 -->
+    <section class="scene" id="scene-14">
+        <canvas id="canvas-14" class="bg-canvas"></canvas>
+        <div class="scene-content chapter-title">
+            <div class="chapter-number stagger-item">CHAPTER</div>
+            <h2 class="chapter-name stagger-item">嘘が広まった<br><span class="accent-coral">3つの原因</span></h2>
+            <div class="chapter-line stagger-item"></div>
+            <div class="chapter-sub stagger-item">Why Did the Myth Spread?</div>
+        </div>
+    </section>
+
+    <!-- Scene 15: 「この少年は何の成果も上げられない」 -->
+    <section class="scene" id="scene-15">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">原因1: 教師との衝突</h2>
+            <div class="quote-card quote-warning stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">この少年は人生で<br><span class="accent-coral">何の成果も上げられないだろう</span></div>
+                <div class="quote-source">ルイトポルト・ギムナジウムの教師 — 1890年代</div>
+            </div>
+            <div class="emphasis-sub stagger-item">後に20世紀最大の物理学者になる人への言葉</div>
+        </div>
+    </section>
+
+    <!-- Scene 16: 教師を「軍曹」、生徒を「兵士」と呼んだ -->
+    <section class="scene dark-scene" id="scene-16">
+        <div class="scene-content center-layout">
+            <div class="emphasis-label light-text stagger-item">1890年代ドイツ</div>
+            <div class="emphasis-main light-text stagger-item">
+                教師を<span class="accent-amber">「軍曹」</span><br>生徒を<span class="accent-amber">「兵士」</span>と呼んだ
+            </div>
+            <div class="military-visual stagger-item">
+                <div class="mil-card">
+                    <div class="mil-icon">
+                        <svg viewBox="0 0 60 60">
+                            <rect x="15" y="10" width="30" height="40" rx="4" fill="none" stroke="currentColor"
+                                stroke-width="2" />
+                            <line x1="15" y1="20" x2="45" y2="20" stroke="currentColor" stroke-width="1.5" />
+                            <line x1="30" y1="20" x2="30" y2="50" stroke="currentColor" stroke-width="1"
+                                stroke-dasharray="3" />
+                        </svg>
+                    </div>
+                    <div class="mil-text light-text">暗記中心</div>
+                </div>
+                <div class="mil-card">
+                    <div class="mil-icon">
+                        <svg viewBox="0 0 60 60">
+                            <circle cx="30" cy="20" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+                            <line x1="30" y1="30" x2="30" y2="45" stroke="currentColor" stroke-width="2" />
+                            <line x1="20" y1="55" x2="40" y2="55" stroke="currentColor" stroke-width="2" />
+                            <line x1="15" y1="38" x2="45" y2="38" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="mil-text light-text">絶対服従</div>
+                </div>
+                <div class="mil-card">
+                    <div class="mil-icon">
+                        <svg viewBox="0 0 60 60">
+                            <circle cx="30" cy="30" r="20" fill="none" stroke="currentColor" stroke-width="2" />
+                            <line x1="18" y1="18" x2="42" y2="42" stroke="#ef4444" stroke-width="2.5" />
+                            <text x="30" y="34" text-anchor="middle" fill="currentColor" font-size="12">?</text>
+                        </svg>
+                    </div>
+                    <div class="mil-text light-text">質問禁止</div>
+                </div>
+            </div>
+            <div class="emphasis-sub light-text stagger-item">好奇心旺盛なアインシュタインには地獄だった</div>
+        </div>
+    </section>
+
+    <!-- Scene 17: 15歳で中退した事実 -->
+    <section class="scene" id="scene-17">
+        <div class="scene-content center-layout">
+            <div class="impact-label stagger-item">1894年</div>
+            <div class="impact-number-group">
+                <span class="impact-number stagger-item">15</span>
+                <span class="impact-number-unit stagger-item">歳で中退</span>
+            </div>
+            <div class="impact-desc stagger-item">ルイトポルト・ギムナジウムを<br>卒業資格なく退学</div>
+            <div class="emphasis-sub stagger-item">ついていけなかったのではなく教育方針に耐えられなかった</div>
+        </div>
+    </section>
+
+    <!-- Scene 18: でもアーラウで花開いた -->
+    <section class="scene" id="scene-18">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">環境が変わると<span class="accent-primary">花開く</span></h2>
+            <div class="env-compare stagger-item">
+                <div class="env-card env-bad">
+                    <div class="env-label">ドイツ・ギムナジウム</div>
+                    <div class="env-traits">
+                        <div class="env-trait">権威主義</div>
+                        <div class="env-trait">暗記中心</div>
+                        <div class="env-trait">探究心を抑圧</div>
+                    </div>
+                    <div class="env-result accent-coral">中退</div>
+                </div>
+                <div class="env-arrow stagger-item">→</div>
+                <div class="env-card env-good">
+                    <div class="env-label">スイス・アーラウ</div>
+                    <div class="env-traits">
+                        <div class="env-trait">自由な校風</div>
+                        <div class="env-trait">探究重視</div>
+                        <div class="env-trait">個性を尊重</div>
+                    </div>
+                    <div class="env-result accent-primary">全科目最高評価</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">同じ人物でも環境で結果が変わる</div>
+        </div>
+    </section>
+
+    <!-- Scene 19: 1935年 Ripley's Believe It or Not! -->
+    <section class="scene" id="scene-19">
+        <div class="scene-content center-layout">
+            <div class="impact-label stagger-item">1935年 — 転換点</div>
+            <div class="ripley-visual stagger-item">
+                <div class="ripley-card">
+                    <div class="ripley-header">Ripley's Believe It or Not!</div>
+                    <div class="ripley-quote">
+                        「最も偉大な現存する数学者は<br><span class="accent-coral">数学で落第した</span>」
+                    </div>
+                    <div class="ripley-note">世界中の新聞に掲載</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">原因2: 超有名メディアの誤報が世界に拡散</div>
+        </div>
+    </section>
+
+    <!-- Scene 20: アインシュタイン本人の反論 -->
+    <section class="scene" id="scene-20">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">本人の<span class="accent-primary">反論</span></h2>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">私は数学で落第したことは<br><span class="accent-primary">一度もない</span><br>15歳前に微積分をマスターしていた
+                </div>
+                <div class="quote-source">アルベルト・アインシュタイン — 1935年</div>
+            </div>
+            <div class="emphasis-sub stagger-item">本人が明確に否定したのに嘘は止まらなかった</div>
+        </div>
+    </section>
+
+    <!-- Scene 21: キャッチーな嘘は訂正より速く広まる -->
+    <section class="scene" id="scene-21">
+        <canvas id="canvas-21" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <div class="emphasis-label stagger-item">MEDIA DYNAMICS</div>
+            <div class="emphasis-main stagger-item">
+                <span class="accent-coral">キャッチーな嘘</span>は<br>地味な訂正より速く広まる
+            </div>
+            <div class="spread-bars stagger-item">
+                <div class="spread-row">
+                    <div class="spread-label">「天才なのに落ちこぼれ」</div>
+                    <div class="spread-track">
+                        <div class="spread-fill spread-myth" style="--w:90%"></div>
+                    </div>
+                </div>
+                <div class="spread-row">
+                    <div class="spread-label">「普通に成績良かった」</div>
+                    <div class="spread-track">
+                        <div class="spread-fill spread-truth" style="--w:15%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">事実より物語が勝ってしまう</div>
+        </div>
+    </section>
+
+    <!-- Scene 22: 3つ目の原因：事実の断片の歪曲 -->
+    <section class="scene" id="scene-22">
+        <div class="scene-content">
+            <h2 class="section-title stagger-item">原因3: 事実の<span class="accent-coral">断片</span>の歪曲</h2>
+            <div class="fragment-list">
+                <div class="fragment-item stagger-item">
+                    <div class="fragment-fact">
+                        <div class="fragment-badge">事実</div>
+                        <div class="fragment-text">入試に落ちた</div>
+                    </div>
+                    <div class="fragment-arrow">→</div>
+                    <div class="fragment-lost">
+                        <div class="fragment-badge lost-badge">消えた文脈</div>
+                        <div class="fragment-text accent-primary">数学は最高点だった</div>
+                    </div>
+                </div>
+                <div class="fragment-item stagger-item">
+                    <div class="fragment-fact">
+                        <div class="fragment-badge">事実</div>
+                        <div class="fragment-text">中退した</div>
+                    </div>
+                    <div class="fragment-arrow">→</div>
+                    <div class="fragment-lost">
+                        <div class="fragment-badge lost-badge">消えた文脈</div>
+                        <div class="fragment-text accent-primary">教育方針の問題だった</div>
+                    </div>
+                </div>
+                <div class="fragment-item stagger-item">
+                    <div class="fragment-fact">
+                        <div class="fragment-badge">事実</div>
+                        <div class="fragment-text">教師と衝突</div>
+                    </div>
+                    <div class="fragment-arrow">→</div>
+                    <div class="fragment-lost">
+                        <div class="fragment-badge lost-badge">消えた文脈</div>
+                        <div class="fragment-text accent-primary">暗記教育への正当な批判</div>
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">残ったのは「落ちた」「辞めた」「衝突した」のネガティブな断片だけ</div>
+        </div>
+    </section>
+
+    <!-- Scene 23: 2つの心理バイアス -->
+    <section class="scene" id="scene-23">
+        <canvas id="canvas-23" class="bg-canvas"></canvas>
+        <div class="scene-content chapter-title">
+            <div class="chapter-number stagger-item">PSYCHOLOGY</div>
+            <h2 class="chapter-name stagger-item">人はなぜ<br><span class="accent-coral">信じたがるのか</span></h2>
+            <div class="chapter-line stagger-item"></div>
+            <div class="chapter-sub stagger-item">2つの心理バイアス</div>
+        </div>
+    </section>
+
+    <!-- Scene 24: アンダードッグ効果 -->
+    <section class="scene" id="scene-24">
+        <div class="scene-content center-layout">
+            <div class="emphasis-label stagger-item">BIAS 01</div>
+            <div class="emphasis-main stagger-item">
+                <span class="accent-primary">アンダードッグ効果</span>
+            </div>
+            <div class="underdog-visual stagger-item">
+                <div class="underdog-desc">不利な立場の人を応援したくなる心理</div>
+                <div class="underdog-example">
+                    <svg viewBox="0 0 300 80" class="underdog-svg">
+                        <circle cx="50" cy="40" r="20" fill="rgba(59,130,246,0.1)" stroke="#3b82f6" stroke-width="2"
+                            class="ud-small" />
+                        <text x="50" y="44" text-anchor="middle" fill="#3b82f6" font-size="9"
+                            font-weight="700">弱者</text>
+                        <text x="150" y="44" text-anchor="middle" fill="#ef4444" font-size="18"
+                            font-weight="900">VS</text>
+                        <circle cx="250" cy="40" r="30" fill="rgba(239,68,68,0.1)" stroke="#ef4444" stroke-width="2" />
+                        <text x="250" y="44" text-anchor="middle" fill="#ef4444" font-size="9"
+                            font-weight="700">強者</text>
+                        <path d="M55 15 Q100 -5 145 15" fill="none" stroke="#f59e0b" stroke-width="2"
+                            stroke-dasharray="4" />
+                        <text x="100" y="8" text-anchor="middle" fill="#f59e0b" font-size="8">応援!</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">日本語では「判官贔屓」に近い概念</div>
+        </div>
+    </section>
+
+    <!-- Scene 25: 「天才＝元落ちこぼれ」が希望を生む構造 -->
+    <section class="scene" id="scene-25">
+        <div class="scene-content center-layout">
+            <div class="emphasis-label stagger-item">WHY WE BELIEVE</div>
+            <div class="hope-flow stagger-item">
+                <div class="hope-step">
+                    <div class="hope-text">アインシュタインも<br>昔は成績が悪かった</div>
+                </div>
+                <div class="hope-arrow">→</div>
+                <div class="hope-step hope-result">
+                    <div class="hope-text">今ダメでも<br><span class="accent-primary">将来は大丈夫</span></div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">心理的に「信じたい」が事実確認より先に来る</div>
+        </div>
+    </section>
+
+    <!-- Scene 26: 生存者バイアス -->
+    <section class="scene" id="scene-26">
+        <div class="scene-content center-layout">
+            <div class="emphasis-label stagger-item">BIAS 02</div>
+            <div class="emphasis-main stagger-item">
+                <span class="accent-primary">生存者バイアス</span>
+            </div>
+            <div class="survivor-visual stagger-item">
+                <svg viewBox="0 0 400 150" class="survivor-svg">
+                    <text x="200" y="20" text-anchor="middle" fill="#64748b" font-size="11">落ちこぼれからの挑戦者</text>
+                    <circle cx="60" cy="80" r="15" fill="rgba(239,68,68,0.1)" stroke="#e2e8f0" stroke-width="1" />
+                    <circle cx="120" cy="80" r="15" fill="rgba(239,68,68,0.1)" stroke="#e2e8f0" stroke-width="1" />
+                    <circle cx="180" cy="80" r="15" fill="rgba(239,68,68,0.1)" stroke="#e2e8f0" stroke-width="1" />
+                    <circle cx="240" cy="80" r="15" fill="rgba(239,68,68,0.1)" stroke="#e2e8f0" stroke-width="1" />
+                    <circle cx="300" cy="80" r="15" fill="rgba(239,68,68,0.1)" stroke="#e2e8f0" stroke-width="1" />
+                    <circle cx="340" cy="80" r="18" fill="rgba(59,130,246,0.15)" stroke="#3b82f6" stroke-width="2.5"
+                        class="survivor-success" />
+                    <text x="340" y="84" text-anchor="middle" fill="#3b82f6" font-size="8" font-weight="700">成功</text>
+                    <text x="170" y="120" text-anchor="middle" fill="#94a3b8" font-size="10">無名のまま</text>
+                    <text x="340" y="120" text-anchor="middle" fill="#3b82f6" font-size="10"
+                        font-weight="700">伝説化</text>
+                    <text x="200" y="145" text-anchor="middle" fill="#ef4444" font-size="9">成功した1人だけが記憶に残る</text>
+                </svg>
+            </div>
+            <div class="emphasis-sub stagger-item">同じように苦労した無数の人は忘れ去られる</div>
+        </div>
+    </section>
+
+    <!-- Scene 27: エジソン vs チャーチル vs アインシュタイン -->
+    <section class="scene" id="scene-27">
+        <div class="scene-content">
+            <h2 class="section-title stagger-item">本当の落ちこぼれは<span class="accent-coral">誰？</span></h2>
+            <div class="genius-compare">
+                <div class="genius-card stagger-item">
+                    <div class="genius-name">エジソン</div>
+                    <div class="genius-badge danger-badge">本当の落ちこぼれ</div>
+                    <div class="genius-detail">小学校を3ヶ月で退学</div>
+                </div>
+                <div class="genius-card stagger-item">
+                    <div class="genius-name">チャーチル</div>
+                    <div class="genius-badge danger-badge">本当の落ちこぼれ</div>
+                    <div class="genius-detail">ラテン語試験が白紙</div>
+                </div>
+                <div class="genius-card genius-einstein stagger-item">
+                    <div class="genius-name">アインシュタイン</div>
+                    <div class="genius-badge safe-badge">反逆者</div>
+                    <div class="genius-detail">理数系は全科目最高評価</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">アインシュタインだけが「落ちこぼれ」ではなかった</div>
+        </div>
+    </section>
+
+    <!-- Scene 28: チャーチルの落ちこぼれは事実 -->
+    <section class="scene" id="scene-28">
+        <div class="scene-content center-layout">
+            <h2 class="section-title stagger-item">チャーチルの学業</h2>
+            <div class="churchill-facts stagger-item">
+                <div class="churchill-fact">
+                    <div class="churchill-icon accent-coral">X</div>
+                    <div class="churchill-text">ラテン語試験で<span class="accent-coral">名前以外白紙</span></div>
+                </div>
+                <div class="churchill-fact">
+                    <div class="churchill-icon accent-coral">X</div>
+                    <div class="churchill-text">「最も落ちこぼれのクラス」に配属</div>
+                </div>
+                <div class="churchill-fact">
+                    <div class="churchill-icon accent-amber">!</div>
+                    <div class="churchill-text">軍事教練や射撃では才能を発揮</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">エジソン・チャーチルの話と混同された</div>
+        </div>
+    </section>
+
+    <!-- Scene 29: アインシュタインは「落ちこぼれ」ではなく「反逆者」 -->
+    <section class="scene" id="scene-29">
+        <canvas id="canvas-29" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <div class="emphasis-label stagger-item">CONCLUSION</div>
+            <div class="emphasis-main stagger-item">
+                「落ちこぼれ」ではなく<br><span class="accent-primary">「反逆者」</span>だった
+            </div>
+            <div class="rebel-visual stagger-item">
+                <div class="rebel-card crossed">
+                    <div class="rebel-text">落ちこぼれ</div>
+                </div>
+                <div class="rebel-arrow">→</div>
+                <div class="rebel-card correct-rebel">
+                    <div class="rebel-text accent-primary">反逆者</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">事実ではなく「信じたい物語」を選んでいた</div>
+        </div>
+    </section>
+
+    <!-- Scene 30: 冒頭の問いへの回答 -->
+    <section class="scene" id="scene-30">
+        <canvas id="canvas-30" class="bg-canvas"></canvas>
+        <div class="scene-content chapter-title">
+            <div class="chapter-number stagger-item">ANSWER</div>
+            <h2 class="chapter-name stagger-item">答えは明確<br><span class="accent-coral">嘘</span>でした</h2>
+            <div class="chapter-line stagger-item"></div>
+        </div>
+    </section>
+
+    <!-- Scene 31: 今日の3つのポイント -->
+    <section class="scene" id="scene-31">
+        <div class="scene-content">
+            <h2 class="section-title stagger-item">今日の<span class="accent-primary">3つのポイント</span></h2>
+            <div class="summary-list">
+                <div class="summary-item stagger-item">
+                    <div class="summary-num">1</div>
+                    <div class="summary-content">
+                        <div class="summary-title">成績表は実在する</div>
+                        <div class="summary-text">理数系は全科目最高評価（6/6）</div>
+                    </div>
+                </div>
+                <div class="summary-item stagger-item">
+                    <div class="summary-num">2</div>
+                    <div class="summary-content">
+                        <div class="summary-title">嘘が広まった3つの原因</div>
+                        <div class="summary-text">採点基準の逆転 / Ripley's誤報 / 事実の歪曲</div>
+                    </div>
+                </div>
+                <div class="summary-item stagger-item">
+                    <div class="summary-num">3</div>
+                    <div class="summary-content">
+                        <div class="summary-title">心理バイアスの影響</div>
+                        <div class="summary-text">アンダードッグ効果 / 生存者バイアス</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scene 32: 有名な話＝事実ではない -->
+    <section class="scene" id="scene-32">
+        <canvas id="canvas-32" class="bg-canvas"></canvas>
+        <div class="scene-content center-layout">
+            <div class="emphasis-label stagger-item">CORE MESSAGE</div>
+            <div class="emphasis-main stagger-item">
+                「有名な話」<br>イコール<br><span class="accent-coral">「事実」ではない</span>
+            </div>
+            <div class="emphasis-sub stagger-item">大切なのは「本当かな？」と一度立ち止まること</div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920">
+  <title>記憶は「思い出す」たびに変わるという衝撃</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== Scene 0: タイトルカード ===== -->
+<section class="scene" id="scene-0">
+  <canvas id="canvas-0" class="scene-canvas"></canvas>
+  <div class="scene-content title-card">
+    <div class="title-sub stagger-item">脳科学が明かす衝撃の真実</div>
+    <h1 class="title-huge stagger-item">記憶は<span class="highlight-text">「思い出す」</span>たびに<br>変わるという衝撃</h1>
+    <div class="title-accent stagger-item">Memory Reconsolidation</div>
+    <div class="source-badge stagger-item">Nader et al., 2000 / Loftus, 1974 / Talarico & Rubin, 2003</div>
+  </div>
+</section>
+
+<!-- ===== Scene 1: テキスト強調 ===== -->
+<section class="scene" id="scene-1">
+  <canvas id="canvas-1" class="scene-canvas"></canvas>
+  <div class="scene-content text-emphasis">
+    <div class="emphasis-icon stagger-item">🧠</div>
+    <h2 class="emphasis-title stagger-item">その記憶、<span class="highlight-text">本当に正確？</span></h2>
+    <p class="emphasis-body stagger-item">「はっきり覚えている」という感覚は<br><span class="text-danger">危険な思い込み</span>かもしれない</p>
+    <div class="emphasis-note stagger-item">「記憶はあなたが思っているほど正確じゃない」</div>
+  </div>
+</section>
+
+<!-- ===== Scene 2: 数値インパクト ===== -->
+<section class="scene" id="scene-2">
+  <div class="scene-content number-impact">
+    <div class="impact-label stagger-item">偽記憶を形成した被験者の割合</div>
+    <div class="impact-number stagger-item"><span class="big-num">30</span><span class="big-unit">%</span></div>
+    <div class="impact-bar-container stagger-item">
+      <div class="impact-bar" style="--bar-width: 30%">
+        <span class="bar-label">約30%が存在しない出来事を「覚えている」と回答</span>
+      </div>
+    </div>
+    <div class="impact-detail stagger-item">記憶操作技法にさらされた被験者のメタ分析結果</div>
+    <div class="source-badge stagger-item">出典: Wade et al. メタ分析</div>
+  </div>
+</section>
+
+<!-- ===== Scene 3: テキスト強調 ===== -->
+<section class="scene" id="scene-3">
+  <canvas id="canvas-3" class="scene-canvas"></canvas>
+  <div class="scene-content text-emphasis">
+    <h2 class="emphasis-title stagger-item">記憶は<span class="highlight-text">保存された動画</span>じゃない</h2>
+    <div class="emphasis-blocks stagger-item">
+      <div class="em-block">思い出すたびに</div>
+      <div class="em-arrow">→</div>
+      <div class="em-block accent">脳がこっそり書き換え</div>
+      <div class="em-arrow">→</div>
+      <div class="em-block danger">本人は気づかない</div>
+    </div>
+    <p class="emphasis-body stagger-item">記憶に対する見方が180度変わる</p>
+  </div>
+</section>
+
+<!-- ===== Scene 4: 比較対照 ===== -->
+<section class="scene" id="scene-4">
+  <div class="scene-content vs-container">
+    <h2 class="vs-title stagger-item">記憶モデルの比較</h2>
+    <div class="vs-cards">
+      <div class="vs-card left stagger-item">
+        <div class="vs-card-header">ビデオカメラモデル</div>
+        <div class="vs-card-icon">📹</div>
+        <ul class="vs-list">
+          <li>出来事をそのまま録画</li>
+          <li>再生ボタンで正確に再生</li>
+          <li>記憶 = 事実のコピー</li>
+        </ul>
+        <div class="vs-verdict wrong">✗ 否定済み</div>
+      </div>
+      <div class="vs-divider stagger-item">VS</div>
+      <div class="vs-card right stagger-item">
+        <div class="vs-card-header">構成モデル</div>
+        <div class="vs-card-icon">🧩</div>
+        <ul class="vs-list">
+          <li>断片をつなぎ合わせて再構成</li>
+          <li>思い出すたびに内容が変わる</li>
+          <li>記憶 = 現在の自分が作る物語</li>
+        </ul>
+        <div class="vs-verdict correct">✓ 科学的に支持</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Scene 5: フロー図 ===== -->
+<section class="scene" id="scene-5">
+  <div class="scene-content flow-diagram">
+    <h2 class="flow-title stagger-item">バートレットの「幽霊の戦争」実験（1932）</h2>
+    <div class="flow-steps">
+      <div class="flow-step stagger-item">
+        <div class="step-num">1</div>
+        <div class="step-text">北米先住民の民話<br>「幽霊の戦争」を読ませる</div>
+      </div>
+      <div class="flow-arrow stagger-item">→</div>
+      <div class="flow-step stagger-item">
+        <div class="step-num">2</div>
+        <div class="step-text">読んだ人に<br>物語を語ってもらう</div>
+      </div>
+      <div class="flow-arrow stagger-item">→</div>
+      <div class="flow-step stagger-item">
+        <div class="step-num">3</div>
+        <div class="step-text">語った内容を<br>次の人に伝えさせる</div>
+      </div>
+      <div class="flow-arrow stagger-item">→</div>
+      <div class="flow-step stagger-item highlight-step">
+        <div class="step-num">4</div>
+        <div class="step-text">内容が大きく<br>歪んで変化した</div>
+      </div>
+    </div>
+    <div class="source-badge stagger-item">出典: Bartlett (1932) "Remembering"</div>
+  </div>
+</section>
+
+<!-- ===== Scene 6: 数値インパクト ===== -->
+<section class="scene" id="scene-6">
+  <div class="scene-content number-impact dual-numbers">
+    <div class="impact-label stagger-item">伝言ゲームで物語はどう変わったか</div>
+    <div class="dual-container stagger-item">
+      <div class="dual-num">
+        <div class="big-num">330</div>
+        <div class="big-unit">語</div>
+        <div class="dual-label">元の物語</div>
+      </div>
+      <div class="dual-arrow">
+        <svg width="80" height="40"><path d="M0 20 L60 20 M50 10 L60 20 L50 30" stroke="var(--accent)" fill="none" stroke-width="3"/></svg>
+      </div>
+      <div class="dual-num accent-num">
+        <div class="big-num">180</div>
+        <div class="big-unit">語</div>
+        <div class="dual-label">伝達後</div>
+      </div>
+    </div>
+    <div class="impact-detail stagger-item">カヌー→ボート、幽霊→普通のケンカ に変化</div>
+    <div class="source-badge stagger-item">出典: Bartlett (1932)</div>
+  </div>
+</section>
+
+<!-- ===== Scene 7: 段階的リスト ===== -->
+<section class="scene" id="scene-7">
+  <div class="scene-content stepped-list">
+    <h2 class="list-title stagger-item">記憶の<span class="highlight-text">3つの変形パターン</span></h2>
+    <div class="step-cards">
+      <div class="step-card stagger-item" style="--card-delay: 0.1s">
+        <div class="card-num">01</div>
+        <h3 class="card-title">省略</h3>
+        <p class="card-desc">面倒な部分を無意識にカット。情報量が減っていく</p>
+        <div class="card-icon">✂️</div>
+      </div>
+      <div class="step-card stagger-item" style="--card-delay: 0.3s">
+        <div class="card-num">02</div>
+        <h3 class="card-title">合理化</h3>
+        <p class="card-desc">辻褄が合うように内容を変更。論理的に整理される</p>
+        <div class="card-icon">🔧</div>
+      </div>
+      <div class="step-card stagger-item" style="--card-delay: 0.5s">
+        <div class="card-num">03</div>
+        <h3 class="card-title">同化</h3>
+        <p class="card-desc">自分の常識や文化に合わせて書き換え。スキーマに適合</p>
+        <div class="card-icon">🎭</div>
+      </div>
+    </div>
+    <div class="source-badge stagger-item">出典: Bartlett (1932) スキーマ理論</div>
+  </div>
+</section>
+
+<!-- ===== Scene 8: タイトルカード ===== -->
+<section class="scene" id="scene-8">
+  <canvas id="canvas-8" class="scene-canvas"></canvas>
+  <div class="scene-content title-card block-title">
+    <div class="title-sub stagger-item">トピック①</div>
+    <h1 class="title-huge stagger-item">記憶は<span class="highlight-text">「再生」</span>ではなく<br><span class="highlight-text">「再構築」</span></h1>
+    <div class="title-accent stagger-item">Reconsolidation Discovery</div>
+  </div>
+</section>
+
+<!-- ===== Scene 9: フロー図 ===== -->
+<section class="scene" id="scene-9">
+  <div class="scene-content flow-diagram">
+    <h2 class="flow-title stagger-item">Naderのラット実験（2000年 Nature誌）</h2>
+    <div class="flow-steps vertical">
+      <div class="flow-step stagger-item">
+        <div class="step-num">1</div>
+        <div class="step-text">ラットに「音→電気ショック」を覚えさせる</div>
+      </div>
+      <div class="flow-arrow-v stagger-item">↓</div>
+      <div class="flow-step stagger-item">
+        <div class="step-num">2</div>
+        <div class="step-text">記憶が完全に定着するまで待つ</div>
+      </div>
+      <div class="flow-arrow-v stagger-item">↓</div>
+      <div class="flow-step stagger-item">
+        <div class="step-num">3</div>
+        <div class="step-text">もう一度音を聞かせて記憶を「思い出させる」</div>
+      </div>
+      <div class="flow-arrow-v stagger-item">↓</div>
+      <div class="flow-step stagger-item highlight-step">
+        <div class="step-num">4</div>
+        <div class="step-text">直後にタンパク質合成阻害薬を脳に注入</div>
+      </div>
+      <div class="flow-arrow-v stagger-item">↓</div>
+      <div class="flow-step stagger-item highlight-step danger-step">
+        <div class="step-num">!</div>
+        <div class="step-text">ラットは恐怖を忘れた — 記憶が消失</div>
+      </div>
+    </div>
+    <div class="source-badge stagger-item">出典: Nader, Schafe & Le Doux (2000) Nature, 406, 722-726</div>
+  </div>
+</section>
+
+<!-- ===== Scene 10: テキスト強調 ===== -->
+<section class="scene" id="scene-10">
+  <div class="scene-content text-emphasis">
+    <div class="emphasis-icon stagger-item">⚡</div>
+    <h2 class="emphasis-title stagger-item"><span class="highlight-text">思い出した</span>記憶が<span class="text-danger">消えた</span></h2>
+    <div class="emphasis-compare stagger-item">
+      <div class="compare-item">
+        <div class="compare-label">薬なし（音だけ）</div>
+        <div class="compare-result ok">記憶は残っている ✓</div>
+      </div>
+      <div class="compare-item">
+        <div class="compare-label">思い出した直後に薬</div>
+        <div class="compare-result ng">記憶が消失 ✗</div>
+      </div>
+    </div>
+    <p class="emphasis-body stagger-item">思い出す行為そのものが記憶を不安定にする</p>
+  </div>
+</section>
+
+<!-- ===== Scene 11: 比較対照 ===== -->
+<section class="scene" id="scene-11">
+  <div class="scene-content vs-container">
+    <h2 class="vs-title stagger-item">記憶理論のパラダイムシフト</h2>
+    <div class="vs-cards">
+      <div class="vs-card left stagger-item">
+        <div class="vs-card-header">従来の固定化理論</div>
+        <div class="vs-card-icon">🧊</div>
+        <ul class="vs-list">
+          <li>記憶は一度だけ固定される</li>
+          <li>固定後は変化しない</li>
+          <li>約100年間の定説</li>
+        </ul>
+        <div class="vs-verdict wrong">✗ 覆された</div>
+      </div>
+      <div class="vs-divider stagger-item">VS</div>
+      <div class="vs-card right stagger-item">
+        <div class="vs-card-header">再固定化理論</div>
+        <div class="vs-card-icon">🔄</div>
+        <ul class="vs-list">
+          <li>思い出すたびに「解凍」される</li>
+          <li>再固定時に情報が混入</li>
+          <li>記憶は動的プロセス</li>
+        </ul>
+        <div class="vs-verdict correct">✓ 科学的に実証</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Scene 12: フロー図（サイクル） ===== -->
+<section class="scene" id="scene-12">
+  <div class="scene-content flow-diagram cycle-flow">
+    <h2 class="flow-title stagger-item">記憶の再固定化サイクル</h2>
+    <div class="cycle-container stagger-item">
+      <svg class="cycle-svg" viewBox="0 0 600 400">
+        <defs>
+          <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="var(--accent)"/></marker>
+        </defs>
+        <!-- Cycle nodes -->
+        <rect x="200" y="20" width="200" height="60" rx="12" class="cycle-node node-1"/>
+        <text x="300" y="55" text-anchor="middle" class="cycle-text">思い出す</text>
+        <rect x="420" y="140" width="200" height="60" rx="12" class="cycle-node node-2"/>
+        <text x="520" y="175" text-anchor="middle" class="cycle-text">不安定化</text>
+        <rect x="200" y="260" width="200" height="60" rx="12" class="cycle-node node-3"/>
+        <text x="300" y="295" text-anchor="middle" class="cycle-text">情報が混入</text>
+        <rect x="-20" y="140" width="200" height="60" rx="12" class="cycle-node node-4"/>
+        <text x="80" y="175" text-anchor="middle" class="cycle-text">再固定化</text>
+        <!-- Arrows -->
+        <path d="M400 50 Q 480 50 480 140" marker-end="url(#arrowhead)" class="cycle-arrow"/>
+        <path d="M520 200 Q 520 260 400 290" marker-end="url(#arrowhead)" class="cycle-arrow"/>
+        <path d="M200 290 Q 80 290 80 200" marker-end="url(#arrowhead)" class="cycle-arrow"/>
+        <path d="M80 140 Q 80 50 200 50" marker-end="url(#arrowhead)" class="cycle-arrow"/>
+      </svg>
+    </div>
+    <p class="emphasis-body stagger-item">上書きされたことに本人は気づかない</p>
+    <div class="source-badge stagger-item">出典: Nader et al. (2000)</div>
+  </div>
+</section>
+
+<!-- ===== Scene 13: 引用カード ===== -->
+<section class="scene" id="scene-13">
+  <div class="scene-content quote-card">
+    <div class="quote-icon stagger-item">🚗</div>
+    <h2 class="quote-title stagger-item">Loftusの車の衝突実験</h2>
+    <blockquote class="quote-text stagger-item">
+      交通事故の映像を見せた後、質問の言い回しを変えるだけで被験者の記憶が変わった
+    </blockquote>
+    <div class="quote-detail stagger-item">
+      <div class="detail-row"><span class="detail-key">実験者</span><span class="detail-val">Elizabeth Loftus</span></div>
+      <div class="detail-row"><span class="detail-key">年代</span><span class="detail-val">1974年</span></div>
+      <div class="detail-row"><span class="detail-key">手法</span><span class="detail-val">交通事故映像 + 誘導質問</span></div>
+    </div>
+    <div class="source-badge stagger-item">出典: Loftus & Palmer (1974)</div>
+  </div>
+</section>
+
+<!-- ===== Scene 14: 数値インパクト ===== -->
+<section class="scene" id="scene-14">
+  <div class="scene-content number-impact dual-numbers">
+    <div class="impact-label stagger-item">「割れたガラスを見た」と回答した割合</div>
+    <div class="dual-container stagger-item">
+      <div class="dual-num">
+        <div class="big-num">32</div>
+        <div class="big-unit">%</div>
+        <div class="dual-label">「激突した」と質問</div>
+      </div>
+      <div class="dual-arrow">
+        <span class="vs-divider small">vs</span>
+      </div>
+      <div class="dual-num ok-num">
+        <div class="big-num">14</div>
+        <div class="big-unit">%</div>
+        <div class="dual-label">「ぶつかった」と質問</div>
+      </div>
+    </div>
+    <div class="impact-detail stagger-item">※映像にガラスが割れるシーンは<span class="text-danger">存在しない</span></div>
+    <div class="source-badge stagger-item">出典: Loftus & Palmer (1974)</div>
+  </div>
+</section>
+
+<!-- ===== Scene 15: タイトルカード ===== -->
+<section class="scene" id="scene-15">
+  <canvas id="canvas-15" class="scene-canvas"></canvas>
+  <div class="scene-content title-card block-title">
+    <div class="title-sub stagger-item">トピック②</div>
+    <h1 class="title-huge stagger-item">社会を揺るがす<br><span class="highlight-text">記憶のウソ</span></h1>
+    <div class="title-accent stagger-item">Eyewitness Testimony & Wrongful Convictions</div>
+  </div>
+</section>
+
+<!-- ===== Scene 16: 数値インパクト ===== -->
+<section class="scene" id="scene-16">
+  <div class="scene-content number-impact">
+    <div class="impact-label stagger-item">DNA鑑定で覆された冤罪のうち</div>
+    <div class="impact-number stagger-item"><span class="big-num">69</span><span class="big-range">〜</span><span class="big-num">75</span><span class="big-unit">%</span></div>
+    <div class="impact-bar-container stagger-item">
+      <div class="impact-bar" style="--bar-width: 72%">
+        <span class="bar-label">目撃者の誤った記憶が原因</span>
+      </div>
+    </div>
+    <div class="impact-detail stagger-item">950件以上の冤罪で誤った目撃証言が関与</div>
+    <div class="source-badge stagger-item">出典: Innocence Project / National Registry of Exonerations</div>
+  </div>
+</section>
+
+<!-- ===== Scene 17: テキスト強調 ===== -->
+<section class="scene" id="scene-17">
+  <div class="scene-content text-emphasis">
+    <div class="emphasis-icon stagger-item">⚖️</div>
+    <h2 class="emphasis-title stagger-item"><span class="highlight-text">確信の強さ</span>と<span class="text-danger">正確さ</span>は<br>比例しない</h2>
+    <div class="emphasis-equation stagger-item">
+      <span class="eq-item">鮮明に覚えている</span>
+      <span class="eq-sign">≠</span>
+      <span class="eq-item">正しく覚えている</span>
+    </div>
+    <p class="emphasis-body stagger-item">自信満々の証言が冤罪を生む最大の原因</p>
+  </div>
+</section>
+
+<!-- ===== Scene 18: 引用カード ===== -->
+<section class="scene" id="scene-18">
+  <div class="scene-content quote-card">
+    <div class="quote-icon stagger-item">🗓️</div>
+    <h2 class="quote-title stagger-item">9/11フラッシュバルブ記憶の研究</h2>
+    <blockquote class="quote-text stagger-item">
+      テロ翌日に記録した記憶を追跡調査。衝撃的な出来事でも記憶の正確性は日常記憶と同じペースで低下した
+    </blockquote>
+    <div class="quote-detail stagger-item">
+      <div class="detail-row"><span class="detail-key">研究者</span><span class="detail-val">Talarico & Rubin</span></div>
+      <div class="detail-row"><span class="detail-key">年代</span><span class="detail-val">2003年</span></div>
+      <div class="detail-row"><span class="detail-key">対象</span><span class="detail-val">Duke大学生54人</span></div>
+    </div>
+    <div class="source-badge stagger-item">出典: Talarico & Rubin (2003) Psychological Science</div>
+  </div>
+</section>
+
+<!-- ===== Scene 19: 比較対照 ===== -->
+<section class="scene" id="scene-19">
+  <div class="scene-content vs-container">
+    <h2 class="vs-title stagger-item">9/11記憶の真実</h2>
+    <div class="vs-cards">
+      <div class="vs-card left stagger-item">
+        <div class="vs-card-header">実際の正確性</div>
+        <div class="vs-card-icon">📉</div>
+        <ul class="vs-list">
+          <li>日常記憶と同じペースで低下</li>
+          <li>32週後には大幅に不正確に</li>
+          <li>衝撃の大きさは関係なし</li>
+        </ul>
+        <div class="vs-verdict wrong">正確性は落ちる</div>
+      </div>
+      <div class="vs-divider stagger-item">VS</div>
+      <div class="vs-card right stagger-item">
+        <div class="vs-card-header">本人の確信度</div>
+        <div class="vs-card-icon">📈</div>
+        <ul class="vs-list">
+          <li>「鮮明に覚えている」と確信</li>
+          <li>確信は時間が経っても低下しない</li>
+          <li>感情の強さが確信を維持</li>
+        </ul>
+        <div class="vs-verdict wrong">確信は落ちない</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Scene 20: 数値インパクト ===== -->
+<section class="scene" id="scene-20">
+  <div class="scene-content number-impact">
+    <div class="impact-label stagger-item">9/11の記憶が不正確だったアメリカ人</div>
+    <div class="impact-number stagger-item"><span class="big-num">40</span><span class="big-unit">%</span></div>
+    <div class="impact-bar-container stagger-item">
+      <div class="impact-bar" style="--bar-width: 40%">
+        <span class="bar-label">10人中4人が偽の記憶を確信</span>
+      </div>
+    </div>
+    <div class="impact-detail stagger-item">感情が強い記憶ほど「鮮明に感じる」が「正確さは同じ」</div>
+    <div class="source-badge stagger-item">出典: フラッシュバルブ記憶に関する複数研究</div>
+  </div>
+</section>
+
+<!-- ===== Scene 21: テキスト強調 ===== -->
+<section class="scene" id="scene-21">
+  <div class="scene-content text-emphasis">
+    <h2 class="emphasis-title stagger-item"><span class="highlight-text">鮮明さ</span>は<br><span class="text-danger">正確さの証拠にならない</span></h2>
+    <div class="emphasis-cards stagger-item">
+      <div class="em-card">
+        <div class="em-card-icon">🔍</div>
+        <div class="em-card-text">冤罪防止</div>
+      </div>
+      <div class="em-card">
+        <div class="em-card-icon">💬</div>
+        <div class="em-card-text">人間関係</div>
+      </div>
+      <div class="em-card">
+        <div class="em-card-icon">⚖️</div>
+        <div class="em-card-text">司法制度</div>
+      </div>
+    </div>
+    <p class="emphasis-body stagger-item">「あの時こう言った！」— お互いの記憶が違うだけかも</p>
+  </div>
+</section>
+
+<!-- ===== Scene 22: タイトルカード ===== -->
+<section class="scene" id="scene-22">
+  <canvas id="canvas-22" class="scene-canvas"></canvas>
+  <div class="scene-content title-card block-title">
+    <div class="title-sub stagger-item">トピック③</div>
+    <h1 class="title-huge stagger-item">なぜ脳は記憶を<br><span class="highlight-text">書き換えるのか</span></h1>
+    <div class="title-accent stagger-item">Adaptive Functions of Memory Updating</div>
+  </div>
+</section>
+
+<!-- ===== Scene 23: 段階的リスト ===== -->
+<section class="scene" id="scene-23">
+  <div class="scene-content stepped-list">
+    <h2 class="list-title stagger-item">記憶の書き換えが持つ<span class="highlight-text">3つの適応的機能</span></h2>
+    <div class="step-cards">
+      <div class="step-card stagger-item" style="--card-delay: 0.1s">
+        <div class="card-num">01</div>
+        <h3 class="card-title">環境への適応</h3>
+        <p class="card-desc">過去の情報を最新の状況に合わせてアップデート。生存に有利</p>
+        <div class="card-icon">🔄</div>
+      </div>
+      <div class="step-card stagger-item" style="--card-delay: 0.3s">
+        <div class="card-num">02</div>
+        <h3 class="card-title">感情の調整</h3>
+        <p class="card-desc">ネガティブな感情を薄め、ポジティブな感情を保持。心の健康を守る</p>
+        <div class="card-icon">💖</div>
+      </div>
+      <div class="step-card stagger-item" style="--card-delay: 0.5s">
+        <div class="card-num">03</div>
+        <h3 class="card-title">トラウマ治療</h3>
+        <p class="card-desc">恐怖記憶の感情を書き換え、PTSDなどのトラウマ治療に応用可能</p>
+        <div class="card-icon">🏥</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Scene 24: 比較対照 ===== -->
+<section class="scene" id="scene-24">
+  <div class="scene-content vs-container">
+    <h2 class="vs-title stagger-item">フェイディング・アフェクト・バイアス</h2>
+    <div class="vs-cards emotional">
+      <div class="vs-card left stagger-item">
+        <div class="vs-card-header">ネガティブな感情</div>
+        <div class="vs-card-icon">😢</div>
+        <div class="fade-indicator fade-fast">
+          <div class="fade-bar"></div>
+          <span>時間と共に薄れやすい</span>
+        </div>
+      </div>
+      <div class="vs-divider stagger-item">VS</div>
+      <div class="vs-card right stagger-item">
+        <div class="vs-card-header">ポジティブな感情</div>
+        <div class="vs-card-icon">😊</div>
+        <div class="fade-indicator fade-slow">
+          <div class="fade-bar"></div>
+          <span>比較的残りやすい</span>
+        </div>
+      </div>
+    </div>
+    <div class="source-badge stagger-item">出典: Walker et al. (2003)</div>
+  </div>
+</section>
+
+<!-- ===== Scene 25: テキスト強調 ===== -->
+<section class="scene" id="scene-25">
+  <div class="scene-content text-emphasis rosy">
+    <div class="emphasis-icon stagger-item">🌹</div>
+    <h2 class="emphasis-title stagger-item"><span class="highlight-text">バラ色の回想</span></h2>
+    <p class="emphasis-subtitle stagger-item">Rosy Retrospection</p>
+    <p class="emphasis-body stagger-item">過去の出来事を実際よりも良く記憶する傾向</p>
+    <div class="rosy-example stagger-item">
+      <div class="rosy-before">学生時代のテスト勉強、嫌な人間関係…</div>
+      <div class="rosy-arrow">↓ 脳のフィルター ↓</div>
+      <div class="rosy-after">「学生時代は楽しかった！」</div>
+    </div>
+    <div class="source-badge stagger-item">出典: Mitchell et al. (1997)</div>
+  </div>
+</section>
+
+<!-- ===== Scene 26: 引用カード ===== -->
+<section class="scene" id="scene-26">
+  <div class="scene-content quote-card">
+    <div class="quote-icon stagger-item">🔬</div>
+    <h2 class="quote-title stagger-item">理研×MITの光遺伝学実験</h2>
+    <blockquote class="quote-text stagger-item">
+      マウスの恐怖記憶と結びついた海馬の神経細胞を特定し、楽しい体験中に光で刺激して活性化。記憶の「感情の色」だけが塗り替えられた
+    </blockquote>
+    <div class="quote-detail stagger-item">
+      <div class="detail-row"><span class="detail-key">研究機関</span><span class="detail-val">理化学研究所 & MIT</span></div>
+      <div class="detail-row"><span class="detail-key">年代</span><span class="detail-val">2014年</span></div>
+      <div class="detail-row"><span class="detail-key">掲載誌</span><span class="detail-val">Nature</span></div>
+    </div>
+    <div class="source-badge stagger-item">出典: Redondo et al. (2014) Nature, 513, 426-430</div>
+  </div>
+</section>
+
+<!-- ===== Scene 27: フロー図 ===== -->
+<section class="scene" id="scene-27">
+  <div class="scene-content flow-diagram">
+    <h2 class="flow-title stagger-item">EMDR治療の仕組み</h2>
+    <div class="flow-steps vertical">
+      <div class="flow-step stagger-item">
+        <div class="step-num">1</div>
+        <div class="step-text">トラウマ記憶を思い出す</div>
+      </div>
+      <div class="flow-arrow-v stagger-item">↓</div>
+      <div class="flow-step stagger-item">
+        <div class="step-num">2</div>
+        <div class="step-text">記憶が不安定な状態になる（再固定化ウィンドウ）</div>
+      </div>
+      <div class="flow-arrow-v stagger-item">↓</div>
+      <div class="flow-step stagger-item highlight-step">
+        <div class="step-num">3</div>
+        <div class="step-text">セラピストの指を目で追う（両側性刺激）</div>
+      </div>
+      <div class="flow-arrow-v stagger-item">↓</div>
+      <div class="flow-step stagger-item highlight-step">
+        <div class="step-num">4</div>
+        <div class="step-text">感情的な苦しさが和らいだ状態で再固定化</div>
+      </div>
+    </div>
+    <div class="emdr-badge stagger-item">WHO推奨のPTSD治療法</div>
+    <div class="source-badge stagger-item">出典: EMDR International Association / WHO (2013)</div>
+  </div>
+</section>
+
+<!-- ===== Scene 28: まとめカード ===== -->
+<section class="scene" id="scene-28">
+  <div class="scene-content summary-card">
+    <h2 class="summary-title stagger-item">今日の<span class="highlight-text">3つのポイント</span></h2>
+    <div class="summary-points">
+      <div class="summary-point stagger-item" style="--card-delay: 0.1s">
+        <div class="point-num">1</div>
+        <div class="point-text">記憶はビデオカメラの録画ではなく<br><strong>毎回作り直すもの</strong></div>
+      </div>
+      <div class="summary-point stagger-item" style="--card-delay: 0.3s">
+        <div class="point-num">2</div>
+        <div class="point-text">鮮明に覚えている感覚は<br><strong>正確さを保証しない</strong></div>
+      </div>
+      <div class="summary-point stagger-item" style="--card-delay: 0.5s">
+        <div class="point-num">3</div>
+        <div class="point-text">記憶の書き換えはバグではなく<br><strong>脳が持つ適応機能</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Scene 29: テキスト強調 ===== -->
+<section class="scene" id="scene-29">
+  <div class="scene-content text-emphasis">
+    <h2 class="emphasis-title stagger-item">記憶は<span class="highlight-text">事実の記録</span>ではなく</h2>
+    <h2 class="emphasis-title-sub stagger-item"><span class="highlight-text">現在の自分が作った物語</span></h2>
+    <div class="emphasis-split stagger-item">
+      <div class="split-item">
+        <div class="split-label">大枠（gist）</div>
+        <div class="split-bar ok-bar"></div>
+        <div class="split-desc">比較的正確に残る</div>
+      </div>
+      <div class="split-item">
+        <div class="split-label">細部（detail）</div>
+        <div class="split-bar ng-bar"></div>
+        <div class="split-desc">思い出すたびに変わる</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Scene 30: 注意喚起 ===== -->
+<section class="scene" id="scene-30">
+  <div class="scene-content caution-card">
+    <div class="caution-icon stagger-item">⚠️</div>
+    <h2 class="caution-title stagger-item">大事な補足：<span class="highlight-text">予測誤差</span></h2>
+    <div class="caution-body stagger-item">
+      <p>「ただ思い出すだけ」では記憶はそこまで書き換わらない</p>
+      <p>書き換えが起きるには<strong>予測誤差</strong>（予想と違う情報）が必要</p>
+    </div>
+    <div class="caution-tip stagger-item">
+      <div class="tip-icon">💡</div>
+      <div class="tip-text">大切な記憶は日記や写真に残しておくと安心</div>
+    </div>
+    <div class="source-badge stagger-item">出典: Sevenster et al. (2013)</div>
+  </div>
+</section>
+
+<!-- ===== Scene 31: テキスト強調（エンディング） ===== -->
+<section class="scene" id="scene-31">
+  <canvas id="canvas-31" class="scene-canvas"></canvas>
+  <div class="scene-content text-emphasis ending">
+    <h2 class="emphasis-title stagger-item">記憶とは</h2>
+    <h2 class="emphasis-title-big stagger-item"><span class="highlight-text">今の自分が語り直す物語</span></h2>
+    <p class="emphasis-body stagger-item">辛い記憶の感情が薄れて、良い記憶が色鮮やかに残るのは</p>
+    <p class="emphasis-final stagger-item">脳が見せてくれる、<span class="highlight-text">優しい嘘</span>かもしれない</p>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

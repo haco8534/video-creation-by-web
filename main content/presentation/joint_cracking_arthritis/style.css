@@ -1,0 +1,1223 @@
+/* ============================================================
+   CSS Design System — Joint Cracking Arthritis
+   White theme, modern typography, full-size scene layout
+   ============================================================ */
+
+/* ---------- CSS Variables ---------- */
+:root {
+    --c-primary: #4f46e5;
+    --c-primary-light: #6366f1;
+    --c-primary-bg: #eef2ff;
+    --c-teal: #06b6d4;
+    --c-teal-light: #22d3ee;
+    --c-teal-bg: #ecfeff;
+    --c-amber: #f59e0b;
+    --c-amber-light: #fbbf24;
+    --c-amber-bg: #fffbeb;
+    --c-coral: #ef4444;
+    --c-coral-dark: #dc2626;
+    --c-coral-bg: #fef2f2;
+    --c-bg: #ffffff;
+    --c-surface: #f8fafc;
+    --c-border: #e2e8f0;
+    --c-text: #1e293b;
+    --c-text-sub: #64748b;
+    --c-text-light: #94a3b8;
+    --c-dark-bg: #0f172a;
+    --c-dark-text: #f1f5f9;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, .06), 0 1px 2px rgba(0, 0, 0, .04);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, .08);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, .1);
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-full: 9999px;
+    --font-main: 'Noto Sans JP', sans-serif;
+}
+
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: var(--font-main);
+    color: var(--c-text);
+    background: var(--c-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- Scene Container ---------- */
+.scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s ease;
+    background: var(--c-bg);
+}
+
+.scene.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.bg-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ---------- Dark Scene ---------- */
+.dark-scene {
+    background: var(--c-dark-bg);
+    color: var(--c-dark-text);
+}
+
+.light-text {
+    color: var(--c-dark-text) !important;
+}
+
+/* ---------- Content Layouts ---------- */
+.content {
+    position: relative;
+    z-index: 1;
+    width: 80%;
+    max-width: 900px;
+    text-align: center;
+}
+
+.center-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.card-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ---------- Accent Colors ---------- */
+.accent-primary {
+    color: var(--c-primary);
+}
+
+.accent-teal {
+    color: var(--c-teal);
+}
+
+.accent-amber {
+    color: var(--c-amber);
+}
+
+.accent-coral {
+    color: var(--c-coral);
+}
+
+.accent-bg-primary {
+    background: var(--c-primary);
+}
+
+.accent-bg-teal {
+    background: var(--c-teal);
+}
+
+.accent-bg-amber {
+    background: var(--c-amber);
+}
+
+.accent-bg-coral {
+    background: var(--c-coral);
+}
+
+.accent-bg-coral-dark {
+    background: var(--c-coral-dark);
+}
+
+/* ---------- Typography ---------- */
+.title-medium {
+    font-size: 2.6rem;
+    font-weight: 900;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+.title-sub {
+    font-size: 1.1rem;
+    color: var(--c-text-sub);
+    font-weight: 400;
+}
+
+.scene-title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+}
+
+.emphasis-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.emphasis-text-large {
+    font-size: 2.8rem;
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.emphasis-sub {
+    font-size: 1rem;
+    color: var(--c-text-sub);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.footnote {
+    font-size: 0.82rem;
+    color: var(--c-text-light);
+    font-weight: 400;
+}
+
+/* ---------- Section Badge ---------- */
+.section-badge {
+    display: inline-block;
+    padding: 6px 18px;
+    border-radius: var(--radius-full);
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.source-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: var(--radius-full);
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    color: var(--c-text-sub);
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* ---------- Impact Number ---------- */
+.impact-number {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    justify-content: center;
+}
+
+.big-num {
+    font-size: 5.5rem;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.num-unit {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--c-text-sub);
+}
+
+/* ---------- Quote Card ---------- */
+.quote-card {
+    background: var(--c-primary-bg);
+    border-left: 5px solid var(--c-primary);
+    border-radius: var(--radius-md);
+    padding: 28px 32px;
+    text-align: left;
+    max-width: 640px;
+    width: 100%;
+    position: relative;
+}
+
+.quote-warm {
+    background: var(--c-amber-bg);
+    border-left-color: var(--c-amber);
+}
+
+.quote-mark {
+    position: absolute;
+    top: -6px;
+    left: 14px;
+    font-size: 4rem;
+    color: var(--c-primary);
+    opacity: 0.15;
+    line-height: 1;
+    font-family: Georgia, serif;
+}
+
+.quote-warm .quote-mark {
+    color: var(--c-amber);
+}
+
+.quote-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.quote-source {
+    margin-top: 10px;
+    font-size: 0.78rem;
+    color: var(--c-text-sub);
+}
+
+/* ---------- VS Container ---------- */
+.vs-container {
+    display: flex;
+    align-items: stretch;
+    gap: 18px;
+    width: 100%;
+    max-width: 720px;
+}
+
+.vs-card {
+    flex: 1;
+    background: var(--c-surface);
+    border-radius: var(--radius-md);
+    padding: 24px 18px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid transparent;
+}
+
+.vs-left {
+    border-color: var(--c-coral);
+    background: var(--c-coral-bg);
+}
+
+.vs-right {
+    border-color: var(--c-teal);
+    background: var(--c-teal-bg);
+}
+
+.vs-badge {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #fff;
+}
+
+.danger-badge {
+    background: var(--c-coral);
+}
+
+.safe-badge {
+    background: var(--c-teal);
+}
+
+.vs-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.vs-desc {
+    font-size: 0.88rem;
+    color: var(--c-text-sub);
+    line-height: 1.5;
+}
+
+.vs-divider {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--c-text-light);
+}
+
+/* ---------- Flow Chain ---------- */
+.flow-chain {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+    width: 100%;
+    max-width: 780px;
+}
+
+.flow-node {
+    flex: 1;
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-md);
+    padding: 16px 12px;
+    text-align: center;
+}
+
+.flow-year {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--c-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+}
+
+.flow-text {
+    font-size: 0.84rem;
+    line-height: 1.5;
+    color: var(--c-text);
+}
+
+.flow-name {
+    font-weight: 700;
+    color: var(--c-primary);
+    font-size: 0.92rem;
+}
+
+.flow-sub {
+    font-size: 0.72rem;
+    color: var(--c-text-light);
+}
+
+.flow-arrow {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    color: var(--c-text-light);
+}
+
+/* ---------- Comparison Note ---------- */
+.comparison-note {
+    background: var(--c-primary-bg);
+    padding: 10px 24px;
+    border-radius: var(--radius-sm);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--c-primary);
+}
+
+/* ---------- Triple Card ---------- */
+.triple-card {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    max-width: 780px;
+}
+
+.factor-card {
+    flex: 1;
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-md);
+    padding: 22px 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.factor-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.risk-card {
+    border-color: rgba(239, 68, 68, 0.15);
+}
+
+.factor-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.factor-name {
+    font-size: 0.98rem;
+    font-weight: 700;
+}
+
+.factor-desc {
+    font-size: 0.78rem;
+    color: var(--c-text-sub);
+    line-height: 1.5;
+}
+
+/* ---------- Alert Card ---------- */
+.alert-card {
+    background: var(--c-coral-bg);
+    border: 2px solid var(--c-coral);
+    border-radius: var(--radius-md);
+    padding: 28px 32px;
+    max-width: 580px;
+    width: 100%;
+}
+
+.alert-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: var(--c-coral);
+    color: #fff;
+    border-radius: var(--radius-full);
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.alert-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.alert-sub {
+    font-size: 0.88rem;
+    color: var(--c-text-sub);
+    line-height: 1.6;
+}
+
+/* ---------- Numbered List ---------- */
+.numbered-list {
+    width: 100%;
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.numbered-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-md);
+    padding: 14px 18px;
+    text-align: left;
+    transition: transform .2s ease;
+}
+
+.numbered-item:hover {
+    transform: translateX(4px);
+}
+
+.number-circle {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    background: var(--c-primary);
+    color: #fff;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.92rem;
+    font-weight: 700;
+}
+
+.risk-num {
+    background: var(--c-coral);
+}
+
+.summary-num {
+    background: var(--c-teal);
+}
+
+.numbered-text {
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+/* ---------- Bar Comparison ---------- */
+.bar-comparison {
+    width: 100%;
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bar-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bar-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    width: 160px;
+    text-align: right;
+    color: var(--c-text-sub);
+    flex-shrink: 0;
+}
+
+.bar-track {
+    flex: 1;
+    height: 20px;
+    background: var(--c-surface);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    border: 1px solid var(--c-border);
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    width: var(--w);
+    transition: width 1.5s ease;
+}
+
+.bar-a-fill {
+    background: var(--c-teal);
+}
+
+.bar-b-fill {
+    background: var(--c-primary);
+}
+
+.scene.active .bar-fill {
+    animation: barGrow 1.5s ease forwards;
+}
+
+.bar-value {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--c-text-sub);
+    width: 100px;
+    flex-shrink: 0;
+}
+
+/* ---------- OA Comparison Ring ---------- */
+.oa-comparison {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    justify-content: center;
+}
+
+.oa-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.oa-ring {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.oa-ring svg {
+    width: 100%;
+    height: 100%;
+}
+
+.oa-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.oa-label {
+    font-size: 0.78rem;
+    color: var(--c-text-sub);
+    font-weight: 600;
+}
+
+.oa-vs {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: var(--c-text-light);
+}
+
+/* ---------- MRI Visual ---------- */
+.mri-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.joint-svg {
+    width: 300px;
+    height: 140px;
+}
+
+/* ---------- Loop Visual ---------- */
+.loop-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.loop-svg {
+    width: 300px;
+    height: 100px;
+}
+
+/* ---------- Spine Visual (Dark) ---------- */
+.spine-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.spine-svg {
+    width: 200px;
+    height: 220px;
+}
+
+.dark-warning {
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: var(--radius-md);
+    padding: 12px 24px;
+    color: #fca5a5;
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+/* ---------- Institution Cards ---------- */
+.institution-cards {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.inst-card {
+    background: var(--c-primary-bg);
+    border: 1px solid rgba(79, 70, 229, 0.15);
+    border-radius: var(--radius-sm);
+    padding: 10px 18px;
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: var(--c-primary);
+}
+
+/* ---------- Protect Cards ---------- */
+.protect-cards {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.protect-card {
+    background: var(--c-surface);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    min-width: 140px;
+}
+
+.protect-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.protect-text {
+    font-size: 0.98rem;
+    font-weight: 700;
+}
+
+.protect-sub {
+    font-size: 0.72rem;
+    color: var(--c-text-sub);
+}
+
+/* ---------- Award Visual ---------- */
+.award-visual {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+}
+
+.award-badge {
+    flex-shrink: 0;
+}
+
+.award-text {
+    font-size: 0.88rem;
+    color: var(--c-text-sub);
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* ---------- Result Card ---------- */
+.result-card {
+    background: var(--c-teal-bg);
+    border: 2px solid var(--c-teal);
+    border-radius: var(--radius-lg);
+    padding: 32px 40px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.result-label {
+    font-size: 1rem;
+    color: var(--c-text-sub);
+    margin-bottom: 6px;
+}
+
+.result-value {
+    font-size: 2.8rem;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.result-sub {
+    font-size: 0.88rem;
+    color: var(--c-text-sub);
+    margin-top: 8px;
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
+/* ---------- Stagger Entry ---------- */
+.scene.active .stagger-item {
+    animation: fadeSlideUp 0.6s ease both;
+}
+
+.scene.active .stagger-item:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.scene.active .stagger-item:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.scene.active .stagger-item:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .stagger-item:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .stagger-item:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.scene.active .stagger-item:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .stagger-item:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.scene.active .stagger-item:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- Bubble Animate ---------- */
+.scene.active .bubble-animate {
+    animation: bubblePop 2s ease infinite;
+}
+
+@keyframes bubblePop {
+    0% {
+        opacity: 0;
+        r: 4;
+    }
+
+    30% {
+        opacity: 0.8;
+        r: 16;
+    }
+
+    60% {
+        opacity: 1;
+        r: 18;
+    }
+
+    80% {
+        opacity: 0.6;
+        r: 14;
+    }
+
+    100% {
+        opacity: 0;
+        r: 8;
+    }
+}
+
+/* ---------- Ring Animate ---------- */
+.scene.active .ring-animate {
+    animation: ringDraw 1.5s ease forwards;
+}
+
+@keyframes ringDraw {
+    from {
+        stroke-dashoffset: 314;
+    }
+}
+
+/* ---------- Nerve Pulse ---------- */
+.nerve-pulse {
+    animation: nervePulse 1.8s ease-in-out infinite;
+}
+
+@keyframes nervePulse {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        r: 4;
+    }
+
+    50% {
+        opacity: 1;
+        r: 7;
+    }
+}
+
+/* ---------- Loop Line ---------- */
+.scene.active .loop-line {
+    animation: loopDraw 2.5s ease forwards;
+}
+
+@keyframes loopDraw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* ---------- Bar Grow ---------- */
+@keyframes barGrow {
+    from {
+        width: 0;
+    }
+}
+
+/* ---------- Pulse Glow ---------- */
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.15);
+    }
+
+    50% {
+        box-shadow: 0 0 0 12px rgba(79, 70, 229, 0);
+    }
+}
+
+/* ---------- Float ---------- */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+/* ---------- Shimmer ---------- */
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* ---------- Scale In ---------- */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ---------- Slide In Left ---------- */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ---------- Slide In Right ---------- */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ============================================================
+   CUSTOM VISUAL COMPONENTS
+   ============================================================ */
+
+/* --- Cavitation Bubble Effect --- */
+.scene.active .oa-ring svg circle:last-child {
+    animation: ringDraw 1.5s ease forwards;
+}
+
+/* --- Institution Card Float --- */
+.scene.active .inst-card {
+    animation: scaleIn 0.5s ease both;
+}
+
+.scene.active .inst-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.scene.active .inst-card:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.scene.active .inst-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* --- Protect Card Hover --- */
+.protect-card {
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.protect-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+/* --- VS Card Entrance --- */
+.scene.active .vs-left {
+    animation: slideInLeft 0.7s ease both;
+}
+
+.scene.active .vs-right {
+    animation: slideInRight 0.7s ease both;
+}
+
+/* --- Result Card Pulse --- */
+.scene.active .result-card {
+    animation: scaleIn 0.8s ease both, pulseGlow 2.5s ease infinite 0.8s;
+}
+
+/* --- Summary List Stagger --- */
+.summary-list .numbered-item {
+    border-left: 3px solid var(--c-teal);
+    background: var(--c-teal-bg);
+}
+
+/* --- Quote Card Entrance --- */
+.scene.active .quote-card {
+    animation: slideInLeft 0.6s ease both;
+}
+
+/* --- Dark Scene Warning Glow --- */
+.scene.active .dark-warning {
+    animation: fadeSlideUp 0.6s ease both 0.3s;
+}
+
+/* --- Custom Gradient Dividers --- */
+.flow-chain::before,
+.flow-chain::after {
+    content: '';
+    display: none;
+}
+
+/* --- Triple Card Stagger --- */
+.scene.active .triple-card .factor-card:nth-child(1) {
+    animation: scaleIn 0.5s ease both 0.1s;
+}
+
+.scene.active .triple-card .factor-card:nth-child(2) {
+    animation: scaleIn 0.5s ease both 0.25s;
+}
+
+.scene.active .triple-card .factor-card:nth-child(3) {
+    animation: scaleIn 0.5s ease both 0.4s;
+}
+
+/* --- Flow Node Stagger --- */
+.scene.active .flow-chain .flow-node:nth-child(1) {
+    animation: scaleIn 0.5s ease both 0.1s;
+}
+
+.scene.active .flow-chain .flow-node:nth-child(3) {
+    animation: scaleIn 0.5s ease both 0.3s;
+}
+
+.scene.active .flow-chain .flow-node:nth-child(5) {
+    animation: scaleIn 0.5s ease both 0.5s;
+}
+
+/* --- Numbered Item Stagger Fix --- */
+.scene.active .numbered-list .numbered-item:nth-child(1) {
+    animation: fadeSlideUp 0.5s ease both 0.1s;
+}
+
+.scene.active .numbered-list .numbered-item:nth-child(2) {
+    animation: fadeSlideUp 0.5s ease both 0.2s;
+}
+
+.scene.active .numbered-list .numbered-item:nth-child(3) {
+    animation: fadeSlideUp 0.5s ease both 0.3s;
+}
+
+.scene.active .numbered-list .numbered-item:nth-child(4) {
+    animation: fadeSlideUp 0.5s ease both 0.4s;
+}
+
+.scene.active .numbered-list .numbered-item:nth-child(5) {
+    animation: fadeSlideUp 0.5s ease both 0.5s;
+}
+
+/* --- Bar Row Stagger --- */
+.scene.active .bar-comparison .bar-row:nth-child(1) {
+    animation: fadeSlideUp 0.5s ease both 0.2s;
+}
+
+.scene.active .bar-comparison .bar-row:nth-child(2) {
+    animation: fadeSlideUp 0.5s ease both 0.4s;
+}
+
+/* --- Award Visual Float --- */
+.scene.active .award-visual {
+    animation: float 3s ease-in-out infinite 0.8s;
+}
+
+/* --- Protect Cards Stagger --- */
+.scene.active .protect-cards .protect-card:nth-child(1) {
+    animation: scaleIn 0.5s ease both 0.1s;
+}
+
+.scene.active .protect-cards .protect-card:nth-child(2) {
+    animation: scaleIn 0.5s ease both 0.25s;
+}
+
+.scene.active .protect-cards .protect-card:nth-child(3) {
+    animation: scaleIn 0.5s ease both 0.4s;
+}
+
+/* --- Alert Card Entrance --- */
+.scene.active .alert-card {
+    animation: scaleIn 0.6s ease both;
+}
+
+/* ============================================================
+   RESPONSIVE TWEAKS
+   ============================================================ */
+@media (max-width: 900px) {
+    .content {
+        width: 92%;
+    }
+
+    .title-medium {
+        font-size: 2rem;
+    }
+
+    .emphasis-text-large {
+        font-size: 2.2rem;
+    }
+
+    .big-num {
+        font-size: 4rem;
+    }
+
+    .triple-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .vs-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flow-chain {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg);
+    }
+
+    .protect-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}

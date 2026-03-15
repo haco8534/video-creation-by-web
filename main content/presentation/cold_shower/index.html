@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <title>「冷水シャワー」は本当に健康に良いのか？</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Scene 0: タイトルカード -->
+    <div class="scene" id="scene-0">
+        <canvas class="canvas-bg" id="canvas-0"></canvas>
+        <div class="scene-content">
+            <div class="title-main stagger-item">「冷水シャワー」は</div>
+            <div class="title-accent stagger-item">本当に健康に良いのか？</div>
+            <div class="title-sub stagger-item">COLD SHOWER — SCIENCE OR MYTH?</div>
+            <div class="title-line stagger-item"></div>
+        </div>
+    </div>
+
+    <!-- Scene 1: 3,018人の大規模研究 -->
+    <div class="scene" id="scene-1">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">LANDMARK STUDY</div>
+            <div class="scene-title stagger-item">3,018人の大規模研究</div>
+            <div class="impact-number stagger-item">29<span class="percent">%</span></div>
+            <div class="impact-desc stagger-item">冷水シャワーを浴びたグループは<br>病欠日数が29%減少した</div>
+            <div class="study-ref stagger-item">Buijze et al. (2016) PLoS ONE — ランダム化比較試験</div>
+        </div>
+    </div>
+
+    <!-- Scene 2: でも……落とし穴 -->
+    <div class="scene" id="scene-2">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">BUT WAIT...</div>
+            <div class="scene-title stagger-item">でも……<br>「効いた」と思っていたその効果</div>
+            <div class="key-message stagger-item">この動画を最後まで見たら<br>29%の本当の意味がわかる</div>
+        </div>
+    </div>
+
+    <!-- Scene 3: この動画でわかること -->
+    <div class="scene" id="scene-3">
+        <canvas class="canvas-bg" id="canvas-3"></canvas>
+        <div class="scene-content">
+            <div class="scene-title stagger-item">この動画でわかる<br>3つのこと</div>
+            <div class="three-points">
+                <div class="point-card stagger-item">
+                    <div class="point-num">01</div>
+                    <div class="point-text">冷水シャワーで<br>本当に「効く」こと</div>
+                </div>
+                <div class="point-card stagger-item">
+                    <div class="point-num">02</div>
+                    <div class="point-text">多くの人が勘違い<br>「効いてない」こと</div>
+                </div>
+                <div class="point-card stagger-item">
+                    <div class="point-num">03</div>
+                    <div class="point-text">知らないと危険な<br>リスク</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 4: 冷水療法の4000年の歴史 -->
+    <div class="scene" id="scene-4">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">HISTORY</div>
+            <div class="scene-title stagger-item">冷水療法の4000年の歴史</div>
+            <div class="timeline-flow stagger-item">
+                <div class="timeline-item">
+                    <div class="timeline-year">BC 3500</div>
+                    <div class="timeline-event">古代エジプト<br>パピルスに記録</div>
+                </div>
+                <div class="timeline-arrow">→</div>
+                <div class="timeline-item">
+                    <div class="timeline-year">BC 400</div>
+                    <div class="timeline-event">ヒポクラテス<br>治療に使用</div>
+                </div>
+                <div class="timeline-arrow">→</div>
+                <div class="timeline-item">
+                    <div class="timeline-year">伝統</div>
+                    <div class="timeline-event">日本の禊<br>フィンランドのサウナ</div>
+                </div>
+                <div class="timeline-arrow">→</div>
+                <div class="timeline-item">
+                    <div class="timeline-year">現代</div>
+                    <div class="timeline-event">SNSで<br>世界的ブーム</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 5: 世界の冷水文化 -->
+    <div class="scene" id="scene-5">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">GLOBAL CULTURE</div>
+            <div class="scene-title stagger-item">世界の冷水文化</div>
+            <div class="three-points">
+                <div class="point-card stagger-item">
+                    <div class="point-num">🏛️</div>
+                    <div class="point-text">ローマ浴場<br>フリギダリウム</div>
+                </div>
+                <div class="point-card stagger-item">
+                    <div class="point-num">⛩️</div>
+                    <div class="point-text">日本の禊<br>滝行・冷水浴</div>
+                </div>
+                <div class="point-card stagger-item">
+                    <div class="point-num">🧊</div>
+                    <div class="point-text">北欧の伝統<br>サウナ＋冷水</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 6: Wim Hof「アイスマン」の正体 -->
+    <div class="scene" id="scene-6">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">MODERN ICON</div>
+            <div class="scene-title stagger-item">Wim Hof「アイスマン」の正体</div>
+            <div class="flow-diagram stagger-item">
+                <div class="flow-node">
+                    <div class="flow-icon">🧘</div>
+                    <div class="flow-label">ヨガ<br>プラーナヤーマ</div>
+                </div>
+                <div class="flow-arrow">＋</div>
+                <div class="flow-node">
+                    <div class="flow-icon">🏔️</div>
+                    <div class="flow-label">チベット仏教<br>トゥンモ瞑想</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-node highlight">
+                    <div class="flow-icon">🧊</div>
+                    <div class="flow-label">Wim Hof<br>メソッド</div>
+                </div>
+            </div>
+            <div class="key-message stagger-item">独自発明ではなく古代技法のリパッケージ</div>
+        </div>
+    </div>
+
+    <!-- Scene 7: コールドショック反応の仕組み -->
+    <div class="scene" id="scene-7">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">MECHANISM</div>
+            <div class="scene-title stagger-item">コールドショック反応の仕組み</div>
+            <div class="flow-diagram stagger-item">
+                <div class="flow-node">
+                    <div class="flow-icon">🚿</div>
+                    <div class="flow-label">冷水接触</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-node">
+                    <div class="flow-icon">😮</div>
+                    <div class="flow-label">吸気反射<br>心拍数↑ 血圧↑</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-node highlight">
+                    <div class="flow-icon">⚡</div>
+                    <div class="flow-label">交感神経<br>急激に活性化</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-node">
+                    <div class="flow-icon">💉</div>
+                    <div class="flow-label">アドレナリン<br>大量放出</div>
+                </div>
+            </div>
+            <div class="key-message stagger-item">体が「緊急事態だ！」と反応する</div>
+        </div>
+    </div>
+
+    <!-- Scene 8: 科学が証明した3つの効果 タイトル -->
+    <div class="scene" id="scene-8">
+        <canvas class="canvas-bg" id="canvas-8"></canvas>
+        <div class="scene-content">
+            <div class="chapter-num stagger-item">CHAPTER 01</div>
+            <div class="scene-title stagger-item">科学が証明した<br>3つの効果</div>
+            <div class="chapter-line stagger-item"></div>
+        </div>
+    </div>
+
+    <!-- Scene 9: ノルエピネフリン200〜300%増加 -->
+    <div class="scene" id="scene-9">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">NEUROSCIENCE</div>
+            <div class="scene-title stagger-item">ノルエピネフリン<br>200〜300%増加</div>
+            <div class="neuro-bars stagger-item">
+                <div class="neuro-item">
+                    <div class="neuro-name">通常状態</div>
+                    <div class="neuro-bar-wrap">
+                        <div class="neuro-bar-fill" style="width:33%"></div>
+                    </div>
+                    <div class="neuro-value">100%</div>
+                </div>
+                <div class="neuro-item">
+                    <div class="neuro-name">冷水浸漬後</div>
+                    <div class="neuro-bar-wrap">
+                        <div class="neuro-bar-fill" style="width:100%"></div>
+                    </div>
+                    <div class="neuro-value">300%</div>
+                </div>
+            </div>
+            <div class="key-message stagger-item">集中力・覚醒・気分改善に関わる神経伝達物質</div>
+        </div>
+    </div>
+
+    <!-- Scene 10: ドーパミン250%上昇 -->
+    <div class="scene" id="scene-10">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">DOPAMINE SURGE</div>
+            <div class="scene-title stagger-item">ドーパミン250%上昇</div>
+            <div class="neuro-bars stagger-item">
+                <div class="neuro-item">
+                    <div class="neuro-name">通常レベル</div>
+                    <div class="neuro-bar-wrap">
+                        <div class="neuro-bar-fill dopamine" style="width:40%"></div>
+                    </div>
+                    <div class="neuro-value">100%</div>
+                </div>
+                <div class="neuro-item">
+                    <div class="neuro-name">冷水後</div>
+                    <div class="neuro-bar-wrap">
+                        <div class="neuro-bar-fill dopamine" style="width:100%"></div>
+                    </div>
+                    <div class="neuro-value">250%</div>
+                </div>
+            </div>
+            <div class="key-message stagger-item">やる気・快感に関わる物質が数時間持続上昇</div>
+        </div>
+    </div>
+
+    <!-- Scene 11: 運動後の回復効果（DOMS軽減） -->
+    <div class="scene" id="scene-11">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">RECOVERY</div>
+            <div class="scene-title stagger-item">運動後の回復効果</div>
+            <div class="flow-diagram stagger-item">
+                <div class="flow-node">
+                    <div class="flow-icon">🏃</div>
+                    <div class="flow-label">高強度運動</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-node">
+                    <div class="flow-icon">🧊</div>
+                    <div class="flow-label">冷水浸漬</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-node highlight">
+                    <div class="flow-icon">💪</div>
+                    <div class="flow-label">血管収縮<br>DOMS軽減</div>
+                </div>
+            </div>
+            <div class="study-ref stagger-item">2021年 32件の系統的レビュー + 2023年 メタ分析で確認</div>
+        </div>
+    </div>
+
+    <!-- Scene 12: 褐色脂肪の活性化 -->
+    <div class="scene" id="scene-12">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">BROWN FAT</div>
+            <div class="scene-title stagger-item">褐色脂肪の活性化</div>
+            <div class="fat-compare stagger-item">
+                <div class="fat-card">
+                    <div class="fat-icon white-fat"></div>
+                    <div class="fat-name">白色脂肪</div>
+                    <div class="fat-desc">エネルギーを貯める<br>「倉庫」</div>
+                </div>
+                <div class="fat-card">
+                    <div class="fat-icon brown-fat"></div>
+                    <div class="fat-name">褐色脂肪</div>
+                    <div class="fat-desc">エネルギーを燃やす<br>「暖房装置」</div>
+                </div>
+            </div>
+            <div class="impact-desc stagger-item">1か月の寒冷曝露で褐色脂肪量<strong>42%増加</strong></div>
+        </div>
+    </div>
+
+    <!-- Scene 13: 多くの人が勘違いしていること タイトル -->
+    <div class="scene" id="scene-13">
+        <canvas class="canvas-bg" id="canvas-13"></canvas>
+        <div class="scene-content">
+            <div class="chapter-num stagger-item">CHAPTER 02</div>
+            <div class="scene-title stagger-item">多くの人が<br>勘違いしていること</div>
+            <div class="chapter-line stagger-item"></div>
+        </div>
+    </div>
+
+    <!-- Scene 14: 29%の真実 -->
+    <div class="scene" id="scene-14">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">THE TRUTH BEHIND 29%</div>
+            <div class="scene-title stagger-item">29%の真実</div>
+            <div class="vs-comparison stagger-item">
+                <div class="vs-card cold-side">
+                    <div class="vs-label">病欠日数</div>
+                    <div class="vs-result">29%↓</div>
+                    <div class="vs-desc">有意に減少</div>
+                </div>
+                <div class="vs-center">しかし</div>
+                <div class="vs-card warm-side">
+                    <div class="vs-label">感染回数</div>
+                    <div class="vs-result">変化なし</div>
+                    <div class="vs-desc">同じ回数 病気にかかった</div>
+                </div>
+            </div>
+            <div class="key-message warning stagger-item">免疫力が上がったのではなく、症状が軽くなっただけ</div>
+        </div>
+    </div>
+
+    <!-- Scene 15: プラセボ効果の壁 -->
+    <div class="scene" id="scene-15">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">PLACEBO WALL</div>
+            <div class="scene-title stagger-item">プラセボ効果の壁</div>
+            <div class="flow-diagram stagger-item">
+                <div class="flow-node danger">
+                    <div class="flow-icon">💊</div>
+                    <div class="flow-label">薬の研究</div>
+                    <div class="flow-sublabel">偽薬が使える</div>
+                </div>
+                <div class="flow-arrow">VS</div>
+                <div class="flow-node danger">
+                    <div class="flow-icon">🚿</div>
+                    <div class="flow-label">冷水シャワー</div>
+                    <div class="flow-sublabel">温度がバレバレ</div>
+                </div>
+            </div>
+            <div class="key-message warning stagger-item">ブラインドテスト不可能 → 研究者自身がプラセボを排除できないと認めている</div>
+        </div>
+    </div>
+
+    <!-- Scene 16: 「すっきり感」の正体 -->
+    <div class="scene" id="scene-16">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">SHOCKING TRUTH</div>
+            <div class="scene-title stagger-item">「すっきり感」の正体は<br>ストレスホルモン</div>
+            <div class="flow-diagram stagger-item">
+                <div class="flow-node">
+                    <div class="flow-icon">🚿</div>
+                    <div class="flow-label">冷水を浴びる</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-node danger">
+                    <div class="flow-icon">⚠️</div>
+                    <div class="flow-label">アドレナリン↑<br>コルチゾール↑</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-node">
+                    <div class="flow-icon">😤</div>
+                    <div class="flow-label">「スッキリ」<br>感覚</div>
+                </div>
+            </div>
+            <div class="key-message warning stagger-item">「リラックス」ではなくストレスによる「興奮」だった</div>
+        </div>
+    </div>
+
+    <!-- Scene 17: その他の「期待しすぎ」ポイント -->
+    <div class="scene" id="scene-17">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">OVERHYPED</div>
+            <div class="scene-title stagger-item">期待しすぎな3つのポイント</div>
+            <div class="steps-list stagger-item">
+                <div class="step-item">
+                    <div class="step-num" style="background: var(--clr-danger)">1</div>
+                    <div class="step-text">冷水浸漬は直後に炎症マーカーを上昇させる</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num" style="background: var(--clr-danger)">2</div>
+                    <div class="step-text">冷水で食欲増加 → カロリー消費が相殺される</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num" style="background: var(--clr-danger)">3</div>
+                    <div class="step-text">筋トレ後の冷水は筋力・筋肥大の獲得を阻害</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 18: 知らないと危険なリスク タイトル -->
+    <div class="scene" id="scene-18">
+        <canvas class="canvas-bg" id="canvas-18"></canvas>
+        <div class="scene-content">
+            <div class="chapter-num stagger-item">CHAPTER 03</div>
+            <div class="scene-title stagger-item">知らないと危険な<br>リスク</div>
+            <div class="chapter-line stagger-item"></div>
+        </div>
+    </div>
+
+    <!-- Scene 19: コールドショック反応と心臓への負荷 -->
+    <div class="scene" id="scene-19">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">CARDIAC RISK</div>
+            <div class="scene-title stagger-item">コールドショック反応と<br>心臓への負荷</div>
+            <div class="flow-diagram stagger-item">
+                <div class="flow-node">
+                    <div class="flow-icon">🚿</div>
+                    <div class="flow-label">冷水接触</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-node danger">
+                    <div class="flow-icon">💓</div>
+                    <div class="flow-label">心拍急上昇<br>血圧急上昇</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-node danger">
+                    <div class="flow-icon">⚠️</div>
+                    <div class="flow-label">不整脈<br>狭心症リスク</div>
+                </div>
+            </div>
+            <div class="alert-box stagger-item">
+                <div class="alert-icon">🏥</div>
+                <div class="alert-text">アメリカ心臓協会が<br>公式に警告を発表</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 20: 冷水シャワーを避けるべき人 -->
+    <div class="scene" id="scene-20">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">CONTRAINDICATIONS</div>
+            <div class="scene-title stagger-item">冷水シャワーを避けるべき人</div>
+            <div class="hierarchy-list stagger-item">
+                <div class="hierarchy-item">
+                    <div class="h-rank">!</div>
+                    <div class="h-name">心臓疾患</div>
+                    <div class="h-bar" style="--h-width: 100%"></div>
+                </div>
+                <div class="hierarchy-item">
+                    <div class="h-rank">!</div>
+                    <div class="h-name">高血圧</div>
+                    <div class="h-bar" style="--h-width: 90%"></div>
+                </div>
+                <div class="hierarchy-item">
+                    <div class="h-rank">!</div>
+                    <div class="h-name">レイノー病</div>
+                    <div class="h-bar" style="--h-width: 75%"></div>
+                </div>
+                <div class="hierarchy-item">
+                    <div class="h-rank">!</div>
+                    <div class="h-name">喘息</div>
+                    <div class="h-bar" style="--h-width: 65%"></div>
+                </div>
+                <div class="hierarchy-item">
+                    <div class="h-rank">!</div>
+                    <div class="h-name">糖尿病（末梢神経障害）</div>
+                    <div class="h-bar" style="--h-width: 55%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 21: ハーバード大学の見解 -->
+    <div class="scene" id="scene-21">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">EXPERT VIEW</div>
+            <div class="scene-title stagger-item">ハーバード大学の見解</div>
+            <div class="quote-card stagger-item">
+                <div class="quote-source">Harvard Health Publishing</div>
+                <div class="quote-text">「最適な温度・時間・頻度についての<br>科学的コンセンサスはまだない」</div>
+            </div>
+            <div class="key-message stagger-item">効果はあるかもしれないが、最適な方法はまだ不明</div>
+        </div>
+    </div>
+
+    <!-- Scene 22: ホルミシス -->
+    <div class="scene" id="scene-22">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">HORMESIS</div>
+            <div class="scene-title stagger-item">ホルミシス<br>適量ストレス vs 過剰ストレス</div>
+            <div class="hormesis-chart stagger-item">
+                <svg viewBox="0 0 600 200" class="hormesis-svg">
+                    <line x1="60" y1="180" x2="560" y2="180" stroke="var(--clr-text-muted)" stroke-width="2"/>
+                    <line x1="60" y1="180" x2="60" y2="20" stroke="var(--clr-text-muted)" stroke-width="2"/>
+                    <text x="310" y="198" text-anchor="middle" class="svg-axis">ストレスの量 →</text>
+                    <text x="30" y="100" text-anchor="middle" class="svg-axis" transform="rotate(-90 30 100)">効果 →</text>
+                    <path d="M80,160 Q200,30 310,50 Q420,70 540,170" fill="none" stroke="var(--clr-primary)" stroke-width="4" stroke-linecap="round"/>
+                    <circle cx="200" cy="50" r="8" fill="var(--clr-success)"/>
+                    <text x="200" y="38" text-anchor="middle" class="svg-label-sm" style="fill:var(--clr-success)">最適</text>
+                    <circle cx="500" cy="160" r="8" fill="var(--clr-danger)"/>
+                    <text x="500" y="148" text-anchor="middle" class="svg-label-sm" style="fill:var(--clr-danger)">過剰</text>
+                </svg>
+            </div>
+            <div class="key-message stagger-item">冷水シャワーは30秒で十分。長くしても効果は変わらない</div>
+        </div>
+    </div>
+
+    <!-- Scene 23: 安全な始め方3ステップ -->
+    <div class="scene" id="scene-23">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">SAFE START</div>
+            <div class="scene-title stagger-item">安全な始め方3ステップ</div>
+            <div class="steps-list stagger-item">
+                <div class="step-item">
+                    <div class="step-num">1</div>
+                    <div class="step-text">普段通りの温かいシャワーを浴びる</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">2</div>
+                    <div class="step-text">最後の30秒だけ水温を下げる</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">3</div>
+                    <div class="step-text">数日かけて少しずつ冷たさに慣らす</div>
+                </div>
+            </div>
+            <div class="key-message stagger-item">心臓から遠い手足から始めるのが安全</div>
+        </div>
+    </div>
+
+    <!-- Scene 24: 結論：条件付きイエス タイトル -->
+    <div class="scene" id="scene-24">
+        <canvas class="canvas-bg" id="canvas-24"></canvas>
+        <div class="scene-content">
+            <div class="chapter-num stagger-item">CONCLUSION</div>
+            <div class="scene-title stagger-item">結論<br>「条件付きイエス」</div>
+            <div class="chapter-line stagger-item"></div>
+        </div>
+    </div>
+
+    <!-- Scene 25: 効くこと vs 効かないこと -->
+    <div class="scene" id="scene-25">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">VERDICT</div>
+            <div class="scene-title stagger-item">効くこと vs 効かないこと</div>
+            <div class="scope-compare stagger-item">
+                <div class="scope-card scope-yes">
+                    <div class="scope-header">✅ 科学的に効くこと</div>
+                    <div class="scope-items">
+                        <div class="scope-item">覚醒と気分の改善</div>
+                        <div class="scope-item">運動後の筋肉痛軽減</div>
+                        <div class="scope-item">褐色脂肪の活性化</div>
+                    </div>
+                    <div class="scope-note">神経伝達物質の変化で確認</div>
+                </div>
+                <div class="scope-card scope-no">
+                    <div class="scope-header">❌ 効かないこと</div>
+                    <div class="scope-items">
+                        <div class="scope-item">免疫力の直接的向上</div>
+                        <div class="scope-item">ダイエット効果</div>
+                        <div class="scope-item">即時ストレス解消</div>
+                    </div>
+                    <div class="scope-note">客観的データでは裏付けなし</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 26: プラセボ効果は「悪」ではない -->
+    <div class="scene" id="scene-26">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">PLACEBO ISN'T BAD</div>
+            <div class="scene-title stagger-item">プラセボ効果は「悪」ではない</div>
+            <div class="flow-diagram stagger-item">
+                <div class="flow-node">
+                    <div class="flow-icon">🚿</div>
+                    <div class="flow-label">冷水シャワー<br>の習慣</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-node">
+                    <div class="flow-icon">📋</div>
+                    <div class="flow-label">規律的な<br>生活全般</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-node highlight">
+                    <div class="flow-icon">💪</div>
+                    <div class="flow-label">意志の力<br>が本当の効果</div>
+                </div>
+            </div>
+            <div class="key-message stagger-item">「健康的なことをしている」実感が行動を変える</div>
+        </div>
+    </div>
+
+    <!-- Scene 27: 4000年分の人類の直感 -->
+    <div class="scene" id="scene-27">
+        <div class="scene-content">
+            <div class="scene-label stagger-item">4000 YEARS</div>
+            <div class="scene-title stagger-item">4000年分の人類の直感</div>
+            <div class="impact-number stagger-item" style="font-size:88px">BC 3500</div>
+            <div class="impact-desc stagger-item">人類の直感は完全に間違ってはいなかった<br>ただし「魔法の万能薬」ではなかった</div>
+        </div>
+    </div>
+
+    <!-- Scene 28: 今日覚えてほしい3つのポイント -->
+    <div class="scene" id="scene-28">
+        <canvas class="canvas-bg" id="canvas-28"></canvas>
+        <div class="scene-content">
+            <div class="scene-label stagger-item">TAKEAWAY</div>
+            <div class="scene-title stagger-item">今日覚えてほしい3つのポイント</div>
+            <div class="summary-cards">
+                <div class="summary-card stagger-item">
+                    <div class="summary-num">1</div>
+                    <div class="summary-text">30秒で十分<small>長くしても効果は変わらない</small></div>
+                </div>
+                <div class="summary-card stagger-item">
+                    <div class="summary-num">2</div>
+                    <div class="summary-text">免疫・ダイエットは<br>過度に期待しない<small>科学的根拠が弱い</small></div>
+                </div>
+                <div class="summary-card stagger-item">
+                    <div class="summary-num">3</div>
+                    <div class="summary-text">持病がある人は<br>必ず医師に相談<small>心臓疾患・高血圧は特に注意</small></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

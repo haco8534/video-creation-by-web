@@ -1,0 +1,579 @@
+/* ============================================================
+   自由意志は幻想なのか？ – Presentation Style
+   ============================================================ */
+
+/* ── Google Fonts fallback ── */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+/* ── Design Tokens ── */
+:root {
+    --bg: #f8f9fa;
+    --text: #1a1a2e;
+    --text-light: #6c757d;
+    --primary: #5b4cdb;
+    --primary-light: #ede9ff;
+    --teal: #14b8a6;
+    --teal-light: #ccfbf1;
+    --coral: #ef4444;
+    --coral-light: #fee2e2;
+    --amber: #f59e0b;
+    --amber-light: #fef3c7;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 24px rgba(0,0,0,0.06);
+    --shadow-lg: 0 8px 40px rgba(0,0,0,0.1);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transition: 0.6s cubic-bezier(0.16,1,0.3,1);
+}
+
+/* ── Reset & Base ── */
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+    width: 100%; height: 100%; overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg); color: var(--text);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ── Scene Base ── */
+.scene {
+    width: 100%; height: 100%;
+    display: none; position: relative;
+    overflow: hidden;
+}
+.scene.active {
+    display: flex; align-items: center; justify-content: center;
+    animation: sceneFadeIn 0.5s ease both;
+}
+
+/* ── Content Layouts ── */
+.content { position: relative; z-index: 2; width: 100%; max-width: 1100px; padding: 40px 60px; }
+.center-layout { text-align: center; }
+.card-layout { text-align: left; }
+
+/* ── Canvas Background ── */
+.bg-canvas {
+    position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%;
+    pointer-events: none;
+}
+
+/* ── Typography ── */
+.title-huge { font-size: 3.2rem; font-weight: 900; line-height: 1.3; letter-spacing: -0.02em; margin-bottom: 16px; }
+.title-medium { font-size: 2.4rem; font-weight: 900; line-height: 1.4; }
+.title-sub { font-size: 1.1rem; color: var(--text-light); margin-top: 12px; font-weight: 400; }
+.scene-title { font-size: 1.6rem; font-weight: 900; margin-bottom: 24px; }
+.emphasis-text { font-size: 1.6rem; font-weight: 700; margin: 8px 0; line-height: 1.5; }
+.emphasis-text-large { font-size: 2.8rem; font-weight: 900; margin: 12px 0; line-height: 1.3; }
+.emphasis-sub { font-size: 1rem; color: var(--text-light); margin-top: 16px; line-height: 1.6; }
+.footnote { font-size: 0.8rem; color: var(--text-light); margin-top: 16px; opacity: 0.7; }
+
+/* ── Accent Colors ── */
+.accent-primary { color: var(--primary); }
+.accent-coral { color: var(--coral); }
+.accent-teal { color: var(--teal); }
+.accent-amber { color: var(--amber); }
+.accent-fill-primary { fill: var(--primary); }
+.accent-fill-coral { fill: var(--coral); }
+.accent-fill-teal { fill: var(--teal); }
+
+/* ── Accent Backgrounds ── */
+.accent-bg-primary { background: var(--primary); color: #fff; }
+.accent-bg-teal { background: var(--teal); color: #fff; }
+.accent-bg-coral { background: var(--coral); color: #fff; }
+.accent-bg-amber { background: var(--amber); color: #fff; }
+
+/* ── Section Badge ── */
+.section-badge {
+    display: inline-block; padding: 6px 20px; border-radius: 40px;
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; margin-bottom: 20px;
+}
+
+/* ── Source Badge ── */
+.source-badge {
+    display: inline-block; padding: 4px 14px; border-radius: 20px;
+    font-size: 0.7rem; color: var(--text-light); background: rgba(0,0,0,0.04);
+    margin-bottom: 20px;
+}
+
+/* ── Numbered List ── */
+.numbered-list { display: flex; flex-direction: column; gap: 16px; }
+.numbered-item {
+    display: flex; align-items: flex-start; gap: 16px;
+    background: var(--card-bg); padding: 20px 24px; border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+.number-circle {
+    min-width: 36px; height: 36px; border-radius: 50%;
+    background: var(--primary); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 1rem;
+}
+.coral-circle { background: var(--coral); }
+.teal-circle { background: var(--teal); }
+.numbered-text { font-size: 1.05rem; font-weight: 700; line-height: 1.5; flex: 1; }
+.text-sub { font-size: 0.8rem; color: var(--text-light); font-weight: 400; margin-top: 4px; }
+
+/* ── Summary Items ── */
+.summary-item { border-left: 4px solid var(--primary); }
+
+/* ── Triple Card ── */
+.triple-card { display: flex; gap: 20px; margin-top: 16px; }
+.factor-card {
+    flex: 1; background: var(--card-bg); padding: 28px 20px; border-radius: var(--radius);
+    box-shadow: var(--shadow); text-align: center; position: relative;
+    transition: transform 0.3s ease;
+}
+.factor-card-highlight { border: 2px solid var(--teal); }
+.factor-icon {
+    width: 48px; height: 48px; border-radius: 50%; margin: 0 auto 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 1.2rem;
+}
+.factor-name { font-weight: 900; font-size: 1.1rem; margin-bottom: 8px; }
+.factor-desc { font-size: 0.85rem; color: var(--text-light); }
+.factor-badge {
+    position: absolute; top: -8px; right: -8px;
+    background: var(--teal); color: #fff; padding: 2px 10px; border-radius: 12px;
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em;
+}
+
+/* ── VS Container ── */
+.vs-container { display: flex; align-items: stretch; gap: 24px; margin-top: 16px; }
+.vs-card {
+    flex: 1; background: var(--card-bg); padding: 28px 24px; border-radius: var(--radius);
+    box-shadow: var(--shadow); text-align: center;
+}
+.vs-left { border-top: 4px solid var(--coral); }
+.vs-right { border-top: 4px solid var(--teal); }
+.vs-badge {
+    display: inline-block; padding: 3px 12px; border-radius: 12px;
+    font-size: 0.7rem; font-weight: 700; margin-bottom: 12px;
+}
+.danger-badge { background: var(--coral-light); color: var(--coral); }
+.safe-badge { background: var(--teal-light); color: var(--teal); }
+.vs-title { font-size: 1.3rem; font-weight: 900; margin-bottom: 8px; }
+.vs-desc { font-size: 0.9rem; color: var(--text-light); }
+.vs-detail { font-size: 0.8rem; color: var(--text-light); margin-bottom: 4px; font-style: italic; }
+.vs-divider {
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; font-weight: 900; color: var(--text-light); min-width: 48px;
+}
+.comparison-note {
+    text-align: center; font-size: 0.85rem; color: var(--text-light);
+    margin-top: 16px; padding: 8px 16px; background: rgba(0,0,0,0.03); border-radius: var(--radius-sm);
+}
+
+/* ── Quote Card ── */
+.quote-card {
+    background: var(--card-bg); padding: 32px 36px; border-radius: var(--radius);
+    box-shadow: var(--shadow); border-left: 5px solid var(--primary);
+    text-align: left; margin: 16px 0; position: relative;
+}
+.quote-warning { border-left-color: var(--coral); }
+.quote-warm { border-left-color: var(--amber); }
+.quote-mark { font-size: 3rem; color: var(--primary); opacity: 0.2; position: absolute; top: 8px; left: 16px; font-family: Georgia, serif; }
+.quote-text { font-size: 1.3rem; font-weight: 700; line-height: 1.6; margin-left: 20px; }
+.quote-source { font-size: 0.75rem; color: var(--text-light); margin-top: 12px; margin-left: 20px; }
+
+/* ── Flow Chain ── */
+.flow-chain { display: flex; align-items: center; gap: 8px; margin-top: 16px; flex-wrap: wrap; justify-content: center; }
+.flow-node {
+    background: var(--card-bg); padding: 20px 16px; border-radius: var(--radius);
+    box-shadow: var(--shadow); text-align: center; min-width: 160px; flex: 1;
+}
+.flow-year { font-size: 0.75rem; font-weight: 700; color: var(--primary); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.1em; }
+.flow-text { font-size: 0.85rem; line-height: 1.5; }
+.flow-name { font-weight: 900; font-size: 1rem; }
+.flow-sub { font-size: 0.7rem; color: var(--text-light); }
+.flow-arrow { font-size: 1.5rem; color: var(--text-light); }
+
+/* ── Impact Number ── */
+.impact-number { margin: 16px 0; }
+.big-num { font-size: 4.5rem; font-weight: 900; line-height: 1; }
+.num-unit { font-size: 1.8rem; font-weight: 700; margin-left: 4px; }
+
+/* ══════════════════════════════════════════
+   CUSTOM VISUALS (テーマ固有)
+   ══════════════════════════════════════════ */
+
+/* ── 1. Timeline SVG (Scene 8) ── */
+.timeline-visual { margin: 20px auto; max-width: 700px; }
+.timeline-svg { width: 100%; height: auto; }
+.timeline-base { stroke: #e2e8f0; stroke-width: 3; }
+.timeline-dot { fill: #fff; stroke-width: 3; }
+.timeline-dot-brain { stroke: var(--coral); }
+.timeline-dot-conscious { stroke: var(--primary); }
+.timeline-dot-action { stroke: var(--teal); }
+.timeline-label { text-anchor: middle; fill: var(--text); font-size: 14px; font-weight: 700; }
+.timeline-time { text-anchor: middle; font-size: 16px; font-weight: 900; }
+.timeline-desc { text-anchor: middle; fill: var(--text-light); font-size: 12px; }
+.timeline-gap-line { stroke: var(--coral); stroke-width: 2; stroke-dasharray: 6,4; opacity: 0.5; }
+.timeline-gap-text { text-anchor: middle; fill: var(--coral); font-size: 11px; font-weight: 700; }
+
+/* Timeline SVG animation */
+.scene.active .timeline-dot {
+    animation: dotPulseIn 0.6s ease-out forwards;
+    opacity: 0;
+}
+.scene.active .timeline-dot-brain { animation-delay: 0.3s; }
+.scene.active .timeline-dot-conscious { animation-delay: 0.8s; }
+.scene.active .timeline-dot-action { animation-delay: 1.3s; }
+.scene.active .timeline-gap-line {
+    stroke-dashoffset: 500;
+    animation: drawLine 1.5s ease forwards 0.5s;
+}
+
+/* ── 2. Noise Wave SVG (Scene 13) ── */
+.noise-visual { margin: 20px auto; max-width: 550px; }
+.noise-svg { width: 100%; height: auto; overflow: visible; }
+.noise-line {
+    stroke: var(--primary); stroke-dasharray: 1000; stroke-dashoffset: 1000;
+}
+.scene.active .noise-line {
+    animation: drawLine 2.5s ease forwards 0.5s;
+}
+.threshold-line { stroke: var(--coral); stroke-width: 2; }
+.threshold-text { fill: var(--coral); font-size: 13px; font-weight: 700; }
+
+/* ── 3. Trivial Visual (Scene 14) ── */
+.trivial-visual { display: flex; align-items: center; gap: 24px; justify-content: center; margin: 24px 0; }
+.trivial-card {
+    background: var(--card-bg); padding: 28px 24px; border-radius: var(--radius);
+    box-shadow: var(--shadow); text-align: center; min-width: 180px;
+}
+.trivial-left { border-top: 4px solid var(--coral); }
+.trivial-right { border-top: 4px solid var(--teal); }
+.trivial-icon { font-size: 2.5rem; margin-bottom: 12px; }
+.trivial-label { font-weight: 900; font-size: 1rem; margin-bottom: 4px; }
+.trivial-type { font-size: 0.8rem; font-weight: 700; }
+.trivial-ne { font-size: 2.5rem; font-weight: 900; color: var(--text-light); }
+
+/* ── 4. Free Won't Visual (Scene 15) ── */
+.freewont-visual { display: flex; align-items: center; gap: 16px; justify-content: center; margin: 20px 0; }
+.freewont-card {
+    background: var(--card-bg); padding: 20px 24px; border-radius: var(--radius);
+    box-shadow: var(--shadow); text-align: center; min-width: 160px;
+}
+.freewont-highlight { border: 2px solid var(--teal); animation: pulseGlow 2.5s ease-in-out infinite; }
+.freewont-label { font-weight: 900; font-size: 1.1rem; margin-bottom: 4px; }
+.freewont-desc { font-size: 0.85rem; color: var(--text-light); margin-bottom: 4px; }
+.freewont-status { font-size: 0.75rem; font-weight: 700; color: var(--text-light); opacity: 0.7; }
+.freewont-arrow { font-size: 1.5rem; color: var(--text-light); }
+
+/* ── 5. Cheat Experiment Bar (Scene 18) ── */
+.cheat-visual { margin: 20px auto; max-width: 500px; }
+.cheat-group { margin-bottom: 16px; }
+.cheat-bar-label { font-size: 0.85rem; font-weight: 700; margin-bottom: 6px; }
+.cheat-bar { height: 32px; background: #f1f5f9; border-radius: 16px; overflow: hidden; }
+.cheat-fill { height: 100%; border-radius: 16px; width: 0; transition: width 1.5s ease; }
+.cheat-control { background: linear-gradient(90deg, #94a3b8, #cbd5e1); }
+.cheat-test { background: linear-gradient(90deg, var(--coral), #f87171); }
+.scene.active .cheat-fill { width: var(--w); }
+
+/* ── 6. Accuracy Bar (Scene 9) ── */
+.accuracy-visual { margin: 16px auto; max-width: 400px; }
+.accuracy-bar { height: 24px; background: #f1f5f9; border-radius: 12px; overflow: hidden; position: relative; }
+.accuracy-fill { height: 100%; border-radius: 12px; width: 0; background: linear-gradient(90deg, var(--primary), #818cf8); transition: width 1.5s ease 0.5s; }
+.scene.active .accuracy-fill { width: var(--w); }
+.accuracy-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; }
+
+/* ── 7. Gradient Visual (Scene 24) ── */
+.gradient-visual { margin: 20px auto; max-width: 500px; }
+.gradient-bar {
+    height: 24px; border-radius: 12px; position: relative;
+    background: linear-gradient(90deg, var(--coral), var(--amber), var(--teal));
+    display: flex; align-items: center; justify-content: space-between; padding: 0 16px;
+}
+.gradient-left, .gradient-right { font-size: 0.7rem; font-weight: 700; color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+
+/* ══════════════════════════════════════════
+   ANIMATIONS (必須 @keyframes)
+   ══════════════════════════════════════════ */
+
+/* 1. Scene fade in */
+@keyframes sceneFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* 2. Card slide up */
+@keyframes cardSlideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* 3. Number pop in */
+@keyframes numberPop {
+    0%   { transform: scale(0.5); opacity: 0; }
+    60%  { transform: scale(1.08); opacity: 1; }
+    100% { transform: scale(1);   opacity: 1; }
+}
+
+/* 4. Bar fill */
+@keyframes barFill {
+    from { width: 0; }
+    to   { width: var(--w); }
+}
+
+/* 5. Float */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px); }
+}
+
+/* 6. Pulse glow */
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(91,76,219,0.2); }
+    50%      { box-shadow: 0 0 20px 8px rgba(91,76,219,0.15); }
+}
+
+/* 7. Bounce in */
+@keyframes bounceIn {
+    0%   { transform: scale(0); }
+    50%  { transform: scale(1.12); }
+    70%  { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+/* 8. Title reveal */
+@keyframes titleReveal {
+    0%   { clip-path: inset(0 100% 0 0); }
+    100% { clip-path: inset(0 0 0 0); }
+}
+
+/* 9. Draw line (SVG) */
+@keyframes drawLine {
+    from { stroke-dashoffset: 1000; }
+    to   { stroke-dashoffset: 0; }
+}
+
+/* 10. Dot pulse in */
+@keyframes dotPulseIn {
+    0%   { opacity: 0; r: 0; }
+    60%  { opacity: 1; r: 28; }
+    100% { opacity: 1; r: 24; }
+}
+
+/* 11. Gradient shift */
+@keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 12. Shake warn */
+@keyframes warningShake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-3px); }
+    20%, 40%, 60%, 80%      { transform: translateX(3px); }
+}
+
+/* ══════════════════════════════════════════
+   ANIMATION APPLICATION RULES
+   ══════════════════════════════════════════ */
+
+/* ── Stagger items (universal) ── */
+.stagger-item {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity var(--transition), transform var(--transition);
+}
+.scene.active .stagger-item { opacity: 1; transform: translateY(0); }
+.scene.active .stagger-item:nth-child(1) { transition-delay: 0.0s; }
+.scene.active .stagger-item:nth-child(2) { transition-delay: 0.12s; }
+.scene.active .stagger-item:nth-child(3) { transition-delay: 0.24s; }
+.scene.active .stagger-item:nth-child(4) { transition-delay: 0.36s; }
+.scene.active .stagger-item:nth-child(5) { transition-delay: 0.48s; }
+.scene.active .stagger-item:nth-child(6) { transition-delay: 0.60s; }
+.scene.active .stagger-item:nth-child(7) { transition-delay: 0.72s; }
+.scene.active .stagger-item:nth-child(8) { transition-delay: 0.84s; }
+
+/* ── Card types → cardSlideUp ── */
+.scene.active .numbered-item,
+.scene.active .factor-card,
+.scene.active .vs-card,
+.scene.active .flow-node {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+.scene.active .numbered-item:nth-child(1),
+.scene.active .factor-card:nth-child(1) { animation-delay: 0.3s; }
+.scene.active .numbered-item:nth-child(2),
+.scene.active .factor-card:nth-child(2) { animation-delay: 0.5s; }
+.scene.active .numbered-item:nth-child(3),
+.scene.active .factor-card:nth-child(3) { animation-delay: 0.7s; }
+.scene.active .numbered-item:nth-child(4) { animation-delay: 0.9s; }
+
+/* ── Impact number → numberPop ── */
+.scene.active .impact-number {
+    animation: numberPop 0.8s cubic-bezier(0.34,1.56,0.64,1) forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+.scene.active .big-num {
+    animation: numberPop 0.8s cubic-bezier(0.34,1.56,0.64,1) forwards;
+    animation-delay: 0.4s;
+}
+
+/* ── VS divider → bounceIn ── */
+.scene.active .vs-divider {
+    animation: bounceIn 0.6s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+/* ── Flow arrow → bounceIn ── */
+.scene.active .flow-arrow {
+    animation: bounceIn 0.6s ease-out forwards;
+    opacity: 0;
+}
+.scene.active .flow-arrow:nth-child(2) { animation-delay: 0.4s; }
+.scene.active .flow-arrow:nth-child(4) { animation-delay: 0.7s; }
+
+/* ── Quote cards ── */
+.scene.active .quote-card {
+    animation: cardSlideUp 0.6s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+/* ── Title accents ── */
+.scene.active .title-huge .accent-primary,
+.scene.active .title-medium .accent-primary,
+.scene.active .title-medium .accent-teal,
+.scene.active .title-medium .accent-coral,
+.scene.active .title-medium .accent-amber {
+    animation: titleReveal 0.8s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+/* ── Freewont highlight pulse ── */
+.scene.active .freewont-highlight {
+    animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* ── Summary items pulse ── */
+.scene.active .summary-item {
+    animation: cardSlideUp 0.5s ease-out forwards, pulseGlow 3s ease-in-out infinite 1.5s;
+    opacity: 0;
+}
+
+/* ── Factor card highlight ── */
+.scene.active .factor-card-highlight {
+    animation: cardSlideUp 0.5s ease-out forwards, pulseGlow 2.5s ease-in-out infinite 1s;
+    opacity: 0;
+    animation-delay: 0.7s;
+}
+
+/* ── Emphasis text large ── */
+.scene.active .emphasis-text-large {
+    animation: numberPop 0.7s cubic-bezier(0.34,1.56,0.64,1) forwards;
+    animation-delay: 0.3s;
+}
+
+/* ── Trivial cards ── */
+.scene.active .trivial-card {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+.scene.active .trivial-left { animation-delay: 0.3s; }
+.scene.active .trivial-right { animation-delay: 0.6s; }
+.scene.active .trivial-ne {
+    animation: bounceIn 0.6s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+/* ── Cheat bars ── */
+.scene.active .cheat-fill {
+    animation: barFill 1.2s ease-out forwards;
+    animation-delay: 0.6s;
+    width: 0;
+}
+
+/* ── Gradient bar animation ── */
+.gradient-bar {
+    background-size: 200% 100%;
+    animation: gradientShift 4s ease infinite;
+}
+
+/* ── Freewont cards ── */
+.scene.active .freewont-card {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+.scene.active .freewont-card:nth-child(1) { animation-delay: 0.3s; }
+.scene.active .freewont-card:nth-child(3) { animation-delay: 0.6s; }
+.scene.active .freewont-arrow {
+    animation: bounceIn 0.6s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+/* ── Dark scene (not used but available) ── */
+.dark-scene { background: #1a1a2e; }
+.dark-scene .scene-title, .dark-scene .emphasis-text, .dark-scene .emphasis-text-large { color: #fff; }
+.dark-scene .emphasis-sub, .dark-scene .footnote, .dark-scene .text-sub { color: rgba(255,255,255,0.6); }
+.light-text { color: #fff; }
+
+/* ── Alert card (available) ── */
+.alert-card {
+    background: var(--coral-light); padding: 24px 28px; border-radius: var(--radius);
+    border-left: 5px solid var(--coral); display: flex; gap: 16px; align-items: flex-start;
+}
+.alert-icon {
+    min-width: 36px; height: 36px; border-radius: 50%; background: var(--coral); color: #fff;
+    display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.1rem;
+}
+.alert-title { font-weight: 900; font-size: 1.1rem; }
+.alert-sub { font-size: 0.85rem; color: var(--text-light); margin-top: 4px; }
+
+/* ── Tag cloud (available) ── */
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 16px; }
+.tag-item { padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; }
+.tag-amber { background: var(--amber-light); color: var(--amber); }
+.tag-teal { background: var(--teal-light); color: var(--teal); }
+.tag-coral { background: var(--coral-light); color: var(--coral); }
+.tag-primary { background: var(--primary-light); color: var(--primary); }
+
+/* ── Comparison table (available) ── */
+.comparison-table { width: 100%; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.comp-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; }
+.comp-header { background: var(--primary); color: #fff; font-weight: 700; }
+.comp-cell { padding: 14px 16px; border-bottom: 1px solid rgba(0,0,0,0.05); font-size: 0.9rem; }
+.comp-name { font-weight: 700; background: rgba(0,0,0,0.02); }
+
+/* ── Formula (available) ── */
+.formula-container { display: flex; align-items: center; gap: 12px; justify-content: center; margin: 16px 0; flex-wrap: wrap; }
+.formula-part { background: var(--card-bg); padding: 12px 20px; border-radius: var(--radius-sm); box-shadow: var(--shadow); font-weight: 700; }
+.formula-op { font-size: 1.5rem; color: var(--text-light); }
+.formula-eq { font-size: 1.5rem; font-weight: 900; color: var(--primary); }
+.formula-result { background: var(--primary-light); padding: 12px 20px; border-radius: var(--radius-sm); font-weight: 900; color: var(--primary); }
+
+/* ── Ring charts (available) ── */
+.split-ring { position: relative; display: inline-block; width: 120px; height: 120px; }
+.ring-bg { fill: none; stroke: #e2e8f0; stroke-width: 10; }
+.ring-fill { fill: none; stroke-width: 10; stroke-linecap: round; stroke-dasharray: calc(2 * 3.14159 * 54); stroke-dashoffset: calc(2 * 3.14159 * 54 * (1 - var(--percent) / 100)); transform: rotate(-90deg); transform-origin: center; transition: stroke-dashoffset 1.5s ease; }
+.ring-iq { stroke: var(--primary); }
+.ring-center-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.1rem; }
+
+/* ── Bar comparison (available) ── */
+.bar-comparison { width: 100%; max-width: 400px; margin: 16px auto; }
+.bar-row { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.bar-label { min-width: 80px; font-size: 0.8rem; font-weight: 700; text-align: right; }
+.bar-track { flex: 1; height: 20px; background: #f1f5f9; border-radius: 10px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 10px; width: 0; transition: width 1.5s ease; }
+.bar-a-fill { background: var(--primary); }
+.bar-b-fill { background: var(--teal); }
+.scene.active .bar-fill { width: var(--w); }
+
+/* ── Horizontal bar ── */
+.h-bar { width: 0; transition: width 1.5s ease 0.5s; }
+.scene.active .h-bar { width: var(--w); }
+
+/* ── Dark list (available) ── */
+.dark-list { display: flex; flex-direction: column; gap: 12px; }
+.dark-item { display: flex; gap: 16px; align-items: flex-start; padding: 16px; background: rgba(255,255,255,0.05); border-radius: var(--radius-sm); }
+.dark-icon { min-width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-weight: 900; color: #fff; font-size: 0.8rem; }
+.dark-content { flex: 1; }
+.dark-title { font-weight: 900; color: #fff; margin-bottom: 4px; }
+.dark-desc { font-size: 0.85rem; color: rgba(255,255,255,0.6); }

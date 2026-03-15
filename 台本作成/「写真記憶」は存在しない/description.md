@@ -1,0 +1,45 @@
+# YouTube概要欄：「写真記憶」は存在しない──あなたの記憶は写真よりすごい
+
+<!-- 以下をそのままYouTubeの概要欄にコピー＆ペーストして使う -->
+
+「一度見ただけで本のページを丸ごと記憶できる」──写真記憶。映画やドラマでは天才の象徴として描かれてきましたが、実はこの能力が科学的に確認された人は一人もいません。
+
+この動画では、唯一の「科学的証拠」がなぜ崩壊したのか、人間の記憶がなぜ「不完全」なのか、そして記憶力チャンピオンが使う技術の正体を、最新の研究データとともに徹底解説します。
+
+動画を見終わった後、あなたは「写真記憶より、人間の記憶のほうがすごい」と思えるはずです。
+
+▼ もくじ（タイムスタンプ）
+00:00 オープニング
+02:00 写真記憶が信じられている理由
+05:00 唯一の「証拠」──ストロマイヤー事件
+09:00 記憶は「再生」ではなく「再構成」
+13:30 記憶チャンピオンの秘密──誰でもなれる
+17:30 まとめ──人間の記憶は写真よりすごい
+<!-- ※時間は推定値です。動画完成後に実際の時間に合わせて微調整してください -->
+
+▼ 参考文献・一次資料
+この動画の内容は以下の学術論文・公的資料等に基づいています。
+
+【学術論文】
+• Stromeyer, C.F. & Psotka, J. (1970). The detailed texture of eidetic images. Nature, 225, 346-349.
+• Loftus, E.F. & Palmer, J.C. (1974). Reconstruction of automobile destruction: An example of the interaction between language and memory. Journal of Verbal Learning and Verbal Behavior, 13, 585-589.
+• Loftus, E.F. (1995). The formation of false memories. Psychiatric Annals, 25(12), 720-725.
+• Inoue, S. & Matsuzawa, T. (2007). Working memory of numerals in chimpanzees. Current Biology, 17(23), R1004-R1005.
+• LePort, A.K.R. et al. (2012). Behavioral and neuroanatomical investigation of Highly Superior Autobiographical Memory (HSAM). Neurobiology of Learning and Memory, 98(1), 78-92.
+• Patihis, L. et al. (2013). False memories in highly superior autobiographical memory individuals. PNAS, 110(52), 20947-20952.
+• Dresler, M. et al. (2017). Mnemonic training reshapes brain networks to support superior memory. Neuron, 93(5), 1227-1235.
+
+【書籍】
+• Bartlett, F.C. (1932). 『Remembering: A Study in Experimental and Social Psychology』Cambridge University Press
+
+【参考記事・解説】
+• Slate. "The woman who could see two images at the same time — and the man who married her"
+• Smithsonian Magazine. "The Secrets of 'Memory Athletes'"
+
+---
+
+📘 このチャンネルについて
+一次情報と研究データに基づきながら、難しいテーマをずんだもんとめたんの対話で楽しくわかりやすく解説するチャンネルです。
+「わかりやすく親しみやすい。でも、ちゃんと本当のことを言っている。」を大切にしています。
+
+#写真記憶 #心理学 #記憶力 #脳科学 #ずんだもん

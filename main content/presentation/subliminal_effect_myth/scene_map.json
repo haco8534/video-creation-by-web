@@ -10,7 +10,7 @@
   "scenes": [
     {
       "id": 0,
-      "title": "scene_0",
+      "title": "サブリミナル効果の幻想",
       "lines": [
         {
           "speaker": "metan",
@@ -32,7 +32,7 @@
     },
     {
       "id": 1,
-      "title": "scene_1",
+      "title": "ヴィカリーの実験",
       "lines": [
         {
           "speaker": "zundamon",
@@ -62,7 +62,7 @@
     },
     {
       "id": 2,
-      "title": "scene_2",
+      "title": "衝撃の真実",
       "lines": [
         {
           "speaker": "zundamon",
@@ -88,7 +88,7 @@
     },
     {
       "id": 3,
-      "title": "scene_3",
+      "title": "捏造の告白",
       "lines": [
         {
           "speaker": "zundamon",
@@ -130,7 +130,7 @@
     },
     {
       "id": 4,
-      "title": "scene_4",
+      "title": "科学的根拠はあるのか",
       "lines": [
         {
           "speaker": "metan",
@@ -152,7 +152,7 @@
     },
     {
       "id": 5,
-      "title": "scene_5",
+      "title": "閾下知覚とは",
       "lines": [
         {
           "speaker": "zundamon",
@@ -186,7 +186,7 @@
     },
     {
       "id": 6,
-      "title": "scene_6",
+      "title": "閾下知覚の歴史",
       "lines": [
         {
           "speaker": "zundamon",
@@ -216,7 +216,7 @@
     },
     {
       "id": 7,
-      "title": "scene_7",
+      "title": "脳の反応",
       "lines": [
         {
           "speaker": "zundamon",
@@ -242,7 +242,7 @@
     },
     {
       "id": 8,
-      "title": "scene_8",
+      "title": "知覚と行動の違い",
       "lines": [
         {
           "speaker": "zundamon",
@@ -268,7 +268,7 @@
     },
     {
       "id": 9,
-      "title": "scene_9",
+      "title": "第2章 追試の結果",
       "lines": [
         {
           "speaker": "metan",
@@ -290,7 +290,7 @@
     },
     {
       "id": 10,
-      "title": "scene_10",
+      "title": "CBC の追試",
       "lines": [
         {
           "speaker": "zundamon",
@@ -324,7 +324,7 @@
     },
     {
       "id": 11,
-      "title": "scene_11",
+      "title": "先入観の力",
       "lines": [
         {
           "speaker": "zundamon",
@@ -358,7 +358,7 @@
     },
     {
       "id": 12,
-      "title": "scene_12",
+      "title": "思い込みの正体",
       "lines": [
         {
           "speaker": "zundamon",
@@ -380,7 +380,7 @@
     },
     {
       "id": 13,
-      "title": "scene_13",
+      "title": "リプトンアイスの実験",
       "lines": [
         {
           "speaker": "zundamon",
@@ -406,7 +406,7 @@
     },
     {
       "id": 14,
-      "title": "scene_14",
+      "title": "部分的な成功と限界",
       "lines": [
         {
           "speaker": "zundamon",
@@ -436,7 +436,7 @@
     },
     {
       "id": 15,
-      "title": "scene_15",
+      "title": "再現性の失敗",
       "lines": [
         {
           "speaker": "zundamon",
@@ -454,7 +454,7 @@
     },
     {
       "id": 16,
-      "title": "scene_16",
+      "title": "メタ分析の結論",
       "lines": [
         {
           "speaker": "zundamon",
@@ -492,7 +492,7 @@
     },
     {
       "id": 17,
-      "title": "scene_17",
+      "title": "第3章 効果の正体",
       "lines": [
         {
           "speaker": "zundamon",
@@ -510,7 +510,7 @@
     },
     {
       "id": 18,
-      "title": "scene_18",
+      "title": "自己啓発テープの実験",
       "lines": [
         {
           "speaker": "zundamon",
@@ -540,7 +540,7 @@
     },
     {
       "id": 19,
-      "title": "scene_19",
+      "title": "二重盲検の仕掛け",
       "lines": [
         {
           "speaker": "zundamon",
@@ -578,7 +578,7 @@
     },
     {
       "id": 20,
-      "title": "scene_20",
+      "title": "衝撃の結果",
       "lines": [
         {
           "speaker": "zundamon",
@@ -604,7 +604,7 @@
     },
     {
       "id": 21,
-      "title": "scene_21",
+      "title": "錯覚的プラセボ効果",
       "lines": [
         {
           "speaker": "metan",
@@ -638,7 +638,7 @@
     },
     {
       "id": 22,
-      "title": "scene_22",
+      "title": "カーゴカルト・サイエンス",
       "lines": [
         {
           "speaker": "zundamon",
@@ -668,7 +668,7 @@
     },
     {
       "id": 23,
-      "title": "scene_23",
+      "title": "確証バイアス",
       "lines": [
         {
           "speaker": "zundamon",
@@ -718,7 +718,7 @@
     },
     {
       "id": 24,
-      "title": "scene_24",
+      "title": "第4章 なぜ禁止されたのか",
       "lines": [
         {
           "speaker": "metan",
@@ -740,7 +740,7 @@
     },
     {
       "id": 25,
-      "title": "scene_25",
+      "title": "各国の規制の歴史",
       "lines": [
         {
           "speaker": "zundamon",
@@ -770,7 +770,7 @@
     },
     {
       "id": 26,
-      "title": "scene_26",
+      "title": "禁止の本当の理由",
       "lines": [
         {
           "speaker": "zundamon",
@@ -804,7 +804,7 @@
     },
     {
       "id": 27,
-      "title": "scene_27",
+      "title": "冷戦とCIA",
       "lines": [
         {
           "speaker": "zundamon",
@@ -838,7 +838,7 @@
     },
     {
       "id": 28,
-      "title": "scene_28",
+      "title": "日本での騒動",
       "lines": [
         {
           "speaker": "zundamon",
@@ -872,7 +872,7 @@
     },
     {
       "id": 29,
-      "title": "scene_29",
+      "title": "ポケモンショックとの混同",
       "lines": [
         {
           "speaker": "zundamon",
@@ -906,7 +906,7 @@
     },
     {
       "id": 30,
-      "title": "scene_30",
+      "title": "まとめ",
       "lines": [
         {
           "speaker": "zundamon",
@@ -940,7 +940,7 @@
     },
     {
       "id": 31,
-      "title": "scene_31",
+      "title": "結論",
       "lines": [
         {
           "speaker": "zundamon",
@@ -970,7 +970,7 @@
     },
     {
       "id": 32,
-      "title": "scene_32",
+      "title": "最強のサブリミナル",
       "lines": [
         {
           "speaker": "metan",
@@ -1000,7 +1000,7 @@
     },
     {
       "id": 33,
-      "title": "scene_33",
+      "title": "エンディング",
       "lines": [
         {
           "speaker": "zundamon",

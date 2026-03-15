@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<!--
+    Project: Joint Cracking & Arthritis - Myth Busting Presentation
+    Theme: 「関節を鳴らすと関節炎になる」は本当か？
+    Scenes: 28 (0-27)
+    Design: White theme, modern typography, micro-animations
+    Generated: 2026-03-05
+    Tech: HTML5 + CSS3 + Vanilla JS + Google Fonts (Noto Sans JP)
+-->
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>関節を鳴らすと関節炎になる？</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ============================================================
+         Block 1: OPENING — タイトル・フック・数値インパクト
+         Scenes 0-2
+         ============================================================ -->
+
+    <!-- Scene 0: 関節を鳴らすと関節炎になる？ -->
+    <div class="scene active" id="scene-0">
+        <canvas id="canvas-0" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary stagger-item">MYTH BUSTING</div>
+            <h2 class="title-medium stagger-item">「関節を鳴らすと<br><span class="accent-primary">関節炎になる</span>」は本当か？</h2>
+            <div class="title-sub stagger-item">科学が解き明かす ポキポキの真実</div>
+        </div>
+    </div>
+
+    <!-- Scene 1: 25〜54% -->
+    <div class="scene" id="scene-1">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">関節を鳴らす人の割合</h2>
+            <div class="source-badge stagger-item">WebMD, Healthline 等のデータより</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-primary">25</span><span class="num-unit">〜</span><span
+                    class="big-num accent-teal">54</span><span class="num-unit">%</span>
+            </div>
+            <div class="emphasis-sub stagger-item">世界人口の4人に1人〜2人に1人が習慣的に関節を鳴らしている</div>
+            <div class="footnote stagger-item">調査対象・方法により幅がある</div>
+        </div>
+    </div>
+
+    <!-- Scene 2: 60年間の自己実験 -->
+    <div class="scene" id="scene-2">
+        <canvas id="canvas-2" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">ある医師が<span class="accent-primary">片手だけ</span>を</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-coral">60</span>年間</div>
+            <div class="emphasis-text stagger-item">鳴らし続けた</div>
+            <div class="emphasis-sub stagger-item">結果はこの動画の中で……</div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         Block 2: 関節の音の正体 — キャビテーション解説
+         Scenes 3-7
+         ============================================================ -->
+
+    <!-- Scene 3: 関節の音の正体 -->
+    <div class="scene" id="scene-3">
+        <canvas id="canvas-3" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-teal stagger-item">SCIENCE</div>
+            <h2 class="title-medium stagger-item">関節の音の<br><span class="accent-teal">正体</span></h2>
+            <div class="title-sub stagger-item">骨がすり減る音ではなかった</div>
+        </div>
+    </div>
+
+    <!-- Scene 4: 滑液の3つの役割 -->
+    <div class="scene" id="scene-4">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">滑液（シノビアルフルイド）の役割</h2>
+            <div class="triple-card">
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-primary">
+                        <svg viewBox="0 0 40 40" width="28" height="28">
+                            <circle cx="20" cy="20" r="12" fill="none" stroke="white" stroke-width="2" />
+                            <path d="M14 20 Q20 12 26 20 Q20 28 14 20" fill="white" opacity="0.6" />
+                        </svg>
+                    </div>
+                    <div class="factor-name">潤滑</div>
+                    <div class="factor-desc">関節をスムーズに動かすオイルの役割</div>
+                </div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-teal">
+                        <svg viewBox="0 0 40 40" width="28" height="28">
+                            <rect x="12" y="12" width="16" height="16" rx="3" fill="none" stroke="white"
+                                stroke-width="2" />
+                            <line x1="20" y1="15" x2="20" y2="25" stroke="white" stroke-width="2" />
+                            <line x1="15" y1="20" x2="25" y2="20" stroke="white" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="factor-name">栄養運搬</div>
+                    <div class="factor-desc">血管のない軟骨への唯一の栄養源</div>
+                </div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-amber">
+                        <svg viewBox="0 0 40 40" width="28" height="28">
+                            <path d="M20 8 L28 28 L12 28 Z" fill="none" stroke="white" stroke-width="2"
+                                stroke-linejoin="round" />
+                            <circle cx="20" cy="22" r="3" fill="white" />
+                        </svg>
+                    </div>
+                    <div class="factor-name">衝撃吸収</div>
+                    <div class="factor-desc">歩行・運動時のショックを緩和するクッション</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">滑液は「機械のオイル」のような存在</div>
+        </div>
+    </div>
+
+    <!-- Scene 5: キャビテーションの流れ -->
+    <div class="scene" id="scene-5">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">キャビテーションの仕組み</h2>
+            <div class="flow-chain">
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">Step 1</div>
+                    <div class="flow-text"><span class="flow-name">関節を引っ張る</span><br>関節包内の圧力が低下<br><span
+                            class="flow-sub">炭酸のフタを開けるイメージ</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">Step 2</div>
+                    <div class="flow-text"><span class="flow-name">気泡が発生</span><br>溶けていたガスが気泡に<br><span
+                            class="flow-sub">CO₂・N₂が分離</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">Step 3</div>
+                    <div class="flow-text"><span class="flow-name">ポキッ！</span><br>気泡の生成・崩壊で音が発生<br><span
+                            class="flow-sub">骨が擦れる音ではない</span></div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">キャビテーション＝液体中の気泡現象</div>
+        </div>
+    </div>
+
+    <!-- Scene 6: Kawchuk 2015 MRI研究 -->
+    <div class="scene" id="scene-6">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">MRIで直接観察された</h2>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">リアルタイムMRIで<br>気泡の形成を<span class="accent-primary">世界初の映像化</span></div>
+                <div class="quote-source">Kawchuk et al. (2015) / PLOS ONE</div>
+            </div>
+            <div class="mri-visual stagger-item">
+                <svg viewBox="0 0 300 140" class="joint-svg">
+                    <rect x="10" y="40" width="120" height="60" rx="30" fill="#e0e7ff" stroke="#4f46e5"
+                        stroke-width="2" />
+                    <rect x="170" y="40" width="120" height="60" rx="30" fill="#e0e7ff" stroke="#4f46e5"
+                        stroke-width="2" />
+                    <circle cx="150" cy="70" r="16" fill="#06b6d4" class="bubble-animate" opacity="0" />
+                    <text x="150" y="130" text-anchor="middle" fill="#6c757d" font-size="12">トリボ核生成による気泡の形成</text>
+                </svg>
+            </div>
+            <div class="emphasis-sub stagger-item">音は気泡が「生まれる時」に発生する</div>
+        </div>
+    </div>
+
+    <!-- Scene 7: 通説 vs 科学的事実 -->
+    <div class="scene" id="scene-7">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">通説 vs 科学的事実</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge danger-badge">通説</div>
+                    <div class="vs-title">骨がすり減る音</div>
+                    <div class="vs-desc">骨同士がぶつかって<br>摩耗している</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge safe-badge">科学</div>
+                    <div class="vs-title">気泡の音</div>
+                    <div class="vs-desc">滑液中のガスが<br>気泡になる時の音</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">不応期：約20分で気泡が再溶解 → 再び鳴らせる</div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         Block 3: 60年間の壮大な自己実験 — Donald Unger
+         Scenes 8-12
+         ============================================================ -->
+
+    <!-- Scene 8: 60年間の壮大な実験 -->
+    <div class="scene" id="scene-8">
+        <canvas id="canvas-8" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-amber stagger-item">EXPERIMENT</div>
+            <h2 class="title-medium stagger-item">60年間の<br><span class="accent-amber">壮大な実験</span></h2>
+            <div class="title-sub stagger-item">Donald Unger医師の自己実験</div>
+        </div>
+    </div>
+
+    <!-- Scene 9: Unger医師の実験デザイン -->
+    <div class="scene" id="scene-9">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">Unger医師の実験デザイン</h2>
+            <div class="flow-chain">
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">きっかけ</div>
+                    <div class="flow-text"><span class="flow-name">母の警告</span><br>「指を鳴らすと<br>関節炎になるよ」</div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">決意</div>
+                    <div class="flow-text"><span class="flow-name">科学的検証</span><br>「自分の体で<br>確かめてやろう」</div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">実行</div>
+                    <div class="flow-text"><span class="flow-name">60年間継続</span><br>左手のみ毎日2回以上<br><span
+                            class="flow-sub">36,500回以上</span></div>
+                </div>
+            </div>
+            <div class="source-badge stagger-item">Donald L. Unger / アレルギー専門医 / カリフォルニア州</div>
+        </div>
+    </div>
+
+    <!-- Scene 10: 左手 vs 右手 60年間 -->
+    <div class="scene" id="scene-10">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">左手 vs 右手：60年間</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge safe-badge">左手（実験群）</div>
+                    <div class="vs-title">毎日ポキポキ</div>
+                    <div class="vs-desc">1日2回以上<br>60年間継続<br><span class="accent-primary">36,500回以上</span></div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge danger-badge">右手（対照群）</div>
+                    <div class="vs-title">一切鳴らさない</div>
+                    <div class="vs-desc">60年間<br>意識的に<br>鳴らすのを我慢</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">自分の左右の手を使った、究極のn=1実験</div>
+        </div>
+    </div>
+
+    <!-- Scene 11: 両手に関節炎なし -->
+    <div class="scene" id="scene-11">
+        <canvas id="canvas-11" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">60年後の検査結果</div>
+            <div class="result-card stagger-item">
+                <div class="result-label">両手とも</div>
+                <div class="result-value accent-teal">関節炎なし</div>
+                <div class="result-sub">左手と右手に差は見られなかった</div>
+            </div>
+            <div class="emphasis-sub stagger-item">36,500回以上鳴らしても、影響ゼロ</div>
+        </div>
+    </div>
+
+    <!-- Scene 12: イグノーベル賞 -->
+    <div class="scene" id="scene-12">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">イグノーベル賞 医学部門</h2>
+            <div class="quote-card quote-warm stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">お母さん、<br><span class="accent-amber">あなたは間違っていました</span></div>
+                <div class="quote-source">Donald Unger / 2009年 イグノーベル賞受賞スピーチ</div>
+            </div>
+            <div class="award-visual stagger-item">
+                <div class="award-badge">
+                    <svg viewBox="0 0 60 60" width="48" height="48">
+                        <circle cx="30" cy="30" r="24" fill="#fbbf24" stroke="#f59e0b" stroke-width="2" /><text x="30"
+                            y="35" text-anchor="middle" fill="#7c2d12" font-size="14" font-weight="bold">Ig</text>
+                    </svg>
+                </div>
+                <div class="award-text">「まず笑わせ、次に考えさせる」<br>研究に贈られるハーバード主催の賞</div>
+            </div>
+            <div class="source-badge stagger-item">Unger (1998) Arthritis & Rheumatism誌に発表</div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         Block 4: 大規模研究が示す結論
+         Scenes 13-18
+         ============================================================ -->
+
+    <!-- Scene 13: 大規模研究の結果 -->
+    <div class="scene" id="scene-13">
+        <canvas id="canvas-13" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary stagger-item">EVIDENCE</div>
+            <h2 class="title-medium stagger-item">大規模研究の<br><span class="accent-primary">結果</span></h2>
+            <div class="title-sub stagger-item">複数の研究が同じ結論に到達</div>
+        </div>
+    </div>
+
+    <!-- Scene 14: 300人調査 -->
+    <div class="scene" id="scene-14">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">Castellanos & Axelrod (1990)</h2>
+            <div class="source-badge stagger-item">Annals of Rheumatic Diseases / 45歳以上 300人対象</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-primary">300</span><span class="num-unit">人</span>
+            </div>
+            <div class="bar-comparison stagger-item">
+                <div class="bar-row">
+                    <div class="bar-label">鳴らす人（74人）</div>
+                    <div class="bar-track">
+                        <div class="bar-fill bar-a-fill" style="--w:24.7%"></div>
+                    </div>
+                    <div class="bar-value">関節炎に差なし</div>
+                </div>
+                <div class="bar-row">
+                    <div class="bar-label">鳴らさない人（226人）</div>
+                    <div class="bar-track">
+                        <div class="bar-fill bar-b-fill" style="--w:75.3%"></div>
+                    </div>
+                    <div class="bar-value">関節炎に差なし</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">有病率に統計的な有意差はなし</div>
+        </div>
+    </div>
+
+    <!-- Scene 15: 18.1% vs 21.5% -->
+    <div class="scene" id="scene-15">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">deWeber et al. (2011)</h2>
+            <div class="source-badge stagger-item">JABFM / 50〜89歳 215人 / レントゲン付き症例対照研究</div>
+            <div class="oa-comparison stagger-item">
+                <div class="oa-group">
+                    <div class="oa-ring">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="50" fill="none" stroke="#e5e7eb" stroke-width="10" />
+                            <circle cx="60" cy="60" r="50" fill="none" stroke="#06b6d4" stroke-width="10"
+                                stroke-dasharray="314" stroke-dashoffset="257" class="ring-animate"
+                                transform="rotate(-90 60 60)" />
+                        </svg>
+                        <div class="oa-center"><span class="accent-teal">18.1</span>%</div>
+                    </div>
+                    <div class="oa-label">鳴らす人のOA率</div>
+                </div>
+                <div class="oa-vs stagger-item">vs</div>
+                <div class="oa-group">
+                    <div class="oa-ring">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="50" fill="none" stroke="#e5e7eb" stroke-width="10" />
+                            <circle cx="60" cy="60" r="50" fill="none" stroke="#6366f1" stroke-width="10"
+                                stroke-dasharray="314" stroke-dashoffset="246" class="ring-animate"
+                                transform="rotate(-90 60 60)" />
+                        </svg>
+                        <div class="oa-center"><span class="accent-primary">21.5</span>%</div>
+                    </div>
+                    <div class="oa-label">鳴らさない人のOA率</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">統計的に有意な差はなし</div>
+        </div>
+    </div>
+
+    <!-- Scene 16: 「鳴らした方がいい」ではない -->
+    <div class="scene" id="scene-16">
+        <div class="content center-layout">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">「鳴らした方がいい」<span class="accent-coral">ではない</span></div>
+                <div class="alert-sub">統計的に差がない ＝ 因果関係がない<br>鳴らしてもリスクは変わらないという意味</div>
+            </div>
+            <div class="footnote stagger-item">関連がないことを示す研究結果であり、推奨ではない</div>
+        </div>
+    </div>
+
+    <!-- Scene 17: 3つの研究まとめ -->
+    <div class="scene" id="scene-17">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">3つの研究が一致した結論</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text">Unger医師の<span class="accent-primary">60年の自己実験</span><br>左手と右手に差なし</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">2</div>
+                    <div class="numbered-text"><span class="accent-primary">300人</span>の疫学調査（1990年）<br>関節炎の有病率に差なし</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">3</div>
+                    <div class="numbered-text"><span class="accent-primary">レントゲン付き</span>症例対照研究（2011年）<br>OA有病率に有意差なし
+                    </div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">研究のアプローチが異なっても結論は同じ</div>
+        </div>
+    </div>
+
+    <!-- Scene 18: 医学的コンセンサス -->
+    <div class="scene" id="scene-18">
+        <canvas id="canvas-18" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">世界のトップ医療機関が</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-primary">同じ結論</span></div>
+            <div class="institution-cards stagger-item">
+                <div class="inst-card">Harvard Medical School</div>
+                <div class="inst-card">Cleveland Clinic</div>
+                <div class="inst-card">Johns Hopkins</div>
+            </div>
+            <div class="emphasis-sub stagger-item">「関節を鳴らすことと関節炎に因果関係はない」</div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         Block 5: 本当のリスクと関節を守る方法
+         Scenes 19-24
+         ============================================================ -->
+
+    <!-- Scene 19: 関節を鳴らす本当のリスク -->
+    <div class="scene" id="scene-19">
+        <canvas id="canvas-19" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral stagger-item">CAUTION</div>
+            <h2 class="title-medium stagger-item">関節を鳴らす<br><span class="accent-coral">本当のリスク</span></h2>
+            <div class="title-sub stagger-item">関節炎にはならない。でも注意点はある。</div>
+        </div>
+    </div>
+
+    <!-- Scene 20: 3つの潜在的リスク -->
+    <div class="scene" id="scene-20">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">3つの潜在的リスク</h2>
+            <div class="triple-card">
+                <div class="factor-card risk-card stagger-item">
+                    <div class="factor-icon accent-bg-amber">
+                        <svg viewBox="0 0 40 40" width="28" height="28">
+                            <path d="M20 8 C12 8 8 16 8 20 C8 28 14 32 20 32 C26 32 32 28 32 20 C32 16 28 8 20 8"
+                                fill="none" stroke="white" stroke-width="2" />
+                            <line x1="14" y1="24" x2="26" y2="24" stroke="white" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="factor-name">握力への影響</div>
+                    <div class="factor-desc">1990年の研究で低下を報告<br>2017年の研究では否定<br><span class="accent-amber">結論は未確定</span>
+                    </div>
+                </div>
+                <div class="factor-card risk-card stagger-item">
+                    <div class="factor-icon accent-bg-coral">
+                        <svg viewBox="0 0 40 40" width="28" height="28">
+                            <circle cx="20" cy="20" r="12" fill="none" stroke="white" stroke-width="2"
+                                stroke-dasharray="4 2" />
+                            <path d="M14 20 L26 20 M20 14 L20 26" stroke="white" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="factor-name">関節弛緩症</div>
+                    <div class="factor-desc">無理な力で頻繁に鳴らすと<br>靭帯が伸びる可能性<br><span class="accent-coral">悪循環のリスク</span>
+                    </div>
+                </div>
+                <div class="factor-card risk-card stagger-item">
+                    <div class="factor-icon accent-bg-coral-dark">
+                        <svg viewBox="0 0 40 40" width="28" height="28">
+                            <path d="M20 6 L20 34" stroke="white" stroke-width="3" />
+                            <circle cx="20" cy="10" r="2" fill="white" />
+                            <path d="M12 16 L28 16 M10 22 L30 22 M14 28 L26 28" stroke="white" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <div class="factor-name">首・腰は危険</div>
+                    <div class="factor-desc">脊髄神経のすぐそば<br>勢いよく鳴らすと<br><span class="accent-coral">神経損傷のリスク</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 21: 関節弛緩症のリスク -->
+    <div class="scene" id="scene-21">
+        <div class="content center-layout">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">関節弛緩症に<span class="accent-coral">注意</span></div>
+                <div class="alert-sub">無理な力 → 靭帯が伸びる → 関節がゆるくなる → さらに鳴りやすくなる → 悪循環</div>
+            </div>
+            <div class="loop-visual stagger-item">
+                <svg viewBox="0 0 300 100" class="loop-svg">
+                    <path d="M30 50 Q75 10 120 50 Q165 90 210 50 Q255 10 280 50" fill="none" stroke="#ef4444"
+                        stroke-width="3" stroke-dasharray="400" stroke-dashoffset="400" class="loop-line" />
+                    <text x="75" y="30" fill="#ef4444" font-size="11" font-weight="bold">無理な力</text>
+                    <text x="155" y="85" fill="#ef4444" font-size="11" font-weight="bold">靭帯が伸びる</text>
+                    <text x="240" y="30" fill="#ef4444" font-size="11" font-weight="bold">悪循環</text>
+                </svg>
+            </div>
+            <div class="emphasis-sub stagger-item">「鳴らすなら無理な力をかけず、軽く」が大事</div>
+        </div>
+    </div>
+
+    <!-- Scene 22: 首・腰は絶対に危険 -->
+    <div class="scene dark-scene" id="scene-22">
+        <div class="content center-layout">
+            <h2 class="scene-title light-text stagger-item">首・腰の関節は<span class="accent-coral">絶対に</span>勢いよく鳴らさない</h2>
+            <div class="spine-visual stagger-item">
+                <svg viewBox="0 0 200 220" class="spine-svg">
+                    <rect x="80" y="10" width="40" height="200" rx="10" fill="#374151" stroke="#6b7280"
+                        stroke-width="1" />
+                    <circle cx="100" cy="40" r="6" fill="#ef4444" class="nerve-pulse" />
+                    <circle cx="100" cy="70" r="6" fill="#ef4444" class="nerve-pulse" style="animation-delay:0.3s" />
+                    <circle cx="100" cy="100" r="6" fill="#ef4444" class="nerve-pulse" style="animation-delay:0.6s" />
+                    <circle cx="100" cy="130" r="6" fill="#ef4444" class="nerve-pulse" style="animation-delay:0.9s" />
+                    <circle cx="100" cy="160" r="6" fill="#ef4444" class="nerve-pulse" style="animation-delay:1.2s" />
+                    <line x1="60" y1="40" x2="94" y2="40" stroke="#f97316" stroke-width="2" />
+                    <line x1="106" y1="40" x2="140" y2="40" stroke="#f97316" stroke-width="2" />
+                    <line x1="60" y1="100" x2="94" y2="100" stroke="#f97316" stroke-width="2" />
+                    <line x1="106" y1="100" x2="140" y2="100" stroke="#f97316" stroke-width="2" />
+                    <line x1="60" y1="160" x2="94" y2="160" stroke="#f97316" stroke-width="2" />
+                    <line x1="106" y1="160" x2="140" y2="160" stroke="#f97316" stroke-width="2" />
+                    <text x="28" y="44" fill="#f97316" font-size="10">神経</text>
+                    <text x="145" y="44" fill="#f97316" font-size="10">神経</text>
+                </svg>
+            </div>
+            <div class="dark-warning stagger-item">脊髄神経のすぐそば ─ 最悪の場合、しびれ・麻痺の恐れ</div>
+            <div class="emphasis-sub light-text stagger-item">気になる場合は自分でやらず、専門家に相談を</div>
+        </div>
+    </div>
+
+    <!-- Scene 23: 変形性関節症の5つのリスク要因 -->
+    <div class="scene" id="scene-23">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">変形性関節症の本当のリスク要因</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle risk-num">1</div>
+                    <div class="numbered-text"><span class="accent-primary">加齢</span>：軟骨が自然にすり減る</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle risk-num">2</div>
+                    <div class="numbered-text"><span class="accent-primary">遺伝</span>：家族歴でリスク上昇</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle risk-num">3</div>
+                    <div class="numbered-text"><span class="accent-primary">肥満</span>：関節への負担が増大</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle risk-num">4</div>
+                    <div class="numbered-text"><span class="accent-primary">過去の外傷</span>：スポーツ・事故の影響</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle risk-num">5</div>
+                    <div class="numbered-text"><span class="accent-primary">関節の酷使</span>：重労働・反復動作</div>
+                </div>
+            </div>
+            <div class="source-badge stagger-item">CDC / WHO / 整形外科教科書に基づく</div>
+        </div>
+    </div>
+
+    <!-- Scene 24: 本当に関節を守りたいなら -->
+    <div class="scene" id="scene-24">
+        <canvas id="canvas-24" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">本当に関節を守りたいなら</div>
+            <div class="protect-cards stagger-item">
+                <div class="protect-card">
+                    <div class="protect-icon">
+                        <svg viewBox="0 0 40 40" width="32" height="32">
+                            <circle cx="20" cy="14" r="8" fill="none" stroke="#06b6d4" stroke-width="2" />
+                            <path d="M12 28 Q20 36 28 28 L28 22 Q20 18 12 22 Z" fill="none" stroke="#06b6d4"
+                                stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="protect-text">適度な運動</div>
+                    <div class="protect-sub">ウォーキング・水泳</div>
+                </div>
+                <div class="protect-card">
+                    <div class="protect-icon">
+                        <svg viewBox="0 0 40 40" width="32" height="32">
+                            <rect x="10" y="18" width="20" height="14" rx="3" fill="none" stroke="#4f46e5"
+                                stroke-width="2" />
+                            <line x1="20" y1="6" x2="20" y2="18" stroke="#4f46e5" stroke-width="2" />
+                            <circle cx="20" cy="6" r="3" fill="#4f46e5" />
+                        </svg>
+                    </div>
+                    <div class="protect-text">適正体重</div>
+                    <div class="protect-sub">関節への負担軽減</div>
+                </div>
+                <div class="protect-card">
+                    <div class="protect-icon">
+                        <svg viewBox="0 0 40 40" width="32" height="32">
+                            <circle cx="20" cy="20" r="12" fill="none" stroke="#f59e0b" stroke-width="2" />
+                            <path d="M16 20 L20 16 L24 20 L20 24 Z" fill="#f59e0b" />
+                        </svg>
+                    </div>
+                    <div class="protect-text">栄養摂取</div>
+                    <div class="protect-sub">Ca・ビタミンD</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">指を鳴らすのをやめるより、ずっと効果的</div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         Block 6: まとめ・エンディング
+         Scenes 25-27
+         ============================================================ -->
+
+    <!-- Scene 25: 今日の3つのポイント -->
+    <div class="scene" id="scene-25">
+        <canvas id="canvas-25" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-teal stagger-item">SUMMARY</div>
+            <h2 class="title-medium stagger-item">今日の<br><span class="accent-teal">3つのポイント</span></h2>
+        </div>
+    </div>
+
+    <!-- Scene 26: 3つのまとめポイント -->
+    <div class="scene" id="scene-26">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">まとめ</h2>
+            <div class="numbered-list summary-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle summary-num">1</div>
+                    <div class="numbered-text">音の正体は<span class="accent-primary">キャビテーション</span><br>骨ではなく気泡の音</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle summary-num">2</div>
+                    <div class="numbered-text">関節炎との<span class="accent-primary">因果関係なし</span><br>複数の研究と医療機関が一致</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle summary-num">3</div>
+                    <div class="numbered-text">首・腰は<span class="accent-coral">注意</span> / 守るなら<span
+                            class="accent-teal">運動と体重管理</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 27: 科学で常識を疑おう -->
+    <div class="scene" id="scene-27">
+        <canvas id="canvas-27" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">科学で<span class="accent-primary">常識</span>を疑おう</div>
+            <div class="emphasis-text-large stagger-item">「<span class="accent-teal">当たり前</span>」を<span
+                    class="accent-primary">調べてみよう</span></div>
+            <div class="emphasis-sub stagger-item">ご視聴ありがとうございました</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

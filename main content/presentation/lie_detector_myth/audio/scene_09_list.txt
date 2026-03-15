@@ -1,0 +1,3 @@
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/lie_detector_myth/audio/scene_09_00.wav'
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/lie_detector_myth/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/lie_detector_myth/audio/scene_09_01.wav'

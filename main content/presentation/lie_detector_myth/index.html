@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>嘘発見器は「嘘」を検出していない</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<!-- Scene 0: タイトルカード | 嘘発見器は「嘘」を検出していない -->
+<section class="scene active" id="scene-0">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <div class="title-card">
+            <span class="title-label stagger-item">FACT CHECK</span>
+            <h1 class="title-main stagger-item">嘘発見器は<br><span class="accent-coral">「嘘」を検出していない</span></h1>
+            <div class="title-accent-line stagger-item"></div>
+            <p class="title-sub stagger-item">ドラマで見る「嘘発見器」の真実</p>
+        </div>
+    </div>
+</section>
+
+<!-- Scene 1: 引用カード | ワンダーウーマンの生みの親が嘘発見器の発明者 -->
+<section class="scene" id="scene-1">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <div class="quote-card stagger-item">
+            <div class="quote-icon">🦸‍♀️</div>
+            <div class="quote-text">嘘発見器の原型を作った人物は<br><span class="accent-primary">ワンダーウーマンの生みの親</span>だった</div>
+            <div class="quote-author">ウィリアム・モールトン・マーストン（1893-1947）<br>ハーバード大学 心理学者</div>
+        </div>
+        <p class="emphasis-sub stagger-item">妻エリザベスの「怒ると血圧が上がる」という一言がきっかけ</p>
+    </div>
+</section>
+
+<!-- Scene 2: 段階的リスト | マーストンの2つの発明品 -->
+<section class="scene" id="scene-2">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <h2 class="section-title stagger-item">マーストンの<span class="accent-primary">2つの発明</span></h2>
+        <div class="two-col-cards stagger-item">
+            <div class="col-card" style="border-top: 3px solid var(--primary)">
+                <div style="font-size: 48px; margin-bottom: 12px;">📊</div>
+                <div class="col-card-title">1915年：<span class="accent-primary">収縮期血圧テスト</span></div>
+                <div class="col-card-text">血圧の変化で嘘を検出するテスト。<br>現代のポリグラフの原型。</div>
+            </div>
+            <div class="col-card" style="border-top: 3px solid var(--coral)">
+                <div style="font-size: 48px; margin-bottom: 12px;">🦸‍♀️</div>
+                <div class="col-card-title">1941年：<span class="accent-coral">ワンダーウーマン</span></div>
+                <div class="col-card-text">「真実の投げ縄」を持つヒーロー。<br>縛られた相手は嘘をつけなくなる。</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Scene 3: テキスト強調 | フィクションの中だけの「完璧な嘘発見」 -->
+<section class="scene" id="scene-3">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <span class="emphasis-label stagger-item">KEY POINT</span>
+        <div class="emphasis-main large stagger-item">
+            フィクションの中では完璧だった<br>「嘘の検出」が……
+        </div>
+        <div class="emphasis-main stagger-item" style="color: var(--coral);">
+            現実では<span style="font-size: 48px;">100年</span>経っても<br>実現できていない
+        </div>
+    </div>
+</section>
+
+<!-- Scene 4: タイトルカード | ポリグラフは何を測っているのか？ -->
+<section class="scene" id="scene-4">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <div class="chapter-title">
+            <span class="chapter-number stagger-item">CHAPTER 01</span>
+            <h2 class="chapter-name stagger-item">ポリグラフは<br><span class="accent-primary">何を測っているのか？</span></h2>
+            <div class="chapter-line stagger-item"></div>
+            <p class="chapter-sub stagger-item">ギリシャ語で「多くのものを記録する」装置</p>
+        </div>
+    </div>
+</section>
+
+<!-- Scene 5: 段階的リスト | ポリグラフが測定する4つの指標 -->
+<section class="scene" id="scene-5">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <h2 class="section-title stagger-item">ポリグラフが測定する<span class="accent-primary">4つの指標</span></h2>
+        <div class="four-points-grid stagger-item">
+            <div class="four-point-card">
+                <div class="four-point-icon">💓</div>
+                <div class="four-point-title accent-coral">心拍数・脈拍</div>
+                <div class="four-point-desc">心臓の拍動の変化を記録</div>
+            </div>
+            <div class="four-point-card">
+                <div class="four-point-icon">🩸</div>
+                <div class="four-point-title accent-primary">血圧</div>
+                <div class="four-point-desc">緊張による血圧の上下動</div>
+            </div>
+            <div class="four-point-card">
+                <div class="four-point-icon">🫁</div>
+                <div class="four-point-title accent-teal">呼吸パターン</div>
+                <div class="four-point-desc">呼吸の深さ・速さの変化</div>
+            </div>
+            <div class="four-point-card">
+                <div class="four-point-icon">💧</div>
+                <div class="four-point-title accent-amber">皮膚電気活動</div>
+                <div class="four-point-desc">発汗による電気抵抗の変化</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Scene 6: フロー図 | ポリグラフ検査の3ステップ -->
+<section class="scene" id="scene-6">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <h2 class="section-title stagger-item">検査の流れ：<span class="accent-primary">3ステップ</span></h2>
+        <div class="flow-steps stagger-item">
+            <div class="flow-step">
+                <div class="flow-step-num">STEP 1</div>
+                <div class="flow-step-icon">📝</div>
+                <div class="flow-step-title">基準線の記録</div>
+                <div class="flow-step-desc">名前・曜日など<br>普通の質問で通常反応を取得</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+                <div class="flow-step-num">STEP 2</div>
+                <div class="flow-step-icon">🔍</div>
+                <div class="flow-step-title">核心的な質問</div>
+                <div class="flow-step-desc">「あなたが盗みましたか？」<br>事件に関わる質問を実施</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+                <div class="flow-step-num">STEP 3</div>
+                <div class="flow-step-icon">📊</div>
+                <div class="flow-step-title">反応を比較</div>
+                <div class="flow-step-desc">基準線との差が大きければ<br>「疑わしい」と判定</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Scene 7: 注意喚起 | 最大の問題：嘘に固有の生理反応は存在しない -->
+<section class="scene" id="scene-7">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <div class="warning-box stagger-item">
+            <div class="warning-icon">⚠️</div>
+            <div class="warning-title">致命的な問題</div>
+            <div class="warning-text">
+                心拍上昇・発汗・呼吸の乱れ……<br>
+                これらは<strong>嘘をついた時だけ</strong>に起こる反応ではない<br><br>
+                <strong>不安・恐怖・怒り・驚き</strong>でも同じ反応が出る＝<br>
+                <span style="color: var(--coral); font-weight: 900;">無実の人と嘘つきを区別できない</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Scene 8: テキスト強調 | ポリグラフが見ているのは嘘ではなくストレス反応 -->
+<section class="scene" id="scene-8">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <span class="emphasis-label stagger-item">CORE PROBLEM</span>
+        <div class="emphasis-main large stagger-item">
+            ポリグラフが見ているのは
+        </div>
+        <div style="display: flex; gap: 32px; align-items: center; justify-content: center;" class="stagger-item">
+            <div style="text-decoration: line-through; font-size: 36px; font-weight: 900; color: var(--text-light);">嘘</div>
+            <div style="font-size: 24px;">→</div>
+            <div style="font-size: 42px; font-weight: 900; color: var(--coral);">ストレス反応</div>
+        </div>
+        <p class="emphasis-sub stagger-item">嘘に固有の生理反応は存在しない</p>
+    </div>
+</section>
+
+<!-- Scene 9: タイトルカード | 科学が突きつけた「否定」 -->
+<section class="scene" id="scene-9">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <div class="chapter-title">
+            <span class="chapter-number stagger-item">CHAPTER 02</span>
+            <h2 class="chapter-name stagger-item">科学が突きつけた<br><span class="accent-coral">「否定」</span></h2>
+            <div class="chapter-line stagger-item"></div>
+            <p class="chapter-sub stagger-item">世界最高峰の科学機関によるレビュー</p>
+        </div>
+    </div>
+</section>
+
+<!-- Scene 10: 引用カード | NAS 2003年報告書「科学的根拠は弱い」 -->
+<section class="scene" id="scene-10">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <div class="quote-card stagger-item" style="border-left-color: var(--coral);">
+            <div class="quote-icon">🏛️</div>
+            <div class="quote-text">「ポリグラフの<span class="accent-coral">科学的根拠は弱い</span>」<br>「既存の研究の多くは<span class="accent-coral">質が低い</span>」</div>
+            <div class="quote-author">全米科学アカデミー（NAS）── 2003年報告書<br>『The Polygraph and Lie Detection』</div>
+        </div>
+        <div class="source-badge stagger-item">1976年 米国下院委員会「嘘発見器は存在しない」</div>
+    </div>
+</section>
+
+<!-- Scene 11: 数値インパクト | 業界の90%主張 vs 独立研究の70% -->
+<section class="scene" id="scene-11">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <h2 class="section-title stagger-item">精度の<span class="accent-coral">真実</span></h2>
+        <div class="vs-layout stagger-item">
+            <div class="vs-side left">
+                <div class="vs-title">業界の主張</div>
+                <div class="impact-number" style="font-size: 64px; color: var(--text-light);">87-97<span class="impact-number-unit">%</span></div>
+                <div class="vs-result danger" style="margin-top: 12px;">独立した査読なし</div>
+            </div>
+            <div class="vs-center-badge">VS</div>
+            <div class="vs-side right">
+                <div class="vs-title">独立研究の結論</div>
+                <div class="impact-number" style="font-size: 64px; color: var(--coral);">約70<span class="impact-number-unit">%</span></div>
+                <div class="vs-result neutral" style="margin-top: 12px;">NAS査読済みレビュー</div>
+            </div>
+        </div>
+        <p class="comparison-note stagger-item">一部研究ではエラー率40%以上 ≒ コイン投げとほぼ同じ</p>
+    </div>
+</section>
+
+<!-- Scene 12: 数値インパクト | 1万人中1,606人が偽陽性で不合格 -->
+<section class="scene" id="scene-12">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <span class="impact-label stagger-item">NAS シミュレーション</span>
+        <div class="impact-number-group stagger-item">
+            <span class="impact-number">1,606</span>
+            <span class="impact-number-unit">人</span>
+        </div>
+        <div class="impact-desc stagger-item">
+            1万人の政府職員（スパイ10人）をポリグラフでテスト →<br>
+            <strong>忠実な職員1,606人が「嘘つき」と誤判定される</strong>
+        </div>
+        <div class="source-badge stagger-item">NAS 2003 "The Polygraph and Lie Detection"</div>
+    </div>
+</section>
+
+<!-- Scene 13: 比較対照 | スパイ8人検出 vs 無実の1,606人が偽陽性 -->
+<section class="scene" id="scene-13">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <h2 class="section-title stagger-item"><span class="accent-coral">偽陽性</span>の恐ろしさ</h2>
+        <div class="vs-layout stagger-item">
+            <div class="vs-side left">
+                <div class="vs-title" style="color: var(--teal);">スパイ検出</div>
+                <div style="font-size: 56px; font-weight: 900; color: var(--teal);">8<span style="font-size: 20px;">人</span></div>
+                <div class="vs-detail">10人中8人を正しく検出</div>
+            </div>
+            <div class="vs-center-badge">VS</div>
+            <div class="vs-side right">
+                <div class="vs-title" style="color: var(--coral);">偽陽性（冤罪）</div>
+                <div style="font-size: 56px; font-weight: 900; color: var(--coral);">1,606<span style="font-size: 20px;">人</span></div>
+                <div class="vs-detail">無実の人が「嘘つき」判定</div>
+            </div>
+        </div>
+        <p class="comparison-note stagger-item">最も危険なのは本物のスパイではなく「緊張しやすい正直者」</p>
+    </div>
+</section>
+
+<!-- Scene 14: タイトルカード | 本物のスパイがポリグラフをパスした -->
+<section class="scene" id="scene-14">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <div class="chapter-title">
+            <span class="chapter-number stagger-item">CHAPTER 03</span>
+            <h2 class="chapter-name stagger-item">本物のスパイが<br><span class="accent-coral">ポリグラフをパスした</span></h2>
+            <div class="chapter-line stagger-item"></div>
+            <p class="chapter-sub stagger-item">アメリカ史上最も深刻なスパイ事件</p>
+        </div>
+    </div>
+</section>
+
+<!-- Scene 15: 引用カード | オルドリッチ・エイムズ──CIAの中のスパイ -->
+<section class="scene" id="scene-15">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <div class="quote-card stagger-item" style="border-left-color: var(--coral);">
+            <div class="quote-icon">🕵️</div>
+            <div class="quote-text" style="font-size: 20px;">CIA職員 <span class="accent-coral">オルドリッチ・エイムズ</span><br>1985〜1994年にソ連のスパイとして活動</div>
+            <div class="quote-author">少なくとも10人のアメリカ側協力者が処刑された<br>アメリカ史上最も深刻なスパイ事件の一つ</div>
+        </div>
+    </div>
+</section>
+
+<!-- Scene 16: テキスト強調 | 「リラックスしろ、何も心配するな」 -->
+<section class="scene" id="scene-16">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <span class="emphasis-label stagger-item">スパイがポリグラフをパスした方法</span>
+        <div class="quote-card stagger-item" style="border-left-color: var(--amber);">
+            <div class="quote-icon">💬</div>
+            <div class="quote-text" style="font-size: 32px;">「<span class="accent-amber">リラックスしろ。</span><br><span class="accent-amber">何も心配するな。</span>」</div>
+            <div class="quote-author">ロシアのハンドラーからエイムズへのアドバイス<br>── たったこれだけでCIAのポリグラフをパスした</div>
+        </div>
+    </div>
+</section>
+
+<!-- Scene 17: 段階的リスト | ポリグラフを欺く対抗策の科学的研究 -->
+<section class="scene" id="scene-17">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <h2 class="section-title stagger-item">対抗策（カウンターメジャー）の<span class="accent-coral">研究結果</span></h2>
+        <div class="bar-chart stagger-item">
+            <div class="bar-row">
+                <span class="bar-label">物理的対抗策</span>
+                <div class="bar-track">
+                    <div class="bar-fill" style="--w: 78%; background: var(--coral);">78%</div>
+                </div>
+            </div>
+            <div class="bar-row">
+                <span class="bar-label">精神的対抗策</span>
+                <div class="bar-track">
+                    <div class="bar-fill" style="--w: 50%; background: var(--amber);">50%</div>
+                </div>
+            </div>
+        </div>
+        <div class="steps-list stagger-item">
+            <div class="step-item"><div class="step-num">1</div><div class="step-text">舌を噛む・つま先を押し付ける → 78%が検査をすり抜けた</div></div>
+            <div class="step-item"><div class="step-num">2</div><div class="step-text">暗算をするなどの精神的方法 → 約50%が成功</div></div>
+            <div class="step-item"><div class="step-num">!</div><div class="step-text">検査官はこれらの対抗策をほとんど見抜けなかった</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- Scene 18: 比較対照 | 1988年 民間禁止 vs 政府義務化の矛盾 -->
+<section class="scene" id="scene-18">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <h2 class="section-title stagger-item">アメリカの<span class="accent-coral">矛盾</span></h2>
+        <div class="vs-layout stagger-item">
+            <div class="vs-side left">
+                <div class="vs-title">🚫 民間企業</div>
+                <div class="vs-result danger">1988年 ほぼ全面禁止</div>
+                <div class="vs-detail">従業員ポリグラフ保護法<br>「科学的に信頼性が低い」</div>
+            </div>
+            <div class="vs-center-badge">VS</div>
+            <div class="vs-side right">
+                <div class="vs-title">🏛️ 政府機関</div>
+                <div class="vs-result neutral">免除 → 義務化</div>
+                <div class="vs-detail">FBI（1994年〜全職員義務化）<br>CIA（1951年〜70年以上使用）</div>
+            </div>
+        </div>
+        <p class="comparison-note stagger-item">同じ国が「信頼できない」と言いながら使い続けている</p>
+    </div>
+</section>
+
+<!-- Scene 19: タイトルカード | なぜ科学的に否定されても使われ続けるのか -->
+<section class="scene" id="scene-19">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <div class="chapter-title">
+            <span class="chapter-number stagger-item">CHAPTER 04</span>
+            <h2 class="chapter-name stagger-item">なぜ否定されても<br><span class="accent-amber">使われ続けるのか</span></h2>
+            <div class="chapter-line stagger-item"></div>
+            <p class="chapter-sub stagger-item">答えは「目的が違う」</p>
+        </div>
+    </div>
+</section>
+
+<!-- Scene 20: テキスト強調 | ポリグラフの本当の機能は「自白誘導ツール」 -->
+<section class="scene" id="scene-20">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <span class="emphasis-label stagger-item">TRUE PURPOSE</span>
+        <div class="emphasis-main large stagger-item">
+            ポリグラフの本当の機能は
+        </div>
+        <div style="display: flex; gap: 32px; align-items: center; justify-content: center;" class="stagger-item">
+            <div style="text-decoration: line-through; font-size: 32px; font-weight: 900; color: var(--text-light);">嘘の検出</div>
+            <div style="font-size: 24px;">→</div>
+            <div style="font-size: 36px; font-weight: 900; color: var(--amber);">自白誘導ツール</div>
+        </div>
+        <p class="emphasis-sub stagger-item">「この機械はあなたの嘘を全部見抜きます」→ 自白を促す</p>
+    </div>
+</section>
+
+<!-- Scene 21: フロー図 | ボーガス・パイプライン効果の仕組み -->
+<section class="scene" id="scene-21">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <h2 class="section-title stagger-item"><span class="accent-amber">ボーガス・パイプライン効果</span></h2>
+        <div class="flow-steps stagger-item">
+            <div class="flow-step">
+                <div class="flow-step-icon">🖥️</div>
+                <div class="flow-step-title">偽物のパイプライン</div>
+                <div class="flow-step-desc">嘘検出装置を<br>設置する</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+                <div class="flow-step-icon">😨</div>
+                <div class="flow-step-title">被験者が信じる</div>
+                <div class="flow-step-desc">「嘘が全部<br>バレてしまう」</div>
+            </div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">
+                <div class="flow-step-icon">💬</div>
+                <div class="flow-step-title">自白の確率UP</div>
+                <div class="flow-step-desc">機械の精度は<br>関係ない</div>
+            </div>
+        </div>
+        <p class="comparison-note stagger-item">映画やドラマの描写が「嘘発見器は万能」というイメージを強化し、自白誘導効果を維持している</p>
+    </div>
+</section>
+
+<!-- Scene 22: 横並びカード | 次世代嘘検出技術：fMRI・EEG P300・EyeDetect -->
+<section class="scene" id="scene-22">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <h2 class="section-title stagger-item">次世代の<span class="accent-primary">嘘検出技術</span></h2>
+        <div class="three-points-grid stagger-item">
+            <div class="point-card" style="border-top-color: var(--primary);">
+                <div style="font-size: 36px; margin-bottom: 8px;">🧠</div>
+                <div class="point-number" style="font-size: 20px;">fMRI</div>
+                <div class="point-text">脳の血流変化を観察<br><span class="accent-primary">ポリグラフより24%高い検出率</span></div>
+            </div>
+            <div class="point-card" style="border-top-color: var(--teal);">
+                <div style="font-size: 36px; margin-bottom: 8px;">⚡</div>
+                <div class="point-number" style="font-size: 20px;">EEG P300</div>
+                <div class="point-text">0.3秒後の脳波反応を分析<br><span class="accent-teal">「認知」を検出</span></div>
+            </div>
+            <div class="point-card" style="border-top-color: var(--amber);">
+                <div style="font-size: 36px; margin-bottom: 8px;">👁️</div>
+                <div class="point-number" style="font-size: 20px;">EyeDetect</div>
+                <div class="point-text">瞳孔・まばたき・眼球運動<br><span class="accent-amber">精度86-90%を主張</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Scene 23: 注意喚起 | 次世代技術も同じ壁にぶつかっている -->
+<section class="scene" id="scene-23">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <div class="warning-box stagger-item">
+            <div class="warning-icon">🧱</div>
+            <div class="warning-title">次世代技術も同じ壁にぶつかっている</div>
+            <div class="warning-text">
+                fMRIですらカウンターメジャーで精度が<strong class="accent-coral">20%低下</strong><br>
+                1台<strong>数億円</strong>する巨大装置で気軽に導入できない<br><br>
+                <strong style="font-size: 18px;">根本的な問題：「嘘をつくとき固有の脳活動パターン」は<br>まだ見つかっていない</strong>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Scene 24: タイトルカード | では嘘を見抜く方法はないのか？ -->
+<section class="scene" id="scene-24">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <div class="chapter-title">
+            <span class="chapter-number stagger-item">CONCLUSION</span>
+            <h2 class="chapter-name stagger-item">では<span class="accent-teal">嘘を見抜く方法</span>は<br>ないのか？</h2>
+            <div class="chapter-line stagger-item"></div>
+            <p class="chapter-sub stagger-item">日本発の「発想の転換」</p>
+        </div>
+    </div>
+</section>
+
+<!-- Scene 25: 比較対照 | CQT（嘘の検出）vs CIT（記憶の検出） -->
+<section class="scene" id="scene-25">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <h2 class="section-title stagger-item">発想の<span class="accent-teal">転換</span></h2>
+        <div class="vs-layout stagger-item">
+            <div class="vs-side left">
+                <div class="vs-title">CQT（従来）</div>
+                <div style="font-size: 28px; font-weight: 900; color: var(--coral); margin: 8px 0;">嘘を検出</div>
+                <div class="vs-result danger">科学的根拠が弱い</div>
+                <div class="vs-detail">嘘固有の反応は存在しない</div>
+            </div>
+            <div class="vs-center-badge">→</div>
+            <div class="vs-side right" style="border-top-color: var(--teal);">
+                <div class="vs-title">CIT（日本式）</div>
+                <div style="font-size: 28px; font-weight: 900; color: var(--teal); margin: 8px 0;">記憶を検出</div>
+                <div class="vs-result neutral">理論的整合性が高い</div>
+                <div class="vs-detail">犯人しか知り得ない情報に反応</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Scene 26: テキスト強調 | CITの質問表精度は約90% -->
+<section class="scene" id="scene-26">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <span class="impact-label stagger-item">CIT ─ 隠匿情報検査</span>
+        <div class="impact-number-group stagger-item">
+            <span class="impact-number" style="color: var(--teal);">約90</span>
+            <span class="impact-number-unit">%</span>
+        </div>
+        <div class="impact-desc stagger-item">
+            CIT（隠匿情報検査）の質問表精度<br>
+            国際的にも高く評価されている
+        </div>
+        <p class="emphasis-sub stagger-item">「嘘を検出する」のではなく「記憶を検出する」── まったく別のアプローチ</p>
+    </div>
+</section>
+
+<!-- Scene 27: まとめカード | 今日の3つのポイント -->
+<section class="scene" id="scene-27">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <h2 class="section-title stagger-item">今日の<span class="accent-primary">3つのポイント</span></h2>
+        <div class="three-points-grid stagger-item">
+            <div class="point-card" style="border-top-color: var(--coral);">
+                <div class="point-number" style="color: var(--coral);">1</div>
+                <div class="point-text">嘘に固有の<br>生理反応は<br><span class="accent-coral">存在しない</span></div>
+            </div>
+            <div class="point-card" style="border-top-color: var(--amber);">
+                <div class="point-number" style="color: var(--amber);">2</div>
+                <div class="point-text">精度はせいぜい<span class="accent-amber">70%</span><br>スパイすら<br><span class="accent-amber">パスした</span></div>
+            </div>
+            <div class="point-card" style="border-top-color: var(--primary);">
+                <div class="point-number" style="color: var(--primary);">3</div>
+                <div class="point-text">本当の機能は<br><span class="accent-primary">自白誘導ツール</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Scene 28: テキスト強調 | 嘘の正体と科学の限界 -->
+<section class="scene" id="scene-28">
+    <canvas class="bg-canvas"></canvas>
+    <div class="scene-content center-layout">
+        <span class="emphasis-label stagger-item">TAKEAWAY</span>
+        <div class="emphasis-main large stagger-item">
+            「嘘」は単純な生体反応ではなく<br>
+            <span class="accent-primary">複雑な認知プロセス</span>
+        </div>
+        <div class="emphasis-main stagger-item" style="font-size: 24px; color: var(--text-light);">
+            だから一つの指標で見抜くのは原理的に難しい
+        </div>
+        <div class="emphasis-main stagger-item" style="font-size: 28px;">
+            機械の結果を<span class="accent-coral">鵜呑みにしない</span>こと。<br>
+            自分の頭で<span class="accent-teal">考える</span>こと。
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

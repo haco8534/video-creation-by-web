@@ -1,0 +1,42 @@
+# YouTube概要欄：コンコルドの誤り──国がサンクコストに負けた実話
+
+<!-- 以下をそのままYouTubeの概要欄にコピー＆ペーストして使う -->
+
+映画館でつまらない映画を最後まで見てしまうこと、ありませんか？
+「1,800円払ったんだから……」その心理、実は2つの国が数千億円を溶かした判断とまったく同じメカニズムなんです。
+イギリスとフランスが共同開発した超音速旅客機「コンコルド」──マッハ2で大西洋を3時間半で横断する夢の飛行機は、なぜ「失敗する」と全員が分かっていたのに止められなかったのか。
+サンクコスト（埋没費用）の心理メカニズムを、コンコルドの実話と最新の行動経済学の研究から解き明かします。
+
+▼ もくじ（タイムスタンプ）
+00:00 オープニング──映画チケットと「もったいない」の罠
+02:00 サンクコスト（埋没費用）の基本
+05:00 コンコルドという夢の飛行機
+09:00 止めたくても止められなかった──条約ペナルティの呪い
+13:00 なぜ私たちはサンクコストに負けるのか──脳の3つの罠
+17:00 まとめ──席を立つ勇気とゼロベース思考
+<!-- ※時間は推定値です。動画完成後に実際の時間に合わせて微調整してください -->
+
+▼ 参考文献・一次資料
+この動画の内容は以下の学術論文・公的資料等に基づいています。
+
+【学術論文】
+• Arkes, H.R. & Blumer, C. (1985). The Psychology of Sunk Cost. Organizational Behavior and Human Decision Processes, 35(1), 124-140.
+• Kahneman, D. & Tversky, A. (1979). Prospect Theory: An Analysis of Decision under Risk. Econometrica, 47(2), 263-292.
+
+【公的資料・報告書】
+• UK Parliament. Report to Parliament on Concorde Programme Costs. (EUR 2.0 billion UK Government expenditure through 2003)
+• Bureau d'Enquêtes et d'Analyses (BEA). Final Report on the Air France Flight 4590 Accident, July 25, 2000.
+• Heritage Concorde. The Anglo-French Concorde Treaty (1962). https://heritageconcorde.com
+
+【参考記事・解説】
+• The Guardian. UK Labour Government's 1964 attempt to cancel Concorde.
+• Britannica. Concorde - Supersonic Airliner.
+• Simple Flying. How Much Did Concorde Cost To Develop?
+
+---
+
+📘 このチャンネルについて
+一次情報と研究データに基づきながら、難しいテーマをずんだもんとめたんの対話で楽しくわかりやすく解説するチャンネルです。
+「わかりやすく親しみやすい。でも、ちゃんと本当のことを言っている。」を大切にしています。
+
+#サンクコスト #コンコルドの誤り #行動経済学 #埋没費用 #心理学

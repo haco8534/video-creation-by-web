@@ -1,0 +1,87 @@
+[
+    {
+        "surface": "Arthritis",
+        "pronunciation": "アースライティス",
+        "accent_type": 1
+    },
+    {
+        "surface": "arthritis",
+        "pronunciation": "アースライティス",
+        "accent_type": 1
+    },
+    {
+        "surface": "Axelrod",
+        "pronunciation": "アクセルロッド",
+        "accent_type": 1
+    },
+    {
+        "surface": "CDO",
+        "pronunciation": "シーディーオー",
+        "accent_type": 5
+    },
+    {
+        "surface": "CO",
+        "pronunciation": "シーオー",
+        "accent_type": 3
+    },
+    {
+        "surface": "Castellanos",
+        "pronunciation": "カステリャーノス",
+        "accent_type": 1
+    },
+    {
+        "surface": "Donald",
+        "pronunciation": "ドナルド",
+        "accent_type": 1
+    },
+    {
+        "surface": "Kawchuk",
+        "pronunciation": "カウチャック",
+        "accent_type": 1
+    },
+    {
+        "surface": "Knuckle",
+        "pronunciation": "ナックル",
+        "accent_type": 1
+    },
+    {
+        "surface": "ONE",
+        "pronunciation": "ワン",
+        "accent_type": 1
+    },
+    {
+        "surface": "PLOS",
+        "pronunciation": "プロス",
+        "accent_type": 1
+    },
+    {
+        "surface": "Rheumatism",
+        "pronunciation": "リウマティズム",
+        "accent_type": 1
+    },
+    {
+        "surface": "Unger",
+        "pronunciation": "アンガー",
+        "accent_type": 1
+    },
+    {
+        "surface": "and",
+        "pronunciation": "アンド",
+        "accent_type": 1
+    },
+    {
+        "surface": "causes",
+        "pronunciation": "コーゼズ",
+        "accent_type": 1
+    },
+    {
+        "surface": "cracking",
+        "pronunciation": "クラッキング",
+        "accent_type": 1
+    },
+    {
+        "surface": "deWeber",
+        "pronunciation": "デウェーバー",
+        "accent_type": 1
+    }
+]

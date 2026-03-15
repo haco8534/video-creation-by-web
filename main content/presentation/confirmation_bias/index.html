@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920">
+  <title>確証バイアス──あなたが「自分は正しい」と確信する仕組み</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== Scene 0: タイトルカード | 確証バイアス──あなたが「自分は正しい」と確信する仕組み ===== -->
+<section class="scene" id="scene-0">
+  <canvas id="canvas-0" class="scene-canvas"></canvas>
+  <div class="scene-content title-card">
+    <div class="title-sub stagger-item">認知バイアス徹底解説</div>
+    <h1 class="title-huge stagger-item">確証バイアス──<br>あなたが<span class="highlight-text">「自分は正しい」</span>と<br>確信する仕組み</h1>
+    <div class="title-accent stagger-item">Confirmation Bias</div>
+    <div class="source-badge stagger-item">Wason (1960) / Lord, Ross & Lepper (1979) / Kahan et al. (2012)</div>
+  </div>
+</section>
+
+<!-- ===== Scene 1: 数値インパクト | 2, 4, 6 ──この数列のルールは？ ===== -->
+<section class="scene" id="scene-1">
+  <div class="scene-content number-impact">
+    <div class="impact-label stagger-item">ウェイソンの2-4-6課題（1960年）</div>
+    <div class="impact-number stagger-item"><span class="big-num">2, 4, 6</span></div>
+    <div class="impact-detail stagger-item">この数列のルールは何でしょう？<br>「2ずつ増える偶数」……ではなく<span class="highlight-text">「小さい順に並んでいるだけ」</span></div>
+    <div class="source-badge stagger-item">Wason, P.C. (1960) Quarterly Journal of Experimental Psychology</div>
+  </div>
+</section>
+
+<!-- ===== Scene 2: テキスト強調 | 正解は「小さい順に並んでいるだけ」 ===== -->
+<section class="scene" id="scene-2">
+  <div class="scene-content text-emphasis">
+    <div class="emphasis-icon stagger-item">🎯</div>
+    <h2 class="emphasis-title stagger-item">正解は<br><span class="highlight-text">「小さい順に並んでいるだけ」</span></h2>
+    <div class="emphasis-blocks stagger-item">
+      <div class="em-block">「4, 6, 8」✓</div>
+      <div class="em-block">「1, 5, 9」✓</div>
+      <div class="em-block">「3, 100, 200」✓</div>
+      <div class="em-block accent">「1, 2, 1000000」✓</div>
+    </div>
+    <p class="emphasis-body stagger-item">多くの人は「2ずつ増える偶数」に合う数列しか試さず、反証を探さなかった</p>
+  </div>
+</section>
+
+<!-- ===== Scene 3: 段階的リスト | ウェイソンの2-4-6課題──正解率たったの20% ===== -->
+<section class="scene" id="scene-3">
+  <div class="scene-content number-impact dual-numbers">
+    <div class="impact-label stagger-item">2-4-6課題の結果</div>
+    <div class="dual-container stagger-item">
+      <div class="dual-num accent-num">
+        <div class="big-num">20</div>
+        <div class="big-unit">%</div>
+        <div class="dual-label">正解率</div>
+      </div>
+      <div class="dual-arrow">
+        <span class="vs-divider small">vs</span>
+      </div>
+      <div class="dual-num">
+        <div class="big-num">80</div>
+        <div class="big-unit">%</div>
+        <div class="dual-label">自信満々で不正解</div>
+      </div>
+    </div>
+    <div class="impact-detail stagger-item">間違えた80%の人は全員<span class="text-danger">「自分は正しい」と確信</span>して答えていた</div>
+  </div>
+</section>
+
+<!-- ===== Scene 4: 段階的リスト | 確証バイアスの3つの段階 ===== -->
+<section class="scene" id="scene-4">
+  <div class="scene-content stepped-list">
+    <h2 class="list-title stagger-item"><span class="highlight-text">確証バイアス</span>の3つの段階</h2>
+    <div class="step-cards">
+      <div class="step-card stagger-item" style="--card-delay: 0.1s">
+        <div class="card-num">01</div>
+        <h3 class="card-title">情報の収集</h3>
+        <p class="card-desc">自分の信じたいことを裏付ける情報ばかり探してしまう</p>
+        <div class="card-icon">🔍</div>
+      </div>
+      <div class="step-card stagger-item" style="--card-delay: 0.3s">
+        <div class="card-num">02</div>
+        <h3 class="card-title">情報の解釈</h3>
+        <p class="card-desc">同じデータでも自分に都合よく解釈してしまう</p>
+        <div class="card-icon">🔄</div>
+      </div>
+      <div class="step-card stagger-item" style="--card-delay: 0.5s">
+        <div class="card-num">03</div>
+        <h3 class="card-title">情報の記憶</h3>
+        <p class="card-desc">信念に合った情報ほど記憶に残りやすい（選択的想起）</p>
+        <div class="card-icon">🧠</div>
+      </div>
+    </div>
+    <div class="source-badge stagger-item">Nickerson, R.S. (1998) Review of General Psychology</div>
+  </div>
+</section>
+
+<!-- ===== Scene 5: フロー図 | 収集→解釈→記憶の3段階バイアス ===== -->
+<section class="scene" id="scene-5">
+  <div class="scene-content flow-diagram">
+    <h2 class="flow-title stagger-item">確証バイアスの3段階メカニズム</h2>
+    <div class="flow-steps">
+      <div class="flow-step stagger-item">
+        <div class="step-num">1</div>
+        <div class="step-text">信じたいことを<br>裏付ける情報を収集</div>
+      </div>
+      <div class="flow-arrow stagger-item">→</div>
+      <div class="flow-step stagger-item">
+        <div class="step-num">2</div>
+        <div class="step-text">同じデータを<br>都合よく解釈</div>
+      </div>
+      <div class="flow-arrow stagger-item">→</div>
+      <div class="flow-step stagger-item">
+        <div class="step-num">3</div>
+        <div class="step-text">都合のいい情報<br>だけ記憶に残る</div>
+      </div>
+      <div class="flow-arrow stagger-item">→</div>
+      <div class="flow-step stagger-item highlight-step">
+        <div class="step-num">!</div>
+        <div class="step-text">「やっぱり<br>自分が正しい！」</div>
+      </div>
+    </div>
+    <div class="emphasis-note stagger-item">このループが無限に繰り返され、信念が強化されていく</div>
+  </div>
+</section>
+
+<!-- ===== Scene 6: テキスト強調 | 都合のいい記憶だけが残る ===== -->
+<section class="scene" id="scene-6">
+  <div class="scene-content text-emphasis">
+    <div class="emphasis-icon stagger-item">💭</div>
+    <h2 class="emphasis-title stagger-item"><span class="highlight-text">選択的想起</span>の罠<br>都合のいい記憶だけが残る</h2>
+    <div class="emphasis-equation stagger-item">
+      <span class="eq-item">A型の友人が几帳面 → 「やっぱり！」</span>
+      <span class="eq-sign">vs</span>
+      <span class="eq-item">A型の友人が散らかし → 印象に残らない</span>
+    </div>
+    <p class="emphasis-body stagger-item">心理学では「選択的想起」と呼ばれる現象。<br>自分に都合のいい記憶だけがハイライトされ、信念がさらに強化される</p>
+  </div>
+</section>
+
+<!-- ===== Scene 7: 引用カード | フランシス・ベーコン（1620年）の警告 ===== -->
+<section class="scene" id="scene-7">
+  <div class="scene-content quote-card">
+    <div class="quote-icon stagger-item">📖</div>
+    <h2 class="quote-title stagger-item">400年前の警告</h2>
+    <blockquote class="quote-text stagger-item">
+      「人の理解はひとたびある意見を持つと、それを支持するものだけを引き寄せてしまう」
+    </blockquote>
+    <div class="quote-detail stagger-item">
+      <div class="detail-row"><span class="detail-key">著者</span><span class="detail-val">フランシス・ベーコン</span></div>
+      <div class="detail-row"><span class="detail-key">書籍</span><span class="detail-val">Novum Organum (1620)</span></div>
+      <div class="detail-row"><span class="detail-key">時代</span><span class="detail-val">17世紀イギリス</span></div>
+    </div>
+    <div class="source-badge stagger-item">Bacon, F. (1620) Novum Organum, Aphorism XLVI</div>
+  </div>
+</section>
+
+<!-- ===== Scene 8: 注意喚起 | 「知っている」だけでは防げない理由 ===== -->
+<section class="scene" id="scene-8">
+  <div class="scene-content caution-card">
+    <div class="caution-icon stagger-item">⚠️</div>
+    <h2 class="caution-title stagger-item">400年前から知られているのに<br><span class="text-danger">なぜ克服できない？</span></h2>
+    <div class="caution-body stagger-item">
+      <p>「知っている」だけでは防げない</p>
+      <p>なぜなら<span class="highlight-text">脳の構造そのもの</span>に組み込まれているから</p>
+    </div>
+    <div class="caution-tip stagger-item">
+      <div class="tip-icon">🧠</div>
+      <div class="tip-text">その証拠を、次の衝撃的な実験から見ていこう</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Scene 9: タイトルカード | 同じデータで結論が真逆──スタンフォード実験 ===== -->
+<section class="scene" id="scene-9">
+  <canvas id="canvas-9" class="scene-canvas"></canvas>
+  <div class="scene-content title-card block-title">
+    <div class="title-sub stagger-item">トピック①</div>
+    <h1 class="title-huge stagger-item">同じデータで<br>結論が<span class="highlight-text">真逆</span>になる</h1>
+    <div class="title-accent stagger-item">Stanford Biased Assimilation Study — Lord, Ross & Lepper (1979)</div>
+  </div>
+</section>
+
+<!-- ===== Scene 10: 比較対照 | 死刑賛成派 vs 反対派に同じ2つの研究を提示 ===== -->
+<section class="scene" id="scene-10">
+  <div class="scene-content vs-container">
+    <h2 class="vs-title stagger-item">スタンフォード死刑実験（1979年）</h2>
+    <div class="vs-cards">
+      <div class="vs-card left stagger-item">
+        <div class="vs-card-header">死刑賛成派</div>
+        <div class="vs-card-icon">👍</div>
+        <ul class="vs-list">
+          <li>「抑止効果あり」の研究を高く評価</li>
+          <li>「効果なし」の研究は方法論に問題ありと批判</li>
+          <li>「自分は客観的に判断した」と確信</li>
+        </ul>
+      </div>
+      <div class="vs-divider stagger-item">VS</div>
+      <div class="vs-card right stagger-item">
+        <div class="vs-card-header">死刑反対派</div>
+        <div class="vs-card-icon">👎</div>
+        <ul class="vs-list">
+          <li>「効果なし」の研究を高く評価</li>
+          <li>「抑止効果あり」の研究は方法論に問題ありと批判</li>
+          <li>「自分は客観的に判断した」と確信</li>
+        </ul>
+      </div>
+    </div>
+    <div class="source-badge stagger-item">まったく同じ2つの研究データを提示 → 結論が真逆に</div>
+  </div>
+</section>
+
+<!-- ===== Scene 11: テキスト強調 | まったく同じ資料で態度がさらに極端に ===== -->
+<section class="scene" id="scene-11">
+  <div class="scene-content text-emphasis">
+    <div class="emphasis-icon stagger-item">💥</div>
+    <h2 class="emphasis-title stagger-item">同じデータを見たのに<br>双方とも<span class="text-danger">「相手こそ偏っている」</span>と感じた</h2>
+    <p class="emphasis-body stagger-item">自分は冷静で客観的、相手は感情的で偏っている<br>──全員がそう思い込んでいた</p>
+    <div class="emphasis-note stagger-item">心理学ではこの現象を「偏った同化（Biased Assimilation）」と呼ぶ</div>
+  </div>
+</section>
+
+<!-- ===== Scene 12: 数値インパクト | 23%が態度をさらに極端化 ===== -->
+<section class="scene" id="scene-12">
+  <div class="scene-content number-impact">
+    <div class="impact-label stagger-item">両方のデータを読んだ後に態度がさらに極端化した参加者</div>
+    <div class="impact-number stagger-item"><span class="big-num">23</span><span class="big-unit">%</span></div>
+    <div class="impact-detail stagger-item">客観的な情報を与えても確証バイアスが働くと<br>むしろ<span class="text-danger">対立が深まる</span>＝<span class="highlight-text">態度の極化</span></div>
+    <div class="source-badge stagger-item">Lord, Ross & Lepper (1979) JPSP, 37(11), 2098-2109</div>
+  </div>
+</section>
+
+<!-- ===== Scene 13: 注意喚起 | 「データを見れば正しい判断ができる」は幻想 ===== -->
+<section class="scene" id="scene-13">
+  <div class="scene-content caution-card">
+    <div class="caution-icon stagger-item">🔍</div>
+    <h2 class="caution-title stagger-item"><span class="text-danger">「データを見れば客観的に判断できる」</span><br>は幻想だった</h2>
+    <div class="caution-body stagger-item">
+      <p>人は新しい情報を「白紙の状態」で受け取れない</p>
+      <p>すでに持っている<span class="highlight-text">信念というフィルター</span>を通して読んでしまう</p>
+    </div>
+    <div class="caution-tip stagger-item">
+      <div class="tip-icon">📱</div>
+      <div class="tip-text">SNSで同じニュースを見ても、ある人は「やっぱり」と思い、別の人は「嘘だ」と感じる──これも同じ仕組み</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Scene 14: タイトルカード | 確証バイアスは「脳の快感」だった ===== -->
+<section class="scene" id="scene-14">
+  <canvas id="canvas-14" class="scene-canvas"></canvas>
+  <div class="scene-content title-card block-title">
+    <div class="title-sub stagger-item">トピック②</div>
+    <h1 class="title-huge stagger-item">確証バイアスは<br><span class="highlight-text">「脳の快感」</span>だった</h1>
+    <div class="title-accent stagger-item">Neuroscience of Confirmation Bias — fMRI & Dopamine</div>
+  </div>
+</section>
+
+<!-- ===== Scene 15: フロー図 | 信念一致→ドーパミン→快感→もっと探す（報酬ループ） ===== -->
+<section class="scene" id="scene-15">
+  <div class="scene-content flow-diagram">
+    <h2 class="flow-title stagger-item">確証バイアスの「報酬ループ」</h2>
+    <div class="flow-steps">
+      <div class="flow-step stagger-item">
+        <div class="step-num">1</div>
+        <div class="step-text">信念を裏付ける<br>情報に触れる</div>
+      </div>
+      <div class="flow-arrow stagger-item">→</div>
+      <div class="flow-step stagger-item">
+        <div class="step-num">2</div>
+        <div class="step-text">ドーパミン<br>放出</div>
+      </div>
+      <div class="flow-arrow stagger-item">→</div>
+      <div class="flow-step stagger-item">
+        <div class="step-num">3</div>
+        <div class="step-text">「自分は正しい」<br>快感を感じる</div>
+      </div>
+      <div class="flow-arrow stagger-item">→</div>
+      <div class="flow-step stagger-item highlight-step">
+        <div class="step-num">!</div>
+        <div class="step-text">もっと快感が<br>欲しくなる</div>
+      </div>
+    </div>
+    <div class="emphasis-note stagger-item">「自分は正しい」と感じることは脳にとってチョコレートと同じ"ご褒美"</div>
+  </div>
+</section>
+
+<!-- ===== Scene 16: 比較対照 | 信念一致→脳活性化 vs 反証→脳がシャットダウン ===== -->
+<section class="scene" id="scene-16">
+  <div class="scene-content vs-container">
+    <h2 class="vs-title stagger-item">fMRI研究が示す脳の反応</h2>
+    <div class="vs-cards">
+      <div class="vs-card left stagger-item">
+        <div class="vs-card-header">信念に合う情報</div>
+        <div class="vs-card-icon">🟢</div>
+        <ul class="vs-list">
+          <li>報酬系が活性化</li>
+          <li>ドーパミン放出</li>
+          <li>快感・満足感</li>
+        </ul>
+        <div class="vs-verdict correct">脳が「ご褒美」と認識</div>
+      </div>
+      <div class="vs-divider stagger-item">VS</div>
+      <div class="vs-card right stagger-item">
+        <div class="vs-card-header">信念に反する情報</div>
+        <div class="vs-card-icon">🔴</div>
+        <ul class="vs-list">
+          <li>内側前頭前野の活動低下</li>
+          <li>矛盾情報をシャットダウン</li>
+          <li>不快感・回避行動</li>
+        </ul>
+        <div class="vs-verdict wrong">脳が自動的にブロック</div>
+      </div>
+    </div>
+    <div class="source-badge stagger-item">Klucharev et al. (2009) Neuron / Sharot et al. (2012) Nature Neuroscience</div>
+  </div>
+</section>
+
+<!-- ===== Scene 17: テキスト強調 | 「頭がいい人ほど確証バイアスが強い」 ===== -->
+<section class="scene" id="scene-17">
+  <div class="scene-content text-emphasis">
+    <div class="emphasis-icon stagger-item">⚡</div>
+    <h2 class="emphasis-title stagger-item">衝撃の研究結果<br><span class="highlight-text">「賢い人ほど確証バイアスが強い」</span></h2>
+    <p class="emphasis-body stagger-item">2012年、イェール大学の心理学者ダン・カハンらが発表<br>知能が高い人ほど、都合の悪い情報を否定する理屈を<span class="text-danger">上手に作れる</span></p>
+    <div class="emphasis-note stagger-item">頭の良さがバイアスを正当化する「武器」になってしまう</div>
+    <div class="source-badge stagger-item">Kahan et al. (2012) Nature Climate Change / Stanovich & West (2008)</div>
+  </div>
+</section>
+
+<!-- ===== Scene 18: 数値インパクト | 高IQ者はバイアスを正当化する能力が高い ===== -->
+<section class="scene" id="scene-18">
+  <div class="scene-content text-emphasis">
+    <h2 class="emphasis-title stagger-item">知能の高い人がバイアスに「気づける」のに<br><span class="text-danger">克服できない</span>理由</h2>
+    <div class="emphasis-blocks stagger-item">
+      <div class="em-block">バイアスに気づく</div>
+      <div class="em-arrow">→</div>
+      <div class="em-block accent">でも否定する理屈を巧みに構築</div>
+      <div class="em-arrow">→</div>
+      <div class="em-block danger">「自分は客観的」と確信が強まる</div>
+    </div>
+    <p class="emphasis-body stagger-item">「自分は客観的な人間だ」と確信している人こそ<span class="highlight-text">最も危険</span></p>
+  </div>
+</section>
+
+<!-- ===== Scene 19: タイトルカード | あなたのスマホが確証バイアスを加速させている ===== -->
+<section class="scene" id="scene-19">
+  <canvas id="canvas-19" class="scene-canvas"></canvas>
+  <div class="scene-content title-card block-title">
+    <div class="title-sub stagger-item">トピック③</div>
+    <h1 class="title-huge stagger-item">あなたの<span class="highlight-text">スマホ</span>が<br>確証バイアスを加速させている</h1>
+    <div class="title-accent stagger-item">Echo Chambers & Filter Bubbles</div>
+  </div>
+</section>
+
+<!-- ===== Scene 20: フロー図 | いいね→アルゴリズム→偏った表示→バイアス強化→さらに偏る ===== -->
+<section class="scene" id="scene-20">
+  <div class="scene-content flow-diagram">
+    <h2 class="flow-title stagger-item">SNS × 確証バイアスの悪循環</h2>
+    <div class="flow-steps">
+      <div class="flow-step stagger-item">
+        <div class="step-num">1</div>
+        <div class="step-text">ある意見に<br>いいね</div>
+      </div>
+      <div class="flow-arrow stagger-item">→</div>
+      <div class="flow-step stagger-item">
+        <div class="step-num">2</div>
+        <div class="step-text">アルゴリズムが<br>学習</div>
+      </div>
+      <div class="flow-arrow stagger-item">→</div>
+      <div class="flow-step stagger-item">
+        <div class="step-num">3</div>
+        <div class="step-text">似た意見だけ<br>表示される</div>
+      </div>
+      <div class="flow-arrow stagger-item">→</div>
+      <div class="flow-step stagger-item highlight-step">
+        <div class="step-num">!</div>
+        <div class="step-text">バイアスが<br>さらに強化</div>
+      </div>
+    </div>
+    <div class="emphasis-note stagger-item">「世間のみんなもそう思っている」と錯覚してしまう</div>
+  </div>
+</section>
+
+<!-- ===== Scene 21: 比較対照 | エコーチェンバー（自分で作る） vs フィルターバブル（機械が作る） ===== -->
+<section class="scene" id="scene-21">
+  <div class="scene-content vs-container">
+    <h2 class="vs-title stagger-item">2つの情報偏向メカニズム</h2>
+    <div class="vs-cards">
+      <div class="vs-card left stagger-item">
+        <div class="vs-card-header">エコーチェンバー</div>
+        <div class="vs-card-icon">🔊</div>
+        <ul class="vs-list">
+          <li>自分で似た意見の人をフォロー</li>
+          <li>閉じた空間で意見が反響・増幅</li>
+          <li>能動的な選択の結果</li>
+        </ul>
+      </div>
+      <div class="vs-divider stagger-item">VS</div>
+      <div class="vs-card right stagger-item">
+        <div class="vs-card-header">フィルターバブル</div>
+        <div class="vs-card-icon">🫧</div>
+        <ul class="vs-list">
+          <li>アルゴリズムが自動的に情報を選別</li>
+          <li>検索結果もおすすめも偏る</li>
+          <li>受動的──機械が作る「泡」</li>
+        </ul>
+      </div>
+    </div>
+    <div class="source-badge stagger-item">「自分で選んでいるつもり」でも、実は機械に選ばされている</div>
+  </div>
+</section>
+
+<!-- ===== Scene 22: 注意喚起 | 確証バイアス×SNS＝社会の分断 ===== -->
+<section class="scene" id="scene-22">
+  <div class="scene-content caution-card">
+    <div class="caution-icon stagger-item">🌍</div>
+    <h2 class="caution-title stagger-item">スタンフォード実験と同じことが<br><span class="text-danger">数億人規模</span>で起きている</h2>
+    <div class="caution-body stagger-item">
+      <p>2016年米大統領選挙：SNSアルゴリズムがフィルターバブルを形成</p>
+      <p>脳の確証バイアス × SNSの技術 ＝ <span class="highlight-text">社会全体の分断加速</span></p>
+    </div>
+    <div class="caution-tip stagger-item">
+      <div class="tip-icon">📰</div>
+      <div class="tip-text">総務省の情報通信白書でもこの問題が指摘されている</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Scene 23: まとめカード | 確証バイアスを和らげる4つの方法 ===== -->
+<section class="scene" id="scene-23">
+  <div class="scene-content summary-card">
+    <h2 class="summary-title stagger-item">確証バイアスを和らげる<span class="highlight-text">4つの方法</span></h2>
+    <div class="summary-points">
+      <div class="summary-point stagger-item" style="--card-delay: 0.1s">
+        <div class="point-num">1</div>
+        <div class="point-text"><strong>反証を積極的に探す</strong><br>「それが間違いである根拠は何か？」と自分に問う</div>
+      </div>
+      <div class="summary-point stagger-item" style="--card-delay: 0.3s">
+        <div class="point-num">2</div>
+        <div class="point-text"><strong>逆を考える (Consider the Opposite)</strong><br>「もし自分の結論が完全に間違いだったら？」と想像する</div>
+      </div>
+      <div class="summary-point stagger-item" style="--card-delay: 0.5s">
+        <div class="point-num">3</div>
+        <div class="point-text"><strong>悪魔の代弁者を置く</strong><br>議論であえて反対意見を述べる「役割」を決める</div>
+      </div>
+      <div class="summary-point stagger-item" style="--card-delay: 0.7s">
+        <div class="point-num">4</div>
+        <div class="point-text"><strong>情報源を意識する</strong><br>SNSの偏りをチェックし、反対意見のメディアもフォロー</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Scene 24: 段階的リスト | ①反証を探す ②逆を考える ③悪魔の代弁者 ④情報源を意識する ===== -->
+<section class="scene" id="scene-24">
+  <div class="scene-content text-emphasis">
+    <h2 class="emphasis-title stagger-item">「逆を考える」だけで<br><span class="highlight-text">バイアスが大幅に減少</span></h2>
+    <p class="emphasis-body stagger-item">1984年の研究で、「Consider the Opposite（逆を考える）」技法だけで<br>確証バイアスが大幅に低減すると証明された</p>
+    <div class="emphasis-note stagger-item">正しいかどうかではない。「逆の可能性を一瞬でも考える」だけで、脳の処理が変わる</div>
+    <div class="source-badge stagger-item">Lord, Lepper & Preston (1984)</div>
+  </div>
+</section>
+
+<!-- ===== Scene 25: 横並びカード | 悪魔の代弁者 + レッドチーミング ===== -->
+<section class="scene" id="scene-25">
+  <div class="scene-content stepped-list">
+    <h2 class="list-title stagger-item">組織でバイアスと戦う手法</h2>
+    <div class="step-cards horizontal-cards">
+      <div class="step-card stagger-item" style="--card-delay: 0.1s">
+        <div class="card-icon large-icon">😈</div>
+        <h3 class="card-title">悪魔の代弁者</h3>
+        <p class="card-desc">議論であえて反対意見を述べる「役割」を設定。カトリック教会の聖人認定プロセスが由来</p>
+      </div>
+      <div class="step-card stagger-item" style="--card-delay: 0.3s">
+        <div class="card-icon large-icon">🔴</div>
+        <h3 class="card-title">レッドチーミング</h3>
+        <p class="card-desc">計画のあら探しを専門にするチームを編成。CIA・Google等の大組織でも採用されている手法</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Scene 26: テキスト強調 | 「自分は大丈夫」こそ確証バイアスの最大の罠 ===== -->
+<section class="scene" id="scene-26">
+  <div class="scene-content text-emphasis">
+    <div class="emphasis-icon stagger-item">🪤</div>
+    <h2 class="emphasis-title stagger-item"><span class="text-danger">「自分は大丈夫」</span><br>こそが確証バイアスの最大の罠</h2>
+    <p class="emphasis-body stagger-item">2-4-6課題で正解できなかった80%の人は全員が<br><span class="highlight-text">「自分は正しい」と確信して答えを出していた</span></p>
+    <div class="emphasis-note stagger-item">「確信がある」ことと「正しい」ことはイコールではない</div>
+  </div>
+</section>
+
+<!-- ===== Scene 27: 数値インパクト | 2-4-6課題──「確信」した80%が間違えていた ===== -->
+<section class="scene" id="scene-27">
+  <canvas id="canvas-27" class="scene-canvas"></canvas>
+  <div class="scene-content quote-card ending-card">
+    <div class="quote-icon stagger-item">💡</div>
+    <h2 class="quote-title stagger-item">確証バイアスから抜け出す第一歩</h2>
+    <blockquote class="quote-text stagger-item">
+      「自分は絶対に正しい」と確信するよりも、「自分も間違えるかもしれない」と疑えることのほうが、ずっと賢い
+    </blockquote>
+    <div class="emphasis-final stagger-item">400年前にベーコンが見抜いたこの罠に、<br>今日<span class="highlight-text">対抗する武器</span>を手に入れた</div>
+    <div class="source-badge stagger-item">Wason (1960) / Lord et al. (1979) / Kahan et al. (2012)</div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

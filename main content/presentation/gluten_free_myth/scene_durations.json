@@ -1,0 +1,1371 @@
+[
+  {
+    "id": 0,
+    "title": "タイトルカード | グルテンフリーは本当に体にいいのか？",
+    "duration": 25.1,
+    "audioFiles": [
+      {
+        "file": "scene_00_00.wav",
+        "duration": 3.36,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_00_01.wav",
+        "duration": 5.290666666666667,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_00_02.wav",
+        "duration": 6.016,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_00_03.wav",
+        "duration": 3.925333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_00_04.wav",
+        "duration": 4.810666666666667,
+        "speaker": "metan"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "title": "数値インパクト | 世界市場100億ドル超",
+    "duration": 24.5,
+    "audioFiles": [
+      {
+        "file": "scene_01_00.wav",
+        "duration": 6.08,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_01_01.wav",
+        "duration": 2.9546666666666668,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_01_02.wav",
+        "duration": 5.856,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_01_03.wav",
+        "duration": 4.810666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_01_04.wav",
+        "duration": 3.072,
+        "speaker": "metan"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "テキスト強調 | 科学的根拠はほぼゼロ",
+    "duration": 39.5,
+    "audioFiles": [
+      {
+        "file": "scene_02_00.wav",
+        "duration": 4.714666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_02_01.wav",
+        "duration": 3.8186666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_02_02.wav",
+        "duration": 3.3813333333333335,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_02_03.wav",
+        "duration": 2.453333333333333,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_02_04.wav",
+        "duration": 6.101333333333334,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_02_05.wav",
+        "duration": 7.018666666666666,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_02_06.wav",
+        "duration": 4.512,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_02_07.wav",
+        "duration": 4.874666666666666,
+        "speaker": "zundamon"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "段階的リスト | グルテンとは何か",
+    "duration": 39.8,
+    "audioFiles": [
+      {
+        "file": "scene_03_00.wav",
+        "duration": 5.6,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_03_01.wav",
+        "duration": 5.482666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_03_02.wav",
+        "duration": 5.717333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_03_03.wav",
+        "duration": 5.333333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_03_04.wav",
+        "duration": 3.7333333333333334,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_03_05.wav",
+        "duration": 5.610666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_03_06.wav",
+        "duration": 5.973333333333334,
+        "speaker": "zundamon"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "テキスト強調 | パンのもちもち食感の正体",
+    "duration": 46.7,
+    "audioFiles": [
+      {
+        "file": "scene_04_00.wav",
+        "duration": 3.68,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_04_01.wav",
+        "duration": 5.365333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_04_02.wav",
+        "duration": 5.1306666666666665,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_04_03.wav",
+        "duration": 2.784,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_04_04.wav",
+        "duration": 4.8853333333333335,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_04_05.wav",
+        "duration": 6.656,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_04_06.wav",
+        "duration": 6.602666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_04_07.wav",
+        "duration": 4.725333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_04_08.wav",
+        "duration": 3.957333333333333,
+        "speaker": "metan"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "比較対照 | セリアック病 vs 一般の人",
+    "duration": 56.9,
+    "audioFiles": [
+      {
+        "file": "scene_05_00.wav",
+        "duration": 1.472,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_05_01.wav",
+        "duration": 4.725333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_05_02.wav",
+        "duration": 5.397333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_05_03.wav",
+        "duration": 6.773333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_05_04.wav",
+        "duration": 3.84,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_05_05.wav",
+        "duration": 6.261333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_05_06.wav",
+        "duration": 3.904,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_05_07.wav",
+        "duration": 3.808,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_05_08.wav",
+        "duration": 6.069333333333334,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_05_09.wav",
+        "duration": 7.456,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_05_10.wav",
+        "duration": 3.6906666666666665,
+        "speaker": "metan"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "数値インパクト | 日本人のセリアック病有病率0.05%",
+    "duration": 129.8,
+    "audioFiles": [
+      {
+        "file": "scene_06_00.wav",
+        "duration": 6.016,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_06_01.wav",
+        "duration": 3.3813333333333335,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_06_02.wav",
+        "duration": 3.616,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_06_03.wav",
+        "duration": 6.496,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_06_04.wav",
+        "duration": 5.1306666666666665,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_06_05.wav",
+        "duration": 3.7653333333333334,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_06_06.wav",
+        "duration": 2.272,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_06_07.wav",
+        "duration": 7.104,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_06_08.wav",
+        "duration": 5.504,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_06_09.wav",
+        "duration": 4.629333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_06_10.wav",
+        "duration": 3.445333333333333,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_06_11.wav",
+        "duration": 4.661333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_06_12.wav",
+        "duration": 4.213333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_06_13.wav",
+        "duration": 2.2826666666666666,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_06_14.wav",
+        "duration": 3.84,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_06_15.wav",
+        "duration": 2.997333333333333,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_06_16.wav",
+        "duration": 3.488,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_06_17.wav",
+        "duration": 3.232,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_06_18.wav",
+        "duration": 6.474666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_06_19.wav",
+        "duration": 5.504,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_06_20.wav",
+        "duration": 4.896,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_06_21.wav",
+        "duration": 2.6453333333333333,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_06_22.wav",
+        "duration": 5.962666666666666,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_06_23.wav",
+        "duration": 4.693333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_06_24.wav",
+        "duration": 3.3493333333333335,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_06_25.wav",
+        "duration": 4.64,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_06_26.wav",
+        "duration": 4.949333333333334,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_06_27.wav",
+        "duration": 2.016,
+        "speaker": "zundamon"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "タイトルカード | なぜグルテンフリーは世界を席巻したのか",
+    "duration": 13.4,
+    "audioFiles": [
+      {
+        "file": "scene_07_00.wav",
+        "duration": 2.485333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_07_01.wav",
+        "duration": 4.032,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_07_02.wav",
+        "duration": 5.802666666666667,
+        "speaker": "zundamon"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "引用カード | ジョコビッチ「生まれ変わる食事」",
+    "duration": 62.3,
+    "audioFiles": [
+      {
+        "file": "scene_08_00.wav",
+        "duration": 2.688,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_08_01.wav",
+        "duration": 4.021333333333334,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_08_02.wav",
+        "duration": 4.544,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_08_03.wav",
+        "duration": 3.9466666666666668,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_08_04.wav",
+        "duration": 5.237333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_08_05.wav",
+        "duration": 5.8133333333333335,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_08_06.wav",
+        "duration": 5.344,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_08_07.wav",
+        "duration": 6.496,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_08_08.wav",
+        "duration": 5.344,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_08_09.wav",
+        "duration": 5.450666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_08_10.wav",
+        "duration": 3.3493333333333335,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_08_11.wav",
+        "duration": 6.261333333333333,
+        "speaker": "zundamon"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "フロー図 | GFブームの広がり方",
+    "duration": 81.7,
+    "audioFiles": [
+      {
+        "file": "scene_09_00.wav",
+        "duration": 4.010666666666666,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_09_01.wav",
+        "duration": 5.578666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_09_02.wav",
+        "duration": 6.229333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_09_03.wav",
+        "duration": 6.368,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_09_04.wav",
+        "duration": 4.704,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_09_05.wav",
+        "duration": 5.824,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_09_06.wav",
+        "duration": 1.2586666666666666,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_09_07.wav",
+        "duration": 7.541333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_09_08.wav",
+        "duration": 5.205333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_09_09.wav",
+        "duration": 4.682666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_09_10.wav",
+        "duration": 4.949333333333334,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_09_11.wav",
+        "duration": 6.645333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_09_12.wav",
+        "duration": 5.344,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_09_13.wav",
+        "duration": 4.245333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_09_14.wav",
+        "duration": 4.405333333333333,
+        "speaker": "metan"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "数値インパクト | GF市場の爆発的成長",
+    "duration": 39,
+    "audioFiles": [
+      {
+        "file": "scene_10_00.wav",
+        "duration": 5.749333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_10_01.wav",
+        "duration": 5.386666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_10_02.wav",
+        "duration": 4.970666666666666,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_10_03.wav",
+        "duration": 6.176,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_10_04.wav",
+        "duration": 5.312,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_10_05.wav",
+        "duration": 4.501333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_10_06.wav",
+        "duration": 4.586666666666667,
+        "speaker": "zundamon"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "タイトルカード | 科学が示す3つの意外な真実",
+    "duration": 9.7,
+    "audioFiles": [
+      {
+        "file": "scene_11_00.wav",
+        "duration": 4.576,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_11_01.wav",
+        "duration": 4.330666666666667,
+        "speaker": "zundamon"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "引用カード | BMJ大規模追跡研究（2017年）",
+    "duration": 35.6,
+    "audioFiles": [
+      {
+        "file": "scene_12_00.wav",
+        "duration": 7.36,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_12_01.wav",
+        "duration": 7.125333333333334,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_12_02.wav",
+        "duration": 4.245333333333333,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_12_03.wav",
+        "duration": 6.613333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_12_04.wav",
+        "duration": 1.8453333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_12_05.wav",
+        "duration": 6.4,
+        "speaker": "zundamon"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "比較対照 | グルテン摂取量と心疾患リスク",
+    "duration": 50.5,
+    "audioFiles": [
+      {
+        "file": "scene_13_00.wav",
+        "duration": 4.330666666666667,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_13_01.wav",
+        "duration": 3.562666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_13_02.wav",
+        "duration": 7.701333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_13_03.wav",
+        "duration": 4.704,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_13_04.wav",
+        "duration": 4.512,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_13_05.wav",
+        "duration": 4.053333333333334,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_13_06.wav",
+        "duration": 4.586666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_13_07.wav",
+        "duration": 5.013333333333334,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_13_08.wav",
+        "duration": 5.386666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_13_09.wav",
+        "duration": 3.477333333333333,
+        "speaker": "metan"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "テキスト強調 | 真犯人はグルテンじゃなかった",
+    "duration": 17.1,
+    "audioFiles": [
+      {
+        "file": "scene_14_00.wav",
+        "duration": 3.296,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_14_01.wav",
+        "duration": 4.832,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_14_02.wav",
+        "duration": 4.352,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_14_03.wav",
+        "duration": 3.264,
+        "speaker": "metan"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "段階的リスト | フルクタン（FODMAP）の仕組み",
+    "duration": 54.9,
+    "audioFiles": [
+      {
+        "file": "scene_15_00.wav",
+        "duration": 5.322666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_15_01.wav",
+        "duration": 6.496,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_15_02.wav",
+        "duration": 7.242666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_15_03.wav",
+        "duration": 4.053333333333334,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_15_04.wav",
+        "duration": 4.48,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_15_05.wav",
+        "duration": 5.525333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_15_06.wav",
+        "duration": 1.6746666666666667,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_15_07.wav",
+        "duration": 5.696,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_15_08.wav",
+        "duration": 5.792,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_15_09.wav",
+        "duration": 5.450666666666667,
+        "speaker": "zundamon"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "数値インパクト | グルテン群 vs プラセボ群で差なし",
+    "duration": 26.7,
+    "audioFiles": [
+      {
+        "file": "scene_16_00.wav",
+        "duration": 2.8053333333333335,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_16_01.wav",
+        "duration": 5.354666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_16_02.wav",
+        "duration": 4.682666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_16_03.wav",
+        "duration": 5.365333333333333,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_16_04.wav",
+        "duration": 6.826666666666667,
+        "speaker": "zundamon"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "注意喚起 | ノセボ効果40%",
+    "duration": 64.9,
+    "audioFiles": [
+      {
+        "file": "scene_17_00.wav",
+        "duration": 4.096,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_17_01.wav",
+        "duration": 6.069333333333334,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_17_02.wav",
+        "duration": 5.1306666666666665,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_17_03.wav",
+        "duration": 2.016,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_17_04.wav",
+        "duration": 2.72,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_17_05.wav",
+        "duration": 6.026666666666666,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_17_06.wav",
+        "duration": 4.117333333333334,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_17_07.wav",
+        "duration": 4.725333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_17_08.wav",
+        "duration": 4.672,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_17_09.wav",
+        "duration": 4.373333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_17_10.wav",
+        "duration": 5.674666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_17_11.wav",
+        "duration": 5.002666666666666,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_17_12.wav",
+        "duration": 6.197333333333333,
+        "speaker": "zundamon"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "タイトルカード | むしろリスクがあるとしたら？",
+    "duration": 17.8,
+    "audioFiles": [
+      {
+        "file": "scene_18_00.wav",
+        "duration": 5.045333333333334,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_18_01.wav",
+        "duration": 2.944,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_18_02.wav",
+        "duration": 5.013333333333334,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_18_03.wav",
+        "duration": 3.392,
+        "speaker": "metan"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "段階的リスト | GF食の3大リスク",
+    "duration": 65.6,
+    "audioFiles": [
+      {
+        "file": "scene_19_00.wav",
+        "duration": 2.816,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_19_01.wav",
+        "duration": 2.4,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_19_02.wav",
+        "duration": 5.610666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_19_03.wav",
+        "duration": 7.424,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_19_04.wav",
+        "duration": 4.010666666666666,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_19_05.wav",
+        "duration": 4.981333333333334,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_19_06.wav",
+        "duration": 3.509333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_19_07.wav",
+        "duration": 4.682666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_19_08.wav",
+        "duration": 5.109333333333334,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_19_09.wav",
+        "duration": 5.408,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_19_10.wav",
+        "duration": 5.12,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_19_11.wav",
+        "duration": 4.245333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_19_12.wav",
+        "duration": 6.197333333333333,
+        "speaker": "zundamon"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "注意喚起 | 重金属リスク（ヒ素）",
+    "duration": 46.7,
+    "audioFiles": [
+      {
+        "file": "scene_20_00.wav",
+        "duration": 1.5786666666666667,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_20_01.wav",
+        "duration": 5.237333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_20_02.wav",
+        "duration": 5.216,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_20_03.wav",
+        "duration": 5.984,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_20_04.wav",
+        "duration": 2.506666666666667,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_20_05.wav",
+        "duration": 5.066666666666666,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_20_06.wav",
+        "duration": 6.133333333333334,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_20_07.wav",
+        "duration": 2.6773333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_20_08.wav",
+        "duration": 4.682666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_20_09.wav",
+        "duration": 4.426666666666667,
+        "speaker": "metan"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "title": "横並びカード | GF加工食品の落とし穴",
+    "duration": 74.1,
+    "audioFiles": [
+      {
+        "file": "scene_21_00.wav",
+        "duration": 4.917333333333334,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_21_01.wav",
+        "duration": 6.496,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_21_02.wav",
+        "duration": 5.386666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_21_03.wav",
+        "duration": 2.8906666666666667,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_21_04.wav",
+        "duration": 3.925333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_21_05.wav",
+        "duration": 2.7733333333333334,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_21_06.wav",
+        "duration": 5.216,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_21_07.wav",
+        "duration": 5.546666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_21_08.wav",
+        "duration": 5.706666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_21_09.wav",
+        "duration": 2.4106666666666667,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_21_10.wav",
+        "duration": 5.642666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_21_11.wav",
+        "duration": 2.944,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_21_12.wav",
+        "duration": 5.642666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_21_13.wav",
+        "duration": 5.632,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_21_14.wav",
+        "duration": 4.234666666666667,
+        "speaker": "metan"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "注意喚起 | 自己診断の危険性",
+    "duration": 48.7,
+    "audioFiles": [
+      {
+        "file": "scene_22_00.wav",
+        "duration": 4.085333333333334,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_22_01.wav",
+        "duration": 4.448,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_22_02.wav",
+        "duration": 3.7866666666666666,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_22_03.wav",
+        "duration": 5.8773333333333335,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_22_04.wav",
+        "duration": 1.1946666666666668,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_22_05.wav",
+        "duration": 5.578666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_22_06.wav",
+        "duration": 5.397333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_22_07.wav",
+        "duration": 5.056,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_22_08.wav",
+        "duration": 5.077333333333334,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_22_09.wav",
+        "duration": 4.970666666666666,
+        "speaker": "zundamon"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "まとめカード | 今日のポイント",
+    "duration": 22.9,
+    "audioFiles": [
+      {
+        "file": "scene_23_00.wav",
+        "duration": 2.816,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_23_01.wav",
+        "duration": 3.6053333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_23_02.wav",
+        "duration": 5.557333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_23_03.wav",
+        "duration": 6.165333333333334,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_23_04.wav",
+        "duration": 3.008,
+        "speaker": "metan"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "段階的リスト | 3つの結論",
+    "duration": 28.2,
+    "audioFiles": [
+      {
+        "file": "scene_24_00.wav",
+        "duration": 5.738666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_24_01.wav",
+        "duration": 7.573333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_24_02.wav",
+        "duration": 5.792,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_24_03.wav",
+        "duration": 7.744,
+        "speaker": "zundamon"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "title": "テキスト強調 | 必要な人には命綱、不要な人にはリスク",
+    "duration": 29.3,
+    "audioFiles": [
+      {
+        "file": "scene_25_00.wav",
+        "duration": 5.461333333333333,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_25_01.wav",
+        "duration": 6.965333333333334,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_25_02.wav",
+        "duration": 5.301333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_25_03.wav",
+        "duration": 4.554666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_25_04.wav",
+        "duration": 5.354666666666667,
+        "speaker": "metan"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "title": "引用カード | 正しい情報との付き合い方",
+    "duration": 53.2,
+    "audioFiles": [
+      {
+        "file": "scene_26_00.wav",
+        "duration": 5.418666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_26_01.wav",
+        "duration": 6.378666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_26_02.wav",
+        "duration": 6.293333333333333,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_26_03.wav",
+        "duration": 5.376,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_26_04.wav",
+        "duration": 5.749333333333333,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_26_05.wav",
+        "duration": 5.8133333333333335,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_26_06.wav",
+        "duration": 5.386666666666667,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_26_07.wav",
+        "duration": 2.5493333333333332,
+        "speaker": "zundamon"
+      },
+      {
+        "file": "scene_26_08.wav",
+        "duration": 3.7013333333333334,
+        "speaker": "metan"
+      },
+      {
+        "file": "scene_26_09.wav",
+        "duration": 3.3386666666666667,
+        "speaker": "zundamon"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1239 @@
+/* ========================================
+   グルテンフリーは健康な人には意味がない - Styles
+   White premium theme with green/amber/coral accents
+   ======================================== */
+
+/* ---------- Design Tokens ---------- */
+:root {
+    --bg: #f8f9fb;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f0f2f5;
+    --bg-card-glass: rgba(255, 255, 255, 0.9);
+    --text: #1a1d27;
+    --text-light: #4b5563;
+    --text-dim: #9ca3af;
+    --green: #059669;
+    --green-dark: #047857;
+    --green-glow: rgba(5, 150, 105, 0.15);
+    --teal: #0d9488;
+    --amber: #d97706;
+    --amber-glow: rgba(217, 119, 6, 0.15);
+    --coral: #dc2626;
+    --coral-glow: rgba(220, 38, 38, 0.12);
+    --indigo: #4f46e5;
+    --font: 'Noto Sans JP', sans-serif;
+    --radius: 16px;
+    --radius-sm: 10px;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    --transition: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* ---------- Reset & Base ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ---------- Scene System ---------- */
+.scene {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition);
+    background: var(--bg);
+    overflow: hidden;
+}
+
+.scene.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scene.active .stagger-item {
+    animation: fadeSlideUp 0.7s ease-out both;
+}
+
+.scene.active .stagger-item:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.scene.active .stagger-item:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .stagger-item:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .stagger-item:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.scene.active .stagger-item:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .stagger-item:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.scene.active .stagger-item:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+.dark-scene {
+    background: #f0f2f5;
+}
+
+.bg-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ---------- Layout Wrappers ---------- */
+.content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 900px;
+    padding: 40px 48px;
+    text-align: center;
+}
+
+.center-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+/* ---------- Typography ---------- */
+.title-large {
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+
+.title-medium {
+    font-size: 2.8rem;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+.title-sub {
+    font-size: 1.15rem;
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+.scene-title {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+}
+
+.light-text {
+    color: #1a1d27 !important;
+}
+
+/* ---------- Color Utilities ---------- */
+.accent-green {
+    color: var(--green);
+}
+
+.accent-amber {
+    color: var(--amber);
+}
+
+.accent-coral {
+    color: var(--coral);
+}
+
+.accent-teal {
+    color: var(--teal);
+}
+
+.accent-bg-green {
+    background: var(--green);
+    color: #fff;
+}
+
+.accent-bg-amber {
+    background: var(--amber);
+    color: #111;
+}
+
+.accent-bg-coral {
+    background: var(--coral);
+    color: #fff;
+}
+
+.accent-bg-teal {
+    background: var(--teal);
+    color: #fff;
+}
+
+/* ---------- Badges ---------- */
+.section-badge {
+    display: inline-block;
+    padding: 6px 22px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.source-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.04);
+    color: var(--text-dim);
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+}
+
+/* ---------- Impact Numbers ---------- */
+.impact-number {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 6px;
+}
+
+.big-num {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 1;
+    animation: pulseNum 3s ease-in-out infinite;
+}
+
+.big-num-sub {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.num-unit {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+/* ---------- Emphasis Text ---------- */
+.emphasis-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--text-light);
+}
+
+.emphasis-text-large {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+.emphasis-sub {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+/* ---------- Growth Bar ---------- */
+.growth-bar-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.growth-label {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+.growth-bar-track {
+    width: 100%;
+    height: 32px;
+    background: #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.growth-bar-fill {
+    width: var(--w);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, var(--green-dark), var(--green));
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 8px;
+    animation: barGrow 1.2s ease-out both;
+}
+
+/* ---------- Bar Comparison ---------- */
+.bar-comparison {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.bar-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.bar-label {
+    font-size: 1rem;
+    font-weight: 700;
+    width: 60px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.bar-track {
+    flex: 1;
+    height: 38px;
+    background: #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bar-fill {
+    height: 100%;
+    width: var(--w);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    animation: barGrow 1.2s ease-out both;
+}
+
+.bar-western {
+    background: linear-gradient(90deg, #dc2626, #ef4444);
+}
+
+.bar-japan {
+    background: linear-gradient(90deg, var(--green-dark), var(--green));
+    min-width: 30px;
+}
+
+.bar-value {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.bar-value-outside {
+    position: absolute;
+    right: -55px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--green);
+}
+
+/* ---------- Gene Cards ---------- */
+.gene-cards {
+    display: flex;
+    justify-content: center;
+}
+
+.gene-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 20px 32px;
+    box-shadow: var(--shadow);
+}
+
+.gene-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+.gene-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.gene-region {
+    font-weight: 700;
+}
+
+.gene-val {
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+/* ---------- VS Container ---------- */
+.vs-container {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+    width: 100%;
+}
+
+.vs-card {
+    flex: 1;
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: var(--shadow);
+}
+
+.vs-divider {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--text-dim);
+    display: flex;
+    align-items: center;
+}
+
+.vs-badge {
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.safe-badge {
+    background: var(--green-glow);
+    color: var(--green);
+}
+
+.danger-badge {
+    background: var(--coral-glow);
+    color: var(--coral);
+}
+
+.vs-title {
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+
+.vs-desc {
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+.vs-icon {
+    font-size: 2rem;
+    color: var(--green);
+}
+
+.vs-icon-danger {
+    color: var(--coral);
+}
+
+/* ---------- Numbered List ---------- */
+.numbered-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    text-align: left;
+}
+
+.numbered-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 18px;
+    background: var(--bg-card);
+    border-radius: var(--radius-sm);
+}
+
+.risk-item {
+    border-left: 3px solid var(--coral);
+}
+
+.number-circle {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--green);
+    color: #fff;
+    font-weight: 900;
+    font-size: 0.9rem;
+}
+
+.numbered-text {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.text-sub {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* ---------- Quote Card ---------- */
+.quote-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    border-left: 4px solid var(--green);
+    text-align: left;
+    box-shadow: var(--shadow);
+    width: 100%;
+}
+
+.quote-warm {
+    border-left-color: var(--amber);
+}
+
+.quote-mark {
+    font-size: 3rem;
+    color: var(--green);
+    line-height: 0.8;
+    margin-bottom: 8px;
+    font-weight: 900;
+}
+
+.quote-text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.quote-source {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin-top: 10px;
+}
+
+/* ---------- Study Stats ---------- */
+.study-stats {
+    display: flex;
+    gap: 32px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 2.2rem;
+    font-weight: 900;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* ---------- Triple Cards ---------- */
+.triple-card {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+.factor-card {
+    flex: 1;
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.factor-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.factor-name {
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+.factor-desc {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* ---------- Flow Chain ---------- */
+.flow-chain {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flow-node {
+    flex: 1;
+    min-width: 130px;
+    max-width: 180px;
+    background: var(--bg-card);
+    border: 1px solid var(--green-glow);
+    border-radius: var(--radius-sm);
+    padding: 14px 10px;
+    text-align: center;
+}
+
+.flow-year {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--green);
+    margin-bottom: 6px;
+}
+
+.flow-text {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--text-light);
+}
+
+.flow-name {
+    font-weight: 900;
+    color: var(--text);
+}
+
+.flow-arrow {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--text-dim);
+}
+
+/* ---------- Alert Card ---------- */
+.alert-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-sm);
+    padding: 18px 22px;
+    border-left: 4px solid var(--amber);
+    text-align: left;
+    width: 100%;
+}
+
+.dark-alert {
+    background: rgba(220, 38, 38, 0.04);
+    border-left-color: var(--coral);
+}
+
+.alert-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--amber);
+    color: #111;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.dark-alert .alert-icon {
+    background: var(--coral);
+    color: #fff;
+}
+
+.alert-title {
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+
+.alert-sub {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 4px;
+    line-height: 1.5;
+}
+
+/* ---------- Timeline ---------- */
+.timeline-visual {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.timeline-node {
+    background: var(--bg-card);
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    text-align: center;
+    min-width: 120px;
+}
+
+.timeline-node-highlight {
+    border: 2px solid var(--green);
+    background: rgba(16, 185, 129, 0.08);
+}
+
+.timeline-year {
+    font-size: 0.8rem;
+    font-weight: 900;
+    color: var(--green);
+}
+
+.timeline-text {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+.timeline-arrow {
+    font-size: 1.5rem;
+    color: var(--text-dim);
+}
+
+/* ---------- Comparison Note ---------- */
+.comparison-note {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-light);
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: var(--radius-sm);
+}
+
+/* ---------- Footnote ---------- */
+.footnote {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+}
+
+/* ---------- SVG Styles ---------- */
+/* Gluten Diagram */
+.gluten-svg {
+    width: 100%;
+    max-width: 580px;
+    height: auto;
+}
+
+.protein-box {
+    fill: none;
+    stroke: var(--green);
+    stroke-width: 2;
+}
+
+.protein-a {
+    fill: rgba(16, 185, 129, 0.1);
+}
+
+.protein-b {
+    fill: rgba(245, 158, 11, 0.1);
+    stroke: var(--amber);
+}
+
+.protein-result {
+    fill: rgba(16, 185, 129, 0.15);
+    stroke: var(--green);
+    stroke-width: 3;
+}
+
+.protein-label {
+    fill: var(--text-light);
+    font-size: 14px;
+    font-weight: 700;
+    text-anchor: middle;
+}
+
+.protein-label-lg {
+    fill: var(--green);
+    font-size: 20px;
+    font-weight: 900;
+    text-anchor: middle;
+}
+
+.protein-sub {
+    fill: var(--text-dim);
+    font-size: 11px;
+    text-anchor: middle;
+}
+
+.formula-op-svg {
+    fill: var(--text-dim);
+    font-size: 28px;
+    font-weight: 700;
+    text-anchor: middle;
+}
+
+.water-label {
+    fill: var(--teal);
+    font-size: 12px;
+    font-weight: 700;
+    text-anchor: middle;
+}
+
+.water-drop {
+    fill: rgba(20, 184, 166, 0.2);
+    stroke: var(--teal);
+    stroke-width: 2;
+}
+
+/* Villi Diagram */
+.villi-svg {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+}
+
+.villi-label {
+    fill: var(--text-light);
+    font-size: 12px;
+    font-weight: 700;
+    text-anchor: middle;
+}
+
+.villi-healthy {
+    stroke: var(--green);
+    stroke-width: 3;
+}
+
+.villi-damaged {
+    stroke: var(--coral);
+    stroke-width: 3;
+    stroke-dasharray: 4, 4;
+}
+
+/* FODMAP Diagram */
+.fodmap-svg {
+    width: 100%;
+    max-width: 580px;
+    height: auto;
+}
+
+.fodmap-box {
+    fill: none;
+    stroke-width: 2;
+}
+
+.fodmap-wheat {
+    fill: rgba(245, 158, 11, 0.08);
+    stroke: var(--amber);
+}
+
+.fodmap-gluten {
+    fill: rgba(100, 100, 100, 0.08);
+    stroke: var(--text-dim);
+}
+
+.fodmap-fructan {
+    fill: rgba(239, 68, 68, 0.08);
+    stroke: var(--coral);
+}
+
+.fodmap-line {
+    stroke: var(--text-dim);
+    stroke-width: 2;
+}
+
+.fodmap-text {
+    fill: var(--text);
+    font-size: 18px;
+    font-weight: 900;
+    text-anchor: middle;
+}
+
+.fodmap-sub {
+    fill: var(--text-light);
+    font-size: 12px;
+    text-anchor: middle;
+}
+
+.fodmap-text-sm {
+    fill: var(--text-light);
+    font-size: 11px;
+    text-anchor: middle;
+}
+
+.cross-mark {
+    fill: var(--text-dim);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.check-mark {
+    fill: var(--coral);
+    font-size: 13px;
+    font-weight: 900;
+}
+
+/* Arsenic Diagram */
+.arsenic-svg {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.rice-box {
+    fill: rgba(245, 158, 11, 0.1);
+    stroke: var(--amber);
+    stroke-width: 2;
+}
+
+.rice-label {
+    fill: var(--text);
+    font-size: 18px;
+    font-weight: 900;
+    text-anchor: middle;
+}
+
+.rice-sub {
+    fill: var(--text-dim);
+    font-size: 11px;
+    text-anchor: middle;
+}
+
+.arsenic-arrow {
+    stroke: var(--coral);
+    stroke-width: 2;
+    stroke-dasharray: 6, 4;
+}
+
+.arsenic-label {
+    fill: var(--coral);
+    font-size: 14px;
+    font-weight: 900;
+    text-anchor: middle;
+}
+
+.arsenic-badge {
+    fill: var(--text-dim);
+    font-size: 10px;
+    text-anchor: middle;
+}
+
+.arsenic-result {
+    fill: rgba(239, 68, 68, 0.1);
+    stroke: var(--coral);
+    stroke-width: 2;
+}
+
+.arsenic-result-text {
+    fill: var(--text-light);
+    font-size: 12px;
+    text-anchor: middle;
+}
+
+.arsenic-result-val {
+    fill: var(--coral);
+    font-size: 16px;
+    font-weight: 900;
+    text-anchor: middle;
+}
+
+/* ---------- Dark Mode List ---------- */
+.dark-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.dark-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 18px;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: var(--radius-sm);
+}
+
+.dark-icon {
+    font-size: 1.5rem;
+    font-weight: 900;
+    width: 44px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.dark-content {
+    text-align: left;
+}
+
+.dark-title {
+    font-weight: 900;
+    color: var(--text);
+}
+
+.dark-desc {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseNum {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+    }
+}
+
+@keyframes barGrow {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--w);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-8deg) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
+}
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px var(--green-glow);
+    }
+
+    50% {
+        box-shadow: 0 0 40px var(--green-glow);
+    }
+}
+
+@keyframes borderDash {
+    to {
+        stroke-dashoffset: -20;
+    }
+}
+
+/* ---------- Active Scene Animations ---------- */
+.scene.active .gluten-svg {
+    animation: fadeSlideUp 0.8s ease-out 0.3s both;
+}
+
+.scene.active .villi-svg {
+    animation: fadeSlideUp 0.8s ease-out 0.3s both;
+}
+
+.scene.active .fodmap-svg {
+    animation: fadeSlideUp 0.8s ease-out 0.3s both;
+}
+
+.scene.active .arsenic-svg {
+    animation: fadeSlideUp 0.8s ease-out 0.3s both;
+}
+
+.scene.active .villi-damaged {
+    animation: borderDash 2s linear infinite;
+}
+
+.scene.active .quote-card {
+    animation: slideInLeft 0.6s ease-out 0.2s both;
+}
+
+.scene.active .timeline-visual {
+    animation: fadeSlideUp 0.7s ease-out 0.4s both;
+}
+
+.scene.active .flow-chain {
+    animation: fadeSlideUp 0.7s ease-out 0.3s both;
+}
+
+.scene.active .bar-comparison {
+    animation: fadeSlideUp 0.6s ease-out 0.3s both;
+}
+
+.scene.active .gene-cards {
+    animation: scaleIn 0.6s ease-out 0.5s both;
+}
+
+.scene.active .factor-card {
+    animation: scaleIn 0.5s ease-out both;
+}
+
+.scene.active .factor-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.scene.active .factor-card:nth-child(2) {
+    animation-delay: 0.35s;
+}
+
+.scene.active .factor-card:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .emphasis-text-large {
+    animation: scaleIn 0.7s ease-out 0.3s both;
+}
+
+.scene.active .alert-card {
+    animation: slideInLeft 0.5s ease-out 0.4s both;
+}
+
+.scene.active .vs-card {
+    animation: scaleIn 0.5s ease-out both;
+}
+
+.scene.active .vs-left {
+    animation-delay: 0.2s;
+}
+
+.scene.active .vs-right {
+    animation-delay: 0.4s;
+}
+
+.scene.active .celiac-visual {
+    animation: fadeSlideUp 0.7s ease-out 0.5s both;
+}
+
+/* ---------- Hover effects (for interactive preview) ---------- */
+.factor-card:hover {
+    transform: translateY(-4px);
+}
+
+.numbered-item:hover {
+    background: var(--bg-card-hover);
+}
+
+.alert-card:hover {
+    background: var(--bg-card-hover);
+}

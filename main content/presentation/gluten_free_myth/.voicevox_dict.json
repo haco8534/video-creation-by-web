@@ -1,0 +1,237 @@
+[
+    {
+        "surface": "BMJ",
+        "pronunciation": "ビーエムジェー",
+        "accent_type": 5
+    },
+    {
+        "surface": "FODMAP",
+        "pronunciation": "フォドマップ",
+        "accent_type": 1
+    },
+    {
+        "surface": "FODMAPs",
+        "pronunciation": "フォドマップス",
+        "accent_type": 1
+    },
+    {
+        "surface": "HLA",
+        "pronunciation": "エイチエルエー",
+        "accent_type": 5
+    },
+    {
+        "surface": "DQ2",
+        "pronunciation": "ディーキューツー",
+        "accent_type": 5
+    },
+    {
+        "surface": "DQ8",
+        "pronunciation": "ディーキューエイト",
+        "accent_type": 5
+    },
+    {
+        "surface": "FDA",
+        "pronunciation": "エフディーエー",
+        "accent_type": 5
+    },
+    {
+        "surface": "NCGS",
+        "pronunciation": "エヌシージーエス",
+        "accent_type": 5
+    },
+    {
+        "surface": "ppm",
+        "pronunciation": "ピーピーエム",
+        "accent_type": 5
+    },
+    {
+        "surface": "Lebwohl",
+        "pronunciation": "レブウォール",
+        "accent_type": 1
+    },
+    {
+        "surface": "Skodje",
+        "pronunciation": "スコッジェ",
+        "accent_type": 1
+    },
+    {
+        "surface": "Wheat",
+        "pronunciation": "ウィート",
+        "accent_type": 1
+    },
+    {
+        "surface": "Belly",
+        "pronunciation": "ベリー",
+        "accent_type": 1
+    },
+    {
+        "surface": "Davis",
+        "pronunciation": "デイビス",
+        "accent_type": 1
+    },
+    {
+        "surface": "STEP",
+        "pronunciation": "ステップ",
+        "accent_type": 1
+    },
+    {
+        "surface": "SUMMARY",
+        "pronunciation": "サマリー",
+        "accent_type": 1
+    },
+    {
+        "surface": "TOPIC",
+        "pronunciation": "トピック",
+        "accent_type": 1
+    },
+    {
+        "surface": "NUTRITION",
+        "pronunciation": "ニュートリション",
+        "accent_type": 1
+    },
+    {
+        "surface": "SCIENCE",
+        "pronunciation": "サイエンス",
+        "accent_type": 1
+    },
+    {
+        "surface": "OPで",
+        "pronunciation": "オープンで",
+        "accent_type": 1
+    },
+    {
+        "surface": "OP",
+        "pronunciation": "オープン",
+        "accent_type": 1
+    },
+    {
+        "surface": "NIH",
+        "pronunciation": "エヌアイエイチ",
+        "accent_type": 5
+    },
+    {
+        "surface": "Gastroenterology",
+        "pronunciation": "ガストロエンテロロジー",
+        "accent_type": 1
+    },
+    {
+        "surface": "Fortune",
+        "pronunciation": "フォーチュン",
+        "accent_type": 1
+    },
+    {
+        "surface": "Business",
+        "pronunciation": "ビジネス",
+        "accent_type": 1
+    },
+    {
+        "surface": "Insights",
+        "pronunciation": "インサイツ",
+        "accent_type": 1
+    },
+    {
+        "surface": "Straits",
+        "pronunciation": "ストレイツ",
+        "accent_type": 1
+    },
+    {
+        "surface": "Harvard",
+        "pronunciation": "ハーバード",
+        "accent_type": 1
+    },
+    {
+        "surface": "Chan",
+        "pronunciation": "チャン",
+        "accent_type": 0
+    },
+    {
+        "surface": "School",
+        "pronunciation": "スクール",
+        "accent_type": 1
+    },
+    {
+        "surface": "Public",
+        "pronunciation": "パブリック",
+        "accent_type": 1
+    },
+    {
+        "surface": "Health",
+        "pronunciation": "ヘルス",
+        "accent_type": 1
+    },
+    {
+        "surface": "Celiac",
+        "pronunciation": "セリアック",
+        "accent_type": 1
+    },
+    {
+        "surface": "Disease",
+        "pronunciation": "ディジーズ",
+        "accent_type": 1
+    },
+    {
+        "surface": "Foundation",
+        "pronunciation": "ファウンデーション",
+        "accent_type": 1
+    },
+    {
+        "surface": "Epidemiology",
+        "pronunciation": "エピデミオロジー",
+        "accent_type": 1
+    },
+    {
+        "surface": "Nurses",
+        "pronunciation": "ナーシズ",
+        "accent_type": 1
+    },
+    {
+        "surface": "Professionals",
+        "pronunciation": "プロフェッショナルズ",
+        "accent_type": 1
+    },
+    {
+        "surface": "Follow",
+        "pronunciation": "フォロー",
+        "accent_type": 1
+    },
+    {
+        "surface": "up",
+        "pronunciation": "アップ",
+        "accent_type": 1
+    },
+    {
+        "surface": "MSD",
+        "pronunciation": "エムエスディー",
+        "accent_type": 5
+    },
+    {
+        "surface": "JST",
+        "pronunciation": "ジェーエスティー",
+        "accent_type": 5
+    },
+    {
+        "surface": "NIPPN",
+        "pronunciation": "ニップン",
+        "accent_type": 1
+    },
+    {
+        "surface": "As",
+        "pronunciation": "エーエス",
+        "accent_type": 3
+    },
+    {
+        "surface": "Hg",
+        "pronunciation": "エイチジー",
+        "accent_type": 3
+    },
+    {
+        "surface": "GF",
+        "pronunciation": "ジーエフ",
+        "accent_type": 3
+    },
+    {
+        "surface": "DQ",
+        "pronunciation": "ディーキュー",
+        "accent_type": 3
+    }
+]

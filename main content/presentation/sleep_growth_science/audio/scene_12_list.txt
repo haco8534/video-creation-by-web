@@ -1,0 +1,3 @@
+file 'D:/myfolder/動画生成/main content/presentation/sleep_growth_science/audio/scene_12_00.wav'
+file 'D:/myfolder/動画生成/main content/presentation/sleep_growth_science/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/sleep_growth_science/audio/scene_12_01.wav'

@@ -1,0 +1,1771 @@
+/* ============================================================
+   Design Tokens
+   ============================================================ */
+:root {
+    --bg: #f8f9fa;
+    --text: #1a1a2e;
+    --text-light: #64748b;
+    --primary: #3b82f6;
+    --primary-light: #dbeafe;
+    --teal: #14b8a6;
+    --teal-light: #ccfbf1;
+    --coral: #ef4444;
+    --coral-light: #fee2e2;
+    --amber: #f59e0b;
+    --amber-light: #fef3c7;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.1);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================================
+   Reset & Base
+   ============================================================ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ============================================================
+   Scene Layout
+   ============================================================ */
+.scene {
+    display: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background: var(--bg);
+}
+
+.scene.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: sceneFadeIn 0.5s ease both;
+}
+
+.scene-content {
+    width: 100%;
+    max-width: 936px;
+    padding: 48px;
+    position: relative;
+    z-index: 1;
+}
+
+.center-layout {
+    text-align: center;
+}
+
+/* Canvas Background */
+.bg-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ============================================================
+   Dark Scene
+   ============================================================ */
+.dark-scene {
+    background: #0f172a;
+}
+
+.dark-scene .scene-content {
+    color: #e2e8f0;
+}
+
+.light-text {
+    color: #e2e8f0 !important;
+}
+
+/* ============================================================
+   Typography
+   ============================================================ */
+.section-title {
+    font-size: 2.4rem;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 28px;
+    letter-spacing: -0.02em;
+}
+
+.emphasis-label {
+    font-size: 0.96rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--primary);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.emphasis-main {
+    font-size: 2.64rem;
+    font-weight: 900;
+    line-height: 1.4;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+.emphasis-main.large {
+    font-size: 3.36rem;
+}
+
+.emphasis-sub {
+    font-size: 1.08rem;
+    color: var(--text-light);
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+/* Accents */
+.accent-primary {
+    color: var(--primary);
+}
+
+.accent-teal {
+    color: var(--teal);
+}
+
+.accent-coral {
+    color: var(--coral);
+}
+
+.accent-amber {
+    color: var(--amber);
+}
+
+/* ============================================================
+   Title Card
+   ============================================================ */
+.title-card {
+    text-align: center;
+}
+
+.title-label {
+    font-size: 0.96rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.title-main {
+    font-size: 3.12rem;
+    font-weight: 900;
+    line-height: 1.35;
+    margin-bottom: 20px;
+    letter-spacing: -0.03em;
+}
+
+.title-accent-line {
+    width: 80px;
+    height: 4px;
+    margin: 10px auto 19px;
+    background: linear-gradient(90deg, var(--primary), var(--teal));
+    border-radius: 2px;
+}
+
+.title-sub {
+    font-size: 1.02rem;
+    color: var(--text-light);
+    letter-spacing: 0.05em;
+}
+
+/* ============================================================
+   Chapter Title
+   ============================================================ */
+.chapter-title {
+    text-align: center;
+}
+
+.chapter-number {
+    font-size: 0.96rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.chapter-name {
+    font-size: 2.88rem;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    letter-spacing: -0.03em;
+}
+
+.chapter-line {
+    width: 60px;
+    height: 3px;
+    margin: 0 auto 14px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.chapter-sub {
+    font-size: 1.02rem;
+    color: var(--text-light);
+    letter-spacing: 0.05em;
+}
+
+/* ============================================================
+   Impact Number
+   ============================================================ */
+.impact-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.impact-number-group {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.impact-number {
+    font-size: 7.2rem;
+    font-weight: 900;
+    color: var(--primary);
+    display: inline-block;
+    line-height: 1;
+}
+
+.impact-number-unit {
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: var(--text);
+    vertical-align: baseline;
+}
+
+.impact-desc {
+    font-size: 1.32rem;
+    font-weight: 700;
+    color: var(--text);
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.impact-note {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    text-align: center;
+}
+
+/* ============================================================
+   Quote Card
+   ============================================================ */
+.quote-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 38px 43px;
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--primary);
+    position: relative;
+    max-width: 672px;
+    margin: 0 auto;
+}
+
+.quote-card.quote-warning {
+    border-left-color: var(--coral);
+}
+
+.quote-card.quote-warm {
+    border-left-color: var(--amber);
+}
+
+.quote-mark {
+    font-size: 3.6rem;
+    font-weight: 900;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 4px;
+    opacity: 0.3;
+}
+
+.quote-warning .quote-mark {
+    color: var(--coral);
+}
+
+.quote-text {
+    font-size: 1.44rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.quote-source {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* ============================================================
+   Source Badge
+   ============================================================ */
+.source-badge {
+    display: inline-block;
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: var(--text-light);
+    background: #f1f5f9;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-top: 12px;
+    letter-spacing: 0.02em;
+}
+
+/* ============================================================
+   VS Layout
+   ============================================================ */
+.vs-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 29px;
+    margin-top: 16px;
+}
+
+.vs-side {
+    background: var(--card-bg);
+    padding: 29px 34px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    flex: 1;
+    max-width: 312px;
+    text-align: center;
+}
+
+.vs-badge {
+    display: inline-block;
+    font-size: 0.84rem;
+    font-weight: 700;
+    padding: 3px 12px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+
+.safe-badge {
+    background: var(--teal-light);
+    color: var(--teal);
+}
+
+.danger-badge {
+    background: var(--coral-light);
+    color: var(--coral);
+}
+
+.vs-title {
+    font-size: 1.32rem;
+    font-weight: 900;
+    margin-bottom: 6px;
+}
+
+.vs-result {
+    font-size: 1.08rem;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+.vs-result.safe {
+    color: var(--teal);
+}
+
+.vs-result.danger {
+    color: var(--coral);
+}
+
+.vs-center-badge {
+    display: flex;
+    align-items: center;
+}
+
+.vs-badge-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 900;
+    font-size: 0.96rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comparison-note {
+    font-size: 1.02rem;
+    color: var(--text-light);
+    text-align: center;
+    margin-top: 16px;
+    font-style: italic;
+}
+
+/* ============================================================
+   Three-Points Grid / Myth Cards
+   ============================================================ */
+.three-points-grid {
+    display: flex;
+    gap: 19px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.myth-card {
+    background: var(--card-bg);
+    padding: 29px 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    flex: 1;
+    max-width: 240px;
+    text-align: center;
+    border: 2px solid var(--coral-light);
+}
+
+.myth-x {
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: var(--coral);
+    margin-bottom: 8px;
+}
+
+.myth-text {
+    font-size: 1.14rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* ============================================================
+   Report Card SVG
+   ============================================================ */
+.report-card-visual {
+    max-width: 480px;
+    margin: 19px auto;
+}
+
+.report-svg {
+    width: 100%;
+}
+
+/* ============================================================
+   Grade Compare (DE vs CH)
+   ============================================================ */
+.grade-compare {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 16px;
+}
+
+.grade-card {
+    background: var(--card-bg);
+    padding: 24px 34px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    min-width: 216px;
+}
+
+.grade-card.germany {
+    border: 2px solid #e2e8f0;
+}
+
+.grade-card.switzerland {
+    border: 2px solid var(--primary-light);
+}
+
+.grade-flag {
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-bottom: 4px;
+    letter-spacing: 0.1em;
+}
+
+.grade-country {
+    font-size: 1.32rem;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.grade-scale {
+    font-size: 1.02rem;
+    color: var(--text-light);
+}
+
+.grade-best {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 1.44rem;
+    color: var(--primary);
+    margin: 0 2px;
+}
+
+.grade-worst {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 1.44rem;
+    color: var(--coral);
+    margin: 0 2px;
+}
+
+.grade-vs {
+    font-size: 1.68rem;
+    font-weight: 900;
+    color: var(--text-light);
+}
+
+/* ============================================================
+   Misread Visual
+   ============================================================ */
+.misread-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 19px;
+    margin-top: 16px;
+}
+
+.misread-card {
+    background: var(--card-bg);
+    padding: 19px 26px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.misread-card.wrong {
+    border: 2px solid var(--coral-light);
+}
+
+.misread-card.correct {
+    border: 2px solid var(--primary-light);
+}
+
+.misread-label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 6px;
+}
+
+.misread-grade {
+    font-size: 1.68rem;
+    font-weight: 900;
+}
+
+.misread-arrow {
+    font-size: 1.8rem;
+    color: var(--text-light);
+}
+
+/* ============================================================
+   Grade Table
+   ============================================================ */
+.grade-table {
+    margin-top: 12px;
+}
+
+.grade-row {
+    display: flex;
+    align-items: center;
+    padding: 7px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.grade-row.grade-header {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 8px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.grade-cell {
+    flex: 1;
+}
+
+.subject-cell {
+    flex: 1.5;
+    font-size: 1.08rem;
+    font-weight: 600;
+}
+
+.score-cell {
+    flex: 0.5;
+    text-align: center;
+    font-size: 1.44rem;
+    font-weight: 900;
+}
+
+.score-max {
+    color: var(--primary);
+}
+
+.score-high {
+    color: var(--teal);
+}
+
+.score-low {
+    color: var(--amber);
+}
+
+.bar-cell {
+    flex: 2;
+    padding-left: 12px;
+}
+
+.score-bar {
+    height: 14px;
+    background: #f1f5f9;
+    border-radius: 7px;
+    overflow: hidden;
+    position: relative;
+}
+
+.score-bar-fill {
+    height: 100%;
+    border-radius: 7px;
+    width: 0;
+    transition: width 1.2s ease;
+}
+
+.scene.active .score-bar-fill {
+    width: var(--w);
+}
+
+.bar-max {
+    background: linear-gradient(90deg, var(--primary), #6366f1);
+}
+
+.bar-high {
+    background: linear-gradient(90deg, var(--teal), #2dd4bf);
+}
+
+.bar-low {
+    background: linear-gradient(90deg, var(--amber), #fbbf24);
+}
+
+/* ============================================================
+   Strength/Weakness
+   ============================================================ */
+.strength-weakness {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.sw-card {
+    background: var(--card-bg);
+    padding: 24px 29px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    flex: 1;
+    max-width: 288px;
+}
+
+.sw-card.strength {
+    border-top: 3px solid var(--teal);
+}
+
+.sw-card.weakness {
+    border-top: 3px solid var(--amber);
+}
+
+.sw-badge {
+    margin-bottom: 12px;
+}
+
+.sw-items {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.sw-item {
+    font-size: 1.08rem;
+    font-weight: 600;
+}
+
+/* ============================================================
+   ETH Flow
+   ============================================================ */
+.eth-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.eth-step {
+    background: var(--card-bg);
+    padding: 19px 22px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    min-width: 192px;
+}
+
+.eth-year {
+    font-size: 1.68rem;
+    font-weight: 900;
+    color: var(--primary);
+    margin-bottom: 6px;
+}
+
+.eth-year.eth-fail {
+    color: var(--coral);
+}
+
+.eth-year.eth-pass {
+    color: var(--teal);
+}
+
+.eth-title {
+    font-size: 1.14rem;
+    font-weight: 700;
+}
+
+.eth-desc {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+.eth-arrow {
+    color: var(--text-light);
+}
+
+.eth-arrow svg {
+    width: 30px;
+    height: 20px;
+}
+
+/* ============================================================
+   Military Visual (Dark Scene)
+   ============================================================ */
+.military-visual {
+    display: flex;
+    gap: 19px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.mil-card {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 22px 24px;
+    border-radius: var(--radius);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-width: 144px;
+}
+
+.mil-icon {
+    color: #94a3b8;
+    margin-bottom: 8px;
+}
+
+.mil-icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+.mil-text {
+    font-size: 1.08rem;
+    font-weight: 700;
+}
+
+/* ============================================================
+   Environment Compare
+   ============================================================ */
+.env-compare {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 19px;
+    margin-top: 16px;
+}
+
+.env-card {
+    background: var(--card-bg);
+    padding: 24px 26px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    flex: 1;
+    max-width: 288px;
+}
+
+.env-card.env-bad {
+    border: 2px solid var(--coral-light);
+}
+
+.env-card.env-good {
+    border: 2px solid var(--primary-light);
+}
+
+.env-label {
+    font-size: 0.96rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-light);
+}
+
+.env-traits {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 10px;
+}
+
+.env-trait {
+    font-size: 0.96rem;
+    color: var(--text-light);
+}
+
+.env-result {
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-top: 4px;
+}
+
+.env-arrow {
+    font-size: 2.16rem;
+    color: var(--text-light);
+}
+
+/* ============================================================
+   Ripley's Visual
+   ============================================================ */
+.ripley-visual {
+    margin: 19px auto;
+    max-width: 576px;
+}
+
+.ripley-card {
+    background: var(--card-bg);
+    padding: 34px 38px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+    border: 2px solid var(--coral-light);
+}
+
+.ripley-header {
+    font-size: 0.96rem;
+    font-weight: 700;
+    color: var(--text-light);
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+}
+
+.ripley-quote {
+    font-size: 1.56rem;
+    font-weight: 900;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.ripley-note {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* ============================================================
+   Spread Bars
+   ============================================================ */
+.spread-bars {
+    max-width: 528px;
+    margin: 19px auto;
+}
+
+.spread-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
+}
+
+.spread-label {
+    font-size: 0.96rem;
+    font-weight: 600;
+    min-width: 216px;
+    text-align: right;
+}
+
+.spread-track {
+    flex: 1;
+    height: 20px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.spread-fill {
+    height: 100%;
+    border-radius: 10px;
+    width: 0;
+    transition: width 1.5s ease;
+}
+
+.scene.active .spread-fill {
+    width: var(--w);
+}
+
+.spread-myth {
+    background: linear-gradient(90deg, var(--coral), #f97316);
+}
+
+.spread-truth {
+    background: linear-gradient(90deg, var(--teal), #2dd4bf);
+}
+
+/* ============================================================
+   Fragment List
+   ============================================================ */
+.fragment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.fragment-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--card-bg);
+    padding: 17px 22px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.fragment-fact,
+.fragment-lost {
+    flex: 1;
+}
+
+.fragment-badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    background: #e2e8f0;
+    color: var(--text-light);
+}
+
+.fragment-badge.lost-badge {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.fragment-text {
+    font-size: 1.08rem;
+    font-weight: 600;
+}
+
+.fragment-arrow {
+    font-size: 1.44rem;
+    color: var(--text-light);
+    flex-shrink: 0;
+}
+
+/* ============================================================
+   Underdog Visual
+   ============================================================ */
+.underdog-visual {
+    margin: 19px auto;
+    max-width: 528px;
+}
+
+.underdog-desc {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.underdog-example {
+    text-align: center;
+}
+
+.underdog-svg {
+    width: 100%;
+    max-width: 432px;
+}
+
+/* ============================================================
+   Hope Flow
+   ============================================================ */
+.hope-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 19px;
+    margin-top: 12px;
+}
+
+.hope-step {
+    background: var(--card-bg);
+    padding: 26px 31px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.hope-step.hope-result {
+    border: 2px solid var(--primary-light);
+}
+
+.hope-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.hope-arrow {
+    font-size: 1.8rem;
+    color: var(--text-light);
+}
+
+/* ============================================================
+   Survivor Visual
+   ============================================================ */
+.survivor-visual {
+    margin: 19px auto;
+    max-width: 576px;
+    text-align: center;
+}
+
+.survivor-svg {
+    width: 100%;
+}
+
+/* ============================================================
+   Genius Compare
+   ============================================================ */
+.genius-compare {
+    display: flex;
+    gap: 17px;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.genius-card {
+    background: var(--card-bg);
+    padding: 24px 26px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    flex: 1;
+    max-width: 240px;
+    text-align: center;
+    border-top: 3px solid var(--coral);
+}
+
+.genius-card.genius-einstein {
+    border-top-color: var(--primary);
+}
+
+.genius-name {
+    font-size: 1.32rem;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.genius-badge {
+    margin-bottom: 8px;
+}
+
+.genius-detail {
+    font-size: 0.96rem;
+    color: var(--text-light);
+}
+
+/* ============================================================
+   Churchill Facts
+   ============================================================ */
+.churchill-facts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+    max-width: 528px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.churchill-fact {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--card-bg);
+    padding: 17px 22px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.churchill-icon {
+    font-size: 1.68rem;
+    font-weight: 900;
+    flex-shrink: 0;
+    width: 30px;
+    text-align: center;
+}
+
+.churchill-text {
+    font-size: 1.08rem;
+    font-weight: 600;
+}
+
+/* ============================================================
+   Rebel Visual
+   ============================================================ */
+.rebel-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 19px;
+    margin-top: 16px;
+}
+
+.rebel-card {
+    background: var(--card-bg);
+    padding: 22px 34px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.rebel-card.crossed {
+    border: 2px solid var(--coral-light);
+    position: relative;
+}
+
+.rebel-card.crossed::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    height: 3px;
+    background: var(--coral);
+    transform: rotate(-5deg);
+}
+
+.rebel-card.correct-rebel {
+    border: 2px solid var(--primary-light);
+}
+
+.rebel-text {
+    font-size: 1.56rem;
+    font-weight: 900;
+}
+
+.rebel-arrow {
+    font-size: 1.8rem;
+    color: var(--text-light);
+}
+
+/* ============================================================
+   Summary List
+   ============================================================ */
+.summary-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.summary-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 19px;
+    background: var(--card-bg);
+    padding: 22px 26px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.summary-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.summary-content {
+    flex: 1;
+}
+
+.summary-title {
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 4px;
+}
+
+.summary-text {
+    font-size: 0.96rem;
+    color: var(--text-light);
+}
+
+/* ============================================================
+   Calc Visual (14歳 vs 高校)
+   ============================================================ */
+.calc-visual {
+    margin: 19px auto;
+    max-width: 576px;
+}
+
+.calc-compare {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 19px;
+}
+
+.calc-card {
+    background: var(--card-bg);
+    padding: 22px 26px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    flex: 1;
+}
+
+.calc-age {
+    font-size: 2.4rem;
+    font-weight: 900;
+    margin-bottom: 4px;
+}
+
+.calc-who {
+    font-size: 1.02rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.calc-what {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.calc-vs {
+    font-size: 1.44rem;
+    font-weight: 900;
+    color: var(--text-light);
+}
+
+/* ============================================================
+   Weakness Detail
+   ============================================================ */
+.weakness-detail {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.weak-item {
+    background: var(--card-bg);
+    padding: 19px 26px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.weak-subject {
+    font-size: 1.08rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.weak-score {
+    font-size: 1.92rem;
+    font-weight: 900;
+}
+
+.weak-note {
+    font-size: 0.84rem;
+    color: var(--text-light);
+    margin-top: 2px;
+}
+
+/* ============================================================
+   Timeline Badge
+   ============================================================ */
+.timeline-badge {
+    margin: 19px auto;
+    max-width: 528px;
+    text-align: center;
+}
+
+.timeline-svg {
+    width: 100%;
+}
+
+.tl-dot {
+    opacity: 0.6;
+}
+
+.tl-dot.tl-active {
+    opacity: 1;
+}
+
+/* ============================================================
+   Stagger Animation
+   ============================================================ */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity var(--transition), transform var(--transition);
+}
+
+.scene.active .stagger-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scene.active .stagger-item:nth-child(1) {
+    transition-delay: 0.0s;
+}
+
+.scene.active .stagger-item:nth-child(2) {
+    transition-delay: 0.12s;
+}
+
+.scene.active .stagger-item:nth-child(3) {
+    transition-delay: 0.24s;
+}
+
+.scene.active .stagger-item:nth-child(4) {
+    transition-delay: 0.36s;
+}
+
+.scene.active .stagger-item:nth-child(5) {
+    transition-delay: 0.48s;
+}
+
+.scene.active .stagger-item:nth-child(6) {
+    transition-delay: 0.60s;
+}
+
+.scene.active .stagger-item:nth-child(7) {
+    transition-delay: 0.72s;
+}
+
+.scene.active .stagger-item:nth-child(8) {
+    transition-delay: 0.84s;
+}
+
+.scene.active .stagger-item:nth-child(9) {
+    transition-delay: 0.96s;
+}
+
+.scene.active .stagger-item:nth-child(10) {
+    transition-delay: 1.08s;
+}
+
+/* ============================================================
+   @keyframes — Core (8 required)
+   ============================================================ */
+@keyframes sceneFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes cardSlideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes numberPop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes barFill {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--w);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 20px 8px rgba(59, 130, 246, 0.15);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+    70% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes titleReveal {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* ============================================================
+   @keyframes — Theme-Specific
+   ============================================================ */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes warningShake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-3px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(3px);
+    }
+}
+
+@keyframes pulseRing {
+    0% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 16px rgba(59, 130, 246, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+    }
+}
+
+@keyframes dotPulse {
+
+    0%,
+    100% {
+        opacity: 0.4;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+@keyframes crossOut {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+/* ============================================================
+   Animation Applications
+   ============================================================ */
+/* Cards */
+.scene.active .myth-card,
+.scene.active .grade-card,
+.scene.active .eth-step,
+.scene.active .genius-card,
+.scene.active .sw-card,
+.scene.active .calc-card,
+.scene.active .weak-item,
+.scene.active .env-card,
+.scene.active .mil-card,
+.scene.active .summary-item,
+.scene.active .fragment-item,
+.scene.active .churchill-fact {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .myth-card:nth-child(1),
+.scene.active .genius-card:nth-child(1),
+.scene.active .fragment-item:nth-child(1),
+.scene.active .summary-item:nth-child(1),
+.scene.active .churchill-fact:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .myth-card:nth-child(2),
+.scene.active .genius-card:nth-child(2),
+.scene.active .fragment-item:nth-child(2),
+.scene.active .summary-item:nth-child(2),
+.scene.active .churchill-fact:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .myth-card:nth-child(3),
+.scene.active .genius-card:nth-child(3),
+.scene.active .fragment-item:nth-child(3),
+.scene.active .summary-item:nth-child(3),
+.scene.active .churchill-fact:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+/* Impact Numbers */
+.scene.active .impact-number {
+    animation: numberPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+/* VS Badge */
+.scene.active .vs-badge-circle,
+.scene.active .grade-vs {
+    animation: bounceIn 0.6s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+/* Quote pulse */
+.scene.active .quote-card {
+    animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+.scene.active .quote-warning {
+    animation: pulseGlow 2.5s ease-in-out infinite, warningShake 0.5s ease-out 0.8s;
+}
+
+/* Title accent */
+.scene.active .title-accent-line,
+.scene.active .chapter-line {
+    animation: titleReveal 0.8s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+/* Ripley card */
+.scene.active .ripley-card {
+    animation: cardSlideUp 0.6s ease-out forwards, pulseGlow 3s ease-in-out 1s infinite;
+    opacity: 0;
+}
+
+/* Rebel crossed-out effect */
+.scene.active .rebel-card.crossed::after {
+    animation: crossOut 0.5s ease-out 0.8s forwards;
+    width: 0;
+}
+
+/* Flow arrows */
+.scene.active .eth-arrow,
+.scene.active .fragment-arrow,
+.scene.active .misread-arrow,
+.scene.active .env-arrow,
+.scene.active .rebel-arrow,
+.scene.active .hope-arrow,
+.scene.active .calc-vs {
+    animation: bounceIn 0.6s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+/* Timeline dots */
+.scene.active .tl-dot {
+    animation: dotPulse 2s ease-in-out infinite;
+}
+
+.scene.active .tl-dot.tl-active {
+    animation: pulseRing 2s ease-in-out infinite;
+}
+
+/* Score bars delayed */
+.scene.active .grade-row:nth-child(2) .score-bar-fill {
+    transition-delay: 0.2s;
+}
+
+.scene.active .grade-row:nth-child(3) .score-bar-fill {
+    transition-delay: 0.3s;
+}
+
+.scene.active .grade-row:nth-child(4) .score-bar-fill {
+    transition-delay: 0.4s;
+}
+
+.scene.active .grade-row:nth-child(5) .score-bar-fill {
+    transition-delay: 0.5s;
+}
+
+.scene.active .grade-row:nth-child(6) .score-bar-fill {
+    transition-delay: 0.6s;
+}
+
+.scene.active .grade-row:nth-child(7) .score-bar-fill {
+    transition-delay: 0.7s;
+}
+
+.scene.active .grade-row:nth-child(8) .score-bar-fill {
+    transition-delay: 0.8s;
+}
+
+.scene.active .grade-row:nth-child(9) .score-bar-fill {
+    transition-delay: 0.9s;
+}
+
+/* Survivor success bubble */
+.scene.active .survivor-success {
+    animation: pulseRing 2.5s ease-in-out infinite;
+}
+
+/* Underdog small circle */
+.scene.active .ud-small {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Spread bars animation */
+.scene.active .spread-fill {
+    animation-delay: 0.5s;
+}
+
+/* Military dark scene cards float */
+.scene.active .mil-card {
+    animation: cardSlideUp 0.5s ease-out forwards, float 4s ease-in-out 1s infinite;
+    opacity: 0;
+}
+
+.scene.active .mil-card:nth-child(1) {
+    animation-delay: 0.3s, 1.3s;
+}
+
+.scene.active .mil-card:nth-child(2) {
+    animation-delay: 0.5s, 1.5s;
+}
+
+.scene.active .mil-card:nth-child(3) {
+    animation-delay: 0.7s, 1.7s;
+}
+
+/* Footnote */
+.footnote {
+    font-size: 0.78rem;
+    color: var(--text-light);
+    margin-top: 8px;
+    text-align: center;
+    font-style: italic;
+}

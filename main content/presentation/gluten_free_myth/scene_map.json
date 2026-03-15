@@ -1,0 +1,1405 @@
+{
+  "voicevox_url": "http://localhost:50021",
+  "scenes": [
+    {
+      "scene_id": 0,
+      "label": "グルテンフリーは本当に体にいいのか？",
+      "lines": [
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "今日のテーマは「グルテンフリー」ですわね。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "最近スーパーでもよく見かけますし、健康に良さそうなイメージがありますわ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "うん。確かにグルテンフリーって聞くと、なんとなく体に良さそうなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "有名なアスリートやセレブも実践してるって聞くし。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "ジョコビッチ選手とか、ハリウッド女優とか、よく名前が出ますわよね。"
+        }
+      ],
+      "id": 0,
+      "title": "グルテンフリーは本当に体にいいのか？"
+    },
+    {
+      "scene_id": 1,
+      "label": "世界市場100億ドル超",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "そう。それでね、グルテンフリー市場って今どれくらいの規模か知ってるのだ？"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "うーん、結構大きいんですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "世界で100億ドル以上。日本円にすると1兆5000億円くらいなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "しかも毎年5〜10%ずつ成長し続けているのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "えっ、そんなに大きな市場なんですの！"
+        }
+      ],
+      "id": 1,
+      "title": "世界市場100億ドル超"
+    },
+    {
+      "scene_id": 2,
+      "label": "科学的根拠はほぼゼロ",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "でもね、ここで衝撃的な事実を一つ言わせてほしいのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "健康な人がグルテンフリーにして得られるメリット。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "その科学的な根拠は、ほぼゼロなのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "え、ゼロですの！？"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "でもあんなにたくさん「グルテンフリーで体調改善」って話がありますわよ？"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "うん。今日はその「なんとなく体に良さそう」の正体を科学的に解明するのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "そもそもグルテンって何なのか、から順番に見ていくのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "最後まで見たら、食品の選び方がきっと変わると思うのだ。"
+        }
+      ],
+      "id": 2,
+      "title": "科学的根拠はほぼゼロ"
+    },
+    {
+      "scene_id": 3,
+      "label": "グルテンとは何か",
+      "lines": [
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "まず基本からお願いしますわ。そもそも「グルテン」って何なんですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "グルテンは小麦・大麦・ライ麦に含まれるタンパク質なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "正確に言うと、グリアジンとグルテニンっていう2つのタンパク質なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "この2つが水と混ざると結合して「グルテン」が生まれるのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "へえ、2つのタンパク質が合体するんですのね。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "ちなみにグルテンという名前は、ラテン語の「糊」が語源なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "文字通り、食品を「くっつける」役割を持つタンパク質なのだ。"
+        }
+      ],
+      "id": 3,
+      "title": "グルテンとは何か"
+    },
+    {
+      "scene_id": 4,
+      "label": "パンのもちもち食感の正体",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "そうなのだ。パンを焼くときに生地をこねるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "あのこねる作業でグルテンが形成されて、網目構造を作るのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "パンのもちもち感とか、うどんのコシとか、ピザの伸びる生地。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "あれは全部グルテンの働きなのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "じゃあグルテン自体は悪い物質じゃなくて、普通の栄養素なんですわね。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "その通り。人類は1万年以上前の農耕の始まりから小麦を食べてきたのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "つまりグルテンは何千年も人類の食を支えてきた、ごく普通のタンパク質なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "問題になるのは、特定の病気を持っている場合だけなのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "ごく一部の人だけが気をつければいい、ということですわね。"
+        }
+      ],
+      "id": 4,
+      "title": "パンのもちもち食感の正体"
+    },
+    {
+      "scene_id": 5,
+      "label": "セリアック病 vs 一般の人",
+      "lines": [
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "どんな病気ですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "一番重要なのはセリアック病という自己免疫疾患なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "この病気の人がグルテンを摂ると、免疫システムが暴走するのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "本来はウイルスとかを攻撃するはずの免疫が、自分の小腸を攻撃してしまうのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "自分の体を攻撃してしまうなんて、怖いですわね。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "小腸の内壁には「絨毛」っていう小さな突起がびっしり生えているのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "栄養を吸収するためのアンテナみたいなものなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "セリアック病ではこの絨毛が壊されてしまうのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "すると栄養がうまく吸収できなくなって、深刻な健康被害が出るのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "下痢、体重減少、貧血、骨粗しょう症など、全身に症状が広がるのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "それは大変ですわ。どれくらいの人がかかるんですの？"
+        }
+      ],
+      "id": 5,
+      "title": "セリアック病 vs 一般の人"
+    },
+    {
+      "scene_id": 6,
+      "label": "日本人のセリアック病有病率0.05%",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "世界的には人口の約1%、つまり100人に1人くらいなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "特にヨーロッパやアメリカで多い病気なのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "結構いるんですわね。日本ではどうなんですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "ここがポイントなのだ。日本人の有病率はたった0.05%なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "欧米の約20分の1。2000人に1人くらいしかいないのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "そんなに少ないんですの！なぜそんなに差があるんですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "遺伝子が関係しているのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "セリアック病に関わるHLA-DQ2とDQ8という遺伝子型があるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "欧米人では25〜30%がこの遺伝子を持っているのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "でも日本人はたった0.3%しか持っていないのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "0.3%！ほとんどいないんですわね。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "しかもね、日本は伝統的にお米が主食の国なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "欧米に比べてそもそも小麦の摂取量が少ないのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "言われてみれば確かにそうですわね。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "つまり日本人は遺伝的にもセリアック病になりにくいし。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "食文化的にもグルテンの摂取量が少ない。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "それなのにグルテンフリーが流行ってるのは不思議ですわね。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "そうなのだ。興味深い歴史があってね。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "実はセリアック病とグルテンの関係が発見されたのは第二次世界大戦中なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "オランダの小児科医ディッケが、戦時中にパンの供給が止まった時に。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "セリアック病の子どもたちの症状が改善したことに気づいたのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "戦争がきっかけで発見されたんですの。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "そう。で、パンの供給が再開されたら症状が再発したのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "これがグルテンが原因だと突き止める大きな手がかりになったのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "医学の歴史って意外なところにドラマがありますわね。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "でも、この発見はセリアック病患者のための話なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "それがどうやって「みんなに良い」という話に変わったのか。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "次はそこを見ていくのだ。"
+        }
+      ],
+      "id": 6,
+      "title": "日本人のセリアック病有病率0.05%"
+    },
+    {
+      "scene_id": 7,
+      "label": "なぜグルテンフリーは世界を席巻したのか",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "ここからが面白いところなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "医学的に必要な人は人口の1%以下。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "なのに市場は1兆5000億円超え。この矛盾の理由を探っていくのだ。"
+        }
+      ],
+      "id": 7,
+      "title": "なぜグルテンフリーは世界を席巻したのか"
+    },
+    {
+      "scene_id": 8,
+      "label": "ジョコビッチ「生まれ変わる食事」",
+      "lines": [
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "一番の火付け役は誰だったんですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "間違いなくテニスのノバク・ジョコビッチ選手なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "2010年の全豪オープンで呼吸困難に陥ったのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "その後の検査でグルテン不耐症と診断されたのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "グルテンフリーに切り替えたら、パフォーマンスが劇的に向上したのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "スピード、柔軟性、集中力が格段に上がったと語っているのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "世界ランキング1位にまで上り詰めた選手ですわよね。なんて説得力でしょう。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "彼の著書「ジョコビッチの生まれ変わる食事」は世界的ベストセラーになったのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "日本でも大ヒットして、グルテンフリーブームの火付け役になったのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "ここで大事なのは、ジョコビッチ選手は本当にグルテン不耐症なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "医師による検査を受けた上での診断なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "彼にとってグルテンフリーは「流行」ではなく「治療」だったのだ。"
+        }
+      ],
+      "id": 8,
+      "title": "ジョコビッチ「生まれ変わる食事」"
+    },
+    {
+      "scene_id": 9,
+      "label": "GFブームの広がり方",
+      "lines": [
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "なるほど。彼の場合は医学的に必要だったんですわね。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "問題は、そこから「みんなにいい」に飛躍してしまったことなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "グウィネス・パルトローやミランダ・カー、マイリー・サイラスとか。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "ハリウッドセレブたちがこぞって「グルテンフリーで体調がいい」と発信したのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "有名人が薦めると、それだけで説得力が出てしまいますものね。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "ここに心理学的な罠があるのだ。「自然主義的誤謬」っていうのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "何ですのそれ？"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "「自然なもの＝体にいい、加工されたもの＝体に悪い」と思い込むバイアスなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "グルテンフリーは「余計なものを取り除く」イメージがあるから。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "なんとなく「自然で健康的」に感じてしまうのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "確かに「フリー」って言葉だけで体に良さそうに聞こえますわ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "さらに2011年にウィリアム・デイビスという心臓専門医が書いた本があるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "「小麦は食べるな！」ってタイトルでね、大ベストセラーになったのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "ただしこの本は科学界からかなり批判も受けているのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "タイトルだけでインパクトがすごいですわね。でも批判もあるんですの。"
+        }
+      ],
+      "id": 9,
+      "title": "GFブームの広がり方"
+    },
+    {
+      "scene_id": 10,
+      "label": "GF市場の爆発的成長",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "こうしてセレブの影響力、ベストセラー本、SNSの拡散。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "この3つが重なって、グルテンフリーは世界的トレンドになったのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "市場は年平均5〜10%で成長し続けていて。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "日本でも2033年には約20億ドル規模になると予測されているのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "すごい成長ですわね。でも実際のところ、科学的にはどうなんですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "実はここからが、この動画で一番大事な部分なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "科学者たちの研究結果は、かなり意外なものだったのだ。"
+        }
+      ],
+      "id": 10,
+      "title": "GF市場の爆発的成長"
+    },
+    {
+      "scene_id": 11,
+      "label": "科学が示す3つの意外な真実",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "ここからは科学が示す意外な事実を3つ紹介するのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "どれもしっかりしたエビデンスに基づいた研究結果なのだ。"
+        }
+      ],
+      "id": 11,
+      "title": "科学が示す3つの意外な真実"
+    },
+    {
+      "scene_id": 12,
+      "label": "BMJ大規模追跡研究（2017年）",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "まず1つ目。2017年にBMJという世界最高峰の医学誌に載った研究なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "約11万人の男女を、なんと26年間も追跡した超大規模な研究なのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "11万人を26年間！それはすごい規模ですわね。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "この研究の目的は「グルテンと心臓病の関係」を調べることだったのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "結果はこうだったのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "グルテンの摂取量と心臓病のリスクに、有意な関連は見つからなかったのだ。"
+        }
+      ],
+      "id": 12,
+      "title": "BMJ大規模追跡研究（2017年）"
+    },
+    {
+      "scene_id": 13,
+      "label": "グルテン摂取量と心疾患リスク",
+      "lines": [
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "つまりグルテンを食べても心臓病リスクは上がらないってことですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "それどころかね、驚きの結果があったのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "グルテンを一番多く食べていたグループの心臓病発生率は10万人年あたり277件。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "一番少なく食べていたグループは352件だったのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "え！グルテンを避けた方が心臓病が多いんですの！？"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "そうなのだ。研究者たちはこう考えているのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "グルテンを避けると、全粒粉の摂取も減ってしまうのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "全粒粉には心臓を守る食物繊維がたっぷり入っているのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "つまりグルテンを避けることで、心臓に良い食品まで避けてしまうのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "健康のつもりが逆効果になりうるってことですわね。"
+        }
+      ],
+      "id": 13,
+      "title": "グルテン摂取量と心疾患リスク"
+    },
+    {
+      "scene_id": 14,
+      "label": "真犯人はグルテンじゃなかった",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "2つ目の研究はさらに衝撃的なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "「グルテンで体調が悪くなる」と思っている人、いるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "でも実は、真犯人はグルテンじゃないかもしれないのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "え！じゃあ何が原因なんですの？"
+        }
+      ],
+      "id": 14,
+      "title": "真犯人はグルテンじゃなかった"
+    },
+    {
+      "scene_id": 15,
+      "label": "フルクタン（FODMAP）の仕組み",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "2018年にスコッジェたちが発表した二重盲検試験があるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "二重盲検っていうのは、被験者も研究者も中身を知らない形式の実験なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "つまり、思い込みの影響を完全に排除できる、最も厳密な実験方法なのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "なるほど、科学的に最も信頼できるやり方ですわね。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "グルテン過敏症と自己申告している人たちを集めたのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "そしてグルテン、フルクタン、プラセボの3つのグループに分けたのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "フルクタンって何ですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "小麦に含まれる糖質の一種で、FODMAPっていうグループの仲間なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "小腸で吸収されにくくて、大腸まで届いて発酵してガスを出すのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "つまりお腹が張ったり、痛くなったりする原因になりうる物質なのだ。"
+        }
+      ],
+      "id": 15,
+      "title": "フルクタン（FODMAP）の仕組み"
+    },
+    {
+      "scene_id": 16,
+      "label": "グルテン群 vs プラセボ群で差なし",
+      "lines": [
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "それで実験の結果はどうだったんですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "なんと、グルテン群とプラセボ群で症状に有意差がなかったのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "お腹の不調を引き起こしていた真犯人はフルクタンだったのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "つまり「グルテンが合わない」というのは勘違いだった可能性があるんですの！"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "その通り。グルテンのせいだと思っていたのは、実は小麦の別の成分だったのだ。"
+        }
+      ],
+      "id": 16,
+      "title": "グルテン群 vs プラセボ群で差なし"
+    },
+    {
+      "scene_id": 17,
+      "label": "ノセボ効果40%",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "そして3つ目。これが一番ゾッとする話なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "グルテン過敏症の二重盲検試験を10件まとめて分析した研究があるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "結果、被験者の40%がノセボ反応を示したのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "ノセボ反応って何ですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "プラセボ効果の逆バージョンなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "「グルテンが入っている」と思い込むだけで、本当に体調が悪くなるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "実際にはグルテンが入っていない偽薬を飲んでいたのに。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "腹痛や膨満感を訴えた人が40%もいたのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "思い込みだけで症状が出るなんて、人間の脳って怖いですわね。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "「グルテンは悪い」という情報を信じれば信じるほど。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "グルテンを食べたと思った瞬間に、脳が体に症状を作り出すのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "つまりグルテンフリーのブームそのものが、症状の原因になっている可能性……。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "まさにその通り。情報が体調を左右してしまう、恐ろしい現象なのだ。"
+        }
+      ],
+      "id": 17,
+      "title": "ノセボ効果40%"
+    },
+    {
+      "scene_id": 18,
+      "label": "むしろリスクがあるとしたら？",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "さて、ここまで「メリットがない」という話をしてきたのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "でも話はそれだけでは終わらないのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "健康な人がグルテンフリーにすると、むしろリスクが増えるのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "メリットがないだけじゃなくて、リスクがあるんですの？"
+        }
+      ],
+      "id": 18,
+      "title": "むしろリスクがあるとしたら？"
+    },
+    {
+      "scene_id": 19,
+      "label": "GF食の3大リスク",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "大きく分けて3つのリスクがあるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "1つ目は栄養不足なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "小麦製品、特に全粒粉パンには栄養がたっぷり詰まっているのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "食物繊維、ビタミンB1、B2、葉酸、鉄分、マグネシウム。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "これらを一気に食事から排除してしまうことになるのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "健康のためにやっているのに、栄養が足りなくなるなんて皮肉ですわね。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "ハーバード大学もこの点を指摘しているのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "特に女性は鉄分不足による貧血のリスクが高まるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "葉酸不足は妊婦さんにとって特に深刻な問題になりうるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "さらに食物繊維不足で腸内環境が悪化する可能性もあるのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "腸内環境が悪くなったら、それこそお腹の調子が悪くなりますわよね。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "そう。「お腹のために」グルテンフリーにしたのに。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "食物繊維不足でかえってお腹の調子が悪くなる、なんてこともありえるのだ。"
+        }
+      ],
+      "id": 19,
+      "title": "GF食の3大リスク"
+    },
+    {
+      "scene_id": 20,
+      "label": "重金属リスク（ヒ素）",
+      "lines": [
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "2つ目は何ですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "2つ目はさらに怖い話なのだ。重金属汚染のリスクなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "グルテンフリーの食品は、小麦の代わりに米粉を多く使うのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "実は、米という作物は土壌からヒ素を吸収しやすい性質があるのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "ヒ素ですの！？毒物じゃないですの！"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "そう。しかも無機ヒ素は発がん性物質としても知られているのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "実際の研究では、グルテンフリー食を続けている人の尿中ヒ素濃度は。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "そうでない人の約2倍だったのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "水銀やカドミウムの血中濃度も高い傾向が見られたのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "全然知りませんでしたわ。グルテンフリーにそんなリスクがあるなんて。"
+        }
+      ],
+      "id": 20,
+      "title": "重金属リスク（ヒ素）"
+    },
+    {
+      "scene_id": 21,
+      "label": "GF加工食品の落とし穴",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "3つ目は、グルテンフリー加工食品そのものの問題なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "小麦の風味や食感を再現するために、砂糖や脂肪がたくさん添加されるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "結果として、通常の食品よりカロリーが高くなることが多いのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "「ヘルシー」のイメージとは真逆ですわね。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "しかも価格は通常品の2〜3倍するのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "え、そんなに高いんですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "グルテンフリーのパスタとか、普通の3倍くらいすることもあるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "つまり高いお金を払って、栄養価は低くてカロリーは高い食品。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "そういうものを「健康にいい」と信じて食べている可能性があるのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "それはかなりショッキングな話ですわ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "ちなみに「グルテンフリーにしたら痩せた」っていう体験談があるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "でもそれはグルテンを抜いたからじゃないのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "パンやケーキやパスタなど、高カロリーな加工食品を避けた結果なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "グルテンを抜かなくても、同じ食品を減らせば同じ効果が得られるのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "グルテンの問題じゃなくて、食習慣の問題だったんですわね。"
+        }
+      ],
+      "id": 21,
+      "title": "GF加工食品の落とし穴"
+    },
+    {
+      "scene_id": 22,
+      "label": "自己診断の危険性",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "最後にもう一つ、とても重要なリスクがあるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "それは自己診断でグルテンフリーを始めてしまうことなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "医師に相談せずに勝手にグルテンを抜き始めると。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "もし本当にセリアック病だった場合、正確な診断ができなくなるのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "どうしてですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "セリアック病の検査では、血液中の特定の抗体を調べるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "でもグルテンをしばらく避けていると、この抗体の値が下がってしまうのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "結果として「異常なし」と判定されてしまうことがあるのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "本当に治療が必要な人が見逃されてしまうのは、とても危険ですわね。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "そうなのだ。自己判断でやることの一番のリスクはここなのだ。"
+        }
+      ],
+      "id": 22,
+      "title": "自己診断の危険性"
+    },
+    {
+      "scene_id": 23,
+      "label": "今日のポイント",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "さて、今日の話をまとめるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "まず大前提として言っておきたいことがあるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "グルテンフリーは、セリアック病の人にとっては唯一の治療法なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "この人たちにとっては文字通り命綱であり、絶対に必要なことなのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "それは最初にはっきりさせておくべきですわね。"
+        }
+      ],
+      "id": 23,
+      "title": "今日のポイント"
+    },
+    {
+      "scene_id": 24,
+      "label": "3つの結論",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "でも、セリアック病でもなく特別な過敏症もない健康な人の場合。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "1つ目。11万人の大規模研究で、グルテンと心臓病の関連は否定されたのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "2つ目。体調不良の原因はグルテンではなくフルクタンかもしれないのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "3つ目。40%がノセボ反応、つまり思い込みで症状が出ていた可能性があるのだ。"
+        }
+      ],
+      "id": 24,
+      "title": "3つの結論"
+    },
+    {
+      "scene_id": 25,
+      "label": "必要な人には命綱、不要な人にはリスク",
+      "lines": [
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "メリットがないだけじゃなくて、栄養不足や重金属のリスクもあったんですわよね。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "その通りなのだ。冒頭で「1兆5000億円のメリットはほぼゼロ」と言ったのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "大事なのは「誰にとって」必要なのかを正しく知ることなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "必要な人には命綱。不要な人にはリスクなのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "なんとなくのイメージや有名人の影響で、食事を変えるのは危険ですわね。"
+        }
+      ],
+      "id": 25,
+      "title": "必要な人には命綱、不要な人にはリスク"
+    },
+    {
+      "scene_id": 26,
+      "label": "正しい情報との付き合い方",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "もし体調に不安があるなら、まず専門の医師に相談してほしいのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "自己診断で食事制限を始めると、正しい診断が遅れてしまうからなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "それに、お腹の調子が悪い原因はグルテンじゃなくてFODMAPsかもしれないのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "原因を正しく特定しないと、的外れな対策をしてしまうのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "今日の話で「グルテンフリー＝健康にいい」という思い込みが解けましたわ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "科学的な根拠に基づいて、自分に本当に必要なものを選ぶこと。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "流行や有名人の発言ではなく、エビデンスで判断すること。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "それが一番大事なことなのだ。"
+        },
+        {
+          "speaker": "metan",
+          "speaker_id": 2,
+          "text": "今日も勉強になりましたわ。ありがとうございましたのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "speaker_id": 3,
+          "text": "チャンネル登録と高評価もよろしくなのだ！"
+        }
+      ],
+      "id": 26,
+      "title": "正しい情報との付き合い方"
+    }
+  ],
+  "speakers": {
+    "zundamon": 3,
+    "metan": 2
+  }
+}

@@ -71,7 +71,9 @@
     // ===== Core Processing =====
 
     async function handleProcessPrompt(message) {
-        const { prompt, itemId, timeout, delay } = message;
+        const { prompt, prefix, itemId, timeout, delay } = message;
+        // プレフィックスをプロンプトの先頭に結合
+        const fullPrompt = prefix ? `${prefix}\n\n${prompt}` : prompt;
         isProcessing = true;
         currentItemId = itemId;
         abortController = new AbortController();
@@ -82,8 +84,8 @@
             console.log(`[GeminiAuto] Processing: "${prompt.substring(0, 50)}..."`,
                 `Initial model-response count: ${initialResponseCount}`);
 
-            // 2. 入力欄にプロンプトを設定
-            await typePrompt(prompt);
+            // 2. 入力欄にプロンプトを設定（prefix込み）
+            await typePrompt(fullPrompt);
             await sleep(500);
 
             // 3. 送信
@@ -144,10 +146,14 @@
             // 既存テキストをクリア
             inputEl.innerHTML = '';
 
-            // テキストを<p>タグで設定（Quillの形式に合わせる）
-            const p = document.createElement('p');
-            p.textContent = text;
-            inputEl.appendChild(p);
+            // テキストを行ごとに<p>タグで設定（Quillの形式に合わせる）
+            // 複数行プロンプト（YAML等）に対応
+            const lines = text.split('\n');
+            lines.forEach(line => {
+                const p = document.createElement('p');
+                p.textContent = line;
+                inputEl.appendChild(p);
+            });
 
             // input イベントを発火してAngularの状態を更新
             dispatchInputEvents(inputEl);

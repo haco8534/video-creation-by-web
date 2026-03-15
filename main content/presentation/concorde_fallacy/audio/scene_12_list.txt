@@ -1,0 +1,5 @@
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/concorde_fallacy/audio/scene_12_00.wav'
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/concorde_fallacy/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/concorde_fallacy/audio/scene_12_01.wav'
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/concorde_fallacy/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/concorde_fallacy/audio/scene_12_02.wav'

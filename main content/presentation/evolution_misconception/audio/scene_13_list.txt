@@ -1,0 +1,3 @@
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/evolution_misconception/audio/scene_13_00.wav'
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/evolution_misconception/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/evolution_misconception/audio/scene_13_01.wav'

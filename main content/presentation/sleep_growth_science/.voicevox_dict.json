@@ -1,0 +1,82 @@
+[
+    {
+        "surface": "GHRH",
+        "pronunciation": "ジーエイチアールエイチ",
+        "accent_type": 1
+    },
+    {
+        "surface": "GH",
+        "pronunciation": "ジーエイチ",
+        "accent_type": 1
+    },
+    {
+        "surface": "OECD",
+        "pronunciation": "オーイーシーディー",
+        "accent_type": 1
+    },
+    {
+        "surface": "ADHD",
+        "pronunciation": "エーディーエイチディー",
+        "accent_type": 1
+    },
+    {
+        "surface": "Takahashi",
+        "pronunciation": "タカハシ",
+        "accent_type": 1
+    },
+    {
+        "surface": "Honda",
+        "pronunciation": "ホンダ",
+        "accent_type": 1
+    },
+    {
+        "surface": "UC Berkeley",
+        "pronunciation": "ユーシーバークレー",
+        "accent_type": 1
+    },
+    {
+        "surface": "et al.",
+        "pronunciation": "エタール",
+        "accent_type": 1
+    },
+    {
+        "surface": "エコチル",
+        "pronunciation": "エコチル",
+        "accent_type": 1
+    },
+    {
+        "surface": "ソマトスタチン",
+        "pronunciation": "ソマトスタチン",
+        "accent_type": 5
+    },
+    {
+        "surface": "レプチン",
+        "pronunciation": "レプチン",
+        "accent_type": 1
+    },
+    {
+        "surface": "グレリン",
+        "pronunciation": "グレリン",
+        "accent_type": 1
+    },
+    {
+        "surface": "徐波睡眠",
+        "pronunciation": "ジョハスイミン",
+        "accent_type": 3
+    },
+    {
+        "surface": "灰白質",
+        "pronunciation": "カイハクシツ",
+        "accent_type": 3
+    },
+    {
+        "surface": "コホート",
+        "pronunciation": "コホート",
+        "accent_type": 1
+    },
+    {
+        "surface": "前頭前野",
+        "pronunciation": "ゼントウゼンヤ",
+        "accent_type": 5
+    }
+]

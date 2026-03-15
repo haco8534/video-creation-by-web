@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <title>「脳トレ」は脳の機能を向上させない</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Scene 0: タイトルカード 脳トレは脳の機能を向上させない -->
+    <div class="scene" id="scene-0">
+        <canvas id="canvas-0" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary stagger-item">MYTH BUSTING</div>
+            <h2 class="title-large stagger-item">「脳トレ」は<br><span class="accent-coral">脳の機能を向上させない</span></h2>
+            <div class="title-sub stagger-item">1兆5000億円市場の科学的真実</div>
+        </div>
+    </div>
+
+    <!-- Scene 1: 数値インパクト 脳トレ市場100億ドル -->
+    <div class="scene" id="scene-1">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">脳トレ市場の規模</h2>
+            <div class="source-badge stagger-item">Global Market Research (2024)</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-primary">100</span><span class="num-unit">億ドル</span>
+            </div>
+            <div class="emphasis-sub stagger-item">日本円で約<span class="accent-coral">1兆5000億円</span></div>
+            <div class="market-growth-visual stagger-item">
+                <svg viewBox="0 0 500 120" class="growth-chart">
+                    <defs>
+                        <linearGradient id="growthGrad" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#6366f1" />
+                            <stop offset="100%" stop-color="#ef4444" />
+                        </linearGradient>
+                    </defs>
+                    <text x="30" y="100" class="chart-label">2024</text>
+                    <text x="420" y="100" class="chart-label">2030</text>
+                    <rect x="50" y="50" width="80" height="50" rx="8" fill="url(#growthGrad)" opacity="0.7"
+                        class="bar-anim" />
+                    <rect x="370" y="10" width="80" height="90" rx="8" fill="url(#growthGrad)" class="bar-anim" />
+                    <text x="90" y="45" class="chart-val">$100億</text>
+                    <text x="410" y="7" class="chart-val">$320億</text>
+                    <path d="M130 75 Q250 30 370 55" stroke="#6366f1" stroke-width="2" fill="none"
+                        stroke-dasharray="300" stroke-dashoffset="300" class="trend-line" />
+                </svg>
+            </div>
+            <div class="footnote stagger-item">年平均成長率 21% — 2030年には約4.8兆円に到達見込み</div>
+        </div>
+    </div>
+
+    <!-- Scene 2: 横並びカード 脳トレアプリの世界 -->
+    <div class="scene" id="scene-2">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">代表的な脳トレアプリ</h2>
+            <div class="triple-card">
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-primary">L</div>
+                    <div class="factor-name">Lumosity</div>
+                    <div class="factor-desc">7000万人超のユーザー</div>
+                    <div class="factor-sub">「1日15分で記憶力UP」</div>
+                </div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-teal">P</div>
+                    <div class="factor-name">Peak</div>
+                    <div class="factor-desc">数百万ダウンロード</div>
+                    <div class="factor-sub">「脳年齢を若返らせる」</div>
+                </div>
+                <div class="factor-card stagger-item">
+                    <div class="factor-icon accent-bg-amber">E</div>
+                    <div class="factor-name">Elevate</div>
+                    <div class="factor-desc">Apple年間ベストアプリ</div>
+                    <div class="factor-sub">「認知機能を向上」</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">共通の宣伝文句: 「<span class="accent-coral">1日数分で脳が鍛えられる</span>」</div>
+            <div class="footnote stagger-item">しかし2016年、業界最大手に衝撃的な事件が……</div>
+        </div>
+    </div>
+
+    <!-- Scene 3: タイトルカード Lumosity事件の衝撃 -->
+    <div class="scene dark-scene" id="scene-3">
+        <canvas id="canvas-3" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral stagger-item">CASE STUDY</div>
+            <h2 class="title-medium light-text stagger-item">Lumosity事件<br><span class="accent-amber">の衝撃</span></h2>
+            <div class="title-sub light-text stagger-item">FTC vs Lumos Labs（2016）</div>
+        </div>
+    </div>
+
+    <!-- Scene 4: 引用カード FTCの断罪 -->
+    <div class="scene" id="scene-4">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">FTCの声明</h2>
+            <div class="quote-card quote-warning stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">Lumosityは消費者の加齢による<br>認知機能低下への<span class="accent-coral">不安につけ込んだ</span></div>
+                <div class="quote-source">Jessica Rich, FTC消費者保護局長 (2016)</div>
+            </div>
+            <div class="penalty-visual stagger-item">
+                <div class="penalty-label">判決</div>
+                <div class="penalty-amount">罰金 <span class="accent-coral">5000万ドル</span></div>
+                <div class="penalty-sub">約75億円</div>
+            </div>
+            <div class="footnote stagger-item">「その広告を裏付ける科学は単に存在しなかった」</div>
+        </div>
+    </div>
+
+    <!-- Scene 5: 段階的リスト Lumosityの虚偽の主張 -->
+    <div class="scene" id="scene-5">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">Lumosityの4つの虚偽広告</h2>
+            <div class="numbered-list">
+                <div class="numbered-item false-claim stagger-item">
+                    <div class="number-circle false-icon">1</div>
+                    <div class="numbered-text">仕事や学校の<span class="accent-coral">成績が向上</span>する</div>
+                </div>
+                <div class="numbered-item false-claim stagger-item">
+                    <div class="number-circle false-icon">2</div>
+                    <div class="numbered-text">加齢による認知機能低下を<span class="accent-coral">遅らせる</span></div>
+                </div>
+                <div class="numbered-item false-claim stagger-item">
+                    <div class="number-circle false-icon">3</div>
+                    <div class="numbered-text"><span class="accent-coral">認知症・アルツハイマー</span>を予防</div>
+                </div>
+                <div class="numbered-item false-claim stagger-item">
+                    <div class="number-circle false-icon">4</div>
+                    <div class="numbered-text">ADHD・脳外傷・PTSDの<span class="accent-coral">認知障害を改善</span></div>
+                </div>
+            </div>
+            <div class="source-badge stagger-item">FTC complaint (2016) — すべて科学的根拠なし</div>
+            <div class="footnote stagger-item">Google広告で認知症検索者をターゲティング</div>
+        </div>
+    </div>
+
+    <!-- Scene 6: テキスト強調 業界全体の問題 -->
+    <div class="scene" id="scene-6">
+        <canvas id="canvas-6" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">Lumosity<span class="accent-coral">だけ</span>の問題ではない</div>
+            <div class="emphasis-text-large stagger-item">業界全体が<span class="accent-primary">同じ主張</span>を繰り返している</div>
+            <div class="emphasis-sub stagger-item">なぜ科学者たちは「効果なし」と断言するのか？</div>
+        </div>
+    </div>
+
+    <!-- Scene 7: タイトルカード ゲームが上手くなるだけ -->
+    <div class="scene" id="scene-7">
+        <canvas id="canvas-7" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary stagger-item">SCIENTIFIC EVIDENCE</div>
+            <h2 class="title-medium stagger-item">ゲームが<br><span class="accent-primary">上手くなるだけ</span></h2>
+            <div class="title-sub stagger-item">科学的証拠が突きつける結論</div>
+        </div>
+    </div>
+
+    <!-- Scene 8: 比較対照 近い転移 vs 遠い転移 -->
+    <div class="scene" id="scene-8">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">認知訓練の「転移」</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge safe-badge">起きる</div>
+                    <div class="vs-title">近い転移</div>
+                    <div class="vs-desc">似た課題が上手くなる</div>
+                    <div class="vs-example">数字暗記ゲーム→数字テスト向上</div>
+                    <div class="vs-verdict safe-text">当たり前</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge danger-badge">起きない</div>
+                    <div class="vs-title">遠い転移</div>
+                    <div class="vs-desc">全く違う能力が向上</div>
+                    <div class="vs-example">数字暗記→仕事の生産性UP？</div>
+                    <div class="vs-verdict danger-text">科学的に否定</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">脳トレアプリが約束しているのは<span class="accent-coral">「遠い転移」</span></div>
+            <div class="footnote stagger-item">しかし科学は「遠い転移」をほぼ完全に否定している</div>
+        </div>
+    </div>
+
+    <!-- Scene 9: 数値インパクト 11430人の大規模研究 -->
+    <div class="scene" id="scene-9">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">史上最大規模の脳トレ研究</h2>
+            <div class="source-badge stagger-item">Owen et al. — Nature (2010)</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-primary">11,430</span><span class="num-unit">人</span>
+            </div>
+            <div class="owen-result stagger-item">
+                <div class="owen-row">
+                    <span class="owen-label">訓練した課題</span>
+                    <span class="owen-value safe-text">上達した</span>
+                </div>
+                <div class="owen-row">
+                    <span class="owen-label">未訓練の認知課題</span>
+                    <span class="owen-value danger-text">転移効果ゼロ</span>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">6週間の訓練後、<span class="accent-coral">日常認知能力の向上は確認されず</span></div>
+            <div class="footnote stagger-item">世界最高峰の学術誌 Nature に掲載された決定的な研究</div>
+        </div>
+    </div>
+
+    <!-- Scene 10: 引用カード 70人の科学者の共同声明 -->
+    <div class="scene" id="scene-10">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">科学者70人の共同声明</h2>
+            <div class="source-badge stagger-item">Stanford Center on Longevity & Max Planck Institute (2014)</div>
+            <div class="quote-card stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">商業的な脳トレ製品が認知機能の低下を<br><span
+                        class="accent-primary">減少・逆転させるという説得力のある<br>科学的根拠は存在しない</span></div>
+                <div class="quote-source">70人の一流神経科学者による共同声明</div>
+            </div>
+            <div class="scientist-counter stagger-item">
+                <svg viewBox="0 0 400 60" class="scientist-svg">
+                    <text x="200" y="35" text-anchor="middle" class="scientist-num">70</text>
+                    <text x="200" y="55" text-anchor="middle" class="scientist-label">名の署名</text>
+                </svg>
+            </div>
+            <div class="footnote stagger-item">科学の世界で異例の「断言」— 通常は慎重な表現を使う研究者が連名で否定</div>
+        </div>
+    </div>
+
+    <!-- Scene 11: カスタムビジュアル 2025年メタ分析の結果 -->
+    <div class="scene" id="scene-11">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">15年間の研究蓄積</h2>
+            <div class="source-badge stagger-item">Psychological Bulletin (2025) — 67研究のメタ分析</div>
+            <div class="meta-timeline stagger-item">
+                <div class="meta-year">
+                    <div class="meta-dot active-dot"></div>
+                    <div class="meta-label">2010</div>
+                    <div class="meta-desc">Owen: 転移なし</div>
+                </div>
+                <div class="meta-line"></div>
+                <div class="meta-year">
+                    <div class="meta-dot active-dot"></div>
+                    <div class="meta-label">2014</div>
+                    <div class="meta-desc">70人声明</div>
+                </div>
+                <div class="meta-line"></div>
+                <div class="meta-year">
+                    <div class="meta-dot active-dot"></div>
+                    <div class="meta-label">2025</div>
+                    <div class="meta-desc">メタ分析: 遠い転移ゼロ</div>
+                </div>
+            </div>
+            <div class="transfer-bars stagger-item">
+                <div class="bar-row">
+                    <div class="bar-label">訓練課題の上達</div>
+                    <div class="bar-track">
+                        <div class="bar-fill bar-high" style="--w:85%"></div>
+                    </div>
+                </div>
+                <div class="bar-row">
+                    <div class="bar-label">近い転移（同領域）</div>
+                    <div class="bar-track">
+                        <div class="bar-fill bar-mid" style="--w:25%"></div>
+                    </div>
+                </div>
+                <div class="bar-row">
+                    <div class="bar-label">遠い転移（日常能力）</div>
+                    <div class="bar-track">
+                        <div class="bar-fill bar-low" style="--w:3%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">15年間、<span class="accent-coral">何度検証しても結論は同じ</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 12: タイトルカード 唯一の例外と錯覚のメカニズム -->
+    <div class="scene" id="scene-12">
+        <canvas id="canvas-12" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-teal stagger-item">EXCEPTION & ILLUSION</div>
+            <h2 class="title-medium stagger-item">唯一の例外と<br><span class="accent-teal">錯覚のメカニズム</span></h2>
+            <div class="title-sub stagger-item">科学が認めた「たった1つ」の成功例</div>
+        </div>
+    </div>
+
+    <!-- Scene 13: カスタムビジュアル ACTIVE試験の結果 -->
+    <div class="scene" id="scene-13">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">ACTIVE試験</h2>
+            <div class="source-badge stagger-item">JAMA Internal Medicine (2017) — 10年間追跡</div>
+            <div class="active-trial-visual stagger-item">
+                <svg viewBox="0 0 500 200" class="active-svg">
+                    <rect x="30" y="20" width="140" height="160" rx="12" fill="#f0f0ff" stroke="#6366f1"
+                        stroke-width="2" />
+                    <text x="100" y="60" text-anchor="middle" class="active-title">記憶</text>
+                    <text x="100" y="85" text-anchor="middle" class="active-sub">トレーニング</text>
+                    <text x="100" y="150" text-anchor="middle" class="active-result danger-text">効果なし</text>
+
+                    <rect x="180" y="20" width="140" height="160" rx="12" fill="#f0f0ff" stroke="#6366f1"
+                        stroke-width="2" />
+                    <text x="250" y="60" text-anchor="middle" class="active-title">推論</text>
+                    <text x="250" y="85" text-anchor="middle" class="active-sub">トレーニング</text>
+                    <text x="250" y="150" text-anchor="middle" class="active-result danger-text">効果なし</text>
+
+                    <rect x="330" y="20" width="140" height="160" rx="12" fill="#e0ffe8" stroke="#14b8a6"
+                        stroke-width="3" />
+                    <text x="400" y="60" text-anchor="middle" class="active-title">処理速度</text>
+                    <text x="400" y="85" text-anchor="middle" class="active-sub">トレーニング</text>
+                    <text x="400" y="140" text-anchor="middle" class="active-big safe-text">-29%</text>
+                    <text x="400" y="165" text-anchor="middle" class="active-detail">認知症リスク</text>
+                </svg>
+            </div>
+            <div class="emphasis-sub stagger-item">2802人の高齢者を10年間追跡した結果</div>
+        </div>
+    </div>
+
+    <!-- Scene 14: 比較テーブル 3種の結果比較 -->
+    <div class="scene" id="scene-14">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">ACTIVE試験: 3つの結果</h2>
+            <div class="comparison-table">
+                <div class="comp-row comp-header stagger-item">
+                    <div class="comp-cell">トレーニング種類</div>
+                    <div class="comp-cell">認知症リスク</div>
+                    <div class="comp-cell">判定</div>
+                </div>
+                <div class="comp-row stagger-item">
+                    <div class="comp-cell comp-name">記憶トレーニング</div>
+                    <div class="comp-cell"><span class="accent-coral">変化なし</span></div>
+                    <div class="comp-cell"><span class="verdict-x">&#10005;</span></div>
+                </div>
+                <div class="comp-row stagger-item">
+                    <div class="comp-cell comp-name">推論トレーニング</div>
+                    <div class="comp-cell"><span class="accent-coral">変化なし</span></div>
+                    <div class="comp-cell"><span class="verdict-x">&#10005;</span></div>
+                </div>
+                <div class="comp-row comp-highlight stagger-item">
+                    <div class="comp-cell comp-name">処理速度トレーニング</div>
+                    <div class="comp-cell"><span class="accent-teal">29%低下</span></div>
+                    <div class="comp-cell"><span class="verdict-o">&#10003;</span></div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">3種類中、効果があったのは<span class="accent-teal">たった1つ</span></div>
+            <div class="footnote stagger-item">追加セッションごとにリスク10%低下 — 用量依存的な効果</div>
+        </div>
+    </div>
+
+    <!-- Scene 15: 注意喚起 市販アプリとは別物 -->
+    <div class="scene" id="scene-15">
+        <div class="content center-layout">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">ACTIVE試験は<span class="accent-coral">特定の研究用プログラム</span>の結果</div>
+                <div class="alert-sub">市販の脳トレアプリとは全くの別物</div>
+            </div>
+            <div class="vs-container compact-vs stagger-item">
+                <div class="vs-card vs-left">
+                    <div class="vs-badge safe-badge">研究</div>
+                    <div class="vs-title">BrainHQ</div>
+                    <div class="vs-desc">処理速度に特化</div>
+                </div>
+                <div class="vs-divider">&ne;</div>
+                <div class="vs-card vs-right">
+                    <div class="vs-badge danger-badge">市販</div>
+                    <div class="vs-title">Lumosity等</div>
+                    <div class="vs-desc">汎用的な脳トレ</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">「脳トレに効果がある」と<span class="accent-coral">一般化するのは科学的に不正確</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 16: 比較対照 主観的改善 vs 客観テスト -->
+    <div class="scene" id="scene-16">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">なぜ「効いた」と感じるのか</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge safe-badge">主観</div>
+                    <div class="vs-title">自己評価</div>
+                    <div class="vs-desc">「記憶力が良くなった」</div>
+                    <div class="vs-verdict safe-text">改善を実感</div>
+                </div>
+                <div class="vs-divider stagger-item">vs</div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge danger-badge">客観</div>
+                    <div class="vs-title">認知テスト</div>
+                    <div class="vs-desc">標準化された認知機能測定</div>
+                    <div class="vs-verdict danger-text">差なし</div>
+                </div>
+            </div>
+            <div class="placebo-label stagger-item">
+                <span class="accent-coral">プラセボ効果</span>
+            </div>
+            <div class="emphasis-sub stagger-item">「毎日トレーニングしてるから良くなってるはず」と脳が自分を騙す</div>
+        </div>
+    </div>
+
+    <!-- Scene 17: 段階的リスト 3つの認知バイアス -->
+    <div class="scene" id="scene-17">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">脳トレ信仰を支える3つの心理的罠</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle bias-circle">1</div>
+                    <div class="numbered-text"><span class="accent-primary">確証バイアス</span><br><span
+                            class="text-sub">効いた日だけ記憶し、効かなかった日を忘れる</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle bias-circle">2</div>
+                    <div class="numbered-text"><span class="accent-primary">スコアの混同</span><br><span
+                            class="text-sub">ゲームスコア上昇 ≠ 認知機能向上</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle bias-circle">3</div>
+                    <div class="numbered-text"><span class="accent-primary">サンクコスト効果</span><br><span
+                            class="text-sub">月額課金→「効果があるはず」と信じたい</span></div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">複数の心理的罠が重なり、「脳トレは効く」という<span class="accent-coral">幻想</span>が維持される
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 18: タイトルカード 本当に脳に効くこと -->
+    <div class="scene" id="scene-18">
+        <canvas id="canvas-18" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-teal stagger-item">REAL EVIDENCE</div>
+            <h2 class="title-medium stagger-item">本当に<br><span class="accent-teal">脳に効くこと</span></h2>
+            <div class="title-sub stagger-item">科学が証明した4つの方法</div>
+        </div>
+    </div>
+
+    <!-- Scene 19: カスタムSVG 有酸素運動と海馬 -->
+    <div class="scene" id="scene-19">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">有酸素運動と脳</h2>
+            <div class="brain-exercise-visual stagger-item">
+                <svg viewBox="0 0 500 250" class="brain-svg">
+                    <ellipse cx="250" cy="120" rx="130" ry="100" fill="#f0f0ff" stroke="#6366f1" stroke-width="2" />
+                    <ellipse cx="200" cy="140" rx="35" ry="25" fill="#14b8a6" opacity="0.3" class="hippocampus-pulse" />
+                    <text x="200" y="145" text-anchor="middle" class="brain-label">海馬</text>
+                    <text x="250" y="240" text-anchor="middle" class="brain-sub">有酸素運動で容積が増加</text>
+                    <circle cx="340" cy="80" r="20" fill="#f59e0b" opacity="0.2" class="bdnf-pulse" />
+                    <text x="340" y="85" text-anchor="middle" class="brain-label-sm">BDNF</text>
+                </svg>
+            </div>
+            <div class="source-badge stagger-item">Erickson et al. (2011) — PNAS</div>
+            <div class="emphasis-sub stagger-item">30分のウォーキング > 脳トレアプリ</div>
+            <div class="footnote stagger-item">BDNF: 脳由来神経栄養因子 — 神経細胞の成長と生存を促進</div>
+        </div>
+    </div>
+
+    <!-- Scene 20: 横並びカード 4つの科学的介入 -->
+    <div class="scene" id="scene-20">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">科学が推奨する4つの方法</h2>
+            <div class="quad-card">
+                <div class="method-card stagger-item">
+                    <div class="method-icon method-sleep">Z</div>
+                    <div class="method-name">十分な睡眠</div>
+                    <div class="method-desc">記憶の固定化<br>老廃物の除去</div>
+                </div>
+                <div class="method-card stagger-item">
+                    <div class="method-icon method-social">S</div>
+                    <div class="method-name">社会的交流</div>
+                    <div class="method-desc">複数の認知機能を<br>同時に使用</div>
+                </div>
+                <div class="method-card stagger-item">
+                    <div class="method-icon method-learn">L</div>
+                    <div class="method-name">新しい学習</div>
+                    <div class="method-desc">楽器・外国語<br>脳の可塑性を刺激</div>
+                </div>
+                <div class="method-card stagger-item">
+                    <div class="method-icon method-exercise">E</div>
+                    <div class="method-name">有酸素運動</div>
+                    <div class="method-desc">海馬容積増加<br>BDNF産生促進</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">共通点: どれも<span class="accent-teal">「ある程度の負荷」</span>が必要</div>
+        </div>
+    </div>
+
+    <!-- Scene 21: テキスト強調 脳トレアプリ vs 本当の脳トレ -->
+    <div class="scene" id="scene-21">
+        <canvas id="canvas-21" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">脳は<span class="accent-coral">「楽して鍛える」</span>ことができない臓器</div>
+            <div class="vs-compact stagger-item">
+                <div class="vs-item vs-bad">
+                    <div class="vs-icon">&#10005;</div>
+                    <div class="vs-text">5分のスマホゲーム</div>
+                </div>
+                <div class="vs-item vs-good">
+                    <div class="vs-icon">&#10003;</div>
+                    <div class="vs-text">30分のウォーキング</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">筋肉と同じ — 負荷なしに成長しない</div>
+        </div>
+    </div>
+
+    <!-- Scene 22: 引用カード なぜ人は脳トレを信じたいのか -->
+    <div class="scene" id="scene-22">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">なぜ脳トレを信じたいのか</h2>
+            <div class="anxiety-visual stagger-item">
+                <div class="anxiety-card">
+                    <div class="anxiety-icon">&#9888;</div>
+                    <div class="anxiety-text">認知症への不安</div>
+                </div>
+                <div class="anxiety-arrow">&darr;</div>
+                <div class="anxiety-card hope-card">
+                    <div class="anxiety-icon">&#9889;</div>
+                    <div class="anxiety-text">「5分で予防できる」という希望</div>
+                </div>
+                <div class="anxiety-arrow">&darr;</div>
+                <div class="anxiety-card money-card">
+                    <div class="anxiety-icon">&#36;</div>
+                    <div class="anxiety-text">1兆5000億円の市場</div>
+                </div>
+            </div>
+            <div class="quote-card quote-warning stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text"><span class="accent-coral">不安をお金に変える</span><br>それが脳トレ市場の正体</div>
+                <div class="quote-source">FTC声明を基にした分析</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 23: タイトルカード 脳は楽しては鍛えられない -->
+    <div class="scene" id="scene-23">
+        <canvas id="canvas-23" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary stagger-item">CONCLUSION</div>
+            <h2 class="title-medium stagger-item">脳は<br><span class="accent-primary">楽しては鍛えられない</span></h2>
+            <div class="title-sub stagger-item">15年の科学が導く結論</div>
+        </div>
+    </div>
+
+    <!-- Scene 24: まとめカード 今日の3つのポイント -->
+    <div class="scene" id="scene-24">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">今日の3つのポイント</h2>
+            <div class="numbered-list summary-list">
+                <div class="numbered-item summary-item stagger-item">
+                    <div class="number-circle summary-circle">1</div>
+                    <div class="numbered-text"><span class="accent-primary">遠い転移は起きない</span><br><span
+                            class="text-sub">11,430人の研究+70人の声明+15年のメタ分析</span></div>
+                </div>
+                <div class="numbered-item summary-item stagger-item">
+                    <div class="number-circle summary-circle">2</div>
+                    <div class="numbered-text"><span class="accent-coral">Lumosity: 罰金5000万ドル</span><br><span
+                            class="text-sub">FTCが虚偽広告と認定 — 不安ビジネスの象徴</span></div>
+                </div>
+                <div class="numbered-item summary-item stagger-item">
+                    <div class="number-circle summary-circle">3</div>
+                    <div class="numbered-text"><span class="accent-teal">本当の脳トレ = 行動の変化</span><br><span
+                            class="text-sub">有酸素運動・睡眠・交流・新しい学習</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 25: テキスト強調 本当のメッセージ -->
+    <div class="scene" id="scene-25">
+        <canvas id="canvas-25" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">ゲームとして<span class="accent-teal">楽しむ</span>のは自由</div>
+            <div class="emphasis-text-large stagger-item">ただし<span class="accent-coral">「医療的効果」は</span>ない</div>
+            <div class="emphasis-sub stagger-item">問題は不安につけ込む<span class="accent-coral">ビジネスモデル</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 26: テキスト強調 エンディングメッセージ -->
+    <div class="scene" id="scene-26">
+        <canvas id="canvas-26" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">散歩する。よく眠る。友達と話す。</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-primary">これが本当の脳トレ</span></div>
+            <div class="emphasis-sub stagger-item">科学が証明した、地味だけど確かな方法</div>
+            <div class="ending-badge stagger-item">ご視聴ありがとうございました</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,533 @@
+/* ============================================================
+   Design Tokens
+   ============================================================ */
+:root {
+    --bg: #f8f9fa;
+    --text: #1a1a2e;
+    --text-light: #64748b;
+    --primary: #3b82f6;
+    --primary-light: #dbeafe;
+    --teal: #14b8a6;
+    --teal-light: #ccfbf1;
+    --coral: #ef4444;
+    --coral-light: #fee2e2;
+    --amber: #f59e0b;
+    --amber-light: #fef3c7;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.1);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================================
+   Reset & Base
+   ============================================================ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ============================================================
+   Scene Layout
+   ============================================================ */
+.scene {
+    display: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background: var(--bg);
+}
+
+.scene.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: sceneFadeIn 0.5s ease both;
+}
+
+@keyframes sceneFadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.scene-content {
+    width: 100%;
+    max-width: 960px;
+    padding: 48px;
+    position: relative;
+    z-index: 1;
+}
+
+.center-layout {
+    text-align: center;
+}
+
+/* Canvas Background */
+.bg-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ============================================================
+   Dark Scene
+   ============================================================ */
+.dark-scene {
+    background: #0f172a;
+}
+
+.dark-scene .scene-content {
+    color: #e2e8f0;
+}
+
+.light-text {
+    color: #e2e8f0 !important;
+}
+
+/* ============================================================
+   Typography
+   ============================================================ */
+.section-title {
+    font-size: 2.4rem;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 32px;
+    letter-spacing: -0.02em;
+}
+
+.emphasis-label {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--primary);
+    margin-bottom: 14px;
+    text-transform: uppercase;
+}
+
+.emphasis-main {
+    font-size: 2.6rem;
+    font-weight: 900;
+    line-height: 1.4;
+    margin-bottom: 28px;
+    letter-spacing: -0.02em;
+}
+
+.emphasis-main.large {
+    font-size: 3.4rem;
+}
+
+.emphasis-sub {
+    font-size: 1.05rem;
+    color: var(--text-light);
+    margin-top: 24px;
+    line-height: 1.6;
+}
+
+/* Accents */
+.accent-primary { color: var(--primary); }
+.accent-teal    { color: var(--teal); }
+.accent-coral   { color: var(--coral); }
+.accent-amber   { color: var(--amber); }
+
+/* ============================================================
+   Title Card
+   ============================================================ */
+.title-card {
+    text-align: center;
+}
+
+.title-label {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--primary);
+    margin-bottom: 18px;
+}
+
+.title-main {
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: 1.35;
+    margin-bottom: 24px;
+    letter-spacing: -0.03em;
+}
+
+.title-accent-line {
+    width: 80px;
+    height: 4px;
+    margin: 8px auto 16px;
+    background: linear-gradient(90deg, var(--primary), var(--teal));
+    border-radius: 2px;
+}
+
+.title-sub {
+    font-size: 1.05rem;
+    color: var(--text-light);
+    letter-spacing: 0.05em;
+}
+
+/* ============================================================
+   Chapter Title
+   ============================================================ */
+.chapter-title {
+    text-align: center;
+}
+
+.chapter-number {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--primary);
+    margin-bottom: 14px;
+}
+
+.chapter-name {
+    font-size: 2.8rem;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    letter-spacing: -0.03em;
+}
+
+.chapter-line {
+    width: 60px;
+    height: 3px;
+    margin: 0 auto 12px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.chapter-sub {
+    font-size: 1.05rem;
+    color: var(--text-light);
+    letter-spacing: 0.05em;
+}
+
+/* ============================================================
+   Impact Number
+   ============================================================ */
+.impact-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--text-light);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.impact-number-group {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.impact-number {
+    font-size: 7rem;
+    font-weight: 900;
+    color: var(--primary);
+    display: inline-block;
+    line-height: 1;
+}
+
+.impact-number-unit {
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: var(--text);
+    vertical-align: baseline;
+}
+
+.impact-desc {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text);
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.impact-note {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    text-align: center;
+}
+
+/* ============================================================
+   Quote Card
+   ============================================================ */
+.quote-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 36px 40px;
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--primary);
+    position: relative;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.quote-card.quote-warning {
+    border-left-color: var(--coral);
+}
+
+.quote-card.quote-warm {
+    border-left-color: var(--amber);
+}
+
+.quote-mark {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 4px;
+    opacity: 0.3;
+}
+
+.quote-warning .quote-mark {
+    color: var(--coral);
+}
+
+.quote-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.quote-source {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* ============================================================
+   Source Badge
+   ============================================================ */
+.source-badge {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-light);
+    background: #f1f5f9;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-top: 14px;
+    letter-spacing: 0.02em;
+}
+
+/* ============================================================
+   VS Layout
+   ============================================================ */
+.vs-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 16px;
+}
+
+.vs-side {
+    background: var(--card-bg);
+    padding: 28px 32px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+}
+
+.vs-badge {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.safe-badge {
+    background: var(--teal-light);
+    color: var(--teal);
+}
+
+.danger-badge {
+    background: var(--coral-light);
+    color: var(--coral);
+}
+
+.vs-title {
+    font-size: 1.3rem;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.vs-result {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-top: 6px;
+}
+
+.vs-result.safe  { color: var(--teal); }
+.vs-result.danger { color: var(--coral); }
+
+.vs-center-badge {
+    display: flex;
+    align-items: center;
+}
+
+.vs-badge-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 900;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comparison-note {
+    font-size: 1rem;
+    color: var(--text-light);
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* ============================================================
+   Three-Points Grid / Myth Cards
+   ============================================================ */
+.three-points-grid {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.myth-card {
+    background: var(--card-bg);
+    padding: 28px 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    flex: 1;
+    max-width: 240px;
+    text-align: center;
+    border: 2px solid var(--coral-light);
+}
+
+.myth-x {
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: var(--coral);
+    margin-bottom: 10px;
+}
+
+.myth-text {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* ============================================================
+   Step List (Progressive Items)
+   ============================================================ */
+.step-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--card-bg);
+    padding: 22px 28px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.step-marker {
+    font-size: 1.6rem;
+    font-weight: 900;
+    min-width: 56px;
+    text-align: center;
+}
+
+.step-text {
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* ============================================================
+   Flow (ETH-style)
+   ============================================================ */
+.eth-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.eth-step {
+    background: var(--card-bg);
+    padding: 20px 22px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    min-width: 180px;
+}
+
+.eth-year {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.eth-year.eth-fail { color: var(--coral); }
+.eth-year.eth-pass { color: var(--teal); }
+
+.eth-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.eth-desc {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 6px;
+}
+
+.eth-arrow {
+    color: var(--text-light);
+}
+
+.eth-arrow svg {
+    width: 30px;
+    height: 20px;
+}

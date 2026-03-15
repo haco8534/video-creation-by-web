@@ -107,6 +107,7 @@ async function processNextItem() {
         await chrome.tabs.sendMessage(currentTabId, {
             type: 'PROCESS_PROMPT',
             prompt: item.text,
+            prefix: settings.prefix || '',
             itemId: item.id,
             timeout: settings.timeout * 1000,
             delay: settings.delay * 1000,

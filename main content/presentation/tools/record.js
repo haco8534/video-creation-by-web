@@ -1,14 +1,14 @@
 /**
- * record.js (v4 - parallel + transition capture)
+ * record.js (v5 - true parallel recording)
  * 
- * 複数ブラウザで並列録画し、ffmpegで結合する。
- * シーン遷移のフェードインも含めて録画する。
+ * 複数ブラウザインスタンスを同時に起動し、チャンクを真に並列で録画する。
+ * 各ワーカーは独立したPuppeteer + ffmpegペアを持ち、全ワーカーが同時に動作する。
  * 
  * 使い方: node tools/record.js <project_dir> [workers] [viewport] [zoom]
  *   project_dir: テーマ名 (例: llm_text_generation)
  *   workers:     並列数 (デフォルト: 4)
  *   viewport:    WxH (デフォルト: 1440x810, 16:9)
- *   zoom:        CSS zoom倍率 (デフォルト: 1.3, コンテンツ拡大用)
+ *   zoom:        CSS zoom倍率 (デフォルト: 1.8, コンテンツ拡大用)
  */
 const puppeteer = require('puppeteer');
 const fs = require('fs');
@@ -26,7 +26,7 @@ const PROJECT_DIR = path.resolve(PRES_ROOT, args[0]);
 const NUM_WORKERS = parseInt(args[1]) || 4;
 const VIEWPORT = args[2] || '1440x810';
 const [WIDTH, HEIGHT] = VIEWPORT.split('x').map(Number);
-const CSS_ZOOM = parseFloat(args[3]) || 1.5;
+const CSS_ZOOM = parseFloat(args[3]) || 1.8;
 
 const DURATIONS_FILE = path.join(PROJECT_DIR, 'scene_durations.json');
 const HTML_FILE = path.join(PROJECT_DIR, 'index.html');
@@ -34,6 +34,7 @@ const OUTPUT_FILE = path.join(PROJECT_DIR, 'recording.mp4');
 const CHUNKS_DIR = path.join(PROJECT_DIR, 'chunks');
 
 const FPS = 30;
+const WORKER_STAGGER_MS = 500; // ワーカー起動間隔（ディスクI/Oのラッシュを避ける）
 
 async function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
@@ -65,10 +66,23 @@ async function recordChunk(chunkId, scenes, fileUrl, outputPath) {
         '-c:v', 'libx264', '-preset', 'fast', '-crf', '20',
         '-pix_fmt', 'yuv420p', '-r', String(FPS),
         outputPath,
-    ], { stdio: ['pipe', 'pipe', 'pipe'] });
+    ], { stdio: ['pipe', 'ignore', 'ignore'] });
 
+    // EPIPE等のstdinエラーは無視
+    ffmpeg.stdin.on('error', (e) => {
+        if (e.code !== 'EPIPE') console.warn(`  [W${chunkId}] stdin error: ${e.code}`);
+    });
+
+    let ffmpegExitCode = null;
     const ffmpegDone = new Promise((resolve, reject) => {
-        ffmpeg.on('close', (code) => code === 0 ? resolve() : reject(new Error(`ffmpeg exit ${code}`)));
+        ffmpeg.on('close', (code) => {
+            ffmpegExitCode = code;
+            if (code === 0) resolve();
+            else {
+                console.warn(`  [W${chunkId}] ffmpeg exit ${code}`);
+                reject(new Error(`ffmpeg exit ${code}`));
+            }
+        });
     });
 
     // CDP screencast
@@ -94,7 +108,6 @@ async function recordChunk(chunkId, scenes, fileUrl, outputPath) {
     // (so first scene transition is captured)
     const firstSceneId = scenes[0].id;
     if (firstSceneId > 0) {
-        // Initialize by briefly visiting first scene, then go to prev scene
         await page.evaluate((idx) => window.goTo(idx), firstSceneId);
         await sleep(1500);
         await page.evaluate((idx) => window.goTo(idx), firstSceneId - 1);
@@ -103,7 +116,6 @@ async function recordChunk(chunkId, scenes, fileUrl, outputPath) {
 
     for (let si = 0; si < scenes.length; si++) {
         const scene = scenes[si];
-        // Total frames = scene duration only (transition is within the duration)
         const sceneFrames = Math.ceil(scene.duration * FPS);
 
         // Navigate to scene - DON'T wait, capture the transition!
@@ -112,22 +124,27 @@ async function recordChunk(chunkId, scenes, fileUrl, outputPath) {
         // Capture all frames (transition animation plays within scene duration)
         for (let f = 0; f < sceneFrames; f++) {
             if (latestFrameBuffer && !ffmpeg.stdin.destroyed) {
-                ffmpeg.stdin.write(latestFrameBuffer);
+                const ok = ffmpeg.stdin.write(latestFrameBuffer);
+                if (!ok) await new Promise(r => ffmpeg.stdin.once('drain', r));
                 frameCount++;
             }
             await sleep(frameInterval);
         }
 
-        console.log(`  [Worker ${chunkId}] Scene ${scene.id} "${scene.title}": done`);
+        console.log(`  [W${chunkId}] Scene ${scene.id} "${scene.title}": done`);
     }
 
     try { await cdp.send('Page.stopScreencast'); } catch (e) { }
+
+    // ffmpegにstdinを閉じて終了を通知し、確実に完了するまで待つ
     ffmpeg.stdin.end();
-    // Wait for ffmpeg to finish (needs time to write moov atom)
+    console.log(`  [W${chunkId}] ffmpeg finishing...`);
     await Promise.race([
-        ffmpegDone.catch(() => { }),
-        new Promise(r => setTimeout(r, 120000))
-    ]);
+        ffmpegDone,
+        new Promise((_, reject) => setTimeout(() => reject(new Error('ffmpeg timeout')), 180000))
+    ]).catch(err => console.warn(`  [W${chunkId}] ffmpeg: ${err.message}`));
+
+    // ffmpegが完全に書き込み終わった後にブラウザを閉じる
     try {
         await Promise.race([
             browser.close(),
@@ -136,6 +153,7 @@ async function recordChunk(chunkId, scenes, fileUrl, outputPath) {
     } catch (e) { }
     try { browser.process()?.kill('SIGKILL'); } catch (e) { }
 
+    console.log(`  [W${chunkId}] ✅ Done (${frameCount} frames, ${(frameCount / FPS).toFixed(1)}s)`);
     return frameCount;
 }
 
@@ -154,9 +172,8 @@ async function main() {
     console.log(`Total duration: ${totalDuration.toFixed(1)}s (${(totalDuration / 60).toFixed(1)}min)`);
     console.log(`Workers: ${NUM_WORKERS}\n`);
 
-    // Clean chunks directory
-    if (fs.existsSync(CHUNKS_DIR)) fs.rmSync(CHUNKS_DIR, { recursive: true });
-    fs.mkdirSync(CHUNKS_DIR, { recursive: true });
+    // Clean chunks directory (only delete broken chunks; keep valid ones)
+    if (!fs.existsSync(CHUNKS_DIR)) fs.mkdirSync(CHUNKS_DIR, { recursive: true });
 
     // Split scenes into chunks for parallel recording
     const scenesPerWorker = Math.ceil(durations.length / NUM_WORKERS);
@@ -176,17 +193,51 @@ async function main() {
     });
     console.log('');
 
-    // Record all chunks in parallel
+    // ============================================================
+    // 真の並列録画: 全ワーカーを同時に起動してPromise.allで待つ
+    // ============================================================
+    console.log(`Recording ${chunks.length} chunks in PARALLEL (${NUM_WORKERS} workers)...`);
     const startTime = Date.now();
-    const chunkPromises = chunks.map((scenes, i) => {
+
+    // 各チャンクの録画タスクを生成（スキップ判定込み）
+    const tasks = chunks.map((scenes, i) => {
         const chunkPath = path.join(CHUNKS_DIR, `chunk_${String(i).padStart(2, '0')}.mkv`);
-        return recordChunk(i, scenes, fileUrl, chunkPath)
-            .then(frames => ({ id: i, frames, path: chunkPath }));
+        return { id: i, scenes, chunkPath };
     });
 
-    const results = await Promise.all(chunkPromises);
+    // 既存の正常なチャンクをチェック → スキップ or 録画
+    const promises = tasks.map(async (task, idx) => {
+        const { id, scenes, chunkPath } = task;
+
+        // 既存の正常なチャンクはスキップ
+        if (fs.existsSync(chunkPath) && fs.statSync(chunkPath).size > 1024 * 1024) {
+            try {
+                const dur = parseFloat(execFileSync('ffprobe', [
+                    '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', chunkPath
+                ], { encoding: 'utf-8' }).trim());
+                if (!isNaN(dur) && dur > 10) {
+                    console.log(`  [W${id}] SKIPPED (already valid, ${dur.toFixed(1)}s)`);
+                    return { id, frames: Math.round(dur * FPS), path: chunkPath };
+                }
+            } catch (e) { /* 読めないので再録画 */ }
+        }
+
+        // ワーカー起動をずらしてディスクI/Oとブラウザ起動の競合を軽減
+        if (idx > 0) await sleep(idx * WORKER_STAGGER_MS);
+
+        console.log(`  [W${id}] Starting (${scenes.length} scenes) ...`);
+        const frames = await recordChunk(id, scenes, fileUrl, chunkPath);
+        return { id, frames, path: chunkPath };
+    });
+
+    // 全ワーカーが完了するまで待つ
+    const results = await Promise.all(promises);
+
+    // id順にソート（Promise.allは入力順を保つが念のため）
+    results.sort((a, b) => a.id - b.id);
+
     const elapsed = ((Date.now() - startTime) / 1000).toFixed(0);
-    console.log(`\nAll chunks recorded in ${elapsed}s`);
+    console.log(`\nAll ${chunks.length} chunks recorded in ${elapsed}s (${(elapsed / 60).toFixed(1)}min)`);
 
     // Concatenate chunks
     console.log('Concatenating chunks...');

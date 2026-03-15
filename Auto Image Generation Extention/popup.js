@@ -20,6 +20,7 @@ const el = {
   progressText: document.getElementById('progressText'),
   timeoutInput: document.getElementById('timeoutInput'),
   delayInput: document.getElementById('delayInput'),
+  prefixInput: document.getElementById('prefixInput'),
   lineCount: document.getElementById('lineCount'),
   // Tabs
   tabText: document.getElementById('tabText'),
@@ -61,6 +62,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   el.clearBtn.addEventListener('click', handleClear);
   el.timeoutInput.addEventListener('change', saveSettings);
   el.delayInput.addEventListener('change', saveSettings);
+  el.prefixInput.addEventListener('change', saveSettings);
 
   // Line count
   el.promptInput.addEventListener('input', updateLineCount);
@@ -102,17 +104,13 @@ function handleAddPrompts() {
   const text = el.promptInput.value.trim();
   if (!text) return;
 
-  // 1行 = 1プロンプト（空行は無視）
-  const lines = text.split('\n')
-    .map(l => l.trim())
-    .filter(l => l.length > 0);
+  const prompts = parsePrompts(text);
+  if (prompts.length === 0) return;
 
-  if (lines.length === 0) return;
-
-  lines.forEach(line => {
+  prompts.forEach(prompt => {
     queue.push({
       id: Date.now() + Math.random(),
-      text: line,
+      text: prompt,
       status: 'pending',
     });
   });
@@ -124,10 +122,37 @@ function handleAddPrompts() {
   updateUI();
 }
 
+/**
+ * テキストをプロンプトの配列に分割する
+ * - 「---」区切りが含まれていれば、各ブロックを1プロンプトとして扱う（複数行プロンプト対応）
+ * - 「---」がなければ、従来通り1行 = 1プロンプト
+ */
+function parsePrompts(text) {
+  // --- が独立した行として存在するかチェック
+  const hasDelimiter = text.split('\n').some(line => line.trim() === '---');
+
+  if (hasDelimiter) {
+    // --- 区切りモード: 各ブロックが1プロンプト
+    return text.split(/^---$/m)
+      .map(block => block.trim())
+      .filter(block => block.length > 0);
+  } else {
+    // 従来モード: 1行 = 1プロンプト
+    return text.split('\n')
+      .map(l => l.trim())
+      .filter(l => l.length > 0);
+  }
+}
+
 function updateLineCount() {
-  const text = el.promptInput.value;
-  const lines = text.split('\n').filter(l => l.trim().length > 0);
-  el.lineCount.textContent = `${lines.length}行`;
+  const text = el.promptInput.value.trim();
+  if (!text) {
+    el.lineCount.textContent = '0件';
+    return;
+  }
+  const prompts = parsePrompts(text);
+  const hasDelimiter = text.split('\n').some(line => line.trim() === '---');
+  el.lineCount.textContent = hasDelimiter ? `${prompts.length}件（---区切り）` : `${prompts.length}行`;
 }
 
 // ===== CSV Import =====
@@ -500,10 +525,19 @@ async function loadState() {
   }
 }
 
+const DEFAULT_PREFIX = `以下のYAML仕様に基づいてYouTube動画のサムネイル画像を1枚生成してください。サムネイルであり、イラスト作品ではありません。
+- direction, mood: 画像の雰囲気。画像内テキストとして描画しない
+- main_catch: 画像内に最も大きく目立つように配置するメインテキスト。サムネの主役
+- sub_text: 画像内に小さく配置するサブテキスト
+- visual_concept: 描画するビジュアル。シンプルに1つの主題
+- style: 画風指示
+重要: テキストが最も目立つこと。ビジュアルは背景やテキストの引き立て役。AIイラスト風の厚塗り・複雑すぎるシーンは禁止。`;
+
 function getSettings() {
   return {
     timeout: parseInt(el.timeoutInput.value) || 300,
     delay: parseInt(el.delayInput.value) || 3,
+    prefix: el.prefixInput.value,
   };
 }
 function saveSettings() { chrome.storage.local.set({ settings: getSettings() }); }
@@ -512,6 +546,9 @@ async function loadSettings() {
   if (data.settings) {
     el.timeoutInput.value = data.settings.timeout || 300;
     el.delayInput.value = data.settings.delay || 3;
+    el.prefixInput.value = data.settings.prefix ?? DEFAULT_PREFIX;
+  } else {
+    el.prefixInput.value = DEFAULT_PREFIX;
   }
 }
 

@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <title>「寝る子は育つ」は科学的に正しかった</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Scene 0: タイトルカード - 「寝る子は育つ」は科学的に正しかった -->
+    <div class="scene" id="scene-0">
+        <canvas id="canvas-0" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary stagger-item">SLEEP SCIENCE</div>
+            <h2 class="title-large stagger-item">「寝る子は育つ」は<br><span class="accent-primary">科学的に正しかった</span></h2>
+            <div class="title-sub stagger-item">成長ホルモン・脳発達・肥満予防の科学的エビデンス</div>
+        </div>
+    </div>
+
+    <!-- Scene 1: 数値インパクト - 成長ホルモンの70〜80%は睡眠中に分泌 -->
+    <div class="scene" id="scene-1">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">成長ホルモンと睡眠</h2>
+            <div class="source-badge stagger-item">子どもの成長ホルモン分泌 / 睡眠医学文献</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-primary">70</span><span class="num-unit">〜</span><span
+                    class="big-num accent-primary">80</span><span class="num-unit">%</span>
+            </div>
+            <div class="emphasis-sub stagger-item">が<span class="accent-primary">睡眠中</span>に分泌される</div>
+            <div class="footnote stagger-item">
+                <!-- Custom: Sleep hormone visual -->
+                <div class="sleep-hormone-visual">
+                    <div class="hormone-bar-container">
+                        <div class="hormone-bar-label">睡眠中</div>
+                        <div class="hormone-bar-track">
+                            <div class="hormone-bar-fill sleep-fill" style="--w:78%"></div>
+                        </div>
+                        <div class="hormone-bar-val accent-primary">78%</div>
+                    </div>
+                    <div class="hormone-bar-container">
+                        <div class="hormone-bar-label">起きている間</div>
+                        <div class="hormone-bar-track">
+                            <div class="hormone-bar-fill awake-fill" style="--w:22%"></div>
+                        </div>
+                        <div class="hormone-bar-val">22%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 2: 段階的リスト - 睡眠が「育てる」3つのもの -->
+    <div class="scene" id="scene-2">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">睡眠が「育てる」3つのもの</h2>
+            <div class="triple-card">
+                <div class="factor-card stagger-item" style="--accent:#6366f1">
+                    <div class="factor-icon accent-bg-primary">
+                        <svg viewBox="0 0 48 48" width="32" height="32">
+                            <path
+                                d="M24 4c-5.5 0-10 4.5-10 10v4h-2v16c0 2.2 1.8 4 4 4h16c2.2 0 4-1.8 4-4V18h-2v-4c0-5.5-4.5-10-10-10z"
+                                fill="white" opacity="0.9" />
+                        </svg>
+                    </div>
+                    <div class="factor-name">身体</div>
+                    <div class="factor-desc">身長・体型を<br>健康に保つ</div>
+                </div>
+                <div class="factor-card stagger-item" style="--accent:#8b5cf6">
+                    <div class="factor-icon" style="background:linear-gradient(135deg,#8b5cf6,#a78bfa)">
+                        <svg viewBox="0 0 48 48" width="32" height="32">
+                            <ellipse cx="24" cy="22" rx="14" ry="12" fill="white" opacity="0.9" />
+                            <path d="M14 28c0 4 4.5 8 10 8s10-4 10-8" fill="none" stroke="white" stroke-width="2"
+                                opacity="0.7" />
+                        </svg>
+                    </div>
+                    <div class="factor-name">脳</div>
+                    <div class="factor-desc">記憶力・学力に<br>直結する</div>
+                </div>
+                <div class="factor-card stagger-item" style="--accent:#ec4899">
+                    <div class="factor-icon" style="background:linear-gradient(135deg,#ec4899,#f472b6)">
+                        <svg viewBox="0 0 48 48" width="32" height="32">
+                            <path
+                                d="M24 42s-16-10.3-16-22c0-5.5 4.5-10 10-10 3.8 0 5.5 2 6 3 .5-1 2.2-3 6-3 5.5 0 10 4.5 10 10 0 11.7-16 22-16 22z"
+                                fill="white" opacity="0.9" />
+                        </svg>
+                    </div>
+                    <div class="factor-name">心の健康</div>
+                    <div class="factor-desc">メンタル・免疫力<br>にも関わる</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 3: タイトルカード - 成長ホルモンと睡眠の関係 -->
+    <div class="scene" id="scene-3">
+        <canvas id="canvas-3" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-teal stagger-item">MECHANISM</div>
+            <h2 class="title-medium stagger-item">成長ホルモンと<br><span class="accent-teal">睡眠の関係</span></h2>
+            <div class="title-sub stagger-item">下垂体から分泌される「育ちのホルモン」</div>
+        </div>
+    </div>
+
+    <!-- Scene 4: フロー図 - 1968年 Takahashiの発見 -->
+    <div class="scene" id="scene-4">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">成長ホルモン研究の歴史</h2>
+            <div class="source-badge stagger-item">Takahashi Y. et al. (1968) / Journal of Clinical Investigation</div>
+            <div class="flow-chain">
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">1968</div>
+                    <div class="flow-text"><span class="flow-name">高橋康郎</span><br>深い睡眠と成長ホルモン<br>の関連を発見<br><span
+                            class="flow-sub">Journal of Clinical Investigation</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">1969</div>
+                    <div class="flow-text"><span class="flow-name">Honda et
+                            al.</span><br>夜間睡眠がGH分泌の<br>強力な刺激であると確認<br><span class="flow-sub">J Clin Endocrinol
+                            Metab</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year">2020s</div>
+                    <div class="flow-text"><span class="flow-name">UC
+                            Berkeley</span><br>光遺伝学でGH分泌の<br>睡眠依存メカニズム解明<br><span class="flow-sub">ソマトスタチン抑制の発見</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">50年以上にわたって研究が積み重ねられてきた</div>
+        </div>
+    </div>
+
+    <!-- Scene 5: 数値インパクト - 入眠後90分〜3時間がピーク -->
+    <div class="scene" id="scene-5">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">入眠後のGH分泌ピーク</h2>
+            <div class="source-badge stagger-item">睡眠医学文献 / 徐波睡眠（ステージN3）</div>
+            <!-- Custom: Sleep cycle visual -->
+            <div class="sleep-cycle-visual stagger-item">
+                <svg viewBox="0 0 600 220" class="sleep-svg">
+                    <defs>
+                        <linearGradient id="sleepGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.3" />
+                            <stop offset="30%" style="stop-color:#6366f1;stop-opacity:0.9" />
+                            <stop offset="60%" style="stop-color:#818cf8;stop-opacity:0.5" />
+                            <stop offset="100%" style="stop-color:#c4b5fd;stop-opacity:0.2" />
+                        </linearGradient>
+                    </defs>
+                    <text x="300" y="30" text-anchor="middle" fill="#4b5563" font-size="14"
+                        font-weight="700">睡眠中の成長ホルモン分泌量</text>
+                    <rect x="50" y="45" width="500" height="140" rx="8" fill="#f8fafc" stroke="#e2e8f0"
+                        stroke-width="1" />
+                    <path
+                        d="M60,170 Q100,168 130,100 Q160,50 200,55 Q250,65 280,120 Q310,155 350,145 Q380,138 410,150 Q440,158 470,155 Q500,152 540,165"
+                        fill="none" stroke="url(#sleepGrad)" stroke-width="3" class="gh-curve" />
+                    <rect x="100" y="45" width="120" height="140" rx="0" fill="#6366f1" opacity="0.08" />
+                    <text x="160" y="200" text-anchor="middle" fill="#6366f1" font-size="12"
+                        font-weight="700">90分〜3時間</text>
+                    <text x="60" y="200" text-anchor="start" fill="#9ca3af" font-size="11">入眠</text>
+                    <text x="540" y="200" text-anchor="end" fill="#9ca3af" font-size="11">起床</text>
+                    <circle cx="160" cy="72" r="6" fill="#6366f1" class="peak-dot" />
+                    <text x="160" y="62" text-anchor="middle" fill="#6366f1" font-size="11" font-weight="700">ピーク</text>
+                </svg>
+            </div>
+            <div class="emphasis-text stagger-item">入眠後 <span class="accent-primary">最初の90分〜3時間</span> がカギ</div>
+            <div class="emphasis-sub stagger-item">「徐波睡眠」＝ノンレム睡眠の最も深い段階</div>
+        </div>
+    </div>
+
+    <!-- Scene 6: 比較対照 - 成長ホルモン分泌の仕組み（ブレーキとアクセル） -->
+    <div class="scene" id="scene-6">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">GH分泌のブレーキとアクセル</h2>
+            <div class="source-badge stagger-item">UC Berkeley / 光遺伝学研究</div>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge safe-badge">アクセル</div>
+                    <div class="vs-title">GHRH</div>
+                    <div class="vs-desc">成長ホルモン放出ホルモン</div>
+                    <div class="vs-detail accent-teal">GH分泌を促進</div>
+                </div>
+                <div class="vs-divider stagger-item">
+                    <svg viewBox="0 0 60 60" width="48" height="48">
+                        <circle cx="30" cy="30" r="28" fill="#f3f4f6" stroke="#d1d5db" /><text x="30" y="35"
+                            text-anchor="middle" fill="#6b7280" font-size="14" font-weight="700">vs</text>
+                    </svg>
+                </div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge danger-badge">ブレーキ</div>
+                    <div class="vs-title">ソマトスタチン</div>
+                    <div class="vs-desc">GH分泌を抑制する神経</div>
+                    <div class="vs-detail accent-coral">起きている間はON<br>→ 寝るとOFF</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">睡眠中はブレーキが外れ → <span class="accent-primary">GHが大量分泌</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 7: タイトルカード - 身体の成長と睡眠 -->
+    <div class="scene" id="scene-7">
+        <canvas id="canvas-7" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-teal stagger-item">TOPIC 1</div>
+            <h2 class="title-medium stagger-item">身体の成長と<br><span class="accent-teal">睡眠</span></h2>
+            <div class="title-sub stagger-item">身長・体型にまで影響する睡眠の力</div>
+        </div>
+    </div>
+
+    <!-- Scene 8: 数値インパクト - エコチル調査 -->
+    <div class="scene" id="scene-8">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">エコチル調査の結果</h2>
+            <div class="source-badge stagger-item">環境省 エコチル調査 / 約10万人の子ども対象</div>
+            <div class="ecochil-visual stagger-item">
+                <div class="ecochil-card">
+                    <div class="ecochil-age">1歳半</div>
+                    <div class="ecochil-arrow">&darr;</div>
+                    <div class="ecochil-result">
+                        <span class="accent-primary">夜間睡眠時間が長い子</span>ほど<br><span
+                            class="big-inline accent-teal">3歳時の身長が高い</span>
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">睡眠の影響は<span class="accent-primary">1歳半</span>の時点から現れる</div>
+            <div class="footnote stagger-item">身長の約80%は遺伝で決まるが、残り20%の環境因子の中で睡眠は最重要</div>
+        </div>
+    </div>
+
+    <!-- Scene 9: 比較対照 - 睡眠時間と肥満リスク（富山スタディ） -->
+    <div class="scene" id="scene-9">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">睡眠時間と肥満リスク</h2>
+            <div class="source-badge stagger-item">富山大学 出生コホート研究（富山スタディ）</div>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge safe-badge">11時間以上</div>
+                    <div class="vs-title">十分な睡眠</div>
+                    <div class="vs-desc">肥満リスク：基準</div>
+                    <div class="risk-indicator low">1.0x</div>
+                </div>
+                <div class="vs-divider stagger-item">
+                    <svg viewBox="0 0 60 60" width="48" height="48">
+                        <circle cx="30" cy="30" r="28" fill="#f3f4f6" stroke="#d1d5db" /><text x="30" y="35"
+                            text-anchor="middle" fill="#6b7280" font-size="14" font-weight="700">vs</text>
+                    </svg>
+                </div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge danger-badge">9時間未満</div>
+                    <div class="vs-title">睡眠不足</div>
+                    <div class="vs-desc">肥満リスク：上昇</div>
+                    <div class="risk-indicator high">1.6x</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">3歳時の睡眠時間が<span class="accent-coral">将来の肥満</span>を予測する</div>
+        </div>
+    </div>
+
+    <!-- Scene 10: フロー図 - レプチン・グレリンのメカニズム -->
+    <div class="scene" id="scene-10">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">睡眠不足が肥満を招くメカニズム</h2>
+            <div class="flow-chain">
+                <div class="flow-node stagger-item" style="border-color:#ef4444">
+                    <div class="flow-year" style="background:#ef4444">睡眠不足</div>
+                    <div class="flow-text">十分な睡眠が<br>確保できない</div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-year" style="background:#f59e0b">ホルモン変化</div>
+                    <div class="flow-text"><span class="flow-name">レプチン</span>（抑制）が<span
+                            class="accent-coral">減少</span><br><span class="flow-name">グレリン</span>（促進）が<span
+                            class="accent-coral">増加</span></div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item" style="border-color:#ef4444">
+                    <div class="flow-year" style="background:#ef4444">結果</div>
+                    <div class="flow-text">食欲が<span class="accent-coral">亢進</span><br>→ 過食・<span
+                            class="accent-coral">肥満</span>リスク上昇</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">ブレーキ（レプチン）が弱まり、アクセル（グレリン）が強まる</div>
+        </div>
+    </div>
+
+    <!-- Scene 11: 数値インパクト - 睡眠1時間短縮で肥満リスク21%上昇 -->
+    <div class="scene" id="scene-11">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">睡眠1時間の差がもたらす影響</h2>
+            <div class="source-badge stagger-item">小児データベース研究 / 2〜5歳 幼児期</div>
+            <div class="impact-number stagger-item">
+                <span class="num-prefix">睡眠 -1h ごとに</span><br>
+                <span class="big-num accent-coral">+21</span><span class="num-unit">%</span>
+            </div>
+            <div class="emphasis-sub stagger-item">過体重・肥満のリスクが<span class="accent-coral">上昇</span></div>
+            <div class="footnote stagger-item">たった1時間の差が将来の健康を左右する</div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Scene 13: タイトルカード - 脳の成長と学力 -->
+    <div class="scene" id="scene-13">
+        <canvas id="canvas-13" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-amber stagger-item">TOPIC 2</div>
+            <h2 class="title-medium stagger-item">脳の成長と<br><span class="accent-amber">学力</span></h2>
+            <div class="title-sub stagger-item">寝ている間に脳は育っている</div>
+        </div>
+    </div>
+
+    <!-- Scene 14: 数値インパクト - 川島教授の4万人調査 -->
+    <div class="scene" id="scene-14">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">睡眠時間と学力の関係</h2>
+            <div class="source-badge stagger-item">東北大学 川島隆太教授 / 小中学生4万人調査</div>
+            <!-- Custom: Academic performance bar chart -->
+            <div class="academic-chart stagger-item">
+                <div class="academic-bar-group">
+                    <div class="academic-bar-item">
+                        <div class="academic-bar-label">6h以下</div>
+                        <div class="academic-bar-track">
+                            <div class="academic-bar-fill" style="--w:45%;--color:#ef4444"></div>
+                        </div>
+                        <div class="academic-bar-score accent-coral">低い</div>
+                    </div>
+                    <div class="academic-bar-item">
+                        <div class="academic-bar-label">7時間</div>
+                        <div class="academic-bar-track">
+                            <div class="academic-bar-fill" style="--w:65%;--color:#f59e0b"></div>
+                        </div>
+                        <div class="academic-bar-score">中程度</div>
+                    </div>
+                    <div class="academic-bar-item best-item">
+                        <div class="academic-bar-label">8〜9h</div>
+                        <div class="academic-bar-track">
+                            <div class="academic-bar-fill" style="--w:95%;--color:#6366f1"></div>
+                        </div>
+                        <div class="academic-bar-score accent-primary">最も高い</div>
+                    </div>
+                    <div class="academic-bar-item">
+                        <div class="academic-bar-label">10h以上</div>
+                        <div class="academic-bar-track">
+                            <div class="academic-bar-fill" style="--w:78%;--color:#14b8a6"></div>
+                        </div>
+                        <div class="academic-bar-score">やや低下</div>
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item"><span class="accent-primary">8〜9時間</span>のグループが最も成績が良い</div>
+        </div>
+    </div>
+
+    <!-- Scene 15: 段階的リスト - 睡眠中の記憶定着メカニズム -->
+    <div class="scene" id="scene-15">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">睡眠中の記憶定着メカニズム</h2>
+            <div class="source-badge stagger-item">J Neurosci / 理化学研究所 / 筑波大学</div>
+            <!-- Custom: Memory replay visual -->
+            <div class="memory-replay-visual stagger-item">
+                <div class="memory-stage">
+                    <div class="memory-icon">
+                        <svg viewBox="0 0 64 64" width="48" height="48">
+                            <rect x="8" y="12" width="48" height="40" rx="4" fill="#e0e7ff" stroke="#6366f1"
+                                stroke-width="2" />
+                            <rect x="14" y="18" width="36" height="6" rx="2" fill="#6366f1" opacity="0.3" />
+                            <rect x="14" y="28" width="28" height="4" rx="2" fill="#6366f1" opacity="0.2" />
+                            <rect x="14" y="36" width="32" height="4" rx="2" fill="#6366f1" opacity="0.2" />
+                        </svg>
+                    </div>
+                    <div class="memory-label">日中の学習</div>
+                    <div class="memory-sub">海馬に一時保存</div>
+                </div>
+                <div class="memory-arrow">&rarr;</div>
+                <div class="memory-stage highlight-stage">
+                    <div class="memory-icon">
+                        <svg viewBox="0 0 64 64" width="48" height="48">
+                            <circle cx="32" cy="32" r="24" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2" />
+                            <path d="M20,32 Q26,22 32,32 Q38,42 44,32" fill="none" stroke="#8b5cf6" stroke-width="2.5"
+                                class="replay-wave" />
+                        </svg>
+                    </div>
+                    <div class="memory-label accent-primary">睡眠中リプレイ</div>
+                    <div class="memory-sub">神経パターンの再活性化</div>
+                </div>
+                <div class="memory-arrow">&rarr;</div>
+                <div class="memory-stage">
+                    <div class="memory-icon">
+                        <svg viewBox="0 0 64 64" width="48" height="48">
+                            <ellipse cx="32" cy="28" rx="22" ry="16" fill="#dbeafe" stroke="#3b82f6" stroke-width="2" />
+                            <path d="M18,36 Q32,50 46,36" fill="none" stroke="#3b82f6" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="memory-label">大脳皮質へ転送</div>
+                    <div class="memory-sub">長期記憶として定着</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">寝ないとこの転送作業が中断 → 徹夜勉強が無意味に</div>
+        </div>
+    </div>
+
+    <!-- Scene 16: 数値インパクト - メリーランド大学：灰白質の体積に差 -->
+    <div class="scene" id="scene-16">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">睡眠不足が脳の構造に影響</h2>
+            <div class="source-badge stagger-item">University of Maryland (2022) / The Lancet Child & Adolescent Health
+            </div>
+            <!-- Custom: Brain gray matter visual -->
+            <div class="brain-visual stagger-item">
+                <div class="brain-compare">
+                    <div class="brain-card brain-good">
+                        <div class="brain-label safe-badge">9時間以上</div>
+                        <svg viewBox="0 0 120 100" width="140" height="116">
+                            <ellipse cx="60" cy="42" rx="42" ry="34" fill="#c7d2fe" stroke="#6366f1" stroke-width="2" />
+                            <path d="M30,50 Q40,30 60,28 Q80,30 90,50" fill="none" stroke="#6366f1" stroke-width="1.5"
+                                opacity="0.5" />
+                            <path d="M35,55 Q48,38 60,35 Q72,38 85,55" fill="none" stroke="#6366f1" stroke-width="1.5"
+                                opacity="0.4" />
+                            <text x="60" y="85" text-anchor="middle" fill="#4338ca" font-size="12"
+                                font-weight="700">正常な灰白質</text>
+                        </svg>
+                    </div>
+                    <div class="brain-vs">vs</div>
+                    <div class="brain-card brain-bad">
+                        <div class="brain-label danger-badge">9時間未満</div>
+                        <svg viewBox="0 0 120 100" width="140" height="116">
+                            <ellipse cx="60" cy="45" rx="36" ry="28" fill="#fecaca" stroke="#ef4444" stroke-width="2" />
+                            <path d="M34,52 Q44,38 60,36 Q76,38 86,52" fill="none" stroke="#ef4444" stroke-width="1.5"
+                                opacity="0.4" />
+                            <text x="60" y="85" text-anchor="middle" fill="#dc2626" font-size="12"
+                                font-weight="700">灰白質が減少</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">記憶・注意力・衝動制御をつかさどる領域が<span class="accent-coral">縮小</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 17: テキスト強調 - 2年後も差が持続 -->
+    <div class="scene" id="scene-17">
+        <canvas id="canvas-17" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">2年後の追跡調査でも</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-coral">差は縮まっていなかった</span></div>
+            <div class="emphasis-sub stagger-item">子どもの脳の発達期に睡眠が不足すると<br>取り返しがつかない可能性がある</div>
+        </div>
+    </div>
+
+    <!-- Scene 18: 注意喚起 - 睡眠不足がADHDに誤診される -->
+    <div class="scene dark-scene" id="scene-18">
+        <div class="content center-layout">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">睡眠不足が<span class="accent-coral">ADHDに誤診</span>される</div>
+                <div class="alert-sub">多動・不注意・衝動的行動 → 睡眠改善で症状が消える例も</div>
+            </div>
+            <div class="dark-list">
+                <div class="dark-item stagger-item">
+                    <div class="dark-icon" style="background:#ef4444">症状</div>
+                    <div class="dark-content">
+                        <div class="dark-title">多動・不注意・衝動性</div>
+                        <div class="dark-desc">ADHDと酷似した行動が出現</div>
+                    </div>
+                </div>
+                <div class="dark-item stagger-item">
+                    <div class="dark-icon" style="background:#f59e0b">原因</div>
+                    <div class="dark-content">
+                        <div class="dark-title">慢性的な睡眠不足</div>
+                        <div class="dark-desc">脳の前頭前野が十分に休息できない</div>
+                    </div>
+                </div>
+                <div class="dark-item stagger-item">
+                    <div class="dark-icon" style="background:#14b8a6">対策</div>
+                    <div class="dark-content">
+                        <div class="dark-title">まず睡眠時間を見直す</div>
+                        <div class="dark-desc">十分な睡眠で改善する可能性</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 19: タイトルカード - よくある誤解を正す -->
+    <div class="scene" id="scene-19">
+        <canvas id="canvas-19" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral stagger-item">TOPIC 3</div>
+            <h2 class="title-medium stagger-item">よくある<br><span class="accent-coral">誤解を正す</span></h2>
+            <div class="title-sub stagger-item">信じられている「常識」は本当か？</div>
+        </div>
+    </div>
+
+    <!-- Scene 20: 比較対照 - ゴールデンタイム22時は嘘 -->
+    <div class="scene" id="scene-20">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">「ゴールデンタイム」の真実</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge danger-badge">誤解</div>
+                    <div class="vs-title">22時〜2時</div>
+                    <div class="vs-desc">この時間帯に寝ないと<br>成長ホルモンが出ない</div>
+                    <div class="vs-strike">&#10005;</div>
+                </div>
+                <div class="vs-divider stagger-item">
+                    <svg viewBox="0 0 60 60" width="48" height="48">
+                        <circle cx="30" cy="30" r="28" fill="#f3f4f6" stroke="#d1d5db" /><text x="30" y="35"
+                            text-anchor="middle" fill="#6b7280" font-size="14" font-weight="700">vs</text>
+                    </svg>
+                </div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge safe-badge">事実</div>
+                    <div class="vs-title">入眠後の深い睡眠</div>
+                    <div class="vs-desc">何時に寝ても、深い睡眠に<br>入れば成長ホルモンは出る</div>
+                    <div class="vs-check">&#10003;</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">時刻ではなく「<span class="accent-primary">睡眠の質</span>」が決め手</div>
+        </div>
+    </div>
+
+    <!-- Scene 21: テキスト強調 - 大切なのは入眠後の90分 -->
+    <div class="scene" id="scene-21">
+        <canvas id="canvas-21" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">大切なのは</div>
+            <div class="emphasis-text-large stagger-item">「<span class="accent-primary">何時に寝たか</span>」ではなく</div>
+            <div class="emphasis-text-large stagger-item">「<span class="accent-teal">どれだけ深く眠れたか</span>」</div>
+            <div class="emphasis-sub stagger-item">ただし夜更かしは深い睡眠の質を下げやすい</div>
+        </div>
+    </div>
+
+    <!-- Scene 22: 段階的リスト - ゴールデンタイム誤解が広まった理由 -->
+    <div class="scene" id="scene-22">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">なぜ誤解が広まったのか</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text">昔の日本人は多くが<span class="accent-primary">22時頃に就寝</span>していた</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">2</div>
+                    <div class="numbered-text">結果的に22時〜2時にGHが出ていた → <span class="accent-coral">相関を因果と誤解</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">3</div>
+                    <div class="numbered-text">重要なのは<span class="accent-teal">入眠のタイミング</span>であり時刻ではない</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">「早く寝た方がいい」は事実。でも「22時じゃないと意味がない」は嘘</div>
+        </div>
+    </div>
+
+    <!-- Scene 23: 数値インパクト - 日本の子どもはOECD最下位 -->
+    <div class="scene" id="scene-23">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">日本の子どもの睡眠時間</h2>
+            <div class="source-badge stagger-item">OECD 2021 / NHK 2024年調査</div>
+            <div class="impact-number stagger-item">
+                <span class="num-prefix">OECD加盟国中</span><br>
+                <span class="big-num accent-coral">最下位</span>
+            </div>
+            <div class="emphasis-sub stagger-item">日本の子どもは<span class="accent-coral">世界で最も短い</span>睡眠時間</div>
+            <div class="footnote stagger-item">大人もOECD33カ国中最下位（平均7時間22分）</div>
+        </div>
+    </div>
+
+    <!-- Scene 24: 比較対照 - 推奨時間 vs 実際の睡眠時間 -->
+    <div class="scene" id="scene-24">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">推奨 vs 実際の睡眠時間</h2>
+            <div class="source-badge stagger-item">厚生労働省 推奨 / NHK 2024年調査</div>
+            <!-- Custom: Sleep gap visual -->
+            <div class="sleep-gap-visual">
+                <div class="gap-row stagger-item">
+                    <div class="gap-label">小学6年</div>
+                    <div class="gap-bars">
+                        <div class="gap-bar recommended" style="--w:75%"><span>推奨 9〜12h</span></div>
+                        <div class="gap-bar actual" style="--w:52.6%"><span>実際 7.9h</span></div>
+                    </div>
+                </div>
+                <div class="gap-row stagger-item">
+                    <div class="gap-label">中学3年</div>
+                    <div class="gap-bars">
+                        <div class="gap-bar recommended" style="--w:66.7%"><span>推奨 8〜10h</span></div>
+                        <div class="gap-bar actual" style="--w:47.3%"><span>実際 7.1h</span></div>
+                    </div>
+                </div>
+                <div class="gap-row stagger-item">
+                    <div class="gap-label">高校3年</div>
+                    <div class="gap-bars">
+                        <div class="gap-bar recommended" style="--w:66.7%"><span>推奨 8〜10h</span></div>
+                        <div class="gap-bar actual" style="--w:43.3%"><span>実際 6.5h</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">全年齢で<span class="accent-coral">推奨時間を大幅に下回る</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 25: 注意喚起 - 寝だめは逆効果 -->
+    <div class="scene dark-scene" id="scene-25">
+        <div class="content center-layout">
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">休日の「寝だめ」は<span class="accent-coral">逆効果</span></div>
+                <div class="alert-sub">体内時計がズレて月曜がもっとつらくなる</div>
+            </div>
+            <div class="quote-card quote-warm stagger-item">
+                <div class="quote-mark">&ldquo;</div>
+                <div class="quote-text">まとめて寝るより<br><span class="accent-teal">コツコツ寝る</span></div>
+                <div class="quote-source">毎日の就寝時間を15分ずつ早めるのが正解</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 26: まとめカード - 今日のポイント3つ -->
+    <div class="scene" id="scene-26">
+        <canvas id="canvas-26" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary stagger-item">SUMMARY</div>
+            <h2 class="title-medium stagger-item">「寝る子は育つ」は<br><span class="accent-primary">科学的に正しかった</span></h2>
+        </div>
+    </div>
+
+    <!-- Scene 27: 段階的リスト - 3つのまとめポイント -->
+    <div class="scene" id="scene-27">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">今日の3つのポイント</h2>
+            <div class="numbered-list summary-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle" style="background:linear-gradient(135deg,#6366f1,#818cf8)">1</div>
+                    <div class="numbered-text">成長ホルモンの<span class="accent-primary">70〜80%</span>は深い睡眠中に分泌<br><span
+                            class="text-sub">入眠後の最初の90分がとくに重要</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle" style="background:linear-gradient(135deg,#8b5cf6,#a78bfa)">2</div>
+                    <div class="numbered-text">睡眠は<span class="accent-primary">脳の成長</span>にも不可欠<br><span
+                            class="text-sub">記憶の定着・脳の灰白質発達が睡眠中に進行</span></div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle" style="background:linear-gradient(135deg,#ec4899,#f472b6)">3</div>
+                    <div class="numbered-text">日本の子どもは<span class="accent-coral">世界で一番寝ていない</span><br><span
+                            class="text-sub">全年齢で推奨時間を大幅に下回っている</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 28: テキスト強調 - おばあちゃんは正しかった -->
+    <div class="scene" id="scene-28">
+        <canvas id="canvas-28" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">おばあちゃんの「早く寝なさい」は</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-primary">科学的真実</span>だった</div>
+            <div class="emphasis-sub stagger-item">身長・脳・体型・メンタル・免疫力<br>すべてを睡眠が育てている</div>
+        </div>
+    </div>
+
+    <!-- Scene 29: 引用カード - 今日からできること -->
+    <div class="scene" id="scene-29">
+        <canvas id="canvas-29" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">今日からできること</h2>
+            <div class="quote-card quote-warm stagger-item">
+                <div class="quote-mark">&ldquo;</div>
+                <div class="quote-text">寝る30分前には<span class="accent-primary">スマホを閉じて</span><br>毎日同じ時間に布団に入る</div>
+                <div class="quote-source">入眠の質が上がり、深い睡眠に入りやすくなる</div>
+            </div>
+            <div class="emphasis-sub stagger-item">たったそれだけで、身体も脳も<br>ちゃんと「<span class="accent-teal">育つ</span>」ようになる
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

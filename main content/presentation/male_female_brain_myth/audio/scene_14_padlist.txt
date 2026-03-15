@@ -1,0 +1,2 @@
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/male_female_brain_myth/audio/scene_14_concat.wav'
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/male_female_brain_myth/audio/scene_14_pad.wav'

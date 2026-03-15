@@ -1,0 +1,212 @@
+[
+    {
+        "surface": "Eidetic",
+        "pronunciation": "アイデティック",
+        "accent_type": 1
+    },
+    {
+        "surface": "Memory",
+        "pronunciation": "メモリー",
+        "accent_type": 1
+    },
+    {
+        "surface": "Photographic",
+        "pronunciation": "フォトグラフィック",
+        "accent_type": 1
+    },
+    {
+        "surface": "Stromeyer",
+        "pronunciation": "ストロマイヤー",
+        "accent_type": 1
+    },
+    {
+        "surface": "HSAM",
+        "pronunciation": "エイチエスエーエム",
+        "accent_type": 7
+    },
+    {
+        "surface": "Loftus",
+        "pronunciation": "ロフタス",
+        "accent_type": 1
+    },
+    {
+        "surface": "Palmer",
+        "pronunciation": "パーマー",
+        "accent_type": 1
+    },
+    {
+        "surface": "Bartlett",
+        "pronunciation": "バートレット",
+        "accent_type": 1
+    },
+    {
+        "surface": "Dresler",
+        "pronunciation": "ドレスラー",
+        "accent_type": 1
+    },
+    {
+        "surface": "McGaugh",
+        "pronunciation": "マクゴー",
+        "accent_type": 1
+    },
+    {
+        "surface": "Minsky",
+        "pronunciation": "ミンスキー",
+        "accent_type": 1
+    },
+    {
+        "surface": "Inoue",
+        "pronunciation": "イノウエ",
+        "accent_type": 1
+    },
+    {
+        "surface": "Matsuzawa",
+        "pronunciation": "マツザワ",
+        "accent_type": 1
+    },
+    {
+        "surface": "Patihis",
+        "pronunciation": "パティヒス",
+        "accent_type": 1
+    },
+    {
+        "surface": "LePort",
+        "pronunciation": "レポート",
+        "accent_type": 1
+    },
+    {
+        "surface": "UCI",
+        "pronunciation": "ユーシーアイ",
+        "accent_type": 5
+    },
+    {
+        "surface": "PNAS",
+        "pronunciation": "ピーナス",
+        "accent_type": 1
+    },
+    {
+        "surface": "MIT",
+        "pronunciation": "エムアイティー",
+        "accent_type": 5
+    },
+    {
+        "surface": "MRI",
+        "pronunciation": "エムアールアイ",
+        "accent_type": 5
+    },
+    {
+        "surface": "PAO",
+        "pronunciation": "ピーエーオー",
+        "accent_type": 5
+    },
+    {
+        "surface": "Loci",
+        "pronunciation": "ロキ",
+        "accent_type": 1
+    },
+    {
+        "surface": "Method",
+        "pronunciation": "メソッド",
+        "accent_type": 1
+    },
+    {
+        "surface": "Neuron",
+        "pronunciation": "ニューロン",
+        "accent_type": 1
+    },
+    {
+        "surface": "Current",
+        "pronunciation": "カレント",
+        "accent_type": 1
+    },
+    {
+        "surface": "Biology",
+        "pronunciation": "バイオロジー",
+        "accent_type": 1
+    },
+    {
+        "surface": "smashed",
+        "pronunciation": "スマッシュド",
+        "accent_type": 1
+    },
+    {
+        "surface": "hit",
+        "pronunciation": "ヒット",
+        "accent_type": 0
+    },
+    {
+        "surface": "Person",
+        "pronunciation": "パーソン",
+        "accent_type": 1
+    },
+    {
+        "surface": "Action",
+        "pronunciation": "アクション",
+        "accent_type": 1
+    },
+    {
+        "surface": "Object",
+        "pronunciation": "オブジェクト",
+        "accent_type": 1
+    },
+    {
+        "surface": "unfounded",
+        "pronunciation": "アンファウンデッド",
+        "accent_type": 1
+    },
+    {
+        "surface": "myth",
+        "pronunciation": "ミス",
+        "accent_type": 0
+    },
+    {
+        "surface": "fishy",
+        "pronunciation": "フィッシー",
+        "accent_type": 1
+    },
+    {
+        "surface": "Autobiographical",
+        "pronunciation": "オートバイオグラフィカル",
+        "accent_type": 1
+    },
+    {
+        "surface": "Superior",
+        "pronunciation": "スーペリア",
+        "accent_type": 1
+    },
+    {
+        "surface": "Highly",
+        "pronunciation": "ハイリー",
+        "accent_type": 1
+    },
+    {
+        "surface": "Charles",
+        "pronunciation": "チャールズ",
+        "accent_type": 1
+    },
+    {
+        "surface": "Think",
+        "pronunciation": "シンク",
+        "accent_type": 0
+    },
+    {
+        "surface": "Big",
+        "pronunciation": "ビッグ",
+        "accent_type": 0
+    },
+    {
+        "surface": "Smithsonian",
+        "pronunciation": "スミソニアン",
+        "accent_type": 1
+    },
+    {
+        "surface": "Magazine",
+        "pronunciation": "マガジン",
+        "accent_type": 1
+    },
+    {
+        "surface": "of",
+        "pronunciation": "オブ",
+        "accent_type": 0
+    }
+]

@@ -1,0 +1,1437 @@
+/* ============================================
+   脳トレ神話 — プレゼンテーション CSS
+   テーマ: クリーンホワイト + 紫/ティール/コーラル
+   ============================================ */
+
+/* --- カラートークン --- */
+:root {
+    --bg: #f8f9fa;
+    --text: #1a1a2e;
+    --text-light: #6c757d;
+    --primary: #6366f1;
+    --primary-light: #e0e7ff;
+    --teal: #14b8a6;
+    --teal-light: #ccfbf1;
+    --coral: #ef4444;
+    --coral-light: #fee2e2;
+    --amber: #f59e0b;
+    --amber-light: #fef3c7;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.1);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- リセット & ベース --- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* --- シーン共通 --- */
+.scene {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.scene.active {
+    display: flex;
+    animation: sceneFadeIn 0.5s ease both;
+}
+
+/* --- コンテンツラッパー --- */
+.content {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    width: 90%;
+}
+
+.center-layout {
+    text-align: center;
+}
+
+.card-layout {
+    text-align: center;
+}
+
+/* --- Canvas 背景 --- */
+.bg-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* --- タイトル系 --- */
+.title-large {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.25;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+}
+
+.title-medium {
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 16px;
+}
+
+.title-sub {
+    font-size: 22px;
+    color: var(--text-light);
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.scene-title {
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.light-text {
+    color: #f0f0f0;
+}
+
+/* --- セクションバッジ --- */
+.section-badge {
+    display: inline-block;
+    padding: 8px 24px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.accent-bg-primary {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.accent-bg-teal {
+    background: var(--teal-light);
+    color: var(--teal);
+}
+
+.accent-bg-coral {
+    background: var(--coral-light);
+    color: var(--coral);
+}
+
+.accent-bg-amber {
+    background: var(--amber-light);
+    color: var(--amber);
+}
+
+/* --- アクセントカラー --- */
+.accent-primary {
+    color: var(--primary);
+}
+
+.accent-teal {
+    color: var(--teal);
+}
+
+.accent-coral {
+    color: var(--coral);
+}
+
+.accent-amber {
+    color: var(--amber);
+}
+
+/* --- テキスト強調 --- */
+.emphasis-text {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.emphasis-text-large {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 16px;
+}
+
+.emphasis-sub {
+    font-size: 20px;
+    color: var(--text-light);
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.footnote {
+    font-size: 15px;
+    color: #9ca3af;
+    margin-top: 16px;
+    font-weight: 400;
+}
+
+/* --- 数値インパクト --- */
+.impact-number {
+    margin: 16px 0;
+}
+
+.big-num {
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: -3px;
+    line-height: 1;
+}
+
+.num-unit {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-light);
+    margin-left: 8px;
+}
+
+/* --- 出典バッジ --- */
+.source-badge {
+    display: inline-block;
+    padding: 6px 18px;
+    background: #f3f4f6;
+    border-radius: 20px;
+    font-size: 14px;
+    color: var(--text-light);
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+/* --- 横並びカード（3列） --- */
+.triple-card {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.factor-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 28px 24px;
+    flex: 1;
+    max-width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.factor-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 900;
+    color: #fff;
+    margin: 0 auto 14px;
+}
+
+.factor-icon.accent-bg-primary {
+    background: var(--primary);
+}
+
+.factor-icon.accent-bg-teal {
+    background: var(--teal);
+}
+
+.factor-icon.accent-bg-amber {
+    background: var(--amber);
+}
+
+.factor-name {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.factor-desc {
+    font-size: 15px;
+    color: var(--text-light);
+}
+
+.factor-sub {
+    font-size: 13px;
+    color: var(--coral);
+    margin-top: 8px;
+    font-weight: 600;
+    background: var(--coral-light);
+    padding: 4px 12px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+/* --- 横並びカード（4列） --- */
+.quad-card {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.method-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 24px 18px;
+    flex: 1;
+    max-width: 220px;
+    text-align: center;
+}
+
+.method-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 900;
+    color: #fff;
+    margin: 0 auto 12px;
+}
+
+.method-sleep {
+    background: #6366f1;
+}
+
+.method-social {
+    background: #f59e0b;
+}
+
+.method-learn {
+    background: #14b8a6;
+}
+
+.method-exercise {
+    background: #ef4444;
+}
+
+.method-name {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.method-desc {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.4;
+}
+
+/* --- 段階的リスト --- */
+.numbered-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 700px;
+    margin: 12px auto;
+}
+
+.numbered-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 18px 24px;
+    text-align: left;
+}
+
+.number-circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+.numbered-text {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.text-sub {
+    font-size: 14px;
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+/* --- 虚偽主張のスタイル --- */
+.false-claim {
+    border-left: 4px solid var(--coral);
+}
+
+.false-icon {
+    background: var(--coral);
+}
+
+/* --- バイアスのスタイル --- */
+.bias-circle {
+    background: var(--primary);
+}
+
+/* --- まとめリストのスタイル --- */
+.summary-item {
+    border-left: 4px solid var(--primary);
+}
+
+.summary-circle {
+    background: var(--primary);
+}
+
+/* --- 比較対照（VS）--- */
+.vs-container {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+    justify-content: center;
+    margin: 16px 0;
+}
+
+.vs-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 24px;
+    flex: 1;
+    max-width: 340px;
+    text-align: center;
+}
+
+.vs-left {
+    border-top: 4px solid var(--teal);
+}
+
+.vs-right {
+    border-top: 4px solid var(--coral);
+}
+
+.vs-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 16px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.safe-badge {
+    background: var(--teal-light);
+    color: var(--teal);
+}
+
+.danger-badge {
+    background: var(--coral-light);
+    color: var(--coral);
+}
+
+.vs-title {
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.vs-desc {
+    font-size: 16px;
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.vs-example {
+    font-size: 14px;
+    color: #9ca3af;
+    margin-bottom: 8px;
+}
+
+.vs-verdict {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.safe-text {
+    color: var(--teal);
+}
+
+.danger-text {
+    color: var(--coral);
+}
+
+.vs-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--text-light);
+    min-width: 60px;
+}
+
+/* --- 比較テーブル --- */
+.comparison-table {
+    max-width: 700px;
+    margin: 12px auto;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.comp-row {
+    display: flex;
+    background: var(--card-bg);
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.comp-row:last-child {
+    border-bottom: none;
+}
+
+.comp-header {
+    background: #f3f4f6;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.comp-cell {
+    flex: 1;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+}
+
+.comp-name {
+    font-weight: 700;
+}
+
+.comp-highlight {
+    background: var(--teal-light);
+}
+
+.verdict-x {
+    color: var(--coral);
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.verdict-o {
+    color: var(--teal);
+    font-size: 24px;
+    font-weight: 900;
+}
+
+/* --- 引用カード --- */
+.quote-card {
+    max-width: 700px;
+    margin: 16px auto;
+    padding: 28px 32px;
+    text-align: left;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--primary);
+    position: relative;
+}
+
+.quote-warning {
+    border-left-color: var(--coral);
+}
+
+.quote-warm {
+    border-left-color: var(--amber);
+}
+
+.quote-mark {
+    font-size: 48px;
+    color: var(--primary);
+    opacity: 0.2;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.quote-warning .quote-mark {
+    color: var(--coral);
+}
+
+.quote-text {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.quote-source {
+    font-size: 14px;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* --- 注意喚起カード --- */
+.alert-card {
+    max-width: 700px;
+    margin: 16px auto;
+    padding: 24px 28px;
+    text-align: left;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--coral);
+}
+
+.alert-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--coral);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.alert-title {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.alert-sub {
+    font-size: 16px;
+    color: var(--text-light);
+}
+
+/* --- ダークシーン --- */
+.dark-scene {
+    background: #1a1a2e;
+}
+
+.dark-scene .emphasis-sub {
+    color: #8b8ba0;
+}
+
+/* --- ペナルティ表示 --- */
+.penalty-visual {
+    display: inline-block;
+    padding: 16px 28px;
+    background: var(--coral-light);
+    border-radius: var(--radius);
+    margin-top: 16px;
+}
+
+.penalty-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--coral);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.penalty-amount {
+    font-size: 32px;
+    font-weight: 900;
+    margin: 4px 0;
+}
+
+.penalty-sub {
+    font-size: 16px;
+    color: var(--text-light);
+}
+
+/* --- Owen結果 --- */
+.owen-result {
+    max-width: 500px;
+    margin: 16px auto;
+}
+
+.owen-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 20px;
+    background: var(--card-bg);
+    border-radius: var(--radius-sm);
+    margin-bottom: 8px;
+    box-shadow: var(--shadow);
+}
+
+.owen-label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.owen-value {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+/* --- 科学者カウンター --- */
+.scientist-counter {
+    margin: 12px 0;
+}
+
+.scientist-svg {
+    width: 300px;
+    height: 60px;
+}
+
+.scientist-num {
+    font-size: 40px;
+    font-weight: 900;
+    fill: var(--primary);
+}
+
+.scientist-label {
+    font-size: 14px;
+    fill: var(--text-light);
+}
+
+/* --- メタタイムライン --- */
+.meta-timeline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin: 16px auto;
+    max-width: 600px;
+}
+
+.meta-year {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.meta-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #d1d5db;
+}
+
+.active-dot {
+    background: var(--primary);
+}
+
+.meta-label {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.meta-desc {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+.meta-line {
+    height: 3px;
+    flex: 1;
+    background: #e5e7eb;
+    margin: 0 8px;
+    margin-bottom: 44px;
+}
+
+/* --- 転移バーチャート --- */
+.transfer-bars {
+    max-width: 600px;
+    margin: 16px auto;
+}
+
+.bar-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.bar-label {
+    width: 180px;
+    text-align: right;
+    font-size: 15px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.bar-track {
+    flex: 1;
+    height: 28px;
+    background: #f3f4f6;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 14px;
+    width: 0;
+    transition: width 1.5s ease;
+}
+
+.scene.active .bar-fill {
+    width: var(--w);
+}
+
+.bar-high {
+    background: linear-gradient(90deg, #6366f1, #818cf8);
+}
+
+.bar-mid {
+    background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+
+.bar-low {
+    background: linear-gradient(90deg, #ef4444, #f87171);
+}
+
+/* --- ACTIVE試験 SVG --- */
+.active-svg {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+}
+
+.active-title {
+    font-size: 18px;
+    font-weight: 800;
+    fill: var(--text);
+}
+
+.active-sub {
+    font-size: 13px;
+    fill: var(--text-light);
+}
+
+.active-result {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.active-result.danger-text {
+    fill: var(--coral);
+}
+
+.active-big {
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.active-big.safe-text {
+    fill: var(--teal);
+}
+
+.active-detail {
+    font-size: 12px;
+    fill: var(--text-light);
+}
+
+/* --- コンパクトVS --- */
+.compact-vs {
+    margin-top: 16px;
+}
+
+.compact-vs .vs-card {
+    max-width: 280px;
+    padding: 18px;
+}
+
+/* --- プラセボラベル --- */
+.placebo-label {
+    font-size: 28px;
+    font-weight: 900;
+    margin: 12px 0;
+    letter-spacing: 2px;
+}
+
+/* --- VS コンパクト（テキスト強調シーン） --- */
+.vs-compact {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.vs-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 24px;
+    border-radius: var(--radius);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.vs-bad {
+    background: var(--coral-light);
+    color: var(--coral);
+}
+
+.vs-good {
+    background: var(--teal-light);
+    color: var(--teal);
+}
+
+.vs-icon {
+    font-size: 24px;
+}
+
+/* --- 不安ビジュアル --- */
+.anxiety-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.anxiety-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 24px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.hope-card {
+    border-left: 4px solid var(--amber);
+}
+
+.money-card {
+    border-left: 4px solid var(--coral);
+}
+
+.anxiety-icon {
+    font-size: 24px;
+}
+
+.anxiety-arrow {
+    font-size: 20px;
+    color: var(--text-light);
+}
+
+/* --- エンディングバッジ --- */
+.ending-badge {
+    display: inline-block;
+    padding: 10px 28px;
+    background: var(--primary-light);
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-top: 20px;
+}
+
+/* --- SVG関連 --- */
+.growth-chart {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.chart-label {
+    font-size: 14px;
+    fill: var(--text-light);
+    text-anchor: middle;
+}
+
+.chart-val {
+    font-size: 12px;
+    fill: var(--text);
+    font-weight: 700;
+    text-anchor: middle;
+}
+
+.brain-svg {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.brain-label {
+    font-size: 14px;
+    fill: var(--text);
+    font-weight: 700;
+}
+
+.brain-label-sm {
+    font-size: 11px;
+    fill: var(--text);
+    font-weight: 600;
+}
+
+.brain-sub {
+    font-size: 14px;
+    fill: var(--text-light);
+}
+
+/* ============================================
+   stagger-item アニメーション
+   ============================================ */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity var(--transition), transform var(--transition);
+}
+
+.scene.active .stagger-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scene.active .stagger-item:nth-child(1) {
+    transition-delay: 0.0s;
+}
+
+.scene.active .stagger-item:nth-child(2) {
+    transition-delay: 0.12s;
+}
+
+.scene.active .stagger-item:nth-child(3) {
+    transition-delay: 0.24s;
+}
+
+.scene.active .stagger-item:nth-child(4) {
+    transition-delay: 0.36s;
+}
+
+.scene.active .stagger-item:nth-child(5) {
+    transition-delay: 0.48s;
+}
+
+.scene.active .stagger-item:nth-child(6) {
+    transition-delay: 0.60s;
+}
+
+.scene.active .stagger-item:nth-child(7) {
+    transition-delay: 0.72s;
+}
+
+.scene.active .stagger-item:nth-child(8) {
+    transition-delay: 0.84s;
+}
+
+/* ============================================
+   @keyframes（必須8種類 + テーマ固有）
+   ============================================ */
+
+/* 1. シーンフェードイン */
+@keyframes sceneFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* 2. カードスライドアップ */
+@keyframes cardSlideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 3. 数値ポップイン */
+@keyframes numberPop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 4. バーフィル */
+@keyframes barFill {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--w);
+    }
+}
+
+/* 5. フロート */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* 6. パルスグロー */
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 20px 8px rgba(99, 102, 241, 0.15);
+    }
+}
+
+/* 7. バウンスイン */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+    70% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* 8. タイトルリビール */
+@keyframes titleReveal {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* テーマ固有: 警告シェイク */
+@keyframes warningShake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-3px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(3px);
+    }
+}
+
+/* テーマ固有: パルスリング */
+@keyframes pulseRing {
+    0% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 16px rgba(99, 102, 241, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+    }
+}
+
+/* テーマ固有: グラデーションシフト */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* テーマ固有: SVGライン描画 */
+@keyframes drawLine {
+    from {
+        stroke-dashoffset: 300;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* テーマ固有: ドット出現 */
+@keyframes dotAppear {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* テーマ固有: 海馬パルス */
+@keyframes hippocampusPulse {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        rx: 35;
+        ry: 25;
+    }
+
+    50% {
+        opacity: 0.6;
+        rx: 40;
+        ry: 28;
+    }
+}
+
+/* テーマ固有: BDNFパルス */
+@keyframes bdnfPulse {
+
+    0%,
+    100% {
+        opacity: 0.2;
+        r: 20;
+    }
+
+    50% {
+        opacity: 0.5;
+        r: 26;
+    }
+}
+
+/* ============================================
+   適用ルール（.scene.active + 各要素タイプ）
+   ============================================ */
+
+/* カード系アニメーション */
+.scene.active .factor-card,
+.scene.active .method-card,
+.scene.active .vs-card,
+.scene.active .numbered-item,
+.scene.active .quote-card,
+.scene.active .alert-card,
+.scene.active .anxiety-card {
+    animation: cardSlideUp 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .factor-card:nth-child(1),
+.scene.active .method-card:nth-child(1),
+.scene.active .numbered-item:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .factor-card:nth-child(2),
+.scene.active .method-card:nth-child(2),
+.scene.active .numbered-item:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.scene.active .factor-card:nth-child(3),
+.scene.active .method-card:nth-child(3),
+.scene.active .numbered-item:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.scene.active .factor-card:nth-child(4),
+.scene.active .method-card:nth-child(4),
+.scene.active .numbered-item:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+/* 数値ポップ */
+.scene.active .impact-number {
+    animation: numberPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+/* ペナルティ表示 */
+.scene.active .penalty-visual {
+    animation: numberPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+/* VS文字バウンス */
+.scene.active .vs-divider {
+    animation: bounceIn 0.6s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+/* プラセボラベル */
+.scene.active .placebo-label {
+    animation: numberPop 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+/* タイトルリビール */
+.scene.active .title-large,
+.scene.active .title-medium {
+    animation: titleReveal 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+/* 注意喚起シェイク */
+.scene.active .alert-card {
+    animation: cardSlideUp 0.5s ease-out forwards, warningShake 0.5s ease 1s 1;
+}
+
+/* 重要ノードのパルス */
+.scene.active .active-dot {
+    animation: pulseRing 2s ease-in-out infinite;
+}
+
+/* エンディングフロート */
+.scene.active .ending-badge {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* SVGアニメーション */
+.scene.active .trend-line {
+    animation: drawLine 2s ease forwards 0.5s;
+}
+
+.scene.active .hippocampus-pulse {
+    animation: hippocampusPulse 2.5s ease-in-out infinite;
+}
+
+.scene.active .bdnf-pulse {
+    animation: bdnfPulse 2s ease-in-out infinite 0.5s;
+}
+
+/* バー伸長（scene.active で発動） */
+.scene.active .bar-fill {
+    width: var(--w);
+}
+
+/* バーのSVGアニメーション */
+.scene.active .bar-anim {
+    animation: cardSlideUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .bar-anim:nth-child(5) {
+    animation-delay: 0.3s;
+}
+
+.scene.active .bar-anim:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+/* メタタイムライン */
+.scene.active .meta-dot {
+    animation: dotAppear 0.4s ease forwards;
+}
+
+.scene.active .meta-year:nth-child(1) .meta-dot {
+    animation-delay: 0.3s;
+}
+
+.scene.active .meta-year:nth-child(3) .meta-dot {
+    animation-delay: 0.6s;
+}
+
+.scene.active .meta-year:nth-child(5) .meta-dot {
+    animation-delay: 0.9s;
+}
+
+/* 不安ビジュアルの矢印 */
+.scene.active .anxiety-arrow {
+    animation: bounceIn 0.4s ease-out forwards;
+    opacity: 0;
+}
+
+.scene.active .anxiety-arrow:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.scene.active .anxiety-arrow:nth-child(4) {
+    animation-delay: 0.8s;
+}

@@ -1,0 +1,122 @@
+[
+    {
+        "surface": "リポリシス",
+        "pronunciation": "リポリシス",
+        "accent_type": 3
+    },
+    {
+        "surface": "リパーゼ",
+        "pronunciation": "リパーゼ",
+        "accent_type": 2
+    },
+    {
+        "surface": "遊離脂肪酸",
+        "pronunciation": "ユウリシボウサン",
+        "accent_type": 5
+    },
+    {
+        "surface": "グリセロール",
+        "pronunciation": "グリセロール",
+        "accent_type": 4
+    },
+    {
+        "surface": "ミトコンドリア",
+        "pronunciation": "ミトコンドリア",
+        "accent_type": 4
+    },
+    {
+        "surface": "ベータ酸化",
+        "pronunciation": "ベータサンカ",
+        "accent_type": 4
+    },
+    {
+        "surface": "ベータ2",
+        "pronunciation": "ベータツー",
+        "accent_type": 3
+    },
+    {
+        "surface": "アルファ2",
+        "pronunciation": "アルファツー",
+        "accent_type": 3
+    },
+    {
+        "surface": "β2",
+        "pronunciation": "ベータツー",
+        "accent_type": 3
+    },
+    {
+        "surface": "α2",
+        "pronunciation": "アルファツー",
+        "accent_type": 3
+    },
+    {
+        "surface": "Katch",
+        "pronunciation": "キャッチ",
+        "accent_type": 1
+    },
+    {
+        "surface": "Kostek",
+        "pronunciation": "コステック",
+        "accent_type": 1
+    },
+    {
+        "surface": "スポットリダクション",
+        "pronunciation": "スポットリダクション",
+        "accent_type": 7
+    },
+    {
+        "surface": "シットアップ",
+        "pronunciation": "シットアップ",
+        "accent_type": 4
+    },
+    {
+        "surface": "ノルアドレナリン",
+        "pronunciation": "ノルアドレナリン",
+        "accent_type": 5
+    },
+    {
+        "surface": "アドレナリン",
+        "pronunciation": "アドレナリン",
+        "accent_type": 4
+    },
+    {
+        "surface": "確証バイアス",
+        "pronunciation": "カクショウバイアス",
+        "accent_type": 5
+    },
+    {
+        "surface": "筋肥大",
+        "pronunciation": "キンヒダイ",
+        "accent_type": 3
+    },
+    {
+        "surface": "皮下脂肪",
+        "pronunciation": "ヒカシボウ",
+        "accent_type": 3
+    },
+    {
+        "surface": "内臓脂肪",
+        "pronunciation": "ナイゾウシボウ",
+        "accent_type": 4
+    },
+    {
+        "surface": "中性脂肪",
+        "pronunciation": "チュウセイシボウ",
+        "accent_type": 4
+    },
+    {
+        "surface": "基礎代謝",
+        "pronunciation": "キソタイシャ",
+        "accent_type": 3
+    },
+    {
+        "surface": "デッドリフト",
+        "pronunciation": "デッドリフト",
+        "accent_type": 4
+    },
+    {
+        "surface": "脂肪生検",
+        "pronunciation": "シボウセイケン",
+        "accent_type": 4
+    }
+]

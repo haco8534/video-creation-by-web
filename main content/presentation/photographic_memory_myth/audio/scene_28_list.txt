@@ -1,0 +1,7 @@
+file 'D:/myfolder/動画生成/main content/presentation/photographic_memory_myth/audio/scene_28_00.wav'
+file 'D:/myfolder/動画生成/main content/presentation/photographic_memory_myth/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/photographic_memory_myth/audio/scene_28_01.wav'
+file 'D:/myfolder/動画生成/main content/presentation/photographic_memory_myth/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/photographic_memory_myth/audio/scene_28_02.wav'
+file 'D:/myfolder/動画生成/main content/presentation/photographic_memory_myth/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/main content/presentation/photographic_memory_myth/audio/scene_28_03.wav'

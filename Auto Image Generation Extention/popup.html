@@ -38,10 +38,11 @@
     <div class="tab-content active" id="panelText">
       <div class="input-section">
         <textarea id="promptInput" class="prompt-input"
-          placeholder="1行に1つのプロンプトを入力&#10;&#10;例:&#10;猫の絵を描いて&#10;犬の絵を描いて&#10;ウサギの絵を描いて" rows="6"></textarea>
+          placeholder="プロンプトを入力&#10;&#10;■ 1行 = 1プロンプト&#10;猫の絵を描いて&#10;犬の絵を描いて&#10;&#10;■ --- 区切り = 複数行プロンプト&#10;direction: 衝突・破壊&#10;visual: マシュマロが割れる&#10;---&#10;direction: データの圧力&#10;visual: 巨大な数字900"
+          rows="6"></textarea>
         <div class="input-hint">
-          <span>💡 1行 = 1プロンプト</span>
-          <span class="line-count" id="lineCount">0行</span>
+          <span>💡 1行=1件 or ---区切り=1件</span>
+          <span class="line-count" id="lineCount">0件</span>
         </div>
         <button class="btn btn-add" id="addBtn">
           <span class="btn-icon">＋</span>
@@ -136,6 +137,10 @@
         <label class="setting-item">
           <span>送信間隔（秒）</span>
           <input type="number" id="delayInput" class="setting-input" value="3" min="1" max="30">
+        </label>
+        <label class="setting-item" style="flex-direction: column; align-items: stretch;">
+          <span>プレフィックス（各プロンプトの先頭に自動挿入）</span>
+          <textarea id="prefixInput" class="prompt-input" rows="4" style="margin-top: 6px; font-size: 11px;"></textarea>
         </label>
       </div>
     </details>

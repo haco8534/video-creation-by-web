@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>「アルコールは寝つきを良くする」の危険な誤解</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Scene 0: タイトルカード -->
+    <div class="scene" id="scene-0">
+        <canvas id="canvas-0" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral">SLEEP SCIENCE</div>
+            <h2 class="title-large stagger-item">「アルコールは寝つきを良くする」<br><span class="accent-coral">の危険な誤解</span></h2>
+            <div class="title-sub stagger-item">その一杯が睡眠を壊している</div>
+        </div>
+    </div>
+
+    <!-- Scene 1: 数値インパクト 日本人の30.3%が寝酒 -->
+    <div class="scene" id="scene-1">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">眠るために飲酒する日本人</h2>
+            <div class="source-badge stagger-item">10カ国比較調査（2004年）</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-coral">30.3</span><span class="num-unit">%</span>
+            </div>
+            <div class="emphasis-sub stagger-item">10カ国平均19.4%の約<span class="accent-primary">1.6倍</span></div>
+            <!-- カスタムビジュアル: 日本vs世界バー比較 -->
+            <div class="bar-comparison stagger-item">
+                <div class="bar-row">
+                    <div class="bar-label">日本</div>
+                    <div class="bar-track"><div class="bar-fill bar-japan" style="--w:75%"></div></div>
+                    <div class="bar-value">30.3%</div>
+                </div>
+                <div class="bar-row">
+                    <div class="bar-label">10カ国平均</div>
+                    <div class="bar-track"><div class="bar-fill bar-avg" style="--w:48%"></div></div>
+                    <div class="bar-value">19.4%</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">男性の48%が週1回以上の寝酒習慣</div>
+        </div>
+    </div>
+
+    <!-- Scene 2: テキスト強調 半分本当、半分ウソ -->
+    <div class="scene" id="scene-2">
+        <canvas id="canvas-2" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">寝つきが良くなるのは</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-primary">半分本当</span>、<span class="accent-coral">半分ウソ</span></div>
+            <div class="emphasis-sub stagger-item">残りの半分を知ったら、寝酒はやめたくなる</div>
+            <!-- カスタムビジュアル: 3つのテーマカード -->
+            <div class="triple-card stagger-item">
+                <div class="theme-card">
+                    <div class="theme-num">1</div>
+                    <div class="theme-text">脳内メカニズム</div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-num">2</div>
+                    <div class="theme-text">睡眠の破壊</div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-num">3</div>
+                    <div class="theme-text">悪循環の罠</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scene 3: タイトルカード アルコールが脳にすること -->
+    <div class="scene" id="scene-3">
+        <canvas id="canvas-3" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-primary">TOPIC 1</div>
+            <h2 class="title-medium stagger-item">アルコールが<br><span class="accent-primary">脳にすること</span></h2>
+            <div class="title-sub stagger-item">「気のせい」ではない科学的な理由</div>
+        </div>
+    </div>
+
+    <!-- Scene 4: フロー図 GABA増強 → 神経抑制 → 鎮静・入眠 -->
+    <div class="scene" id="scene-4">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">GABA増強メカニズム</h2>
+            <div class="flow-chain">
+                <div class="flow-node stagger-item">
+                    <div class="flow-icon brain-icon">
+                        <svg viewBox="0 0 80 80" width="60" height="60">
+                            <circle cx="40" cy="40" r="30" fill="none" stroke="var(--primary)" stroke-width="2"/>
+                            <path d="M25,40 Q30,25 40,28 Q50,25 55,40 Q58,55 40,55 Q22,55 25,40Z" fill="var(--primary-light)" stroke="var(--primary)" stroke-width="1.5"/>
+                            <circle cx="35" cy="38" r="3" fill="var(--primary)" class="gaba-dot"/>
+                            <circle cx="45" cy="35" r="3" fill="var(--primary)" class="gaba-dot"/>
+                            <circle cx="40" cy="45" r="3" fill="var(--primary)" class="gaba-dot"/>
+                        </svg>
+                    </div>
+                    <div class="flow-text"><span class="flow-name">アルコール摂取</span><br>GABA受容体に結合</div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-icon">
+                        <svg viewBox="0 0 80 80" width="60" height="60">
+                            <rect x="15" y="20" width="50" height="40" rx="8" fill="var(--indigo-light)" stroke="var(--primary)" stroke-width="2"/>
+                            <text x="40" y="45" text-anchor="middle" font-size="16" font-weight="900" fill="var(--primary)">GABA</text>
+                        </svg>
+                    </div>
+                    <div class="flow-text"><span class="flow-name">GABA増強</span><br>ブレーキ効果UP</div>
+                </div>
+                <div class="flow-arrow stagger-item">&rarr;</div>
+                <div class="flow-node stagger-item">
+                    <div class="flow-icon">
+                        <svg viewBox="0 0 80 80" width="60" height="60">
+                            <circle cx="40" cy="40" r="28" fill="var(--indigo-light)" stroke="var(--primary)" stroke-width="2"/>
+                            <path d="M30,35 Q40,50 50,35" stroke="var(--primary)" stroke-width="2.5" fill="none"/>
+                            <circle cx="32" cy="30" r="3" fill="var(--primary)"/>
+                            <circle cx="48" cy="30" r="3" fill="var(--primary)"/>
+                        </svg>
+                    </div>
+                    <div class="flow-text"><span class="flow-name">鎮静・入眠</span><br>リラックスモード</div>
+                </div>
+            </div>
+            <div class="adenosine-box stagger-item">
+                <div class="adenosine-label">+ アデノシン増加</div>
+                <div class="adenosine-desc">「眠気の素」が蓄積 → 入眠加速</div>
+            </div>
+            <div class="footnote stagger-item">カフェインはアデノシンをブロック / アルコールは増加させる</div>
+        </div>
+    </div>
+
+    <!-- Scene 5: 比較対照 アルコール vs 睡眠薬 -->
+    <div class="scene" id="scene-5">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">衝撃の類似性</h2>
+            <div class="vs-container">
+                <div class="vs-card vs-left stagger-item">
+                    <div class="vs-badge danger-badge">寝酒</div>
+                    <div class="vs-title">アルコール</div>
+                    <div class="vs-detail">GABA受容体を増強</div>
+                    <div class="vs-detail">自己判断で量を決定</div>
+                    <div class="vs-detail accent-coral">副作用の監視なし</div>
+                    <div class="vs-detail accent-coral">量が増えやすい</div>
+                </div>
+                <div class="vs-divider stagger-item">
+                    <span class="vs-equals">=</span>
+                    <span class="vs-text">同じ仕組み</span>
+                </div>
+                <div class="vs-card vs-right stagger-item">
+                    <div class="vs-badge safe-badge">医療</div>
+                    <div class="vs-title">睡眠薬</div>
+                    <div class="vs-detail">GABA受容体を増強</div>
+                    <div class="vs-detail">医師が量を管理</div>
+                    <div class="vs-detail accent-teal">副作用を監視</div>
+                    <div class="vs-detail accent-teal">処方量を遵守</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">寝酒 = 管理なしの睡眠薬</div>
+        </div>
+    </div>
+
+    <!-- Scene 6: タイトルカード 前半と後半で真逆 -->
+    <div class="scene" id="scene-6">
+        <canvas id="canvas-6" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral">TOPIC 2</div>
+            <h2 class="title-medium stagger-item">睡眠の「前半」と「後半」で<br><span class="accent-coral">真逆のことが起きる</span></h2>
+            <div class="title-sub stagger-item">寝ついた後に脳の中で何が起きているか</div>
+        </div>
+    </div>
+
+    <!-- Scene 7: 比較テーブル 前半vs後半 -->
+    <div class="scene" id="scene-7">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">飲酒後の睡眠構造</h2>
+            <!-- カスタムビジュアル: 睡眠構造SVG -->
+            <div class="sleep-structure-visual stagger-item">
+                <svg viewBox="0 0 600 200" class="sleep-svg">
+                    <defs>
+                        <linearGradient id="goodGrad" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="var(--primary)"/>
+                            <stop offset="100%" stop-color="var(--teal)"/>
+                        </linearGradient>
+                        <linearGradient id="badGrad" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="var(--coral)"/>
+                            <stop offset="100%" stop-color="var(--amber)"/>
+                        </linearGradient>
+                    </defs>
+                    <text x="150" y="20" text-anchor="middle" font-size="14" fill="var(--primary)" font-weight="700">前半（0〜4h）</text>
+                    <text x="450" y="20" text-anchor="middle" font-size="14" fill="var(--coral)" font-weight="700">後半（4〜8h）</text>
+                    <line x1="300" y1="25" x2="300" y2="195" stroke="var(--text-light)" stroke-width="1" stroke-dasharray="4,4"/>
+                    <path d="M20,100 Q80,170 150,160 Q200,150 250,140 L280,140" fill="none" stroke="url(#goodGrad)" stroke-width="3" class="trend-line"/>
+                    <path d="M320,140 Q370,100 420,80 Q470,60 520,50 L580,45" fill="none" stroke="url(#badGrad)" stroke-width="3" class="trend-line-bad"/>
+                    <text x="150" y="190" text-anchor="middle" font-size="11" fill="var(--teal)">深い睡眠 ↑</text>
+                    <text x="450" y="190" text-anchor="middle" font-size="11" fill="var(--coral)">浅い睡眠 ↑ 中途覚醒 ↑</text>
+                </svg>
+            </div>
+            <div class="comparison-table">
+                <div class="comp-row comp-header stagger-item">
+                    <div class="comp-cell"></div>
+                    <div class="comp-cell comp-good">前半（0〜4h）</div>
+                    <div class="comp-cell comp-bad">後半（4〜8h）</div>
+                </div>
+                <div class="comp-row stagger-item">
+                    <div class="comp-cell comp-name">深い睡眠</div>
+                    <div class="comp-cell"><span class="accent-teal">増加 ↑</span></div>
+                    <div class="comp-cell"><span class="accent-coral">減少 ↓</span></div>
+                </div>
+                <div class="comp-row stagger-item">
+                    <div class="comp-cell comp-name">中途覚醒</div>
+                    <div class="comp-cell"><span class="accent-teal">少ない</span></div>
+                    <div class="comp-cell"><span class="accent-coral">激増 ↑↑</span></div>
+                </div>
+                <div class="comp-row stagger-item">
+                    <div class="comp-cell comp-name">レム睡眠</div>
+                    <div class="comp-cell"><span class="accent-amber">抑制 ↓</span></div>
+                    <div class="comp-cell"><span class="accent-coral">リバウンド</span></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">リバウンド効果：前半で抑制された分が後半で跳ね返る</div>
+        </div>
+    </div>
+
+    <!-- Scene 8: 数値インパクト レム睡眠20-30%減少 -->
+    <div class="scene" id="scene-8">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">レム睡眠の減少</h2>
+            <div class="source-badge stagger-item">複数の睡眠ポリグラフ研究</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-coral">20〜30</span><span class="num-unit">%減</span>
+            </div>
+            <div class="emphasis-sub stagger-item">記憶の定着・感情の整理・学習の統合が<span class="accent-coral">大幅に損なわれる</span></div>
+            <!-- カスタムビジュアル: レム睡眠の役割リング -->
+            <div class="rem-roles stagger-item">
+                <div class="rem-role-item">
+                    <svg viewBox="0 0 80 80" width="50" height="50">
+                        <circle cx="40" cy="40" r="30" fill="none" stroke="var(--primary)" stroke-width="3" class="ring-bg"/>
+                        <circle cx="40" cy="40" r="30" fill="none" stroke="var(--coral)" stroke-width="3" stroke-dasharray="188" stroke-dashoffset="56" class="ring-fill" transform="rotate(-90 40 40)"/>
+                    </svg>
+                    <span>記憶定着</span>
+                </div>
+                <div class="rem-role-item">
+                    <svg viewBox="0 0 80 80" width="50" height="50">
+                        <circle cx="40" cy="40" r="30" fill="none" stroke="var(--primary)" stroke-width="3" class="ring-bg"/>
+                        <circle cx="40" cy="40" r="30" fill="none" stroke="var(--amber)" stroke-width="3" stroke-dasharray="188" stroke-dashoffset="56" class="ring-fill" transform="rotate(-90 40 40)"/>
+                    </svg>
+                    <span>感情整理</span>
+                </div>
+                <div class="rem-role-item">
+                    <svg viewBox="0 0 80 80" width="50" height="50">
+                        <circle cx="40" cy="40" r="30" fill="none" stroke="var(--primary)" stroke-width="3" class="ring-bg"/>
+                        <circle cx="40" cy="40" r="30" fill="none" stroke="var(--teal)" stroke-width="3" stroke-dasharray="188" stroke-dashoffset="56" class="ring-fill" transform="rotate(-90 40 40)"/>
+                    </svg>
+                    <span>学習統合</span>
+                </div>
+            </div>
+            <div class="footnote stagger-item">中程度の飲酒（ビール2缶）でも影響あり</div>
+        </div>
+    </div>
+
+    <!-- Scene 9: フロー図 アセトアルデヒド→コルチゾール→中途覚醒 -->
+    <div class="scene" id="scene-9">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">睡眠を壊す3つの要因</h2>
+            <div class="triple-threat stagger-item">
+                <div class="threat-card threat-1">
+                    <div class="threat-icon">
+                        <svg viewBox="0 0 60 60" width="40" height="40">
+                            <polygon points="30,5 55,50 5,50" fill="none" stroke="var(--coral)" stroke-width="2.5"/>
+                            <text x="30" y="42" text-anchor="middle" font-size="20" font-weight="900" fill="var(--coral)">!</text>
+                        </svg>
+                    </div>
+                    <div class="threat-name">アセトアルデヒド</div>
+                    <div class="threat-desc">代謝産物が脳を覚醒させる</div>
+                </div>
+                <div class="threat-card threat-2">
+                    <div class="threat-icon">
+                        <svg viewBox="0 0 60 60" width="40" height="40">
+                            <circle cx="30" cy="30" r="22" fill="none" stroke="var(--amber)" stroke-width="2.5"/>
+                            <path d="M20,30 L27,38 L42,22" stroke="var(--amber)" stroke-width="3" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="threat-name">コルチゾール上昇</div>
+                    <div class="threat-desc">ストレスホルモンが活性化</div>
+                </div>
+                <div class="threat-card threat-3">
+                    <div class="threat-icon">
+                        <svg viewBox="0 0 60 60" width="40" height="40">
+                            <rect x="10" y="15" width="40" height="30" rx="4" fill="none" stroke="var(--primary)" stroke-width="2.5"/>
+                            <line x1="10" y1="30" x2="50" y2="30" stroke="var(--primary)" stroke-width="1.5" stroke-dasharray="3,3"/>
+                            <circle cx="30" cy="22" r="4" fill="var(--primary)"/>
+                        </svg>
+                    </div>
+                    <div class="threat-name">利尿作用</div>
+                    <div class="threat-desc">夜間トイレで目が覚める</div>
+                </div>
+            </div>
+            <div class="flow-chain compact-flow">
+                <div class="flow-node-sm stagger-item">
+                    <div class="flow-text-sm">アルコール分解</div>
+                </div>
+                <div class="flow-arrow-sm stagger-item">&rarr;</div>
+                <div class="flow-node-sm stagger-item">
+                    <div class="flow-text-sm">覚醒物質蓄積</div>
+                </div>
+                <div class="flow-arrow-sm stagger-item">&rarr;</div>
+                <div class="flow-node-sm stagger-item">
+                    <div class="flow-text-sm">後半の睡眠崩壊</div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">体は寝ている間もアルコールの解毒にフル稼働</div>
+        </div>
+    </div>
+
+    <!-- Scene 10: 注意喚起 Ebrahim 2013 レビュー -->
+    <div class="scene" id="scene-10">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">科学的エビデンス</h2>
+            <div class="alert-card stagger-item">
+                <div class="alert-icon">!</div>
+                <div class="alert-title">Ebrahim et al. (2013)<br><span class="accent-coral">27研究のレビュー</span></div>
+                <div class="alert-sub">Alcoholism: Clinical and Experimental Research</div>
+            </div>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text"><span class="accent-primary">あらゆる用量</span>で入眠潜時を短縮</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">2</div>
+                    <div class="numbered-text">後半の睡眠は<span class="accent-coral">確実に分断</span>される</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">3</div>
+                    <div class="numbered-text">高用量でレム睡眠が<span class="accent-coral">有意に減少</span></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">2025年の最新レビューでも同じ結論</div>
+        </div>
+    </div>
+
+    <!-- Scene 11: タイトルカード いびきと無呼吸 -->
+    <div class="scene dark-scene" id="scene-11">
+        <canvas id="canvas-11" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-coral">TOPIC 3</div>
+            <h2 class="title-medium light-text stagger-item">アルコールが<br><span class="accent-coral">いびきと無呼吸</span>を<br>悪化させる</h2>
+            <div class="title-sub light-text-sub stagger-item">命に関わる隠れたリスク</div>
+        </div>
+    </div>
+
+    <!-- Scene 12: 横並びカード 筋弛緩→気道狭窄→いびき→無呼吸 -->
+    <div class="scene" id="scene-12">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">気道閉塞のメカニズム</h2>
+            <!-- カスタムビジュアル: 気道SVG -->
+            <div class="airway-visual stagger-item">
+                <svg viewBox="0 0 500 160" class="airway-svg">
+                    <!-- 正常な気道 -->
+                    <text x="125" y="18" text-anchor="middle" font-size="13" fill="var(--teal)" font-weight="700">正常</text>
+                    <ellipse cx="125" cy="80" rx="40" ry="55" fill="none" stroke="var(--teal)" stroke-width="2"/>
+                    <ellipse cx="125" cy="80" rx="25" ry="35" fill="var(--teal-light)" stroke="var(--teal)" stroke-width="1.5"/>
+                    <text x="125" y="85" text-anchor="middle" font-size="11" fill="var(--teal)">気道</text>
+                    <text x="125" y="150" text-anchor="middle" font-size="10" fill="var(--text-light)">十分な空気の通り道</text>
+                    <!-- 矢印 -->
+                    <text x="250" y="85" text-anchor="middle" font-size="28" fill="var(--text-light)">&rarr;</text>
+                    <!-- 飲酒後の気道 -->
+                    <text x="375" y="18" text-anchor="middle" font-size="13" fill="var(--coral)" font-weight="700">飲酒後</text>
+                    <ellipse cx="375" cy="80" rx="40" ry="55" fill="none" stroke="var(--coral)" stroke-width="2"/>
+                    <ellipse cx="375" cy="80" rx="8" ry="12" fill="var(--coral-light)" stroke="var(--coral)" stroke-width="1.5"/>
+                    <text x="375" y="85" text-anchor="middle" font-size="8" fill="var(--coral)">狭窄</text>
+                    <text x="375" y="150" text-anchor="middle" font-size="10" fill="var(--coral)">筋弛緩で気道が閉塞</text>
+                </svg>
+            </div>
+            <div class="flow-chain compact-flow">
+                <div class="flow-node-sm stagger-item">
+                    <div class="flow-text-sm">筋弛緩</div>
+                </div>
+                <div class="flow-arrow-sm stagger-item">&rarr;</div>
+                <div class="flow-node-sm stagger-item">
+                    <div class="flow-text-sm">気道狭窄</div>
+                </div>
+                <div class="flow-arrow-sm stagger-item">&rarr;</div>
+                <div class="flow-node-sm stagger-item">
+                    <div class="flow-text-sm">いびき</div>
+                </div>
+                <div class="flow-arrow-sm stagger-item">&rarr;</div>
+                <div class="flow-node-sm danger-node stagger-item">
+                    <div class="flow-text-sm">無呼吸</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">SASは高血圧リスク<span class="accent-coral">約2倍</span>、心臓病・脳卒中リスクも上昇</div>
+        </div>
+    </div>
+
+    <!-- Scene 13: 数値インパクト 2020年メタ分析 -->
+    <div class="scene" id="scene-13">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">メタ分析の衝撃</h2>
+            <div class="source-badge stagger-item">2020年 系統的レビュー・メタ分析</div>
+            <!-- カスタムビジュアル: 3つの悪化指標 -->
+            <div class="triple-card stagger-item">
+                <div class="metric-card metric-bad">
+                    <div class="metric-icon">
+                        <svg viewBox="0 0 60 60" width="40" height="40">
+                            <path d="M10,50 L30,10 L50,50" fill="none" stroke="var(--coral)" stroke-width="3" class="trend-line"/>
+                        </svg>
+                    </div>
+                    <div class="metric-label">無呼吸回数</div>
+                    <div class="metric-value accent-coral">増加</div>
+                </div>
+                <div class="metric-card metric-bad">
+                    <div class="metric-icon">
+                        <svg viewBox="0 0 60 60" width="40" height="40">
+                            <rect x="15" y="10" width="10" height="40" fill="var(--coral-light)" rx="3"/>
+                            <rect x="35" y="5" width="10" height="45" fill="var(--coral)" rx="3"/>
+                        </svg>
+                    </div>
+                    <div class="metric-label">無呼吸時間</div>
+                    <div class="metric-value accent-coral">延長</div>
+                </div>
+                <div class="metric-card metric-bad">
+                    <div class="metric-icon">
+                        <svg viewBox="0 0 60 60" width="40" height="40">
+                            <path d="M10,15 L25,20 L40,40 L55,50" fill="none" stroke="var(--coral)" stroke-width="3" class="trend-line"/>
+                        </svg>
+                    </div>
+                    <div class="metric-label">酸素飽和度</div>
+                    <div class="metric-value accent-coral">低下</div>
+                </div>
+            </div>
+            <div class="emphasis-sub stagger-item">日本の成人男性の約<span class="accent-coral">9%</span>にSASの疑い</div>
+            <div class="footnote stagger-item">多くが未診断の「隠れSAS」── 寝酒で劇的に悪化</div>
+        </div>
+    </div>
+
+    <!-- Scene 14: タイトルカード 悪循環の罠 -->
+    <div class="scene dark-scene" id="scene-14">
+        <canvas id="canvas-14" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="section-badge accent-bg-amber">WARNING</div>
+            <h2 class="title-medium light-text stagger-item">寝酒が招く<br><span class="accent-amber">「悪循環の罠」</span></h2>
+            <div class="title-sub light-text-sub stagger-item">たまには大丈夫？ 問題は「習慣化」</div>
+        </div>
+    </div>
+
+    <!-- Scene 15: フロー図 悪循環ループ -->
+    <div class="scene" id="scene-15">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">終わりなき悪循環</h2>
+            <!-- カスタムビジュアル: 循環フロー -->
+            <div class="cycle-visual stagger-item">
+                <svg viewBox="0 0 400 400" class="cycle-svg">
+                    <circle cx="200" cy="200" r="150" fill="none" stroke="var(--coral-light)" stroke-width="2" stroke-dasharray="8,4"/>
+                    <!-- ノード -->
+                    <circle cx="200" cy="55" r="38" fill="var(--coral-light)" stroke="var(--coral)" stroke-width="2"/>
+                    <text x="200" y="60" text-anchor="middle" font-size="13" font-weight="700" fill="var(--coral)">不眠</text>
+                    <circle cx="340" cy="130" r="38" fill="var(--amber-light)" stroke="var(--amber)" stroke-width="2"/>
+                    <text x="340" y="135" text-anchor="middle" font-size="13" font-weight="700" fill="var(--amber)">寝酒</text>
+                    <circle cx="340" cy="270" r="38" fill="var(--primary-light)" stroke="var(--primary)" stroke-width="2"/>
+                    <text x="340" y="275" text-anchor="middle" font-size="13" font-weight="700" fill="var(--primary)">耐性</text>
+                    <circle cx="200" cy="345" r="38" fill="var(--amber-light)" stroke="var(--amber)" stroke-width="2"/>
+                    <text x="200" y="350" text-anchor="middle" font-size="13" font-weight="700" fill="var(--amber)">増量</text>
+                    <circle cx="60" cy="270" r="38" fill="var(--coral-light)" stroke="var(--coral)" stroke-width="2"/>
+                    <text x="60" y="275" text-anchor="middle" font-size="13" font-weight="700" fill="var(--coral)">依存</text>
+                    <circle cx="60" cy="130" r="38" fill="var(--coral-light)" stroke="var(--coral)" stroke-width="2"/>
+                    <text x="60" y="128" text-anchor="middle" font-size="12" font-weight="700" fill="var(--coral)">離脱</text>
+                    <text x="60" y="142" text-anchor="middle" font-size="12" font-weight="700" fill="var(--coral)">不眠</text>
+                    <!-- 矢印テキスト -->
+                    <text x="280" y="85" text-anchor="middle" font-size="22" fill="var(--text-light)">→</text>
+                    <text x="350" y="200" text-anchor="middle" font-size="22" fill="var(--text-light)">↓</text>
+                    <text x="280" y="320" text-anchor="middle" font-size="22" fill="var(--text-light)">←</text>
+                    <text x="120" y="320" text-anchor="middle" font-size="22" fill="var(--text-light)">←</text>
+                    <text x="50" y="200" text-anchor="middle" font-size="22" fill="var(--text-light)">↑</text>
+                    <text x="120" y="85" text-anchor="middle" font-size="22" fill="var(--text-light)">→</text>
+                </svg>
+            </div>
+            <div class="emphasis-sub stagger-item">一度ハマると<span class="accent-coral">自力では抜け出せない</span>底なし沼</div>
+        </div>
+    </div>
+
+    <!-- Scene 16: 数値インパクト 不安+不眠で2.32倍 -->
+    <div class="scene" id="scene-16">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">不安＋不眠のダブルリスク</h2>
+            <div class="source-badge stagger-item">疫学調査データ</div>
+            <div class="impact-number stagger-item">
+                <span class="big-num accent-coral">2.32</span><span class="num-unit">倍</span>
+            </div>
+            <div class="emphasis-sub stagger-item">不安を伴う不眠症の人は<br>アルコール関連問題の発症リスクが<span class="accent-coral">2.32倍</span></div>
+            <div class="stat-box stagger-item">
+                <div class="stat-item">
+                    <div class="stat-num accent-coral">112万人</div>
+                    <div class="stat-label">依存症の疑い<br><span class="stat-note">（2013年推計）</span></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">入口として最も多いのが「眠れないから飲む」= 寝酒</div>
+        </div>
+    </div>
+
+    <!-- Scene 17: 引用カード 慢性的影響は持続 -->
+    <div class="scene" id="scene-17">
+        <div class="content center-layout">
+            <h2 class="scene-title stagger-item">禁酒しても戻らない</h2>
+            <div class="quote-card quote-warning stagger-item">
+                <div class="quote-mark">"</div>
+                <div class="quote-text">長期飲酒者は禁酒後も<br><span class="accent-coral">数ヶ月〜数年</span>にわたり<br>睡眠障害が持続する</div>
+                <div class="quote-source">複数の長期追跡研究</div>
+            </div>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">1</div>
+                    <div class="numbered-text">レム睡眠の異常が数ヶ月持続</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">2</div>
+                    <div class="numbered-text">深い睡眠の減少が数年続くケースも</div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle">3</div>
+                    <div class="numbered-text">脳の睡眠調節が<span class="accent-coral">根本的に変化</span></div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">悪循環にハマる前に止めることが決定的に重要</div>
+        </div>
+    </div>
+
+    <!-- Scene 18: テキスト強調 寝るためのお酒は解決策じゃない -->
+    <div class="scene" id="scene-18">
+        <canvas id="canvas-18" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">「寝るためのお酒」は</div>
+            <div class="emphasis-text-large stagger-item"><span class="accent-coral">解決策じゃない</span></div>
+            <div class="emphasis-sub stagger-item">入眠は良くなる。でも「よく眠れる」は<span class="accent-coral">大きな間違い</span></div>
+        </div>
+    </div>
+
+    <!-- Scene 19: 段階的リスト 正しい不眠対策3選 -->
+    <div class="scene" id="scene-19">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">科学が示す正しい不眠対策</h2>
+            <div class="numbered-list">
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-teal">1</div>
+                    <div class="numbered-text">
+                        <span class="accent-teal">睡眠衛生を整える</span>
+                        <div class="text-sub">暗く・静かに・適温16〜26℃ / 就寝1時間前からスマホOFF</div>
+                    </div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-primary">2</div>
+                    <div class="numbered-text">
+                        <span class="accent-primary">認知行動療法（CBT-I）</span>
+                        <div class="text-sub">世界的な不眠症の第一選択治療 / 薬より長期効果が持続</div>
+                    </div>
+                </div>
+                <div class="numbered-item stagger-item">
+                    <div class="number-circle accent-bg-amber">3</div>
+                    <div class="numbered-text">
+                        <span class="accent-amber">飲むなら就寝2〜3時間前まで</span>
+                        <div class="text-sub">ビール350ml = 分解に約2〜3時間 / 寝る前の入浴も効果的</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footnote stagger-item">就寝90分前のぬるめの入浴で自然な眠気が来る</div>
+        </div>
+    </div>
+
+    <!-- Scene 20: まとめカード 今日の3つのポイント -->
+    <div class="scene" id="scene-20">
+        <div class="content card-layout">
+            <h2 class="scene-title stagger-item">今日の3つのポイント</h2>
+            <div class="summary-cards">
+                <div class="summary-card summary-1 stagger-item">
+                    <div class="summary-num">1</div>
+                    <div class="summary-title">入眠は早まるが<span class="accent-coral">後半は崩壊</span></div>
+                    <div class="summary-desc">レム睡眠減少・中途覚醒・コルチゾール上昇</div>
+                </div>
+                <div class="summary-card summary-2 stagger-item">
+                    <div class="summary-num">2</div>
+                    <div class="summary-title">いびき・無呼吸が<span class="accent-coral">命に関わる</span></div>
+                    <div class="summary-desc">筋弛緩→気道閉塞→SAS悪化→心血管リスク</div>
+                </div>
+                <div class="summary-card summary-3 stagger-item">
+                    <div class="summary-num">3</div>
+                    <div class="summary-title">耐性→依存の<span class="accent-coral">悪循環</span></div>
+                    <div class="summary-desc">不眠→寝酒→耐性→増量→依存のエンドレスループ</div>
+                </div>
+            </div>
+            <div class="comparison-note stagger-item">「半分の事実」に騙されてはいけない</div>
+        </div>
+    </div>
+
+    <!-- Scene 21: テキスト強調 コアメッセージ -->
+    <div class="scene" id="scene-21">
+        <canvas id="canvas-21" class="bg-canvas"></canvas>
+        <div class="content center-layout">
+            <div class="emphasis-text stagger-item">「寝つきを良くする」と</div>
+            <div class="emphasis-text-large stagger-item">「<span class="accent-primary">よく眠れる</span>」は<br><span class="accent-coral">全く別の話</span></div>
+            <div class="emphasis-sub stagger-item">今夜から寝る前の一杯を<br>白湯やカフェインレスのお茶に変えてみよう</div>
+            <div class="core-message stagger-item">脳が本来のリズムを取り戻したとき<br>本当の「ぐっすり」を実感できる</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

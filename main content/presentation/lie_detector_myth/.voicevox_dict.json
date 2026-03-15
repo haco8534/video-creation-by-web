@@ -1,0 +1,10 @@
+[
+  { "surface": "CIT", "pronunciation": "シーアイティー", "accent_type": 0 },
+  { "surface": "FBI", "pronunciation": "エフビーアイ", "accent_type": 0 },
+  { "surface": "NAS", "pronunciation": "ナス", "accent_type": 0 },
+  { "surface": "NASA", "pronunciation": "ナサ", "accent_type": 0 },
+  { "surface": "CIA", "pronunciation": "シーアイエー", "accent_type": 0 },
+  { "surface": "CQT", "pronunciation": "シーキューティー", "accent_type": 0 },
+  { "surface": "EPPA", "pronunciation": "イーピーピーエー", "accent_type": 0 },
+  { "surface": "EyeDetect", "pronunciation": "アイディテクト", "accent_type": 0 }
+]

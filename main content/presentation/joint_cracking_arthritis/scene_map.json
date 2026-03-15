@@ -1,0 +1,1016 @@
+{
+  "voicevox_url": "http://localhost:50021",
+  "speed_scale": 1,
+  "inter_line_silence": 0.3,
+  "scene_end_padding": 0.5,
+  "speakers": {
+    "zundamon": 3,
+    "metan": 2
+  },
+  "scenes": [
+    {
+      "id": 0,
+      "sceneId": "scene-0",
+      "title": "関節を鳴らすと関節炎になる？",
+      "lines": [
+        {
+          "speaker": "metan",
+          "text": "今日のテーマは「関節を鳴らすと関節炎になる」ですわ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "うん、これってみんな一度は親や先生に言われたことがあるよね。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "「指をポキポキ鳴らすな！将来関節炎になるぞ！」ってね。"
+        },
+        {
+          "speaker": "metan",
+          "text": "私も子どもの頃に何度も怒られた記憶がありますわ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "友達がポキポキ鳴らしてるのを見て「やめなよ」って止めてましたもの。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "あるあるなのだ。あの警告は日本だけじゃなくて世界中でされているのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "英語でも「Knuckle cracking causes arthritis」って言われているのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "世界共通の迷信なんですのね。"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "sceneId": "scene-1",
+      "title": "25〜54%",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "text": "ところでね、実は世界中で約25%から54%の人が関節を鳴らす習慣があるのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "えっ、そんなに多いんですの？ 4人に1人以上ですわよね。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "多い調査だと2人に1人以上が指をポキポキやっているのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "もしこれが本当に危険なら世界中が関節炎だらけになっちゃうのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "確かに。でも実際にそうはなっていませんわよね。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "そう、そこが今日のポイントなのだ。"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "sceneId": "scene-2",
+      "title": "60年間の自己実験",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "text": "しかもね、この疑問を確かめるためにとんでもないことをした医師がいるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "なんと自分の片手だけを60年間、毎日欠かさず鳴らし続けたのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "60年！？ もはや人生をかけた実験ですわね。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "結果はどうなったと思う？両手に関節炎が出たと思う？"
+        },
+        {
+          "speaker": "metan",
+          "text": "え、気になりますわ。教えてくださいまし！"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "それは後のお楽しみなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "この動画ではこの驚きの実験結果と一緒に全部解説するのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "関節の音の正体は何か。本当に関節炎になるのか。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "そして関節を本当に守るために大切なことは何か。まるごと話すのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "盛りだくさんですわね。楽しみですわ。"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "sceneId": "scene-3",
+      "title": "関節の音の正体",
+      "lines": [
+        {
+          "speaker": "metan",
+          "text": "まず基本的なことから聞いていいですか？"
+        },
+        {
+          "speaker": "metan",
+          "text": "関節をポキッと鳴らした時に出るあの音って、一体何なんですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "すごくいい質問なのだ。ほとんどの人が「骨がぶつかる音」だと思っているのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "でも全然違うのだ。あの音の正体は「キャビテーション」という現象なのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "キャビテーション？ 初めて聞く言葉ですわ。教えてくださいまし。"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "sceneId": "scene-4",
+      "title": "滑液の3つの役割",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "text": "まず前提を説明するのだ。私たちの関節の中には「滑液」という液体があるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "英語では「シノビアルフルイド」と言うのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "関節の中に液体が入っているんですの？ 知りませんでしたわ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "この滑液はすごく大事な役割を3つ持っているのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "1つ目は潤滑。関節をスムーズに動かすためのオイルの役割なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "2つ目は栄養の運搬。軟骨には血管がないから滑液が唯一の栄養源なのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "軟骨に血管がないんですの？ それは驚きですわ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "3つ目は衝撃吸収。歩いたり走ったりした時のショックを和らげるのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "潤滑と栄養とクッション。関節にとってなくてはならない存在ですわね。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "いわば機械のオイルのようなものなのだ。これが不足すると関節がガタガタになるのだ。"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "sceneId": "scene-5",
+      "title": "キャビテーションの流れ",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "text": "そしてこの滑液には二酸化炭素や窒素などのガスが溶け込んでいるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "炭酸水にCO2が溶けているのと同じイメージで考えてほしいのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "なるほど、炭酸水のイメージですのね。わかりやすいですわ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "関節を引っ張ったり急に曲げたりすると関節の中の圧力が下がるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "すると溶けていたガスが溶けきれなくなって気泡になるのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "炭酸のフタを開けると泡が出るのと同じ原理ですのね！"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "まさにその通りなのだ。この気泡ができたり弾けたりする時に音が出るのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "これがキャビテーション。骨がすり減る音じゃ全くないのだ。"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "sceneId": "scene-6",
+      "title": "Kawchuk 2015 MRI研究",
+      "lines": [
+        {
+          "speaker": "metan",
+          "text": "理屈はわかりましたけど、実際に確認されているんですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "もちろんなのだ。2015年にカナダの研究者Kawchukがすごい実験をしたのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "リアルタイムMRIを使って指の関節を引っ張る瞬間を動画撮影したのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "すると関節が離れた瞬間に滑液の中で気泡がパッと現れたのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "しかも音が鳴った後も気泡は残っていたのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "つまり気泡が「生まれる時」に音が鳴るんですのね。映像で証明されたんですわ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "この現象は「トリボ核生成」と呼ばれているのだ。PLOS ONE誌に発表されたのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "さらに2018年には数学的モデルでも検証されたのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "気泡が完全に弾けなくても、部分的に潰れるだけで音が出ることがわかったのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "だから音が鳴った後も気泡が残っていたんですのね。辻褄が合いますわ。"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "sceneId": "scene-7",
+      "title": "通説 vs 科学的事実",
+      "lines": [
+        {
+          "speaker": "metan",
+          "text": "ちなみに一度鳴らすとしばらく鳴らせなくなるのは何でですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "気泡が滑液に再び溶け込むのに約20分かかるからなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "気泡がない状態では音が出ないから約20分は鳴らせないのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "それを「不応期」と呼ぶんですわよね。仕組みがわかってスッキリですわ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "通説では「骨がすり減る音」。でも科学が示したのは「気泡の音」なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "気泡の音で関節炎になるって考えると、ちょっとおかしいよね。"
+        },
+        {
+          "speaker": "metan",
+          "text": "確かに。それだけで怖がる必要はないかもしれませんわね。"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "sceneId": "scene-8",
+      "title": "60年間の壮大な実験",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "text": "さて、ここからが本題なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "冒頭で話した「60年間片手だけ鳴らした医師」の話を詳しくするのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "ずっと気になってましたわ！"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "sceneId": "scene-9",
+      "title": "Unger医師の実験デザイン",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "text": "その医師の名前はDonald Ungerなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "アメリカのカリフォルニア州に住むアレルギー専門医なのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "アレルギーの先生なんですの？関節とは全然違う分野ですわね。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "そう。きっかけはお母さんの一言だったのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "子どもの頃から母親に「指を鳴らすと関節炎になるわよ」と言われ続けたのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "それで「本当かどうか自分の体で確かめてやろう」と決意したのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "自分の体で確かめるって、すごい行動力ですわね。"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "sceneId": "scene-10",
+      "title": "左手 vs 右手 60年間",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "text": "実験のデザインはシンプルなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "左手の指だけを毎日最低2回以上、意識的にポキポキ鳴らすのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "右手は絶対に鳴らさない。60年間ひたすらこれを続けたのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "右手が対照群で、左手が実験群というわけですわね。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "しかもこれを60年以上やり続けたのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "つまり左手だけで少なくとも3万6千回以上鳴らした計算になるのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "3万6千回！ 途方もない回数ですわね。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "しかも途中でやめたくなることもあったはずなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "でも60年間一度も実験をやめなかったのだ。科学への情熱がすごいのだ。"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "sceneId": "scene-11",
+      "title": "両手に関節炎なし",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "text": "そして60年後、ついに結果が出たのだ。両手をレントゲンで検査したのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "ドキドキしますわ。3万回以上鳴らした左手はどうなっていたんですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "結果は、両手とも関節炎は一切見られなかったのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "左手と右手に目に見える差はまったくなかったのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "60年間毎日鳴らし続けて差がないなんて、衝撃的ですわ！"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "sceneId": "scene-12",
+      "title": "イグノーベル賞「お母さん、あなたは間違っていました」",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "text": "この結果は1998年にArthritis and Rheumatismという医学誌に発表されたのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "そして2009年にイグノーベル賞の医学部門を受賞したのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "イグノーベル賞はユニークな研究に贈られる賞ですわよね。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "そう。「まず笑わせ、次に考えさせる」研究に贈られるハーバード主催の賞なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "Unger医師は受賞スピーチでこう言ったのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "「母はいつも言っていました。指を鳴らすと関節炎になるぞ、と」"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "「お母さん、あなたは間違っていました」"
+        },
+        {
+          "speaker": "metan",
+          "text": "60年かけて母の迷信を覆すなんて、ロマンがありますわ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "でもこれ、たった一人の結果ですわよね。科学的に十分なんですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "その通り。一人の実験だけでは不十分なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "でもね、ちゃんと大規模な研究も行われているのだ。"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "sceneId": "scene-13",
+      "title": "大規模研究の結果",
+      "lines": [
+        {
+          "speaker": "metan",
+          "text": "大規模な研究もあるんですの。安心しましたわ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "複数の研究者がこのテーマを真剣に調べているのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "しかもどの研究も同じ結論に達しているのだ。"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "sceneId": "scene-14",
+      "title": "300人調査・有意差なし",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "text": "まず1990年にCastellanosとAxelrodという研究者が調査したのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "45歳以上の患者さん300人を対象にしたのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "指を習慣的に鳴らす人が74人、鳴らさない人が226人だったのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "300人規模って、かなり本格的な研究ですわね。一人の自己実験とは違いますわ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "そうなのだ。集団で調べることで個人差の影響を減らせるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "結果は関節炎の有病率に両グループで統計的な差はなかったのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "ただし面白いことに、鳴らす人は手の腫れが多い傾向があったのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "腫れは出やすいけど関節炎との関連はないということですのね。"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "sceneId": "scene-15",
+      "title": "18.1% vs 21.5%",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "text": "次に2011年にdeWeberという研究者がもっと厳密な研究を行ったのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "50歳から89歳の215人を対象にした症例対照研究なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "全員の手のレントゲンを撮って変形性関節症の有無を客観的に確認したのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "レントゲンで客観的に調べたんですのね。厳密ですわ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "結果は、指を鳴らす人の変形性関節症の有病率は18.1%だったのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "鳴らさない人は21.5%。統計的に有意な差はなかったのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "むしろ鳴らす人の方がわずかに低いくらいですわね！"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "sceneId": "scene-16",
+      "title": "「鳴らした方がいい」ではない",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "text": "そこは注意が必要なのだ。「鳴らした方が健康にいい」って意味じゃないのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "統計的に差がないということは、つまり関連がないということなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "鳴らしても鳴らさなくても関節炎のリスクは変わらないのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "なるほど。「因果関係がない」ってことが大事なんですわね。"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "sceneId": "scene-17",
+      "title": "3つの研究まとめ",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "text": "ここまでの研究結果をまとめるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "1つ目、Unger医師の60年の自己実験。左手と右手に差なしなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "2つ目、300人の疫学調査。関節炎の有病率に差なしなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "3つ目、レントゲン付きの症例対照研究。有意差なしなのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "3つの研究が全部同じ結論に達しているんですわね。これは説得力がありますわ。"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "sceneId": "scene-18",
+      "title": "医学的コンセンサス",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "text": "さらにね、ハーバード大学のメディカルスクールもなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "クリーブランドクリニックも、ジョンズ・ホプキンスもなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "世界トップの医療機関がすべて同じ見解を示しているのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "「指を鳴らすことと関節炎に因果関係はない」。これが医学的コンセンサスなのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "世界中の権威ある医療機関がそう言うなら、もう間違いないですわね。"
+        },
+        {
+          "speaker": "metan",
+          "text": "でもちょっと待ってくださいまし。じゃあ全く問題ないんですの？"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "sceneId": "scene-19",
+      "title": "関節を鳴らす本当のリスク",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "text": "そこが大事なところなのだ。関節炎との因果関係はないのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "でも「完全に無害」かというと、少しだけ注意が必要なところもあるのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "やっぱり何かあるんですのね。教えてくださいまし。"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "sceneId": "scene-20",
+      "title": "3つの潜在的リスク",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "text": "潜在的なリスクを3つ紹介するのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "1つ目は握力への影響なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "1990年のCastellanosの研究では指を鳴らす人は握力がわずかに低かったのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "握力が弱くなる可能性があるんですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "ただし2017年の別の研究では握力に差がないという結果も出ているのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "研究によって結果が違うので、まだ科学的に決着はついていないのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "まだ議論中ということですわね。"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "sceneId": "scene-21",
+      "title": "関節弛緩症のリスク",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "text": "2つ目のリスクは「関節弛緩症」なのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "関節弛緩症って何ですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "無理な力をかけて頻繁に鳴らし続けると靭帯が伸びてしまうことがあるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "靭帯が伸びると関節がゆるくなってグラグラしてくるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "そうすると少し動かしただけですぐ音が鳴るようになるのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "鳴らしやすくなるからさらに鳴らす。悪循環になりそうですわね。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "その通りなのだ。だから「鳴らすなら無理な力をかけず軽く」が大事なのだ。"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "sceneId": "scene-22",
+      "title": "首・腰は絶対に危険",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "text": "そして3つ目が最も重要な注意点なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "首や腰は絶対に勢いよく鳴らしてはいけないのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "首のポキッて気持ちいいのに、ダメなんですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "首や腰の関節は脊髄神経のすぐそばにあるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "勢いよくひねったり鳴らしたりすると神経を傷つけるリスクがあるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "最悪の場合、しびれや麻痺が出ることもあるのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "それは怖いですわ。指を軽く鳴らすのとは全然違うリスクですわね。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "そうなのだ。首や腰が気になる場合は自分でボキッとやらずに専門家に相談なのだ。"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "sceneId": "scene-23",
+      "title": "変形性関節症の5つのリスク要因",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "text": "さてここからとても大事な話をするのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "関節炎の「本当のリスク要因」を知っておいてほしいのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "関節を鳴らすことじゃないなら、何が本当の原因なんですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "変形性関節症の主なリスク要因は5つあるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "1番目は加齢。年齢とともに軟骨がすり減っていくのは避けられないのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "2番目は遺伝。家族に関節症の方がいるとリスクが高まるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "3番目は肥満。体重が重いほど膝や腰の関節に大きな負担がかかるのだ。"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "sceneId": "scene-24",
+      "title": "本当に関節を守りたいなら",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "text": "4番目は過去の関節外傷。スポーツでの怪我や事故の影響が後々出るのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "5番目は関節を酷使する仕事や活動なのだ。重労働や特定の動作の繰り返しなのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "「指を鳴らすこと」はこの5つの中に入っていませんわね。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "まったく入っていないのだ。CDOやWHOの公式資料にも記載がないのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "関節を守りたいなら、指を鳴らすのをやめるよりずっと大事なことがあるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "適度な運動で関節まわりの筋肉を鍛えること。適正体重を維持すること。"
+        },
+        {
+          "speaker": "metan",
+          "text": "運動って具体的にはどんなものがいいんですの？"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "関節に優しい有酸素運動がおすすめなのだ。ウォーキングや水泳なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "あとはスクワットのような筋トレで関節周りの筋肉を強化するといいのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "バランスの取れた食事でカルシウムやビタミンDを摂ることも大切なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "関節に無理をかけない生活習慣を心がけることなのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "指をポキポキ鳴らすのをやめることより、もっと効果的な方法があるんですわね。"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "sceneId": "scene-25",
+      "title": "今日の3つのポイント",
+      "lines": [
+        {
+          "speaker": "metan",
+          "text": "では最後に今日のお話をまとめていただけますか。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "もちろんなのだ。今日伝えたかったことは大きく3つあるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "1つ目。関節の「ポキッ」という音の正体はキャビテーションなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "骨がすり減る音じゃなくて、滑液の中で気泡が生まれる音なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "2015年にMRIで実際に撮影されて科学的に証明されているのだ。"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "sceneId": "scene-26",
+      "title": "3つのまとめポイント",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "text": "2つ目。60年の自己実験、300人の疫学調査、レントゲンの症例対照研究。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "すべて「関節を鳴らすことと関節炎に因果関係はない」と結論しているのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "ハーバードもクリーブランドクリニックも同じ見解なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "3つ目。ただし首や腰を勢いよく鳴らすのは危険なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "そして関節を本当に守りたいなら運動・体重管理・栄養が大切なのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "「ポキポキすると関節炎になる」は科学的に否定されていたんですわね。"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "sceneId": "scene-27",
+      "title": "科学で常識を疑おう",
+      "lines": [
+        {
+          "speaker": "zundamon",
+          "text": "最初の問いに戻るのだ。「関節を鳴らすと関節炎になるのか？」"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "答えは「ならない」なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "Donald Unger先生が60年の人生をかけて証明してくれたのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "お母さんの言いつけを60年がかりで科学的に検証するなんて素敵ですわ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "科学って身近な疑問にも答えを出してくれるんですわね。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "そうなのだ。「当たり前」と思い込んでいることも調べると違うことがあるのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "今日みたいに科学の力でちゃんと確かめることが大事なのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "世の中には他にも「みんなが信じているけど実は違う」ことがたくさんあるのだ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "長年モヤモヤしていた疑問がスッキリ解決しましたわ。"
+        },
+        {
+          "speaker": "metan",
+          "text": "周りの人にも教えてあげたいですわ。科学って楽しいですわね。"
+        },
+        {
+          "speaker": "metan",
+          "text": "今日もありがとうございましたわ。勉強になりましたわ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "こちらこそ、最後まで見てくれてありがとうなのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "みんなも気になったことはぜひ自分で調べてみてほしいのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "科学の目で見ると、世界の見え方がちょっと変わるかもしれないのだ。"
+        },
+        {
+          "speaker": "zundamon",
+          "text": "それじゃあまた次の動画で会おうなのだ！"
+        }
+      ]
+    }
+  ]
+}

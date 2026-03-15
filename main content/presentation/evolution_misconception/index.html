@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920">
+  <title>「進化論」の最大の誤解──人間はサルから進化していない</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== Scene 0: タイトルカード | 進化論の最大の誤解 ===== -->
+<section class="scene" id="scene-0">
+  <canvas id="canvas-0" class="scene-canvas"></canvas>
+  <div class="scene-content title-card">
+    <div class="title-sub stagger-item">科学が解き明かす真実</div>
+    <h1 class="title-huge stagger-item">「進化論」の<span class="highlight-text">最大の誤解</span><br>人間はサルから進化していない</h1>
+    <div class="title-accent stagger-item">Evolution ≠ Progress</div>
+    <div class="source-badge stagger-item">Darwin (1871) / Gould (1989) / Chimpanzee Genome Consortium (2005)</div>
+  </div>
+</section>
+
+<!-- ===== Scene 1: テキスト強調 | ダーウィンは一度も言っていない ===== -->
+<section class="scene" id="scene-1">
+  <canvas id="canvas-1" class="scene-canvas"></canvas>
+  <div class="scene-content text-emphasis">
+    <div class="emphasis-icon stagger-item">📖</div>
+    <h2 class="emphasis-title stagger-item">ダーウィンは<span class="highlight-text">一度も</span><br>「人間はサルから進化した」と<span class="text-danger">言っていない</span></h2>
+    <p class="emphasis-body stagger-item">1871年『人間の由来』で述べたのは<br>「人間とサルは<span class="highlight-text">共通の祖先</span>から分かれた」</p>
+    <div class="emphasis-note stagger-item">The Descent of Man, and Selection in Relation to Sex (1871)</div>
+  </div>
+</section>
+
+<!-- ===== Scene 2: 数値インパクト | 米国54%・日本88% ===== -->
+<section class="scene" id="scene-2">
+  <div class="scene-content number-impact dual-numbers">
+    <div class="impact-label stagger-item">進化を受け入れている人の割合（2019-2021年）</div>
+    <div class="dual-container stagger-item">
+      <div class="dual-num">
+        <div class="big-num">88</div>
+        <div class="big-unit">%</div>
+        <div class="dual-label">日本</div>
+      </div>
+      <div class="dual-arrow">
+        <span class="vs-divider small">vs</span>
+      </div>
+      <div class="dual-num accent-num">
+        <div class="big-num">54</div>
+        <div class="big-unit">%</div>
+        <div class="dual-label">アメリカ</div>
+      </div>
+    </div>
+    <div class="impact-detail stagger-item">受け入れていても<span class="text-danger">正確に理解している</span>かは別の問題</div>
+    <div class="source-badge stagger-item">出典: Pew Research Center (2019-2020) / 2021年調査</div>
+  </div>
+</section>
+
+<!-- ===== Scene 3: タイトルカード | そもそも進化って何？ ===== -->
+<section class="scene" id="scene-3">
+  <canvas id="canvas-3" class="scene-canvas"></canvas>
+  <div class="scene-content title-card block-title">
+    <div class="title-sub stagger-item">前提知識</div>
+    <h1 class="title-huge stagger-item">そもそも<span class="highlight-text">進化</span>って何？</h1>
+    <div class="title-accent stagger-item">What Is Evolution?</div>
+  </div>
+</section>
+
+<!-- ===== Scene 4: 段階的リスト | 自然選択の4ステップ ===== -->
+<section class="scene" id="scene-4">
+  <div class="scene-content stepped-list">
+    <h2 class="list-title stagger-item"><span class="highlight-text">自然選択</span>の4ステップ</h2>
+    <div class="step-cards">
+      <div class="step-card stagger-item" style="--card-delay: 0.1s">
+        <div class="card-num">01</div>
+        <h3 class="card-title">突然変異</h3>
+        <p class="card-desc">DNAにランダムなコピーミスが発生。完全に偶然で方向性はない</p>
+        <div class="card-icon">🧬</div>
+      </div>
+      <div class="step-card stagger-item" style="--card-delay: 0.3s">
+        <div class="card-num">02</div>
+        <h3 class="card-title">適応</h3>
+        <p class="card-desc">その変異がたまたま環境に合っていると、生き残りに有利になる</p>
+        <div class="card-icon">🌿</div>
+      </div>
+      <div class="step-card stagger-item" style="--card-delay: 0.5s">
+        <div class="card-num">03</div>
+        <h3 class="card-title">繁殖</h3>
+        <p class="card-desc">生き残った個体がより多くの子孫を残す</p>
+        <div class="card-icon">👶</div>
+      </div>
+      <div class="step-card stagger-item" style="--card-delay: 0.7s">
+        <div class="card-num">04</div>
+        <h3 class="card-title">遺伝</h3>
+        <p class="card-desc">有利な特徴が次の世代に受け継がれ、集団に広まる</p>
+        <div class="card-icon">🔄</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Scene 5: フロー図 | 突然変異→適応→繁殖→遺伝のサイクル ===== -->
+<section class="scene" id="scene-5">
+  <div class="scene-content flow-diagram">
+    <h2 class="flow-title stagger-item">進化の基本サイクル</h2>
+    <div class="flow-steps">
+      <div class="flow-step stagger-item">
+        <div class="step-num">1</div>
+        <div class="step-text">ランダムな<br>突然変異</div>
+      </div>
+      <div class="flow-arrow stagger-item">→</div>
+      <div class="flow-step stagger-item">
+        <div class="step-num">2</div>
+        <div class="step-text">環境に合った<br>変異が有利に</div>
+      </div>
+      <div class="flow-arrow stagger-item">→</div>
+      <div class="flow-step stagger-item">
+        <div class="step-num">3</div>
+        <div class="step-text">有利な個体が<br>多く子孫を残す</div>
+      </div>
+      <div class="flow-arrow stagger-item">→</div>
+      <div class="flow-step stagger-item highlight-step">
+        <div class="step-num">4</div>
+        <div class="step-text">有利な形質が<br>集団に広まる</div>
+      </div>
+    </div>
+    <div class="emphasis-note stagger-item">これを何百万年と繰り返すと、生き物の姿がどんどん変わっていく</div>
+  </div>
+</section>
+
+<!-- ===== Scene 6: 比較対照 | はしご型 vs 木の枝型 ===== -->
+<section class="scene" id="scene-6">
+  <div class="scene-content vs-container">
+    <h2 class="vs-title stagger-item">進化のイメージ比較</h2>
+    <div class="vs-cards">
+      <div class="vs-card left stagger-item">
+        <div class="vs-card-header">はしご型（直線）</div>
+        <div class="vs-card-icon">🪜</div>
+        <ul class="vs-list">
+          <li>サル → 原始人 → 現代人</li>
+          <li>一直線の「進歩」</li>
+          <li>古い形態は劣っている</li>
+        </ul>
+        <div class="vs-verdict wrong">✗ 誤った理解</div>
+      </div>
+      <div class="vs-divider stagger-item">VS</div>
+      <div class="vs-card right stagger-item">
+        <div class="vs-card-header">木の枝型（分岐）</div>
+        <div class="vs-card-icon">🌳</div>
+        <ul class="vs-list">
+          <li>共通祖先 → 多方向に同時分岐</li>
+          <li>方向性のない「変化」</li>
+          <li>すべての種が「現在形」</li>
+        </ul>
+        <div class="vs-verdict correct">✓ 科学的に正しい</div>
+      </div>
+    </div>
+    <div class="source-badge stagger-item">ダーウィンのノート (1837)「I think」──系統樹のスケッチ</div>
+  </div>
+</section>
+
+<!-- ===== Scene 7: タイトルカード | たった1枚のイラストが世界を変えた ===== -->
+<section class="scene" id="scene-7">
+  <canvas id="canvas-7" class="scene-canvas"></canvas>
+  <div class="scene-content title-card block-title">
+    <div class="title-sub stagger-item">トピック①</div>
+    <h1 class="title-huge stagger-item">たった<span class="highlight-text">1枚のイラスト</span>が<br>世界を変えた</h1>
+    <div class="title-accent stagger-item">March of Progress — The Most Famous Misconception</div>
+  </div>
+</section>
+
+<!-- ===== Scene 8: 引用カード | マーチオブプログレス（1965年） ===== -->
+<section class="scene" id="scene-8">
+  <div class="scene-content quote-card">
+    <div class="quote-icon stagger-item">🖼️</div>
+    <h2 class="quote-title stagger-item">マーチオブプログレス（1965年）</h2>
+    <blockquote class="quote-text stagger-item">
+      サルから現代人へ一列に行進する有名な図。元は25種類の祖先を並べた折り込みイラストだったが、6人の簡略版だけが独り歩きした
+    </blockquote>
+    <div class="quote-detail stagger-item">
+      <div class="detail-row"><span class="detail-key">画家</span><span class="detail-val">Rudolph Zallinger</span></div>
+      <div class="detail-row"><span class="detail-key">掲載</span><span class="detail-val">Early Man (Life Nature Library)</span></div>
+      <div class="detail-row"><span class="detail-key">著者</span><span class="detail-val">F. Clark Howell</span></div>
+    </div>
+    <div class="source-badge stagger-item">Howell, F.C. (1965). Early Man. Time-Life Books</div>
+  </div>
+</section>
+
+<!-- ===== Scene 9: テキスト強調 | グラフィックがテキストを圧倒した ===== -->
+<section class="scene" id="scene-9">
+  <div class="scene-content text-emphasis">
+    <div class="emphasis-icon stagger-item">⚡</div>
+    <h2 class="emphasis-title stagger-item">描いた本人も著者も<br><span class="text-danger">直線的進化を意図していなかった</span></h2>
+    <div class="emphasis-blocks stagger-item">
+      <div class="em-block">元は25種の折り込み図</div>
+      <div class="em-arrow">→</div>
+      <div class="em-block accent">6人に簡略化</div>
+      <div class="em-arrow">→</div>
+      <div class="em-block danger">「一直線の進歩」と誤解</div>
+    </div>
+    <p class="emphasis-body stagger-item">「あの図のビジュアルが強烈すぎて、文章の補足説明が完全に無視された」── F. Clark Howell</p>
+  </div>
+</section>
+
+<!-- ===== Scene 10: 引用カード | グールド──はしごではなく茂み ===== -->
+<section class="scene" id="scene-10">
+  <div class="scene-content quote-card">
+    <div class="quote-icon stagger-item">📚</div>
+    <h2 class="quote-title stagger-item">グールドの批判</h2>
+    <blockquote class="quote-text stagger-item">
+      「生命の歴史は予測可能な進歩のはしごではない。絶滅によって常に剪定される、豊かに枝分かれする茂みだ」
+    </blockquote>
+    <div class="quote-detail stagger-item">
+      <div class="detail-row"><span class="detail-key">研究者</span><span class="detail-val">Stephen Jay Gould</span></div>
+      <div class="detail-row"><span class="detail-key">書籍</span><span class="detail-val">Wonderful Life (1989)</span></div>
+      <div class="detail-row"><span class="detail-key">専門</span><span class="detail-val">古生物学</span></div>
+    </div>
+    <div class="source-badge stagger-item">出典: Gould, S.J. (1989). Wonderful Life. W.W. Norton</div>
+  </div>
+</section>
+
+<!-- ===== Scene 11: 段階的リスト | 誤解が広まった3つの原因 ===== -->
+<section class="scene" id="scene-11">
+  <div class="scene-content stepped-list">
+    <h2 class="list-title stagger-item">誤解が広まった<span class="highlight-text">3つの原因</span></h2>
+    <div class="step-cards">
+      <div class="step-card stagger-item" style="--card-delay: 0.1s">
+        <div class="card-num">01</div>
+        <h3 class="card-title">マーチオブプログレス</h3>
+        <p class="card-desc">1965年のイラストが「進化＝一直線」のイメージを世界に定着させた</p>
+        <div class="card-icon">🖼️</div>
+      </div>
+      <div class="step-card stagger-item" style="--card-delay: 0.3s">
+        <div class="card-num">02</div>
+        <h3 class="card-title">スペンサーの社会進化論</h3>
+        <p class="card-desc">「適者生存」はダーウィンではなくスペンサーの言葉。「進化＝社会の進歩」と混同された</p>
+        <div class="card-icon">📜</div>
+      </div>
+      <div class="step-card stagger-item" style="--card-delay: 0.5s">
+        <div class="card-num">03</div>
+        <h3 class="card-title">日本語「進化」の翻訳</h3>
+        <p class="card-desc">「進む＋化ける」= 進歩のニュアンス。英語 evolution は中立的な「変化」の意味</p>
+        <div class="card-icon">🇯🇵</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Scene 12: テキスト強調 | 日本語「進化」に潜む罠 ===== -->
+<section class="scene" id="scene-12">
+  <div class="scene-content text-emphasis">
+    <h2 class="emphasis-title stagger-item">日本語<span class="highlight-text">「進化」</span>に潜む罠</h2>
+    <div class="emphasis-equation stagger-item">
+      <span class="eq-item">進化（進む＋化ける）</span>
+      <span class="eq-sign">≠</span>
+      <span class="eq-item">Evolution（展開・変化）</span>
+    </div>
+    <p class="emphasis-body stagger-item">翻訳そのものが「進化＝進歩」の誤解を助長している</p>
+    <div class="emphasis-note stagger-item">英語 evolution の語源はラテン語 evolvere（巻物を広げる＝展開する）</div>
+  </div>
+</section>
+
+<!-- ===== Scene 13: タイトルカード | DNA・染色体・化石が語る真実 ===== -->
+<section class="scene" id="scene-13">
+  <canvas id="canvas-13" class="scene-canvas"></canvas>
+  <div class="scene-content title-card block-title">
+    <div class="title-sub stagger-item">トピック②</div>
+    <h1 class="title-huge stagger-item"><span class="highlight-text">DNA・染色体・化石</span>が<br>語る真実</h1>
+    <div class="title-accent stagger-item">Scientific Evidence for Common Ancestry</div>
+  </div>
+</section>
+
+<!-- ===== Scene 14: 比較対照 | 親子関係 vs いとこ関係 ===== -->
+<section class="scene" id="scene-14">
+  <div class="scene-content vs-container">
+    <h2 class="vs-title stagger-item">人間とサルの本当の関係</h2>
+    <div class="vs-cards">
+      <div class="vs-card left stagger-item">
+        <div class="vs-card-header">一般的な誤解</div>
+        <div class="vs-card-icon">👨‍👦</div>
+        <ul class="vs-list">
+          <li>サルが「親」で人間が「子」</li>
+          <li>サル → 原始人 → 人間</li>
+          <li>サルは「進化前」の人間</li>
+        </ul>
+        <div class="vs-verdict wrong">✗ 間違い</div>
+      </div>
+      <div class="vs-divider stagger-item">VS</div>
+      <div class="vs-card right stagger-item">
+        <div class="vs-card-header">科学的な事実</div>
+        <div class="vs-card-icon">👫</div>
+        <ul class="vs-list">
+          <li>共通の祖先が「祖父母」</li>
+          <li>祖先 → 人間 / 祖先 → サル</li>
+          <li>人間とサルは「いとこ」</li>
+        </ul>
+        <div class="vs-verdict correct">✓ 正しい</div>
+      </div>
+    </div>
+    <div class="source-badge stagger-item">約600〜700万年前に共通祖先から分岐</div>
+  </div>
+</section>
+
+<!-- ===== Scene 15: 数値インパクト | DNA類似度98.7% ===== -->
+<section class="scene" id="scene-15">
+  <div class="scene-content number-impact">
+    <div class="impact-label stagger-item">人間とチンパンジーのDNA一致率</div>
+    <div class="impact-number stagger-item"><span class="big-num">98.7</span><span class="big-unit">%</span></div>
+    <div class="impact-bar-container stagger-item">
+      <div class="impact-bar" style="--bar-width: 98.7%">
+        <span class="bar-label">直接比較可能な領域で98.7%が一致</span>
+      </div>
+    </div>
+    <div class="impact-detail stagger-item">挿入・欠失を含めても約96%一致。人間同士の差は約0.1%</div>
+    <div class="source-badge stagger-item">出典: Chimpanzee Sequencing and Analysis Consortium (2005) Nature</div>
+  </div>
+</section>
+
+<!-- ===== Scene 16: フロー図 | ヒト第2染色体の融合 ===== -->
+<section class="scene" id="scene-16">
+  <div class="scene-content flow-diagram">
+    <h2 class="flow-title stagger-item">ヒト第2染色体 ── 進化の「現場証拠」</h2>
+    <div class="flow-steps vertical">
+      <div class="flow-step stagger-item">
+        <div class="step-num">1</div>
+        <div class="step-text">チンパンジーは染色体48本、人間は46本（2本少ない）</div>
+      </div>
+      <div class="flow-arrow-v stagger-item">↓</div>
+      <div class="flow-step stagger-item">
+        <div class="step-num">2</div>
+        <div class="step-text">人間の第2染色体の真ん中にテロメア（端にしかないはずの配列）の痕跡を発見</div>
+      </div>
+      <div class="flow-arrow-v stagger-item">↓</div>
+      <div class="flow-step stagger-item">
+        <div class="step-num">3</div>
+        <div class="step-text">さらにセントロメア（通常1つ）が2つ存在する構造</div>
+      </div>
+      <div class="flow-arrow-v stagger-item">↓</div>
+      <div class="flow-step stagger-item highlight-step">
+        <div class="step-num">!</div>
+        <div class="step-text">チンパンジーの2本の染色体が「端と端でくっついた」証拠</div>
+      </div>
+    </div>
+    <div class="source-badge stagger-item">出典: Ijdo et al. (1991) PNAS, 88(20), 9051-9055</div>
+  </div>
+</section>
+
+<!-- ===== Scene 17: 段階的リスト | 化石証拠──3つの人類化石 ===== -->
+<section class="scene" id="scene-17">
+  <div class="scene-content stepped-list">
+    <h2 class="list-title stagger-item">化石が語る<span class="highlight-text">分岐の歴史</span></h2>
+    <div class="step-cards">
+      <div class="step-card stagger-item" style="--card-delay: 0.1s">
+        <div class="card-num">700万年前</div>
+        <h3 class="card-title">サヘラントロプス</h3>
+        <p class="card-desc">現在見つかっている最古級の人類化石。チャドで発見</p>
+        <div class="card-icon">💀</div>
+      </div>
+      <div class="step-card stagger-item" style="--card-delay: 0.3s">
+        <div class="card-num">440万年前</div>
+        <h3 class="card-title">アルディピテクス</h3>
+        <p class="card-desc">分岐直後の特徴を持つ初期人類。通称「アルディ」</p>
+        <div class="card-icon">🦶</div>
+      </div>
+      <div class="step-card stagger-item" style="--card-delay: 0.5s">
+        <div class="card-num">320万年前</div>
+        <h3 class="card-title">アウストラロピテクス</h3>
+        <p class="card-desc">通称「ルーシー」。エチオピアで発見。二足歩行の直接的証拠</p>
+        <div class="card-icon">👣</div>
+      </div>
+    </div>
+    <div class="source-badge stagger-item">出典: Brunet et al. (2002) / White et al. (2009) / Johanson & White (1979)</div>
+  </div>
+</section>
+
+<!-- ===== Scene 18: タイトルカード | 最大の勘違い──進化は進歩ではない ===== -->
+<section class="scene" id="scene-18">
+  <canvas id="canvas-18" class="scene-canvas"></canvas>
+  <div class="scene-content title-card block-title">
+    <div class="title-sub stagger-item">トピック③</div>
+    <h1 class="title-huge stagger-item">最大の勘違い<br><span class="highlight-text">進化は進歩ではない</span></h1>
+    <div class="title-accent stagger-item">Evolution ≠ Progress</div>
+  </div>
+</section>
+
+<!-- ===== Scene 19: 比較対照 | 進化 vs 進歩の本質的な違い ===== -->
+<section class="scene" id="scene-19">
+  <div class="scene-content vs-container">
+    <h2 class="vs-title stagger-item">進化 vs 進歩</h2>
+    <div class="vs-cards">
+      <div class="vs-card left stagger-item">
+        <div class="vs-card-header">一般的なイメージ</div>
+        <div class="vs-card-icon">📈</div>
+        <ul class="vs-list">
+          <li>より賢く、より強くなる</li>
+          <li>単純 → 複雑への一方向</li>
+          <li>人間が進化の頂点</li>
+        </ul>
+        <div class="vs-verdict wrong">✗ 誤り</div>
+      </div>
+      <div class="vs-divider stagger-item">VS</div>
+      <div class="vs-card right stagger-item">
+        <div class="vs-card-header">科学的な実態</div>
+        <div class="vs-card-icon">🔀</div>
+        <ul class="vs-list">
+          <li>環境への適応による変化</li>
+          <li>複雑化も単純化もあり</li>
+          <li>全ての種が「現在形」</li>
+        </ul>
+        <div class="vs-verdict correct">✓ 正しい</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Scene 20: 横並びカード | 退化も進化──モグラの目・寄生虫 ===== -->
+<section class="scene" id="scene-20">
+  <div class="scene-content stepped-list">
+    <h2 class="list-title stagger-item"><span class="highlight-text">退化</span>も立派な<span class="highlight-text">進化</span></h2>
+    <div class="step-cards horizontal-cards">
+      <div class="step-card stagger-item" style="--card-delay: 0.1s">
+        <div class="card-icon large-icon">🐾</div>
+        <h3 class="card-title">モグラの目</h3>
+        <p class="card-desc">ほぼ見えないまで退化。暗い地中では不要なので、エネルギーを他に回した結果</p>
+      </div>
+      <div class="step-card stagger-item" style="--card-delay: 0.3s">
+        <div class="card-icon large-icon">🪱</div>
+        <h3 class="card-title">寄生虫の体</h3>
+        <p class="card-desc">消化器官すら持たない種も。体を極端に単純化して繁殖に全エネルギーを集中</p>
+      </div>
+    </div>
+    <p class="emphasis-body stagger-item">必要ないものを手放すのも、環境への適応＝進化</p>
+  </div>
+</section>
+
+<!-- ===== Scene 21: テキスト強調 | 人間は頂点ではなく多くの枝の一つ ===== -->
+<section class="scene" id="scene-21">
+  <div class="scene-content text-emphasis">
+    <div class="emphasis-icon stagger-item">🌍</div>
+    <h2 class="emphasis-title stagger-item">人間は進化の<span class="text-danger">頂点ではない</span><br>多くの<span class="highlight-text">枝の一つ</span></h2>
+    <div class="emphasis-cards stagger-item">
+      <div class="em-card">
+        <div class="em-card-icon">🪳</div>
+        <div class="em-card-text">ゴキブリ<br><span class="text-sub">3億年以上</span></div>
+      </div>
+      <div class="em-card">
+        <div class="em-card-icon">🦠</div>
+        <div class="em-card-text">バクテリア<br><span class="text-sub">38億年以上</span></div>
+      </div>
+      <div class="em-card">
+        <div class="em-card-icon">🧑</div>
+        <div class="em-card-text">ホモ・サピエンス<br><span class="text-sub">約30万年</span></div>
+      </div>
+    </div>
+    <p class="emphasis-body stagger-item">「長く繁栄している」基準なら、彼らのほうがはるかに大先輩</p>
+  </div>
+</section>
+
+<!-- ===== Scene 22: 注意喚起 | 「まだサルがいるじゃないか」への完全回答 ===== -->
+<section class="scene" id="scene-22">
+  <div class="scene-content caution-card">
+    <div class="caution-icon stagger-item">💬</div>
+    <h2 class="caution-title stagger-item">よくある反論：<span class="highlight-text">なぜまだサルがいるの？</span></h2>
+    <div class="caution-body stagger-item">
+      <p>この質問自体が「サルから進化した」という<span class="text-danger">誤解</span>に基づいている</p>
+      <p>人間とサルは共通祖先から<strong>枝分かれ</strong>しただけ</p>
+    </div>
+    <div class="caution-tip stagger-item">
+      <div class="tip-icon">💡</div>
+      <div class="tip-text">きみがいるからといって、いとこが消えるわけがない。サルも人間も「今」を生きる仲間</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Scene 23: まとめカード | 今日の3つのポイント ===== -->
+<section class="scene" id="scene-23">
+  <div class="scene-content summary-card">
+    <h2 class="summary-title stagger-item">今日の<span class="highlight-text">3つのポイント</span></h2>
+    <div class="summary-points">
+      <div class="summary-point stagger-item" style="--card-delay: 0.1s">
+        <div class="point-num">1</div>
+        <div class="point-text">人間はサルから進化したのではなく<br><strong>共通の祖先から分岐した</strong></div>
+      </div>
+      <div class="summary-point stagger-item" style="--card-delay: 0.3s">
+        <div class="point-num">2</div>
+        <div class="point-text">マーチオブプログレスと「進化」の翻訳が<br><strong>誤解を世界に広めた</strong></div>
+      </div>
+      <div class="summary-point stagger-item" style="--card-delay: 0.5s">
+        <div class="point-num">3</div>
+        <div class="point-text">進化は「進歩」ではなく<br><strong>環境への適応による変化</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Scene 24: テキスト強調 | ダーウィンが本当に伝えたかったこと ===== -->
+<section class="scene" id="scene-24">
+  <div class="scene-content text-emphasis">
+    <h2 class="emphasis-title stagger-item">ダーウィンが本当に伝えたかったこと</h2>
+    <h2 class="emphasis-title-big stagger-item"><span class="highlight-text">すべての生き物は1つの大きな家族</span></h2>
+    <p class="emphasis-body stagger-item">人間もチンパンジーもゴキブリもバクテリアも<br>みんな同じ生命の木の枝</p>
+    <p class="emphasis-final stagger-item">どの枝が「上」で、どの枝が「下」ということはない</p>
+  </div>
+</section>
+
+<!-- ===== Scene 25: 引用カード | ダーウィンの「I think」──生命の木 ===== -->
+<section class="scene" id="scene-25">
+  <canvas id="canvas-25" class="scene-canvas"></canvas>
+  <div class="scene-content quote-card ending-card">
+    <div class="quote-icon stagger-item">🌳</div>
+    <h2 class="quote-title stagger-item">ダーウィンのノート (1837)</h2>
+    <blockquote class="quote-text stagger-item">
+      「I think」── はしごではなく木。直線ではなく枝分かれ。これこそが190年前から変わらない、進化の本当の姿
+    </blockquote>
+    <div class="emphasis-final stagger-item">進化を<span class="highlight-text">直線</span>で想像するのは、もうやめよう</div>
+    <div class="source-badge stagger-item">Darwin's Notebook B (1837)</div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
