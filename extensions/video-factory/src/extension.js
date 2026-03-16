@@ -43,10 +43,10 @@ function getQueueFilePath() {
 
   const folders = vscode.workspace.workspaceFolders;
   if (folders && folders.length > 0) {
-    return path.join(folders[0].uri.fsPath, 'themes_queue.json');
+    return path.join(folders[0].uri.fsPath, 'themes', 'themes_queue.json');
   }
 
-  return path.join(require('os').homedir(), 'themes_queue.json');
+  return path.join(require('os').homedir(), 'themes', 'themes_queue.json');
 }
 
 /**
@@ -119,7 +119,7 @@ function autoImportFromThemeProposals() {
     log(`[AutoImport] ${totalAdded} themes imported from ${sourceFiles.length} source(s)`);
 
     // 完成品フォルダとも同期
-    const completedDir = path.join(wsRoot, '完成品');
+    const completedDir = path.join(wsRoot, 'output');
     const synced = queue.syncWithCompletedFolder(completedDir);
     if (synced > 0) log(`[AutoImport] Synced ${synced} themes as done`);
   }
@@ -204,7 +204,7 @@ async function startFactory() {
   // 完成品フォルダと同期
   const folders = vscode.workspace.workspaceFolders;
   if (folders && folders.length > 0) {
-    const completedDir = path.join(folders[0].uri.fsPath, '完成品');
+    const completedDir = path.join(folders[0].uri.fsPath, 'output');
     const synced = queue.syncWithCompletedFolder(completedDir);
     if (synced > 0) log(`[Main] Synced ${synced} themes as done`);
   }
@@ -385,7 +385,7 @@ async function importThemes() {
   }
 
   // 完成品フォルダと同期（既に完成済みのテーマを done に）
-  const completedDir = path.join(wsRoot, '完成品');
+  const completedDir = path.join(wsRoot, 'output');
   const synced = queue.syncWithCompletedFolder(completedDir);
 
   const syncMsg = synced > 0 ? `\n（${synced}件は完成品フォルダと照合してdone済み）` : '';
