@@ -24,9 +24,8 @@ desktop.ini
 # IDE
 .vscode/
 
-# Remotion output
-output/
+# Remotion render output
+remotion/out/
 
 # Logs
 *.log
-

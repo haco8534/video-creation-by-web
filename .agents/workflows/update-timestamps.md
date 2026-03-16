@@ -11,11 +11,11 @@ Phase B で生成された `scene_durations.json` の累積開始時刻をもと
 実際の動画時間に書き換える。
 
 ### インプット
-- `main content/presentation/{project_id}/scene_durations.json` — Phase B で自動生成
-- `完成品/{テーマ名}/概要欄.md` — Phase A の Step 5b で生成
+- `presentation/{project_id}/scene_durations.json` — Phase B で自動生成
+- `output/ready/{テーマ名}/概要欄.md` — Phase A の Step 5b で生成
 
 ### アウトプット
-- `完成品/{テーマ名}/概要欄.md` — タイムスタンプ行が正確な `MM:SS` に書き換えられた状態
+- `output/ready/{テーマ名}/概要欄.md` — タイムスタンプ行が正確な `MM:SS` に書き換えられた状態
 
 ---
 
@@ -32,10 +32,10 @@ Phase B で生成された `scene_durations.json` の累積開始時刻をもと
 
 // turbo
 ```powershell
-node presentation/tools/update_timestamps.js {project_id} "{完成品DIR}/概要欄.md"
+node tools/update_timestamps.js {project_id} "{完成品DIR}/概要欄.md"
 ```
 
-**作業ディレクトリ**: `d:\myfolder\動画生成\main content`
+**作業ディレクトリ**: `d:\myfolder\動画生成\ふぁくとラボ\presentation`
 
 **引数**:
 - `{project_id}` — プレゼンテーションのプロジェクトID（例: `money_happiness`）

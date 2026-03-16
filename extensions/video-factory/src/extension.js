@@ -50,7 +50,7 @@ function getQueueFilePath() {
 }
 
 /**
- * テーマ案/ 配下のサブフォルダ内にある themes_queue.json を検索し、
+ * themes/ 配下のサブフォルダ内にある themes_queue.json を検索し、
  * まだワークスペースのキューに取り込まれていないテーマを自動マージする。
  */
 function autoImportFromThemeProposals() {
@@ -58,10 +58,10 @@ function autoImportFromThemeProposals() {
   if (!folders || folders.length === 0) return;
 
   const wsRoot = folders[0].uri.fsPath;
-  const themeDir = path.join(wsRoot, 'テーマ案');
+  const themeDir = path.join(wsRoot, 'themes');
   if (!fs.existsSync(themeDir)) return;
 
-  // テーマ案/ 配下のサブフォルダから themes_queue.json を探す
+  // themes/ 配下のサブフォルダから themes_queue.json を探す
   const sourceFiles = [];
   try {
     const entries = fs.readdirSync(themeDir);
@@ -81,7 +81,7 @@ function autoImportFromThemeProposals() {
       sourceFiles.push(rootQueue);
     }
   } catch (e) {
-    log(`[AutoImport] Error scanning テーマ案: ${e.message}`);
+    log(`[AutoImport] Error scanning themes: ${e.message}`);
     return;
   }
 
@@ -328,7 +328,7 @@ async function addTheme() {
   }
 }
 
-// ─── テーマ案インポート ──────────────────────────────────────
+// ─── themesインポート ──────────────────────────────────────
 
 async function importThemes() {
   const folders = vscode.workspace.workspaceFolders;
@@ -339,10 +339,10 @@ async function importThemes() {
 
   const wsRoot = folders[0].uri.fsPath;
 
-  // テーマ案ファイルを探す
-  const themeMdPath = path.join(wsRoot, 'テーマ案', 'theme_proposals.md');
+  // themesファイルを探す
+  const themeMdPath = path.join(wsRoot, 'themes', 'theme_proposals.md');
   if (!fs.existsSync(themeMdPath)) {
-    vscode.window.showErrorMessage(`テーマ案ファイルが見つかりません: ${themeMdPath}`);
+    vscode.window.showErrorMessage(`themesファイルが見つかりません: ${themeMdPath}`);
     return;
   }
 
@@ -352,7 +352,7 @@ async function importThemes() {
   const themes = parseThemeProposals(content);
 
   if (themes.length === 0) {
-    vscode.window.showWarningMessage('テーマ案ファイルからテーマを抽出できませんでした');
+    vscode.window.showWarningMessage('themesファイルからテーマを抽出できませんでした');
     return;
   }
 
@@ -478,7 +478,7 @@ function activate(context) {
 
   log('[Main] Video Factory extension activated');
 
-  // テーマ案/ からの自動インポート
+  // themes/ からの自動インポート
   try {
     autoImportFromThemeProposals();
   } catch (e) {

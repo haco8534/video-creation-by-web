@@ -1107,7 +1107,7 @@ node -e "const fs=require('fs'); const d=JSON.parse(fs.readFileSync('{MC_DIR}/sc
 // turbo
 
 ```bash
-node presentation/tools/register_dict.js {テーマ名}
+node tools/register_dict.js {テーマ名}
 ```
 
 **このコマンドが行うこと:**
@@ -1139,7 +1139,7 @@ node presentation/tools/register_dict.js {テーマ名}
 // turbo
 
 ```bash
-node presentation/tools/generate_audio.js {テーマ名}
+node tools/generate_audio.js {テーマ名}
 ```
 
 **このコマンドが行うこと:**
@@ -1160,7 +1160,7 @@ node presentation/tools/generate_audio.js {テーマ名}
 // turbo
 
 ```bash
-node presentation/tools/record.js {テーマ名} 4 1920x1080
+node tools/record.js {テーマ名} 4 1920x1080
 ```
 
 **引数:**
@@ -1188,7 +1188,7 @@ node presentation/tools/record.js {テーマ名} 4 1920x1080
 - **映像の長さが `scene_durations.json` の合計秒数にほぼ一致すること**を以下で確認する：
 
 ```bash
-ffprobe -v error -show_entries format=duration -of csv=p=0 "presentation/{テーマ名}/recording.mp4"
+ffprobe -v error -show_entries format=duration -of csv=p=0 "{テーマ名}/recording.mp4"
 ```
 
 映像が大幅に短い場合（例: 期待17分なのに9分しかない）、チャンクファイルの破損を疑う。`chunks/` 内の各 `.mkv` ファイルを個別に `ffprobe` で確認し、壊れたチャンクがあれば削除して `record.js` を再実行する。
@@ -1198,7 +1198,7 @@ ffprobe -v error -show_entries format=duration -of csv=p=0 "presentation/{テー
 // turbo
 
 ```bash
-node presentation/tools/merge_audio.js {テーマ名}
+node tools/merge_audio.js {テーマ名}
 ```
 
 **このコマンドが行うこと:**

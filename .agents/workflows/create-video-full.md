@@ -42,7 +42,7 @@ description: テーマ入力→台本→メインコンテンツ動画→Remotio
        ▼
  ╔═══════════════════════════════════╗
  ║  Phase A: 台本作成                 ║
- ║  (d:\myfolder\動画生成\台本作成)     ║
+ ║  (d:\myfolder\動画生成\ふぁくとラボ\scripts)     ║
  ║                                   ║
  ║  → script.md / research.md 出力   ║
  ╚═══════════════╤═══════════════════╝
@@ -50,7 +50,7 @@ description: テーマ入力→台本→メインコンテンツ動画→Remotio
                  ▼
  ╔═══════════════════════════════════╗
  ║  Phase B: メインコンテンツ生成       ║
- ║  (d:\myfolder\動画生成\main content) ║
+ ║  (d:\myfolder\動画生成\ふぁくとラボ\presentation) ║
  ║                                   ║
  ║  B1. Webプレゼン生成               ║
  ║  B2. 音声生成 (VOICEVOX)           ║
@@ -62,7 +62,7 @@ description: テーマ入力→台本→メインコンテンツ動画→Remotio
                  ▼
  ╔═══════════════════════════════════╗
  ║  Phase C: Remotion仕上げ           ║
- ║  (d:\myfolder\動画生成\Remotion)    ║
+ ║  (d:\myfolder\動画生成\ふぁくとラボ\remotion)    ║
  ║                                   ║
  ║  C1. 動画コピー + 字幕データ生成    ║
  ║  C2. VideoWithSubtitles.tsx 作成   ║
@@ -74,12 +74,12 @@ description: テーマ入力→台本→メインコンテンツ動画→Remotio
                  ▼
  ╔═══════════════════════════════════╗
  ║  Phase D: 完成品整理               ║
- ║  (d:\myfolder\動画生成\完成品)      ║
+ ║  (d:\myfolder\動画生成\ふぁくとラボ\output)      ║
  ║                                   ║
  ║  D1. フォルダ作成                  ║
  ║  D2. 最終成果物をコピー            ║
  ║                                   ║
- ║  → 完成品/{テーマ名}/ に集約       ║
+ ║  → output/ready/{テーマ名}/ に集約       ║
  ╚═══════════════════════════════════╝
        │
        ▼
@@ -94,18 +94,18 @@ description: テーマ入力→台本→メインコンテンツ動画→Remotio
 |--------|------|-----|
 | `{テーマ名}` | ユーザー入力のテーマ（日本語） | `1万時間の法則` |
 | `{project_id}` | テーマの英語スネークケースID | `10000h_effort` |
-| `{台本DIR}` | `d:\myfolder\動画生成\台本作成\{テーマ名}` | |
-| `{MC_DIR}` | `d:\myfolder\動画生成\main content\presentation\{project_id}` | |
-| `{REMOTION_DIR}` | `d:\myfolder\動画生成\Remotion` | |
-| `{完成品DIR}` | `d:\myfolder\動画生成\完成品\{テーマ名}` | |
+| `{台本DIR}` | `d:\myfolder\動画生成\ふぁくとラボ\scripts\{テーマ名}` | |
+| `{MC_DIR}` | `d:\myfolder\動画生成\ふぁくとラボ\presentation\{project_id}` | |
+| `{REMOTION_DIR}` | `d:\myfolder\動画生成\ふぁくとラボ\remotion` | |
+| `{完成品DIR}` | `d:\myfolder\動画生成\ふぁくとラボ\output\ready\{テーマ名}` | |
 
 ---
 
 # Phase A: 台本作成
 
-**作業ディレクトリ**: `d:\myfolder\動画生成\台本作成`
+**作業ディレクトリ**: `d:\myfolder\動画生成\ふぁくとラボ\scripts`
 
-**参照**: `_agents/workflows/script_creation.md` のStep 1〜5をそのまま実行する。
+**参照**: `.agents/skills/script_creation/SKILL.md` のStep 1〜5をそのまま実行する。
 
 ### 実行手順
 
@@ -152,14 +152,14 @@ Phase B に渡すデータ:
 
 # Phase B: メインコンテンツ生成
 
-**作業ディレクトリ**: `d:\myfolder\動画生成\main content`
+**作業ディレクトリ**: `d:\myfolder\動画生成\ふぁくとラボ\presentation`
 
 **参照**: `.agents/skills/presentation_generator/SKILL.md` のPhase 1〜3をそのまま実行する。
 
 ### 前提条件
 - VOICEVOXがローカルで起動中（`http://localhost:50021`）
 - ffmpegがPATHに通っている
-- `main content/node_modules` にpuppeteerがインストール済み
+- `presentation/node_modules` にpuppeteerがインストール済み
 
 ### 実行手順
 
@@ -308,7 +308,7 @@ node -e "const fs=require('fs'); const d=JSON.parse(fs.readFileSync('{MC_DIR}/sc
 // turbo
 3. VOICEVOX辞書登録（英語・専門用語の読み間違え防止）:
 ```powershell
-node presentation/tools/register_dict.js {project_id}
+node tools/register_dict.js {project_id}
 ```
 
 > 台本中の英語・専門用語を自動検出し、VOICEVOX のユーザー辞書に読みを登録する。
@@ -317,7 +317,7 @@ node presentation/tools/register_dict.js {project_id}
 // turbo
 4. 音声生成を実行:
 ```powershell
-node presentation/tools/generate_audio.js {project_id}
+node tools/generate_audio.js {project_id}
 ```
 
 **確認**: `{MC_DIR}/scene_durations.json` が自動生成されたこと
@@ -327,7 +327,7 @@ node presentation/tools/generate_audio.js {project_id}
 // turbo
 1. 並列録画:
 ```powershell
-node presentation/tools/record.js {project_id} 4 1920x1080
+node tools/record.js {project_id} 4 1920x1080
 ```
 
 **確認**: `{MC_DIR}/recording.mp4` が生成され、長さが scene_durations.json の合計と一致すること:
@@ -338,7 +338,7 @@ ffprobe -v error -show_entries format=duration -of csv=p=0 "presentation/{projec
 // turbo
 2. 音声+映像合成:
 ```powershell
-node presentation/tools/merge_audio.js {project_id}
+node tools/merge_audio.js {project_id}
 ```
 
 ### Phase B 完了条件
@@ -359,7 +359,7 @@ Phase C に渡すデータ（すべて `{MC_DIR}` 内）:
 
 # Phase C: Remotion仕上げ
 
-**作業ディレクトリ**: `d:\myfolder\動画生成\Remotion`
+**作業ディレクトリ**: `d:\myfolder\動画生成\ふぁくとラボ\remotion`
 
 **参照**: `.agents/workflows/create-video.md` のSTEP 1〜6を実行する。
 
@@ -383,7 +383,7 @@ ffmpeg -y -i "{MC_DIR}/final_output.mp4" -c:v libx264 -pix_fmt yuv420p -movflags
 // turbo
 2. 字幕タイミングデータを生成:
 ```powershell
-node scripts/generate-subtitle-data.js "{MC_DIR}" {project_id}
+node ../presentation/tools/generate-subtitle-data.js "{MC_DIR}" {project_id}
 ```
 
 **確認**: `src/projects/{project_id}/subtitleData.ts` が生成されたこと
@@ -487,7 +487,7 @@ npx tsc --noEmit
 
 # Phase D: 完成品整理
 
-**作業ディレクトリ**: `d:\myfolder\動画生成\完成品`
+**作業ディレクトリ**: `d:\myfolder\動画生成\ふぁくとラボ\output`
 
 ### 前提条件
 - Phase C が完了していること
@@ -495,7 +495,7 @@ npx tsc --noEmit
 ### 完成品フォルダの構造
 
 ```
-完成品/
+output/ready/
 └── {テーマ名}/
     ├── {テーマ名}.mp4       ← Remotionレンダリング済み動画（ユーザーが後でコピー）
     ├── 概要欄.md            ← YouTube概要欄テキスト
@@ -553,16 +553,16 @@ Copy-Item "{台本DIR}/description.md" "{完成品DIR}/概要欄.md"
 
 以下をユーザーに報告する:
 
-1. **完成品フォルダ**: `完成品/{テーマ名}/`
+1. **完成品フォルダ**: `output/ready/{テーマ名}/`
    - `{テーマ名}.mp4` — レンダリング済み動画
    - `台本.md` — 完成台本
    - `概要欄.md` — YouTube概要欄テキスト
    - `サムネイル.jpg` — サムネイル画像（あれば）
 
 2. **作業ファイルの保存場所**（参照用）
-   - `台本作成/{テーマ名}/` — リサーチ結果・台本の作業ファイル
-   - `main content/presentation/{project_id}/` — プレゼン・音声・中間動画
-   - `Remotion/src/projects/{project_id}/` — Remotionプロジェクト
+   - `scripts/{テーマ名}/` — リサーチ結果・台本の作業ファイル
+   - `presentation/{project_id}/` — プレゼン・音声・中間動画
+   - `remotion/src/projects/{project_id}/` — Remotionプロジェクト
 
 3. **YouTube投稿チェックリスト**
    - [ ] 動画をアップロード（`{テーマ名}.mp4`）
