@@ -1,0 +1,7 @@
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/brain_cleaning_sleep/audio/scene_22_00.wav'
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/brain_cleaning_sleep/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/brain_cleaning_sleep/audio/scene_22_01.wav'
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/brain_cleaning_sleep/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/brain_cleaning_sleep/audio/scene_22_02.wav'
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/brain_cleaning_sleep/audio/silence_300ms.wav'
+file 'D:/myfolder/動画生成/ふぁくとラボ/main content/presentation/brain_cleaning_sleep/audio/scene_22_03.wav'

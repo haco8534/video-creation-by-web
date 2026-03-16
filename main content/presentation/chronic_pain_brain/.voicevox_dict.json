@@ -1,0 +1,7 @@
+[
+  { "surface": "IASP", "pronunciation": "アイエーエスピー", "accent_type": 7 },
+  { "surface": "PRT", "pronunciation": "ピーアールティー", "accent_type": 5 },
+  { "surface": "JAMA", "pronunciation": "ジャマ", "accent_type": 1 },
+  { "surface": "MRI", "pronunciation": "エムアールアイ", "accent_type": 5 },
+  { "surface": "AQP4", "pronunciation": "エーキューピーフォー", "accent_type": 7 }
+]

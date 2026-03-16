@@ -1,0 +1,283 @@
+{
+  "version": 1,
+  "lastUpdated": "2026-03-16T07:22:18.239Z",
+  "settings": {
+    "quotaThresholdPercent": 20,
+    "rateLimitCooldownMinutes": 300,
+    "maxRetries": 2
+  },
+  "themes": [
+    {
+      "id": "_______________________",
+      "title": "「男脳・女脳」は完全な神話──モザイク脳の真実",
+      "status": "done",
+      "startedAt": "2026-03-13T12:30:00+09:00",
+      "completedAt": "2026-03-13T12:30:00+09:00",
+      "retryCount": 0
+    },
+    {
+      "id": "______________________0_5_____",
+      "title": "自由意志は存在するのか──脳が「あなた」より0.5秒先に動く",
+      "status": "done",
+      "startedAt": "2026-03-13T15:30:00+09:00",
+      "completedAt": "2026-03-13T15:30:00+09:00",
+      "retryCount": 0
+    },
+    {
+      "id": "_____________",
+      "title": "嘘発見器は嘘を検出できない",
+      "status": "done",
+      "startedAt": "2026-03-14T11:30:00+09:00",
+      "completedAt": "2026-03-14T11:30:00+09:00",
+      "retryCount": 0
+    },
+    {
+      "id": "_____________________",
+      "title": "腸が脳を支配する──「第二の脳」の衝撃科学",
+      "status": "pending",
+      "startedAt": "2026-03-16T07:15:11.733Z",
+      "completedAt": "2026-03-14T15:30:00+09:00",
+      "retryCount": 1
+    },
+    {
+      "id": "________________",
+      "title": "睡眠中に脳が「洗浄」される仕組み",
+      "status": "done",
+      "startedAt": "2026-03-16T06:17:52.662Z",
+      "completedAt": "2026-03-16T07:11:07.730Z",
+      "retryCount": 1
+    },
+    {
+      "id": "_____________________",
+      "title": "痛みは脳が「作る」──慢性痛の驚くべき正体",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "_____________________________",
+      "title": "ノセボ効果──「悪い」と思い込むと本当に悪化する脳の仕組み",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "_____5___________9__23__32__66__83_",
+      "title": "脳は人生で5回「大改造」される──9, 23, 32, 66, 83歳",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "___________________________",
+      "title": "麻酔の謎──なぜ「意識が消える」仕組みが分かっていない",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "____nlp___________________",
+      "title": "「速読・NLP・引き寄せの法則」は全部デタラメだった",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "____50_______________________",
+      "title": "幸福度の50%は遺伝で決まる？──セットポイント理論の崩壊",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "________________________",
+      "title": "表情から感情は読み取れない──エクマン理論の限界",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "________________________",
+      "title": "ロボトミー──ノーベル賞を受賞した史上最悪の手術",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "____________________",
+      "title": "夢遊病の脳科学──半分起きて半分寝ている",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "_________________________________",
+      "title": "神経可塑性の「ダークサイド」──脳の書き換えは良いことだけじゃない",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "fmri__________________",
+      "title": "fMRIで「死んだサーモン」に脳活動が見えた",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "_______7___________________",
+      "title": "カラスが人間の7歳児と同じ知能──脳の大きさは関係ない",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "_________________fmri_____",
+      "title": "植物状態の患者に意識はあるか？──fMRI研究の衝撃",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "______________________",
+      "title": "タコの分散脳──各足に「脳」がある驚異の設計",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "______________________",
+      "title": "動物にも意識がある──ケンブリッジ宣言の衝撃",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "_______________vs_________",
+      "title": "瞑想の科学的効果──誇大宣伝 vs 実際のエビデンス",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "________________",
+      "title": "夢遊病殺人は「無罪」になるのか？",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "___________________",
+      "title": "「朝型」「夜型」は遺伝子で決まっている",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "____________________________",
+      "title": "脳オルガノイド──試験管の中の「ミニ脳」は意識を持つか？",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "___________________",
+      "title": "バイリンガルの脳は本当に優れているのか",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "________________________2024__",
+      "title": "記憶は脳の外にも保存される？──腎臓細胞の学習（2024年）",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "________________________",
+      "title": "砂糖で子どもがハイパーになるは完全な親の思い込み",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "_______________",
+      "title": "脳と免疫系は直接つながっていた",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "___________________",
+      "title": "共感覚──音を色で見る人々の脳の仕組み",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "__________________________",
+      "title": "骨相学の黒歴史──頭の形で性格が分かるという疑似科学",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "_____________________",
+      "title": "超能力・テレパシーを科学が完全否定した歴史",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "___________________________",
+      "title": "乳児の記憶は失われるのではなくアクセスできなくなるだけ",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "_____________________",
+      "title": "迷走神経──脳と内臓を結ぶ「情報高速道路」",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    },
+    {
+      "id": "__________________________",
+      "title": "笑顔を作ると本当に幸せになるか？──再現性危機の象徴",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    }
+  ]
+}

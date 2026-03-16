@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "lastUpdated": "2026-03-16T13:30:00+09:00",
+  "settings": {
+    "quotaThresholdPercent": 20,
+    "rateLimitCooldownMinutes": 300,
+    "maxRetries": 2
+  },
+  "themes": [
+    {
+      "id": "example_theme",
+      "title": "ここにテーマのタイトルを入力",
+      "status": "pending",
+      "startedAt": null,
+      "completedAt": null,
+      "retryCount": 0
+    }
+  ]
+}

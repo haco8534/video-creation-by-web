@@ -1,0 +1,104 @@
+{
+  "name": "video-factory",
+  "displayName": "Video Factory",
+  "description": "Antigravity動画生成パイプラインの自動化。テーマキューから順番に動画を生成します。",
+  "version": "0.2.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "scripts": {
+    "compile": "esbuild src/extension.js --bundle --outfile=dist/extension.js --external:vscode --platform=node --format=cjs",
+    "vscode:prepublish": "npm run compile"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "videoFactory.toggle",
+        "title": "Video Factory: Start / Stop (Toggle)"
+      },
+      {
+        "command": "videoFactory.start",
+        "title": "Video Factory: Start"
+      },
+      {
+        "command": "videoFactory.stop",
+        "title": "Video Factory: Stop"
+      },
+      {
+        "command": "videoFactory.showQueue",
+        "title": "Video Factory: Show Queue"
+      },
+      {
+        "command": "videoFactory.addTheme",
+        "title": "Video Factory: Add Theme to Queue"
+      },
+      {
+        "command": "videoFactory.importThemes",
+        "title": "Video Factory: Import Themes from Proposals"
+      },
+      {
+        "command": "videoFactory.openQueueFile",
+        "title": "Video Factory: Open Queue File"
+      }
+    ],
+    "configuration": {
+      "title": "Video Factory",
+      "properties": {
+        "videoFactory.cdpPort": {
+          "type": "number",
+          "default": 9000,
+          "description": "CDP remote debugging port"
+        },
+        "videoFactory.queueFile": {
+          "type": "string",
+          "default": "",
+          "description": "Path to themes_queue.json (empty = workspace root)"
+        },
+        "videoFactory.quotaThresholdPercent": {
+          "type": "number",
+          "default": 20,
+          "description": "Quota remaining % threshold to pause auto-execution"
+        },
+        "videoFactory.rateLimitCooldownMinutes": {
+          "type": "number",
+          "default": 300,
+          "description": "Cooldown minutes when rate limited (default: 5 hours)"
+        },
+        "videoFactory.maxRetries": {
+          "type": "number",
+          "default": 2,
+          "description": "Max retries per theme before marking as failed"
+        },
+        "videoFactory.workflowCommand": {
+          "type": "string",
+          "default": "/create-video-full",
+          "description": "Workflow slash command to trigger"
+        },
+        "videoFactory.pollIntervalMs": {
+          "type": "number",
+          "default": 10000,
+          "description": "Status check interval in ms"
+        },
+        "videoFactory.timeoutMinutes": {
+          "type": "number",
+          "default": 90,
+          "description": "Per-video timeout in minutes"
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "esbuild": "^0.27.4"
+  }
+}
